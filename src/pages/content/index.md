@@ -1,1 +1,1 @@
-This is pretty cool
+This is pretty awesome
