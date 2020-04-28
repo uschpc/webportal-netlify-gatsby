@@ -8,6 +8,8 @@ thumbnail: /images/profile_bdkim.jpg
 
 *Director, Center for High-Performance Computing...*
 
+*Author/ yaseen*
+
 <section id="content_main" class="content_main grid_9">
      <div class="content_padding">
         <div class="paragraph-1" style="display: flex">
