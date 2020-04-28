@@ -5,3 +5,5 @@ nav_items:
     path: /about
   - label: Contact Us
     path: /contact-us
+  - label: Archive
+    path: /archive
