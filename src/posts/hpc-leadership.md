@@ -15,6 +15,6 @@ thumbnail: /images/profile_bdkim.jpg
             <p>
             <a href="/images/profile_bdkim.jpg"><img  src="/images/profile_bdkim.jpg" alt=""width="217"height="300" class="alignright size-medium wp-image-3143"></a></p>
         </div>
-        <p>BD’s research interests are large-scale application optimization, parallel computational models, and computational fluid dynamics. Recently, his focus has been extended to data-intensive computing and advanced system design for computation and data convergence models. He always looks for opportunities where the USC HPC team can maximize the potential of computational and data-enabled research by providing expertise in advanced computing and big data analysis.</p>
+        <p>BD’s research interests are large-scale application optimization, parallel computational models, and computational fluid dynamics. Recently, his focus has been extended to data-intensive computing and advanced system design for computation and data convergence models. He always looks for opportunities where the USC HPC team can maximize the potential of computational and data-enabled research by providing expertise in advanced computing and big data analysis...</p>
     </div>
 </section>
