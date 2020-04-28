@@ -1,6 +1,8 @@
 const path = require("path")
 const fs = require("fs")
+const yaml = require('js-yaml');
 
+const dirPathNav = path.join(__dirname, "../src/data/settings")
 const dirPath = path.join(__dirname, "../src/posts")
 const dirPathPages = path.join(__dirname, "../src/pages/content")
 let postlist = []
@@ -122,5 +124,24 @@ const getPages = () => {
     return 
 }
 
+const getNavigations = () => {
+    fs.readdir(dirPathNav, (err, files) => {
+        if (err) {
+            return console.log("Failed to list contents of directory: " + err)
+        }
+        files.forEach((file, i) => {
+            try {
+                var nav = yaml.safeLoad(fs.readFileSync(`${dirPathNav}/${file}`, 'utf8'));
+                let data = JSON.stringify(nav)
+                fs.writeFileSync("src/navigations.json", data)
+              } catch (e) {
+                console.log(e);
+              }
+        })
+    })
+    return 
+}
+
 getPosts()
 getPages()
+getNavigations()

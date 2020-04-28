@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, navigation }) => (
   <header
     style={{
       background: `rebeccapurple`,
@@ -17,15 +17,18 @@ const Header = ({ siteTitle }) => (
       }}
     >
       <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
+        {navigation.map(nav => {
+          return <Link
+          to={nav.path}
           style={{
             color: `white`,
             textDecoration: `none`,
+            marginRight: '15px'
           }}
         >
-          {siteTitle}
+           {nav.path === '/' ? siteTitle : nav.label}
         </Link>
+        })}
       </h1>
     </div>
   </header>
