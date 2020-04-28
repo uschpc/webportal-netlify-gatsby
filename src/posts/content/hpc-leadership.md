@@ -3,7 +3,7 @@ title: HPC Leadership
 author: Yaseen A
 date: 2020-04-22T18:19:38.387Z
 ---
-![](/images/gatsby-astronaut.png)
+![](src/images/gatsby-icon.png)
 
 ### Byoung-Do (BD) Kim
 
