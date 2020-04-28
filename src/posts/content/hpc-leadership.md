@@ -7,6 +7,8 @@ date: 2020-04-22T18:19:38.387Z
 
 ### Byoung-Do (BD) Kim
 
+![](/images/gatsby-astronaut.png)
+
 *Director, Center for High-Performance Computing...*
 
 *Author/ yaseen*
