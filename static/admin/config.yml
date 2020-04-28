@@ -23,13 +23,11 @@ collections:
         label: "Landing Page"
         name: "Landing"
         fields:
-          - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/content/about.md"
         label: "About"
         name: "about"
         fields:
-          - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
   - name: settings
     label: Settings
