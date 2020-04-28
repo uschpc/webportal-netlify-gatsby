@@ -1,1 +1,1 @@
-[{"filePath":"about","content":"---\ntitle: \"About US\"\n---\n\nMy name is Dave Jones and I'm a front-end web developer from Montreal,Canada. I make web development video tutorials. Here's an example:\n"},{"filePath":"index","content":"---\ntitle: \"Home Page \"\n---\n\nThis is pretty cool\n"}]
+[{"filePath":"about","content":"---\ntitle: About US Page\n---\nMy name is Dave Jones and I'm a front-end web developer from Montreal,Canada. I make web development video tutorials."},{"filePath":"index","content":"---\ntitle: \"Home Page \"\n---\n\nThis is pretty cool\n"}]
