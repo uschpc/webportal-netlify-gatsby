@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import navlist from "../navigations.json";
 import "./layout.css"
+import "../style.less"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

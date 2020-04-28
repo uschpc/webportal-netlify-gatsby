@@ -3,7 +3,7 @@ const fs = require("fs")
 const yaml = require('js-yaml');
 
 const dirPathNav = path.join(__dirname, "../src/data/settings")
-const dirPath = path.join(__dirname, "../src/posts")
+const dirPath = path.join(__dirname, "../src/posts/content")
 const dirPathPages = path.join(__dirname, "../src/pages/content")
 let postlist = []
 let pagelist = []
