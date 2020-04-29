@@ -4,6 +4,7 @@ import pagelist from "../pages.json";
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Markdown from "react-markdown"
+import Search from "../components/SearchContainer.js";
 const AboutPage = () => {
     let contents = pagelist.filter(obj => {
         return obj.filePath === 'about'
@@ -11,6 +12,7 @@ const AboutPage = () => {
     return (
     <Layout>
         <SEO title="About" />
+        <Search />
         <Markdown source={contents[0].content} escapeHtml={false} />
         <Link to="/">Go to home page</Link>
     </Layout>

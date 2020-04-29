@@ -1,10 +1,11 @@
 import React, { Component } from "react"
 import postList from '../posts.json'
 import * as JsSearch from "js-search"
+import Markdown from "react-markdown"
 
 class Search extends Component {
   state = {
-    contentList: [],
+    contentList: postList,
     search: [],
     searchResults: [],
     isLoading: true,
@@ -16,8 +17,6 @@ class Search extends Component {
    */
   async componentDidMount() {
     try {
-        const contentData = postList;
-        this.setState({ contentList: contentData });
         this.rebuildIndex();
       }
       catch(err) {
@@ -51,17 +50,20 @@ class Search extends Component {
     dataToSearch.searchIndex = new JsSearch.TfIdfSearchIndex("isbn");
     dataToSearch.addIndex("title") // sets the index attribute for the data
     dataToSearch.addIndex("author") // sets the index attribute for the data
+    dataToSearch.addIndex("content") // sets the index attribute for the data
     dataToSearch.addDocuments(contentList) // adds the data to be searched
-    this.setState({ search: dataToSearch, isLoading: false });
+    // this.setState({ search: dataToSearch, isLoading: false });
   }
   /**
    * handles the input change and perform a search with js-search
    * in which the results will be added to the state
    */
   searchData = e => {
-    const { search } = this.state
-    const queryResult = search.search(e.target.value)
-    this.setState({ searchQuery: e.target.value, searchResults: queryResult })
+    const { contentList } = this.state;
+    const updatedList = contentList.filter((item) => {
+        return Object.keys(item).some(key => item[key].toString().search(e.target.value) !== -1);
+    });
+    this.setState({ searchQuery: e.target.value, searchResults: updatedList })
   }
   handleSubmit = e => {
     e.preventDefault()
@@ -86,91 +88,17 @@ class Search extends Component {
               />
             </div>
           </form>
-          <div>
-            Number of items:
-            {queryResults.length}
-            <table
-              style={{
-                width: "100%",
-                borderCollapse: "collapse",
-                borderRadius: "4px",
-                border: "1px solid #d3d3d3",
-              }}
-            >
-              <thead style={{ border: "1px solid #808080" }}>
-                <tr>
-                  <th
-                    style={{
-                      textAlign: "left",
-                      padding: "5px",
-                      fontSize: "14px",
-                      fontWeight: 600,
-                      borderBottom: "2px solid #d3d3d3",
-                      cursor: "pointer",
-                    }}
-                  >
-                    Book ISBN
-                  </th>
-                  <th
-                    style={{
-                      textAlign: "left",
-                      padding: "5px",
-                      fontSize: "14px",
-                      fontWeight: 600,
-                      borderBottom: "2px solid #d3d3d3",
-                      cursor: "pointer",
-                    }}
-                  >
-                    Book Title
-                  </th>
-                  <th
-                    style={{
-                      textAlign: "left",
-                      padding: "5px",
-                      fontSize: "14px",
-                      fontWeight: 600,
-                      borderBottom: "2px solid #d3d3d3",
-                      cursor: "pointer",
-                    }}
-                  >
-                    Book Author
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {queryResults.map(item => {
-                  return (
-                    <tr key={`row_${item.isbn}`}>
-                      <td
-                        style={{
-                          fontSize: "14px",
-                          border: "1px solid #d3d3d3",
-                        }}
-                      >
-                        {item.isbn}
-                      </td>
-                      <td
-                        style={{
-                          fontSize: "14px",
-                          border: "1px solid #d3d3d3",
-                        }}
-                      >
-                        {item.title}
-                      </td>
-                      <td
-                        style={{
-                          fontSize: "14px",
-                          border: "1px solid #d3d3d3",
-                        }}
-                      >
-                        {item.author}
-                      </td>
-                    </tr>
-                  )
+            <div className="post-list">
+                <h2>Post lists</h2>
+                {queryResults.map((item, i) => {
+                    return (  
+                        <div className="posts" key={i}>
+                            <h3>{item.title}</h3>
+                            <Markdown source={item.content} escapeHtml={false} />
+                        </div>
+                    )
                 })}
-              </tbody>
-            </table>
-          </div>
+            </div>
         </div>
       </div>
     )

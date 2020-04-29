@@ -17,7 +17,7 @@ const Header = ({ siteTitle, navigation }) => (
       }}
     >
       <h1 style={{ margin: 0 }}>
-        {navigation.map(nav => {
+        {navigation.map((nav, i) => {
           return <Link
           to={nav.path}
           style={{
@@ -25,6 +25,7 @@ const Header = ({ siteTitle, navigation }) => (
             textDecoration: `none`,
             marginRight: '15px'
           }}
+          key={i}
         >
            {nav.path === '/' ? siteTitle : nav.label}
         </Link>

@@ -25,6 +25,7 @@ const Layout = ({ children }) => {
     }
   `)
 
+
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} navigation={navlist.nav_items} />
