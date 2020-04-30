@@ -73,9 +73,8 @@ class Search extends Component {
     const queryResults = searchQuery === "" ? contentList : searchResults
     return (
       <div>
-        <div style={{ margin: "0 auto" }}>
           <form onSubmit={this.handleSubmit}>
-            <div style={{ margin: "0 auto" }}>
+            <div>
               <label htmlFor="Search" style={{ paddingRight: "10px" }}>
                 Enter your search here
               </label>
@@ -88,18 +87,17 @@ class Search extends Component {
               />
             </div>
           </form>
-            <div className="post-list">
-                <h2>Post lists</h2>
-                {queryResults.map((item, i) => {
-                    return (  
-                        <div className="posts" key={i}>
-                            <h3>{item.title}</h3>
-                            <Markdown source={item.content} escapeHtml={false} />
-                        </div>
-                    )
-                })}
-            </div>
-        </div>
+          <div className="post-list">
+              <h2>Post lists</h2>
+              {queryResults.map((item, i) => {
+                  return (  
+                      <div className="posts" key={i}>
+                          <h3>{item.title}</h3>
+                          <Markdown source={item.content} escapeHtml={false} />
+                      </div>
+                  )
+              })}
+          </div>
       </div>
     )
   }

@@ -1,37 +1,32 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Navbar from "./navbar"
+import SearchBar from "./search-bar"
 
-const Header = ({ siteTitle, navigation }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        {navigation.map((nav, i) => {
-          return <Link
-          to={nav.path}
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-            marginRight: '15px'
-          }}
-          key={i}
-        >
-           {nav.path === '/' ? siteTitle : nav.label}
-        </Link>
-        })}
-      </h1>
-    </div>
+const Header = ({ siteTitle }) => (
+  <header className='header-container'>
+    <div className="header-section">
+        <div className="content-width-top">
+          <div className="usc-info">usc info</div>
+        </div>
+        <div className="content-width-middile">
+          <h1 className='hpc-logo' style={{ margin: 0 }}>
+            <Link
+              to='/'
+              style={{
+                color: `white`,
+                textDecoration: `none`,
+                marginRight: '15px'
+              }}
+            >
+              {siteTitle}
+            </Link>
+          </h1>
+          <SearchBar />
+          </div>
+        </div>
+        <Navbar />
   </header>
 )
 
