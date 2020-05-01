@@ -12,6 +12,15 @@ class Search extends Component {
     isError: false,
     searchQuery: "",
   }
+
+  componentWillReceiveProps(nextProps) {
+    for (const index in nextProps) {
+      if (nextProps[index] !== this.props[index]) {
+        console.log(index, this.props[index], '-->', nextProps[index]);
+        this.searchData(nextProps[index]);
+      }
+    }
+  }
   /**
    * React lifecycle method to fetch the data
    */
@@ -26,6 +35,7 @@ class Search extends Component {
         console.log("====================================");
       }
   }
+
   /**
    * rebuilds the overall index based on the options
    */
@@ -58,46 +68,29 @@ class Search extends Component {
    * handles the input change and perform a search with js-search
    * in which the results will be added to the state
    */
-  searchData = e => {
+  searchData = qry => {
     const { contentList } = this.state;
     const updatedList = contentList.filter((item) => {
-        return Object.keys(item).some(key => item[key].toString().search(e.target.value) !== -1);
+        return Object.keys(item).some(key => item[key].toString().search(qry) !== -1);
     });
-    this.setState({ searchQuery: e.target.value, searchResults: updatedList })
-  }
-  handleSubmit = e => {
-    e.preventDefault()
+    this.setState({ searchQuery: qry, searchResults: updatedList })
   }
   render() {
     const { contentList, searchResults, searchQuery } = this.state
     const queryResults = searchQuery === "" ? contentList : searchResults
     return (
       <div>
-          <form onSubmit={this.handleSubmit}>
-            <div>
-              <label htmlFor="Search" style={{ paddingRight: "10px" }}>
-                Enter your search here
-              </label>
-              <input
-                id="Search"
-                value={searchQuery}
-                onChange={this.searchData}
-                placeholder="Enter your search here"
-                style={{ margin: "0 auto", width: "400px" }}
-              />
-            </div>
-          </form>
-          <div className="post-list">
-              <h2>Post lists</h2>
-              {queryResults.map((item, i) => {
-                  return (  
-                      <div className="posts" key={i}>
-                          <h3>{item.title}</h3>
-                          <Markdown source={item.content} escapeHtml={false} />
-                      </div>
-                  )
-              })}
-          </div>
+        <div className="post-list">
+            <h2>Post lists</h2>
+            {queryResults.map((item, i) => {
+                return (  
+                    <div className="posts" key={i}>
+                        <h3>{item.title}</h3>
+                        <Markdown source={item.content} escapeHtml={false} />
+                    </div>
+                )
+            })}
+        </div>
       </div>
     )
   }

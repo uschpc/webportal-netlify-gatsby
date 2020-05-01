@@ -4,7 +4,7 @@ import React from "react"
 import Navbar from "./navbar"
 import SearchBar from "./search-bar"
 
-const Header = ({ siteTitle }) => (
+const Header = (props) => (
   <header className='header-container'>
     <div className="header-section">
         <div className="content-width-top">
@@ -20,10 +20,10 @@ const Header = ({ siteTitle }) => (
                 marginRight: '15px'
               }}
             >
-              {siteTitle}
+              {props.siteTitle}
             </Link>
           </h1>
-          <SearchBar />
+          <SearchBar searchData={(e) => props.searchData(e)} />
           </div>
         </div>
         <Navbar />

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SearchBar = () => {
+const SearchBar = (props) => {
     /**
    * handles the input change and perform a search with js-search
    * in which the results will be added to the state
@@ -23,7 +23,7 @@ const SearchBar = () => {
             </label>
             <input
                 id="Search"
-                // onChange={this.searchData}
+                onChange={(e) => props.searchData(e)}
                 placeholder="Search....."
                 style={{ margin: "0 auto", width: "200px" }}
             />
