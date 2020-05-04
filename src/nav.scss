@@ -47,10 +47,11 @@ p {
   transform-origin: 0 0;
   background-color: #fff;
   border-radius: 4px;
-  overflow: hidden;
   position: relative;
   box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1), 0 15px 35px rgba(50, 50, 93, 0.15),
     0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid #c7635f;
+    border-top: none;
 }
 
 .heading {
@@ -59,7 +60,7 @@ p {
   font-size: 1.1rem;
   margin-top: 0;
   margin-bottom: 1rem;
-  color: #158fef;
+  color: #000;
   &-no-margin {
     margin-bottom: 0;
   }
@@ -90,13 +91,25 @@ p {
 }
 
 .dropdown-section {
-  padding: 10px;
   position: relative;
   z-index: 1;
    ul {
      li {
+       padding: 10px;
+        margin: 0;
+        border-bottom: 1px solid #c7635f;
+       &:nth-child(odd) {
+         background-color: #F4EAE8;
+       }
+       &:nth-child(even) {
+        background-color: #fff;
+      }
+      &:last-of-type {
+        border-bottom: none;
+      }
        .heading {
          text-transform: capitalize;
+         font-weight: normal;
        }
      }
    }
@@ -127,7 +140,7 @@ p {
 }
 .dropdown-el {
   &[data-current] {
-    animation: fade-in 0.4s ease-in-out forwards, slide-in 0.7s ease-in-out forwards;
+    // animation: fade-in 0.4s ease-in-out forwards, slide-in 0.7s ease-in-out forwards;
   }
   &[data-prev] {
     position: absolute;
@@ -150,7 +163,7 @@ p {
 }
 
 .products-dropdown-el {
-  width: 15rem;
+  width: 10rem;
 }
 
 .logo {
