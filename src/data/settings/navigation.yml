@@ -56,3 +56,5 @@ nav_items:
         path: /ticket-submission
       - label: Resource Request Partnership & Projects
         path: /resource-request-partnership-projects
+  - label: News and Events
+    path: /education-and-outreach

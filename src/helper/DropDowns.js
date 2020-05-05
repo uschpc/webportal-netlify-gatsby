@@ -201,38 +201,45 @@ const UserSupportSubNavDropdown = ({ current, prev }) => {
 const NewsEventsSubNavDropdown = ({ current, prev }) => {
   let subNav = assignedDropdownSubNav('News and Events');
 
-  return (
-    <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
-      <div class="dropdown-content">  
-      <div class="row">
-        <div class="column">
-          <h3>Life is beautiful</h3>         
-        </div>
-        <div className="column">
-          <ul>
-          {subNav.sub_nav_items.map((item, i) => {
-          return (
-            <li>
-              <Router>
-                <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
-              </Router>
-              </li>
-            )})
-          }
-        </ul>
-        </div>
-        <div class="column">
-          <h3>Related Links</h3>
-          <div className="links">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+  if(subNav) {
+    return (
+      <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
+        <div class="dropdown-content">  
+        <div class="row">
+          <div class="column">
+            <h3>Life is beautiful</h3>         
+          </div>
+          <div className="column">
+            <ul>
+            {subNav.sub_nav_items.map((item, i) => {
+            return (
+              <li>
+                <Router>
+                  <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+                </Router>
+                </li>
+              )})
+            }
+          </ul>
+          </div>
+          <div class="column">
+            <h3>Related Links</h3>
+            <div className="links">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+            </div>
           </div>
         </div>
-      </div>
-  </div>
     </div>
-  );
+      </div>
+    );
+  } 
+  else {
+    return ''
+  }
+
+  
 }
 
 export { AboutSubNavDropdown, ServicesSubNavDropdown, UserInfoSubNavDropdown, EducationOutreachSubNavDropdown, UserSupportSubNavDropdown, NewsEventsSubNavDropdown };
