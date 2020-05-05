@@ -8,6 +8,8 @@ nav_items:
         path: /people
       - label: Collaboration
         path: /collaboration
+      - label: Partnerships
+        path: /partnerships
   - label: Services
     path: /services
     sub_nav_items:
