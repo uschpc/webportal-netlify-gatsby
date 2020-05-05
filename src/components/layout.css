@@ -734,7 +734,7 @@ pre tt:after {
   background: black;
   padding-top: 10px;
   padding-bottom: 10px;
-  max-width: 80rem;
+  max-width: 80%;
   margin: 0 auto;
 }
 
