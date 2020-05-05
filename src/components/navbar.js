@@ -1,5 +1,5 @@
 import React from "react"
-import { AboutSubNavDropdown, ServicesSubNavDropdown, UserInfoSubNavDropdown, EducationOutreachSubNavDropdown, UserSupportSubNavDropdown } from "../helper/DropDowns";
+import { AboutSubNavDropdown, ServicesSubNavDropdown, UserInfoSubNavDropdown, EducationOutreachSubNavDropdown, UserSupportSubNavDropdown, NewsEventsSubNavDropdown } from "../helper/DropDowns";
 import DropDownsContainer from "../helper/DropDownsContainer";
 import navlist from "../navigations.json";
 
@@ -25,6 +25,10 @@ const navigation = [
  {
     title: "User Support", 
     dropdown: UserSupportSubNavDropdown
+ },
+ {
+   title: "News and Events",
+   dropdown: NewsEventsSubNavDropdown
  }
 ];
 
@@ -71,33 +75,35 @@ class Navbar extends React.Component {
             {activeNavigation.map((n, index) => {
               return (
                 <div
-                  className="navbar-item-el"
+                  className=""
                   onMouseEnter={this.onMouseEnter}
                   onFocus={this.onMouseEnter}
                   data-index={index}
                   key={index}
                 >
-                  <button className="navbar-item-title">{n.title}</button>
-                  <div className="dropdown-slot">
+                  <div class="navbar">
+                    <div class="dropdown">
+                    <button class="dropbtn">{n.title}</button>
+                  <div className="">
                     {currentIndex === index && (
-                      <div>
                         <DropDownsContainer preventDistortion="[data-prevent-distortion]" >
                           <div
-                            className="caret"
                             data-prevent-distortion
                             data-transform-origin="left bottom"
                           />
-                          <div className="dropdown-background">
+                          <div className="">
                             {PreviousDropdown && <PreviousDropdown prev />}
                             <CurrentDropdown current />
                           </div>
                         </DropDownsContainer>
-                      </div>
                     )}
                   </div>
                 </div>
+                </div>
+                </div>
               );
             })}
+
           </ul>
         </nav>
       </div>

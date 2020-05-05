@@ -8,7 +8,32 @@ const Header = (props) => (
   <header className='header-container'>
     <div className="header-section">
         <div className="content-width-top">
-          <div className="usc-info">usc info</div>
+          <div class="top-bar clearfix">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-6">
+                  <div class="tb-col-1">
+                    <ul>
+                      <li>Information for:</li>
+                      <li>
+                        <div class="menu-information-for-container"><ul id="menu-information-for" class="nav-top"><li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84"><a href="#">link 1</a></li>
+                          <li id="menu-item-85" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-85"><a href="#">Link 2</a></li>
+                          <li id="menu-item-13138" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13138"><a href="#">Link 3</a></li>
+                          <li id="menu-item-149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a href="#">Link 4</a></li>
+                          <li id="menu-item-12036" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12036"><a href="#">Link 5</a></li>
+                          </ul></div>							</li>	
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-xs-6">
+                  <div class="tb-col-2">
+                    <a href="http://usc.edu/" target="_blank"><img data-src="/images/logo-top-usc.jpg" class=" lazyloaded" src="images/logo-top-usc.jpg" /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="content-width-middile">
           <h1 className='hpc-logo' style={{ margin: 0 }}>

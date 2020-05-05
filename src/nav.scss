@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Karla:400,700");
+
 * {
   box-sizing: border-box;
 }
@@ -57,9 +58,9 @@ p {
 .heading {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 15px;
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   color: #000;
   &-no-margin {
     margin-bottom: 0;
@@ -67,9 +68,6 @@ p {
 }
 
 .link-list {
-  li {
-    margin-bottom: 1rem;
-  }
 
   li:last-of-type {
     margin-bottom: 0;
@@ -162,10 +160,6 @@ p {
   }
 }
 
-.products-dropdown-el {
-  width: 10rem;
-}
-
 .logo {
   width: 38px;
   height: 38px;
@@ -231,14 +225,14 @@ p {
 
 .navbar-list {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   list-style: none;
   margin: 0;
 }
 .header-container {
   // background: linear-gradient(to bottom, #990000 10%, #660000 90%);
   background-color: #303030;
-  height: 200px;
+  height: 284px;
   position: relative;
   
   .app-container {
@@ -250,10 +244,15 @@ p {
       .navbar-item-title{
         color: white;
       }
+
+      .navbar-el {
+        max-width: 82rem;
+        margin: 0 auto;
+      }
   }
 
   .content-width-top {
-    background-color: #1f1f1f;
+    background-color: black;
 
     .usc-info {
       background-color: #1f1f1f;
@@ -263,7 +262,7 @@ p {
     }
   }
   .content-width-middile {
-    max-width: 60rem;
+    max-width: 80rem;
     margin-left: auto;
     margin-right: auto;
     height: 132px;

@@ -17,23 +17,36 @@ const AboutSubNavDropdown = ({ current, prev }) => {
 
   return (
     <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
-      <div data-prevent-distortion>
-        <div className="dropdown-section">
-          <ul className="products-section">
-            {subNav.sub_nav_items.map((item, i) => {
-              return (
-              <li key={i}>
-                <Router>
-                  <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
-                </Router>
+    <div class="dropdown-content">  
+      <div class="row">
+        <div class="column">
+          <h3>Life is beautiful</h3>         
+        </div>
+        <div className="column">
+          <ul>
+          {subNav.sub_nav_items.map((item, i) => {
+          return (
+            <li>
+              <Router>
+                <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+              </Router>
               </li>
-              )
-            })}
-          </ul>
+            )})
+          }
+        </ul>
+        </div>
+        <div class="column">
+          <h3>Related Links</h3>
+          <div className="links">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+          </div>
         </div>
       </div>
-    </div>
-  );
+  </div>
+  </div>
+  )
 };
 
 const ServicesSubNavDropdown = ({ current, prev }) => {
@@ -41,23 +54,36 @@ const ServicesSubNavDropdown = ({ current, prev }) => {
 
   return (
     <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
-      <div data-prevent-distortion>
-        <div className="dropdown-section">
-          <ul className="products-section">
-            {subNav.sub_nav_items.map((item, i) => {
-                return (
-                <li key={i}>
-                  <Router>
-                    <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
-                  </Router>
-                </li>
-                )
-              })}
-          </ul>
+    <div class="dropdown-content">  
+      <div class="row">
+        <div class="column">
+          <h3>Life is beautiful</h3>         
+        </div>
+        <div className="column">
+          <ul>
+          {subNav.sub_nav_items.map((item, i) => {
+          return (
+            <li>
+              <Router>
+                <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+              </Router>
+              </li>
+            )})
+          }
+        </ul>
+        </div>
+        <div class="column">
+          <h3>Related Links</h3>
+          <div className="links">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+          </div>
         </div>
       </div>
-    </div>
-  );
+  </div>
+  </div>
+  )
 };
 
 const UserInfoSubNavDropdown = ({ current, prev }) => {
@@ -65,47 +91,74 @@ const UserInfoSubNavDropdown = ({ current, prev }) => {
 
   return (
     <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
-      <div data-prevent-distortion>
-        <div className="dropdown-section">
-          <ul className="products-section">
-            {subNav.sub_nav_items.map((item, i) => {
-              return (
-              <li key={i}>
-                <Router>
-                  <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
-                </Router>
+    <div class="dropdown-content">  
+      <div class="row">
+        <div class="column">
+          <h3>Life is beautiful</h3>         
+        </div>
+        <div className="column">
+          <ul>
+          {subNav.sub_nav_items.map((item, i) => {
+          return (
+            <li>
+              <Router>
+                <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+              </Router>
               </li>
-              )
-            })}
-          </ul>
+            )})
+          }
+        </ul>
+        </div>
+        <div class="column">
+          <h3>Related Links</h3>
+          <div className="links">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+          </div>
         </div>
       </div>
-    </div>
-  );
+  </div>
+  </div>
+  )
 };
 
 const EducationOutreachSubNavDropdown = ({ current, prev }) => {
   let subNav = assignedDropdownSubNav('Education & Outreach');
 
-  return (
+   return (
     <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
-      <div data-prevent-distortion>
-        <div className="dropdown-section">
-          <ul className="products-section">
-            {subNav.sub_nav_items.map((item, i) => {
-              return (
-              <li key={i}>
-                <Router>
-                  <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
-                </Router>
+
+    <div class="dropdown-content">  
+      <div class="row">
+        <div class="column">
+          <h3>Life is beautiful</h3>         
+        </div>
+        <div className="column">
+          <ul>
+          {subNav.sub_nav_items.map((item, i) => {
+          return (
+            <li>
+              <Router>
+                <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+              </Router>
               </li>
-              )
-            })}
-          </ul>
+            )})
+          }
+        </ul>
+        </div>
+        <div class="column">
+          <h3>Related Links</h3>
+          <div className="links">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+          </div>
         </div>
       </div>
-    </div>
-  );
+  </div>
+  </div>
+  )
 }
 
 const UserSupportSubNavDropdown = ({ current, prev }) => {
@@ -113,23 +166,73 @@ const UserSupportSubNavDropdown = ({ current, prev }) => {
 
   return (
     <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
-      <div data-prevent-distortion>
-        <div className="dropdown-section">
-          <ul className="products-section">
-            {subNav.sub_nav_items.map((item, i) => {
-              return (
-              <li key={i}>
-                <Router>
-              <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
-                </Router>
+      <div class="dropdown-content">  
+      <div class="row">
+        <div class="column">
+          <h3>Life is beautiful</h3>         
+        </div>
+        <div className="column">
+          <ul>
+          {subNav.sub_nav_items.map((item, i) => {
+          return (
+            <li>
+              <Router>
+                <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+              </Router>
               </li>
-              )
-            })}
-          </ul>
+            )})
+          }
+        </ul>
+        </div>
+        <div class="column">
+          <h3>Related Links</h3>
+          <div className="links">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+          </div>
         </div>
       </div>
+  </div>
     </div>
   );
 }
 
-export { AboutSubNavDropdown, ServicesSubNavDropdown, UserInfoSubNavDropdown, EducationOutreachSubNavDropdown, UserSupportSubNavDropdown };
+const NewsEventsSubNavDropdown = ({ current, prev }) => {
+  let subNav = assignedDropdownSubNav('News and Events');
+
+  return (
+    <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
+      <div class="dropdown-content">  
+      <div class="row">
+        <div class="column">
+          <h3>Life is beautiful</h3>         
+        </div>
+        <div className="column">
+          <ul>
+          {subNav.sub_nav_items.map((item, i) => {
+          return (
+            <li>
+              <Router>
+                <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+              </Router>
+              </li>
+            )})
+          }
+        </ul>
+        </div>
+        <div class="column">
+          <h3>Related Links</h3>
+          <div className="links">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+          </div>
+        </div>
+      </div>
+  </div>
+    </div>
+  );
+}
+
+export { AboutSubNavDropdown, ServicesSubNavDropdown, UserInfoSubNavDropdown, EducationOutreachSubNavDropdown, UserSupportSubNavDropdown, NewsEventsSubNavDropdown };
