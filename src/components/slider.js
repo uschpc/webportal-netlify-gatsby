@@ -1,6 +1,9 @@
-import React from 'react';
-import Slider from 'react-animated-slider';
-import 'react-animated-slider/build/horizontal.css';
+import React, { Component } from 'react'
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import MagicSliderDots from 'react-magic-slider-dots';
+import 'react-magic-slider-dots/dist/magic-dots.css';
 
 const content = [
     {
@@ -26,24 +29,39 @@ const content = [
     }
   ];
 
-const Carsoul = () => {
-	return (
-        <Slider className="slider-wrapper">
-      {content.map((item, index) => (
-        <div
-          key={index}
-          className="slider-content"
-          style={{ background: `url('${item.image}') no-repeat center center` }}
-        >
-          <div className="inner">
-            <h1>{item.title}</h1>
-            <p>{item.description}</p>
-            <button>{item.button}</button>
-          </div>
-        </div>
-      ))}
-    </Slider>
-    )
+class Carsoul extends Component {
+
+render() {
+
+  const settings = {
+      dots: true,
+      arrows: true,
+      infinite: false,
+      speed: 1000,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      appendDots: (dots) => {
+        return <MagicSliderDots dots={dots} numDotsToShow={5} dotWidth={30} />
+      }
+    };
+
+    return (<Slider {...settings}>
+        {content.map((item, index) => (
+            <div
+            key={index}
+            className="slider-content"
+            style={{ background: `url('${item.image}') no-repeat center center` }}
+            >
+                <img src={item.image} />
+            {/* <div className="inner">
+                <h1>{item.title}</h1>
+                <p>{item.description}</p>
+                <button>{item.button}</button>
+            </div> */}
+            </div>
+        ))}
+    </Slider>)
+  }
 }
 
 export default Carsoul;
