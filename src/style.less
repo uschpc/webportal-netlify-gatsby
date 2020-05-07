@@ -157,8 +157,44 @@ body {
 //dot slider
 .slick-slider {
   .slick-list {
+    height: 400px;
     .slick-track {
       .slick-slide {
+        img {
+          width: 100%;
+        }
+        .entry-content {
+          position: absolute;
+          z-index: 150;
+          bottom: 50px;
+          right: 20px;
+          width: 327px;
+          padding: -0.25rem;
+          color: #fff;
+
+          .entry-title {
+            font-size: 1.5rem;
+            margin: 0;
+            border-bottom: 1px solid rgba(255,204,0,0.7);
+            background: rgba(153,0,0,0.7);
+            padding: .5rem .75rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.33);
+            color: #fff;
+
+            a {
+              color: #fff;
+            }
+          }
+
+          .entry-summary{
+            background: rgba(0,0,0,0.7);
+            padding: .75rem;
+            color: #fff;
+            p {
+              margin: 0;
+            }
+          }
+        }
         .slider-content {
           display: flex;
           width: 100%;

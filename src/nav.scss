@@ -232,11 +232,17 @@ p {
 .header-container {
   // background: linear-gradient(to bottom, #990000 10%, #660000 90%);
   background-color: #303030;
-  height: 284px;
+  height: 220px;
   position: relative;
+
+  .header-section {
+    &.second-section {
+      background: rgba(153, 0, 0, 0.7);
+    }
+  }
   
   .app-container {
-      background: #A43137;
+      background: rgba(153, 0, 0, 0.7);
       position: absolute;
       bottom: 0;
       width: 100%;
@@ -265,13 +271,18 @@ p {
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
-    height: 132px;
+    height: 129px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     form {
       margin-bottom: 0;
+    }
+    a {
+      background-size: 176px, 38px;
+      height: 38px;
+      width: 176px;
     }
 
     .hpc-logo {

@@ -7772,6 +7772,10 @@ span.all-link {
 .header-container {
   background: #3d3e4a;
 }
+
+.header-container .header-section.second-section {
+    background: rgba(153, 0, 0, 0.7);
+}
 @media all and (min-width: 768px) {
   /* line 56, ../sass/_header.scss */
   .header-container {

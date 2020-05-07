@@ -28,28 +28,30 @@ const Header = (props) => (
 
                 <div class="col-xs-6">
                   <div class="tb-col-2">
-                    <a href="http://usc.edu/" target="_blank"><img data-src="/images/logo-top-usc.jpg" class=" lazyloaded" src="images/logo-top-usc.jpg" /></a>
+                  <SearchBar searchData={(e) => props.searchData(e)} />
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="content-width-middile">
-          <h1 className='hpc-logo' style={{ margin: 0 }}>
-            <Link
-              to='/'
-              style={{
-                color: `white`,
-                textDecoration: `none`,
-                marginRight: '15px'
-              }}
-            >
-              {props.siteTitle}
-            </Link>
-          </h1>
-          <SearchBar searchData={(e) => props.searchData(e)} />
-          </div>
+        </div>
+        <div className="header-section second-section">
+          <div className="content-width-middile">
+            <h1 className='hpc-logo' style={{ margin: 0 }}>
+              <Link
+                to='/'
+                style={{
+                  color: `white`,
+                  textDecoration: `none`,
+                  marginRight: '15px'
+                }}
+              >
+                {props.siteTitle}
+              </Link>
+            </h1>
+            <a href="http://usc.edu/" target="_blank"><img data-src="/images/usc_logo.svg" class=" lazyloaded" src="/images/usc_logo.svg" /></a>
+            </div>
         </div>
         <Navbar />
   </header>

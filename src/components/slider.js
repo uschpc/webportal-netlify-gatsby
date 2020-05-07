@@ -7,25 +7,25 @@ import 'react-magic-slider-dots/dist/magic-dots.css';
 
 const content = [
     {
-      title: "Center for High-Performance Computing",
+      title: "HPC Slide 1",
       description:
         "A new partnership offers computing resources for research into the novel coronavirus.",
       button: "Read More",
-      image: "https://i.imgur.com/ZXBtVw7.jpg"
+      image: "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-gray-solid-color-background.jpg"
     },
     {
-      title: "HPC at SC19",
+      title: "HPC Slide 2",
       description:
-        "The HPC team attended SC19–the International Conference for High-Performance Computing, Networking, Storage and Analysis—from November 18–21, 2019.",
+        "The HPC team attended SC19–the International Conference for High-Performance Computing.",
       button: "Discover",
-      image: "https://i.imgur.com/DCdBXcq.jpg"
+      image: "https://coolbackgrounds.io/images/backgrounds/white/white-radial-gradient-a5802da1.jpg"
     },
     {
-      title: "Excellence Across the Disciplines",
+      title: "HPC Slide 3",
       description:
-        "HPC bridges USC’s unique strengths in scientific computing, computer science, and communications by supporting research groups in a variety of disciplines.",
+        "HPC bridges USC’s unique strengths in scientific computing, computer science, and communications.",
       button: "Learn More",
-      image: "https://i.imgur.com/DvmN8Hx.jpg"
+      image: "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-gray-solid-color-background.jpg"
     }
   ];
 
@@ -35,13 +35,15 @@ render() {
 
   const settings = {
       dots: true,
-      arrows: true,
       infinite: false,
       speed: 1000,
       slidesToShow: 1,
       slidesToScroll: 1,
+      fade: true,
+      infinite: true,
+      cssEase: 'ease-in-out',
       appendDots: (dots) => {
-        return <MagicSliderDots dots={dots} numDotsToShow={5} dotWidth={30} />
+        return <MagicSliderDots dots={dots} numDotsToShow={3} dotWidth={50} />
       }
     };
 
@@ -52,12 +54,18 @@ render() {
             className="slider-content"
             style={{ background: `url('${item.image}') no-repeat center center` }}
             >
-                <img src={item.image} />
-            {/* <div className="inner">
-                <h1>{item.title}</h1>
-                <p>{item.description}</p>
-                <button>{item.button}</button>
-            </div> */}
+                <div>
+                    <img src={item.image}/>
+                </div>
+                <div class="entry-content">
+                    <header class="entry-header">
+                        <h1 class="entry-title"><a href="https://news.usc.edu/168870/usc-department-public-safety-officers-support-staff-covid-19/" data-analytics-action="click" data-analytics-label="Feature Title: Patrolling a pandemic">{item.title}</a></h1></header>
+                    <div class="entry-summary">
+                        <p>{item.description}</p>
+                    </div>
+                    <footer class="entry-footer">
+                    </footer>
+                </div>
             </div>
         ))}
     </Slider>)

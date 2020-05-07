@@ -651,7 +651,7 @@ pre tt:after {
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
+  color: yellow;
 }
 
 .dropdown-content {
@@ -732,8 +732,6 @@ pre tt:after {
 
 .top-bar {
   background: black;
-  padding-top: 10px;
-  padding-bottom: 10px;
   max-width: 80%;
   margin: 0 auto;
 }
@@ -742,6 +740,46 @@ pre tt:after {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.top-bar .row form {
+  margin: 5px;
+  position: relative;
+}
+
+.top-bar .row form input {
+    width: 172px;
+    height: 25px;
+    margin: 0;
+    padding: 0 27px 0 3px;
+    border: 2px solid #fff;
+    background: #fff;
+    font: 14px/19px Helvetica, Arial, sans-serif;
+    color: #333;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
+.top-bar .row form .arrow-search  {
+    display: block;
+    position: absolute;
+    top: 3px;
+    right: 2px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 21px;
+    height: 21px;
+    text-indent: -9999px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background: #fc0;
+    background-image: url(/images/searcharrow.png);
+    background-image: url(/images/searcharrow.png), -webkit-gradient(linear,left top,left bottom,color-stop(0, #fc0),color-stop(0.85, #D1A832));
+    background-image: url(/images/searcharrow.png), -moz-linear-gradient(center top,#fc0 0%,#D1A832 85%);
+    background-image: url(/images/searcharrow.png), -o-linear-gradient(center top,#fc0 0%,#D1A832 85%);
 }
 
 /* line 11, ../scss/layout/_header.scss */
