@@ -26,6 +26,12 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-plugin-s3',
+      options: {
+	      bucketName: 'webportal-dev-td3pl856c23o'
+      }
+    },
+    {
       resolve: 'gatsby-plugin-zopfli',
       options: {
         extensions: ['css', 'html', 'js']
