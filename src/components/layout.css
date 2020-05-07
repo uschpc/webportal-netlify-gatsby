@@ -717,8 +717,12 @@ pre tt:after {
   border-right: none;
 }
 
-.column a:hover {
-  background-color: red;
+.column a:hover, .column h3:hover {
+  color: yellow;
+}
+
+.column h4 {
+  color: white;
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */

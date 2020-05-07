@@ -20,7 +20,7 @@ const AboutSubNavDropdown = ({ current, prev }) => {
     <div class="dropdown-content">  
       <div class="row">
         <div class="column">
-          <h3>Life is beautiful</h3>         
+          <h4>Life is beautiful</h4>         
         </div>
         <div className="column">
           <ul>
@@ -36,7 +36,7 @@ const AboutSubNavDropdown = ({ current, prev }) => {
         </ul>
         </div>
         <div class="column">
-          <h3>Related Links</h3>
+          <h4>Related Links</h4>
           <div className="links">
             <a href="#">Link 1</a>
             <a href="#">Link 2</a>
@@ -57,7 +57,7 @@ const ServicesSubNavDropdown = ({ current, prev }) => {
     <div class="dropdown-content">  
       <div class="row">
         <div class="column">
-          <h3>Life is beautiful</h3>         
+        <h4>Life is beautiful</h4>       
         </div>
         <div className="column">
           <ul>
@@ -73,7 +73,7 @@ const ServicesSubNavDropdown = ({ current, prev }) => {
         </ul>
         </div>
         <div class="column">
-          <h3>Related Links</h3>
+        <h4>Related Links</h4>
           <div className="links">
             <a href="#">Link 1</a>
             <a href="#">Link 2</a>
@@ -94,7 +94,7 @@ const UserInfoSubNavDropdown = ({ current, prev }) => {
     <div class="dropdown-content">  
       <div class="row">
         <div class="column">
-          <h3>Life is beautiful</h3>         
+        <h4>Life is beautiful</h4>        
         </div>
         <div className="column">
           <ul>
@@ -110,7 +110,7 @@ const UserInfoSubNavDropdown = ({ current, prev }) => {
         </ul>
         </div>
         <div class="column">
-          <h3>Related Links</h3>
+        <h4>Related Links</h4>
           <div className="links">
             <a href="#">Link 1</a>
             <a href="#">Link 2</a>
@@ -132,7 +132,7 @@ const EducationOutreachSubNavDropdown = ({ current, prev }) => {
     <div class="dropdown-content">  
       <div class="row">
         <div class="column">
-          <h3>Life is beautiful</h3>         
+        <h4>Life is beautiful</h4>         
         </div>
         <div className="column">
           <ul>
@@ -148,7 +148,7 @@ const EducationOutreachSubNavDropdown = ({ current, prev }) => {
         </ul>
         </div>
         <div class="column">
-          <h3>Related Links</h3>
+          <h4>Related Links</h4>
           <div className="links">
             <a href="#">Link 1</a>
             <a href="#">Link 2</a>
@@ -169,7 +169,7 @@ const UserSupportSubNavDropdown = ({ current, prev }) => {
       <div class="dropdown-content">  
       <div class="row">
         <div class="column">
-          <h3>Life is beautiful</h3>         
+          <h4>Life is beautiful</h4>         
         </div>
         <div className="column">
           <ul>
@@ -185,7 +185,7 @@ const UserSupportSubNavDropdown = ({ current, prev }) => {
         </ul>
         </div>
         <div class="column">
-          <h3>Related Links</h3>
+        <h4>Related Links</h4>
           <div className="links">
             <a href="#">Link 1</a>
             <a href="#">Link 2</a>
@@ -207,7 +207,7 @@ const NewsEventsSubNavDropdown = ({ current, prev }) => {
         <div class="dropdown-content">  
         <div class="row">
           <div class="column">
-            <h3>Life is beautiful</h3>         
+          <h4>Related Links</h4>       
           </div>
           <div className="column">
             <ul>
