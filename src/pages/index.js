@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import Markdown from "react-markdown"
 import Search from "../components/SearchContainer.js";
 import Carsoul from "../components/slider.js";
+import ServicesBox from "../components/services-box.js";
 
 const IndexPage = () => {
   const [searchTrigger, searchBarUpdated] = useState('');
@@ -21,17 +22,13 @@ const IndexPage = () => {
       <Layout searchData={(e) => searchData(e)}>
           <SEO title="About" />
           <Carsoul />
-          <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0 1.0875rem 1.45rem`,
-          }}
-          >
-            <Search searchData={searchTrigger}/>
+            <ServicesBox />
+            {/* <Search searchData={searchTrigger}/> */}
+          <div className="body-content">
+            <Markdown source={contents[0].content} escapeHtml={false} />
+            <Link to="/about/">Go to about us page</Link>
           </div>
-          <Markdown source={contents[0].content} escapeHtml={false} />
-          <Link to="/about/">Go to about us page</Link>
+          
       </Layout>
   )
 }

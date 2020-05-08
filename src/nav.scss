@@ -9,6 +9,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   color: #6b7c93;
+
+  .body-content {
+    clear: both;
+  }
 }
 
 a {
@@ -295,6 +299,95 @@ p {
   }
 }
 
+// Services box
+
+.region {
+  &.usc-hpc {
+    position: relative;
+    z-index: 6;
+  } 
+  ul {
+    li {
+      position: relative;
+      background: #e6e6e8;
+      color: #3d3e4a;
+      font-family: "ProximaNova-Light", Helvetica, Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .service-box-icon {
+        margin: 0;
+        height: 50px;
+        width: 50px;
+      }
+
+      .mobile-container {
+        h3 {
+          font-size: 22px;
+          padding: 0
+           1em;
+        }
+        p {
+          font-size: 14px;
+          padding: 0 1em;
+        }
+      }
+      &.views-row {
+        height: 220px;
+        border-top: solid 5px;
+        text-align: center;
+        padding: 45px 0;
+      }  
+      &:first-child {
+        float: left;
+        width: 25%;
+        margin-left: 0%;
+        margin-right: -25%;
+        border-color: rgba(153, 0, 0, 0.7);
+    }
+      &:nth-child(2) {
+        float: left;
+        width: 25%;
+        margin-left: 25%;
+        margin-right: -50%;
+        border-color: yellow;
+    }
+      &:nth-child(3) {
+        float: left;
+        width: 25%;
+        margin-left: 50%;
+        margin-right: -75%;
+        border-color: rgba(153, 0, 0, 0.7);;
+    }
+      &:nth-child(4) {
+        float: left;
+        width: 25%;
+        margin-left: 75%;
+        margin-right: -100%;
+        border-color: yellow;
+    }
+    &:hover {
+      margin-top: -100px;
+      height: 320px;
+      -moz-transition: all 500ms;
+      -o-transition: all 500ms;
+      -webkit-transition: all 500ms;
+      transition: all 500ms;
+      z-index: 200;
+      background: #d9d9d9;
+      justify-content: unset;
+      padding: 0;
+    }
+
+    }
+  }
+  
+} 
+
+
+
 
 
 
@@ -344,3 +437,80 @@ p {
 .nav .box:hover { width: 70%; }
 
 .box:hover span{ top:25%; }
+
+
+$speed: 1s;
+
+.btn-flip{
+    width: 25%;
+    opacity: 1;
+    outline: 0;
+    color: #fff;
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Open Sans';
+    text-transform: uppercase;
+
+    &:nth-child(even) {
+      border-right: yellow solid 1px;
+    }
+    &:nth-child(odd) {
+      border-right: orange solid 1px;
+    }
+    
+    &:hover{
+        
+        &:after{
+            opacity: 1;
+            transform: translateY(0) rotateX(0);
+        }
+        
+        &:before{
+            opacity: 0;
+            transform: translateY(50%) rotateX(90deg);
+        }
+    }
+    
+    &:after{
+      height: 220px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      line-height: 1.5;
+      left: 0;
+      opacity: 0;
+      width: 100%;
+      padding: 0 30px;
+      color: #000;
+      transition: 1s;
+      position: absolute;
+      background: lightgrey;
+      content: attr(data-back);
+      transform: translateY(-50%) rotateX(90deg);
+    }
+    
+    &:before{
+      font-weight: bold;
+      font-size: 20px;
+      height: 220px;
+      top: 0;
+      left: 0;
+      opacity: 1;
+      color: #adadaf;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 30px;
+      line-height: 40px;
+      transition: 1s;
+      position: relative;
+      background: #750404;
+      content: attr(data-front);
+      transform: translateY(0) rotateX(0);
+    }
+}
