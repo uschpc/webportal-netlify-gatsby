@@ -406,6 +406,7 @@ p {
             margin: 1em;
             transform: perspective(1px) translateZ(0);
             border-top: 2px solid #DADADA;
+            cursor: pointer;
             .date-stacked {
               background: #757370;
               padding: 8px 10px 10px;
