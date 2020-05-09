@@ -11,21 +11,21 @@ const content = [
       description:
         "A new partnership offers computing resources for research into the novel coronavirus.",
       button: "Read More",
-      image: "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-gray-solid-color-background.jpg"
+      image: "/images/sp_visual.jpg"
     },
     {
       title: "HPC Slide 2",
       description:
         "The HPC team attended SC19–the International Conference for High-Performance Computing.",
       button: "Discover",
-      image: "https://coolbackgrounds.io/images/backgrounds/white/white-radial-gradient-a5802da1.jpg"
+      image: "/images/slider-pic1-fade3.jpg"
     },
     {
       title: "HPC Slide 3",
       description:
         "HPC bridges USC’s unique strengths in scientific computing, computer science, and communications.",
       button: "Learn More",
-      image: "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-gray-solid-color-background.jpg"
+      image: "/images/sp_visual.jpg"
     }
   ];
 
