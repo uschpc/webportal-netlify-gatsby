@@ -1,4 +1,4 @@
 ---
-title: High Computing
+title: Training
 ---
 Let's see what happens
