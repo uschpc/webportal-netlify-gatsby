@@ -57,13 +57,13 @@ render() {
                 <div>
                     <img src={item.image}/>
                 </div>
-                <div class="entry-content">
-                    <header class="entry-header">
-                        <h1 class="entry-title"><a href="https://news.usc.edu/168870/usc-department-public-safety-officers-support-staff-covid-19/" data-analytics-action="click" data-analytics-label="Feature Title: Patrolling a pandemic">{item.title}</a></h1></header>
-                    <div class="entry-summary">
+                <div className="entry-content">
+                    <header className="entry-header">
+                        <h1 className="entry-title"><a href="https://news.usc.edu/168870/usc-department-public-safety-officers-support-staff-covid-19/" data-analytics-action="click" data-analytics-label="Feature Title: Patrolling a pandemic">{item.title}</a></h1></header>
+                    <div className="entry-summary">
                         <p>{item.description}</p>
                     </div>
-                    <footer class="entry-footer">
+                    <footer className="entry-footer">
                     </footer>
                 </div>
             </div>

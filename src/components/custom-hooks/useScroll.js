@@ -28,7 +28,7 @@ export function useScroll() {
     return () => {
       window.removeEventListener("scroll", listener);
     };
-  });
+  }, [scrollY]);
 
   return {
     scrollY,

@@ -3,10 +3,10 @@ import React from 'react';
 const ServicesBox = () => {
     return (
         <div className="region usc-hpc">
-            <div class="services-block">
+            <div className="services-block">
             <div className="view view-services">
                 <div className="view-content">
-                    <div id="x-section-5" class="x-section">
+                    <div id="x-section-5" className="x-section">
                         <div className="marginless-columns" >
                             <div className="shared">
                                 <a href="#">
@@ -76,7 +76,7 @@ const ServicesBox = () => {
                                 </div>
                                 <div className="event-title normal-link"><h3><a href="#">Sherlock Zoom office hours</a></h3></div>
                                 <div className="event-location descriptor"></div>
-                                <div className="event-date-long descriptor"><span class="date-display-single">3:00pm</span></div>
+                                <div className="event-date-long descriptor"><span className="date-display-single">3:00pm</span></div>
                             </div>
                             <div className="postcard-left">
                                 <div className="date-stacked">
@@ -85,7 +85,7 @@ const ServicesBox = () => {
                                 </div>
                                 <div className="event-title normal-link"><h3><a href="#">Sherlock Zoom office hours</a></h3></div>
                                 <div className="event-location descriptor"></div>
-                                <div className="event-date-long descriptor"><span class="date-display-single">3:00pm</span></div>
+                                <div className="event-date-long descriptor"><span className="date-display-single">3:00pm</span></div>
                             </div>
                             <div className="postcard-left">
                                 <div className="date-stacked">
@@ -94,7 +94,7 @@ const ServicesBox = () => {
                                 </div>
                                 <div className="event-title normal-link"><h3><a href="#">Sherlock Zoom office hours</a></h3></div>
                                 <div className="event-location descriptor"></div>
-                                <div className="event-date-long descriptor"><span class="date-display-single">3:00pm</span></div>
+                                <div className="event-date-long descriptor"><span className="date-display-single">3:00pm</span></div>
                             </div>
                             <div className="postcard-left">
                                 <div className="date-stacked">
@@ -103,7 +103,7 @@ const ServicesBox = () => {
                                 </div>
                                 <div className="event-title normal-link"><h3><a href="#">Sherlock Zoom office hours</a></h3></div>
                                 <div className="event-location descriptor"></div>
-                                <div className="event-date-long descriptor"><span class="date-display-single">3:00pm</span></div>
+                                <div className="event-date-long descriptor"><span className="date-display-single">3:00pm</span></div>
                             </div>
                         </div>
                     </div>

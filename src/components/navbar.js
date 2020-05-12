@@ -83,9 +83,9 @@ class Navbar extends React.Component {
                   data-index={index}
                   key={index}
                 >
-                  <div class="navbar">
-                    <div class="dropdown">
-                    <button class="dropbtn">{n.title}</button>
+                  <div className="navbar">
+                    <div className="dropdown">
+                    <button className="dropbtn">{n.title}</button>
                   <div className="">
                     {currentIndex === index && (
                         <DropDownsContainer preventDistortion="[data-prevent-distortion]" >

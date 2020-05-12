@@ -31,8 +31,8 @@ const Header = (props) => {
                     </div>
                   </div>
 
-                  <div class="col-xs-6">
-                    <div class="tb-col-2">
+                  <div className="col-xs-6">
+                    <div className="tb-col-2">
                     <SearchBar searchData={(e) => props.searchData(e)} />
                     </div>
                   </div>
@@ -55,7 +55,7 @@ const Header = (props) => {
                   {props.siteTitle}
                 </Link>
               </h1>
-              <a href="http://usc.edu/" target="_blank"><img data-src="/images/usc_logo.svg" class=" lazyloaded" src="/images/usc_logo.svg" /></a>
+              <a href="http://usc.edu/" target="_blank"><img data-src="/images/usc_logo.svg" className=" lazyloaded" src="/images/usc_logo.svg" /></a>
               </div>
           </div>
           <Navbar scrollY={scrollY} />

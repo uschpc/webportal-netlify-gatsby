@@ -19,7 +19,7 @@ const SearchBar = (props) => {
                         <span className="top"></span>
                         <span className="bottom"></span>
                     </a>
-                    <div class="form">
+                    <div className="form">
                         <form action="/search.cfm" method="get" name="headerSearch" id="headerSearch">
                             <input type="search" className="search" placeholder="ENTER SEARCH TERMS" />
                             <input type="submit" className="submit" />
