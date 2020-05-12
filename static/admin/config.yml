@@ -29,7 +29,7 @@ collections:
         label: "About"
         name: "about"
         fields:
-          - {label: "Body", name: "body", widget: "markdown"}+
+          - {label: "Body", name: "body", widget: "markdown"}
   - name: "feature boxes"
     label: "feature boxes"
     folder: "src/feature-boxes"
