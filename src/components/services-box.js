@@ -1,6 +1,9 @@
 import React from 'react';
 
+import featureBox from '../feature-boxes.json';
+
 const ServicesBox = () => {
+    console.log(featureBox);
     return (
         <div className="region usc-hpc">
             <div className="services-block">
@@ -8,30 +11,16 @@ const ServicesBox = () => {
                 <div className="view-content">
                     <div id="x-section-5" className="x-section">
                         <div className="marginless-columns" >
-                            <div className="shared">
-                                <a href="#">
-                                    <span className="features">Research</span>
-                                    <span className="copy-text">Some text here</span>
-                                </a>
-                            </div>
-                            <div className="shared">
-                                <a href="#">
-                                    <span className="features">Innovation</span>
-                                    <span className="copy-text">Some text here</span>
-                                </a>
-                            </div>
-                            <div className="shared">
-                                <a href="#">
-                                    <span className="features">Training</span>
-                                    <span className="copy-text">some test here</span>
-                                </a>
-                            </div>
-                            <div className="shared">
-                                <a href="#">
-                                    <span className="features">Hight Computing</span>
-                                    <span className="copy-text">Some text here</span>
-                                </a>
-                            </div>
+                            {
+                                featureBox.map(item => {
+                                    return <div className="shared">
+                                        <a href="#">
+                                            <span className="features">{item.title}</span>
+                                            <span className="copy-text">{item.content}</span>
+                                        </a>
+                                    </div>
+                                })
+                            }
                         </div>
                     </div>
                     <div className="content-container">
@@ -107,57 +96,6 @@ const ServicesBox = () => {
                             </div>
                         </div>
                     </div>
-                    {/* <ul> */}
-                    {/* <a href="#" class="btn-flip" data-back="Our department has helped enable the advancement of critical inquiry" data-front="Data Visualization"></a>
-                    <a href="#" class="btn-flip" data-back="Formats a HTML string/file with your desired indentation level. The formatting rules are not configurable" data-front="Training &amp; Education"></a>
-                    <a href="#" class="btn-flip" data-back="Formats a HTML string/file with your desired indentation level. The formatting rules are not configurable
-                                    Note that the formatter" data-front="High Performance Computing"></a>
-                    <a href="#" class="btn-flip" data-back="Formats a HTML string/file with your desired indentation level" data-front="Enabling Research"></a> */}
-
-                    {/* <li className="views-row">
-                        <img className="service-box-icon" src="/images/books-100.png" />
-                        <a href="#">
-                            <div className="mobile-container">
-                                <h3>Enabling Research</h3>
-                                <p></p>
-                                <p>Our department has helped enable the advancement of critical inquiry</p>
-                                <p></p>
-                            </div>
-                        </a>
-                    </li> */}
-                    {/* <li className="views-row">
-                    <img className="service-box-icon" src="/images/heart-96.png" />
-                        <a href="#">
-                            <div className="mobile-container">
-                                <h3>Data Visualization</h3>
-                                <p></p>
-                                <p>Formats a HTML string/file with your desired indentation level. The formatting rules are not configurable
-                                </p>
-                            </div>
-                        </a>
-                    </li> */}
-                    {/* <li className="views-row">
-                    <img className="service-box-icon" src="/images/training-100.png" />
-                        <a href="#">
-                            <div className="mobile-container">
-                                <h3>Training &amp; Education</h3>
-                                <p></p>
-                                <p>Formats a HTML string/file with your desired indentation level. The formatting rules are not configurable
-                                    Note that the formatter</p>
-                            </div>
-                        </a>
-                    </li> */}
-                    {/* <li className="views-row">
-                        <img className="service-box-icon" src="/images/highfive-80.png" />
-                        <a href="#">
-                            <div className="mobile-container">
-                                <h3>High Performance Computing</h3>
-                                <p></p>
-                                <p>Formats a HTML string/file with your desired indentation level.</p>
-                            </div>
-                        </a>
-                    </li> */}
-                    {/* </ul> */}
                 </div>
             </div>
         </div>
