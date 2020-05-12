@@ -13,6 +13,114 @@ body {
   .body-content {
     clear: both;
   }
+.search-container {
+  a {
+    &.searchToggle {
+      height: 84px;
+      background-size: 24px auto;
+      display: block;
+      background: center center no-repeat url('/images/magnifying-glass-3-xxl.png');
+      background-size: 20px auto;
+      width: 30px;
+      height: 28px;
+      text-indent: -9000em;
+      visibility: visible;
+      transition: all 0.1s ease-in-out;
+      &.hide {
+        visibility: hidden;
+      }
+      &.show {
+        visibility: visible;
+      }
+    }
+  }
+  .search {
+    top: 1px;
+    position: absolute;
+    right: -400px;
+    transition: all 0.5s ease-in-out;
+
+    &.show {
+      right: 166px;
+    }
+    .searchWrap{
+      .searchInner {
+        width: 100%;
+        padding: 5px 5px;
+        position: relative;
+        a {
+          &.closeBtn {
+            position: absolute;
+            top: -16px;
+            right: 250px;
+  
+            span {
+              top: 27px;
+              background: #fff;
+              -webkit-transition: background-color .3s ease-out;
+              transition: background-color .3s ease-out;
+              display: block;
+              width: 24px;
+              height: 4px;
+              position: absolute;
+              left: 9px;
+              text-indent: -9000em;
+              transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+              -webkit-transform: rotate(45deg);
+              -webkit-transition: top 0.3s ease-out, transform 0.3s .3s ease-out;
+              transition: top 0.3s ease-out, transform 0.3s .3s ease-out;
+              &.bottom {
+                top: 27px;
+                transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+                -webkit-transition: top 0.3s ease-out, transform 0.3s .3s ease-out;
+                transition: top 0.3s ease-out, transform 0.3s .3s ease-out;
+              }
+            }
+  
+          }
+        }
+        .form {
+          position: absolute;
+          top: 0;
+          form {
+            background: #fafafa;
+            margin: 0 0 0 35px;
+            position: relative;
+            -webkit-box-shadow: 0px 0px 12px 0px rgba(186, 186, 186, 0.62);
+            -moz-box-shadow: 0px 0px 12px 0px rgba(186, 186, 186, 0.62);
+          input {
+            font-size: 10px;
+            width: 230px;
+            height: 26px;
+            &.search{
+              position: absolute;
+              top: 0;
+              right: 0;
+              // background: center center no-repeat url('images/search-icon-black@2x.png');
+              background-size: 24px auto;
+            }
+            &.submit {
+              position: absolute;
+              top: 0;
+              right: 0;
+              width: 50px;
+              background: center center no-repeat url('/images/search-icon-black@2x.png');
+              background-size: 20px auto;
+              text-indent: -9000em;
+              cursor: pointer;
+            }
+            
+          }
+          }
+        }
+      }
+    }
+    
+  }
+}
 }
 
 a {
@@ -145,8 +253,7 @@ p {
     // animation: fade-in 0.4s ease-in-out forwards, slide-in 0.7s ease-in-out forwards;
   }
   &[data-prev] {
-    position: absolute;
-    animation: fade-out 0.3s ease-in-out forwards;
+    display: none;
   }
 }
 .company-dropdown-el {
@@ -236,7 +343,7 @@ p {
 .header-container {
   // background: linear-gradient(to bottom, #990000 10%, #660000 90%);
   background-color: #303030;
-  height: 220px;
+  height: 181px;
   position: relative;
 
   .header-section {
@@ -248,8 +355,17 @@ p {
   .app-container {
       background: rgba(153, 0, 0, 0.7);
       position: absolute;
-      bottom: 0;
       width: 100%;
+      -webkit-box-shadow: -1px 9px 5px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: -1px 9px 5px 0px rgba(0,0,0,0.75);
+      box-shadow: -1px 4px 2px 0px rgba(0,0,0,0.75);
+      z-index: 50;
+
+      &.fixed {
+        position: fixed;
+        top: 0;
+        background: rgb(153, 0, 0);
+      }
 
       .navbar-item-title{
         color: white;
@@ -275,7 +391,7 @@ p {
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
-    height: 129px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -319,7 +435,7 @@ p {
           a {
             padding: 70px 0px;
             color: rgb(255, 255, 255);
-            background-color: rgb(153, 0, 0);
+            background-color: gray;
             font-weight: 900;
             display: block;
             overflow: hidden;
@@ -348,7 +464,10 @@ p {
   
 
             &:hover {
-              background: rgb(120, 120, 120);
+              background: lightgray;
+              color: black;
+              margin-top: -40px;
+              height: 205.5px;
 
               .features {
                 transform: translate(0, -250%);
@@ -364,7 +483,10 @@ p {
         }
       }
       .content-container {
-        margin: 25px 0px;
+        margin-top: 25px;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
         display: flex;
         .shared {
           width: 33.3%;

@@ -3,6 +3,7 @@ import { AboutSubNavDropdown, ServicesSubNavDropdown, UserInfoSubNavDropdown, Ed
 import DropDownsContainer from "../helper/DropDownsContainer";
 import navlist from "../navigations.json";
 
+
 import "../nav.scss";
 
 const navigation = [
@@ -54,6 +55,7 @@ class Navbar extends React.Component {
   };
 
   render() {
+    console.log(this.props);
     let CurrentDropdown;
     let PreviousDropdown;
 
@@ -69,7 +71,7 @@ class Navbar extends React.Component {
     }
 
     return (
-      <div className="app-container">
+      <div className={`app-container ${(this.props.scrollY >= 124) ? 'fixed' : 'default' } `}>
         <nav className="navbar-el" onMouseLeave={this.onMouseLeave}>
           <ul className="navbar-list">
             {activeNavigation.map((n, index) => {
