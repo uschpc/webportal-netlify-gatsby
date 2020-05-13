@@ -51,12 +51,4 @@ nav_items:
     path: /education-and-outreach
   - label: User Support
     path: /user-support
-    sub_nav_items:
-      - label: Password Reset
-        path: /password-reset
-      - label: Asking Consultation
-        path: /asking-consultation
-      - label: Ticket Submission
-        path: /ticket-submission
-      - label: Resource Request Partnership & Projects
-        path: /resource-request-partnership-projects
+    sub_nav_items: []
