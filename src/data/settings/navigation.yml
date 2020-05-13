@@ -47,6 +47,8 @@ nav_items:
         path: /learning-contents
       - label: Knowledgebase
         path: /knowledgebase
+  - label: News and Events
+    path: /education-and-outreach
   - label: User Support
     path: /user-support
     sub_nav_items:
@@ -58,5 +60,3 @@ nav_items:
         path: /ticket-submission
       - label: Resource Request Partnership & Projects
         path: /resource-request-partnership-projects
-  - label: News and Events
-    path: /education-and-outreach
