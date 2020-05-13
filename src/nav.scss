@@ -5,6 +5,9 @@
 }
 
 body {
+  #___gatsby {
+    overflow: hidden;
+  }
   font-family: karla, -apple-system, system-ui, "Segoe UI", "Roboto", "Helvetica Neue", Arial,
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -13,6 +16,12 @@ body {
   .body-content {
     clear: both;
   }
+
+  .slick-slider{
+    &.slick-initialized {
+      overflow: hidden;
+    }
+  } 
 .search-container {
   a {
     &.searchToggle {
@@ -341,7 +350,6 @@ p {
   margin: 0;
 }
 .header-container {
-  // background: linear-gradient(to bottom, #990000 10%, #660000 90%);
   background-color: #303030;
   height: 181px;
   position: relative;
