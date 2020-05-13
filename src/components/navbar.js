@@ -24,13 +24,13 @@ const navigation = [
     dropdown: EducationOutreachSubNavDropdown
  },
  {
-    title: "User Support", 
-    dropdown: UserSupportSubNavDropdown
- },
- {
    title: "News and Events",
    dropdown: NewsEventsSubNavDropdown
- }
+ },
+ {
+  title: "User Support", 
+  dropdown: UserSupportSubNavDropdown
+}
 ];
 
 var activeNavigation = navigation.filter((e, i) => e.title === navlist.nav_items[i].label);
@@ -84,7 +84,7 @@ class Navbar extends React.Component {
                 >
                   <div className="navbar">
                     <div className="dropdown">
-                    <button className="dropbtn">{n.title}</button>
+                    <button className={`dropbtn ${n.title === "User Support" ? 'last-element' : ''} `}>{n.title}</button>
                   <div className="">
                     {currentIndex === index && (
                         <DropDownsContainer preventDistortion="[data-prevent-distortion]" >
