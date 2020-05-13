@@ -3,7 +3,6 @@ import React from 'react';
 import featureBox from '../feature-boxes.json';
 
 const ServicesBox = () => {
-    console.log(featureBox);
     return (
         <div className="region usc-hpc">
             <div className="services-block">

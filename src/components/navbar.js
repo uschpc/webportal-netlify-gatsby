@@ -55,7 +55,6 @@ class Navbar extends React.Component {
   };
 
   render() {
-    console.log(this.props);
     let CurrentDropdown;
     let PreviousDropdown;
 
