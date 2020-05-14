@@ -4,7 +4,7 @@ const yaml = require('js-yaml');
 
 const dirPathNav = path.join(__dirname, "../src/data/settings")
 const dirPathFeatureBoxes = path.join(__dirname, "../src/feature-boxes")
-const dirPathFeatureStories = path.join(__dirname, "../src/feature-stories")
+const dirPathFeatureStories = path.join(__dirname, "../src/featured-story")
 const dirPathLatestNews = path.join(__dirname, "../src/latest-news")
 const dirPath = path.join(__dirname, "../src/posts/content")
 const dirPathPages = path.join(__dirname, "../src/pages/content")
