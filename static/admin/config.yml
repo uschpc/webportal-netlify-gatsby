@@ -38,6 +38,24 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Featured Stories"
+    label: "Featured Stories"
+    folder: "src/featured-story"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Featured Story", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+   - name: "Lates News"
+    label: "Lates News"
+    folder: "src/lates-news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Lates news", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: settings
     label: Settings
     files:

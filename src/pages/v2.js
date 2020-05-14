@@ -5,7 +5,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Markdown from "react-markdown"
 import Carsoul from "../components/slider.js";
-import ServicesBox from "../components/services-box.js";
+import BodyContent from "../components/body-content.js";
+
 const AboutPage = () => {
     let contents = pagelist.filter(obj => {
         return obj.filePath === 'about'
@@ -14,7 +15,7 @@ const AboutPage = () => {
     <Layout>
         <SEO title="About" />
         <Carsoul />
-        <ServicesBox />
+        <BodyContent />
         {/* <Markdown source={contents[0].content} escapeHtml={false} /> */}
         <Link to="/">Go to home page</Link>
     </Layout>
