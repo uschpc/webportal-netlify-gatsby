@@ -47,14 +47,14 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Featured Story", name: "thumbnail", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
-   - name: "Lates News"
-    label: "Lates News"
+  - name: "Latest News"
+    label: "Latest News"
     folder: "src/lates-news"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Lates news", name: "thumbnail", widget: "image"}
+      - {label: "Latest news", name: "thumbnail", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: settings
     label: Settings
