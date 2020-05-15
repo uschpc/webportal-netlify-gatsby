@@ -6,6 +6,7 @@
 
 body {
   #___gatsby {
+    font-family: national;
     overflow: hidden;
   }
   font-family: karla, -apple-system, system-ui, "Segoe UI", "Roboto", "Helvetica Neue", Arial,
@@ -44,70 +45,25 @@ body {
     }
   }
   .search {
-    top: 1px;
-    position: absolute;
-    right: -400px;
-    transition: all 0.5s ease-in-out;
 
     &.show {
       right: 166px;
     }
     .searchWrap{
       .searchInner {
-        width: 100%;
-        padding: 5px 5px;
-        position: relative;
-        a {
-          &.closeBtn {
-            position: absolute;
-            top: -16px;
-            right: 250px;
-  
-            span {
-              top: 27px;
-              background: #fff;
-              -webkit-transition: background-color .3s ease-out;
-              transition: background-color .3s ease-out;
-              display: block;
-              width: 24px;
-              height: 4px;
-              position: absolute;
-              left: 9px;
-              text-indent: -9000em;
-              transform: rotate(45deg);
-              -ms-transform: rotate(45deg);
-              -webkit-transform: rotate(45deg);
-              -webkit-transition: top 0.3s ease-out, transform 0.3s .3s ease-out;
-              transition: top 0.3s ease-out, transform 0.3s .3s ease-out;
-              &.bottom {
-                top: 27px;
-                transform: rotate(-45deg);
-                -ms-transform: rotate(-45deg);
-                -webkit-transform: rotate(-45deg);
-                -webkit-transition: top 0.3s ease-out, transform 0.3s .3s ease-out;
-                transition: top 0.3s ease-out, transform 0.3s .3s ease-out;
-              }
-            }
-  
-          }
-        }
+      
         .form {
-          position: absolute;
-          top: 0;
           form {
             background: #fafafa;
-            margin: 0 0 0 35px;
+            margin: 2px 0;
             position: relative;
             -webkit-box-shadow: 0px 0px 12px 0px rgba(186, 186, 186, 0.62);
             -moz-box-shadow: 0px 0px 12px 0px rgba(186, 186, 186, 0.62);
           input {
             font-size: 10px;
             width: 230px;
-            height: 26px;
+            height: 30px;
             &.search{
-              position: absolute;
-              top: 0;
-              right: 0;
               // background: center center no-repeat url('images/search-icon-black@2x.png');
               background-size: 24px auto;
             }
@@ -115,10 +71,11 @@ body {
               position: absolute;
               top: 0;
               right: 0;
-              width: 50px;
+              width: 32px;
               background: center center no-repeat url('/images/search-icon-black@2x.png');
               background-size: 20px auto;
               text-indent: -9000em;
+              border: transparent;
               cursor: pointer;
             }
             
@@ -345,30 +302,34 @@ p {
 
 .navbar-list {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   list-style: none;
-  margin: 0;
+  margin: 2px 0 2px 0;
+  .navbar{
+    border-radius: 15px;
+  }
   .dropbtn {
     cursor: pointer;
     &.last-element {
-      color: yellow;
+      background-color: #ffcd05;
+      color: black;
       font-weight: bold;
     }
   }
 }
 .header-container {
   background-color: #303030;
-  height: 181px;
+  height: 140px;
   position: relative;
 
   .header-section {
     &.second-section {
-      background: rgba(153, 0, 0, 0.7);
+      background: white;
     }
   }
   
   .app-container {
-      background: rgba(153, 0, 0, 0.7);
+      background: white;
       position: absolute;
       width: 100%;
       -webkit-box-shadow: -1px 9px 5px 0px rgba(0,0,0,0.75);
@@ -379,7 +340,7 @@ p {
       &.fixed {
         position: fixed;
         top: 0;
-        background: rgb(153, 0, 0);
+        background: #fff;
       }
 
       .navbar-item-title{
@@ -387,13 +348,13 @@ p {
       }
 
       .navbar-el {
-        max-width: 82rem;
+        max-width: 90%;
         margin: 0 auto;
       }
   }
 
   .content-width-top {
-    background-color: black;
+    background-color: #ffcd05;
 
     .usc-info {
       background-color: #1f1f1f;
@@ -403,7 +364,7 @@ p {
     }
   }
   .content-width-middile {
-    max-width: 80%;
+    max-width: 90%;
     margin-left: auto;
     margin-right: auto;
     height: 100px;
@@ -413,11 +374,6 @@ p {
 
     form {
       margin-bottom: 0;
-    }
-    a {
-      background-size: 176px, 38px;
-      height: 38px;
-      width: 176px;
     }
 
     .hpc-logo {
@@ -440,8 +396,9 @@ p {
     .view-content {
       .marginless-columns {
         display: flex;
+        justify-content: space-evenly;
         .shared {
-          width: 25%;
+          width: 20%;
           text-align: center;
           background: rgba(153, 0, 0, 0.7);
           border-right: 1px solid white;
@@ -459,14 +416,14 @@ p {
             text-align: center;
             text-decoration: none;
             box-shadow: none;
-            transition: background-color 0.3s ease;
+            transition: background-color 1s ease-in-out;
 
             .features{
               font-size: 20px;
               font-weight: bold;
               display: block;
               opacity: 1;
-              transition: all 0.65s cubic-bezier(0.23, 1, 0.32, 1);
+              transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
             }
             .copy-text {
               position: absolute;
@@ -474,6 +431,7 @@ p {
               left: 50%;
               line-height: 1;
               opacity: 0;
+              transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
               transform: translate(-50%, -50%) scale(0);
             }
   
@@ -498,7 +456,7 @@ p {
         }
       }
       .content-container {
-        margin-top: 25px;
+        margin-top: 40px;
         max-width: 80%;
         margin-left: auto;
         margin-right: auto;
@@ -506,7 +464,6 @@ p {
         .shared {
           width: 33.3%;
           text-align: center;
-          border-right: 0.1875rem solid #900;
 
           .press-news-block {
             margin: 0px 20px;

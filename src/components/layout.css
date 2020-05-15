@@ -511,6 +511,7 @@ ol li {
 }
 ul li {
   padding-left: 0;
+  padding-right: 5px;
 }
 li > ol {
   margin-left: 1.45rem;
@@ -634,24 +635,19 @@ pre tt:after {
   text-decoration: none;
 }
 
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
 .dropdown .dropbtn {
   font-size: 16px;  
   border: none;
   outline: none;
-  color: white;
-  padding: 14px 16px;
+  color: black;
+  padding: 10px 16px;
   background-color: inherit;
   font: inherit;
   margin: 0;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  color: yellow;
+  color:  rgba(153, 0, 0, 0.7);
 }
 
 .dropdown-content {
@@ -735,8 +731,8 @@ pre tt:after {
 
 
 .top-bar {
-  background: black;
-  max-width: 80%;
+  background: #ffcd05;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -793,16 +789,16 @@ pre tt:after {
 }
 /* line 20, ../scss/layout/_header.scss */
 .tb-col-1 ul li {
-  color: white;
+  color: black;
   display: inline-block;
 }
 /* line 24, ../scss/layout/_header.scss */
 .tb-col-1 ul.nav-top li {
-  border-left: 1px solid #ffcc00;
+  border-left: 1px solid #000;
 }
 /* line 27, ../scss/layout/_header.scss */
 .tb-col-1 ul.nav-top li a {
-  color: #ffcc00;
+  color: #000;
   font-weight: bold;
   padding-left: 4px;
   margin: 0 2px;

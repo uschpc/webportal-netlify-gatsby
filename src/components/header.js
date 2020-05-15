@@ -43,7 +43,7 @@ const Header = (props) => {
           </div>
           <div className="header-section second-section">
             <div className="content-width-middile">
-              <h1 className='hpc-logo' style={{ margin: 0 }}>
+              {/* <h1 className='hpc-logo' style={{ margin: 0 }}>
                 <Link
                   to='/'
                   style={{
@@ -54,8 +54,10 @@ const Header = (props) => {
                 >
                   {props.siteTitle}
                 </Link>
-              </h1>
-              <a href="http://usc.edu/" target="_blank"><img data-src="/images/usc_logo.svg" className=" lazyloaded" src="/images/usc_logo.svg" /></a>
+              </h1> */}
+              <a href="http://usc.edu/" target="_blank">
+                <img data-src="/images/usc_logo_new_design.svg" className=" lazyloaded" src="/images/usc_logo_new_design.svg" />
+                </a>
               </div>
           </div>
           <Navbar scrollY={scrollY} />
