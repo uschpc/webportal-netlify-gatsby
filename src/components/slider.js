@@ -11,7 +11,7 @@ const content = [
       description:
         "A new partnership offers computing resources for research into the novel coronavirus.",
       button: "Read More",
-      image: "/images/sp_visual.jpg"
+      image: "/images/slider-pic1-fade3.jpg"
     },
     {
       title: "HPC Slide 2",
