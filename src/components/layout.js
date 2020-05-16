@@ -31,9 +31,9 @@ const Layout = (props) => {
       <div>
         <main>{props.children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
+          © {new Date().getFullYear()},
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a href="#">USC Center for Advanced Research Computing</a>
         </footer>
       </div>
     </>

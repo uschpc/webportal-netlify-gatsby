@@ -10,6 +10,16 @@ const BodyContent = () => {
             <div className="services-block">
             <div className="view view-services">
                 <div className="view-content">
+                    <div className="bg-image">
+                        <div className="content">
+                            <div class="title">
+                                Advanced Research Computing
+                            </div>
+                            <div className="mission">
+                                <a href="#">View Mission</a>
+                            </div>
+                        </div>
+                    </div>
                     <ServiceBox />
                     <div className="content-container">
                         <FeatureStories />

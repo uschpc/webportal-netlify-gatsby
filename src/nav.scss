@@ -6,11 +6,95 @@
 
 body {
   #___gatsby {
-    font-family: national;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     overflow: hidden;
+
+    .footer{
+      color: #fff;
+      float: left;
+      font-size: 12px;
+      line-height: 16px;
+      background-color: #000;
+      padding: 32px;
+      height: 202px;
+      width: 100%;
+      position: relative;
+      clear: both;
+      z-index: 100;
+
+      .social {
+        position: absolute;
+        bottom: 32px;
+        left: 32px;
+        a {
+          width: 21px;
+          height: 21px;
+          background-size: contain;
+          background-position: center center;
+          background-repeat: no-repeat;
+          display: inline;
+          float: left;
+          margin-right: 8px;
+          &.sicon {
+            &.facebook {
+              background-image: url('/images/icon_facebook.svg');
+            }
+            &.twitter {
+              background-image: url('/images/icon_twitter.svg');
+            }
+            &.instagram {
+              background-image: url('/images/icon_instagram.svg');
+            }
+            &.youtube {
+              background-image: url('/images/icon_youtube.svg');
+            }
+          }
+        }
+      }
+
+      .inner {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+
+        .national-caps2 {
+          display: flex;
+          flex-direction: column;
+          a {
+            color: white;
+            &:hover {
+              color: #ffcd05;
+            }
+          }
+        }
+        .subscribe{
+          p {
+            margin: 0;
+          }
+          .email-input {
+            margin-top: 10px;
+            width: 100%;
+            height: 30px;
+          }
+        }
+        a {
+          .usc-logo {
+            position: absolute;
+            right: 32px;
+            top: 32px;
+            width: 161px;
+            height: 35px;
+            background-image: url('/images/usc_logo_cropped.svg');
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
   }
-  font-family: karla, -apple-system, system-ui, "Segoe UI", "Roboto", "Helvetica Neue", Arial,
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   color: #6b7c93;
 
@@ -85,6 +169,16 @@ body {
       }
     }
     
+  }
+}
+
+footer {
+  background-color: #ffcd05;
+  position: relative;
+  text-align: center;
+  a {
+    color: black;
+    font-weight: bold;
   }
 }
 }
@@ -350,6 +444,17 @@ p {
       .navbar-el {
         max-width: 80%;
         margin: 0 auto;
+
+        .small-logo{
+          display: none;
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          &.show {
+            display: block;
+          }
+        }
       }
   }
 
@@ -392,10 +497,45 @@ p {
   &.usc-hpc {
     position: relative;
     z-index: 6;
-    width: 80%;
+    width: 100%;
     margin: -82px auto;
     
     .view-content {
+      .bg-image {
+        top: 98px;
+        width: 100%;
+        background-image: url('/images/service-box-bg.jpg');
+        height: 350px;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .content {
+          position: absolute;
+          color: white;
+          font-weight: bold;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+
+          .title {
+            font-size: 40px;
+          }
+          .mission {
+            margin-top: 30px;
+            text-align: center;
+            a {
+              font-size: 20px;
+              padding: 10px 15px;
+              color: black;
+              background-color: #ffcd05;
+            }
+          }
+        }
+      }
+      .x-section {
+        height: 450px;
+        margin: 0 10%;
+      }
       .marginless-columns {
         display: flex;
         justify-content: space-between;
@@ -457,10 +597,11 @@ p {
         }
       }
       .content-container {
-        margin-top: 40px;
+        margin: 40px 0 80px 0;
         margin-left: auto;
         margin-right: auto;
         display: flex;
+        width: 80%;
         .shared {
           width: 33.3%;
           text-align: center;
@@ -468,6 +609,12 @@ p {
             background-color: #ffcd05;
             padding: 10px;
             margin: 0px 20px 0 0;
+          }
+
+          &.system-status {
+            h2 {
+              margin-right: 0;
+            }
           }
 
           .press-news-block {
@@ -570,7 +717,7 @@ p {
       position: relative;
       background: #e6e6e8;
       color: #3d3e4a;
-      font-family: "ProximaNova-Light", Helvetica, Arial, sans-serif;
+      font-family: inherit;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -711,7 +858,7 @@ $speed: 1s;
     letter-spacing: 1px;
     display: inline-block;
     text-decoration: none;
-    font-family: 'Open Sans';
+    font-family: inherit;
     text-transform: uppercase;
 
     &:nth-child(even) {

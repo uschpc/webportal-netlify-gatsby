@@ -1,5 +1,5 @@
 html {
-  font-family: sans-serif;
+  font-family: inherit;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -94,7 +94,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  font-family: inherit;
   font-size: 1em;
 }
 figure {
@@ -200,7 +200,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: inherit;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -588,8 +588,7 @@ tt,
 code {
   background-color: hsla(0, 0%, 0%, 0.04);
   border-radius: 3px;
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
-    "Liberation Mono", Menlo, Courier, monospace;
+  font-family: inherit;
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
@@ -623,7 +622,7 @@ pre tt:after {
 
 .navbar {
   overflow: hidden;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: inherit;
 }
 
 .navbar a {
@@ -642,7 +641,7 @@ pre tt:after {
   color: black;
   padding: 10px 16px;
   background-color: inherit;
-  font: inherit;
+  font-weight: bold;
   margin: 0;
 }
 
@@ -668,9 +667,9 @@ pre tt:after {
 }
 
 .dropdown-content .row {
-  display: flex;
+    display: flex;
     z-index: 100;
-    justify-content: center;
+    justify-content: flex-end;
     background: transparent;
 }
 
@@ -680,9 +679,8 @@ pre tt:after {
 
 /* Create three equal columns that floats next to each other */
 .column {
-  float: left;
   width: 15.33%;
-  margin: 20px;
+  margin: 30px;
   height: 300px;
   border-right: 1px solid white;
 }
