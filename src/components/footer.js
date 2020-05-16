@@ -1,6 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router} from "react-router-dom"
-import { Link } from "react-router-dom"
 
 const Footer = () => {
     return (
@@ -16,7 +14,7 @@ const Footer = () => {
                     <a href="mailto:hpc@usc.edu" target="_blank">hpc@usc.edu</a>
                 </div>
                 <div className="national-caps2">
-                    <Router>
+                    {/* <Router>
                         <Link to="/jobs">Jobs</Link>
                     </Router>
                     <Router>
@@ -24,7 +22,10 @@ const Footer = () => {
                     </Router>
                     <Router>
                         <Link to="privacy-policy">Privacy Policy</Link>
-                    </Router>
+                    </Router> */}
+                    <a href="#">Jobs</a>
+                    <a href="#">Press Room</a>
+                    <a href="#">Privacy Policy</a>
                 </div>
                 <div className="subscribe">
                     <span className="national-caps2">
