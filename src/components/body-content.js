@@ -16,7 +16,8 @@ const BodyContent = () => {
                                 Advanced Research Computing
                             </div>
                             <div className="mission">
-                                <a href="#">View Mission</a>
+                                {/* <a href="#">View Mission</a> */}
+                                <button className="mission-btn">View Mission</button>
                             </div>
                         </div>
                     </div>
