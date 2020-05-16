@@ -17,13 +17,13 @@ const Footer = () => {
                 </div>
                 <div className="national-caps2">
                     <Router>
-                        <Link to="#">Jobs</Link>
+                        <Link to="/jobs">Jobs</Link>
                     </Router>
                     <Router>
-                        <Link to="#">Press Room</Link>
+                        <Link to="/press-room">Press Room</Link>
                     </Router>
                     <Router>
-                        <Link to="#">Privacy Policy</Link>
+                        <Link to="privacy-policy">Privacy Policy</Link>
                     </Router>
                 </div>
                 <div className="subscribe">
