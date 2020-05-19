@@ -57,6 +57,7 @@ const Header = (props) => {
               </h1> */}
               <a href="http://usc.edu/" target="_blank">
                 <img data-src="/images/usc_logo_new_design.svg" className=" lazyloaded" src="/images/usc_logo_new_design.svg" />
+                <img data-src="/images/usc_logo_new_design.svg" className=" lazyloaded" src="/images/USC-Shield.png" />
                 </a>
               </div>
           </div>

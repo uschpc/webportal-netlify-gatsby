@@ -1,75 +1,49 @@
-import React, { Component } from 'react'
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import MagicSliderDots from 'react-magic-slider-dots';
-import 'react-magic-slider-dots/dist/magic-dots.css';
+import React from 'react';
+import Slider from 'react-animated-slider';
+import 'react-animated-slider/build/horizontal.css';
 
 const content = [
     {
-      title: "HPC Slide 1",
+      title: "Center for High-Performance Computing",
       description:
         "A new partnership offers computing resources for research into the novel coronavirus.",
-      button: "Read More",
-      image: "/images/slider-pic1-fade3.jpg"
-    },
-    {
-      title: "HPC Slide 2",
-      description:
-        "The HPC team attended SC19–the International Conference for High-Performance Computing.",
-      button: "Discover",
-      image: "/images/slider-pic1-fade3.jpg"
-    },
-    {
-      title: "HPC Slide 3",
-      description:
-        "HPC bridges USC’s unique strengths in scientific computing, computer science, and communications.",
       button: "Learn More",
-      image: "/images/sp_visual.jpg"
+      image: "https://i.imgur.com/DCdBXcq.jpg"
+    },
+    {
+      title: "HPC at SC19",
+      description:
+        "The HPC team attended SC19–the International Conference for High-Performance Computing, Networking, Storage and Analysis—from November 18–21, 2019.",
+      button: "Learn More",
+      image: "https://i.imgur.com/DCdBXcq.jpg"
+    },
+    {
+      title: "Excellence Across the Disciplines",
+      description:
+        "HPC bridges USC’s unique strengths in scientific computing, computer science, and communications by supporting research groups in a variety of disciplines.",
+      button: "Learn More",
+      image: "https://i.imgur.com/DvmN8Hx.jpg"
     }
   ];
 
-class Carsoul extends Component {
-
-render() {
-
-  const settings = {
-      dots: true,
-      infinite: false,
-      speed: 1000,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      fade: true,
-      infinite: true,
-      cssEase: 'ease-in-out',
-      appendDots: (dots) => {
-        return <MagicSliderDots dots={dots} numDotsToShow={3} dotWidth={50} />
-      }
-    };
-
-    return (<Slider {...settings}>
-        {content.map((item, index) => (
-            <div
-            key={index}
-            className="slider-content"
-            style={{ background: `url('${item.image}') no-repeat center center` }}
-            >
-                <div>
-                    <img src={item.image}/>
-                </div>
-                <div className="entry-content">
-                    <header className="entry-header">
-                        <h1 className="entry-title"><a href="https://news.usc.edu/168870/usc-department-public-safety-officers-support-staff-covid-19/" data-analytics-action="click" data-analytics-label="Feature Title: Patrolling a pandemic">{item.title}</a></h1></header>
-                    <div className="entry-summary">
-                        <p>{item.description}</p>
-                    </div>
-                    <footer className="entry-footer">
-                    </footer>
-                </div>
-            </div>
-        ))}
-    </Slider>)
-  }
+const Carsoul = () => {
+	return (
+        <Slider className="slider-wrapper">
+      {content.map((item, index) => (
+        <div
+          key={index}
+          className="slider-content"
+          style={{ background: `url('${item.image}') no-repeat center center` }}
+        >
+          <div className="inner">
+            <h1>{item.title}</h1>
+            <p>{item.description}</p>
+            <button className="slider-btn">{item.button}</button>
+          </div>
+        </div>
+      ))}
+    </Slider>
+    )
 }
 
 export default Carsoul;

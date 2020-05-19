@@ -10,6 +10,12 @@ const BodyContent = () => {
             <div className="services-block">
             <div className="view view-services">
                 <div className="view-content">
+                    <ServiceBox />
+                    <div className="content-container">
+                        <FeatureStories />
+                        <LatestNews />
+                        <UpcomingEvents />
+                    </div>
                     <div className="bg-image">
                         <div className="content">
                             <div class="title">
@@ -20,12 +26,6 @@ const BodyContent = () => {
                                 <button className="mission-btn">View Mission</button>
                             </div>
                         </div>
-                    </div>
-                    <ServiceBox />
-                    <div className="content-container">
-                        <FeatureStories />
-                        <LatestNews />
-                        <UpcomingEvents />
                     </div>
                 </div>
             </div>

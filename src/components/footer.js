@@ -3,26 +3,17 @@ import React from 'react';
 const Footer = () => {
     return (
         <div className="footer">
-            <div className="social">
-                <a className="sicon facebook" href="#" target="_blank" title="Facebook"></a>
-                <a className="sicon twitter" href="#" target="_blank" title="Twitter"></a>
-                <a className="sicon instagram" href="#" target="_blank" title="Instagram"></a>
-                <a className="sicon youtube" href="#" target="_blank" title="Youtube"></a>
-            </div>
             <div className="inner">
                 <div className="col4 fl"> USC Center for Advanced Research Computing<br /> Watt Hall, Suite 204<br /> Los Angeles, California<br /> 90089-0291<br /> (213) 740-2723<br />
                     <a href="mailto:hpc@usc.edu" target="_blank">hpc@usc.edu</a>
+                    <div className="social">
+                        <a className="sicon facebook" href="#" target="_blank" title="Facebook"></a>
+                        <a className="sicon twitter" href="#" target="_blank" title="Twitter"></a>
+                        <a className="sicon instagram" href="#" target="_blank" title="Instagram"></a>
+                        <a className="sicon youtube" href="#" target="_blank" title="Youtube"></a>
+                    </div>
                 </div>
                 <div className="national-caps2">
-                    {/* <Router>
-                        <Link to="/jobs">Jobs</Link>
-                    </Router>
-                    <Router>
-                        <Link to="/press-room">Press Room</Link>
-                    </Router>
-                    <Router>
-                        <Link to="privacy-policy">Privacy Policy</Link>
-                    </Router> */}
                     <a href="#">Jobs</a>
                     <a href="#">Press Room</a>
                     <a href="#">Privacy Policy</a>

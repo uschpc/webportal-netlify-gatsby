@@ -25,24 +25,38 @@ const AboutSubNavDropdown = ({ current, prev }) => {
         <div className="column">
           <ul>
           {subNav.sub_nav_items.map((item, i) => {
-          return (
-            <li>
-              <Router>
-                <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
-              </Router>
-              </li>
-            )})
+             if (i <= 3) {
+              return (
+                <li>
+                  <Router>
+                    <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+                  </Router>
+                  </li>
+                )}
+              }
+            )
           }
         </ul>
         </div>
-        <div className="column">
-          <h4>Related Links</h4>
+        {subNav.sub_nav_items.length > 4 && (
+          <div className="column">
           <div className="links">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+          {subNav.sub_nav_items.map((item, i) => {
+            if (i > 3) {
+              return (
+                <li>
+                  <Router>
+                    <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+                  </Router>
+                  </li>
+                )
+              }
+                return ''  
+            })
+          }
           </div>
         </div>
+        )}
       </div>
   </div>
   </div>
@@ -62,24 +76,38 @@ const ServicesSubNavDropdown = ({ current, prev }) => {
         <div className="column">
           <ul>
           {subNav.sub_nav_items.map((item, i) => {
-          return (
-            <li>
-              <Router>
-                <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
-              </Router>
-              </li>
-            )})
+             if (i <= 3) {
+              return (
+                <li>
+                  <Router>
+                    <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+                  </Router>
+                  </li>
+                )}
+              }
+            )
           }
         </ul>
         </div>
-        <div className="column">
-        <h4>Related Links</h4>
+        {subNav.sub_nav_items.length > 4 && (
+          <div className="column">
           <div className="links">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+          {subNav.sub_nav_items.map((item, i) => {
+            if (i > 3) {
+              return (
+                <li>
+                  <Router>
+                    <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+                  </Router>
+                  </li>
+                )
+              }
+                return ''  
+            })
+          }
           </div>
         </div>
+        )}
       </div>
   </div>
   </div>
@@ -99,24 +127,38 @@ const UserInfoSubNavDropdown = ({ current, prev }) => {
         <div className="column">
           <ul>
           {subNav.sub_nav_items.map((item, i) => {
-          return (
-            <li>
-              <Router>
-                <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
-              </Router>
-              </li>
-            )})
+             if (i <= 3) {
+              return (
+                <li>
+                  <Router>
+                    <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+                  </Router>
+                  </li>
+                )}
+              }
+            )
           }
         </ul>
         </div>
-        <div className="column">
-        <h4>Related Links</h4>
+        {subNav.sub_nav_items.length > 4 && (
+          <div className="column">
           <div className="links">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+          {subNav.sub_nav_items.map((item, i) => {
+            if (i > 3) {
+              return (
+                <li>
+                  <Router>
+                    <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+                  </Router>
+                  </li>
+                )
+              }
+                return ''  
+            })
+          }
           </div>
         </div>
+        )}
       </div>
   </div>
   </div>
@@ -137,24 +179,38 @@ const EducationOutreachSubNavDropdown = ({ current, prev }) => {
         <div className="column">
           <ul>
           {subNav.sub_nav_items.map((item, i) => {
-          return (
-            <li>
-              <Router>
-                <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
-              </Router>
-              </li>
-            )})
+             if (i <= 3) {
+              return (
+                <li>
+                  <Router>
+                    <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+                  </Router>
+                  </li>
+                )}
+              }
+            )
           }
         </ul>
         </div>
-        <div className="column">
-          <h4>Related Links</h4>
+        {subNav.sub_nav_items.length > 3 && (
+          <div className="column">
           <div className="links">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+          {subNav.sub_nav_items.map((item, i) => {
+            if (i > 3) {
+              return (
+                <li>
+                  <Router>
+                    <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+                  </Router>
+                  </li>
+                )
+              }
+                return ''  
+            })
+          }
           </div>
         </div>
+        )}
       </div>
   </div>
   </div>
@@ -171,27 +227,41 @@ const UserSupportSubNavDropdown = ({ current, prev }) => {
           <div className="column">
             <h4>Life is beautiful</h4>         
           </div>
+        <div className="column">
+          <ul>
+          {subNav.sub_nav_items.map((item, i) => {
+             if (i <= 3) {
+              return (
+                <li>
+                  <Router>
+                    <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+                  </Router>
+                  </li>
+                )}
+              }
+            )
+          }
+        </ul>
+        </div>
+        {subNav.sub_nav_items.length > 3 && (
           <div className="column">
-            <ul>
-            {subNav.sub_nav_items.map((item, i) => {
-            return (
-              <li>
-                <Router>
-                  <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
-                </Router>
-                </li>
-              )})
-            }
-          </ul>
+          <div className="links">
+          {subNav.sub_nav_items.map((item, i) => {
+            if (i > 3) {
+              return (
+                <li>
+                  <Router>
+                    <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+                  </Router>
+                  </li>
+                )
+              }
+                return ''  
+            })
+          }
           </div>
-          <div className="column">
-          <h4>Related Links</h4>
-            <div className="links">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-            </div>
-          </div>
+        </div>
+        )}
         </div>
     </div>
       </div>
@@ -210,32 +280,46 @@ const NewsEventsSubNavDropdown = ({ current, prev }) => {
         <div className="dropdown-content">  
         <div className="row">
           <div className="column">
-          <h4>Related Links</h4>       
+          <h4>Life is beautiful</h4>       
           </div>
+        <div className="column">
+          <ul>
+          {subNav.sub_nav_items.map((item, i) => {
+             if (i <= 3) {
+              return (
+                <li>
+                  <Router>
+                    <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+                  </Router>
+                  </li>
+                )}
+              }
+            )
+          }
+        </ul>
+        </div>
+        {subNav.sub_nav_items.length > 3 && (
           <div className="column">
-            <ul>
-            {subNav.sub_nav_items.map((item, i) => {
-            return (
-              <li>
-                <Router>
-                  <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
-                </Router>
-                </li>
-              )})
-            }
-          </ul>
-          </div>
-          <div className="column">
-            <h3>Related Links</h3>
-            <div className="links">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-            </div>
+          <div className="links">
+          {subNav.sub_nav_items.map((item, i) => {
+            if (i > 3) {
+              return (
+                <li>
+                  <Router>
+                    <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+                  </Router>
+                  </li>
+                )
+              }
+                return ''  
+            })
+          }
           </div>
         </div>
+        )}
+        </div>
     </div>
-      </div>
+    </div>
     );
   } 
   else {

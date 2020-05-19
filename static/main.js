@@ -173,6 +173,15 @@ const getFeatureBoxes = () => {
                         return obj
                     }
                 }
+                const parseImages = ({lines, metadataIndices}) => {
+                    if (metadataIndices.length > 0) {
+                        let metadata = lines.slice(metadataIndices[0] + 1, metadataIndices[1])
+                        metadata.forEach(line => {
+                            obj[line.split(": ")[0]] = line.split(": ")[1]
+                        })
+                        return obj
+                    }
+                }
                 const parseContent = ({lines, metadataIndices}) => {
                     if (metadataIndices.length > 0) {
                         lines = lines.slice(metadataIndices[1] + 1, lines.length)
@@ -183,10 +192,12 @@ const getFeatureBoxes = () => {
                 const lines = contents.split("\n")
                 const metadataIndices = lines.reduce(getMetadataIndices, [])
                 const metadata = parseMetadata({lines, metadataIndices})
+                const images = parseImages({lines, metadataIndices})
                 const content = parseContent({lines, metadataIndices})
 
                 featureBox = {
                     title: metadata.title ? metadata.title : "No title given",
+                    image: images.thumbnail ? images.thumbnail : "/images/logo-top-usc.jpg",
                     content: content ? content : "No content given",
                 }
                 featureBoxes.push(featureBox);

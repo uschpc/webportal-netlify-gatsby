@@ -37,6 +37,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Featured box", name: "thumbnail", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "Featured Stories"
     label: "Featured Stories"

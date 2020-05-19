@@ -9,9 +9,8 @@ const ServiceBox = () => {
                     featureBox.map(item => {
                         return <div className="shared">
                             <a href="#">
-                                <img className="features-icon" src={item.image} />
                                 <span className="features">{item.title}</span>
-                                {/* <span className="copy-text">{item.content}</span> */}
+                                <span className="copy-text">{item.content}</span>
                             </a>
                         </div>
                     })

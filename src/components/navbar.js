@@ -73,6 +73,7 @@ class Navbar extends React.Component {
       <div className={`app-container ${(this.props.scrollY >= 124) ? 'fixed' : 'default' } `}>
         <nav className="navbar-el" onMouseLeave={this.onMouseLeave}>
           <img data-src="/images/usc_logo_new_design_small.svg" className={`small-logo ${(this.props.scrollY >= 124) ? 'show' : 'hide' } `} src="/images/usc_logo_new_design_small.svg" />
+          <img className={`small-logo right ${(this.props.scrollY >= 124) ? 'show' : 'hide' } `} src="/images/usc-shield-only.png" />
           <ul className="navbar-list">
             {activeNavigation.map((n, index) => {
               return (
