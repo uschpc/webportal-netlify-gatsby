@@ -4,16 +4,16 @@ import ServiceBox from './service-box.js';
 import LatestNews from './latest-news.js';
 import UpcomingEvents from './upcoming-events.js';
 
-const BodyContent = () => {
+const BodyContent = ({news, featureStory, featureBoxes}) => {
     return (
         <div className="region usc-hpc">
             <div className="services-block">
             <div className="view view-services">
                 <div className="view-content">
-                    <ServiceBox />
+                    <ServiceBox {...featureBoxes} />
                     <div className="content-container">
-                        <FeatureStories />
-                        <LatestNews />
+                        <FeatureStories {...featureStory }/>
+                        <LatestNews {...news } />
                         <UpcomingEvents />
                     </div>
                     <div className="bg-image">
