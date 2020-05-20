@@ -20,12 +20,6 @@ const IndexPage = ({data}) => {
           <Carsoul />
           <BodyContent {...data} />
           <Footer />
-            {/* <Search searchData={searchTrigger}/> */}
-          {/* <div className="body-content">
-            <Markdown source={contents[0].content} escapeHtml={false} />
-            <Link to="/v2/">Go to version 2</Link>
-          </div> */}
-          
       </Layout>
   )
 }
