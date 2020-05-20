@@ -1,6 +1,15 @@
 nav_items:
   - label: About
     path: /about
+    folder: "src/navigation/about"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "path", widget: "string"}
+      - {label: "Short description", name: "excerpt", widget: "string"}
+      - {label: "Featured story thumbnail", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
     sub_nav_items:
       - label: Mission
         path: /mission

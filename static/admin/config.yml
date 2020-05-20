@@ -37,7 +37,8 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Featured box", name: "thumbnail", widget: "image"}
+      - {label: "Slug", name: "path", widget: "string"}
+      - {label: "Featured box thumbnail", name: "thumbnail", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "Featured Stories"
     label: "Featured Stories"
@@ -46,7 +47,9 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Featured Story", name: "thumbnail", widget: "image"}
+      - {label: "Slug", name: "path", widget: "string"}
+      - {label: "Short description", name: "excerpt", widget: "string"}
+      - {label: "Featured story thumbnail", name: "thumbnail", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "Latest News"
     label: "Latest News"
@@ -55,7 +58,9 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Latest news", name: "thumbnail", widget: "image"}
+      - {label: "Slug", name: "path", widget: "string"}
+      - {label: "Short description", name: "excerpt", widget: "string"}
+      - {label: "Latest news thumbnail", name: "thumbnail", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: settings
     label: Settings
