@@ -9,7 +9,6 @@ import BodyContent from "../components/body-content.js";
 import Footer from "../components/footer.js";
 
 const IndexPage = ({data}) => {
-  console.log('yaseen', data);
 
   return (
       <Layout {...data.navigation}>
