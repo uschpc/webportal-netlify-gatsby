@@ -7,7 +7,6 @@ import { useScroll } from './custom-hooks/useScroll';
 
 
 const Header = (props) => {
-  console.log('inside header', props);
   const { scrollY } = useScroll();
 
   return (

@@ -1,6 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router} from "react-router-dom"
-import { Link } from "react-router-dom"
+// import { BrowserRouter as Router, Link} from "react-router-dom"
+import { Link } from "gatsby"
 import navlist from "../navigations.json";
 
 const assignedDropdownSubNav = (menubar, nav) => {
@@ -10,13 +10,6 @@ const assignedDropdownSubNav = (menubar, nav) => {
     }
   });
   return subNav;
-}
-
-const handleClick = (item) => {
-  window.location.pathname = `/${item.node.frontmatter.path}`;
-  setTimeout(() => {
-    window.location.reload();
-  }, 500)
 }
 
 const AboutSubNavDropdown = ({ current, prev, nav}) => {
@@ -35,10 +28,8 @@ const AboutSubNavDropdown = ({ current, prev, nav}) => {
              if (i <= 3) {
               return (
                 <li>
-                  <Router>
-                    <Link className="heading" onClick={() => handleClick(item)} to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
-                  </Router>
-                  </li>
+                  <Link className="heading" to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                </li>
                 )}
               }
             )
@@ -52,9 +43,7 @@ const AboutSubNavDropdown = ({ current, prev, nav}) => {
             if (i > 3) {
               return (
                 <li>
-                 <Router>
-                    <Link className="heading" onClick={() => handleClick(item)} to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
-                  </Router>
+                  <Link className="heading" to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </li>
                 )
               }
@@ -86,9 +75,7 @@ const ServicesSubNavDropdown = ({ current, prev, nav }) => {
              if (i <= 3) {
               return (
                 <li>
-                 <Router>
-                    <Link className="heading" onClick={() => handleClick(item)} to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
-                  </Router>
+                  <Link className="heading" to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </li>
                 )}
               }
@@ -103,9 +90,7 @@ const ServicesSubNavDropdown = ({ current, prev, nav }) => {
             if (i > 3) {
               return (
                 <li>
-                 <Router>
-                    <Link className="heading" onClick={() => handleClick(item)} to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
-                  </Router>
+                  <Link className="heading" to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </li>
                 )
               }
@@ -137,9 +122,7 @@ const UserInfoSubNavDropdown = ({ current, prev, nav }) => {
              if (i <= 3) {
               return (
                 <li>
-                 <Router>
-                    <Link className="heading" onClick={() => handleClick(item)} to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
-                  </Router>
+                  <Link className="heading" to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </li>
                 )}
               }
@@ -154,9 +137,7 @@ const UserInfoSubNavDropdown = ({ current, prev, nav }) => {
             if (i > 3) {
               return (
                 <li>
-                 <Router>
-                    <Link className="heading" onClick={() => handleClick(item)} to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
-                  </Router>
+                    <Link className="heading" to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </li>
                 )
               }
@@ -189,9 +170,7 @@ const EducationOutreachSubNavDropdown = ({ current, prev, nav }) => {
                if (i <= 3) {
                 return (
                   <li>
-                   <Router>
-                      <Link className="heading" onClick={() => handleClick(item)} to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
-                    </Router>
+                      <Link className="heading" to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                     </li>
                   )}
                 }
@@ -206,9 +185,7 @@ const EducationOutreachSubNavDropdown = ({ current, prev, nav }) => {
               if (i > 3) {
                 return (
                   <li>
-                   <Router>
-                      <Link className="heading" onClick={() => handleClick(item)} to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
-                    </Router>
+                      <Link className="heading" to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                     </li>
                   )
                 }
@@ -242,9 +219,7 @@ const UserSupportSubNavDropdown = ({ current, prev, nav }) => {
              if (i <= 3) {
               return (
                 <li>
-                 <Router>
-                    <Link className="heading" onClick={() => handleClick(item)} to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
-                  </Router>
+                    <Link className="heading" to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </li>
                 )}
               }
@@ -259,9 +234,7 @@ const UserSupportSubNavDropdown = ({ current, prev, nav }) => {
             if (i > 3) {
               return (
                 <li>
-                 <Router>
-                    <Link className="heading" onClick={() => handleClick(item)} to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
-                  </Router>
+                    <Link className="heading" to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </li>
                 )
               }
@@ -297,9 +270,7 @@ const NewsEventsSubNavDropdown = ({ current, prev, nav }) => {
              if (i <= 3) {
               return (
                 <li>
-                 <Router>
-                    <Link className="heading" onClick={() => handleClick(item)} to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
-                  </Router>
+                    <Link className="heading" to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </li>
                 )}
               }
@@ -314,9 +285,7 @@ const NewsEventsSubNavDropdown = ({ current, prev, nav }) => {
             if (i > 3) {
               return (
                 <li>
-                 <Router>
-                    <Link className="heading" onClick={() => handleClick(item)} to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
-                  </Router>
+                    <Link className="heading" to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </li>
                 )
               }

@@ -5,6 +5,7 @@ import navlist from "../navigations.json";
 
 
 import "../nav.scss";
+import { Link } from "gatsby";
 
 const navigation = [
   {
