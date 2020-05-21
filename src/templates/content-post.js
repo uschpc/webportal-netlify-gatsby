@@ -6,7 +6,7 @@ import Footer from '../components/footer'
 
 export default function Template({ data }) {
   const pathName = typeof window !== 'undefined' ? window.location.pathname.split('/')[1] : '';
-  if (pathname !== '') {
+  if (pathName !== '') {
     const filterdPost = data.md.edges
         .filter(edge => edge.node.frontmatter.path === pathName)
     const post = filterdPost[0].node;
