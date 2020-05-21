@@ -1,7 +1,7 @@
 ---
 title: CONFLUX
 thumbnail: /images/maxresdefault.jpg
-path: conflux
+path: hardware
 cat: feature
 excerpt: some text here
 ---
