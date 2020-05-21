@@ -5,7 +5,7 @@ import SEO from '../components/seo'
 import Footer from '../components/footer'
 
 export default function Template({ data }) {
-  const pathName = typeof window !== 'undefined' ? window.location.pathname.split('/')[1] : '';
+  const pathName = typeof window !== 'undefined' ? window.location.pathname.split('/')[1] : 'people';
   const filterdPost = data.md.edges
         .filter(edge => edge.node.frontmatter.path === pathName)
   const post = filterdPost[0].node;
