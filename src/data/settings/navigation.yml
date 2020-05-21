@@ -1,22 +1,40 @@
 nav_items:
   - label: About
     path: /about
-    folder: "src/navigation/about"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Slug", name: "path", widget: "string"}
-      - {label: "Short description", name: "excerpt", widget: "string"}
-      - {label: "Featured story thumbnail", name: "thumbnail", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}
     sub_nav_items:
       - label: Mission
         path: /mission
+        folder: "src/navigation/mission"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Slug", name: "path", widget: "string"}
+          - {label: "Short description", name: "excerpt", widget: "string"}
+          - {label: "Featured story thumbnail", name: "thumbnail", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
       - label: People
         path: /people
+        folder: "src/navigation/people"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Slug", name: "path", widget: "string"}
+          - {label: "Short description", name: "excerpt", widget: "string"}
+          - {label: "Featured story thumbnail", name: "thumbnail", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
       - label: Collaboration
         path: /collaboration
+        folder: "src/navigation/collaboration"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Slug", name: "path", widget: "string"}
+          - {label: "Short description", name: "excerpt", widget: "string"}
+          - {label: "Featured story thumbnail", name: "thumbnail", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
       - label: Partnerships
         path: /partnerships
   - label: Services
@@ -24,16 +42,70 @@ nav_items:
     sub_nav_items:
       - label: Scientific Computing
         path: /scientific-computing
+        folder: "src/navigation/scientific-computing"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Slug", name: "path", widget: "string"}
+          - {label: "Short description", name: "excerpt", widget: "string"}
+          - {label: "Featured story thumbnail", name: "thumbnail", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
       - label: Data Solutions
         path: /data-solutions
+        folder: "src/navigation/data-solutions"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Slug", name: "path", widget: "string"}
+          - {label: "Short description", name: "excerpt", widget: "string"}
+          - {label: "Featured story thumbnail", name: "thumbnail", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
       - label: Cloud Computing
         path: /cloud-computing
+        folder: "src/navigation/cloud-computing"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Slug", name: "path", widget: "string"}
+          - {label: "Short description", name: "excerpt", widget: "string"}
+          - {label: "Featured story thumbnail", name: "thumbnail", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
       - label: User Training
         path: /user-training
+        folder: "src/navigation/user-training"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Slug", name: "path", widget: "string"}
+          - {label: "Short description", name: "excerpt", widget: "string"}
+          - {label: "Featured story thumbnail", name: "thumbnail", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
       - label: Consulting
         path: /consulting
+        folder: "src/navigation/consulting"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Slug", name: "path", widget: "string"}
+          - {label: "Short description", name: "excerpt", widget: "string"}
+          - {label: "Featured story thumbnail", name: "thumbnail", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
       - label: Research Support
         path: /research-support
+        folder: "src/navigation/research-support"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Slug", name: "path", widget: "string"}
+          - {label: "Short description", name: "excerpt", widget: "string"}
+          - {label: "Featured story thumbnail", name: "thumbnail", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
       - label: Grant Support
         path: /grant-support
   - label: User Information
@@ -41,21 +113,84 @@ nav_items:
     sub_nav_items:
       - label: Getting Started
         path: /getting-started
+        folder: "src/navigation/getting-started"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Slug", name: "path", widget: "string"}
+          - {label: "Short description", name: "excerpt", widget: "string"}
+          - {label: "Featured story thumbnail", name: "thumbnail", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
       - label: Getting Help
         path: /getting-help
+        folder: "src/navigation/getting-help"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Slug", name: "path", widget: "string"}
+          - {label: "Short description", name: "excerpt", widget: "string"}
+          - {label: "Featured story thumbnail", name: "thumbnail", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
       - label: User Guide
         path: /user-guide
+        folder: "src/navigation/user-guide"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Slug", name: "path", widget: "string"}
+          - {label: "Short description", name: "excerpt", widget: "string"}
+          - {label: "Featured story thumbnail", name: "thumbnail", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
       - label: Resources
         path: /resources
+        folder: "src/navigation/resources"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Slug", name: "path", widget: "string"}
+          - {label: "Short description", name: "excerpt", widget: "string"}
+          - {label: "Featured story thumbnail", name: "thumbnail", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
   - label: Education & Outreach
     path: /education-and-outreach
     sub_nav_items:
       - label: HPC Workshops
         path: /hpc-workshops
+        folder: "src/navigation/hpc-workshops"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Slug", name: "path", widget: "string"}
+          - {label: "Short description", name: "excerpt", widget: "string"}
+          - {label: "Featured story thumbnail", name: "thumbnail", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
       - label: Learning Contents
         path: /learning-contents
+        folder: "src/navigation/learning-contents"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Slug", name: "path", widget: "string"}
+          - {label: "Short description", name: "excerpt", widget: "string"}
+          - {label: "Featured story thumbnail", name: "thumbnail", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
       - label: Knowledgebase
         path: /knowledgebase
+         folder: "src/navigation/knowledgebase"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Slug", name: "path", widget: "string"}
+          - {label: "Short description", name: "excerpt", widget: "string"}
+          - {label: "Featured story thumbnail", name: "thumbnail", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
   - label: News and Events
     path: /education-and-outreach
   - label: User Support

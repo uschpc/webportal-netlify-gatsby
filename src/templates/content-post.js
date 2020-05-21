@@ -5,10 +5,15 @@ import SEO from '../components/seo'
 import Footer from '../components/footer'
 
 export default function Template({ data }) {
-  const post = data.markdownRemark
+  const pathName = window.location.pathname
+  .split('/')[1];
+  const filterdPost = data.md.edges
+        .filter(edge => edge.node.frontmatter.path === pathName)
+  const post = filterdPost[0].node;
+  
 
   return (
-    <Layout>
+    <Layout {...data.navigation}>
         <SEO title={post.frontmatter.title}/>
         <div className="pages-container">
             <h1>{post.frontmatter.title}</h1>
@@ -24,13 +29,29 @@ export default function Template({ data }) {
 
 export const postQuery = graphql`
   query {
-    markdownRemark {
-        frontmatter {
-          author
-          title
-          date
+    md: allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            author
+            path
+            title
+            date
+          }
+          html
         }
-        html
       }
+    }
+    navigation: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "navigation"}}}) {
+      edges {
+        node {
+          frontmatter {
+            path
+            title
+            parentEle
+          }
+        }
+      }
+    }
   }
 `

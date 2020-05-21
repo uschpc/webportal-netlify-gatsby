@@ -7,6 +7,7 @@ import { useScroll } from './custom-hooks/useScroll';
 
 
 const Header = (props) => {
+  console.log('inside header', props);
   const { scrollY } = useScroll();
 
   return (
@@ -43,25 +44,15 @@ const Header = (props) => {
           </div>
           <div className="header-section second-section">
             <div className="content-width-middile">
-              {/* <h1 className='hpc-logo' style={{ margin: 0 }}>
-                <Link
-                  to='/'
-                  style={{
-                    color: `white`,
-                    textDecoration: `none`,
-                    marginRight: '15px'
-                  }}
-                >
-                  {props.siteTitle}
-                </Link>
-              </h1> */}
-              <a href="http://usc.edu/" target="_blank">
+              <Link>
                 <img data-src="/images/usc_logo_new_design.svg" className=" lazyloaded" src="/images/usc_logo_new_design.svg" />
-                <img data-src="/images/usc_logo_new_design.svg" className=" lazyloaded" src="/images/USC-Shield.png" />
+                </Link>
+                <a href="https://www.usc.edu/">
+                  <img data-src="/images/usc_logo_new_design.svg" className=" lazyloaded" src="/images/USC-Shield.png" />
                 </a>
               </div>
           </div>
-          <Navbar scrollY={scrollY} />
+          <Navbar scrollY={scrollY} nav={props.nav} />
     </header>
   )
 }

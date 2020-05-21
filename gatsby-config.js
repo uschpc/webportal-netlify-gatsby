@@ -19,13 +19,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `posts`,
-        path: `${__dirname}/src/posts`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         name: `latest-news`,
         path: `${__dirname}/src/latest-news`,
       },
@@ -42,6 +35,13 @@ module.exports = {
       options: {
         name: `feature-boxes`,
         path: `${__dirname}/src/feature-boxes`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `navigation`,
+        path: `${__dirname}/src/navigation`,
       },
     },
     {

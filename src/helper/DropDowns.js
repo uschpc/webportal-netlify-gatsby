@@ -3,17 +3,24 @@ import { BrowserRouter as Router} from "react-router-dom"
 import { Link } from "react-router-dom"
 import navlist from "../navigations.json";
 
-const assignedDropdownSubNav = (menubar) => {
-  let subNav = navlist.nav_items.filter((ele, i) => {
-    if (ele.label === menubar) {
-      return navlist.nav_items[i].sub_nav_items;
+const assignedDropdownSubNav = (menubar, nav) => {
+  let subNav = nav.filter((ele, i) => {
+    if (ele.node.frontmatter.parentEle === menubar) {
+      return ele.node.frontmatter;
     }
   });
-  return subNav[0];
+  return subNav;
 }
 
-const AboutSubNavDropdown = ({ current, prev }) => {
-  let subNav = assignedDropdownSubNav('About');
+const handleClick = (item) => {
+  window.location.pathname = `/${item.node.frontmatter.path}`;
+  setTimeout(() => {
+    window.location.reload();
+  }, 500)
+}
+
+const AboutSubNavDropdown = ({ current, prev, nav}) => {
+  let subNav = assignedDropdownSubNav('About', nav);
 
   return (
     <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
@@ -24,12 +31,12 @@ const AboutSubNavDropdown = ({ current, prev }) => {
         </div>
         <div className="column">
           <ul>
-          {subNav.sub_nav_items.map((item, i) => {
+          {subNav.map((item, i) => {
              if (i <= 3) {
               return (
                 <li>
                   <Router>
-                    <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+                    <Link className="heading" onClick={() => handleClick(item)} to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </Router>
                   </li>
                 )}
@@ -38,15 +45,15 @@ const AboutSubNavDropdown = ({ current, prev }) => {
           }
         </ul>
         </div>
-        {subNav.sub_nav_items.length > 4 && (
+        {subNav.length > 4 && (
           <div className="column">
           <div className="links">
-          {subNav.sub_nav_items.map((item, i) => {
+          {subNav.map((item, i) => {
             if (i > 3) {
               return (
                 <li>
-                  <Router>
-                    <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+                 <Router>
+                    <Link className="heading" onClick={() => handleClick(item)} to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </Router>
                   </li>
                 )
@@ -63,8 +70,8 @@ const AboutSubNavDropdown = ({ current, prev }) => {
   )
 };
 
-const ServicesSubNavDropdown = ({ current, prev }) => {
-  let subNav = assignedDropdownSubNav('Services');
+const ServicesSubNavDropdown = ({ current, prev, nav }) => {
+  let subNav = assignedDropdownSubNav('Services', nav);
 
   return (
     <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
@@ -75,12 +82,12 @@ const ServicesSubNavDropdown = ({ current, prev }) => {
         </div>
         <div className="column">
           <ul>
-          {subNav.sub_nav_items.map((item, i) => {
+          {subNav.map((item, i) => {
              if (i <= 3) {
               return (
                 <li>
-                  <Router>
-                    <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+                 <Router>
+                    <Link className="heading" onClick={() => handleClick(item)} to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </Router>
                   </li>
                 )}
@@ -89,15 +96,15 @@ const ServicesSubNavDropdown = ({ current, prev }) => {
           }
         </ul>
         </div>
-        {subNav.sub_nav_items.length > 4 && (
+        {subNav.length > 4 && (
           <div className="column">
           <div className="links">
-          {subNav.sub_nav_items.map((item, i) => {
+          {subNav.map((item, i) => {
             if (i > 3) {
               return (
                 <li>
-                  <Router>
-                    <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+                 <Router>
+                    <Link className="heading" onClick={() => handleClick(item)} to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </Router>
                   </li>
                 )
@@ -114,8 +121,8 @@ const ServicesSubNavDropdown = ({ current, prev }) => {
   )
 };
 
-const UserInfoSubNavDropdown = ({ current, prev }) => {
-  let subNav = assignedDropdownSubNav('User Information');
+const UserInfoSubNavDropdown = ({ current, prev, nav }) => {
+  let subNav = assignedDropdownSubNav('User Information', nav);
 
   return (
     <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
@@ -126,12 +133,12 @@ const UserInfoSubNavDropdown = ({ current, prev }) => {
         </div>
         <div className="column">
           <ul>
-          {subNav.sub_nav_items.map((item, i) => {
+          {subNav.map((item, i) => {
              if (i <= 3) {
               return (
                 <li>
-                  <Router>
-                    <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+                 <Router>
+                    <Link className="heading" onClick={() => handleClick(item)} to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </Router>
                   </li>
                 )}
@@ -140,15 +147,15 @@ const UserInfoSubNavDropdown = ({ current, prev }) => {
           }
         </ul>
         </div>
-        {subNav.sub_nav_items.length > 4 && (
+        {subNav.length > 4 && (
           <div className="column">
           <div className="links">
-          {subNav.sub_nav_items.map((item, i) => {
+          {subNav.map((item, i) => {
             if (i > 3) {
               return (
                 <li>
-                  <Router>
-                    <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+                 <Router>
+                    <Link className="heading" onClick={() => handleClick(item)} to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </Router>
                   </li>
                 )
@@ -165,61 +172,63 @@ const UserInfoSubNavDropdown = ({ current, prev }) => {
   )
 };
 
-const EducationOutreachSubNavDropdown = ({ current, prev }) => {
-  let subNav = assignedDropdownSubNav('Education & Outreach');
-
-   return (
-    <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
-
-    <div className="dropdown-content">  
-      <div className="row">
-        <div className="column">
-        <h4>Life is beautiful</h4>         
-        </div>
-        <div className="column">
-          <ul>
-          {subNav.sub_nav_items.map((item, i) => {
-             if (i <= 3) {
-              return (
-                <li>
-                  <Router>
-                    <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
-                  </Router>
-                  </li>
-                )}
-              }
-            )
-          }
-        </ul>
-        </div>
-        {subNav.sub_nav_items.length > 3 && (
+const EducationOutreachSubNavDropdown = ({ current, prev, nav }) => {
+  let subNav = assignedDropdownSubNav('Education & Outreach', nav);
+  if (subNav.length > 0) {
+    return (
+      <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
+  
+      <div className="dropdown-content">  
+        <div className="row">
           <div className="column">
-          <div className="links">
-          {subNav.sub_nav_items.map((item, i) => {
-            if (i > 3) {
-              return (
-                <li>
-                  <Router>
-                    <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
-                  </Router>
-                  </li>
-                )
-              }
-                return ''  
-            })
-          }
+          <h4>Life is beautiful</h4>         
           </div>
+          <div className="column">
+            <ul>
+            {subNav.map((item, i) => {
+               if (i <= 3) {
+                return (
+                  <li>
+                   <Router>
+                      <Link className="heading" onClick={() => handleClick(item)} to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                    </Router>
+                    </li>
+                  )}
+                }
+              )
+            }
+          </ul>
+          </div>
+          {subNav.length > 3 && (
+            <div className="column">
+            <div className="links">
+            {subNav.map((item, i) => {
+              if (i > 3) {
+                return (
+                  <li>
+                   <Router>
+                      <Link className="heading" onClick={() => handleClick(item)} to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                    </Router>
+                    </li>
+                  )
+                }
+                  return ''  
+              })
+            }
+            </div>
+          </div>
+          )}
         </div>
-        )}
-      </div>
-  </div>
-  </div>
-  )
+    </div>
+    </div>
+    )
+  }
+  return '';
 }
 
-const UserSupportSubNavDropdown = ({ current, prev }) => {
-  let subNav = assignedDropdownSubNav('User Support');
-  if(subNav.sub_nav_items > 0) {
+const UserSupportSubNavDropdown = ({ current, prev, nav }) => {
+  let subNav = assignedDropdownSubNav('User Support', nav);
+  if(subNav > 0) {
     return (
       <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
         <div className="dropdown-content">  
@@ -229,12 +238,12 @@ const UserSupportSubNavDropdown = ({ current, prev }) => {
           </div>
         <div className="column">
           <ul>
-          {subNav.sub_nav_items.map((item, i) => {
+          {subNav.map((item, i) => {
              if (i <= 3) {
               return (
                 <li>
-                  <Router>
-                    <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+                 <Router>
+                    <Link className="heading" onClick={() => handleClick(item)} to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </Router>
                   </li>
                 )}
@@ -243,15 +252,15 @@ const UserSupportSubNavDropdown = ({ current, prev }) => {
           }
         </ul>
         </div>
-        {subNav.sub_nav_items.length > 3 && (
+        {subNav.length > 3 && (
           <div className="column">
           <div className="links">
-          {subNav.sub_nav_items.map((item, i) => {
+          {subNav.map((item, i) => {
             if (i > 3) {
               return (
                 <li>
-                  <Router>
-                    <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+                 <Router>
+                    <Link className="heading" onClick={() => handleClick(item)} to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </Router>
                   </li>
                 )
@@ -271,10 +280,10 @@ const UserSupportSubNavDropdown = ({ current, prev }) => {
   }
 }
 
-const NewsEventsSubNavDropdown = ({ current, prev }) => {
-  let subNav = assignedDropdownSubNav('News and Events');
+const NewsEventsSubNavDropdown = ({ current, prev, nav }) => {
+  let subNav = assignedDropdownSubNav('News and Events', nav);
 
-  if(subNav) {
+  if(subNav.length > 0) {
     return (
       <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
         <div className="dropdown-content">  
@@ -284,12 +293,12 @@ const NewsEventsSubNavDropdown = ({ current, prev }) => {
           </div>
         <div className="column">
           <ul>
-          {subNav.sub_nav_items.map((item, i) => {
+          {subNav.map((item, i) => {
              if (i <= 3) {
               return (
                 <li>
-                  <Router>
-                    <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+                 <Router>
+                    <Link className="heading" onClick={() => handleClick(item)} to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </Router>
                   </li>
                 )}
@@ -298,15 +307,15 @@ const NewsEventsSubNavDropdown = ({ current, prev }) => {
           }
         </ul>
         </div>
-        {subNav.sub_nav_items.length > 3 && (
+        {subNav.length > 3 && (
           <div className="column">
           <div className="links">
-          {subNav.sub_nav_items.map((item, i) => {
+          {subNav.map((item, i) => {
             if (i > 3) {
               return (
                 <li>
-                  <Router>
-                    <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
+                 <Router>
+                    <Link className="heading" onClick={() => handleClick(item)} to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </Router>
                   </li>
                 )

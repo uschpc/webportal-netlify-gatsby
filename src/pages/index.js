@@ -10,12 +10,9 @@ import Footer from "../components/footer.js";
 
 const IndexPage = ({data}) => {
   console.log('yaseen', data);
-  let contents = pagelist.filter(obj => {
-    return obj.filePath === 'index'
-  });
 
   return (
-      <Layout>
+      <Layout {...data.navigation}>
           <SEO title="About" />
           <Carsoul />
           <BodyContent {...data} />
@@ -28,6 +25,17 @@ export default IndexPage
 
 export const pageQuery = graphql`
     query{
+      navigation: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "navigation"}}}) {
+        edges {
+          node {
+            frontmatter {
+              path
+              title
+              parentEle
+            }
+          }
+        }
+      }
       news: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "news"}}}) {
         edges {
           node {

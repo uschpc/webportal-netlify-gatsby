@@ -95,8 +95,8 @@ class Navbar extends React.Component {
                             data-transform-origin="left bottom"
                           />
                           <div className="">
-                            {PreviousDropdown && <PreviousDropdown prev />}
-                            <CurrentDropdown current />
+                            {PreviousDropdown && <PreviousDropdown prev nav={this.props.nav} />}
+                            <CurrentDropdown current nav={this.props.nav} />
                           </div>
                         </DropDownsContainer>
                     )}
