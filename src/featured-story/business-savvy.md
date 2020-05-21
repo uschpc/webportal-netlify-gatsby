@@ -1,7 +1,8 @@
 ---
 title: A Business-Savvy Storyteller
-thumbnail: /images/the-storyteller1.jpg
 path: conflux
+excerpt: some text here part 2
+thumbnail: /images/the-storyteller1.jpg
 cat: feature
-excerpt: some text here
 ---
+Life is going well
