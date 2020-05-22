@@ -9,12 +9,11 @@ export default function Template({ data }) {
   const loadDataOnlyOnce = () => {
     let pathName = typeof window !== 'undefined' ? window.location.href
     : '';
-    let DiscourseEmbed = { discourseUrl: 'https://hpc-discourse.usc.edu/',
+    window.DiscourseEmbed = { discourseUrl: 'https://hpc-discourse.usc.edu/',
                      discourseEmbedUrl: pathName };
       var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
-      d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+      d.src = window.DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
-      console.log(pathName, pathName.indexOf('/'));
   }
   useEffect(() => {
     loadDataOnlyOnce();
