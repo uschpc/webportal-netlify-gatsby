@@ -20,7 +20,9 @@ const AboutSubNavDropdown = ({ current, prev, nav}) => {
     <div className="dropdown-content">  
       <div className="row">
         <div className="column">
-          <h4>Life is beautiful</h4>         
+          <h4>
+            Th Advanced Research Computing Center provides high-performance computing resources to the USC research community.  
+          </h4>         
         </div>
         <div className="column">
           <ul>
@@ -67,7 +69,9 @@ const ServicesSubNavDropdown = ({ current, prev, nav }) => {
     <div className="dropdown-content">  
       <div className="row">
         <div className="column">
-        <h4>Life is beautiful</h4>       
+        <h4>
+          The Advanced Research Computing Center offers a variety of services to support USC's research endeavors.  
+        </h4>       
         </div>
         <div className="column">
           <ul>
@@ -114,7 +118,9 @@ const UserInfoSubNavDropdown = ({ current, prev, nav }) => {
     <div className="dropdown-content">  
       <div className="row">
         <div className="column">
-        <h4>Life is beautiful</h4>        
+        <h4>
+          The Advanced Research Computing Center strives to provide a complete and comprehensive user support experience.  
+        </h4>        
         </div>
         <div className="column">
           <ul>
@@ -162,7 +168,9 @@ const EducationOutreachSubNavDropdown = ({ current, prev, nav }) => {
       <div className="dropdown-content">  
         <div className="row">
           <div className="column">
-          <h4>Life is beautiful</h4>         
+          <h4>
+            Supporting USC students and faculty in their computational research is the key mission of the Advanced Research Computing Center.  
+          </h4>    
           </div>
           <div className="column">
             <ul>
@@ -262,7 +270,9 @@ const NewsEventsSubNavDropdown = ({ current, prev, nav }) => {
         <div className="dropdown-content">  
         <div className="row">
           <div className="column">
-          <h4>Life is beautiful</h4>       
+          <h4>
+            Find out how the Advanced Research Computing Center has been getting involved with the Trojan community.
+          </h4>       
           </div>
         <div className="column">
           <ul>

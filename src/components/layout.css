@@ -653,7 +653,7 @@ pre tt:after {
   display: none;
   position: absolute;
   background-color: gray;
-  opacity: 0.8;
+  opacity: 0.9;
   width: 100%;
   left: 0;
   right: 0;
@@ -684,6 +684,9 @@ pre tt:after {
   width: 15%;
   margin: 15px 20px;
   height: 150px;
+}
+
+.column:first-of-type {
   border-right: 1px solid white;
 }
 
@@ -716,11 +719,15 @@ pre tt:after {
 }
 
 .column a:hover, .column h3:hover {
-  color: yellow;
+  color: rgba(153, 0, 0, 0.7);
 }
 
 .column h4 {
   color: white;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: normal;
+  padding: 0 10px;
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
