@@ -155,6 +155,13 @@ body {
         }
       }
     }
+    #discourse-comments {
+      .discourse-content {
+        .logo {
+          display: none;
+        }
+      }
+    }
   }
   -webkit-font-smoothing: antialiased;
   color: #6b7c93;
