@@ -21,6 +21,7 @@ and (max-width : 1024px)  {
                 margin: 10px 0;
                 .openbtn{
                     min-width: 45px;
+                    border: none;
                     &.show {
                         display: block;
                         text-align: end;
