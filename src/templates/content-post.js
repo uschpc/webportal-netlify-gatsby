@@ -6,19 +6,20 @@ import Footer from '../components/footer'
 
 
 const findMenuTitle = (menubar, nav) => {
+  console.log()
   let menuTitle = nav.find((ele, i) => {
     if (ele.node.frontmatter.title === menubar) {
       return ele;
     }
     });
-    console.log(menuTitle.node.frontmatter.parentEle);
-  return menuTitle.node.frontmatter.parentEle;
+    console.log('asdasd', menuTitle);
+  return menuTitle ? menuTitle.node.frontmatter.parentEle : null;
 }
 const findSubMenu = (menubar, nav) => {
   const subNav = nav.filter((ele, i) => {
     return (ele.node.frontmatter.parentEle === menubar)
     });
-  return subNav;
+  return subNav ? subNav : null;
 }
 
 export default function Template({ data }) {
@@ -42,7 +43,6 @@ export default function Template({ data }) {
     const post = filterdPost[0].node;
     const menuNav = findMenuTitle(post.frontmatter.title, data.navigation.edges);    
     const subNav = findSubMenu(menuNav, data.navigation.edges);  
-    console.log(subNav);  
 
     return (
       <Layout {...data.navigation}>
@@ -50,19 +50,23 @@ export default function Template({ data }) {
           <div className="pages-container">
               <h1>{post.frontmatter.title}</h1>
               <div className="page-body">
-                <div className="sub-menu-items">
-                  <h2>{menuNav}</h2>
-                  <ul>
-                    {subNav.map((nav, i) => {
-                      return (  
-                        <Link to={nav.node.frontmatter.path} key={i}>{nav.node.frontmatter.title}</Link>
-                      )
-                     }
-                    )}
-                  </ul>
-                </div>
+                {subNav && (menuNav ==='About' || menuNav === 'Services') && (
+                   <div className="sub-menu-items">
+                    <h2>{menuNav ? menuNav : post.frontmatter.title}</h2>
+                    <ul>
+                      {subNav.map((nav, i) => {
+                        return (  
+                          <Link to={nav.node.frontmatter.path} key={i}>{nav.node.frontmatter.title}</Link>
+                        )
+                       }
+                      )}
+                    </ul>
+                    </div>
+                  )}
                 <div className="html-content" dangerouslySetInnerHTML={{ __html: post.html }} />
-                <div className="discourse-box">discourse preview for posts tagged with data solution</div>
+                {subNav && (menuNav ==='About' || menuNav === 'Services') && (
+                  <div className="discourse-box">discourse preview for posts tagged with data solution</div>
+                )}
               </div>
               {/* <h4>
                   Posted by {post.frontmatter.author} on {post.frontmatter.date}
