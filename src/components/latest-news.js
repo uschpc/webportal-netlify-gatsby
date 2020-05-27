@@ -7,9 +7,9 @@ const LatestNews = (news) => {
     return (
         <div className="shared news">
             <h2>Latest News</h2>
-            {news.edges.map(item => {
+            {news.edges.map((item, i) => {
                 return (
-                <div className="press-news-block">
+                <div className="press-news-block" key={i}>
                     <div className="block">
                         <h3 className="title">{item.node.frontmatter.title}</h3>
                         <img src={item.node.frontmatter.thumbnail}></img>

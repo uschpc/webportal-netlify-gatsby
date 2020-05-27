@@ -7,8 +7,8 @@ const ServiceBox = (services) => {
         <div id="x-section-5" className="x-section">
             <div className="marginless-columns" >
                 {
-                    services.edges.map(item => {
-                        return <div className="shared">
+                    services.edges.map((item, i) => {
+                        return <div className="shared" key={i}>
                             <Link to={item.node.frontmatter.path}>
                                 <img className="features-icon" src={item.node.frontmatter.thumbnail} />
                                 <span className="features">{item.node.frontmatter.title}</span>

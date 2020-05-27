@@ -11,8 +11,44 @@ body {
     overflow: hidden;
 
     .pages-container {
-      margin: 50px 10%;
+      margin: 80px 10%;
       min-height: 38vh;
+
+      h1 {
+        margin-bottom: 80px;
+      }
+
+      .page-body {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        .discourse-box{
+          width: 17%;
+        }
+        .html-content {
+          width: 60%;
+        }
+        .sub-menu-items{
+          h2 {
+            margin-bottom: 10px;
+          }
+          ul {
+            display: flex;
+            flex-direction: column;
+            a {
+              color: black;
+
+              font-size: 15px;
+              &:hover {
+                color: #ffcd05;
+              }
+            }
+            a[aria-current=page] {
+              color: #94374f;
+            }
+          }
+        }
+      }
     }
 
     .footer{

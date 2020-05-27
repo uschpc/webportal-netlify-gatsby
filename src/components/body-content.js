@@ -18,7 +18,7 @@ const BodyContent = ({news, featureStory, featureBoxes}) => {
                     </div>
                     <div className="bg-image">
                         <div className="content">
-                            <div class="title">
+                            <div className="title">
                                 Advanced Research Computing
                             </div>
                             <div className="mission">

@@ -81,3 +81,20 @@ collections:
                 fields:
                   - {label: Label, name: label, widget: string}
                   - {label: Path, name: path, widget: string}
+  - name: Dynamic Pages
+    label: Pages
+    files:
+      - file: src/navigation/about
+        label: About
+        name: about
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Slug", name: "path", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+       - file: src/navigation/about
+        label: Services
+        name: services
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Slug", name: "path", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}

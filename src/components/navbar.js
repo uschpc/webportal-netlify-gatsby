@@ -200,20 +200,20 @@ class Navbar extends React.Component {
           <div className="btn-wrap">
             <button className={`openbtn ${this.state.openNavIcon ? 'show' : 'hide'}`} onClick={() => this.openNav()}>☰</button>  
             <button className={`openbtn ${this.state.closeNavIcon ? 'show' : 'hide'}`} onClick={()=> this.closeNav()}>X</button>  
-            <button class={`search__toggle__icon ${this.state.openSearchIcon ? 'hide' : 'show'}`} onClick={() => this.openSearchNav()}>
+            <button className={`search__toggle__icon ${this.state.openSearchIcon ? 'hide' : 'show'}`} onClick={() => this.openSearchNav()}>
               <img src="/images/white-magnifying-glass.png" />
             </button>
-            <button class={`search__toggle__icon ${this.state.openSearchIcon ? 'show' : 'hide'}`} onClick={() => this.closeSearchNav()}>
+            <button className={`search__toggle__icon ${this.state.openSearchIcon ? 'show' : 'hide'}`} onClick={() => this.closeSearchNav()}>
               X
             </button>
           </div>
 
           <div className={`search-menu-item ${this.state.openSearchIcon ? 'show' : 'hide' }`} >
-          <div class="search">
+          <div className="search">
               <form action="/search-results">
-                  <label class="hide" for="search">Search</label>
-                  <input type="text" class="search__input" name="q" id="search" placeholder="Search hpc.usc.edu" />
-                  <button type="submit" class="button button--solid">Search</button>
+                  <label className="hide" htmlFor="search">Search</label>
+                  <input type="text" className="search__input" name="q" id="search" placeholder="Search hpc.usc.edu" />
+                  <button type="submit" className="button button--solid">Search</button>
                 </form>
               </div>
           </div>
@@ -226,7 +226,7 @@ class Navbar extends React.Component {
                     key={index}
                   >
                     <ul>
-                <li onClick={() => this.openSubMenu(n.title)} className={this.state.signflag[n.title] === '-' && 'activeState'}>
+                <li onClick={() => this.openSubMenu(n.title)} className={this.state.signflag[n.title] === '-' ? 'activeState' : 'non-active'}>
                   <span>
                     <span className="title">{n.title}</span>
                     <span className="pluse">{this.state.signflag[n.title]}</span>
@@ -235,7 +235,7 @@ class Navbar extends React.Component {
                     {this.state.subNav[n.title] && this.state.subNav[n.title].map((item, i) => {
                         return (
                           <ul>
-                            <Link to={item.node.frontmatter.path}>
+                            <Link to={item.node.frontmatter.path} key={i}>
                               {item.node.frontmatter.title}
                             </Link>
                         </ul>

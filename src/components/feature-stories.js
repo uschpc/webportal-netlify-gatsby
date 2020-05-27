@@ -7,9 +7,9 @@ const FeatureStories = (services) => {
     return (
         <div className="shared press-release">
             <h2>Featured Story</h2>
-            {services.edges.map(item => {
+            {services.edges.map((item, i) => {
                 return (
-                <div className="press-news-block">
+                <div className="press-news-block" key={i}>
                     <div className="block">
                         <h3 className="title">{item.node.frontmatter.title}</h3>
                         <img src={item.node.frontmatter.thumbnail}></img>

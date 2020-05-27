@@ -43,12 +43,12 @@ const Header = (props) => {
           </div>
           <div className="header-section second-section">
             <div className="content-width-middile">
-              <Link>
+              <Link to="/"> 
                 <img data-src="/images/usc_logo_new_design.svg" className=" lazyloaded" src="/images/usc_logo_new_design.svg" />
-                </Link>
-                <a href="https://www.usc.edu/">
-                  <img data-src="/images/usc_logo_new_design.svg" className=" lazyloaded" src="/images/USC-Shield.png" />
-                </a>
+              </Link>
+              <a href="https://www.usc.edu/">
+                <img data-src="/images/usc_logo_new_design.svg" className=" lazyloaded" src="/images/USC-Shield.png" />
+              </a>
               </div>
           </div>
           <Navbar scrollY={scrollY} nav={props.nav} />
