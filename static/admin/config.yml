@@ -82,7 +82,7 @@ collections:
                   - {label: Label, name: label, widget: string}
                   - {label: Path, name: path, widget: string}
   - name: About
-    label: About Page
+    label: About Pages
     folder: src/navigation/about
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -104,7 +104,7 @@ collections:
       - {label: "Slug", name: "path", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: User Information
-    label: user information Page
+    label: user information Pages
     folder: src/navigation/user-information
     fields:
       - {label: "Title", name: "title", widget: "string"}
