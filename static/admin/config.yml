@@ -81,20 +81,32 @@ collections:
                 fields:
                   - {label: Label, name: label, widget: string}
                   - {label: Path, name: path, widget: string}
-  - name: Dynamic Pages
-    label: Pages
-    files:
-      - file: src/navigation/about
-        label: About
-        name: about
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Slug", name: "path", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - file: src/navigation/Services
-        label: Services
-        name: services
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Slug", name: "path", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+  - name: About
+    label: About Page
+    folder: src/navigation/about
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "path", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: Services
+    label: Services Pages
+    folder: src/navigation/Services
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "path", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: Education And Outreach
+    label: Education And Outreach Pages
+    folder: src/navigation/education-and-outreach
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "path", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: User Information
+    label: user information Page
+    folder: src/navigation/user-information
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "path", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
