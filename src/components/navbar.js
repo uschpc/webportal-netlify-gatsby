@@ -142,7 +142,6 @@ class Navbar extends React.Component {
   }
 
   render() {
-    console.log(this.props.width);
     let CurrentDropdown;
     let PreviousDropdown;
 
