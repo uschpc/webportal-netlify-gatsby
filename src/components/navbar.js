@@ -60,7 +60,11 @@ class Navbar extends React.Component {
       "Services": '+',
       "User Information": '+'
     },
-    subNavFlag: false,
+    subNavFlag: {
+      "About": false,
+      "Services": false,
+      "User Information": false
+    },
     openSearchIcon: false
   };
 
@@ -90,7 +94,7 @@ class Navbar extends React.Component {
       openNavIcon: true,
       closeNavIcon: false
     })
-    this.resetState(this.state.subNavFlag);
+    this.resetState();
   }
 
   openSearchNav = () => {
@@ -106,7 +110,7 @@ class Navbar extends React.Component {
     })
   }
 
-  resetState = (subNavFlag) => {
+  resetState = () => {
     this.setState({
       subNav: {
         "About": [],
@@ -118,14 +122,12 @@ class Navbar extends React.Component {
         "Services": '+',
         "User Information": '+'
       },
-      subNavFlag: !subNavFlag
     })
   }
 
   openSubMenu = (item) => {
     let nav = this.state.nav;
     let subNav = assignedDropdownSubNav(item, nav);
-    this.resetState(!this.state.subNavFlag);
     setTimeout(() => {
       this.setState({
         subNav: {
@@ -134,9 +136,12 @@ class Navbar extends React.Component {
         },
         signflag: {
           ...this.state.signflag,
-          [item]: this.state.subNavFlag ? '+' : '-'
+          [item]: this.state.signflag[item] === '-' ? '+' : '-'
         },
-        subNavFlag: !this.state.subNavFlag
+        subNavFlag: {
+          ...this.state.subNavFlag,
+          [item]: this.state.subNavFlag[item] ? false : true
+        }
       })
     }, 0)
   }
@@ -160,7 +165,7 @@ class Navbar extends React.Component {
       <div className={`app-container ${(this.props.scrollY >= 124 && window.scrollY > 10) ? 'fixed' : 'default' } `}>
         <nav className="navbar-el" onMouseLeave={this.onMouseLeave}>
           <img data-src="/images/usc_logo_new_design_small.svg" className={`small-logo ${(this.props.width >= 1695 && this.props.scrollY >= 124 && window.scrollY > 10) ? 'show' : 'hide' } `} src="/images/usc_logo_new_design_small.svg" />
-          <img className={`small-logo right ${(this.props.scrollY >= 124 && window.scrollY > 10) ? 'show' : 'hide' } `} src="/images/usc-shield-only.png" />
+          <img className={`small-logo right ${(this.props.width >= 1150 &&  this.props.scrollY >= 124 && window.scrollY > 10) ? 'show' : 'hide' } `} src="/images/usc-shield-only.png" />
           <ul className="navbar-list">
             {activeNavigation.map((n, index) => {
               return (
@@ -231,7 +236,7 @@ class Navbar extends React.Component {
                     <span className="title">{n.title}</span>
                     <span className="pluse">{this.state.signflag[n.title]}</span>
                   </span>
-                  <span className={`sub-menu-item ${this.state.subNavFlag ? 'show' : 'hide' }`}>
+                  <span className={`sub-menu-item ${this.state.subNavFlag[n.title] ? 'show' : 'hide' }`}>
                     {this.state.subNav[n.title] && this.state.subNav[n.title].map((item, i) => {
                         return (
                           <ul>
