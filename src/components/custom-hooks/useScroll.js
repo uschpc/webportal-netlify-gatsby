@@ -25,12 +25,14 @@ export function useScroll() {
   };
 
   const updateWindowDimensions = () => {
+    console.log('i am here', window.innerWidth);
     setWidth(window.innerWidth);
   }
 
   useEffect(() => {
     window.addEventListener("scroll", listener);
     window.addEventListener('resize', updateWindowDimensions);
+    updateWindowDimensions()
     return () => {
       window.removeEventListener("scroll", listener);
       window.removeEventListener('resize', updateWindowDimensions);
