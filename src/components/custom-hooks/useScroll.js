@@ -14,6 +14,7 @@ export function useScroll() {
   const [scrollY, setScrollY] = useState(bodyOffset.top);
   const [scrollX, setScrollX] = useState(bodyOffset.left);
   const [scrollDirection, setScrollDirection] = useState();
+  const [width, setWidth] = useState(0);
 
   const listener = e => {
     setBodyOffset(document ? document.body.getBoundingClientRect() : 0);
@@ -23,16 +24,23 @@ export function useScroll() {
     setLastScrollTop(-bodyOffset.top);
   };
 
+  const updateWindowDimensions = () => {
+    setWidth(window.innerWidth);
+  }
+
   useEffect(() => {
     window.addEventListener("scroll", listener);
+    window.addEventListener('resize', updateWindowDimensions);
     return () => {
       window.removeEventListener("scroll", listener);
+      window.removeEventListener('resize', updateWindowDimensions);
     };
   }, [scrollY]);
 
   return {
     scrollY,
     scrollX,
+    width,
     scrollDirection
   };
 }

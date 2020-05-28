@@ -7,7 +7,7 @@ import { useScroll } from './custom-hooks/useScroll';
 
 
 const Header = (props) => {
-  const { scrollY } = useScroll();
+  const { scrollY, width } = useScroll();
 
   return (
     <header className='header-container'>
@@ -47,7 +47,7 @@ const Header = (props) => {
                 <img data-src="/images/usc_logo_new_design.svg" className=" lazyloaded" src="/images/usc_logo_new_design.svg" />
               </Link>
               <a href="https://www.usc.edu/">
-                <img data-src="/images/usc_logo_new_design.svg" className=" lazyloaded" src="/images/USC-Shield.png" />
+                <img data-src="/images/usc_logo_new_design.svg" className=" lazyloaded" src={(width > 570) ? '/images/USC-Shield.png' : '/images/usc-shield-only.png' } />
               </a>
               </div>
           </div>
