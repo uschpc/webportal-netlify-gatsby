@@ -72,6 +72,10 @@ and (max-width : 1024px)  {
                     flex-direction: row-reverse;
                     button {
                         outline: none;
+                        border-left: none;
+                        background: transparent;
+                        border-bottom: none;
+                        border-top: none;
                         &.search__toggle__icon{
                             border-right: 2px solid black;
                             border-left: none;
