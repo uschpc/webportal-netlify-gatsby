@@ -43,7 +43,7 @@ const Header = (props) => {
           </div>
           <div className="header-section second-section">
             <div className="content-width-middile">
-              <Link to="/"> 
+              <Link to="/" className="hpc-logo"> 
                 <img data-src="/images/usc_logo_new_design.svg" className=" lazyloaded" src="/images/usc_logo_new_design.svg" />
               </Link>
               <a href="https://www.usc.edu/">

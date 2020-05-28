@@ -589,6 +589,15 @@ p {
     align-items: center;
     justify-content: space-between;
 
+    > a {
+      &.hpc-logo{
+        img {
+          height: -webkit-fill-available;
+          max-height: 50px;
+        }
+      }
+    }
+
     form {
       margin-bottom: 0;
     }
