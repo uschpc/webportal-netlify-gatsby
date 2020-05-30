@@ -13,7 +13,7 @@ class Search extends Component {
     isError: false,
     searchQuery: "",
   }
-  
+
   /**
    * React lifecycle method to fetch the data
    */
@@ -88,7 +88,7 @@ class Search extends Component {
         </div>
         <div className="post-list">
             <h2><span>Search Results:</span> {this.state.searchQuery ? this.state.searchQuery : 'All'}</h2>
-            {queryResults.map((item, i) => {
+            {queryResults.length ? queryResults.map((item, i) => {
                 return (  
                     <div className="posts" key={i}>
                         <h3>{item.node.frontmatter.title}</h3>
@@ -96,7 +96,7 @@ class Search extends Component {
                         <Link to={item.node.frontmatter.path}>Read More</Link>
                     </div>
                 )
-            })}
+            }) :  <div className="posts">No Result Found</div>}
         </div>
       </div>
     )
