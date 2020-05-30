@@ -1,14 +1,55 @@
 @import './slider-animations.less';
 body {
+  .search-result {
+    margin: 80px 10%;
+    .form-item {
+      margin-bottom: 1.25rem;
+      margin: 0 auto;
+      position: relative;
+      label {
+        display: none;
+        font-size: 1.125rem;
+        margin-bottom: 0.3125rem;
+      }
+      img {
+        margin: 0;
+        top: 8px;
+        width: 40px;
+        left: 8px;
+        position: absolute;
+      }
+      .form-text {
+        background: transparent;
+        font-size: 0.875rem;
+        border-radius: 6.25rem;
+        height: 3.125rem;
+        margin-bottom: 0;
+        margin: 0;
+        padding: 0.75rem 0.5rem 0.75rem 3.625rem;
+        width: 100%;
+
+        &:active, &:focus {
+          border: 3px solid #94374f;
+          outline: none;
+        }
+      }
+    }
     .post-list {
-        border: 1px solid gray;
-        padding: 10px;
+        padding: 30px;
         .posts {
-            border: 1px solid black;
+            border-bottom: 0.0625rem solid #f1f1f1;
             padding: 10px;
             margin-bottom: 20px;
+            h3 {
+              color: #94374f
+            }
+            a {
+              color: #94374f;
+            }
         }
     }
+  }
+  
 
     .slider-wrapper {
         position: relative;

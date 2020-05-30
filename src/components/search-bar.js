@@ -1,23 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-const SearchBar = (props) => {
-    const [flag, searchTog] = useState(false);
- 
+const SearchBar = (props) => { 
     return (
-    <div className="search-container">
-        <div className="search">
-            <div className="searchWrap">
-                <div className="searchInner">
-                    <div className="form">
-                        <form action="/search.cfm" method="get" name="headerSearch" id="headerSearch">
-                            <input type="search" className="search" placeholder="ENTER SEARCH TERMS" />
-                            <input type="submit" className="submit" />
-                        </form>
+        <div className="search-container">
+            <div className="search">
+                <div className="searchWrap">
+                    <div className="searchInner">
+                        <div className="form">
+                            <form action="/search-results">
+                                <input type="search" name="q" className="search" placeholder="ENTER SEARCH TERMS" />
+                                <input type="submit" className="submit" />
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     )
 }
 

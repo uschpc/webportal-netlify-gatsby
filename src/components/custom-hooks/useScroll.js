@@ -25,7 +25,6 @@ export function useScroll() {
   };
 
   const updateWindowDimensions = () => {
-    console.log('i am here', window.innerWidth);
     setWidth(window.innerWidth);
   }
 

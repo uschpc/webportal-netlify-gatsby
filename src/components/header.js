@@ -33,7 +33,7 @@ const Header = (props) => {
 
                   <div className="col-xs-6">
                     <div className="tb-col-2">
-                    <SearchBar searchData={(e) => props.searchData(e)} />
+                    <SearchBar />
                     </div>
                   </div>
                 </div>

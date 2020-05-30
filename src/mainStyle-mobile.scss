@@ -11,6 +11,9 @@ and (min-width : 1025px) {
 and (min-width : 768px) 
 and (max-width : 1024px)  { 
     #___gatsby {
+        .search-result {
+            margin: 80px 3%;
+        }
         .region {
             &.usc-hpc {
                 .marginless-columns {
@@ -118,6 +121,7 @@ and (max-width : 1024px)  {
                             border-top: none;
                             border-right: none;
                             border-left: none;
+                            outline: none;
                         }
                         button {
                             display: block;
@@ -215,6 +219,9 @@ and (max-width : 1024px)  {
 and (min-width : 320px) 
 and (max-width : 767px) {
     #___gatsby {
+        .search-result {
+            margin: 80px 3%;
+        }
         .slider-wrapper {
             display: none;
         }
@@ -288,6 +295,7 @@ and (max-width : 767px) {
                             border-top: none;
                             border-right: none;
                             border-left: none;
+                            outline: none;
                         }
                         button {
                             display: block;

@@ -6,13 +6,11 @@ import Footer from '../components/footer'
 
 
 const findMenuTitle = (menubar, nav) => {
-  console.log()
   let menuTitle = nav.find((ele, i) => {
     if (ele.node.frontmatter.title === menubar) {
       return ele;
     }
     });
-    console.log('asdasd', menuTitle);
   return menuTitle ? menuTitle.node.frontmatter.parentEle : null;
 }
 const findSubMenu = (menubar, nav) => {
