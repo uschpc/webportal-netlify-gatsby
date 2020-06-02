@@ -1,5 +1,5 @@
 ---
-path: user_support
+path: user_support_landing_page
 cat: userSupportLandingPage
 ---
 

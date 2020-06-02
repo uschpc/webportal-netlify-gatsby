@@ -61,14 +61,28 @@ export default function Template({ data }) {
                     </ul>
                     </div>
                   )}
-                <div className="html-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+                   {(post.frontmatter.title ==='ColdFront') && (
+                    <div className="coldfront-menu-items">
+                      <ul>
+                        {data.coldFront.edges.map ((item, i) => {
+                          return (
+                            <Link className="coldfront-menu-items" to={item.node.frontmatter.path}>
+                              <li key={i}>{item.node.frontmatter.title}</li>
+                            </Link>
+                          )
+                      })}
+                      </ul>
+                    </div>
+                  )}
+                {(post.frontmatter.cat !=='coldFront' && post.frontmatter.title !=='ColdFront') ? (
+                  <div className="html-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+                ) : (
+                  <div className="html-content-coldfront" dangerouslySetInnerHTML={{ __html: post.html }} />
+                )}
                 {subNav && (menuNav ==='About' || menuNav === 'Services') && (
                   <div className="discourse-box">discourse preview for posts tagged with data solution</div>
                 )}
               </div>
-              {/* <h4>
-                  Posted by {post.frontmatter.author} on {post.frontmatter.date}
-              </h4> */}
               <div id='discourse-comments'></div>
           </div>
           <Footer />
@@ -90,8 +104,20 @@ export const postQuery = graphql`
             path
             title
             date
+            cat
           }
           html
+        }
+      }
+    }
+    coldFront: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "coldFront"}}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            cat
+          }
         }
       }
     }

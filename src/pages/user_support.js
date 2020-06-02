@@ -8,7 +8,7 @@ import Footer from "../components/footer.js";
 const UserSupportIndex = ({data}) => {
   return (
       <Layout {...data.navigation}>
-          <SEO title="search-result" />
+          <SEO title="user-support" />
             <div className="user-support">
                 <h1>User Support</h1>
                 <div className="container">
@@ -16,8 +16,8 @@ const UserSupportIndex = ({data}) => {
                         {
                         data.md.edges.map ((item, i) => {
                             return (
-                                <Link to={item.node.frontmatter.path}>
-                                    <div className="user-support-box" key={i}>
+                                <Link to={item.node.frontmatter.path} key={i}>
+                                    <div className="user-support-box">
                                         <p className="title">{item.node.frontmatter.title}</p>
                                         <p className="description">{item.node.frontmatter.excerpt}</p>
                                     </div>

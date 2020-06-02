@@ -26,6 +26,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `cold-front`,
+        path: `${__dirname}/src/cold-front`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `latest-news`,
         path: `${__dirname}/src/latest-news`,
       },
