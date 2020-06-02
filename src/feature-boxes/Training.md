@@ -1,6 +1,6 @@
 ---
 title: Customized Research Partnerships
-path: consulting
+path: research
 thumbnail: /images/sr-icon-1.png
 cat: services
 ---
