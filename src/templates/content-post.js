@@ -77,7 +77,7 @@ export default function Template({ data }) {
                 {(post.frontmatter.cat !=='coldFront' && post.frontmatter.title !=='ColdFront') ? (
                   <div className="html-content" dangerouslySetInnerHTML={{ __html: post.html }} />
                 ) : (
-                  <div className="html-content-coldfront" dangerouslySetInnerHTML={{ __html: post.html }} />
+                  post.frontmatter.title !=='ColdFront' && <div className="html-content-coldfront" dangerouslySetInnerHTML={{ __html: post.html }} />
                 )}
                 {subNav && (menuNav ==='About' || menuNav === 'Services') && (
                   <div className="discourse-box">discourse preview for posts tagged with data solution</div>
