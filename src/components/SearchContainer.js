@@ -76,7 +76,6 @@ class Search extends Component {
     this.setState({ searchQuery: searchInput, searchResults: updatedList })
   }
   render() {
-    console.log(this.state);
     const { contentList, searchResults, searchQuery } = this.state
     const queryResults = searchQuery === "" ? contentList : searchResults
     return (
