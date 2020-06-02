@@ -30,14 +30,17 @@ const navigation = [
  },
  {
     title: "Education & Outreach", 
+    path: "education_and_outreach",
     dropdown: EducationOutreachSubNavDropdown
  },
  {
    title: "News and Events",
+   path: "news_and_events",
    dropdown: NewsEventsSubNavDropdown
  },
  {
   title: "User Support", 
+  path: "user_support",
   dropdown: UserSupportSubNavDropdown
 }
 ];
@@ -178,9 +181,19 @@ class Navbar extends React.Component {
                 >
                   <div className="navbar">
                     <div className="dropdown">
-                    <button className={`dropbtn ${n.title === "User Support" ? 'last-element' : ''} `}>{n.title}</button>
+                    <button className={`dropbtn ${n.title === "User Support" ? 'last-element' : ''} `}>
+                    {
+                      n.title === "Education & Outreach" ||
+                      n.title === 'News and Events' ||
+                      n.title === "User Support" ? (
+                        <Link to={n.path}>{n.title}</Link>
+                      ) : (
+                        n.title
+                      )
+                    }
+                  </button>
                   <div className="">
-                    {currentIndex === index && (
+                    {(currentIndex === index) && (
                         <DropDownsContainer preventDistortion="[data-prevent-distortion]" >
                           <div
                             data-prevent-distortion
@@ -230,26 +243,26 @@ class Navbar extends React.Component {
                     data-index={index}
                     key={index}
                   >
-                    <ul>
-                <li onClick={() => this.openSubMenu(n.title)} className={this.state.signflag[n.title] === '-' ? 'activeState' : 'non-active'}>
-                  <span>
-                    <span className="title">{n.title}</span>
-                    <span className="pluse">{this.state.signflag[n.title]}</span>
-                  </span>
-                  <span className={`sub-menu-item ${this.state.subNavFlag[n.title] ? 'show' : 'hide' }`}>
-                    {this.state.subNav[n.title] && this.state.subNav[n.title].map((item, i) => {
-                        return (
-                          <ul>
-                            <Link to={item.node.frontmatter.path} key={i}>
-                              {item.node.frontmatter.title}
-                            </Link>
-                        </ul>
-                        )
-                      })
-                    }
-                  </span>
-                </li>
-                    </ul>
+                  <ul>
+                    <li onClick={() => this.openSubMenu(n.title)} className={this.state.signflag[n.title] === '-' ? 'activeState' : 'non-active'}>
+                      <span>
+                        <span className="title">{n.title}</span>
+                        <span className="pluse">{this.state.signflag[n.title]}</span>
+                      </span>
+                      <span className={`sub-menu-item ${this.state.subNavFlag[n.title] ? 'show' : 'hide' }`}>
+                        {this.state.subNav[n.title] && this.state.subNav[n.title].map((item, i) => {
+                            return (
+                              <ul>
+                                <Link to={item.node.frontmatter.path} key={i}>
+                                  {item.node.frontmatter.title}
+                                </Link>
+                            </ul>
+                            )
+                          })
+                        }
+                      </span>
+                    </li>
+                  </ul>
                   </div>
                 )})}
             </div>

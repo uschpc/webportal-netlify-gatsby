@@ -16,6 +16,11 @@ body {
 
       h1 {
         margin-bottom: 80px;
+        background-color: #ffcd05;
+        padding: 20px;
+        margin-left: -20px;
+        margin-right: -20px;
+        color: #990000;
       }
 
       .page-body {
@@ -513,6 +518,10 @@ p {
       background-color: #ffcd05;
       color: black;
       font-weight: bold;
+    }
+    a {
+      padding: 0;
+      color: black;
     }
   }
 }
