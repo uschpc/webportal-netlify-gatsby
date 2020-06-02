@@ -1,6 +1,6 @@
 ---
-title: High-Performance Computing
-path: hpc
+title: Customized Research Partnerships
+path: consulting
 thumbnail: /images/sr-icon-1.png
 cat: services
 ---
