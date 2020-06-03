@@ -115,3 +115,10 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Slug", name: "path", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+   - name: User Support
+    label: User Support Pages
+    folder: src/user-support
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "path", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
