@@ -18,8 +18,6 @@ body {
         margin-bottom: 80px;
         background-color: #ffcd05;
         padding: 20px;
-        margin-left: -20px;
-        margin-right: -20px;
         color: #990000;
       }
 
@@ -38,9 +36,11 @@ body {
         }
         .sub-menu-items{
           h2 {
+            text-align: left;
             margin-bottom: 10px;
           }
           ul {
+            text-align: left;
             display: flex;
             flex-direction: column;
             a {
@@ -624,7 +624,7 @@ p {
       &.hpc-logo{
         img {
           height: -webkit-fill-available;
-          max-height: 50px;
+          max-height: 52px;
         }
       }
     }

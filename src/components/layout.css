@@ -814,7 +814,7 @@ pre tt:after {
 }
 /* line 33, ../scss/layout/_header.scss */
 .tb-col-1 ul.nav-top li a:hover {
-  color: #ffdb4d;
+  color: rgba(153, 0, 0, 0.7);;
   text-decoration: underline;
 }
 /* line 39, ../scss/layout/_header.scss */

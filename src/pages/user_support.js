@@ -48,13 +48,14 @@ export default UserSupportIndex
 
 export const pageQuery = graphql`
     query{
-      md: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "userSupport"}}}) {
+      md: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "userSupport"}}}) {
         edges {
           node {
             frontmatter {
               title
               path
               excerpt
+              id
             }
           }
         }

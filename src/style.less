@@ -72,6 +72,18 @@ body {
           color: black;
           font-size: 30px;
           width: 33%;
+
+          &:hover {
+            p {
+              &.title {
+                color: #990000;
+                text-decoration: underline;
+              }
+              &.description {
+                color: #990000;
+              }
+            }
+          }
         }
         .user-support-box {
           width: 300px;
@@ -333,3 +345,65 @@ body {
     }
   }
 }
+
+
+@media only screen 
+and (min-width : 664px) 
+and (max-width : 1024px)  { 
+  #___gatsby {
+    .user-support{
+      margin: 40px 3%;
+      h1 {
+        margin-bottom: 20px;
+      }
+      .container{
+        display: block;
+        .left-col{
+          width: 100%;
+          a{
+            width: 49%;
+          }
+        }
+        .right-col{
+          width: 100%;
+          .system-status{
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 664px)  {
+  #___gatsby {
+    .user-support{
+      margin: 40px 3%;
+      h1 {
+        margin-bottom: 20px;
+      }
+      .container{
+        display: block;
+        .left-col{
+          width: 100%;
+          a{
+            width: 100%;
+          }
+        }
+        .right-col{
+          width: 100%;
+          .system-status{
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+ }
