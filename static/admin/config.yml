@@ -115,9 +115,16 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Slug", name: "path", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-   - name: User Support
+  - name: User Support
     label: User Support Pages
     folder: src/user-support
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "path", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: ColdFront
+    label: ColdFront Pages
+    folder: src/cold-front
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Slug", name: "path", widget: "string"}
