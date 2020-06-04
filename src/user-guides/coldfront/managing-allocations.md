@@ -2,24 +2,25 @@
 author: James Hong
 date: 2020-06-01T12:00:00.387Z
 title: Managing Allocations in Coldfront
-path: managing-allocations-in-coldfront
+path: managing-allocations
 parentPath: user-guides/coldfront
 cat: coldFront
 parentPage: User Support
 ---
 
+&nbsp;
 [Log into ColdFront](https://hpcaccount.usc.edu/)
-
-
+&nbsp;
+&nbsp;
 An allocation provides you access to a resource and, possibly, limitations for that access.  All USC resources (clusters, servers, storage, cloud, licenses, etc) require an allocation.  All allocations expire at some point, either on a date or when the limit is reached.  For example, an allocation to a cloud resource has a limit of the total number of core hours allowed by that user.  Once the user has reached that number, the allocation expires.  
 
 
-When users login to ColdFront, they will see a list of all the allocations they have access to and the expiration date of that allocation.  In order to renew an allocation, the faculty member who manages the project that the allocation falls under, must take action.
+When users [login to ColdFront](https://hpcaccount.usc.edu/), they will see a list of all the allocations they have access to and the expiration date of that allocation.  In order to renew an allocation, the faculty member who manages the project that the allocation falls under, must take action.
 
 
 ### To renew an allocation for the Discovery cluster:
 
-Allocations for the academic (USC-HPC) cluster expire yearly.  Faculty must renew their allocation or access to the resource will be blocked for all group members.  USC requires faculty to review and update their project(s) annually.  If your project has not be reviewed in a year and an allocation on the project is expiring, you will be forced to go through the project review before renewing the allocation.  More details on the project review can be found here.   For instructions on how to renew a cluster allocation, see this knowledgebase article
+Allocations for the academic (USC-HPC) cluster expire yearly.  Faculty must renew their allocation or access to the resource will be blocked for all group members.  USC requires faculty to review and update their project(s) annually.  If your project has not be reviewed in a year and an allocation on the project is expiring, you will be forced to go through the project review before renewing the allocation.  More details on the project review can be [found here](yearly-project-renewal).   For instructions on how to renew a cluster allocation, [see this knowledgebase article](renew-allocation)
 
 
 ### To renew an allocation for storage:
