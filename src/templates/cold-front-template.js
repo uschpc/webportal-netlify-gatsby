@@ -6,7 +6,6 @@ import Footer from '../components/footer'
 
 export default function Template({ data }) {
     const post = data.md;
-    console.log('cpcpcpcpcpcpcpc', post)
     return (
       <Layout {...data.navigation}>
           <SEO title={post.frontmatter.title}/>

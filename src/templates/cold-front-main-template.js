@@ -5,7 +5,6 @@ import SEO from '../components/seo'
 import Footer from '../components/footer'
 
 export default function Template({ data }) {
-  console.log('hit')
     const post = data.md.edges;
     return (
       <Layout {...data.navigation}>
