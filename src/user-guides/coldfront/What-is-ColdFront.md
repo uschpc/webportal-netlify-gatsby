@@ -2,8 +2,8 @@
 author: James Hong
 date: 2020-06-01T12:00:00.387Z
 title: What is ColdFront?
-path: coldfront
-parentPath: user-guides/cold-front
+path: what-is-coldfront
+parentPath: user-guides/coldfront
 cat: coldFront
 parentPage: User Support
 ---

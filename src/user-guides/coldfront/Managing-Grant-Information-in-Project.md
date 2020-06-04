@@ -3,7 +3,7 @@ author: James Hong
 date: 2020-06-01T12:00:00.387Z
 title: Managing Grant Information in your Project
 path: managing-grant-information-in-your-project
-parentPath: user-guides/cold-front
+parentPath: user-guides/coldfront
 cat: coldFront
 parentPage: User Support
 ---

@@ -124,7 +124,7 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - name: ColdFront
     label: ColdFront Pages
-    folder: src/cold-front
+    folder: src/user-guides/coldfront
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Slug", name: "path", widget: "string"}

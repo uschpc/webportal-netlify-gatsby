@@ -26,8 +26,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `cold-front`,
-        path: `${__dirname}/src/cold-front`,
+        name: `user-guides`,
+        path: `${__dirname}/src/user-guides`,
       },
     },
     {

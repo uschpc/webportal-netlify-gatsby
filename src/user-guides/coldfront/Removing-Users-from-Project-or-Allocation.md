@@ -3,7 +3,7 @@ author: James Hong
 date: 2020-06-01T12:00:00.387Z
 title: Removing users from your project or allocation
 path: remove-user-allocation-and-resource
-parentPath: user-guides/cold-front
+parentPath: user-guides/coldfront
 cat: coldFront
 parentPage: User Support
 ---
