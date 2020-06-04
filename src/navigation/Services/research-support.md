@@ -2,6 +2,7 @@
 title: Grant Support
 thumbnail: /images/sr-icon-4.png
 path: grant-support
+parentPath: services
 cat: navigation
 parentEle: Services
 ---

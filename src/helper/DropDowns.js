@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import navlist from "../navigations.json";
 
 const assignedDropdownSubNav = (menubar, nav) => {
+  console.log('on hover', nav);
   let subNav = nav.filter((ele, i) => {
     if (ele.node.frontmatter.parentEle === menubar) {
       return ele.node.frontmatter;
@@ -30,7 +31,7 @@ const AboutSubNavDropdown = ({ current, prev, nav}) => {
              if (i <= 3) {
               return (
                 <li key={i}>
-                  <Link className="heading" to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                  <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                 </li>
                 )}
               }
@@ -45,7 +46,7 @@ const AboutSubNavDropdown = ({ current, prev, nav}) => {
             if (i > 3) {
               return (
                 <li key={i}>
-                  <Link className="heading" to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                  <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </li>
                 )
               }
@@ -79,7 +80,7 @@ const ServicesSubNavDropdown = ({ current, prev, nav }) => {
              if (i <= 3) {
               return (
                 <li key={i}>
-                  <Link className="heading" to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                  <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </li>
                 )}
               }
@@ -94,7 +95,7 @@ const ServicesSubNavDropdown = ({ current, prev, nav }) => {
             if (i > 3) {
               return (
                 <li key={i}>
-                  <Link className="heading" to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                  <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </li>
                 )
               }
@@ -128,7 +129,7 @@ const UserInfoSubNavDropdown = ({ current, prev, nav }) => {
              if (i <= 3) {
               return (
                 <li key={i}>
-                  <Link className="heading" to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                  <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </li>
                 )}
               }
@@ -143,7 +144,7 @@ const UserInfoSubNavDropdown = ({ current, prev, nav }) => {
             if (i > 3) {
               return (
                 <li key={i}>
-                    <Link className="heading" to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                    <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </li>
                 )
               }
@@ -178,7 +179,7 @@ const EducationOutreachSubNavDropdown = ({ current, prev, nav }) => {
                if (i <= 3) {
                 return (
                   <li key={i}>
-                      <Link className="heading" to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                      <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                     </li>
                   )}
                 }
@@ -193,7 +194,7 @@ const EducationOutreachSubNavDropdown = ({ current, prev, nav }) => {
               if (i > 3) {
                 return (
                   <li key={i}>
-                      <Link className="heading" to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                      <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                     </li>
                   )
                 }
@@ -227,7 +228,7 @@ const UserSupportSubNavDropdown = ({ current, prev, nav }) => {
              if (i <= 3) {
               return (
                 <li key={i}>
-                    <Link className="heading" to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                    <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </li>
                 )}
               }
@@ -242,7 +243,7 @@ const UserSupportSubNavDropdown = ({ current, prev, nav }) => {
             if (i > 3) {
               return (
                 <li key={i}>
-                    <Link className="heading" to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                    <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </li>
                 )
               }
@@ -280,7 +281,7 @@ const NewsEventsSubNavDropdown = ({ current, prev, nav }) => {
              if (i <= 3) {
               return (
                 <li key={i}>
-                    <Link className="heading" to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                    <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </li>
                 )}
               }
@@ -295,7 +296,7 @@ const NewsEventsSubNavDropdown = ({ current, prev, nav }) => {
             if (i > 3) {
               return (
                 <li key={i}>
-                    <Link className="heading" to={`/${item.node.frontmatter.path}`}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                    <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </li>
                 )
               }

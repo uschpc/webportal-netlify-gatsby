@@ -7,6 +7,7 @@ import { useScroll } from './custom-hooks/useScroll';
 
 
 const Header = (props) => {
+  console.log('yasee', props.nav);
   const { scrollY, width } = useScroll();
 
   return (

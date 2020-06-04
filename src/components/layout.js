@@ -15,6 +15,7 @@ import "./layout.css"
 import "../style.less"
 
 const Layout = (props) => {
+  console.log('layout', props)
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {

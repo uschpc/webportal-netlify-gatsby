@@ -34,8 +34,8 @@ nav_items:
         path: /getting-started
       - label: Getting Help
         path: /getting-help
-      - label: User Guide
-        path: /user-guide
+      - label: User Guides
+        path: /user-guides
       - label: Resources
         path: /resources
   - label: Education & Outreach

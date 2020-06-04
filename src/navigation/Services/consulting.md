@@ -2,6 +2,7 @@
 title: Research Partnerships
 thumbnail: /images/sr-icon-4.png
 path: research
+parentPath: services
 cat: navigation
 parentEle: Services
 ---

@@ -54,7 +54,7 @@ export default function Template({ data }) {
                     <ul>
                       {subNav.map((nav, i) => {
                         return (  
-                          <Link to={nav.node.frontmatter.path} key={i}>{nav.node.frontmatter.title}</Link>
+                          <Link to={nav.node.frontmatter.parentPath ? `${nav.node.frontmatter.parentPath}/${nav.node.frontmatter.path}` : nav.node.frontmatter.path} key={i}>{nav.node.frontmatter.title}</Link>
                         )
                        }
                       )}
@@ -129,6 +129,7 @@ export const postQuery = graphql`
             path
             title
             parentEle
+            parentPath
           }
         }
       }
