@@ -1,11 +1,11 @@
 ---
 author: James Hong
-date: 2020-06-01T12:00:00.387Z
+date: 2020-06-01T00:00:00.000Z
 title: Create a new Project
 path: create-a-new-project
-parentPath: user-guides/coldfront
+parentPath: user-information/user-guides/coldfront
 cat: coldFront
-parentPage: User Support
+parentPage: User Guides
 ---
 
 [Log into ColdFront](https://hpcaccount.usc.edu/)  
@@ -16,7 +16,7 @@ parentPage: User Support
 ### Project page
 To create a new project, login to ColdFront, click on either the Project link or the Project tab, and click on the "Add a Project" button  
  
-![ColdFront Project page](images/coldfront_project.png)
+![ColdFront Project page](/images/coldfront_project.png)
 &nbsp;  
 &nbsp;  
 &nbsp;  
@@ -27,14 +27,14 @@ Fill out the 3 fields and click the Save button:
 * Field of science  
 **NOTE: The field of science list was taken from the National Science Foundation.  If your field is not listed, please choose Other.**  
 
-![ColdFront Project page](images/coldfront_addproject.gif)
+![ColdFront Project page](/images/coldfront_addproject.gif)
 &nbsp;  
 &nbsp;  
 &nbsp;  
 ### ColdFront home page
 You will then be able to view all project information:  
 
-![ColdFront Project page](images/coldfront_home.png)
+![ColdFront Project page](/images/coldfront_home.png)
 &nbsp;  
 &nbsp;  
 &nbsp;  

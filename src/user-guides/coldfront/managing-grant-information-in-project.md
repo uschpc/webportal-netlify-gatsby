@@ -1,11 +1,11 @@
 ---
 author: James Hong
-date: 2020-06-01T12:00:00.387Z
+date: 2020-06-01T00:00:00.000Z
 title: Managing Grant Information in your Project
 path: managing-grant-information-in-project
-parentPath: user-guides/coldfront
+parentPath: user-information/user-guides/coldfront
 cat: coldFront
-parentPage: User Support
+parentPage: User Guides
 ---
 
 &nbsp;
@@ -19,7 +19,7 @@ Providing funds to HPC will allow us to boost your priority and jobs run by ever
 &nbsp;
 ### Adding grants to your project:
 To enter grant information, click the green "Add Grant" button from the Project Description view.  
-![ColdFront Add Grant](images/coldfront_project_addgrant.jpg)
+![ColdFront Add Grant](/images/coldfront_project_addgrant.jpg)
 
 
 Fill in all fields pertaining to your grant (anything with an asterisk* is required) and click the blue "Save" button.  Descriptions of the fields are as follows:
@@ -38,11 +38,11 @@ Fill in all fields pertaining to your grant (anything with an asterisk* is requi
 * **Status** - choose from active, archived, or pending  
 &nbsp;
 &nbsp;
-![ColdFront Grant Information](images/coldfront_project_grantinfo.jpg)
+![ColdFront Grant Information](/images/coldfront_project_grantinfo.jpg)
 
 
 Once created, you'll see the grant listed in the project description view:
-![ColdFront Grant Listed](images/coldfront_project_grantoverview.jpg)
+![ColdFront Grant Listed](/images/coldfront_project_grantoverview.jpg)
 
 &nbsp;
 &nbsp;
@@ -52,5 +52,5 @@ You can edit existing grant information by clicking on the pencil icon under the
 &nbsp;
 ### Deleting grant info:
 You can delete the grant by clicking on the red "Delete Grants" button.  You will be presented with a list of all grants associated with the project, both active and past (expired).  Click the checkbox next to the grant(s) you'd like deleted and then click the red "Delete selected grants from project" button.
-![ColdFront Delete Grant](images/coldfront_project_deletegrant.jpg)
+![ColdFront Delete Grant](/images/coldfront_project_deletegrant.jpg)
 

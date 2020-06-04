@@ -1,11 +1,11 @@
 ---
 author: James Hong
-date: 2020-06-01T12:00:00.387Z
+date: 2020-06-01T00:00:00.000Z
 title: Managing Allocations in Coldfront
 path: managing-allocations
-parentPath: user-guides/coldfront
+parentPath: user-information/user-guides/coldfront
 cat: coldFront
-parentPage: User Support
+parentPage: User Guides
 ---
 
 &nbsp;

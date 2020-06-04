@@ -1,11 +1,11 @@
 ---
 author: James Hong
-date: 2020-06-01T12:00:00.387Z
+date: 2020-06-01T00:00:00.000Z
 title: Allocation Expiration
 path: allocation-expiration
-parentPath: user-guides/coldfront
+parentPath: user-information/user-guides/coldfront
 cat: coldFront
-parentPage: User Support
+parentPage: User Guides
 ---
 
 &nbsp;
@@ -19,7 +19,7 @@ If a PI does not renew a resource allocation by the due date, all users in the g
 ### Can I renew an expired allocation?
 
 You can not renew an expired allocation.  You must request a new allocation for the resource and go through the approval process.  If you have not completed the project review in the last 365 days, you will be required to do this first, before requesting any new allocations.  
-![ColdFront Allocation Renewal](images/coldfront_allocation_expires.png)
+![ColdFront Allocation Renewal](/images/coldfront_allocation_expires.png)
 
 [More info on the annual project review](yearly-project-renewal)  
 [More info on how to request a new allocation](request-new-allocation)
