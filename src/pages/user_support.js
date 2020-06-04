@@ -16,7 +16,7 @@ const UserSupportIndex = ({data}) => {
                         {
                         data.md.edges.map ((item, i) => {
                             return (
-                                <Link to={item.node.frontmatter.path} key={i}>
+                                <Link to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path} key={i}>
                                     <div className="user-support-box">
                                         <p className="title">{item.node.frontmatter.title}</p>
                                         <p className="description">{item.node.frontmatter.excerpt}</p>
@@ -54,6 +54,7 @@ export const pageQuery = graphql`
             frontmatter {
               title
               path
+              parentPath
               excerpt
               id
             }

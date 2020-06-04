@@ -2,7 +2,8 @@
 author: James Hong
 date: 2020-06-01T12:00:00.387Z
 title: Account and Project Setup
-path: account_and_project_setup
+path: account-and-project-setup
+parentPath: user-guides/cold-front
 cat: coldFront
 parentPage: User Support
 ---

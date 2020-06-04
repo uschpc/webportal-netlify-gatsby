@@ -12,6 +12,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators
 
   const postTemplate = path.resolve('src/templates/content-post.js')
+  const coldFrontMainTemplate = path.resolve('src/templates/cold-front-main-template.js')
+  const coldFrontTemplate = path.resolve('src/templates/cold-front-template.js')
 
   return graphql(`
     {
@@ -22,9 +24,11 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             id
             frontmatter {
               path
+              parentPath
               title
               date
               author
+              cat
             }
           }
         }
@@ -36,9 +40,32 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     }
 
     res.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      let template = '';
+      let path = '';
+
+      switch(node.frontmatter.path) {
+        case 'cold-front':
+          template = coldFrontMainTemplate;
+          path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+          break;
+        default:
+          switch(node.frontmatter.cat) {
+            case 'coldFront':
+              template = coldFrontTemplate;
+              path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+              break;
+            default:
+              template = postTemplate;
+              path = node.frontmatter.path
+              break;
+          }
+      }
+
+
       createPage({
-        path: node.frontmatter.path,
-        component: postTemplate,
+        path: path,
+        component: template,
+        context: { slug: node.frontmatter.path }
       })
     })
   })

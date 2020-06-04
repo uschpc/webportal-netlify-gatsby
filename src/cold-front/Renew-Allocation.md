@@ -2,7 +2,8 @@
 author: James Hong
 date: 2020-06-01T12:00:00.387Z
 title: Renewing an Allocation to a Resource
-path: allocation_and_resource
+path: allocation-and-resource
+parentPath: user-guides/cold-front
 cat: coldFront
 parentPage: User Support
 ---

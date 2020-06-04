@@ -2,7 +2,8 @@
 author: James Hong
 date: 2020-06-01T12:00:00.387Z
 title: Request new Allocation
-path: request_new_allocation
+path: request-new-allocation
+parentPath: user-guides/cold-front
 cat: coldFront
 parentPage: User Support
 ---

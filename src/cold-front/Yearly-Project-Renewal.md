@@ -2,7 +2,8 @@
 author: James Hong
 date: 2020-06-01T12:00:00.387Z
 title: Yearly Project Renewal
-path: yearly_project_renewal
+path: yearly-project-renewal
+parentPath: user-guides/cold-front
 cat: coldFront
 parentPage: User Support
 ---

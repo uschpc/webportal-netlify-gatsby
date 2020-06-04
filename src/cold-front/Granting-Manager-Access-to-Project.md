@@ -2,7 +2,8 @@
 author: James Hong
 date: 2020-06-01T12:00:00.387Z
 title: Granting Manager Access to your Project
-path: granting_manager_access_to_your_project
+path: granting-manager-access-to-your-project
+parentPath: user-guides/cold-front
 cat: coldFront
 parentPage: User Support
 ---

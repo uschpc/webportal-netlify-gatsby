@@ -2,7 +2,8 @@
 author: James Hong
 date: 2020-06-01T12:00:00.387Z
 title: Managing Publication Information in ColdFront
-path: managing_publication_in_coldfront
+path: managing-publication-in-coldfront
+parentPath: user-guides/cold-front
 cat: coldFront
 parentPage: User Support
 ---

@@ -2,7 +2,8 @@
 author: James Hong
 date: 2020-06-01T12:00:00.387Z
 title: Adding Users to your Project or Allocation
-path: adding_users_to_your_project_or_allocation
+path: adding-users-to-your-project-or-allocation
+parentPath: user-guides/cold-front
 cat: coldFront
 parentPage: User Support
 ---

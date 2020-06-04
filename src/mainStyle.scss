@@ -77,6 +77,47 @@ body {
         }
       }
     }
+    .coldFront-parent-container {
+      margin: 80px 10%;
+      min-height: 38vh;
+
+      h1 {
+        margin-bottom: 40px;
+        background-color: #ffcd05;
+        padding: 20px;
+        color: #990000;
+      }
+
+      .page-body {
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+    .coldFront-child-container {
+      margin: 80px 10%;
+      min-height: 38vh;
+
+      h1 {
+        margin-bottom: 40px;
+        background-color: #ffcd05;
+        padding: 20px;
+        color: #990000;
+      }
+
+      .html-content-coldfront {
+        margin-bottom: 50px;
+        .discourse-box{
+          width: 17%;
+        }
+
+        ul {
+          margin-left: 35px;
+          li {
+            list-style: disc;
+          }
+        }
+      }
+    }
 
     .footer{
       color: #fff;

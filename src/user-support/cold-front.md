@@ -6,6 +6,7 @@ title: ColdFront
 thumbnail: /images/sr-icon-4.png
 excerpt: Request and manage resources and allocations for your projects.
 path: cold-front
+parentPath: user-guides
 cat: userSupport
 parentEle: none
 ---

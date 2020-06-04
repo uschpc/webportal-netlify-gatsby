@@ -3,6 +3,7 @@ author: James Hong
 date: 2020-06-01T12:00:00.387Z
 title: What is ColdFront?
 path: coldfront
+parentPath: user-guides/cold-front
 cat: coldFront
 parentPage: User Support
 ---
@@ -10,7 +11,7 @@ parentPage: User Support
 ColdFront is an open source resource allocation management tool built for high performance computing centers that allows the management of Center resources and User allocations to those resources.  This tool was developed to allow our users the opportunity to request and manage the access they and their students or collaborators have to the many resources in USC HPC's data center.  
 
 ColdFront consists of 3 parts: Projects, Allocations and Resources
-![ColdFront parts](images/coldfront_overview.png)
+![ColdFront parts](images/coldfront-overview.png)
 
 
 ### Resources:

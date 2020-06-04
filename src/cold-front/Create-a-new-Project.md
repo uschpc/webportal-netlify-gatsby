@@ -2,7 +2,8 @@
 author: James Hong
 date: 2020-06-01T12:00:00.387Z
 title: Create a new Project
-path: create_a_new_project
+path: create-a-new-project
+parentPath: user-guides/cold-front
 cat: coldFront
 parentPage: User Support
 ---
