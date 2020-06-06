@@ -17,6 +17,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   const menuTemplate = path.resolve('src/templates/menu-template.js')
   const userGuidesMainTemplate = path.resolve('src/templates/user-guides-main-template.js')
   const userGuidesTemplate = path.resolve('src/templates/user-guides-template.js')
+  const sharedMainTemplate = path.resolve('src/templates/shared-main-templates.js')
+  const sharedTemplate = path.resolve('src/templates/sharedTemplate.js')
 
   return graphql(`
     {
@@ -47,7 +49,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       let path = '';
 
       switch(node.frontmatter.path) {
-        case 'coldfront':
+        case 'research-computing-user-portal':
           template = coldFrontMainTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
@@ -55,6 +57,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           template = userGuidesMainTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
+        case 'high-performance-computing':
+            template = sharedMainTemplate;
+            path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+            break;
         default:
           switch(node.frontmatter.cat) {
             case 'coldFront':
@@ -67,6 +73,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
                 break;
             case 'userGuides':
               template = userGuidesTemplate;
+              path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+              break;
+            case 'sharedTemplate':
+              template = sharedTemplate;
               path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
               break;
             default:

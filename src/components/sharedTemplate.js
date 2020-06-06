@@ -10,7 +10,7 @@ const SharedTemplate = (items) => {
             <div className="container">
                 <div className="left-col">
                     {items.cat !== 'userSupport' && <Markdown source={items.content.edges[0].node.html} escapeHtml={false} />}
-                    {
+                    { items.cat !== 'sharedTemplate' ? (
                     items.md.edges.map ((item, i) => {
                         return (
                             <Link to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path} key={i}>
@@ -20,7 +20,20 @@ const SharedTemplate = (items) => {
                                 </div>
                             </Link>
                         )
+                    })) : (
+                    items.md.edges.map ((item, i) => {
+                        return (
+                            <span>
+                                <Link to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path} key={i}>
+                                    <div className="user-support-box">
+                                        <p className="title">{item.node.frontmatter.title}</p>
+                                    </div>
+                                </Link>
+                                <p className="description">{item.node.frontmatter.excerpt}</p>
+                            </span>
+                        )
                     })
+                    )
                     }
                     {items.cat === 'userSupport' && <Markdown source={items.content.edges[0].node.html} escapeHtml={false} />}
                 </div>

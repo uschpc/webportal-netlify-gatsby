@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Footer from '../components/footer'
+import Markdown from "react-markdown"
 
 export default function Template({ data }) {
     const post = data.md.edges;
@@ -10,15 +11,23 @@ export default function Template({ data }) {
       <Layout {...data.navigation}>
           <SEO title="Cold Front"/>
           <div className="coldFront-parent-container">
-              <h1>ColdFront</h1>
+              <h1>Research Computing User Portal</h1>
               <div className="page-body">
-                {post.map ((item, i) => {
-                    return (
-                    <Link className="coldfront-menu-items" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
-                        <li key={i}>{item.node.frontmatter.title}</li>
-                    </Link>
-                    )
-                })}
+                <div className="left-column">
+                  menu items
+                </div>
+                <div className="right-column">
+                  <Markdown source={data.content.edges[0].node.html} escapeHtml={false} />
+                  <h3>User Guides</h3>
+                  {post.map ((item, i) => {
+                      return (
+                      <Link className="coldfront-menu-items" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
+                          <li key={i}>{item.node.frontmatter.title}</li>
+                      </Link>
+                      )
+                  })}
+                </div>
+               
               </div>
           </div>
           <Footer />
@@ -39,6 +48,13 @@ export const coldFrontQuery = graphql`
           }
           html
         }
+      }
+    }
+    content: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "highPerformanceComputingLandingPage"}}}) {
+      edges {
+          node {
+          html
+          }
       }
     }
     navigation: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "navigation"}}}) {

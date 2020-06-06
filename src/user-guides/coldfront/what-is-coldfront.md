@@ -3,7 +3,7 @@ author: James Hong
 date: 2020-06-01T00:00:00.000Z
 title: What is ColdFront?
 path: what-is-coldfront
-parentPath: user-information/user-guides/coldfront
+parentPath: user-information/user-guides/high-performance-computing/research-computing-user-portal
 cat: coldFront
 parentPage: User Guides
 ---

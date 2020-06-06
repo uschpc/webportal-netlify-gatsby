@@ -89,8 +89,29 @@ body {
       }
 
       .page-body {
-        display: block;
+        display: flex;
         margin-bottom: 20px;
+
+        .left-column {
+          width: 20%;
+        }
+
+        .right-column {
+          width: 80%;
+          h3 {
+            color: #990000;
+          }
+          a {
+            color: black; 
+
+            &:hover {
+              li {
+                color: #990000;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
       }
     }
     .menu-container {

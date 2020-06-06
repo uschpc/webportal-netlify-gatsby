@@ -130,7 +130,7 @@ body {
       }
     }
   }
-  .user-guides {
+  .user-guides{
     margin: 80px 10%;
     h1 {
       margin-bottom: 40px;
@@ -219,8 +219,88 @@ body {
       }
     }
   }
-  
+  .High-Performance-computing{
+    margin: 80px 10%;
+    h1 {
+      margin-bottom: 40px;
+      background-color: #ffcd05;
+      padding: 20px;
+      color: #990000;
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
 
+      .left-col {
+        width: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        align-self: flex-start;
+        justify-content: space-between;
+        p {
+          text-align: left;
+        }
+        a {
+          color: black;
+          font-size: 30px;
+          width: 49%;
+
+          &:hover {
+            p {
+              &.title {
+                color: #990000;
+                text-decoration: underline;
+              }
+              &.description {
+                color: #990000;
+              }
+            }
+          }
+        }
+        .user-support-box {
+          p {
+            text-align: left;
+            &.title {
+              line-height: 10px;
+              font-size: 20px;
+              font-weight: bold;
+              color: #990000;
+            }
+            &.description {
+              margin: 0;
+              font-size: 13px;
+              line-height: 20px;
+              margin-top: 12px;
+              color: #444141;
+            }
+          }
+        }
+        div {
+          margin-top: 20px;
+          p, ul {
+            text-align: left;
+          }
+        }
+        
+      }
+      .right-col{
+        width: 25%;
+        .system-status, .recent-news {
+          h3 {
+            background-color: #ffcd05;
+            padding: 15px;
+            color: #990000;
+          }
+          h5 {
+            padding: 0 0 0 20px;
+            font-weight: normal;
+            line-height: 0.5;
+          }
+        }
+      }
+    }
+  }
     .slider-wrapper {
         position: relative;
         height: 70vh;
