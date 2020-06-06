@@ -16,7 +16,7 @@ export default function Template({ data }) {
 
 export const coldFrontQuery = graphql`
   query {
-    md: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "userGuides"}}}) {
+    md: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "userGuides"}}}) {
       edges {
         node {
           frontmatter {

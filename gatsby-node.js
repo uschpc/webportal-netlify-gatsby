@@ -49,10 +49,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       let path = '';
 
       switch(node.frontmatter.path) {
-        case 'research-computing-user-portal':
-          template = coldFrontMainTemplate;
-          path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
-          break;
         case 'user-guides':
           template = userGuidesMainTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
@@ -76,7 +72,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
               break;
             case 'sharedTemplate':
-              template = sharedTemplate;
+              template = coldFrontMainTemplate;
               path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
               break;
             default:

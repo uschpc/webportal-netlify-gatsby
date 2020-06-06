@@ -23,8 +23,8 @@ const SharedTemplate = (items) => {
                     })) : (
                     items.md.edges.map ((item, i) => {
                         return (
-                            <span>
-                                <Link to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path} key={i}>
+                            <span key={i}>
+                                <Link to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}>
                                     <div className="user-support-box">
                                         <p className="title">{item.node.frontmatter.title}</p>
                                     </div>

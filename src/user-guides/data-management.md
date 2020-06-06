@@ -1,5 +1,6 @@
 ---
 author: Yaseen A.
+id: 3
 date: 2020-06-04T00:00:00.00Z
 title: Data Management
 excerpt: An overview of the different storage directories available to you, and instructions on transferring files between your personal computer and Discovery.

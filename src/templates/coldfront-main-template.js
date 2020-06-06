@@ -4,28 +4,35 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Footer from '../components/footer'
 import Markdown from "react-markdown"
+import SideMenu from '../components/side-menu'
 
 export default function Template({ data }) {
-    const post = data.md.edges;
+  console.log('alsdjhakjshdkjahdskasd', data);
+    const items = data.md.edges;
     return (
       <Layout {...data.navigation}>
-          <SEO title="Cold Front"/>
+          <SEO title={data.content.frontmatter.title}/>
           <div className="coldFront-parent-container">
-              <h1>Research Computing User Portal</h1>
+              <h1>{data.content.frontmatter.title}</h1>
               <div className="page-body">
                 <div className="left-column">
-                  menu items
+                  <h3>User Guides</h3>
+                  <SideMenu {...data}/>
                 </div>
                 <div className="right-column">
-                  <Markdown source={data.content.edges[0].node.html} escapeHtml={false} />
-                  <h3>User Guides</h3>
-                  {post.map ((item, i) => {
-                      return (
-                      <Link className="coldfront-menu-items" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
-                          <li key={i}>{item.node.frontmatter.title}</li>
-                      </Link>
-                      )
-                  })}
+                  <Markdown source={data.content.html} escapeHtml={false} />
+                  {(data.content.frontmatter.title === "Research Computing User Portal") && (
+                    <span>
+                      <h3>User Guides</h3>
+                      {items.map ((item, i) => {
+                        return (
+                          <Link key={i} className="coldfront-menu-items" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
+                              <li>{item.node.frontmatter.title}</li>
+                          </Link>
+                          )
+                      })}
+                    </span>
+                  )}
                 </div>
                
               </div>
@@ -36,7 +43,7 @@ export default function Template({ data }) {
 }
 
 export const coldFrontQuery = graphql`
-  query {
+  query($slug: String!) {
     md: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "coldFront"}}}) {
       edges {
         node {
@@ -50,12 +57,36 @@ export const coldFrontQuery = graphql`
         }
       }
     }
-    content: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "highPerformanceComputingLandingPage"}}}) {
+    sideMenu: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "userGuides"}}}) {
       edges {
-          node {
-          html
+        node {
+          frontmatter {
+            title
+            path
+            parentPath
           }
+        }
       }
+    }
+    subMenu: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "sharedTemplate"}}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            parentPath
+          }
+        }
+      }
+    }
+    content: markdownRemark(frontmatter: {cat: {eq: "sharedTemplate"}, path: {eq: $slug}}) {
+      frontmatter {
+        title
+        path
+        parentPath
+        cat
+      }
+      html
     }
     navigation: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "navigation"}}}) {
       edges {
