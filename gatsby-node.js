@@ -15,6 +15,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   const coldFrontMainTemplate = path.resolve('src/templates/coldfront-main-template.js')
   const coldFrontTemplate = path.resolve('src/templates/coldfront-template.js')
   const menuTemplate = path.resolve('src/templates/menu-template.js')
+  const userGuidesMainTemplate = path.resolve('src/templates/user-guides-main-template.js')
+  const userGuidesTemplate = path.resolve('src/templates/user-guides-template.js')
 
   return graphql(`
     {
@@ -49,6 +51,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           template = coldFrontMainTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
+        case 'user-guides':
+          template = userGuidesMainTemplate;
+          path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+          break;
         default:
           switch(node.frontmatter.cat) {
             case 'coldFront':
@@ -59,6 +65,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
                 template = menuTemplate;
                 path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
                 break;
+            case 'userGuides':
+              template = userGuidesTemplate;
+              path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+              break;
             default:
               template = postTemplate;
               path = node.frontmatter.path

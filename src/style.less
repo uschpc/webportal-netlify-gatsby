@@ -130,6 +130,95 @@ body {
       }
     }
   }
+  .user-guides {
+    margin: 80px 10%;
+    h1 {
+      margin-bottom: 40px;
+      background-color: #ffcd05;
+      padding: 20px;
+      color: #990000;
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
+
+      .left-col {
+        width: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        align-self: flex-start;
+        justify-content: space-between;
+        p {
+          text-align: left;
+        }
+        a {
+          color: black;
+          font-size: 30px;
+          width: 49%;
+
+          &:hover {
+            p {
+              &.title {
+                color: #990000;
+                text-decoration: underline;
+              }
+              &.description {
+                color: #990000;
+              }
+            }
+          }
+        }
+        .user-support-box {
+          width: 300px;
+          height: 150px;
+          width: auto;
+          margin: 0 0 5px 0;
+          background-color: lightgray;
+          padding: 15px;
+
+          p {
+            text-align: center;
+            &.title {
+              margin: 0;
+              line-height: 30px;
+              font-size: 20px;
+              font-weight: bold;
+            }
+            &.description {
+              margin: 0;
+              font-size: 13px;
+              line-height: 20px;
+              margin-top: 12px;
+              color: #444141;
+            }
+          }
+        }
+        div {
+          margin-top: 20px;
+          p, ul {
+            text-align: left;
+          }
+        }
+        
+      }
+      .right-col{
+        width: 25%;
+        .system-status, .recent-news {
+          h3 {
+            background-color: #ffcd05;
+            padding: 15px;
+            color: #990000;
+          }
+          h5 {
+            padding: 0 0 0 20px;
+            font-weight: normal;
+            line-height: 0.5;
+          }
+        }
+      }
+    }
+  }
   
 
     .slider-wrapper {
@@ -351,7 +440,7 @@ body {
 and (min-width : 664px) 
 and (max-width : 1024px)  { 
   #___gatsby {
-    .user-support{
+    .user-support, .user-guides{
       margin: 40px 3%;
       h1 {
         margin-bottom: 20px;
@@ -366,6 +455,7 @@ and (max-width : 1024px)  {
         }
         .right-col{
           width: 100%;
+          margin-top: 20px;
           .system-status{
             img {
               width: 100%;
@@ -381,7 +471,7 @@ and (max-width : 1024px)  {
 and (min-width : 320px) 
 and (max-width : 664px)  {
   #___gatsby {
-    .user-support{
+    .user-support, .user-guides{
       margin: 40px 3%;
       h1 {
         margin-bottom: 20px;

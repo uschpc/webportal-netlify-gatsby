@@ -20,7 +20,7 @@ export default function Template({ data }) {
 
 export const coldFrontQuery = graphql`
   query($slug: String!) {
-    md: markdownRemark(frontmatter: {cat: {eq: "coldFront"}, path: {eq: $slug}}) {
+    md: markdownRemark(frontmatter: {cat: {eq: "userGuides"}, path: {eq: $slug}}) {
         frontmatter {
           title
           path
