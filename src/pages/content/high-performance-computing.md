@@ -1,5 +1,6 @@
 ---
 path: high-performance-computing
+route: User Information >> User Guides
 cat: highPerformanceComputingLandingPage
 ---
 

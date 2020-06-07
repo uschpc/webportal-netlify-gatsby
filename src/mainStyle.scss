@@ -78,8 +78,12 @@ body {
       }
     }
     .coldFront-parent-container {
-      margin: 80px 10%;
+      margin: 44px 10%;
       min-height: 38vh;
+
+      a {
+        color: #990000;
+      }
 
       h1 {
         margin-bottom: 40px;

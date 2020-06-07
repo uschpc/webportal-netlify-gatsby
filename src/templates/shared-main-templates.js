@@ -18,7 +18,7 @@ export default function Template({ data }) {
 }
 
 export const sharedMainTemplateQuery = graphql`
-  query {
+  query($slug: String!) {
     md: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "sharedTemplate"}}}) {
       edges {
         node {
@@ -33,12 +33,11 @@ export const sharedMainTemplateQuery = graphql`
         }
       }
     }
-    content: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "highPerformanceComputingLandingPage"}}}) {
-      edges {
-          node {
-          html
-          }
+    content: markdownRemark(frontmatter: {cat: {eq: "highPerformanceComputingLandingPage"}, path: {eq: $slug}}) {
+      frontmatter {
+        route
       }
+    html
     }
     navigation: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "navigation"}}}) {
       edges {

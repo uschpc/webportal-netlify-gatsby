@@ -5,7 +5,6 @@ import SEO from '../components/seo'
 import Footer from '../components/footer'
 
 export default function Template({ data }) {
-    console.log('menu template', data);
     const post = data.md;
     return (
       <Layout {...data.navigation}>

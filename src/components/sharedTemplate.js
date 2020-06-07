@@ -2,14 +2,16 @@ import React from 'react';
 import featureBox from '../feature-boxes.json';
 import { Link } from 'gatsby';
 import Markdown from "react-markdown"
+import MenuRoute from './menu-route.js';
 
 const SharedTemplate = (items) => {
     return (
         <div className={items.className ? items.className : "user-support"}>
+            <MenuRoute {...items.content.frontmatter} />
             <h1>{items.title}</h1>
             <div className="container">
                 <div className="left-col">
-                    {items.cat !== 'userSupport' && <Markdown source={items.content.edges[0].node.html} escapeHtml={false} />}
+                    {items.cat !== 'userSupport' && <Markdown source={items.content.html} escapeHtml={false} />}
                     { items.cat !== 'sharedTemplate' ? (
                     items.md.edges.map ((item, i) => {
                         return (

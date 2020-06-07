@@ -5,14 +5,15 @@ import SEO from '../components/seo'
 import Footer from '../components/footer'
 import Markdown from "react-markdown"
 import SideMenu from '../components/side-menu'
+import MenuRoute from '../components/menu-route'
 
 export default function Template({ data }) {
-  console.log('alsdjhakjshdkjahdskasd', data);
     const items = data.md.edges;
     return (
       <Layout {...data.navigation}>
           <SEO title={data.content.frontmatter.title}/>
           <div className="coldFront-parent-container">
+              <MenuRoute {...data.content.frontmatter} />
               <h1>{data.content.frontmatter.title}</h1>
               <div className="page-body">
                 <div className="left-column">
@@ -85,6 +86,7 @@ export const coldFrontQuery = graphql`
         path
         parentPath
         cat
+        route
       }
       html
     }

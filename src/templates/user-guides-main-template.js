@@ -15,7 +15,7 @@ export default function Template({ data }) {
 }
 
 export const coldFrontQuery = graphql`
-  query {
+  query($slug: String!) {
     md: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "userGuides"}}}) {
       edges {
         node {
@@ -30,12 +30,11 @@ export const coldFrontQuery = graphql`
         }
       }
     }
-    content: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "userGuidesLandingPage"}}}) {
-        edges {
-            node {
-            html
-            }
+    content: markdownRemark(frontmatter: {cat: {eq: "userGuidesLandingPage"}, path: {eq: $slug}}) {
+        frontmatter {
+          route
         }
+      html
     }
     navigation: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "navigation"}}}) {
       edges {
