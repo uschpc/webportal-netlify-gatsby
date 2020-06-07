@@ -22,10 +22,10 @@ const Header = (props) => {
                         <li>Information for:</li>
                         <li>
                           <div className="menu-information-for-container"><ul id="menu-information-for" className="nav-top"><li id="menu-item-84" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-84">
-                            <a href="https://itservices.usc.edu/">ITS</a></li>
+                            <a href="https://itservices.usc.edu/">USC ITS</a></li>
                             <li id="menu-item-85" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-85">
-                              <a href="https://hpcaccount.usc.edu/">ColdFront Resource Allocation System</a></li>
-                            <li id="menu-item-13138" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-13138"><a href="#">Link 3</a></li>
+                              <a href="https://cio.usc.edu/">Office of the CIO</a></li>
+                            <li id="menu-item-13138" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-13138"><a href="https://trojansecure.usc.edu/">Office of the CISO</a></li>
                             </ul></div>							</li>	
                       </ul>
                     </div>
