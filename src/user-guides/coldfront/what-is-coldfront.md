@@ -14,7 +14,7 @@ ColdFront consists of 3 parts: Projects, Allocations and Resources
 ![ColdFront parts](/images/coldfront_overview.png)
 
 
-### [Resources:](yourClass)
+### Resources:
 - HPC has multiple distinct resources to track
 - Resources include: clusters, department/lab servers, software licenses, storage, and clouds
 - Some resources have limits (i.e. storage has a limit of GB/TB, licenses have a limit of seats available)  
