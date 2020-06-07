@@ -19,7 +19,7 @@ const Header = (props) => {
                   <div className="col-xs-6">
                     <div className="tb-col-1">
                       <ul>
-                        <li>Information for:</li>
+                        <li>Quick links:</li>
                         <li>
                           <div className="menu-information-for-container"><ul id="menu-information-for" className="nav-top"><li id="menu-item-84" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-84">
                             <a href="https://itservices.usc.edu/">USC ITS</a></li>
