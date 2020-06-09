@@ -1,7 +1,7 @@
 ---
 author: James Hong
 date: 2020-06-01T00:00:00.000Z
-title: Removing users from your project or allocation
+title: Removing Users from your Project or Allocation
 path: removing-users-from-project-or-allocation
 parentPath: user-information/user-guides/high-performance-computing/research-computing-user-portal
 cat: coldFront
