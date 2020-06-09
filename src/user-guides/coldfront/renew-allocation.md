@@ -1,5 +1,6 @@
 ---
 author: James Hong
+id: 8
 date: 2020-06-01T00:00:00.000Z
 title: Renewing an Allocation to a Resource
 path: renew-allocation

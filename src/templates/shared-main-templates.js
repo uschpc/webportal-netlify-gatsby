@@ -7,7 +7,6 @@ import Markdown from "react-markdown"
 import SharedTemplate from '../components/sharedTemplate'
 
 export default function Template({ data }) {
-  console.log('123')
     const post = data.md.edges;
     return (
       <Layout {...data.navigation}>

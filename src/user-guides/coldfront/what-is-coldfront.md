@@ -1,5 +1,6 @@
 ---
 author: James Hong
+id: 1
 date: 2020-06-01T00:00:00.000Z
 title: What is ColdFront?
 path: what-is-coldfront

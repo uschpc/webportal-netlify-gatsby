@@ -1,5 +1,6 @@
 ---
 author: James Hong
+id: 13
 date: 2020-06-01T00:00:00.000Z
 title: Yearly Project Renewal
 path: yearly-project-renewal

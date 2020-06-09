@@ -1,5 +1,6 @@
 ---
 author: James Hong
+id: 9
 date: 2020-06-01T00:00:00.000Z
 title: Allocation Expiration
 path: allocation-expiration

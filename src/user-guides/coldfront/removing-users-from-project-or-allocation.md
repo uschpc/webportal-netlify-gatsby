@@ -1,5 +1,6 @@
 ---
 author: James Hong
+id: 6
 date: 2020-06-01T00:00:00.000Z
 title: Removing users from your project or allocation
 path: removing-users-from-project-or-allocation

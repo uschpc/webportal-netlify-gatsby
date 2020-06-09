@@ -1,5 +1,6 @@
 ---
 author: James Hong
+id: 10
 date: 2020-06-01T00:00:00.000Z
 title: Granting Manager Access to your Project
 path: granting-manager-access-to-project
