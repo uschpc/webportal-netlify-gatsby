@@ -4,8 +4,7 @@ id: 1
 date: 2020-06-01T00:00:00.000Z
 title: What is ColdFront?
 path: what-is-coldfront
-route: User Guides
-parentPath: user-information/user-guides/high-performance-computing/research-computing-user-portal
+parentPath: user-information/user-guides/coldfront
 cat: coldFront
 parentPage: User Guides
 ---
@@ -44,7 +43,7 @@ Login to ColdFront through Shibboleth using your USC username and password: [Col
 Additional information about the parts of your project record can be found here:
 * [Create a new project](create-a-new-project)  
 * [Requesting new allocations](request-new-allocation)
-* [Adding users to your project and/or allocation](adding-users-to-project-or-pllocation)
+* [Adding users to your project and/or allocation](adding-users-to-project-or-allocation)
 * [Removing users from your project and/or allocation](removing-users-from-project-or-allocation)
 * [Annual project review](yearly-project-renewal)
 * [Renewing allocations to resources](renew-allocation)

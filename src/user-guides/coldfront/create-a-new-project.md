@@ -2,7 +2,7 @@
 author: James Hong
 id: 3
 date: 2020-06-01T00:00:00.000Z
-title: Create a new Project
+title: Create a New Project
 path: create-a-new-project
 parentPath: user-information/user-guides/high-performance-computing/
 cat: coldFront
