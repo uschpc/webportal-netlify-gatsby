@@ -5,7 +5,6 @@ import Footer from '../components/footer'
 import SharedTemplate from '../components/sharedTemplate'
 
 export default function Template({ data }) {
-  console.log(456)
     return (
       <Layout {...data.navigation}>
           <SEO title="User Guides"/>

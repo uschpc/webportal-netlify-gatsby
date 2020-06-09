@@ -8,7 +8,6 @@ import SideMenu from '../components/side-menu'
 import MenuRoute from '../components/menu-route'
 
 export default function Template({ data }) {
-  console.log(111111)
     const items = data.md.edges;
     return (
       <Layout {...data.navigation}>
