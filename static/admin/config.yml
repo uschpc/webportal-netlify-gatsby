@@ -35,6 +35,16 @@ collections:
         name: "user-support"
         fields:
           - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/content/user-guides.md"
+        label: "User Guides"
+        name: "user-guides"
+        fields:
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/content/high-performance-computing.md"
+        label: "High-Performance Computing"
+        name: "high-performance-computing"
+        fields:
+          - {label: "Body", name: "body", widget: "markdown"}
   - name: "Featured boxes"
     label: "Featured boxes"
     folder: "src/feature-boxes"
@@ -125,6 +135,13 @@ collections:
   - name: ColdFront
     label: ColdFront Pages
     folder: src/user-guides/coldfront
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "path", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: User Guides
+    label: User Guides Pages
+    folder: src/user-guides
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Slug", name: "path", widget: "string"}

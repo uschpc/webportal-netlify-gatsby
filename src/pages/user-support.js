@@ -37,6 +37,7 @@ export const pageQuery = graphql`
           node {
             frontmatter {
               path
+              parentPath
               title
               parentEle
             }

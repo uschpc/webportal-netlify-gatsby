@@ -55,6 +55,7 @@ export const coldFrontQuery = graphql`
         node {
           frontmatter {
             path
+            parentPath
             title
             parentEle
           }

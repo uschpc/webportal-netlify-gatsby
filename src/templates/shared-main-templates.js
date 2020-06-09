@@ -58,6 +58,7 @@ export const sharedMainTemplateQuery = graphql`
         node {
           frontmatter {
             path
+            parentPath
             title
             parentEle
           }
