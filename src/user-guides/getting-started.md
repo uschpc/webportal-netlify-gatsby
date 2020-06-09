@@ -5,6 +5,7 @@ date: 2020-06-04T00:00:00.00Z
 title: Getting Started
 excerpt: A quick-start guide for getting started on Discovery, the ARCC's high-performance computing cluster.
 path: getting-started
+route: User Guides
 parentPath: user-information/user-guides
 cat: userGuides
 parentPage: User Guides

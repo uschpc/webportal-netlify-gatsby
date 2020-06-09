@@ -43,6 +43,18 @@ export const pageQuery = graphql`
           }
         }
       }
+      routes: allMarkdownRemark(filter: {frontmatter: {routeCat: {eq: "route"}}}, sort: {fields: frontmatter___id}) {
+        edges {
+          node {
+            id
+            frontmatter {
+              path
+              route
+              routePath
+            }
+          }
+        }
+      }
       content: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "userSupportLandingPage"}}}) {
         edges {
           node {

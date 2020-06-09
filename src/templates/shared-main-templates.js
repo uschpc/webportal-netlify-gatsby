@@ -7,6 +7,7 @@ import Markdown from "react-markdown"
 import SharedTemplate from '../components/sharedTemplate'
 
 export default function Template({ data }) {
+  console.log('123')
     const post = data.md.edges;
     return (
       <Layout {...data.navigation}>
@@ -36,8 +37,21 @@ export const sharedMainTemplateQuery = graphql`
     content: markdownRemark(frontmatter: {cat: {eq: "highPerformanceComputingLandingPage"}, path: {eq: $slug}}) {
       frontmatter {
         route
+        routePath
       }
     html
+    }
+    routes: allMarkdownRemark(filter: {frontmatter: {routeCat: {eq: "route"}}}, sort: {fields: frontmatter___id}) {
+      edges {
+        node {
+          id
+          frontmatter {
+            path
+            route
+            routePath
+          }
+        }
+      }
     }
     navigation: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "navigation"}}}) {
       edges {

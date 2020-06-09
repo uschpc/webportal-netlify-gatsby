@@ -3,7 +3,8 @@ author: Yaseen A.
 date: 2020-06-04T00:00:00.00Z
 title: Research Computing User Portal
 excerpt: Instructions for enrolling in the ARCC's Condo Cluster Program and subscribing to computing and storage resources.
-route: User Information >> User Guides >> High-Performance Computing
+route: High-Performance Computing
+routePath: user-information/user-guides/high-performance-computing
 path: research-computing-user-portal
 parentPath: user-information/user-guides/high-performance-computing
 cat: sharedTemplate

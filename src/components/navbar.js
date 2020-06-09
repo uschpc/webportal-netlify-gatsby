@@ -40,7 +40,7 @@ const navigation = [
  },
  {
   title: "User Support", 
-  path: "user_support",
+  path: "user-support",
   dropdown: UserSupportSubNavDropdown
 }
 ];

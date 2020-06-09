@@ -8,12 +8,13 @@ import SideMenu from '../components/side-menu'
 import MenuRoute from '../components/menu-route'
 
 export default function Template({ data }) {
+  console.log(111111)
     const items = data.md.edges;
     return (
       <Layout {...data.navigation}>
           <SEO title={data.content.frontmatter.title}/>
           <div className="coldFront-parent-container">
-              <MenuRoute {...data.content.frontmatter} />
+              <MenuRoute {...data} title={data.content.frontmatter.title} />
               <h1>{data.content.frontmatter.title}</h1>
               <div className="page-body">
                 <div className="left-column">
@@ -87,8 +88,21 @@ export const coldFrontQuery = graphql`
         parentPath
         cat
         route
+        routePath
       }
       html
+    }
+    routes: allMarkdownRemark(filter: {frontmatter: {routeCat: {eq: "route"}}}, sort: {fields: frontmatter___id}) {
+      edges {
+        node {
+          id
+          frontmatter {
+            path
+            route
+            routePath
+          }
+        }
+      }
     }
     navigation: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "navigation"}}}) {
       edges {

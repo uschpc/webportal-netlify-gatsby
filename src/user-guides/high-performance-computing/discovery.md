@@ -3,7 +3,9 @@ author: Yaseen A.
 date: 2020-06-04T00:00:00.00Z
 title: Discovery
 excerpt: Instructions for enrolling in the ARCC's Condo Cluster Program and subscribing to computing and storage resources.
-route: User Information >> User Guides >> High-Performance Computing
+routeCat: route
+route: High-Performance Computing
+routePath: user-information/user-guides/high-performance-computing
 path: discovery
 parentPath: user-information/user-guides/high-performance-computing
 cat: sharedTemplate

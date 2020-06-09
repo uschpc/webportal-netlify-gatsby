@@ -22,18 +22,18 @@ const findSubMenu = (menubar, nav) => {
 
 export default function Template({ data }) {
   const pathName = typeof window !== 'undefined' ? window.location.pathname.split('/')[1] : '';
-  const loadDataOnlyOnce = () => {
-    let pathName = typeof window !== 'undefined' ? window.location.href
-    : '';
-    window.DiscourseEmbed = { discourseUrl: 'https://hpc-discourse.usc.edu/',
-                     discourseEmbedUrl: pathName };
-      var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
-      d.src = window.DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
-  }
-  useEffect(() => {
-    loadDataOnlyOnce();
-  }, []);
+  // const loadDataOnlyOnce = () => {
+  //   let pathName = typeof window !== 'undefined' ? window.location.href
+  //   : '';
+  //   window.DiscourseEmbed = { discourseUrl: 'https://hpc-discourse.usc.edu/',
+  //                    discourseEmbedUrl: pathName };
+  //     var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+  //     d.src = window.DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+  //     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+  // }
+  // useEffect(() => {
+  //   loadDataOnlyOnce();
+  // }, []);
 
   if (pathName !== '') {
     const filterdPost = data.md.edges
@@ -83,7 +83,8 @@ export default function Template({ data }) {
                   <div className="discourse-box">discourse preview for posts tagged with data solution</div>
                 )}
               </div>
-              <div id='discourse-comments'></div>
+              {/* <div id='disco
+              urse-comments'></div> */}
           </div>
           <Footer />
       </Layout>

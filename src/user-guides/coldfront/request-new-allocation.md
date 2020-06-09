@@ -3,6 +3,7 @@ author: James Hong
 date: 2020-06-01T00:00:00.000Z
 title: Request New Allocation
 path: request-new-allocation
+route: User Guides
 parentPath: user-information/user-guides/high-performance-computing/research-computing-user-portal
 cat: coldFront
 parentPage: User Guides

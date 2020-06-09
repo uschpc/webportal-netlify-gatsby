@@ -7,7 +7,7 @@ import MenuRoute from './menu-route.js';
 const SharedTemplate = (items) => {
     return (
         <div className={items.className ? items.className : "user-support"}>
-            <MenuRoute {...items.content.frontmatter} />
+            <MenuRoute {...items} />
             <h1>{items.title}</h1>
             <div className="container">
                 <div className="left-col">

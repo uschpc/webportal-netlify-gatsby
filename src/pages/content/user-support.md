@@ -1,6 +1,8 @@
 ---
 path: user_support_landing_page
 cat: userSupportLandingPage
+route: User Support
+routePath: user-support
 ---
 
 **Office Hours**: Office hours are an opportunity for ARCC users to ask questions about anything ARCC-related. No appointments are necessary, and all levels of users and questions are welcomed. Office hours are typically held weekly at the University Park campus (UPC) and twice a month at the Health Sciences campus (HSC).

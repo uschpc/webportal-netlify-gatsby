@@ -18,7 +18,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   const userGuidesMainTemplate = path.resolve('src/templates/user-guides-main-template.js')
   const userGuidesTemplate = path.resolve('src/templates/user-guides-template.js')
   const sharedMainTemplate = path.resolve('src/templates/shared-main-templates.js')
-  const sharedTemplate = path.resolve('src/templates/sharedTemplate.js')
 
   return graphql(`
     {
