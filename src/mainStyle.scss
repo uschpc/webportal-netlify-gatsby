@@ -10,6 +10,17 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     overflow: hidden;
 
+    iframe {
+      margin: 44px 10%;
+      width: 80%;
+      height: 100vh;
+
+      .form-all{
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+
     .pages-container {
       margin: 80px 10%;
       min-height: 38vh;
