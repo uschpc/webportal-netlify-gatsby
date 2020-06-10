@@ -2,12 +2,12 @@ import React from 'react';
 import featureBox from '../feature-boxes.json';
 import { Link } from 'gatsby';
 import Markdown from "react-markdown"
-import MenuRoute from './menu-route.js';
+// import MenuRoute from './menu-route.js';
 
 const SharedTemplate = (items) => {
     return (
         <div className={items.className ? items.className : "user-support"}>
-            <MenuRoute {...items} />
+            {/* <MenuRoute {...items} /> */}
             <h1>{items.title}</h1>
             <div className="container">
                 <div className="left-col">

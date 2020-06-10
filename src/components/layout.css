@@ -808,9 +808,10 @@ pre tt:after {
 /* line 27, ../scss/layout/_header.scss */
 .tb-col-1 ul.nav-top li a {
   color: #000;
-  font-weight: bold;
-  padding-left: 4px;
+  font-weight: normal;
   margin: 0 2px;
+  font-size: 15px;
+  padding-left: 2px;
 }
 /* line 33, ../scss/layout/_header.scss */
 .tb-col-1 ul.nav-top li a:hover {

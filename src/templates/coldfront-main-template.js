@@ -5,7 +5,7 @@ import SEO from '../components/seo'
 import Footer from '../components/footer'
 import Markdown from "react-markdown"
 import SideMenu from '../components/side-menu'
-import MenuRoute from '../components/menu-route'
+// import MenuRoute from '../components/menu-route'
 
 export default function Template({ data }) {
     const items = data.md.edges;
@@ -13,7 +13,7 @@ export default function Template({ data }) {
       <Layout {...data.navigation}>
           <SEO title={data.content.frontmatter.title}/>
           <div className="coldFront-parent-container">
-              <MenuRoute {...data} title={data.content.frontmatter.title} />
+              {/* <MenuRoute {...data} title={data.content.frontmatter.title} /> */}
               <h1>{data.content.frontmatter.title}</h1>
               <div className="page-body">
                 <div className="left-column">

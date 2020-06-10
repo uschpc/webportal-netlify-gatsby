@@ -1,17 +1,39 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-const generateSubMenuItems = (title, pageTitle, subMenu) => {
-    let menuItem = "High-Performance Computing"
+const generateSubMenuLevel2Items = (title, pageTitle, subMenu) => {
+  console.log('level2', title, pageTitle, subMenu);
+    let menuItem = "Research Computing User Portal"
     if (menuItem === title) {
       return (
-        <ul className="submenu-items">
+        <ul className="submenu-items-level-2">
           {subMenu.edges.map ((item, i) => {
           return (
             <li key={i}>
               <Link className={`${pageTitle === item.node.frontmatter.title ? 'focused' : 'regular'}`} to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
                 {item.node.frontmatter.title}
               </Link>
+            </li>
+          )})}
+        </ul>
+      )
+    } 
+    return ''
+  } 
+
+const generateSubMenuItems = (title, pageTitle, data) => {
+  console.log('data', data);
+    let menuItem = "High-Performance Computing"
+    if (menuItem === title) {
+      return (
+        <ul className="submenu-items">
+          {data.subMenu.edges.map ((item, i) => {
+          return (
+            <li key={i}>
+              <Link className={`${pageTitle === item.node.frontmatter.title ? 'focused' : 'regular'}`} to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
+                {item.node.frontmatter.title}
+              </Link>
+              {data.subMenuLevel2 && generateSubMenuLevel2Items(item.node.frontmatter.title, data.content.frontmatter.title, data.subMenuLevel2)}
             </li>
           )})}
         </ul>
@@ -29,7 +51,7 @@ const SideMenu = (data) => {
                     <Link className="coldfront-menu-items" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
                         {item.node.frontmatter.title}
                     </Link>
-                    {generateSubMenuItems(item.node.frontmatter.title, data.content.frontmatter.title, data.subMenu)}
+                    {generateSubMenuItems(item.node.frontmatter.title, data.content.frontmatter.title, data)}
                 </ul>
                 )
             })}
