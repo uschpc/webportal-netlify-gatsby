@@ -196,7 +196,8 @@ body {
       .content-container{
         display: block;
         padding: 0 0 20px 0;
-
+        border-bottom: 1px solid lightgray;
+        
         li {
           &:hover {
             &:hover {

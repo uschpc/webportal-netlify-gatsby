@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 const generateSubMenuLevel2Items = (title, pageTitle, subMenu) => {
-  console.log('level2', title, pageTitle, subMenu);
     let menuItem = "Research Computing User Portal"
     if (menuItem === title) {
       return (
@@ -22,7 +21,6 @@ const generateSubMenuLevel2Items = (title, pageTitle, subMenu) => {
   } 
 
 const generateSubMenuItems = (title, pageTitle, data) => {
-  console.log('data', data);
     let menuItem = "High-Performance Computing"
     if (menuItem === title) {
       return (

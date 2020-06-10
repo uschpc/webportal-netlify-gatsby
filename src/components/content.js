@@ -23,7 +23,7 @@ const Content = (props) => {
        <span className="content-container">
             {tags.length > 0 && (
             <span>
-                <h4>Content</h4>
+                <h3>Contents</h3>
                 {tags.map((item, i) => {
                     return (
                         <li key={i} value={item.innerHTML} onClick={e => scrollToView(e)}>{item.innerHTML}</li>
