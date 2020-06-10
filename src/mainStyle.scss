@@ -98,7 +98,7 @@ body {
         .left-column {
           width: 25%;
 
-          h3 {
+          h2 {
             color: #990000;
           }
 
@@ -193,6 +193,21 @@ body {
         color: #990000;
       }
 
+      .content-container{
+        display: block;
+        padding: 0 0 20px 0;
+
+        li {
+          &:hover {
+            &:hover {
+              color: #990000;
+              text-decoration: underline;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
       h1 {
         margin-bottom: 40px;
         padding: 20px 0;
@@ -207,7 +222,7 @@ body {
         .left-column {
           width: 30%;
 
-          h3 {
+          h2 {
             color: #990000;
           }
 

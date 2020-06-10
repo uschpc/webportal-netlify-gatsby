@@ -5,10 +5,10 @@ import SEO from '../components/seo'
 import Footer from '../components/footer'
 import SideMenu from '../components/side-menu'
 import Markdown from "react-markdown"
+import Content from '../components/content'
 
 
 export default function Template({ data }) {
-  console.log('data', data);
     const post = data.md;
     return (
       <Layout {...data.navigation}>
@@ -18,10 +18,11 @@ export default function Template({ data }) {
               <h1>{post.frontmatter.title}</h1>
               <div className="page-body">
                 <div className="left-column">
-                  <h3>User Guides</h3>
+                  <h2>User Guides</h2>
                   <SideMenu {...data}/>
                 </div>
                 <div className="right-column">
+                  <Content />
                   <Markdown source={data.content.html} escapeHtml={false} />
                 </div>
               </div>
