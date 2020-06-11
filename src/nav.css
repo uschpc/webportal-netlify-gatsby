@@ -439,7 +439,6 @@ audio:not([controls]) {
  */
 /* line 106, ../sass/_normalize.scss */
 html {
-  font-family: "ProximaNova-Regular", Helvetica, Arial, sans-serif;
   /* 1 */
   font-size: 100%;
   /* 3 */
@@ -537,7 +536,6 @@ blockquote {
  */
 /* line 193, ../sass/_normalize.scss */
 h1, h2, .section-search .GSAResults h1, h3, h4, h5, h6 {
-  font-family: "ProximaNova-Light", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.25em;
   margin: 0 0 .6667em;
@@ -576,13 +574,11 @@ h4 {
 /* line 218, ../sass/_normalize.scss */
 h5 {
   font-size: 1.125em;
-  font-family: "ProximaNova-Regular", Helvetica, Arial, sans-serif;
 }
 
 /* line 222, ../sass/_normalize.scss */
 h6 {
   font-size: 1em;
-  font-family: "ProximaNova-Regular", Helvetica, Arial, sans-serif;
 }
 
 /* Address styling not present in IE 8/9, Safari 5, and Chrome. */
@@ -596,7 +592,6 @@ abbr[title] {
 b,
 strong {
   font-weight: normal;
-  font-family: "ProximaNova-Bold", Helvetica, Arial, sans-serif;
 }
 
 /* Address styling not present in Safari 5 and Chrome. */
@@ -632,7 +627,6 @@ pre,
 samp,
 tt,
 var {
-  font-family: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
   font-size: 1em;
   line-height: 1.875em;
 }
@@ -794,7 +788,6 @@ button,
 input,
 select,
 textarea {
-  font-family: inherit;
   /* 1 */
   font-size: 100%;
   /* 2 */
@@ -925,7 +918,6 @@ textarea {
 /* line 544, ../sass/_normalize.scss */
 label {
   display: block;
-  font-family: "ProximaNova-Bold", Helvetica, Arial, sans-serif;
 }
 
 /**
@@ -1226,13 +1218,11 @@ table {
 
 /* line 237, ../sass/layouts/_responsive.scss */
 .not-front #content-wrapper p a {
-  font-family: "ProximaNova-Semibold", Helvetica, Arial, sans-serif;
 }
 /* line 242, ../sass/layouts/_responsive.scss */
 .not-front #content-wrapper h2, .not-front #content-wrapper .section-search .GSAResults h1, .section-search .GSAResults .not-front #content-wrapper h1, .not-front #content-wrapper h3 {
   color: #880000;
   font-weight: normal;
-  font-family: "ProximaNova-Light", Helvetica, Arial, sans-serif;
 }
 /* line 248, ../sass/layouts/_responsive.scss */
 .not-front #content-wrapper h4 {
@@ -1781,7 +1771,6 @@ span.field-label {
   color: #d8d8d8;
   font-size: 75px;
   line-height: 1;
-  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
@@ -2138,7 +2127,6 @@ html:hover [class^="ss-"] {
 [class^="ss-"].ss-social-regular:before, [class*=" ss-"].ss-social-regular:before,
 [class^="ss-"].right:after, [class*=" ss-"].right:after,
 [class^="ss-"].ss-social-regular.right:after, [class*=" ss-"].ss-social-regular.right:after {
-  font-family: "SSSocialRegular";
   font-style: normal;
   font-weight: normal;
   text-decoration: none;
@@ -6515,7 +6503,6 @@ html:hover [class^="ss-"] {
   width: 137px;
   color: #fff;
   padding: 6px 2px 3px;
-  font-family: "ProximaNova-Light", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
@@ -6537,7 +6524,6 @@ html:hover [class^="ss-"] {
   font-size: 1em;
   line-height: 0.88889 em;
   margin-bottom: 0.88889 em;
-  font-family: "ProximaNova-Regular", Helvetica, Arial, sans-serif;
 }
 /* line 174, ../sass/_home.scss */
 .home-events h3 + p {
@@ -6680,7 +6666,6 @@ html:hover [class^="ss-"] {
 }
 /* line 273, ../sass/_home.scss */
 .feature-slide a.feature-title h1 {
-  font-family: "ProximaNova-Light", Helvetica, Arial, sans-serif;
   /*a {
     color: #fff;
     &:hover, &:focus {
@@ -6788,7 +6773,6 @@ html:hover [class^="ss-"] {
 /* line 350, ../sass/_home.scss */
 .feature-slide a.feature-title .feature-blurb-wrapper {
   position: relative;
-  font-family: "ProximaNova-Light", Helvetica, Arial, sans-serif;
   margin: 0;
   color: #010101;
 }
@@ -6816,7 +6800,6 @@ html:hover [class^="ss-"] {
   color: white;
   font-size: 12px;
   text-transform: uppercase;
-  font-family: "ProximaNova-Bold", Helvetica, Arial, sans-serif;
 }
 @media only screen and (max-width: 767px) {
   /* line 365, ../sass/_home.scss */
@@ -7006,7 +6989,6 @@ html:hover [class^="ss-"] {
 
 /* line 523, ../sass/_home.scss */
 .spotlight h2, .spotlight .section-search .GSAResults h1, .section-search .GSAResults .spotlight h1 {
-  font-family: "ProximaNova-Light", Helvetica, Arial, sans-serif;
   font-size: 1.375em;
   line-height: 1.2727em;
   margin-bottom: .4545em;
@@ -7078,9 +7060,7 @@ html:hover [class^="ss-"] {
   }
 }
 /* line 580, ../sass/_home.scss */
-.view-homepage-news .view-content h2, .view-homepage-news .view-content .section-search .GSAResults h1, .section-search .GSAResults .view-homepage-news .view-content h1 {
-  font-family: "ProximaNova-Light", Helvetica, Arial, sans-serif;
-}
+
 @media all and (min-width: 768px) {
   /* line 584, ../sass/_home.scss */
   .view-homepage-news .view-content .all-link {
@@ -7128,7 +7108,6 @@ html:hover [class^="ss-"] {
 
 /* line 618, ../sass/_home.scss */
 .news-article h3.faux-link {
-  font-family: "ProximaNova-Regular", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 23px;
   margin-bottom: .5em;
@@ -7196,7 +7175,6 @@ span.date-display-single {
   position: relative;
   background: #e6e6e8;
   color: #3d3e4a;
-  font-family: "ProximaNova-Light", Helvetica, Arial, sans-serif;
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   /* line 676, ../sass/_home.scss */
@@ -7392,7 +7370,6 @@ span.date-display-single {
 /* line 780, ../sass/_home.scss */
 .region-brochure ul li h3 {
   color: #3d3e4a;
-  font-family: "ProximaNova-Light", Helvetica, Arial, sans-serif;
   font-weight: normal;
   display: block;
   margin: 0 auto;
@@ -7496,7 +7473,6 @@ span.date-display-single {
 }
 /* line 855, ../sass/_home.scss */
 #quick-links ul li {
-  font-family: "ProximaNova-Light", Helvetica, Arial, sans-serif;
   color: white;
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
@@ -7608,7 +7584,6 @@ span.date-display-single {
 }
 /* line 927, ../sass/_home.scss */
 #numbers-widget li p {
-  font-family: "ProximaNova-Light", Helvetica, Arial, sans-serif;
   color: #767676;
   font-size: 40px;
   margin-bottom: 20px;
@@ -7619,7 +7594,6 @@ span.date-display-single {
 }
 /* line 935, ../sass/_home.scss */
 #numbers-widget li h3 {
-  font-family: "ProximaNova-Regular", Helvetica, Arial, sans-serif;
   font-weight: 400;
   color: #880000;
   font-size: 18px;
@@ -7662,7 +7636,6 @@ span.all-link {
   clear: left;
   text-align: right;
   font-size: 12px;
-  font-family: "ProximaNova-Bold", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -7764,7 +7737,6 @@ span.all-link {
 /* line 48, ../sass/_header.scss */
 #alert-banner .alert-blurb a {
   color: #fff;
-  /* font-family: "ProximaNova-Bold", Helvetica, Arial, sans-serif; */
   text-decoration: underline;
 }
 
@@ -8207,7 +8179,6 @@ html.svg .uc-wordmark {
 .top-nav-inner .menu li a {
   color: #3f3f3f;
   font-size: .9em;
-  font-family: "ProximaNova-Light", Helvetica, Arial, sans-serif;
 }
 @media only screen and (max-width: 767px) {
   /* line 370, ../sass/_header.scss */
@@ -8247,7 +8218,6 @@ html.svg .uc-wordmark {
 }
 /* line 384, ../sass/_header.scss */
 .top-nav-inner .menu li a.active-trail {
-  font-family: "ProximaNova-Bold", Helvetica, Arial, sans-serif;
   color: #444;
 }
 
@@ -8423,7 +8393,6 @@ html.svg .mobile-branding .uc-wordmark-mobile {
   padding: 3px 15px;
   text-transform: uppercase;
   font-size: 1em;
-  font-family: "ProximaNova-Bold", Helvetica, Arial, sans-serif;
 }
 /* line 500, ../sass/_header.scss */
 .mobile-section-navigation a .ss-icon {
@@ -8471,7 +8440,6 @@ html.svg .mobile-branding .uc-wordmark-mobile {
 /* line 532, ../sass/_header.scss */
 .utility-nav-wrapper .region-utility-nav ul li a {
   color: white;
-  font-family: "ProximaNova-Light", Helvetica, Arial, sans-serif;
 }
 /* line 535, ../sass/_header.scss */
 .utility-nav-wrapper .region-utility-nav ul li a:hover, .utility-nav-wrapper .region-utility-nav ul li a:focus {
@@ -8608,10 +8576,6 @@ html.svg .mobile-branding .uc-wordmark-mobile {
   }
 }
 
-/* line 13, ../sass/_leftnav.scss */
-.region-sidebar-first.sidebar .menu-block-wrapper {
-  font-family: "ProximaNova-Light", Helvetica, Arial, sans-serif;
-}
 @media only screen and (min-width: 960px) {
   /* line 13, ../sass/_leftnav.scss */
   .region-sidebar-first.sidebar .menu-block-wrapper {
@@ -8720,7 +8684,6 @@ html.svg .mobile-branding .uc-wordmark-mobile {
 /* line 132, ../sass/_leftnav.scss */
 .region-sidebar-first.sidebar #block-block-18 a {
   color: #3d3e4a;
-  font-family: "ProximaNova-Regular", Helvetica, Arial, sans-serif;
 }
 /* line 136, ../sass/_leftnav.scss */
 .region-sidebar-first.sidebar #block-block-18 div.left.hasText {
@@ -8970,7 +8933,6 @@ a.ss-standard:after {
 }
 /* line 208, ../sass/_pages.scss */
 .slideshow-slide h2, .slideshow-slide .section-search .GSAResults h1, .section-search .GSAResults .slideshow-slide h1 {
-  font-family: "ProximaNova-Light", Helvetica, Arial, sans-serif;
   font-size: 1.625em;
   line-height: 1.2307em;
   margin-bottom: .2307em;
@@ -9212,7 +9174,6 @@ body {
 /* line 375, ../sass/_pages.scss */
 .page-title-wrapper #page-title {
   color: white;
-  font-family: "ProximaNova-Light", Helvetica, Arial, sans-serif;
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   /* line 375, ../sass/_pages.scss */
@@ -9609,7 +9570,6 @@ dd.room {
 }
 /* line 57, ../sass/_landings.scss */
 .feature-block-content h3 {
-  font-family: "ProximaNova-Regular", Helvetica, Arial, sans-serif;
   font-size: 1em;
   line-height: 1.5em;
   margin-bottom: .375em;
@@ -10139,7 +10099,6 @@ dd.room {
 /* line 11, ../sass/_blocks.scss */
 .sidebar-block-title, .front .view-content h2, .front .view-content .section-search .GSAResults h1, .section-search .GSAResults .front .view-content h1, .sidebar-block h2, .sidebar .block h2, .content-inner-sidebar h2, .interior-right-column h2, .sidebar-block .section-search .GSAResults h1, .section-search .GSAResults .sidebar-block h1, .sidebar .block .section-search .GSAResults h1, .section-search .GSAResults .sidebar .block h1, .content-inner-sidebar .section-search .GSAResults h1, .section-search .GSAResults .content-inner-sidebar h1, .interior-right-column .section-search .GSAResults h1, .section-search .GSAResults .interior-right-column h1, .sidebar .block-title {
   color: #767676;
-  font-family: "ProximaNova-Regular", Helvetica, Arial, sans-serif;
   font-size: 1.25em;
   margin-bottom: .4em;
 }
@@ -10191,7 +10150,6 @@ table td {
 }
 /* line 24, ../sass/_tables.scss */
 table th {
-  font-family: "ProximaNova-Bold", Helvetica, Arial, sans-serif;
   font-weight: normal;
 }
 /* line 28, ../sass/_tables.scss */
@@ -10510,7 +10468,6 @@ button::-moz-focus-inner {
   color: white;
   font-style: normal;
   font-size: 28px;
-  font-family: Arial, Baskerville, monospace;
 }
 /* line 295, ../sass/_popups.scss */
 .mfp-close:hover, .mfp-close:focus {

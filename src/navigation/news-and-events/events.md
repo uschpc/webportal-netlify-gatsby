@@ -1,9 +1,9 @@
 ---
-title: HPC Workshops
+title: Events
 thumbnail: /images/sr-icon-4.png
-path: hpc-workshops
+path: events
 parentPath: education-and-outreach
 cat: navigation
-parentEle: Education and Outreach
+parentEle: News and Events
 ---
 Let's see what happens

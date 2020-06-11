@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Karla:400,700");
+// @import url("https://fonts.googleapis.com/css?family=Karla:400,700");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 @import './mainStyle-mobile.scss';
 
 * {
@@ -6,8 +7,8 @@
 }
 
 body {
+  font-family: 'Source Sans Pro', sans-serif;
   #___gatsby {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     overflow: hidden;
 
     iframe {
@@ -22,13 +23,11 @@ body {
     }
 
     .pages-container {
-      margin: 80px 10%;
+      margin: 44px 10%;
       min-height: 38vh;
 
       h1 {
-        margin-bottom: 80px;
-        background-color: #ffcd05;
-        padding: 20px;
+        padding: 20px 0;
         color: #990000;
       }
 
@@ -40,7 +39,7 @@ body {
           width: 17%;
         }
         .html-content {
-          width: 60%;
+          // width: 60%;
         }
         .html-content-coldfront {
           // display: none;
@@ -181,13 +180,12 @@ body {
       }
     }
     .menu-container {
-      margin: 80px 10%;
+      margin: 44px 10%;
       min-height: 38vh;
 
       h1 {
         margin-bottom: 40px;
-        background-color: #ffcd05;
-        padding: 20px;
+        padding: 20px 0;
         color: #990000;
       }
 
@@ -383,7 +381,7 @@ body {
           .usc-logo {
             width: 161px;
             height: 35px;
-            background-image: url('/images/usc_logo_cropped.svg');
+            background-image: url('/images/two-line-logo_gold-usc_white-text_transparent-bg.png');
             background-size: contain;
             background-position: center center;
             background-repeat: no-repeat;
@@ -726,7 +724,6 @@ p {
   font-size: 20px;
   padding: 8px 44px;
   color: black;
-  font-family: inherit;
   display: flex;
   justify-content: center;
   transition: opacity 250ms;
@@ -1181,7 +1178,6 @@ p {
       position: relative;
       background: #e6e6e8;
       color: #3d3e4a;
-      font-family: inherit;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -1322,7 +1318,6 @@ $speed: 1s;
     letter-spacing: 1px;
     display: inline-block;
     text-decoration: none;
-    font-family: inherit;
     text-transform: uppercase;
 
     &:nth-child(even) {

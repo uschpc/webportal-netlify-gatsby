@@ -1,9 +1,9 @@
 ---
-title: Learning Contents
+title: Seminars & Workshops
 thumbnail: /images/sr-icon-4.png
-path: learning-contents
+path: seminars-and-workshops
 parentPath: education-and-outreach
 cat: navigation
-parentEle: Education and Outreach
+parentEle: Education & Outreach
 ---
 Let's see what happens

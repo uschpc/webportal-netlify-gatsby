@@ -14,6 +14,7 @@ const findMenuTitle = (menubar, nav) => {
   return menuTitle ? menuTitle.node.frontmatter.parentEle : null;
 }
 const findSubMenu = (menubar, nav) => {
+  console.log('test');
   const subNav = nav.filter((ele, i) => {
     return (ele.node.frontmatter.parentEle === menubar)
     });
@@ -75,7 +76,10 @@ export default function Template({ data }) {
                     </div>
                   )}
                 {(post.frontmatter.cat !=='coldFront' && post.frontmatter.title !=='ColdFront') ? (
-                  <div className="html-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+                  <span>
+                       <div className="html-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+                        {post.frontmatter.title === 'Ticket Submission' && <a href="https://hpcaccount.usc.edu/static/web/supportform_redirect_dev.php">Create a Ticket</a>}
+                  </span>
                 ) : (
                   post.frontmatter.title !=='ColdFront' && <div className="html-content-coldfront" dangerouslySetInnerHTML={{ __html: post.html }} />
                 )}

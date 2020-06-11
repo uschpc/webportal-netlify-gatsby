@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import navlist from "../navigations.json";
 
 const assignedDropdownSubNav = (menubar, nav) => {
+  console.log(menubar, nav);
   let subNav = nav.filter((ele, i) => {
     if (ele.node.frontmatter.parentEle === menubar) {
       return ele.node.frontmatter;
@@ -161,7 +162,6 @@ const UserInfoSubNavDropdown = ({ current, prev, nav }) => {
 
 const EducationOutreachSubNavDropdown = ({ current, prev, nav }) => {
   let subNav = assignedDropdownSubNav('Education & Outreach', nav);
-  if (subNav.length > 0) {
     return (
       <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
   
@@ -169,7 +169,7 @@ const EducationOutreachSubNavDropdown = ({ current, prev, nav }) => {
         <div className="row">
           <div className="column">
           <h4>
-            Supporting USC students and faculty in their computational research is the key mission of the Advanced Research Computing Center.  
+            Supporting USC students and faculty in their computational research is the key mission of the Advanced Research Computing Center. 
           </h4>    
           </div>
           <div className="column">
@@ -207,8 +207,6 @@ const EducationOutreachSubNavDropdown = ({ current, prev, nav }) => {
     </div>
     </div>
     )
-  }
-  return '';
 }
 
 const UserSupportSubNavDropdown = ({ current, prev, nav }) => {
@@ -264,7 +262,6 @@ const UserSupportSubNavDropdown = ({ current, prev, nav }) => {
 const NewsEventsSubNavDropdown = ({ current, prev, nav }) => {
   let subNav = assignedDropdownSubNav('News and Events', nav);
 
-  if(subNav.length > 0) {
     return (
       <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
         <div className="dropdown-content">  
@@ -309,12 +306,6 @@ const NewsEventsSubNavDropdown = ({ current, prev, nav }) => {
     </div>
     </div>
     );
-  } 
-  else {
-    return ''
-  }
-
-  
 }
 
 export { AboutSubNavDropdown, ServicesSubNavDropdown, UserInfoSubNavDropdown, EducationOutreachSubNavDropdown, UserSupportSubNavDropdown, NewsEventsSubNavDropdown };

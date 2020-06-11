@@ -12,7 +12,7 @@ const Content = (props) => {
         const index = _.findIndex(tags, function(o) { 
             return o.innerHTML == e.target.getAttribute('value'); 
          });
-         tags[index].scrollIntoView({behavior: "smooth", block: "center"});
+         tags[index].scrollIntoView({block: "center"});
     }
 
     useEffect(() => {

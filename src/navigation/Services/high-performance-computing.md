@@ -2,7 +2,7 @@
 title: High-Performance Computing
 thumbnail: /images/sr-icon-4.png
 path: hpc
-parentPath: services
+parentPath: user-information/user-guides
 cat: navigation
 parentEle: Services
 ---

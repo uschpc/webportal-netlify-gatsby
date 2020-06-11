@@ -1,9 +1,9 @@
 ---
-title: Knowledgebase
+title: News and Updates
 thumbnail: /images/sr-icon-4.png
-path: knowledgebase
+path: news-and-updates
 parentPath: education-and-outreach
 cat: navigation
-parentEle: Education and Outreach
+parentEle: News and Events
 ---
 Let's see what happens

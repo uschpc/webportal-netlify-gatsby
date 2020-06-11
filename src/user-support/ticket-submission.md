@@ -9,4 +9,4 @@ path: ticket-submission
 cat: userSupport
 parentEle: none
 ---
-Let's see what happens
+explanation of tickets contents

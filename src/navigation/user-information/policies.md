@@ -1,7 +1,7 @@
 ---
-title: Getting Help
+title: Policies
 thumbnail: /images/sr-icon-4.png
-path: getting-help
+path: policies
 parentPath: user-information
 cat: navigation
 parentEle: User Information

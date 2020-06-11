@@ -1,7 +1,7 @@
 ---
-title: Research Partnerships
+title: Condo Cluster Program
 thumbnail: /images/sr-icon-4.png
-path: research
+path: condo-cluster-program
 parentPath: services
 cat: navigation
 parentEle: Services
