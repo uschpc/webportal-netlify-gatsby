@@ -4,7 +4,6 @@ import { Link } from "gatsby"
 import navlist from "../navigations.json";
 
 const assignedDropdownSubNav = (menubar, nav) => {
-  console.log(menubar, nav);
   let subNav = nav.filter((ele, i) => {
     if (ele.node.frontmatter.parentEle === menubar) {
       return ele.node.frontmatter;

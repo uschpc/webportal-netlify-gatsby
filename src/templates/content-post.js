@@ -14,7 +14,6 @@ const findMenuTitle = (menubar, nav) => {
   return menuTitle ? menuTitle.node.frontmatter.parentEle : null;
 }
 const findSubMenu = (menubar, nav) => {
-  console.log('test');
   const subNav = nav.filter((ele, i) => {
     return (ele.node.frontmatter.parentEle === menubar)
     });
