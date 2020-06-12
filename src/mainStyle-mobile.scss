@@ -65,9 +65,9 @@ and (max-width : 1024px)  {
                     }
                 }
             }
-            .coldFront-parent-container, .coldFront-child-container {
+            .coldFront-parent-container, .coldFront-child-container, .user-guides-pages {
                 margin: 44px 3%;
-                .page-body{
+                .page-body, .container{
                     .left-column {
                         display: none;
                     }
@@ -317,9 +317,9 @@ and (max-width : 767px) {
                     }
                 }
             }
-            .coldFront-parent-container, .coldFront-child-container {
+            .coldFront-parent-container, .coldFront-child-container, .user-guides-pages {
                 margin: 44px 3%;
-                .page-body{
+                .page-body, .container{
                     display: block;
                     .left-column {
                         display: none;

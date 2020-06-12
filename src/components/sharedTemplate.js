@@ -5,7 +5,6 @@ import Markdown from "react-markdown"
 // import MenuRoute from './menu-route.js';
 
 const SharedTemplate = (items) => {
-    console.log(items);
     return (
         <div className={items.className ? items.className : "user-support"}>
             <h1>{items.title}</h1>

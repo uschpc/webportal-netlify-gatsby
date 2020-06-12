@@ -52,10 +52,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           template = userGuidesMainTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
-        case 'high-performance-computing':
-            template = sharedMainTemplate;
-            path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
-            break;
         default:
           switch(node.frontmatter.cat) {
             case 'coldFront':
