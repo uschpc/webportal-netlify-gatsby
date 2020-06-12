@@ -15,15 +15,23 @@ export default function Template({ data }) {
           <SEO title={post.frontmatter.title}/>
             <div className="coldFront-child-container">
               {/* <MenuRoute {...data} title={data.content.frontmatter.title} /> */}
-              <h1>{post.frontmatter.title}</h1>
               <div className="page-body">
                 <div className="left-column">
                   <h2>User Guides</h2>
                   <SideMenu {...data}/>
                 </div>
-                <div className="right-column">
+                <div className="middle-column">
+                <h1>{post.frontmatter.title}</h1>
                   <Content />
                   <Markdown source={data.content.html} escapeHtml={false} />
+                </div>
+                <div className="right-column">
+                  <div className="system-status">
+                      <h4>Related Links</h4>
+                      <h5>Some links</h5>
+                      <h5>Some links</h5>
+                      <h5>Some links</h5>
+                  </div>
                 </div>
               </div>
             </div>

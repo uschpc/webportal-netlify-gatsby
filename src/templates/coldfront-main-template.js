@@ -14,13 +14,13 @@ export default function Template({ data }) {
           <SEO title={data.content.frontmatter.title}/>
           <div className="coldFront-parent-container">
               {/* <MenuRoute {...data} title={data.content.frontmatter.title} /> */}
-              <h1>{data.content.frontmatter.title}</h1>
               <div className="page-body">
                 <div className="left-column">
                   <h2>User Guides</h2>
                   <SideMenu {...data}/>
                 </div>
-                <div className="right-column">
+                <div className="middle-column">
+                  <h1>{data.content.frontmatter.title}</h1>
                   <Markdown source={data.content.html} escapeHtml={false} />
                   {(data.content.frontmatter.title === "Research Computing User Portal") && (
                     <span>
@@ -35,7 +35,14 @@ export default function Template({ data }) {
                     </span>
                   )}
                 </div>
-               
+                <div className="right-column">
+                  <div className="system-status">
+                      <h4>Related Links</h4>
+                      <h5>Some links</h5>
+                      <h5>Some links</h5>
+                      <h5>Some links</h5>
+                  </div>
+                </div>
               </div>
           </div>
           <Footer />

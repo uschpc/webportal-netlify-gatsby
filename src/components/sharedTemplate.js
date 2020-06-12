@@ -5,10 +5,11 @@ import Markdown from "react-markdown"
 // import MenuRoute from './menu-route.js';
 
 const SharedTemplate = (items) => {
+    console.log(items);
     return (
         <div className={items.className ? items.className : "user-support"}>
-            {/* <MenuRoute {...items} /> */}
             <h1>{items.title}</h1>
+            {/* <MenuRoute {...items} /> */}
             <div className="container">
                 <div className="left-col">
                     {items.cat !== 'userSupport' && <Markdown source={items.content.html} escapeHtml={false} />}

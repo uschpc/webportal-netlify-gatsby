@@ -52,6 +52,17 @@ export const sharedMainTemplateQuery = graphql`
         }
       }
     }
+    sideMenu: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "userGuides"}}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            parentPath
+          }
+        }
+      }
+    }
     navigation: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "navigation"}}}) {
       edges {
         node {

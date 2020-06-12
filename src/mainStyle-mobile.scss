@@ -65,6 +65,20 @@ and (max-width : 1024px)  {
                     }
                 }
             }
+            .coldFront-parent-container, .coldFront-child-container {
+                margin: 44px 3%;
+                .page-body{
+                    .left-column {
+                        display: none;
+                    }
+                    .middle-column{
+                        width: 70%;
+                    }
+                    .right-column {
+                        width: 25%;
+                    }
+                }
+            }
         }
         .search-result {
             margin: 80px 3%;
@@ -300,6 +314,21 @@ and (max-width : 767px) {
                     }
                     .discourse-box {
                         display: none;
+                    }
+                }
+            }
+            .coldFront-parent-container, .coldFront-child-container {
+                margin: 44px 3%;
+                .page-body{
+                    display: block;
+                    .left-column {
+                        display: none;
+                    }
+                    .middle-column{
+                        width: 100%;
+                    }
+                    .right-column {
+                        width: 100%;
                     }
                 }
             }
