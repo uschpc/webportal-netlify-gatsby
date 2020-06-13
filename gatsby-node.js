@@ -47,34 +47,31 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       let template = '';
       let path = '';
 
-      switch(node.frontmatter.path) {
-        case 'user-guides':
+      switch(node.frontmatter.cat) {
+        case 'coldFront':
+          template = coldFrontTemplate;
+          path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+          break;
+        case 'navigation':
+            template = menuTemplate;
+            path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+            break;
+        case 'userSupport':
           template = userGuidesMainTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
+        case 'userGuides':
+          template = userGuidesTemplate;
+          path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+          break;
+        case 'sharedTemplate':
+          template = coldFrontMainTemplate;
+          path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+          break;
         default:
-          switch(node.frontmatter.cat) {
-            case 'coldFront':
-              template = coldFrontTemplate;
-              path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
-              break;
-            case 'navigation':
-                template = menuTemplate;
-                path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
-                break;
-            case 'userGuides':
-              template = userGuidesTemplate;
-              path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
-              break;
-            case 'sharedTemplate':
-              template = coldFrontMainTemplate;
-              path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
-              break;
-            default:
-              template = postTemplate;
-              path = node.frontmatter.path
-              break;
-          }
+          template = postTemplate;
+          path = node.frontmatter.path
+          break;
       }
 
 

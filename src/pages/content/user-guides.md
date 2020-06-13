@@ -2,6 +2,7 @@
 id: 1
 path: user-guides
 cat: userGuidesLandingPage
+title: User Guides
 routeCat: route
 route: User Support
 routePath: user-support

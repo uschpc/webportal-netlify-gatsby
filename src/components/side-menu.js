@@ -41,7 +41,7 @@ const generateSubMenuItems = (title, pageTitle, data) => {
   } 
 
 const SideMenu = (data) => {
-  let pageTitle = data.content.frontmatter.title;
+  let pageTitle = data.mainPage ? data.mainPage.frontmatter.title : data.content.frontmatter.title;
     return (
         <div className="side-menu">
             {data.sideMenu.edges.map((item, i) => {
@@ -50,7 +50,7 @@ const SideMenu = (data) => {
                     <Link className={`coldfront-menu-items ${pageTitle === item.node.frontmatter.title ? 'focused' : 'regular'}`} to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
                         {item.node.frontmatter.title}
                     </Link>
-                    {item.node.frontmatter.cat !== 'userGuides' && generateSubMenuItems(item.node.frontmatter.title, data.content && data.content.frontmatter.title, data)}
+                    {(item.node.frontmatter.cat !== 'userGuides' || item.node.frontmatter.cat !== 'userSupport') && generateSubMenuItems(item.node.frontmatter.title, data.content && data.content.frontmatter.title, data)}
                 </ul>
                 )
             })}

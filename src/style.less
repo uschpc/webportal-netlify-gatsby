@@ -129,6 +129,162 @@ body {
       }
     }
   }
+  .user-guides-main-pages {
+    margin: 44px 10%;
+    h1 {
+      padding: 10px 0;
+      margin: 10px 0;
+      color: #990000;
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
+
+      .left-column {
+        width: 15%;
+        margin-top: 119px;
+
+        h2 {
+          color: #990000;
+        }
+
+        .side-menu {
+          display: flex;
+          flex-direction: column;
+          ul {
+            &.submenu-items {
+              li {
+                line-height: 1;
+                a {
+                  font-size: 12px;
+                  margin-left: 15px;
+                  color: black;
+                  &.focused {
+                    font-weight: bold;
+                    color: #990000;
+                  }
+                }
+              }
+            }
+            &.submenu-items-level-2 {
+              margin-top: 2px;
+              li {
+                line-height: 1;
+                a {
+                  font-size: 12px;
+                  margin-left: 0;
+                  color: black;
+                  &.focused {
+                    font-weight: bold;
+                    color: #990000;
+                  }
+                }
+              }
+            }
+            margin-bottom: 2px;
+            a {
+              font-size: 15px;
+              color: black;
+
+              &.focused {
+                font-weight: bold;
+                color: #990000;
+              }
+
+              &:hover {
+                color: #990000;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+
+      .middle-column {
+        width: 66%;
+        > span {
+          display: flex;
+          flex-wrap: wrap;
+          text-align: center;
+          align-self: flex-start;
+          justify-content: space-between;
+        }
+
+        h1 {
+          margin: 30px 0;
+        }
+        
+        p {
+          text-align: left;
+        }
+        a {
+          color: black;
+          font-size: 30px;
+          width: 33%;
+
+          &:hover {
+            p {
+              &.title {
+                color: #990000;
+                text-decoration: underline;
+              }
+              &.description {
+                color: #990000;
+              }
+            }
+          }
+        }
+        .user-support-box {
+          width: 300px;
+          height: 150px;
+          width: auto;
+          margin: 0 0 5px 0;
+          background-color: lightgray;
+          padding: 15px;
+
+          p {
+            text-align: center;
+            &.title {
+              margin: 0;
+              line-height: 30px;
+              font-size: 20px;
+              font-weight: bold;
+            }
+            &.description {
+              margin: 0;
+              font-size: 13px;
+              line-height: 20px;
+              margin-top: 12px;
+              color: #444141;
+            }
+          }
+        }
+        div {
+          margin-top: 20px;
+          p, ul {
+            text-align: left;
+          }
+        }
+        
+      }
+      .right-column{
+        width: 15%;
+        margin-top: 115px;
+        .system-status, .recent-news {
+          h4 {
+            background-color: #ffcd05;
+            padding: 15px;
+            color: #990000;
+          }
+          h5 {
+            padding: 0 0 0 20px;
+            font-weight: normal;
+            line-height: 0.5;
+          }
+        }
+      }
+    }
+  }
   .user-guides{
     margin: 44px 10%;
 

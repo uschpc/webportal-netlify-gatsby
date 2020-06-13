@@ -6,6 +6,7 @@ title: Discourse Knowledgebase
 thumbnail: /images/sr-icon-4.png
 excerpt: RA question and answer community for ARCC-specific topics.
 path: discourse-knowledgebase
+parentPath: user-information
 cat: userSupport
 parentEle: none
 ---

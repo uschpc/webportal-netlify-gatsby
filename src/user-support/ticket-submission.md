@@ -6,6 +6,7 @@ title: Ticket Submission
 thumbnail: /images/sr-icon-4.png
 excerpt: Send a message to the ARCC team with your specific issue.
 path: ticket-submission
+parentPath: user-information
 cat: userSupport
 parentEle: none
 ---
