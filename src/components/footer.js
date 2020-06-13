@@ -29,7 +29,7 @@ const Footer = () => {
                         <input className="email-input" type="text" />
                     </form>
                 </div>
-                <a href="https://usc.edu" target="_BLANK">
+                <a href="https://usc.edu" target="_BLANK" className="logo-footer">
                     <div className="usc-logo"></div>
                 </a>
             </div>

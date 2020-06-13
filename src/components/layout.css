@@ -620,7 +620,7 @@ pre tt:after {
   border: none;
   outline: none;
   color: black;
-  padding: 6px 16px;
+  padding: 10px 0px;
   background-color: inherit;
   font-weight: bold;
   margin: 0;
