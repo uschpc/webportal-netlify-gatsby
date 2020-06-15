@@ -27,12 +27,14 @@ const generateSubMenuItems = (title, pageTitle, data) => {
         <ul className="submenu-items">
           {data.subMenu.edges.map ((item, i) => {
           return (
-            <li key={i}>
-              <Link className={`${pageTitle === item.node.frontmatter.title ? 'focused' : 'regular'}`} to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
-                {item.node.frontmatter.title}
-              </Link>
+            <span>
+              <li key={i}>
+                <Link className={`${pageTitle === item.node.frontmatter.title ? 'focused' : 'regular'}`} to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
+                  {item.node.frontmatter.title}
+                </Link>
+              </li>
               {data.subMenuLevel2 && generateSubMenuLevel2Items(item.node.frontmatter.title, data.content.frontmatter.title, data.subMenuLevel2)}
-            </li>
+            </span>
           )})}
         </ul>
       )
