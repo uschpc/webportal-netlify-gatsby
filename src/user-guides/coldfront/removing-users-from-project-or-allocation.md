@@ -1,8 +1,8 @@
 ---
 author: James Hong
 id: 6
-date: 2020-06-01T00:00:00.000Z
-title: Removing Users from your Project or Allocation
+date: 2020-06-15T00:00:00.000Z
+title: Removing Users Project/Allocation
 path: removing-users-from-project-or-allocation
 parentPath: user-information/user-guides/high-performance-computing/research-computing-user-portal
 cat: coldFront
@@ -46,6 +46,6 @@ Check the box next to the user(s) you want removed from the allocation, then cli
 
 Once you click the Delete button, the user will be removed from your allocation detail view.  You will notice they are still listed under your project view.  HPC will receive notification that you'd like the account allocation information updated and we will take care of it.  Sometimes this involves changing access to SLURM associations so a user can no longer run on a cluster and sometimes it involves changing group access so a user can't login to a private server anymore.  Don't worry - this action isn't permanent.  If you decide you'd like to add the user back to the allocation or that you made a mistake, just add them back to your project
 
-NOTE: Please only remove a user from an allocation if you don't want their account deactivated.  Students who are no longer at USC or collaborating with you, should be completely removed from your project(s) so that HPC knows to deactivate their account completely.
+**NOTE: Please only remove a user from an allocation if you don't want their account deactivated.  Students who are no longer at USC or collaborating with you, should be completely removed from your project(s) so that HPC knows to deactivate their account completely.**
 
 

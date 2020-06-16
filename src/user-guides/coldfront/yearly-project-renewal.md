@@ -1,7 +1,7 @@
 ---
 author: James Hong
 id: 13
-date: 2020-06-01T00:00:00.000Z
+date: 2020-06-15T00:00:00.000Z
 title: Yearly Project Renewal
 path: yearly-project-renewal
 route: User Guides
@@ -21,12 +21,12 @@ Faculty are required to update their project information yearly, in order to mai
 * Verify the active users on your project and remove any that no longer work with you  
 **You can do all of this from your Project Detail page (click on the name of your project from the home page)**
 
-### Projects
+### Projects Overview
 Once this is complete, you can click on the "Needs Review" link on the home page or on the Review Project link from the Project Detail page:  
 ![ColdFront Project Review](/images/coldfront_project_review.png)
 &nbsp;
 &nbsp;
-### Projects
+### Project Details
 If you click on the project name, you're taken to the Project Detail page.  Here you you will see a notification about the project review as well:  
 ![ColdFront Project Detail](/images/coldfront_project_detail.png)
 &nbsp;

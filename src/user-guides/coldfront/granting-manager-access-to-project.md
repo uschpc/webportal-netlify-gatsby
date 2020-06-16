@@ -1,8 +1,8 @@
 ---
 author: James Hong
 id: 10
-date: 2020-06-01T00:00:00.000Z
-title: Granting Manager Access to your Project
+date: 2020-06-15T00:00:00.000Z
+title: Granting Manager Access
 path: granting-manager-access-to-project
 parentPath: user-information/user-guides/high-performance-computing/research-computing-user-portal
 cat: coldFront
@@ -10,7 +10,7 @@ parentPage: User Guides
 ---
 
 &nbsp;
-[Log into ColdFront](https://hpcaccount.usc.edu/)
+[Log into ColdFront](https://hpcaccount.usc.edu/)  
 &nbsp;
 &nbsp;
 PIs can grant manager access to their projects to allow for a trusted graduate student or lab director to manage the user accounts and allocations on their projects.  This is done on a per project basis so if you want a TA or graduate student to manage the project you're using for your course but not your main research project, this is possible.

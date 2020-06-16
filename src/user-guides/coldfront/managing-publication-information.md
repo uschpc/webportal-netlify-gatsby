@@ -1,7 +1,7 @@
 ---
 author: James Hong
 id: 12
-date: 2020-06-01T00:00:00.000Z
+date: 2020-06-15T00:00:00.000Z
 title: Managing Publication Information
 path: managing-publication-information
 parentPath: user-information/user-guides/high-performance-computing/research-computing-user-portal

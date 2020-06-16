@@ -1,7 +1,7 @@
 ---
 author: James Hong
 id: 9
-date: 2020-06-01T00:00:00.000Z
+date: 2020-06-15T00:00:00.000Z
 title: Allocation Expiration
 path: allocation-expiration
 parentPath: user-information/user-guides/high-performance-computing/research-computing-user-portal

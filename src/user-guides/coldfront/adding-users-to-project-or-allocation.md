@@ -1,8 +1,8 @@
 ---
 author: James Hong
 id: 5
-date: 2020-06-04T00:00:00.000Z
-title: Adding Users to your Project or Allocation
+date: 2020-06-15T00:00:00.000Z
+title: Adding Users Project/Allocation
 path: adding-users-to-project-or-allocation
 parentPath: user-information/user-guides/high-performance-computing/research-computing-user-portal
 cat: coldFront
@@ -24,7 +24,7 @@ In your project description view, when you click Add Users, you will be sent to 
 You may enter a list of USC usernames in the box.  Please put each username on a separate line or separate usernames by a space
 
 
-**NOTE: To add a user to your project they must be an active USC member.**  If you have an external-USC collaborator that you want to grant an account to, you must submit a Service Now request for an [iVIP account](https://itservices.usc.edu/iam/ivip/) as only USC Identity and Access Management group can create those accounts.
+**NOTE: To add a user to your project they must be an active USC member.  If you have an external-USC collaborator that you want to grant an account to, you must submit a Service Now request for an [iVIP account](https://itservices.usc.edu/iam/ivip/) as only USC Identity and Access Management group can create those accounts.**
 &nbsp;  
 &nbsp;  
 &nbsp;  
