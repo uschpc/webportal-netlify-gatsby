@@ -28,8 +28,6 @@ The User Portal consists of 3 parts: **Projects**, **Allocations** and **Resourc
 * Resources include: clusters, department/lab servers, software licenses, storage, and clouds
 * Some resources have limits (e.g., storage has a limit of GB/TB, licenses have a limit of seats available)
 
-  test  
-
 ### Allocations:
 
 * Allocations indicate what resources you have access to and any limits associated with that access
