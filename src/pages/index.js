@@ -21,7 +21,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
     query{
-      navigation: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "navigation"}}}) {
+      navigation: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "navigation"}}}) {
         edges {
           node {
             frontmatter {

@@ -1,5 +1,6 @@
 ---
 title: Policies
+id: 8
 thumbnail: /images/sr-icon-4.png
 path: policies
 parentPath: user-information

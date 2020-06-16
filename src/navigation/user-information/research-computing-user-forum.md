@@ -1,7 +1,9 @@
 ---
-title: User Support
+title: Research Computing User Forum
+id: 5
 thumbnail: /images/sr-icon-4.png
-path: user-support
+path: research-computing-user-forum
+parentPath: user-information
 cat: navigation
 parentEle: User Information
 ---

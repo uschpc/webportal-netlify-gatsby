@@ -52,10 +52,15 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           template = coldFrontTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
-        case 'navigation':
-            template = menuTemplate;
-            path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
-            break;
+        case 'navigation': {
+          node.frontmatter.path !== 'user-guides' ? (
+            template = menuTemplate
+          ) : (
+            template = userGuidesTemplate
+          )
+          path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+        }
+        break;
         case 'userSupport':
           template = userGuidesMainTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`

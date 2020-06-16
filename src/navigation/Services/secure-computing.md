@@ -1,5 +1,6 @@
 ---
 title: Secure Computing
+id: 4
 thumbnail: /images/sr-icon-4.png
 path: secure-computing
 parentPath: services

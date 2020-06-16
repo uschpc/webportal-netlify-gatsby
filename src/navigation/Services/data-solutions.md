@@ -1,5 +1,6 @@
 ---
 title: Data Solutions
+id: 2
 thumbnail: /images/sr-icon-4.png
 path: data-solutions
 parentPath: services

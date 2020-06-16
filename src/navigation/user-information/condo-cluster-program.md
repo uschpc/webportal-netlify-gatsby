@@ -1,8 +1,8 @@
 ---
-title: Knowledge Base
+title: Condo Cluster Program
+id: 7
 thumbnail: /images/sr-icon-4.png
-path: knowledge-base
-parentPath: user-information
+path: condo-cluster-program
 cat: navigation
 parentEle: User Information
 ---

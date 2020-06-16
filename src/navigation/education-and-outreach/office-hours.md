@@ -1,5 +1,6 @@
 ---
-title: Office Hours
+title: Office Hours and Consultations
+id: 2
 thumbnail: /images/sr-icon-4.png
 path: office-hours
 parentPath: education-and-outreach

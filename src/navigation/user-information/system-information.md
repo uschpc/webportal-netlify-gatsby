@@ -1,7 +1,8 @@
 ---
-title: Knowledge Base
+title: System Information
+id: 3
 thumbnail: /images/sr-icon-4.png
-path: knowledge-base
+path: system-information
 parentPath: user-information
 cat: navigation
 parentEle: User Information

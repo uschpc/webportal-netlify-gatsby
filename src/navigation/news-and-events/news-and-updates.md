@@ -1,5 +1,6 @@
 ---
 title: News and Updates
+id: 1
 thumbnail: /images/sr-icon-4.png
 path: news-and-updates
 parentPath: education-and-outreach

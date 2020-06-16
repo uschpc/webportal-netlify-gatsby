@@ -1,5 +1,6 @@
 ---
 title: Customized Research Consulting
+id: 5
 thumbnail: /images/sr-icon-4.png
 path: customized-research-consulting
 parentPath: services

@@ -95,7 +95,7 @@ export const coldFrontQuery = graphql`
       }
       html
     }
-    navigation: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "navigation"}}}) {
+    navigation: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "navigation"}}}) {
       edges {
         node {
           frontmatter {

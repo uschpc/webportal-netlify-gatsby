@@ -1,5 +1,6 @@
 ---
 title: Seminars & Workshops
+id: 1
 thumbnail: /images/sr-icon-4.png
 path: seminars-and-workshops
 parentPath: education-and-outreach
