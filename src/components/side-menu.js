@@ -52,7 +52,7 @@ const SideMenu = (data) => {
                     <Link className={`coldfront-menu-items ${pageTitle === item.node.frontmatter.title ? 'focused' : 'regular'}`} to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
                         {item.node.frontmatter.title}
                     </Link>
-                    {(item.node.frontmatter.cat !== 'userGuides' || item.node.frontmatter.cat !== 'userSupport') && generateSubMenuItems(item.node.frontmatter.title, data.content && data.content.frontmatter.title, data)}
+                    {(item.node.frontmatter.cat !== 'userGuides' || item.node.frontmatter.cat !== 'userSupport' || item.node.frontmatter.cat !== 'navigation') && generateSubMenuItems(item.node.frontmatter.title, data.content && data.content.frontmatter.title, data)}
                 </ul>
                 )
             })}

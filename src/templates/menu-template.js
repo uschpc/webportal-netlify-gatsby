@@ -1,17 +1,57 @@
-import React, { useEffect } from 'react'
-import { Link } from 'gatsby'
+import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Footer from '../components/footer'
+import SharedTemplate from '../components/sharedTemplate'
+import Markdown from "react-markdown"
+import SideMenu from '../components/side-menu'
+import { Link } from 'gatsby'
+
+const findSubMenu = (menubar, nav) => {
+  console.log(nav);
+  const subNav = nav.edges.filter((ele, i) => {
+    return (ele.node.frontmatter.parentEle === menubar)
+    });
+  return subNav ? subNav : null;
+}
 
 export default function Template({ data }) {
-    const post = data.md;
+  console.log(data);
+  let content = data.content;
+  let subMenu = findSubMenu(content.frontmatter.parentEle, data.sideMenu)
+  
     return (
       <Layout {...data.navigation}>
-          <SEO title={post.frontmatter.title}/>
-          <div className="menu-container">
-              <h1>{post.frontmatter.title}</h1>
-              <div className="html-content-coldfront" dangerouslySetInnerHTML={{ __html: post.html }} />
+          <SEO title="User Guides"/>
+          <div className="user-guides-main-pages">
+            <div className="container">
+                <div className="left-column">
+                  <h2>{content.frontmatter.parentEle}</h2>
+                  {subMenu.map((item, i) => {
+                  return (
+                    <div className="side-menu" key={i}>
+                      <ul>
+                          <Link className={`coldfront-menu-items ${content.frontmatter.title === item.node.frontmatter.title ? 'focused' : 'regular'}`} to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
+                              {item.node.frontmatter.title}
+                          </Link>
+                      </ul>
+                    </div>
+                      )
+                  })}
+                </div>
+                <div className="middle-column">
+                  <h1>{content.frontmatter.title}</h1>
+                    <Markdown source={content.html} escapeHtml={false} />
+                </div>
+                <div className="right-column">
+                    <div className="system-status">
+                        <h4>Related Links</h4>
+                        <h5>Some links</h5>
+                        <h5>Some links</h5>
+                        <h5>Some links</h5>
+                    </div>
+                </div>
+              </div>
           </div>
           <Footer />
       </Layout>
@@ -20,23 +60,73 @@ export default function Template({ data }) {
 
 export const coldFrontQuery = graphql`
   query($slug: String!) {
-    md: markdownRemark(frontmatter: {cat: {eq: "navigation"}, path: {eq: $slug}}) {
+    md: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "userGuides"}}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            parentPath
+            cat
+            excerpt
+          }
+          html
+        }
+      }
+    }
+    content: markdownRemark(frontmatter: {cat: {eq: "navigation"}, path: {eq: $slug}}) {
         frontmatter {
           title
-          path
-          parentPath
-          cat
+          route
+          routePath
+          parentEle
         }
-        html
+      html
+    }
+    routes: allMarkdownRemark(filter: {frontmatter: {routeCat: {eq: "route"}}}, sort: {fields: frontmatter___id}) {
+      edges {
+        node {
+          id
+          frontmatter {
+            path
+            route
+            routePath
+          }
+        }
       }
+    }
+    sideMenu: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "navigation"}}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            parentPath
+            parentEle
+            cat
+          }
+        }
+      }
+    }
+    subMenu: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "sharedTemplate"}}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            parentPath
+          }
+        }
+      }
+    }
     navigation: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "navigation"}}}) {
       edges {
         node {
           frontmatter {
             path
+            parentPath
             title
             parentEle
-            parentPath
           }
         }
       }
