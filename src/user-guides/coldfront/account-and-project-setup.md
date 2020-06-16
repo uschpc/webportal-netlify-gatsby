@@ -24,6 +24,7 @@ To begin, [Log into ColdFront](https://hpcaccount.usc.edu/)
 
 STEP 1:  Before you will be able to run jobs or get access to any of HPC's resources, you will need to add a project:  
 [Creating a new project](create-a-new-project)
+**NOTE: 6/01/2020: HPC migrated all projects owned by a valid PI (faculty/staff) from our old system to ColdFront as a convenience.  Projects where the PI is a student were NOT migrated to ColdFront.  Generally each PI should have one project.  Some PIs may require additional projects depending on their roles at the university.  Anyone teaching classes should create projects for each course taught (these projects can be reused from semester to semester).  Also, anyone using the cluster for work outside their general research should create a separate project.**
 
 
 STEP 2:  Then you will need to request an allocation to at least one compute resource (cluster, storage, cloud, etc) at HPC you'd like to use.  If you require access to more than one resource, you can request multiple allocations at this time:  

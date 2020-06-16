@@ -10,7 +10,7 @@ parentPage: User Guides
 ---
 
 [Log into ColdFront](https://hpcaccount.usc.edu/)  
-**NOTE: 6/01/2020: HPC migrated all projects owned a valid PI (faculty/staff) from our old system to ColdFront as a convenience.  Projects where the PI is a student were NOT migrated to ColdFront.  Generally each PI should have one project.  Some PIs may require additional projects depending on their roles at the university.  Anyone teaching classes should create projects for each course taught (these projects can be reused from semester to semester).  Also, anyone using the cluster for work outside their general research should create a separate project.**
+**NOTE: 6/01/2020: HPC migrated all projects owned by a valid PI (faculty/staff) from our old system to ColdFront as a convenience.  Projects where the PI is a student were NOT migrated to ColdFront.  Generally each PI should have one project.  Some PIs may require additional projects depending on their roles at the university.  Anyone teaching classes should create projects for each course taught (these projects can be reused from semester to semester).  Also, anyone using the cluster for work outside their general research should create a separate project.**
 
 &nbsp;  
 &nbsp;  
