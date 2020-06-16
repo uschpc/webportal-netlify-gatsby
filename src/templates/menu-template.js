@@ -8,7 +8,6 @@ import SideMenu from '../components/side-menu'
 import { Link } from 'gatsby'
 
 const findSubMenu = (menubar, nav) => {
-  console.log(nav);
   const subNav = nav.edges.filter((ele, i) => {
     return (ele.node.frontmatter.parentEle === menubar)
     });
@@ -16,7 +15,6 @@ const findSubMenu = (menubar, nav) => {
 }
 
 export default function Template({ data }) {
-  console.log(data);
   let content = data.content;
   let subMenu = findSubMenu(content.frontmatter.parentEle, data.sideMenu)
   
