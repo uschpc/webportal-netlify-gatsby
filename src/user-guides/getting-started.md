@@ -4,6 +4,7 @@ id: 1
 date: 2020-06-04T00:00:00.00Z
 title: Getting Started
 excerpt: A quick-start guide for getting started on Discovery, the ARCC's high-performance computing cluster.
+thumbnail: /images/Flag.png
 path: getting-started
 route: User Guides
 parentPath: user-information/user-guides

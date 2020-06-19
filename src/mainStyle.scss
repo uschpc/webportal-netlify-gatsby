@@ -168,6 +168,14 @@ body {
           h3 {
             color: #990000;
           }
+          ul {
+            list-style-position: inside;
+            list-style: disc;
+            margin-left: 20px;
+            li {
+              margin-left: 20px;
+            }
+          }
           a {
             color: black; 
             display: block;
@@ -308,14 +316,28 @@ body {
           h3 {
             color: #990000;
           }
+          ul {
+            list-style-position: inside;
+            list-style: disc;
+            margin-left: 20px;
+            li {
+              margin-left: 20px;
+              a {
+                margin: 0;
+              }
+            }
+          }
           .content-container {
             display: block;
             padding-top: 14px;
+            li {
+              margin-left: 20px;
+            }
           }
           a {
             color: black; 
             display: block;
-            margin-left: 20px;
+            margin: 0;
 
             &:hover {
               li {
@@ -569,15 +591,15 @@ body {
   }
 }
 
-footer {
-  background-color: #ffcd05;
-  position: relative;
-  text-align: center;
-  a {
-    color: black;
-    font-weight: bold;
+  footer {
+    background-color: #ffcd05;
+    position: relative;
+    text-align: center;
+    a {
+      color: black;
+      font-weight: bold;
+    }
   }
-}
 }
 
 a {
@@ -890,7 +912,7 @@ p {
       &.hpc-logo{
         img {
           height: -webkit-fill-available;
-          max-height: 52px;
+          max-height: 100%;
         }
       }
     }

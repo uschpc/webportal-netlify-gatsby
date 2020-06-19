@@ -3,7 +3,7 @@ author: Yaseen A
 id: 4
 date: 2020-04-22T18:19:38.387Z
 title: Research Computing User Portal
-thumbnail: /images/sr-icon-4.png
+thumbnail: /images/Door.png
 excerpt: Request and manage resources and allocations for your projects.
 path: login
 parentPath: user-information

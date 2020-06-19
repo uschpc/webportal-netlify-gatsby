@@ -25,6 +25,7 @@ export const pageQuery = graphql`
             frontmatter {
               title
               path
+              thumbnail
               parentPath
               excerpt
               id

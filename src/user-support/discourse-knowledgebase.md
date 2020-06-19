@@ -3,7 +3,7 @@ author: Yaseen A
 id: 2
 date: 2020-04-22T18:19:38.387Z
 title: Discourse Knowledgebase
-thumbnail: /images/sr-icon-4.png
+thumbnail: /images/Comment.png
 excerpt: RA question and answer community for ARCC-specific topics.
 path: discourse-knowledgebase
 parentPath: user-information
