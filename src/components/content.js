@@ -3,8 +3,9 @@ import _ from 'lodash'
 
 const Content = (props) => { 
     const [tags, loadTags] = useState([]);
+    let element = props.flag ? 'h2' : 'h3'
     const generateTags = () => {
-        return [...document.getElementsByTagName('h3')] || [];
+        return [...document.getElementsByTagName(element)] || [];
     }
 
     const scrollToView = (e) => {
@@ -23,17 +24,20 @@ const Content = (props) => {
         
     }, [])
     return (
-       <span className="content-container">
-            {tags.length > 0 && (
-            <span>
-                <h3>Contents</h3>
-                {tags.map((item, i) => {
-                    return (
-                        <li key={i} value={item.innerHTML} onClick={e => scrollToView(e)}>{item.innerHTML}</li>
-                    )
-                })}
-            </span>
-            )}   
+        <span className="content-wrapper">
+        {tags.length > 0 && (
+        <span className="content-container">
+                <span>
+                    <h3>Contents</h3>
+                    {tags.map((item, i) => {
+                        return (
+                            <li key={i} value={item.innerHTML} onClick={e => scrollToView(e)}>{item.innerHTML}</li>
+                        )
+                    })}
+                </span>
+            
+        </span>
+       )}   
        </span>
     )
 }

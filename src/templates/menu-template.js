@@ -6,6 +6,7 @@ import SharedTemplate from '../components/sharedTemplate'
 import Markdown from "react-markdown"
 import SideMenu from '../components/side-menu'
 import { Link } from 'gatsby'
+import Content from '../components/content'
 
 const findSubMenu = (menubar, nav) => {
   const subNav = nav.edges.filter((ele, i) => {
@@ -24,7 +25,7 @@ export default function Template({ data }) {
           <div className="user-guides-main-pages">
             <div className="container">
                 <div className="left-column">
-                  <h2>{content.frontmatter.parentEle}</h2>
+                  <h3>{content.frontmatter.parentEle}</h3>
                   {subMenu.map((item, i) => {
                   return (
                     <div className="side-menu" key={i}>
@@ -39,6 +40,7 @@ export default function Template({ data }) {
                 </div>
                 <div className="middle-column">
                   <h1>{content.frontmatter.title}</h1>
+                    <Content flag={true}/>
                     <Markdown source={content.html} escapeHtml={false} />
                 </div>
                 <div className="right-column">

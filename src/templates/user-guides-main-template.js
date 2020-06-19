@@ -6,6 +6,7 @@ import SharedTemplate from '../components/sharedTemplate'
 import Markdown from "react-markdown"
 import SideMenu from '../components/side-menu'
 import { Link } from 'gatsby'
+import UserGuideSideMenu from '../components/UserGuideSideMenu'
 
 export default function Template({ data }) {
   let mainPage = data.mainPage;
@@ -16,8 +17,8 @@ export default function Template({ data }) {
           <div className="user-guides-main-pages">
             <div className="container">
                 <div className="left-column">
-                  <h2>User Support</h2>
-                  <SideMenu {...data}/>
+                  <h3> {mainPage ? "User Information" : "User Support"}</h3>
+                  {mainPage ? <UserGuideSideMenu content={mainPage} sideMenu={data.UserGuidesSideMenu} /> : <SideMenu {...data}/>}
                 </div>
                 <div className="middle-column">
                   <h1>{mainPage ? mainPage.frontmatter.title : content.frontmatter.title}</h1>
@@ -113,6 +114,28 @@ export const coldFrontQuery = graphql`
         }
       }
     }
+    UserGuidesSideMenu: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "navigation"}}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            parentPath
+            parentEle
+            cat
+          }
+        }
+      }
+    }
+    UserGuidesContent: markdownRemark(frontmatter: {cat: {eq: "navigation"}, path: {eq: $slug}}) {
+      frontmatter {
+        title
+        route
+        routePath
+        parentEle
+      }
+    html
+  }
     navigation: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "navigation"}}}) {
       edges {
         node {

@@ -5,6 +5,7 @@ import SEO from '../components/seo'
 import Markdown from "react-markdown"
 import Footer from '../components/footer'
 import SideMenu from '../components/side-menu'
+import Content from '../components/content'
 
 export default function Template({ data }) {
     const post = data.content;
@@ -14,11 +15,12 @@ export default function Template({ data }) {
           <div className="user-guides-pages">
           <div className="container">
               <div className="left-column">
-                <h2>User Guides</h2>
+                <h3>User Guides</h3>
                 <SideMenu {...data}/>
               </div>
               <div className="middle-column">
                   <h1>{post.frontmatter.title}</h1>
+                  <Content flag={true}/>
                   <Markdown source={post.html} escapeHtml={false} />
                   {(post.frontmatter.title === 'High-Performance Computing') && data.allContent.edges.map((item, i) => {
                     return (
