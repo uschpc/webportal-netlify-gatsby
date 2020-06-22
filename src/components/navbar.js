@@ -57,17 +57,23 @@ class Navbar extends React.Component {
     subNav: {
       "About": [],
       "Services": [],
-      "User Information": []
+      "User Information": [],
+      "Education & Outreach": [],
+      "News and Events": [],
     },
     signflag: {
       "About": '+',
       "Services": '+',
-      "User Information": '+'
+      "User Information": '+',
+      "Education & Outreach": '+',
+      "News and Events": '+',
     },
     subNavFlag: {
       "About": false,
       "Services": false,
-      "User Information": false
+      "User Information": false,
+      "Education & Outreach": false,
+      "News and Events": false,
     },
     openSearchIcon: false
   };
@@ -119,12 +125,16 @@ class Navbar extends React.Component {
       subNav: {
         "About": [],
         "Services": [],
-        "User Information": []
+        "User Information": [],
+        "Education & Outreach": [],
+        "News and Events": [],
       },
       signflag: {
         "About": '+',
         "Services": '+',
-        "User Information": '+'
+        "User Information": '+',
+        "Education & Outreach": '+',
+        "News and Events": '+',
       },
     })
   }
@@ -252,7 +262,7 @@ class Navbar extends React.Component {
                         {this.state.subNav[n.title] && this.state.subNav[n.title].map((item, i) => {
                             return (
                               <ul>
-                                <Link to={item.node.frontmatter.path} key={i}>
+                                <Link to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`} key={i}>
                                   {item.node.frontmatter.title}
                                 </Link>
                             </ul>

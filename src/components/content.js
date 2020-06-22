@@ -27,14 +27,14 @@ const Content = (props) => {
         <span className="content-wrapper">
         {tags.length > 0 && (
         <span className="content-container">
-                <span>
-                    <h3>Contents</h3>
-                    {tags.map((item, i) => {
-                        return (
-                            <li key={i} value={item.innerHTML} onClick={e => scrollToView(e)}>{item.innerHTML}</li>
-                        )
-                    })}
-                </span>
+            <span>
+                <h3>Contents</h3>
+                {tags.map((item, i) => {
+                    return (
+                        <li key={i} value={item.innerHTML} onClick={e => scrollToView(e)}>{item.innerHTML}</li>
+                    )
+                })}
+            </span>
             
         </span>
        )}   

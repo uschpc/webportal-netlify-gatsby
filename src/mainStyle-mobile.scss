@@ -79,6 +79,20 @@ and (max-width : 1024px)  {
                     }
                 }
             }
+            .user-guides-main-pages {
+                margin: 44px 3%;
+                .page-body, .container{
+                    .left-column {
+                        display: none;
+                    }
+                    .middle-column{
+                        width: 100%;
+                    }
+                    .right-column {
+                        display: none;
+                    }
+                }
+            }
         }
         .search-result {
             margin: 80px 3%;
@@ -133,7 +147,9 @@ and (max-width : 1024px)  {
                     border: none;
                     &.show {
                         display: block;
-                        text-align: end;
+                        text-align: center;
+                        font-size: 31px;
+                        line-height: 1px;
                     }
                     &.hide {
                         display: none;
@@ -141,8 +157,8 @@ and (max-width : 1024px)  {
                 }
                 .btn-wrap{
                     display: flex;
-                    min-height: 36px;
                     flex-direction: row-reverse;
+                    align-items: center;
                     button {
                         outline: none;
                         border-left: none;
@@ -155,8 +171,10 @@ and (max-width : 1024px)  {
                             background: transparent;
                             border-bottom: none;
                             border-top: none;
+                            cursor: pointer;
                             &.show {
                                 display: block;
+                                font-size: 29px;
                             }
                             &.hide {
                                 display: none;
@@ -332,6 +350,23 @@ and (max-width : 767px) {
                     }
                 }
             }
+            .user-guides-main-pages {
+                margin: 44px 3%;
+                .page-body, .container{
+                    .left-column {
+                        display: none;
+                    }
+                    .middle-column{
+                        width: 100%;
+                        a {
+                            width: 49%;
+                        }
+                    }
+                    .right-column {
+                        display: none;
+                    }
+                }
+            }
         }
         .search-result {
             margin: 80px 3%;
@@ -352,7 +387,9 @@ and (max-width : 767px) {
                     border: none;
                     &.show {
                         display: block;
-                        text-align: end;
+                        text-align: center;
+                        font-size: 31px;
+                        line-height: 1px;
                     }
                     &.hide {
                         display: none;
@@ -362,6 +399,7 @@ and (max-width : 767px) {
                     display: flex;
                     min-height: 36px;
                     flex-direction: row-reverse;
+                    align-items: center;
                     button {
                         outline: none;
                         border-left: none;
@@ -374,8 +412,10 @@ and (max-width : 767px) {
                             background: transparent;
                             border-bottom: none;
                             border-top: none;
+                            cursor: pointer;
                             &.show {
                                 display: block;
+                                font-size: 29px;
                             }
                             &.hide {
                                 display: none;
@@ -568,6 +608,31 @@ and (max-width : 767px) {
                     .social {
                         display: flex;
                         justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 550px) {
+    #___gatsby {
+        #gatsby-focus-wrapper {
+            .user-guides-main-pages {
+               
+                .container{
+                    display: block;
+                    .middle-column{
+                        width: 100%;
+                        a {
+                            width: 100%;
+                        }
+                    }
+                    .right-column {
+                        width: 100%;
+                        display: block;
                     }
                 }
             }

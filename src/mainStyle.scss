@@ -344,6 +344,12 @@ body {
               margin-left: 20px;
             }
           }
+          p {
+            a {
+              color: #990000; 
+              display: unset;
+            }
+          }
           a {
             color: black; 
             display: block;
