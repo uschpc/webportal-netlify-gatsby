@@ -1,6 +1,6 @@
 ---
 title: Events
-id: 3
+id: 4
 thumbnail: /images/sr-icon-4.png
 path: events
 parentPath: education-and-outreach

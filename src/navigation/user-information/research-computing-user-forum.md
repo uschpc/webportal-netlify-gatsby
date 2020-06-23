@@ -1,6 +1,6 @@
 ---
-title: Research Computing User Forum
-id: 5
+title: User Forum
+id: 6
 thumbnail: /images/sr-icon-4.png
 path: research-computing-user-forum
 parentPath: user-information

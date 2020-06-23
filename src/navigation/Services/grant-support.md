@@ -1,5 +1,5 @@
 ---
-title: Grant Support
+title: Grant and Publication Support
 id: 7
 thumbnail: /images/sr-icon-4.png
 path: grant-support

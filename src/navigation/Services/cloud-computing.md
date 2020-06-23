@@ -1,6 +1,6 @@
 ---
 title: Cloud Computing
-id: 3
+id: 4
 thumbnail: /images/sr-icon-4.png
 path: cloud-computing
 parentPath: services

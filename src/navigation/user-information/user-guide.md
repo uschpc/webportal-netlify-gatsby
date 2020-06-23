@@ -1,6 +1,6 @@
 ---
 title: User Guides
-id: 6
+id: 4
 thumbnail: /images/sr-icon-4.png
 path: user-guides
 parentPath: user-information

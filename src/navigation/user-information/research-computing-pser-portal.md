@@ -1,6 +1,6 @@
 ---
 title: Research Computing User Portal
-id: 4
+id: 5
 thumbnail: /images/sr-icon-4.png
 path: research-computing-portal
 parentPath: user-information

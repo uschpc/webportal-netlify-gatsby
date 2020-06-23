@@ -1,8 +1,8 @@
 ---
-title: News and Announcements
-id: 1
+title: ARC Newsletter
+id: 2
 thumbnail: /images/sr-icon-4.png
-path: news-and-updates
+path: arc-newsletter
 parentPath: education-and-outreach
 cat: navigation
 parentEle: News and Events
