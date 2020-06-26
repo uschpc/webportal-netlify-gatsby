@@ -12,5 +12,9 @@ parentPath: user-information/user-guides/high-performance-computing
 cat: sharedTemplate
 parentPage: User Guides
 ---
-How to log in to Discovery, run jobs, and manage your projects and allocations.
+Launched in July 2020, USC Research Computing's high-performance computing cluster, Discovery, allows researchers to conduct advanced computational research in a wide variety of scientific fields.
 
+The following user guides are designed to help you get started with your work on Discovery.
+
+Getting Started
+Running Jobs
