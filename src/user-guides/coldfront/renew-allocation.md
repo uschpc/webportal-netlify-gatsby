@@ -7,6 +7,7 @@ path: renew-allocation
 parentPath: user-information/user-guides/high-performance-computing/research-computing-user-portal
 cat: coldFront
 parentPage: User Guides
+parentSideMenuParent: Research Computing User Portal
 ---
 
 Each type of resource offered by ARC has a different expiration policy.

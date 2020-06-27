@@ -7,6 +7,7 @@ path: managing-allocations
 parentPath: user-information/user-guides/high-performance-computing/research-computing-user-portal
 cat: coldFront
 parentPage: User Guides
+parentSideMenuParent: Research Computing User Portal
 ---
 
 An allocation gives you access to a resource and, possibly, limitations for that access.  All ARC resources (clusters, servers, storage, cloud, licenses, etc) require an allocation.  All allocations expire at some point, either on a date or when a limit is reached. For example, an allocation to a cloud resource has a limit of the total number of core hours allowed by that user. Once the user has reached that number, the allocation expires.  

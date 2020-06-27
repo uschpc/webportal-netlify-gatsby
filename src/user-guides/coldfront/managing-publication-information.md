@@ -7,6 +7,7 @@ path: managing-publication-information
 parentPath: user-information/user-guides/high-performance-computing/research-computing-user-portal
 cat: coldFront
 parentPage: User Guides
+parentSideMenuParent: Research Computing User Portal
 ---
 
 &nbsp;

@@ -92,6 +92,7 @@ export const coldFrontQuery = graphql`
         cat
         route
         routePath
+        parentSideMenuParent
       }
       html
     }

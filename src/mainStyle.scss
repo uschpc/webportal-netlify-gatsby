@@ -9,6 +9,11 @@
 body {
   font-family: 'Source Sans Pro', sans-serif;
   #___gatsby {
+    #gatsby-focus-wrapper{
+      .right-column {
+         visibility: hidden;
+      }
+    }
     overflow: hidden;
 
     iframe {

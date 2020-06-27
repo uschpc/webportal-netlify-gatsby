@@ -7,6 +7,7 @@ path: account-and-project-setup
 parentPath: user-information/user-guides/high-performance-computing/research-computing-user-portal
 cat: coldFront
 parentPage: User Guides
+parentSideMenuParent: Research Computing User Portal
 ---
 
 All active USC members have access to ARC resources and the user portal, but only faculty and staff members can act as Principle Investigators (PIs). In the user portal, PIs can create projects, request resource allocations for their projects, and add other users (including students) to the projects they control.
