@@ -1,12 +1,11 @@
 ---
 excerpt: Instructions for enrolling in the ARCC's Condo Cluster Program and
   subscribing to computing and storage resources.
-path: research-computing-user-portal
+path: user-information/user-guides/high-performance-computing/research-computing-user-portal
 route: High-Performance Computing
 author: Yaseen A.
 routePath: user-information/user-guides/high-performance-computing
 date: 2020-06-04T00:00:00.000Z
-parentPath: user-information/user-guides/high-performance-computing
 cat: sharedTemplate
 title: Research Computing User Portal
 parentPage: User Guides

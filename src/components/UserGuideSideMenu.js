@@ -14,13 +14,23 @@ const UserGuideSideMenu = ({content, sideMenu}) => {
         <span>
             {subMenu.map((item, i) => {
             return (
-            <div className="side-menu" key={i}>
-                <ul>
-                    <Link className={`coldfront-menu-items ${content.frontmatter.title === item.node.frontmatter.title ? 'focused' : 'regular'}`} to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
-                        {item.node.frontmatter.title}
-                    </Link>
-                </ul>
-            </div>
+                !item.node.frontmatter.externalPath ? (
+                    <div className="side-menu" key={i}>
+                        <ul>
+                            <Link className={`coldfront-menu-items ${content.frontmatter.title === item.node.frontmatter.title ? 'focused' : 'regular'}`} to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}>
+                                {item.node.frontmatter.title}
+                            </Link>
+                        </ul>
+                    </div>
+                ) : (
+                    <div className="side-menu" key={i}>
+                        <ul>
+                            <a className={`coldfront-menu-items ${content.frontmatter.title === item.node.frontmatter.title ? 'focused' : 'regular'}`} href={item.node.frontmatter.externalPath}>
+                                {item.node.frontmatter.title}
+                            </a>
+                        </ul>
+                    </div>
+                )
                 )
             })}
         </span>

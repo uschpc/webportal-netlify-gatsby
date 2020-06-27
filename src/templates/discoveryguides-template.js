@@ -58,6 +58,7 @@ export const discoveryGuidesQuery = graphql`
             title
             path
             parentPath
+            externalPath
           }
         }
       }

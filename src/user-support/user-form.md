@@ -7,7 +7,6 @@ thumbnail: /images/Comment.png
 excerpt: RA question and answer community for ARCC-specific topics.
 path: discourse-knowledgebase
 externalPath: https://hpc-discourse.usc.edu/categories
-parentPath: null
 cat: userSupport
 parentEle: none
 ---

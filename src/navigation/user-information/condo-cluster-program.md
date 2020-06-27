@@ -2,9 +2,8 @@
 title: Condo Cluster Program
 id: 7
 thumbnail: /images/sr-icon-4.png
-path: condo-cluster-program
-parentPath: user-information
+path: user-information/user-guides/condo-cluster-program
 cat: navigation
 parentEle: User Information
 ---
-Let's see what happens
+This page is linked to another page

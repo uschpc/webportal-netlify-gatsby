@@ -6,7 +6,6 @@ title: Research Computing User Portal
 thumbnail: /images/Door.png
 excerpt: Request and manage resources and allocations for your projects.
 path: user-information/user-guides/high-performance-computing/research-computing-user-portal
-parentPath: null
 cat: userSupport
 parentEle: none
 ---

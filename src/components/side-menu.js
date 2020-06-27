@@ -8,11 +8,20 @@ const generateSubMenuLevel2Items = (sideMenuTitle, pageTitle, subMenu) => {
         <ul className="submenu-items-level-2">
           {subMenu.edges.map ((item, i) => {
           return (
-            <li key={i}>
-              <Link className={`${title === item.node.frontmatter.title ? 'focused' : 'regular'}`} to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
-                {item.node.frontmatter.title}
-              </Link>
-            </li>
+            !item.node.frontmatter.externalPath ? (
+              <li key={i}>
+                <Link className={`${title === item.node.frontmatter.title ? 'focused' : 'regular'}`} to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
+                  {item.node.frontmatter.title}
+                </Link>
+              </li>
+            ) : (
+              <li key={i}>
+                <a className={`${title === item.node.frontmatter.title ? 'focused' : 'regular'}`} href={item.node.frontmatter.externalPath}>
+                  {item.node.frontmatter.title}
+                </a>
+              </li>
+            )
+            
           )})}
         </ul>
       )
@@ -49,12 +58,21 @@ const SideMenu = (data) => {
         <div className="side-menu">
             {data.sideMenu.edges.map((item, i) => {
                 return (
-                <ul key={i}>
-                    <Link className={`coldfront-menu-items ${pageTitle === item.node.frontmatter.title ? 'focused' : 'regular'}`} to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
-                        {item.node.frontmatter.title}
-                    </Link>
-                    {(item.node.frontmatter.cat !== 'userGuides' || item.node.frontmatter.cat !== 'userSupport' || item.node.frontmatter.cat !== 'navigation') && generateSubMenuItems(item.node.frontmatter.title, data.content && data.content.frontmatter.title, data)}
-                </ul>
+                  !item.node.frontmatter.externalPath ? (
+                    <ul key={i}>
+                        <Link className={`coldfront-menu-items ${pageTitle === item.node.frontmatter.title ? 'focused' : 'regular'}`} to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}>
+                            {item.node.frontmatter.title}
+                        </Link>
+                        {(item.node.frontmatter.cat !== 'userGuides' || item.node.frontmatter.cat !== 'userSupport' || item.node.frontmatter.cat !== 'navigation') && generateSubMenuItems(item.node.frontmatter.title, data.content && data.content.frontmatter.title, data)}
+                    </ul>
+                  ) : (
+                    <ul key={i}>
+                        <a className={`coldfront-menu-items ${pageTitle === item.node.frontmatter.title ? 'focused' : 'regular'}`} href={item.node.frontmatter.externalPath}>
+                            {item.node.frontmatter.title}
+                        </a>
+                        {(item.node.frontmatter.cat !== 'userGuides' || item.node.frontmatter.cat !== 'userSupport' || item.node.frontmatter.cat !== 'navigation') && generateSubMenuItems(item.node.frontmatter.title, data.content && data.content.frontmatter.title, data)}
+                    </ul>
+                  )
                 )
             })}
          </div>
