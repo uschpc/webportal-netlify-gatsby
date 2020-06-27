@@ -156,7 +156,7 @@ body {
               order: 1
             }
             .title {
-              color: #686766;
+              color: black;
               font-weight: 500;
               font-size: 17px;
               margin: 1.375rem 0 1rem;
@@ -164,6 +164,7 @@ body {
             }
             p {
               font-size: 14px;
+              color: #686766;
               order: 3;
             }
             .copy-text {
@@ -187,35 +188,49 @@ body {
         }
       }
     }
-    .category-link-wrapper {
-      border-top: 1px solid #bab9b7;
-      overflow: hidden;
-      text-align: right;
-      .category-news {
-        &.category-link {
-          &.category-link-lg {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            padding-top: 5px;
-            color: #bab9b7;
-            font-size: 20px;
-            width: auto;
-            &:hover {
-              color: #990000;
-              text-decoration: underline;
-            } 
-            img {
-              width: 45px;
-              margin: 0;
-            }
-            p {
-              margin: 0 0 0 10px;
+    .middle-column {
+      .block {
+        &.news-child-pages {
+          padding-top: 8px;
+          .author, .date {
+            color: #686766;
+          }
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .category-link-wrapper {
+        border-top: 1px solid #bab9b7;
+        overflow: hidden;
+        text-align: right;
+        .category-news {
+          &.category-link {
+            &.category-link-lg {
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+              padding-top: 5px;
+              color: #bab9b7;
+              font-size: 20px;
+              width: auto;
+              &:hover {
+                color: #990000;
+                text-decoration: underline;
+              } 
+              img {
+                width: 45px;
+                margin: 0;
+              }
+              p {
+                margin: 0 0 0 10px;
+              }
             }
           }
         }
       }
     }
+    
   }
   .user-guides-main-pages, .nav-pages {
     margin: 44px 10%;

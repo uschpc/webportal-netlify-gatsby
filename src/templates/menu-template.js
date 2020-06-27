@@ -8,6 +8,7 @@ import SideMenu from '../components/side-menu'
 import { Link } from 'gatsby'
 import Content from '../components/content'
 import LatestNews from '../components/latest-news'
+import CustomNews from '../components/custom-news'
 
 const findSubMenu = (menubar, nav) => {
   const subNav = nav.edges.filter((ele, i) => {
@@ -17,7 +18,7 @@ const findSubMenu = (menubar, nav) => {
 }
 
 export default function Template({ data }) {
-  console.log('kakkaka')
+  console.log(data)
   let content = data.content || data.newsContent;
   let subMenu = findSubMenu(content.frontmatter.parentEle, data.sideMenu)
   
@@ -50,20 +51,28 @@ export default function Template({ data }) {
                   })}
                 </div>
                 <div className="middle-column">
-                  <h1>{content.frontmatter.title}</h1>
-                    {(content.frontmatter.uniqID !== "news_Announcements") && <Content flag={true}/>}
-                    {(content.frontmatter.uniqID !== "news_Announcements") && <Markdown source={content.html} escapeHtml={false} />}
-                    {(content.frontmatter.uniqID === "news_Announcements") && <LatestNews {...data.news } flag={true} />}
-                    {(content.frontmatter.uniqID === "news_Announcements") && (
-                      <div class="category-link-wrapper type-primary">
-                        <Link class="category-link category-link-lg category-news type-primary" to={"/category/news/"}>
-                          <img src="/images/news-arrows.svg" />
-                          <p>
-                            View all Reasearch Computing News
-                          </p>
-                          </Link>
-                      </div>
-                    )}
+                <h1>{content.frontmatter.title}</h1>
+                  {content.frontmatter.cat !== 'news' ? (
+                    <>
+                      {(content.frontmatter.uniqID !== "news_Announcements") && <Content flag={true}/>}
+                      {(content.frontmatter.uniqID !== "news_Announcements") && <Markdown source={content.html} escapeHtml={false} />}
+                      {(content.frontmatter.uniqID === "news_Announcements") && <LatestNews {...data.news } flag={true} />}
+                      {(content.frontmatter.uniqID === "news_Announcements") && (
+                        <div class="category-link-wrapper type-primary">
+                          <Link class="category-link category-link-lg category-news type-primary" to={"/category/news/"}>
+                            <img src="/images/news-arrows.svg" />
+                            <p>
+                              View all Reasearch Computing News
+                            </p>
+                            </Link>
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    <CustomNews {...data.newsContent }/>
+                  )}
+                 
+                    
                 </div>
                 <div className="right-column">
                     <div className="system-status">
@@ -110,9 +119,14 @@ export const coldFrontQuery = graphql`
       frontmatter {
         title
         parentEle
-      }
-    html
-  }
+        cat
+        thumbnail
+        date
+        excerpt
+        author
+        }
+      html
+    }
     news: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "news"}}}) {
       edges {
         node {
