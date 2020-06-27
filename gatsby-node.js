@@ -58,7 +58,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           template = discoveryGuidesTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
-        case 'navigation': {
+        case 'navigation':
+        case 'news':  {
           node.frontmatter.path !== 'user-guides' ? (
             template = menuTemplate
           ) : (

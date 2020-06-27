@@ -44,6 +44,7 @@ export const pageQuery = graphql`
               path
               thumbnail
               excerpt
+              parentPath
             }
             html
           }

@@ -7,6 +7,7 @@ import Markdown from "react-markdown"
 import SideMenu from '../components/side-menu'
 import { Link } from 'gatsby'
 import Content from '../components/content'
+import LatestNews from '../components/latest-news'
 
 const findSubMenu = (menubar, nav) => {
   const subNav = nav.edges.filter((ele, i) => {
@@ -16,13 +17,14 @@ const findSubMenu = (menubar, nav) => {
 }
 
 export default function Template({ data }) {
-  let content = data.content;
+  console.log('kakkaka')
+  let content = data.content || data.newsContent;
   let subMenu = findSubMenu(content.frontmatter.parentEle, data.sideMenu)
   
     return (
       <Layout {...data.navigation}>
           <SEO title="User Guides"/>
-          <div className="user-guides-main-pages">
+          <div className="nav-pages">
             <div className="container">
                 <div className="left-column">
                   <h3>{content.frontmatter.parentEle}</h3>
@@ -49,8 +51,19 @@ export default function Template({ data }) {
                 </div>
                 <div className="middle-column">
                   <h1>{content.frontmatter.title}</h1>
-                    <Content flag={true}/>
-                    <Markdown source={content.html} escapeHtml={false} />
+                    {(content.frontmatter.uniqID !== "news_Announcements") && <Content flag={true}/>}
+                    {(content.frontmatter.uniqID !== "news_Announcements") && <Markdown source={content.html} escapeHtml={false} />}
+                    {(content.frontmatter.uniqID === "news_Announcements") && <LatestNews {...data.news } flag={true} />}
+                    {(content.frontmatter.uniqID === "news_Announcements") && (
+                      <div class="category-link-wrapper type-primary">
+                        <Link class="category-link category-link-lg category-news type-primary" to={"/category/news/"}>
+                          <img src="/images/news-arrows.svg" />
+                          <p>
+                            View all Reasearch Computing News
+                          </p>
+                          </Link>
+                      </div>
+                    )}
                 </div>
                 <div className="right-column">
                     <div className="system-status">
@@ -89,8 +102,31 @@ export const coldFrontQuery = graphql`
           route
           routePath
           parentEle
+          uniqID
         }
       html
+    }
+    newsContent: markdownRemark(frontmatter: {cat: {eq: "news"}, path: {eq: $slug}}) {
+      frontmatter {
+        title
+        parentEle
+      }
+    html
+  }
+    news: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "news"}}}) {
+      edges {
+        node {
+          frontmatter {
+            author
+            title
+            path
+            thumbnail
+            excerpt
+            parentPath
+          }
+          html
+        }
+      }
     }
     routes: allMarkdownRemark(filter: {frontmatter: {routeCat: {eq: "route"}}}, sort: {fields: frontmatter___id}) {
       edges {

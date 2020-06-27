@@ -79,7 +79,7 @@ and (max-width : 1024px)  {
                     }
                 }
             }
-            .user-guides-main-pages {
+            .user-guides-main-pages, .nav-pages {
                 margin: 44px 3%;
                 .page-body, .container{
                     .left-column {
@@ -350,7 +350,7 @@ and (max-width : 767px) {
                     }
                 }
             }
-            .user-guides-main-pages {
+            .user-guides-main-pages, .nav-pages {
                 margin: 44px 3%;
                 .page-body, .container{
                     .left-column {
@@ -620,7 +620,7 @@ and (min-width : 320px)
 and (max-width : 550px) {
     #___gatsby {
         #gatsby-focus-wrapper {
-            .user-guides-main-pages {
+            .user-guides-main-pages, .nav-pages {
                
                 .container{
                     display: block;
