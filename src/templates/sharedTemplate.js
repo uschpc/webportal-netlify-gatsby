@@ -37,6 +37,7 @@ export const sharedTemplateQuery = graphql`
             title
             parentEle
             parentPath
+            externalPath
           }
         }
       }

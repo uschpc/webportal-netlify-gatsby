@@ -108,7 +108,7 @@ export const coldFrontQuery = graphql`
         }
       }
     }
-    subMenu: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "sharedTemplate"}}}) {
+    subMenu: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "sharedTemplate"}}}) {
       edges {
         node {
           frontmatter {
@@ -127,6 +127,7 @@ export const coldFrontQuery = graphql`
             parentPath
             title
             parentEle
+            externalPath
           }
         }
       }

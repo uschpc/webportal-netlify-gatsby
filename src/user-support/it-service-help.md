@@ -10,5 +10,6 @@ parentPath: user-information
 cat: userSupport
 title: IT Services Help
 id: 6
+externalPath: https://itservices.usc.edu/self-help/
 ---
 Let's see what happens

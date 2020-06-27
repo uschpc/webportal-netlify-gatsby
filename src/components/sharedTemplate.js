@@ -14,15 +14,26 @@ const SharedTemplate = (items) => {
                     {items.cat !== 'userSupport' && <Markdown source={items.content.html} escapeHtml={false} />}
                     { items.cat !== 'sharedTemplate' ? (
                     items.md.edges.map ((item, i) => {
-                        return (
-                            <Link to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path} key={i}>
-                                <div className="user-support-box">
-                                    <img src={item.node.frontmatter.thumbnail} />
-                                    <p className="title">{item.node.frontmatter.title}</p>
-                                    <p className="description">{item.node.frontmatter.excerpt}</p>
-                                </div>
-                            </Link>
-                        )
+                        
+                            return (
+                                !item.node.frontmatter.externalPath ? (
+                                    <Link to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path} key={i}>
+                                        <div className="user-support-box">
+                                            <img src={item.node.frontmatter.thumbnail} />
+                                            <p className="title">{item.node.frontmatter.title}</p>
+                                            <p className="description">{item.node.frontmatter.excerpt}</p>
+                                        </div>
+                                    </Link>
+                                ) : (
+                                    <a href={item.node.frontmatter.externalPath} key={i}>
+                                        <div className="user-support-box">
+                                            <img src={item.node.frontmatter.thumbnail} />
+                                            <p className="title">{item.node.frontmatter.title}</p>
+                                            <p className="description">{item.node.frontmatter.excerpt}</p>
+                                        </div>
+                                    </a>
+                                )
+                            )
                     })) : (
                     items.md.edges.map ((item, i) => {
                         return (

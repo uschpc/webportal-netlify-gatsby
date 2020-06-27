@@ -134,6 +134,7 @@ export const postQuery = graphql`
             title
             parentEle
             parentPath
+            externalPath
           }
         }
       }

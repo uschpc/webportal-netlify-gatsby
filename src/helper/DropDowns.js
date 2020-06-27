@@ -114,6 +114,7 @@ const ServicesSubNavDropdown = ({ current, prev, nav }) => {
 
 const UserInfoSubNavDropdown = ({ current, prev, nav }) => {
   let subNav = assignedDropdownSubNav('User Information', nav);
+  console.log('yasen', subNav)
 
   return (
     <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
@@ -129,9 +130,15 @@ const UserInfoSubNavDropdown = ({ current, prev, nav }) => {
           {subNav.map((item, i) => {
              if (i <= 3) {
               return (
+                !item.node.frontmatter.externalPath ? (
                 <li key={i}>
                   <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </li>
+                ) : (
+                  <li key={i}>
+                    <a className="heading" href={item.node.frontmatter.externalPath}><h3 className="heading">{item.node.frontmatter.title}</h3></a>
+                  </li>
+                )
                 )}
               }
             )
@@ -144,11 +151,16 @@ const UserInfoSubNavDropdown = ({ current, prev, nav }) => {
             {subNav.map((item, i) => {
               if (i > 3) {
                 return (
+                  !item.node.frontmatter.externalPath ? (
                   <li key={i}>
                     <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                     </li>
+                  ) : (
+                    <li key={i}>
+                      <a className="heading" href={item.node.frontmatter.externalPath}><h3 className="heading">{item.node.frontmatter.title}</h3></a>
+                    </li>
                   )
-                }
+                  )}
                   return ''  
               })
             }

@@ -29,6 +29,7 @@ export const pageQuery = graphql`
               parentPath
               excerpt
               id
+              externalPath
             }
           }
         }
@@ -41,6 +42,7 @@ export const pageQuery = graphql`
               parentPath
               title
               parentEle
+              externalPath
             }
           }
         }

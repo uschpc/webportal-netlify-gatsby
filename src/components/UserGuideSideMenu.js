@@ -3,7 +3,6 @@ import { Link } from 'gatsby';
 
 const findSubMenu = (menubar, nav) => {
     const subNav = nav.edges.filter((ele, i) => {
-        console.log('ele.node.frontmatter.parentEle', ele.node.frontmatter.parentEle)
         return (ele.node.frontmatter.parentEle === menubar)
         });
     return subNav ? subNav : null;

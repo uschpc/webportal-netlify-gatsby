@@ -144,6 +144,7 @@ export const coldFrontQuery = graphql`
             parentPath
             title
             parentEle
+            externalPath
           }
         }
       }

@@ -442,11 +442,35 @@ body {
           p {
             margin: 0;
           }
-          .email-input {
-            margin-top: 10px;
-            width: 100%;
-            height: 30px;
+          form {
+            position: relative;
+
+            .email-input {
+              margin-top: 10px;
+              width: 100%;
+              height: 30px;
+            }
+
+            .subscribe_button{
+              background: #171D23;
+              position: absolute;
+              top: 9px;
+              font-size: 17px;
+              left: 168px;
+              padding: 6px;
+              text-align: center;
+              vertical-align: middle;
+              color: white;
+              color: white;
+              outline: none;
+              border: none;
+
+              &:hover {
+                color: #ffcd05;
+              }
+            }
           }
+          
         }
         a {
           &.logo-footer {
@@ -454,7 +478,7 @@ body {
           }
           .usc-logo {
             width: 70%;
-            height: 100%;
+            height: 32%;
             background-image: url('/images/two-line-logo_gold-usc_white-text_transparent-bg.png');
             background-size: contain;
             background-position: center center;

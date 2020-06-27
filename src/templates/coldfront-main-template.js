@@ -9,6 +9,7 @@ import SideMenu from '../components/side-menu'
 
 export default function Template({ data }) {
     const items = data.md.edges;
+    const discovery = data.discovery.edges;
     return (
       <Layout {...data.navigation}>
           <SEO title={data.content.frontmatter.title}/>
@@ -26,6 +27,18 @@ export default function Template({ data }) {
                     <span>
                       <h3>User Guides</h3>
                       {items.map ((item, i) => {
+                        return (
+                          <Link key={i} className="coldfront-menu-items" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
+                              <li>{item.node.frontmatter.title}</li>
+                          </Link>
+                          )
+                      })}
+                    </span>
+                  )}
+                   {(data.content.frontmatter.title === "Discovery") && (
+                    <span>
+                      <h3>User Guides</h3>
+                      {discovery.map ((item, i) => {
                         return (
                           <Link key={i} className="coldfront-menu-items" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
                               <li>{item.node.frontmatter.title}</li>
@@ -65,6 +78,19 @@ export const coldFrontQuery = graphql`
         }
       }
     }
+    discovery: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "discoveryGuides"}}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            parentPath
+            cat
+          }
+          html
+        }
+      }
+    }
     sideMenu: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "userGuides"}}}) {
       edges {
         node {
@@ -76,7 +102,7 @@ export const coldFrontQuery = graphql`
         }
       }
     }
-    subMenu: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "sharedTemplate"}}}) {
+    subMenu: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "sharedTemplate"}}}) {
       edges {
         node {
           frontmatter {
@@ -118,6 +144,7 @@ export const coldFrontQuery = graphql`
             parentPath
             title
             parentEle
+            externalPath
           }
         }
       }

@@ -10,7 +10,7 @@ parentPath: user-information/user-guides/high-performance-computing
 cat: sharedTemplate
 title: Research Computing User Portal
 parentPage: User Guides
-id: 3
+id: 2
 ---
 USC Research Computing's User Portal is how users manage their projects and allocations on Discovery. Each user is granted access to the Research Computing User Portal when they create their USC Research Computing account.
 

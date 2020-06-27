@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-const generateSubMenuLevel2Items = (title, pageTitle, subMenu) => {
-    let menuItem = "Research Computing User Portal"
-    if (menuItem === title) {
+const generateSubMenuLevel2Items = (sideMenuTitle, pageTitle, subMenu) => {
+  const { parentSideMenuParent, title } = pageTitle
+    if (parentSideMenuParent === sideMenuTitle) {
       return (
         <ul className="submenu-items-level-2">
           {subMenu.edges.map ((item, i) => {
           return (
             <li key={i}>
-              <Link className={`${pageTitle === item.node.frontmatter.title ? 'focused' : 'regular'}`} to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
+              <Link className={`${title === item.node.frontmatter.title ? 'focused' : 'regular'}`} to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
                 {item.node.frontmatter.title}
               </Link>
             </li>
@@ -22,6 +22,7 @@ const generateSubMenuLevel2Items = (title, pageTitle, subMenu) => {
 
 const generateSubMenuItems = (title, pageTitle, data) => {
     let menuItem = "High-Performance Computing"
+    // let menuItem = data.content.frontmatter.parentSideMenuParent || "High-Performance Computing"
     if (menuItem === title) {
       return (
         <ul className="submenu-items">
@@ -33,7 +34,7 @@ const generateSubMenuItems = (title, pageTitle, data) => {
                   {item.node.frontmatter.title}
                 </Link>
               </li>
-              {data.subMenuLevel2 && generateSubMenuLevel2Items(item.node.frontmatter.title, data.content.frontmatter.title, data.subMenuLevel2)}
+              {data.subMenuLevel2 && generateSubMenuLevel2Items(item.node.frontmatter.title, data.content.frontmatter, data.subMenuLevel2)}
             </span>
           )})}
         </ul>

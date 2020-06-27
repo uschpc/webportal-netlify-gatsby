@@ -29,6 +29,7 @@ export const pageQuery = graphql`
               title
               parentEle
               parentPath
+              externalPath
             }
           }
         }

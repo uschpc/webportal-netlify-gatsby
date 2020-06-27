@@ -7,6 +7,7 @@ path: getting-started
 parentPath: user-information/user-guides/high-performance-computing/discovery
 cat: discoveryGuides
 parentPage: User Guides
+parentSideMenuParent: Discovery
 ---
 
 # Getting started with Discovery

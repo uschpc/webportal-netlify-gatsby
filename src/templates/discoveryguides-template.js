@@ -92,6 +92,7 @@ export const discoveryGuidesQuery = graphql`
         cat
         route
         routePath
+        parentSideMenuParent
       }
       html
     }
@@ -103,6 +104,7 @@ export const discoveryGuidesQuery = graphql`
             title
             parentEle
             parentPath
+            externalPath
           }
         }
       }

@@ -92,7 +92,7 @@ class Search extends Component {
                     <div className="posts" key={i}>
                         <h3>{item.node.frontmatter.title}</h3>
                         <h4>{item.node.frontmatter.excerpt}</h4>
-                        <Link to={item.node.frontmatter.path}>Read More</Link>
+                        <Link to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>Read More</Link>
                     </div>
                 )
             }) :  <div className="posts">No Result Found</div>}
