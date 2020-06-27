@@ -9,6 +9,7 @@ routePath: user-information/user-guides/high-performance-computing
 date: 2020-06-04T00:00:00.000Z
 cat: sharedTemplate
 title: Research Computing User Portal
+uniqID: user_portal
 parentPage: User Guides
 id: 2
 ---

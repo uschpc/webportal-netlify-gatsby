@@ -22,8 +22,16 @@ export default function Template({ data }) {
                 </div>
                 <div className="middle-column">
                   <h1>{data.content.frontmatter.title}</h1>
+                  {(data.content.frontmatter.uniqID === "user_portal") && (
+                    <div className="login">
+                      <a href="https://hpcaccount.usc.edu/" class="btn login-to-user-portal">
+                        <span class="txt">Log in to Portal</span>
+                        <span class="round"><i class="fa fa-chevron-right"></i></span>
+                      </a>
+                    </div>
+                  )}
                   <Markdown source={data.content.html} escapeHtml={false} />
-                  {(data.content.frontmatter.title === "Research Computing User Portal") && (
+                  {(data.content.frontmatter.uniqID === "user_portal") && (
                     <span>
                       <h3>User Guides</h3>
                       {items.map ((item, i) => {
@@ -122,6 +130,7 @@ export const coldFrontQuery = graphql`
         cat
         route
         routePath
+        uniqID
       }
       html
     }
