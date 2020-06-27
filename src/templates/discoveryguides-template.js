@@ -106,6 +106,7 @@ export const discoveryGuidesQuery = graphql`
             parentEle
             parentPath
             externalPath
+            redirectToPage
           }
         }
       }

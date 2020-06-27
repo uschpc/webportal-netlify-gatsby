@@ -30,6 +30,7 @@ export const pageQuery = graphql`
               excerpt
               id
               externalPath
+              redirectToPage
             }
           }
         }
@@ -43,6 +44,7 @@ export const pageQuery = graphql`
               title
               parentEle
               externalPath
+              redirectToPage
             }
           }
         }

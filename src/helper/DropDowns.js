@@ -151,9 +151,15 @@ const UserInfoSubNavDropdown = ({ current, prev, nav }) => {
               if (i > 3) {
                 return (
                   !item.node.frontmatter.externalPath ? (
-                  <li key={i}>
-                    <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
-                    </li>
+                    item.node.frontmatter.redirectToPage ? (
+                      <li key={i}>
+                        <Link className="heading" to={item.node.frontmatter.redirectToPage}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                        </li> 
+                    ) : (
+                      <li key={i}>
+                        <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                      </li> 
+                    )
                   ) : (
                     <li key={i}>
                       <a className="heading" href={item.node.frontmatter.externalPath}><h3 className="heading">{item.node.frontmatter.title}</h3></a>

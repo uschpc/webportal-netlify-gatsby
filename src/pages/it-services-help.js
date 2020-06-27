@@ -28,6 +28,7 @@ export const pageQuery = graphql`
               title
               parentEle
               externalPath
+              redirectToPage
             }
           }
         }

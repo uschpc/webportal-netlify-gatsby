@@ -17,13 +17,23 @@ const SharedTemplate = (items) => {
                         
                             return (
                                 !item.node.frontmatter.externalPath ? (
-                                    <Link to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path} key={i}>
-                                        <div className="user-support-box">
-                                            <img src={item.node.frontmatter.thumbnail} />
-                                            <p className="title">{item.node.frontmatter.title}</p>
-                                            <p className="description">{item.node.frontmatter.excerpt}</p>
-                                        </div>
-                                    </Link>
+                                    item.node.frontmatter.redirectToPage ? (
+                                        <Link to={item.node.frontmatter.redirectToPage} key={i}>
+                                            <div className="user-support-box">
+                                                <img src={item.node.frontmatter.thumbnail} />
+                                                <p className="title">{item.node.frontmatter.title}</p>
+                                                <p className="description">{item.node.frontmatter.excerpt}</p>
+                                            </div>
+                                        </Link>
+                                    ) : (
+                                        <Link to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path} key={i}>
+                                            <div className="user-support-box">
+                                                <img src={item.node.frontmatter.thumbnail} />
+                                                <p className="title">{item.node.frontmatter.title}</p>
+                                                <p className="description">{item.node.frontmatter.excerpt}</p>
+                                            </div>
+                                        </Link>
+                                    )
                                 ) : (
                                     <a href={item.node.frontmatter.externalPath} key={i}>
                                         <div className="user-support-box">
