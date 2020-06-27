@@ -114,7 +114,6 @@ const ServicesSubNavDropdown = ({ current, prev, nav }) => {
 
 const UserInfoSubNavDropdown = ({ current, prev, nav }) => {
   let subNav = assignedDropdownSubNav('User Information', nav);
-  console.log('yasen', subNav)
 
   return (
     <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
