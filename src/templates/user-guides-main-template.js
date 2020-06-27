@@ -17,8 +17,8 @@ export default function Template({ data }) {
           <div className="user-guides-main-pages">
             <div className="container">
                 <div className="left-column">
-                  <h3> {mainPage ? "User Information" : "User Support"}</h3>
-                  {mainPage ? <UserGuideSideMenu content={mainPage} sideMenu={data.UserGuidesSideMenu} /> : <SideMenu {...data}/>}
+                  <h3> {mainPage  || content.frontmatter.title === "Frequently Asked Questions" ? "User Information" : "User Support"}</h3>
+                  {mainPage || content.frontmatter.title === "Frequently Asked Questions" ? <UserGuideSideMenu content={mainPage || content} sideMenu={data.UserGuidesSideMenu} /> : <SideMenu {...data}/>}
                 </div>
                 <div className="middle-column">
                   <h1>{mainPage ? mainPage.frontmatter.title : content.frontmatter.title}</h1>

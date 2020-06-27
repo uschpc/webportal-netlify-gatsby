@@ -6,8 +6,9 @@ title: User Forum
 thumbnail: /images/Comment.png
 excerpt: RA question and answer community for ARCC-specific topics.
 path: discourse-knowledgebase
-parentPath: user-information
+externalPath: https://hpc-discourse.usc.edu/categories
+parentPath: null
 cat: userSupport
 parentEle: none
 ---
-Let's see what happens
+This page is linked to external page

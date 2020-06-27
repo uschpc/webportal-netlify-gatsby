@@ -619,7 +619,7 @@ pre tt:after {
   border: none;
   outline: none;
   color: black;
-  padding: 10px 0px;
+  padding: 13px 0px;
   background-color: inherit;
   font-weight: bold;
   margin: 0;
@@ -657,6 +657,7 @@ pre tt:after {
 
 .dropdown:hover .dropdown-content {
   display: block;
+  margin: 1px 0 0 0;
 }
 
 /* Create three equal columns that floats next to each other */

@@ -44,7 +44,7 @@ const Header = (props) => {
             <div className="content-width-middile">
               <Link to="/" className="hpc-logo"> 
                 {/* <img data-src="/images/usc_logo_new_design.svg" className=" lazyloaded" src="/images/usc_logo_new_design.svg" /> */}
-                <img data-src="/images/RedLogoPNG.png" className=" lazyloaded" src="/images/RedLogoPNG.png" />
+                <img data-src="/images/RedLogo.svg" className=" lazyloaded" src="/images/RedLogo.svg" />
               </Link>
               <a href="https://www.usc.edu/">
                 <img data-src="/images/usc-primary-shield_black.png" className=" lazyloaded" src={(width > 570) ? '/images/usc-primary-shield_black.png' : '/images/shield_black.png' } />
