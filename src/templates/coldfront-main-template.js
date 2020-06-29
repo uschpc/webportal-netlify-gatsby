@@ -24,9 +24,9 @@ export default function Template({ data }) {
                   <h1>{data.content.frontmatter.title}</h1>
                   {(data.content.frontmatter.uniqID === "user_portal") && (
                     <div className="login">
-                      <a href="https://hpcaccount.usc.edu/" class="btn login-to-user-portal">
-                        <span class="txt">Log in to Portal</span>
-                        <span class="round"><i class="fa fa-chevron-right"></i></span>
+                      <a href="https://hpcaccount.usc.edu/" className="btn login-to-user-portal">
+                        <span className="txt">Log in to Portal</span>
+                        <span className="round"><i className="fa fa-chevron-right"></i></span>
                       </a>
                     </div>
                   )}
@@ -107,6 +107,7 @@ export const coldFrontQuery = graphql`
             path
             parentPath
             externalPath
+            redirectToPage
           }
         }
       }

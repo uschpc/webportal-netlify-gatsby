@@ -20,6 +20,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   const userGuidesMainTemplate = path.resolve('src/templates/user-guides-main-template.js')
   const userGuidesTemplate = path.resolve('src/templates/user-guides-template.js')
   const sharedMainTemplate = path.resolve('src/templates/shared-main-templates.js')
+  const allNewsTemplate = path.resolve('src/templates/all-news-template.js')
 
   return graphql(`
     {
@@ -70,6 +71,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         break;
         case 'userSupport':
           template = userGuidesMainTemplate;
+          path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+          break;
+        case 'allNews':
+          template = allNewsTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
         case 'userGuides':

@@ -31,13 +31,23 @@ export default function Template({ data }) {
                   {subMenu.map((item, i) => {
                   return (
                     !item.node.frontmatter.externalPath ? (
-                      <div className="side-menu" key={i}>
-                        <ul>
-                            <Link className={`coldfront-menu-items ${content.frontmatter.title === item.node.frontmatter.title ? 'focused' : 'regular'}`} to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}>
-                                {item.node.frontmatter.title}
-                            </Link>
-                        </ul>
-                      </div> 
+                      !item.node.frontmatter.redirectToPage ? (
+                        <div className="side-menu" key={i}>
+                          <ul>
+                              <Link className={`coldfront-menu-items ${content.frontmatter.title === item.node.frontmatter.title ? 'focused' : 'regular'}`} to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}>
+                                  {item.node.frontmatter.title}
+                              </Link>
+                          </ul>
+                        </div> 
+                      ) : (
+                        <div className="side-menu" key={i}>
+                          <ul>
+                              <Link className={`coldfront-menu-items ${content.frontmatter.title === item.node.frontmatter.title ? 'focused' : 'regular'}`} to={item.node.frontmatter.redirectToPage}>
+                                  {item.node.frontmatter.title}
+                              </Link>
+                          </ul>
+                        </div> 
+                      )
                       ) : (
                         <div className="side-menu" key={i}>
                           <ul>
@@ -57,8 +67,8 @@ export default function Template({ data }) {
                       {(content.frontmatter.uniqID !== "news_Announcements") && <Markdown source={content.html} escapeHtml={false} />}
                       {(content.frontmatter.uniqID === "news_Announcements") && <LatestNews {...data.news } flag={true} />}
                       {(content.frontmatter.uniqID === "news_Announcements") && (
-                        <div class="category-link-wrapper type-primary">
-                          <Link class="category-link category-link-lg category-news type-primary" to={"/category/news/"}>
+                        <div className="category-link-wrapper type-primary">
+                          <Link className="category-link category-link-lg category-news type-primary" to={"/education-and-outreach/news-and-updates/all-news"}>
                             <img src="/images/news-arrows.svg" />
                             <p>
                               View all Reasearch Computing News
@@ -163,6 +173,7 @@ export const coldFrontQuery = graphql`
             parentEle
             cat
             externalPath
+            redirectToPage
           }
         }
       }

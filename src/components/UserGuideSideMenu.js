@@ -15,13 +15,23 @@ const UserGuideSideMenu = ({content, sideMenu}) => {
             {subMenu.map((item, i) => {
             return (
                 !item.node.frontmatter.externalPath ? (
-                    <div className="side-menu" key={i}>
-                        <ul>
-                            <Link className={`coldfront-menu-items ${content.frontmatter.title === item.node.frontmatter.title ? 'focused' : 'regular'}`} to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}>
-                                {item.node.frontmatter.title}
-                            </Link>
-                        </ul>
-                    </div>
+                    !item.node.frontmatter.redirectToPage ? (
+                        <div className="side-menu" key={i}>
+                            <ul>
+                                <Link className={`coldfront-menu-items ${content.frontmatter.title === item.node.frontmatter.title ? 'focused' : 'regular'}`} to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}>
+                                    {item.node.frontmatter.title}
+                                </Link>
+                            </ul>
+                        </div>
+                    ) : (
+                        <div className="side-menu" key={i}>
+                            <ul>
+                                <Link className={`coldfront-menu-items ${content.frontmatter.title === item.node.frontmatter.title ? 'focused' : 'regular'}`} to={item.node.frontmatter.redirectToPage}>
+                                    {item.node.frontmatter.title}
+                                </Link>
+                            </ul>
+                        </div>
+                    )
                 ) : (
                     <div className="side-menu" key={i}>
                         <ul>

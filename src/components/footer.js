@@ -27,7 +27,7 @@ const Footer = () => {
                     <br />
                     <form action="https://hpc-discourse.usc.edu/signup" >
                         <input className="email-input" type="text" />
-                        <button class="subscribe_button">subscribe</button>
+                        <button className="subscribe_button">subscribe</button>
                     </form>
                 </div>
                 <a href="https://usc.edu" target="_BLANK" className="logo-footer">

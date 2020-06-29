@@ -27,13 +27,15 @@ const LatestNews = (news) => {
             <div className="shared news">
                 {news.edges.map((item, i) => {
                     return (
-                        <Link className="press-news-block" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`} key={i}>
-                            <div className="block">
-                                <h3 className="title">{item.node.frontmatter.title}</h3>
-                                <img src={item.node.frontmatter.thumbnail}></img>
-                                <Markdown source={item.node.frontmatter.excerpt} escapeHtml={false} />
-                            </div>
-                        </Link>
+                        i < 6 && (
+                            <Link className="press-news-block" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`} key={i}>
+                                <div className="block">
+                                    <h3 className="title">{item.node.frontmatter.title}</h3>
+                                    <img src={item.node.frontmatter.thumbnail}></img>
+                                    <Markdown source={item.node.frontmatter.excerpt} escapeHtml={false} />
+                                </div>
+                            </Link>
+                        )
                     )
                 })}
             </div>

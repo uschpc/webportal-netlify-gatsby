@@ -112,6 +112,7 @@ export const coldFrontQuery = graphql`
             parentPath
             cat
             externalPath
+            redirectToPage
           }
         }
       }
@@ -126,6 +127,7 @@ export const coldFrontQuery = graphql`
             parentEle
             cat
             externalPath
+            redirectToPage
           }
         }
       }

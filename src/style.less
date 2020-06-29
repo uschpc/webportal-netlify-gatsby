@@ -200,6 +200,40 @@ body {
           }
         }
       }
+      .latest-news {
+        border-bottom: .0625rem solid #f1f1f1;
+        margin-bottom: 20px;
+        padding:10px;
+        display: flex;
+        justify-content: space-between;
+        img {
+          width: 250px;
+          top: 0;
+          right: 0;
+        }
+        .content {
+          max-width: 70%;
+          padding-bottom: 15px;
+          h3 {
+            color: #94374f;
+            line-height: 1.5;
+          }
+          h4 {
+            font-size: 1rem;
+          }
+         
+        }
+        &:hover {
+          background-color: #f3f3f3;
+          color: #4e4e4d;
+          h3, h4 {
+            color: #990000;
+          }     
+          h3 {
+            text-decoration: underline;
+          }        
+        }
+      }
       .category-link-wrapper {
         border-top: 1px solid #bab9b7;
         overflow: hidden;

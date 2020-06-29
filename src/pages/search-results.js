@@ -32,6 +32,7 @@ export const pageQuery = graphql`
               path
               title
               parentEle
+              parentPath
               excerpt
             }
             html
