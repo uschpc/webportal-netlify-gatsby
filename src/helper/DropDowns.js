@@ -79,9 +79,15 @@ const ServicesSubNavDropdown = ({ current, prev, nav }) => {
           {subNav.map((item, i) => {
              if (i <= 3) {
               return (
-                <li key={i}>
-                  <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                item.node.frontmatter.redirectToPage ? (
+                  <li key={i}>
+                    <Link className="heading" to={item.node.frontmatter.redirectToPage}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                   </li>
+                ) : (
+                  <li key={i}>
+                      <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                  </li>
+                )
                 )}
               }
             )

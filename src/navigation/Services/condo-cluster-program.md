@@ -6,6 +6,7 @@ path: condo-cluster-program
 parentPath: services
 cat: navigation
 parentEle: Services
+redirectToPage: user-information/user-guides/condo-cluster-program
 ---
 The primary mission of the Advanced Research Computing Center is to support USC researchers in their work. The ARCC strives to provide an excellent user experience, both on an ad hoc basis and through ongoing partnerships with research teams.
 

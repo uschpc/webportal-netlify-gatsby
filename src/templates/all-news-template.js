@@ -12,7 +12,6 @@ const findSubMenu = (menubar, nav) => {
 }
 
 export default function Template({ data }) {
-  console.log('data', data);
   let subMenu = findSubMenu(data.news.frontmatter.parentEle, data.sideMenu)
   let content = data.content;
   
