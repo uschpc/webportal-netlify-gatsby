@@ -80,7 +80,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Slug", name: "path", widget: "string"}
       - {label: "parent menu", name: "parentEle", widget: "string", default: 'News and Events'}
-      - {label: "date", name: "date", widget: "string", default: "{{year}}-{{month}}-{{day}}"}
+      - {label: "date", name: "date", widget: "date", default: "{{year}}-{{month}}-{{day}}", format: 'YYYY-MM-DD'}
       - {label: "parent path", name: "parentPath", widget: "string", default: 'education-and-outreach/news-and-updates'}
       - {label: "Category", name: "cat", widget: "string", default: 'news'}
       - {label: "Short description", name: "excerpt", widget: "string"}
