@@ -28,6 +28,7 @@ const Footer = () => {
                     <br /> Sign up to receive information about upcoming<br />
                     events, exhibitions, school news and more.
                     <br />
+                    
                     <form action="https://hpc-discourse.usc.edu/signup" >
                         <input className="email-input" type="text" />
                         {/* <button className="subscribe_button">subscribe</button> */}
