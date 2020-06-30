@@ -4,6 +4,7 @@ id: 1
 thumbnail: /images/sr-icon-4.png
 path: getting-started
 parentPath: user-information/user-guides
+redirectToPage: user-information/user-guides/high-performance-computing/discovery/getting-started
 cat: navigation
 parentEle: User Information
 ---
