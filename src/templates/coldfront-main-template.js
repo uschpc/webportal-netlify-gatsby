@@ -24,7 +24,7 @@ export default function Template({ data }) {
                   <h1>{data.content.frontmatter.title}</h1>
                   {(data.content.frontmatter.uniqID === "user_portal") && (
                     <div className="login">
-                      <a href="https://hpcaccount.usc.edu/" className="btn login-to-user-portal">
+                      <a href="https://hpcaccount.usc.edu/" className="btn login-to-user-portal" target="_blank">
                         <span className="txt">Log in to Portal</span>
                         <span className="round"><i className="fa fa-chevron-right"></i></span>
                       </a>

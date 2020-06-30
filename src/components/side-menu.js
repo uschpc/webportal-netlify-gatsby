@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 const generateSubMenuLevel2Items = (sideMenuTitle, pageTitle, subMenu) => {
-  const { parentSideMenuParent, title } = pageTitle
-    if (parentSideMenuParent === sideMenuTitle) {
+  const { sideMenuParent, title } = pageTitle
+    if (sideMenuParent === sideMenuTitle) {
       return (
         <ul className="submenu-items-level-2">
           {subMenu.edges.map ((item, i) => {
@@ -24,7 +24,7 @@ const generateSubMenuLevel2Items = (sideMenuTitle, pageTitle, subMenu) => {
               )
             ) : (
               <li key={i}>
-                <a className={`${title === item.node.frontmatter.title ? 'focused' : 'regular'}`} href={item.node.frontmatter.externalPath}>
+                <a className={`${title === item.node.frontmatter.title ? 'focused' : 'regular'}`} href={item.node.frontmatter.externalPath} target="_blank">
                   {item.node.frontmatter.title}
                 </a>
               </li>
@@ -39,7 +39,7 @@ const generateSubMenuLevel2Items = (sideMenuTitle, pageTitle, subMenu) => {
 
 const generateSubMenuItems = (title, pageTitle, data) => {
     let menuItem = "High-Performance Computing"
-    // let menuItem = data.content.frontmatter.parentSideMenuParent || "High-Performance Computing"
+    // let menuItem = data.content.frontmatter.sideMenuParent || "High-Performance Computing"
     if (menuItem === title) {
       return (
         <ul className="submenu-items">
@@ -84,7 +84,7 @@ const SideMenu = (data) => {
                     )
                   ) : (
                     <ul key={i}>
-                        <a className={`coldfront-menu-items ${pageTitle === item.node.frontmatter.title ? 'focused' : 'regular'}`} href={item.node.frontmatter.externalPath}>
+                        <a className={`coldfront-menu-items ${pageTitle === item.node.frontmatter.title ? 'focused' : 'regular'}`} href={item.node.frontmatter.externalPath} target="_blank">
                             {item.node.frontmatter.title}
                         </a>
                         {(item.node.frontmatter.cat !== 'userGuides' || item.node.frontmatter.cat !== 'userSupport' || item.node.frontmatter.cat !== 'navigation') && generateSubMenuItems(item.node.frontmatter.title, data.content && data.content.frontmatter.title, data)}

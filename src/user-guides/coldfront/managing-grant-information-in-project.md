@@ -7,7 +7,7 @@ path: managing-grant-information-in-project
 parentPath: user-information/user-guides/high-performance-computing/research-computing-user-portal
 cat: coldFront
 parentPage: User Guides
-parentSideMenuParent: Research Computing User Portal
+sideMenuParent: Research Computing User Portal
 ---
 
 &nbsp;

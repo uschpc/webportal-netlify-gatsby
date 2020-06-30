@@ -89,11 +89,13 @@ class Search extends Component {
             <h2><span>Search Results:</span> {this.state.searchQuery ? this.state.searchQuery : 'All'}</h2>
             {queryResults.length ? queryResults.map((item, i) => {
                 return (  
+                  item.node.frontmatter.title && (
                     <div className="posts" key={i}>
                         <h3>{item.node.frontmatter.title}</h3>
                         <h4>{item.node.frontmatter.excerpt}</h4>
                         <Link to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}>Read More</Link>
                     </div>
+                  )
                 )
             }) :  <div className="posts">No Result Found</div>}
         </div>

@@ -35,7 +35,7 @@ const SharedTemplate = (items) => {
                                         </Link>
                                     )
                                 ) : (
-                                    <a href={item.node.frontmatter.externalPath} key={i}>
+                                    <a href={item.node.frontmatter.externalPath} key={i} target="_blank">
                                         <div className="user-support-box">
                                             <img src={item.node.frontmatter.thumbnail} />
                                             <p className="title">{item.node.frontmatter.title}</p>
@@ -59,7 +59,7 @@ const SharedTemplate = (items) => {
                     })
                     )
                     }
-                    {items.cat === 'userSupport' && <Markdown source={items.content.edges[0].node.html} escapeHtml={false} />}
+                    {items.cat === 'userSupport' && <Markdown className="user-support-content" source={items.content.edges[0].node.html} escapeHtml={false} />}
                 </div>
                 {items.cat === 'userSupport' ? (
                     <div className="right-col">

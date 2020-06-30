@@ -94,7 +94,7 @@ export const discoveryGuidesQuery = graphql`
         cat
         route
         routePath
-        parentSideMenuParent
+        sideMenuParent
       }
       html
     }

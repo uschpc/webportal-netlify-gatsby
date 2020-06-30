@@ -516,6 +516,24 @@ body {
             }
           }
         }
+        i {
+          margin-right: 10px;
+          cursor: pointer;
+          &:hover {
+            &.fa-facebook {
+              color: #ffcd05;
+            }
+            &.fa-twitter {
+              color: #ffcd05;
+            }
+            &.fa-github {
+              color: #ffcd05;
+            }
+            &.fa-youtube {
+              color: #ffcd05;
+            }
+          }
+        }
       }
 
         .national-caps2 {
@@ -557,6 +575,88 @@ body {
 
               &:hover {
                 color: #ffcd05;
+              }
+            }
+            .subscribe {
+              a {
+                text-decoration: none;
+                -moz-border-radius: 30px;
+                -webkit-border-radius: 30px;
+                border-radius: 20px;
+                padding: 9px 53px 9px 23px;
+                color: #fff;
+                text-transform: uppercase;
+                font-family: sans-serif;
+                font-weight: bold;
+                position: relative;
+                -moz-transition: all 0.3s;
+                -o-transition: all 0.3s;
+                -webkit-transition: all 0.3s;
+                transition: all 0.3s;
+                display: inline-block;
+                margin-left: 0;
+                margin-top: 8px;
+                span {
+                  position: relative;
+                  z-index: 3;
+                }
+                .round {
+                  -moz-border-radius: 50%;
+                  -webkit-border-radius: 50%;
+                  border-radius: 50%;
+                  width: 28px;
+                  height: 28px;
+                  position: absolute;
+                  right: 3px;
+                  top: 3px;
+                  -moz-transition: all 0.3s ease-out;
+                  -o-transition: all 0.3s ease-out;
+                  -webkit-transition: all 0.3s ease-out;
+                  transition: all 0.3s ease-out;
+                  z-index: 2;
+                  i {
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -5px;
+                    left: 50%;
+                    margin-left: -3px;
+                    -moz-transition: all 0.3s;
+                    -o-transition: all 0.3s;
+                    -webkit-transition: all 0.3s;
+                    transition: all 0.3s;
+                  }
+                } 
+                &:hover {
+                  .txt {
+                    color: white;
+                  }
+                  padding-left: 48px;
+                  padding-right: 28px;
+                  .round {
+                    width: calc(100% - 6px);
+                    -moz-border-radius: 30px;
+                    -webkit-border-radius: 30px;
+                    border-radius: 30px;
+                    i {
+                      left: 12%;
+                    }
+                  }
+                }             
+              }
+              .txt {
+                font-size: 14px;
+                line-height: 1;
+                text-transform: capitalize;
+              }
+              .btn {
+                &.login-to-user-portal {
+                  background-color: #ffcd05;
+                  color: black;
+                  .round {
+                    color: white;
+                    background-color: #990000;
+                  }
+                }
               }
             }
           }
@@ -1260,7 +1360,7 @@ p {
           h2 {
             background-color: #ffcd05;
             padding: 10px;
-            margin: 0px 20px 0 0;
+            margin: 0px 30px 0 0;
           }
 
           &.system-status {
@@ -1270,7 +1370,7 @@ p {
           }
 
           .press-news-block {
-            margin: 0px 20px 0 0;
+            margin: 0px 30px 0 0;
             display: flex;
             flex-direction: column;
 

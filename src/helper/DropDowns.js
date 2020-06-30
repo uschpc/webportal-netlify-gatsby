@@ -21,7 +21,7 @@ const AboutSubNavDropdown = ({ current, prev, nav}) => {
       <div className="row">
         <div className="column">
           <h4>
-            Th Advanced Research Computing Center provides high-performance computing resources to the USC research community.  
+            The Advanced Research Computing Center provides high-performance computing resources to the USC research community.  
           </h4>         
         </div>
         <div className="column">
@@ -136,12 +136,18 @@ const UserInfoSubNavDropdown = ({ current, prev, nav }) => {
              if (i <= 3) {
               return (
                 !item.node.frontmatter.externalPath ? (
-                <li key={i}>
-                  <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
-                  </li>
+                  item.node.frontmatter.redirectToPage ? (
+                  <li key={i}>
+                    <Link className="heading" to={item.node.frontmatter.redirectToPage}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                    </li> 
                 ) : (
                   <li key={i}>
-                    <a className="heading" href={item.node.frontmatter.externalPath}><h3 className="heading">{item.node.frontmatter.title}</h3></a>
+                    <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                  </li> 
+                  )
+                ) : (
+                  <li key={i}>
+                    <a className="heading" href={item.node.frontmatter.externalPath} target="_blank"><h3 className="heading">{item.node.frontmatter.title}</h3></a>
                   </li>
                 )
                 )}
@@ -168,7 +174,7 @@ const UserInfoSubNavDropdown = ({ current, prev, nav }) => {
                     )
                   ) : (
                     <li key={i}>
-                      <a className="heading" href={item.node.frontmatter.externalPath}><h3 className="heading">{item.node.frontmatter.title}</h3></a>
+                      <a className="heading" href={item.node.frontmatter.externalPath} target="_blank"><h3 className="heading">{item.node.frontmatter.title}</h3></a>
                     </li>
                   )
                   )}

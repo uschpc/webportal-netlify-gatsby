@@ -615,7 +615,7 @@ pre tt:after {
 }
 
 .dropdown .dropbtn {
-  font-size: 16px;  
+  font-size: 18px;  
   border: none;
   outline: none;
   color: black;
@@ -673,7 +673,7 @@ pre tt:after {
 
 .column h3 {
   color: white;
-  font-size: 14px;
+  font-size: 16px;
   text-transform: capitalize;
 }
 
@@ -705,7 +705,7 @@ pre tt:after {
 
 .column h4 {
   color: white;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.5;
   font-weight: normal;
   padding: 0 10px;
@@ -795,6 +795,9 @@ pre tt:after {
   padding-left: 4px;
   border-right: 1px solid #000;
   padding-right: 4px;
+}
+.tb-col-1 ul.nav-top li.menu-item-13138 a {
+  border-right: none;
 }
 /* line 33, ../scss/layout/_header.scss */
 .tb-col-1 ul.nav-top li a:hover {

@@ -71,6 +71,7 @@ export const pageQuery = graphql`
               title
               path
               thumbnail
+              redirectToPage
             }
             html
           }

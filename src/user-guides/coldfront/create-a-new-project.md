@@ -7,7 +7,7 @@ path: create-a-new-project
 parentPath: user-information/user-guides/high-performance-computing/research-computing-user-portal
 cat: coldFront
 parentPage: User Guides
-parentSideMenuParent: Research Computing User Portal
+sideMenuParent: Research Computing User Portal
 ---
 
 Generally, each PI should have one project. Some PIs may require additional projects depending on their roles at USC. Anyone teaching classes should create a separate project for each course taught, and these projects can be reused each semester.  Also, anyone using the cluster for work outside their general research area should create a separate project.

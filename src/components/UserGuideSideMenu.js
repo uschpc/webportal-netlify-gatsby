@@ -35,7 +35,7 @@ const UserGuideSideMenu = ({content, sideMenu}) => {
                 ) : (
                     <div className="side-menu" key={i}>
                         <ul>
-                            <a className={`coldfront-menu-items ${content.frontmatter.title === item.node.frontmatter.title ? 'focused' : 'regular'}`} href={item.node.frontmatter.externalPath}>
+                            <a className={`coldfront-menu-items ${content.frontmatter.title === item.node.frontmatter.title ? 'focused' : 'regular'}`} href={item.node.frontmatter.externalPath} target="_blank">
                                 {item.node.frontmatter.title}
                             </a>
                         </ul>

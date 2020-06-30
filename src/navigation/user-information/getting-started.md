@@ -6,6 +6,7 @@ path: getting-started
 parentPath: user-information/user-guides
 cat: navigation
 parentEle: User Information
+redirectToPage: user-information/user-guides/high-performance-computing/discovery/getting-started
 ---
 This guide will help you get started with the Discovery computing cluster by instructing how to connect, log in, transfer data, and run jobs.
 
