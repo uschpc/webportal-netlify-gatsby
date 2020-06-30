@@ -1,7 +1,7 @@
 ---
 author: Yaseen A
 title: Overcoming ‘the broken rung’ on the ladder to the superintendency
-date: June 17, 2020
+date: 2020-06-13T18:19:38.387Z
 thumbnail: /images/women.jpg
 path: overcoming-the-broken-rung-on-the-ladder-to-the-superintendency
 parentPath: education-and-outreach/news-and-updates

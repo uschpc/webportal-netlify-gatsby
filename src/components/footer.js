@@ -28,19 +28,27 @@ const Footer = () => {
                     <br /> Sign up to receive information about upcoming<br />
                     events, exhibitions, school news and more.
                     <br />
-                    
-                    <form action="https://hpc-discourse.usc.edu/signup" >
+                    <div id="mc_embed_signup">
+                        <form action="https://usc.us10.list-manage.com/subscribe/post?u=1bdd19e9fa2d811ef66b3485a&amp;id=a97e98a50e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
+                            <div id="mc_embed_signup_scroll">
+                            <label htmlFor="mce-EMAIL" style={{display: "none"}}>Subscribe</label>
+                            <input type="email" name="EMAIL" className="email-input" id="mce-EMAIL" placeholder="email address" required />
+                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="Subscribe-button" />
+                            </div>
+                        </form>
+                    </div>
+                    {/* <form action="https://hpc-discourse.usc.edu/signup" >
                         <input className="email-input" type="text" />
-                        {/* <button className="subscribe_button">subscribe</button> */}
-                            <div className="subscribe">
-                                <a href="#" class="btn login-to-user-portal">
-                                    <span class="txt">subscribe
-                                    </span><span class="round">
-                                        <i class="fa fa-chevron-right"></i>
+                        <button className="subscribe_button">subscribe</button>
+                            <div className="login">
+                                <a href="#" className="btn login-to-user-portal">
+                                    <span className="txt">subscribe
+                                    </span><span className="round">
+                                        <i className="fa fa-chevron-right"></i>
                                     </span>
                                 </a>
                             </div>
-                    </form>
+                    </form> */}
                 </div>
                 <a href="https://usc.edu" target="_BLANK" className="logo-footer">
                     <div className="usc-logo"></div>

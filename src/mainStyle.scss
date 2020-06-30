@@ -1,6 +1,7 @@
 // @import url("https://fonts.googleapis.com/css?family=Karla:400,700");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+@import url("https://cdn-images.mailchimp.com/embedcode/classic-10_7.css");
 @import './mainStyle-mobile.scss';
 
 * {
@@ -557,6 +558,19 @@ body {
               margin-top: 10px;
               width: 100%;
               height: 30px;
+            }
+            .Subscribe-button{
+              padding: 8px;
+              background-color: #ffcd05;
+              color: black;
+              font-weight: bold;
+              border-radius: 15px;
+              margin: 10px 0 0 0;
+              cursor: pointer;
+              outline: none;
+              &:hover {
+                color: rgba(153, 0, 0, 0.7);
+              }
             }
 
             .subscribe_button{

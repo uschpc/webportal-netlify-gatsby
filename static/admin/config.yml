@@ -79,6 +79,10 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Slug", name: "path", widget: "string"}
+      - {label: "parent menu", name: "parentEle", widget: "string", default: 'News and Events'}
+      - {label: "date", name: "date", widget: "string", default: "{{year}}-{{month}}-{{day}}"}
+      - {label: "parent path", name: "parentPath", widget: "string", default: 'education-and-outreach/news-and-updates'}
+      - {label: "Category", name: "cat", widget: "string", default: 'news'}
       - {label: "Short description", name: "excerpt", widget: "string"}
       - {label: "Latest news thumbnail", name: "thumbnail", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}

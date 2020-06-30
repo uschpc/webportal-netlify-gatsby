@@ -1,7 +1,7 @@
 ---
 author: Yaseen A
 title: News
-date: June 17, 2020
+date: 2020-06-16T18:19:38.387Z
 thumbnail: /images/class-2020.png
 path: all-news
 parentPath: education-and-outreach/news-and-updates
