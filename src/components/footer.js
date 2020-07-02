@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div className="footer">
             <div className="inner">
-                <div className="col4 fl"> USC Research Computing<br /> 3434 South Grand Avenue<br />3rd Floor, Suite 302 (?)<br /> Los Angeles, CA 90089<br /><br />
+                <div className="col4 fl"> USC Research Computing<br /> 3434 South Grand Avenue<br />3rd Floor, Suite 302 (?)<br /> Los Angeles, CA 90089<br />
                     <a href="mailto:hpc@usc.edu" target="_blank">hpc@usc.edu</a>
                     <div className="social">
                         

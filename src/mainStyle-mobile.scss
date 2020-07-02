@@ -603,7 +603,7 @@ and (max-width : 767px) {
                             width: 60%;
                         }
                         .features{
-                            font-size: 40px;
+                            font-size: 28px;
                         }
                     }
                 }
@@ -623,11 +623,14 @@ and (max-width : 767px) {
                         margin-top: 20px;
                         a {
                             margin-top: 5px;
+                            font-size: 20px;
+                            line-height: 1.5;
                         }
                     }
                     a {
-                        margin-top: 20px;
                         display: block;
+                        color: #ffcd05;
+                        margin-top: 10px;
                         .usc-logo {
                             width: auto;
                         }
@@ -639,6 +642,19 @@ and (max-width : 767px) {
                     form {
                         .Subscribe-button {
                             width: 100%;
+                        }
+                    }
+                    .col4 {
+                        &.fl {
+                            font-size: 20px;
+                            line-height: 1.5; 
+                        }
+                    }
+                    .subscribe {
+                        .national-caps2 {
+                            p {
+                                font-size: 20px;
+                            }
                         }
                     }
                 }
