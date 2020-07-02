@@ -335,6 +335,18 @@ and (max-width : 767px) {
                     }
                 }
             }
+            .nav-pages {
+                .container {
+                    .all-latest-news {
+                        .latest-news{
+                            width: 100%;
+                            &:hover {
+                                padding-left: 329px;
+                            }
+                        }
+                    }
+                }
+            }
             .coldFront-parent-container, .coldFront-child-container, .user-guides-pages {
                 margin: 44px 3%;
                 .page-body, .container{
@@ -472,6 +484,20 @@ and (max-width : 767px) {
                     background-color: #fff;
                     border-bottom: 1px solid #fff;
                     margin-top: 10px;
+                    .userSupport {
+                        font-size: 1.125rem;
+                        font-weight: 500;
+                        text-decoration: none;
+                        line-height: 1.5;
+                        padding: 1rem 1rem 1rem 2rem;
+                        a {
+                            color: #000;
+                            font-weight: bold;
+                            &:hover {
+                                color: #990000;
+                            }
+                        }
+                    }
                     &.show {
                         display: block;
                     }
@@ -589,6 +615,7 @@ and (max-width : 767px) {
         #gatsby-focus-wrapper {
             .footer{
                 height: auto;
+                z-index: 1;
                 .inner {
                     text-align: center;
                     display: block;
@@ -609,10 +636,15 @@ and (max-width : 767px) {
                         display: flex;
                         justify-content: center;
                     }
+                    form {
+                        .Subscribe-button {
+                            width: 100%;
+                        }
+                    }
                 }
             }
         }
-    }
+    } 
 }
 
 @media only screen 
@@ -629,12 +661,22 @@ and (max-width : 550px) {
                         a {
                             width: 100%;
                         }
+                        .all-latest-news {
+                            .latest-news{
+                                width: 100%;
+                                &:hover {
+                                    padding-left: 160px;
+                                }
+                            }
+                        }
                     }
                     .right-column {
                         width: 100%;
-                        display: block;
                     }
                 }
+            }
+            .footer {
+                z-index: 1;
             }
         }
     }

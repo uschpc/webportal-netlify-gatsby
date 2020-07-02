@@ -78,6 +78,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Author", name: "author", widget: "string"}
       - {label: "Slug", name: "path", widget: "string"}
       - {label: "parent menu", name: "parentEle", widget: "string", default: 'News and Events'}
       - {label: "date", name: "date", widget: "date", default: "{{year}}-{{month}}-{{day}}", format: 'YYYY-MM-DD'}

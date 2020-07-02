@@ -251,8 +251,14 @@ class Navbar extends React.Component {
                   <div
                     data-index={index}
                     key={index}
+                    className={n.title === 'User Support' ? 'userSupport' : 'otherPages'}
                   >
                   <ul>
+                    {n.title === 'User Support' ? (
+                      <Link to="/user-support" key={index}>
+                        User Support
+                      </Link>
+                    ) : (
                     <li onClick={() => this.openSubMenu(n.title)} className={this.state.signflag[n.title] === '-' ? 'activeState' : 'non-active'}>
                       <span>
                         <span className="title">{n.title}</span>
@@ -261,16 +267,33 @@ class Navbar extends React.Component {
                       <span className={`sub-menu-item ${this.state.subNavFlag[n.title] ? 'show' : 'hide' }`}>
                         {this.state.subNav[n.title] && this.state.subNav[n.title].map((item, i) => {
                             return (
-                              <ul>
-                                <Link to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`} key={i}>
-                                  {item.node.frontmatter.title}
-                                </Link>
-                            </ul>
+                              !item.node.frontmatter.externalPath ? (
+                                item.node.frontmatter.redirectToPage ? (
+                                  <ul>
+                                    <Link to={item.node.frontmatter.redirectToPage} key={i}>
+                                      {item.node.frontmatter.title}
+                                    </Link>
+                                </ul>
+                                ) : (
+                                  <ul>
+                                    <Link to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`} key={i}>
+                                      {item.node.frontmatter.title}
+                                    </Link>
+                                  </ul>
+                                )
+                              ) : (
+                                <ul>
+                                  <a href={item.node.frontmatter.externalPath} key={i}>
+                                    {item.node.frontmatter.title}
+                                  </a>
+                                </ul>
+                              )
                             )
                           })
                         }
                       </span>
                     </li>
+                    )}
                   </ul>
                   </div>
                 )})}
