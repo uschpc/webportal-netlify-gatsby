@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState ,useEffect} from 'react';
 import axios from 'axios';
 
 const FORM = () => {
@@ -44,6 +44,10 @@ const FORM = () => {
         }
     }
 
+    useEffect(() => {
+       
+    }, [])
+
    const handleSubmit = (event) => {
         event.preventDefault();
         let bodyFormData = new FormData();
@@ -55,14 +59,13 @@ const FORM = () => {
         bodyFormData.set('message', message);
         bodyFormData.append('attachment', attachment); 
         bodyFormData.append('submit', 'submit'); 
-
+        
         axios({
             method: 'post',
-            url: 'https://hpcaccount.usc.edu/static/web/supportform_simple.php',
+            url: 'https://hpcaccount.usc.edu/static/web/supportform_submit.php',
             data: bodyFormData,
             headers: {
                 'Content-Type': 'multipart/form-data',
-                // "Cookie": Cookie
          }
             })
             .then(function (response) {

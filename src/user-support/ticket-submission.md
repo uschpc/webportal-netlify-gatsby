@@ -9,5 +9,6 @@ path: ticket-submission
 parentPath: user-information
 cat: userSupport
 parentEle: none
+externalPath: https://hpcaccount.usc.edu/static/web/supportform_redirect_dev.php
 ---
 explanation of tickets contents
