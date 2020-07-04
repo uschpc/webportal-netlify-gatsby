@@ -1,13 +1,13 @@
 ---
 title: "Upcoming Changes for USC Research Computing: Summer and Fall 2020"
+author: Andrea
 path: upcoming-changes-summer-fall-2020
 parentEle: News and Events
-excerpt: Technical upgrades, increased user support, and exciting new services
-  are planned for the next few months
-author: Andrea
 date: 2020-06-18T18:19:38.387Z
 parentPath: education-and-outreach/news-and-updates
 cat: news
+excerpt: Technical upgrades, increased user support, and exciting new services
+  are planned for the next few months
 thumbnail: /images/shutterstock_1227276982-675x380.jpg
 ---
 For the first half of 2020, USC Research Computing has been working on many different projects to improve its service quality and the experience for our users. While some of our legacy systems have been experiencing issues recently, the Research Computing team has been working relentlessly to deliver improved high-performance computing systems and services that will change the computing environment, user support and education, and overall business model of USC Research Computing. There are many changes scheduled to be announced during the summer and the fall 2020 semester. Below is a summary of the many exciting changes in the works.
@@ -52,7 +52,9 @@ We are introducing a new allocation and project management process. It is simila
 
 •	Once the project is set up, PIs can request resources (either compute nodes or storage space), and each resource should be associated with a PI’s project.
 
-•	Allocations will have four tiers: small (up to 200K SUs*), medium (up to 500K SUs), large (up to 1M SUs), and special (more than 1M SUs). Each tier will have a different review & approval process.* SU (System Unit): An hour of a CPU core time on a cluster system.
+•	Allocations will have four tiers: small (up to 200K SUs**),* medium (up to 500K SUs), large (up to 1M SUs), and special (more than 1M SUs). Each tier will have a different review & approval process.
+
+\*SU (System Unit): An hour of a CPU core time on a cluster system.
 
 6. **New website & user portal**
 
