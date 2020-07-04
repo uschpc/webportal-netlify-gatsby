@@ -19,13 +19,12 @@ body {
     overflow: hidden;
 
     iframe {
-      margin: 44px 10%;
-      width: 80%;
-      height: 100vh;
+      // margin: 44px 10%;
+      width: 100%;
+      // height: 100vh;
 
-      .form-all{
-        margin: 0 auto;
-        width: 100%;
+      .main-view{
+        display: none;
       }
     }
 
@@ -757,6 +756,8 @@ body {
         }
       }
     }
+
+    
   }
   -webkit-font-smoothing: antialiased;
   color: #6b7c93;

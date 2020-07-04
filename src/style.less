@@ -87,6 +87,14 @@ body {
             }
           }
         }
+        p {
+          a {
+            color: #900;
+            display: unset;
+            margin-left: 0;
+            font-size: 17px;
+          }
+        }
         .user-support-box {
           height: 250px;
           width: auto;
@@ -528,7 +536,51 @@ body {
             text-align: left;
           }
         }
-        
+        form {
+          /* Center the form on the page */
+          //margin: 0 auto;
+          /* Form outline */
+          ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li {
+              display: flex;
+              flex-direction: column;
+              margin: 10px 0;
+              label {
+                /* Uniform size & alignment */
+                margin: 0 0 5px 0;
+                font-size: 20px;
+                font-weight: bold;
+                input, 
+                textarea {
+                  /* To make sure that all text fields have the same font settings
+                    By default, textareas have a monospace font */
+                  font: 1em sans-serif;
+            
+                  /* Uniform text field size */
+                  width: 360px;
+                  box-sizing: border-box;
+            
+                  /* Match form field borders */
+                  border: 1px solid #999;
+                }
+                &:focus{
+                  /* Additional highlight for focused elements */
+                  border-color: #000;
+                }
+              }
+              input, select {
+                color: #000;
+                font-size: 1em;
+                padding: 10px 0px;
+                text-transform: uppercase;
+                font-weight: normal;
+              }
+            }
+          }
+        }
       }
       .right-column{
         width: 15%;
@@ -547,6 +599,7 @@ body {
         }
       }
     }
+
   }
   .user-guides{
     margin: 44px 10%;

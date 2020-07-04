@@ -7,6 +7,7 @@ import Markdown from "react-markdown"
 import SideMenu from '../components/side-menu'
 import { Link } from 'gatsby'
 import UserGuideSideMenu from '../components/UserGuideSideMenu'
+import FORM from '../components/form'
 
 export default function Template({ data }) {
   let mainPage = data.mainPage;
@@ -38,7 +39,7 @@ export default function Template({ data }) {
                      })}
                      </span>
                    ) : (
-                    <Markdown source={content.html} escapeHtml={false} />
+                    content.frontmatter.title === "Ticket Submission" ? <FORM /> : <Markdown source={content.html} escapeHtml={false} />
                    )}
                    
                 </div>
