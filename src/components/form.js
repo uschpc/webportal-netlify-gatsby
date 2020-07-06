@@ -64,6 +64,7 @@ const FORM = () => {
             method: 'post',
             url: 'https://hpcaccount.usc.edu/static/web/supportform_submit.php',
             data: bodyFormData,
+            withCredentials: true,
             headers: {
                 'Content-Type': 'multipart/form-data',
          }
@@ -97,11 +98,11 @@ const FORM = () => {
                 <li>
                     <label htmlFor="category">Category: </label>
                     <select id="category" name="category" value={category} onChange={(e) => handleOnChange(e)}>
-                            <option id="discovery" value="discovery"> Cluster - Discovery</option>
-                            <option id="condo" value="condo"> Cluster - Condo </option>
-                            <option id="" value="account"> Account/Access </option>
-                            <option id="" value="storage"> Storage </option>
-                            <option id="" value="other"> Other </option>
+                        <option value="discovery"> Cluster - Discovery</option>
+                        <option value="condo"> Cluster - Condo </option>
+                        <option value="account"> Account/Access </option>
+                        <option value="storage"> Storage </option>
+                        <option value="other"> Other </option>
                     </select>
                 </li>
                 <li>
