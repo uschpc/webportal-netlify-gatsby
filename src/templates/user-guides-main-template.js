@@ -39,7 +39,12 @@ export default function Template({ data }) {
                      })}
                      </span>
                    ) : (
-                    content.frontmatter.title === "Ticket Submission" ? <FORM /> : <Markdown source={content.html} escapeHtml={false} />
+                    content.frontmatter.title === "Ticket Submission" ? (
+                      <>
+                        <Markdown source={content.html} escapeHtml={false} />
+                        <iframe className="ticket-submission" src="https://hpcaccount.usc.edu/static/web/supportform_simple.php" />
+                      </>
+                    ) : <Markdown source={content.html} escapeHtml={false} />
                    )}
                    
                 </div>

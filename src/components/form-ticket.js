@@ -80,49 +80,49 @@ const FORM = () => {
     }
 
     return (
-        // <form onSubmit={this.handleSubmit} method="POST" name="email_form_with_php" action="https://hpcaccount.usc.edu/static/web/supportform_simple.php" enctype="multipart/form-data"> 
-        <form onSubmit={(e) => handleSubmit(e)}> 
-            <ul>
-                <li>
-                    <label htmlFor="name">Name: </label>
-                    <input id="name" type="text" name="name" maxLength="60" value={name} onChange={(e) => handleOnChange(e)} />
-                </li>
-                <li>
-                    <label htmlFor="recipient">Recipient Email: </label>
-                    <input id="recipient" type="text" name="recipient" maxLength="60" value={recipient} onChange={(e) => handleOnChange(e)} />
-                </li>
-                <li>
-                    <label htmlFor="email">Email: </label>
-                    <input id="email" type="text" name="email" value={email} onChange={(e) => handleOnChange(e)} />
-                </li>
-                <li>
-                    <label htmlFor="category">Category: </label>
-                    <select id="category" name="category" value={category} onChange={(e) => handleOnChange(e)}>
-                        <option value="discovery"> Cluster - Discovery</option>
-                        <option value="condo"> Cluster - Condo </option>
-                        <option value="account"> Account/Access </option>
-                        <option value="storage"> Storage </option>
-                        <option value="other"> Other </option>
-                    </select>
-                </li>
-                <li>
-                    <label htmlFor="subject">Subject (60): </label>
-                    <input id="subject" type="text" name={subject} maxLength="60" onChange={(e) => handleOnChange(e)} />
-                </li>
-                <li>
-                    <label htmlFor="message">Message (1000):</label>
-                    <textarea id="message" name="message" maxLength="1000" value={message} onChange={(e) => handleOnChange(e)}></textarea>
-                </li>
-                <li>
-                    <label htmlFor="attachment">Attachment:</label>
-                    <input id="attachment" type="file" name="attachment" value={attachment} onChange={(e) => handleOnChange(e)} />
-                </li>
-                <li>
-                    <label htmlFor="submit"></label>
-                    <input id="submit" type="submit" value="Submit" name="submit" />
-                </li>
-            </ul>
-    </form>
+        <iframe className="ticket-submission" src="https://hpcaccount.usc.edu/static/web/supportform_simple.php" />
+    //     <form onSubmit={(e) => handleSubmit(e)}> 
+    //         <ul>
+    //             <li>
+    //                 <label htmlFor="name">Name: </label>
+    //                 <input id="name" type="text" name="name" maxLength="60" value={name} onChange={(e) => handleOnChange(e)} />
+    //             </li>
+    //             <li>
+    //                 <label htmlFor="recipient">Recipient Email: </label>
+    //                 <input id="recipient" type="text" name="recipient" maxLength="60" value={recipient} onChange={(e) => handleOnChange(e)} />
+    //             </li>
+    //             <li>
+    //                 <label htmlFor="email">Email: </label>
+    //                 <input id="email" type="text" name="email" value={email} onChange={(e) => handleOnChange(e)} />
+    //             </li>
+    //             <li>
+    //                 <label htmlFor="category">Category: </label>
+    //                 <select id="category" name="category" value={category} onChange={(e) => handleOnChange(e)}>
+    //                     <option value="discovery"> Cluster - Discovery</option>
+    //                     <option value="condo"> Cluster - Condo </option>
+    //                     <option value="account"> Account/Access </option>
+    //                     <option value="storage"> Storage </option>
+    //                     <option value="other"> Other </option>
+    //                 </select>
+    //             </li>
+    //             <li>
+    //                 <label htmlFor="subject">Subject (60): </label>
+    //                 <input id="subject" type="text" name={subject} maxLength="60" onChange={(e) => handleOnChange(e)} />
+    //             </li>
+    //             <li>
+    //                 <label htmlFor="message">Message (1000):</label>
+    //                 <textarea id="message" name="message" maxLength="1000" value={message} onChange={(e) => handleOnChange(e)}></textarea>
+    //             </li>
+    //             <li>
+    //                 <label htmlFor="attachment">Attachment:</label>
+    //                 <input id="attachment" type="file" name="attachment" value={attachment} onChange={(e) => handleOnChange(e)} />
+    //             </li>
+    //             <li>
+    //                 <label htmlFor="submit"></label>
+    //                 <input id="submit" type="submit" value="Submit" name="submit" />
+    //             </li>
+    //         </ul>
+    // </form>
     )
 }
 
