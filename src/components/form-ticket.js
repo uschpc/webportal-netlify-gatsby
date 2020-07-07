@@ -80,7 +80,7 @@ const FORM = () => {
     }
 
     return (
-        <iframe className="ticket-submission" src="https://hpcaccount.usc.edu/static/web/supportform_simple.php" />
+        // <iframe className="ticket-submission" src="https://hpcaccount.usc.edu/static/web/supportform_simple.php" />
     //     <form onSubmit={(e) => handleSubmit(e)}> 
     //         <ul>
     //             <li>

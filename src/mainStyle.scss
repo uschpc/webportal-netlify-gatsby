@@ -17,6 +17,15 @@ body {
       }
     }
     overflow: hidden;
+    .content-container {
+      .shared {
+        &.system-status {
+          iframe {
+            border: 4px solid #ffcd05;
+          }
+        }
+      }
+    }
 
     iframe {
       // margin: 44px 10%;
@@ -27,6 +36,12 @@ body {
         display: none;
       }
     }
+    .system-status {
+      iframe {
+        border: 4px solid lightgray;
+      }
+    }
+    
     .user-guides-main-pages {
       iframe {
         &.ticket-submission {

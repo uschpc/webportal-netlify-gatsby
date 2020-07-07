@@ -2,6 +2,7 @@ import React from 'react';
 import featureBox from '../feature-boxes.json';
 import { Link } from 'gatsby';
 import Markdown from "react-markdown"
+import { TwitterTimelineEmbed } from 'react-twitter-embed';
 // import MenuRoute from './menu-route.js';
 
 const SharedTemplate = (items) => {
@@ -69,8 +70,12 @@ const SharedTemplate = (items) => {
                             {/* <img src="/images/Supercomputers-history.png" /> */}
                         </div>
                         <div className="recent-news">
-                            <h3>Recent News</h3>
-                            <p>recent news</p>
+                            <h3>Recent Tweets</h3>
+                            <TwitterTimelineEmbed
+                                sourceType="profile"
+                                screenName="SaurabhNemade"
+                                options={{height: 400}}
+                            />
                         </div>
                     </div>
                 ) : (
