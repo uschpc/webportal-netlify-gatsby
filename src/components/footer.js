@@ -9,7 +9,7 @@ const Footer = () => {
                     <div className="social">
                         
                         <i className="fa fa-youtube fa-2x"></i>
-                        <i className="fa fa-twitter fa-2x"></i>
+                        <a href="https://twitter.com/usccarc"><i className="fa fa-twitter fa-2x"></i></a>
                         <i className="fa fa-github fa-2x"></i>
                         {/* <a className="sicon facebook" href="#" target="_blank" title="Facebook"></a> */}
                         {/* <a className="sicon twitter" href="#" target="_blank" title="Twitter"></a>
