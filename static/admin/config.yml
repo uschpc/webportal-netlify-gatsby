@@ -30,6 +30,63 @@ collections:
         name: "about"
         fields:
           - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/content/user-support.md"
+        label: "User Support"
+        name: "user-support"
+        fields:
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/content/user-guides.md"
+        label: "User Guides"
+        name: "user-guides"
+        fields:
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/content/high-performance-computing.md"
+        label: "High-Performance Computing"
+        name: "high-performance-computing"
+        fields:
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/user-guides/high-performance-computing/research-computing-user-portal.md"
+        label: "Research Computing User Portal"
+        name: "research-computing-user-portal"
+        fields:
+          - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Featured boxes"
+    label: "Featured boxes"
+    folder: "src/feature-boxes"
+    create: false
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "path", widget: "string"}
+      - {label: "Featured box thumbnail", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Featured Stories"
+    label: "Featured Stories"
+    folder: "src/featured-story"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "path", widget: "string"}
+      - {label: "Short description", name: "excerpt", widget: "string"}
+      - {label: "Featured story thumbnail", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Latest News"
+    label: "Latest News"
+    folder: "src/latest-news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Slug", name: "path", widget: "string"}
+      - {label: "parent menu", name: "parentEle", widget: "string", default: 'News and Events'}
+      - {label: "date", name: "date", widget: "date", default: "{{year}}-{{month}}-{{day}}", format: 'YYYY-MM-DD'}
+      - {label: "parent path", name: "parentPath", widget: "string", default: 'education-and-outreach/news-and-updates'}
+      - {label: "Category", name: "cat", widget: "string", default: 'news'}
+      - {label: "Short description", name: "excerpt", widget: "string"}
+      - {label: "Latest news thumbnail", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: settings
     label: Settings
     files:
@@ -49,3 +106,54 @@ collections:
                 fields:
                   - {label: Label, name: label, widget: string}
                   - {label: Path, name: path, widget: string}
+  - name: About
+    label: About Pages
+    folder: src/navigation/about
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "path", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: Services
+    label: Services Pages
+    folder: src/navigation/Services
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "path", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: Education And Outreach
+    label: Education And Outreach Pages
+    folder: src/navigation/education-and-outreach
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "path", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: User Information
+    label: User Information Pages
+    folder: src/navigation/user-information
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "path", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: User Support
+    label: User Support Pages
+    folder: src/user-support
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "path", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: ColdFront
+    label: ColdFront Pages
+    folder: src/user-guides/coldfront
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "path", widget: "string"}
+      - {label: "Id", name: "id", widget: "number"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: User Guides
+    label: User Guides Pages
+    folder: src/user-guides
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "path", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}

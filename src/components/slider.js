@@ -7,14 +7,14 @@ const content = [
       title: "Center for High-Performance Computing",
       description:
         "A new partnership offers computing resources for research into the novel coronavirus.",
-      button: "Read More",
-      image: "https://i.imgur.com/ZXBtVw7.jpg"
+      button: "Learn More",
+      image: "https://i.imgur.com/DCdBXcq.jpg"
     },
     {
       title: "HPC at SC19",
       description:
         "The HPC team attended SC19–the International Conference for High-Performance Computing, Networking, Storage and Analysis—from November 18–21, 2019.",
-      button: "Discover",
+      button: "Learn More",
       image: "https://i.imgur.com/DCdBXcq.jpg"
     },
     {
@@ -38,7 +38,7 @@ const Carsoul = () => {
           <div className="inner">
             <h1>{item.title}</h1>
             <p>{item.description}</p>
-            <button>{item.button}</button>
+            <button className="slider-btn">{item.button}</button>
           </div>
         </div>
       ))}

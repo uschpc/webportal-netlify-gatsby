@@ -2,10 +2,11 @@ import React, { Component } from "react"
 import postList from '../posts.json'
 import * as JsSearch from "js-search"
 import Markdown from "react-markdown"
+import { Link } from "gatsby"
 
 class Search extends Component {
   state = {
-    contentList: postList,
+    contentList: this.props.edges,
     search: [],
     searchResults: [],
     isLoading: true,
@@ -13,14 +14,6 @@ class Search extends Component {
     searchQuery: "",
   }
 
-  componentWillReceiveProps(nextProps) {
-    for (const index in nextProps) {
-      if (nextProps[index] !== this.props[index]) {
-        console.log(index, this.props[index], '-->', nextProps[index]);
-        this.searchData(nextProps[index]);
-      }
-    }
-  }
   /**
    * React lifecycle method to fetch the data
    */
@@ -59,37 +52,52 @@ class Search extends Component {
      */
     dataToSearch.searchIndex = new JsSearch.TfIdfSearchIndex("isbn");
     dataToSearch.addIndex("title") // sets the index attribute for the data
-    dataToSearch.addIndex("author") // sets the index attribute for the data
-    dataToSearch.addIndex("content") // sets the index attribute for the data
+    dataToSearch.addIndex("excerpt") // sets the index attribute for the data
+    dataToSearch.addIndex("html") // sets the index attribute for the data
     dataToSearch.addDocuments(contentList) // adds the data to be searched
-    // this.setState({ search: dataToSearch, isLoading: false });
+    const searchQuery = window.location.search.split('?') ? window.location.search.split('?')[1].split('=')[1] : "";
+    this.searchData(searchQuery, true);
   }
   /**
    * handles the input change and perform a search with js-search
    * in which the results will be added to the state
    */
-  searchData = qry => {
+  searchData = (qry, flag) => {
     const { contentList } = this.state;
+    let searchInput = flag ? qry.toLowerCase() : qry.target.value.toLowerCase();
     const updatedList = contentList.filter((item) => {
-        return Object.keys(item).some(key => item[key].toString().search(qry) !== -1);
+        return Object.keys(item).some(key => {
+          return item[key].frontmatter.title.toString().toLowerCase().search(searchInput) !== -1 ||
+          item[key].frontmatter.excerpt && item[key].frontmatter.excerpt.toString().toLowerCase().search(searchInput) !== -1 || 
+          item[key].frontmatter.path && item[key].frontmatter.path.toString().toLowerCase().search(searchInput) !== -1 || 
+          item[key].html.toString().toLowerCase().search(searchInput) !== -1
+        });
     });
-    this.setState({ searchQuery: qry, searchResults: updatedList })
+    this.setState({ searchQuery: searchInput, searchResults: updatedList })
   }
   render() {
     const { contentList, searchResults, searchQuery } = this.state
     const queryResults = searchQuery === "" ? contentList : searchResults
     return (
       <div>
+        <div className="form-item">
+          <label htmlFor="edit-search">Search</label>
+          <img src="/images/search-icon-black@2x.png" />
+          <input placeholder="Search..." data-drupal-selector="edit-search" type="text" id="edit-search" name="search" value={this.state.searchQuery} size="30" maxLength="128" className="form-text" onChange={e => this.searchData(e, false)} />
+        </div>
         <div className="post-list">
-            <h2>Post lists</h2>
-            {queryResults.map((item, i) => {
+            <h2><span>Search Results:</span> {this.state.searchQuery ? this.state.searchQuery : 'All'}</h2>
+            {queryResults.length ? queryResults.map((item, i) => {
                 return (  
+                  item.node.frontmatter.title && (
                     <div className="posts" key={i}>
-                        <h3>{item.title}</h3>
-                        <Markdown source={item.content} escapeHtml={false} />
+                        <h3>{item.node.frontmatter.title}</h3>
+                        <h4>{item.node.frontmatter.excerpt}</h4>
+                        <Link to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}>Read More</Link>
                     </div>
+                  )
                 )
-            })}
+            }) :  <div className="posts">No Result Found</div>}
         </div>
       </div>
     )

@@ -1,39 +1,81 @@
-import React, { useState } from "react"
-import { Link } from "gatsby"
-import pagelist from "../pages.json";
+import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Markdown from "react-markdown"
-import Search from "../components/SearchContainer.js";
 import Carsoul from "../components/slider.js";
+import BodyContent from "../components/body-content.js";
+import Footer from "../components/footer.js";
 
-const IndexPage = () => {
-  const [searchTrigger, searchBarUpdated] = useState('');
-
-  let contents = pagelist.filter(obj => {
-    return obj.filePath === 'index'
-  });
-  const searchData = (e) => {
-    searchBarUpdated(e.target.value);
-  }
+const IndexPage = ({data}) => {
 
   return (
-      <Layout searchData={(e) => searchData(e)}>
+      <Layout {...data.navigation}>
           <SEO title="About" />
           <Carsoul />
-          <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0 1.0875rem 1.45rem`,
-          }}
-          >
-            <Search searchData={searchTrigger}/>
-          </div>
-          <Markdown source={contents[0].content} escapeHtml={false} />
-          <Link to="/about/">Go to about us page</Link>
+          <BodyContent {...data} />
+          <Footer />
       </Layout>
   )
 }
 
 export default IndexPage
+
+export const pageQuery = graphql`
+    query{
+      navigation: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "navigation"}}}) {
+        edges {
+          node {
+            frontmatter {
+              path
+              title
+              parentEle
+              parentPath
+              externalPath
+              redirectToPage
+            }
+          }
+        }
+      }
+      news: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "news"}}}) {
+        edges {
+          node {
+            frontmatter {
+              author
+              title
+              path
+              thumbnail
+              excerpt
+              parentPath
+            }
+            html
+          }
+        }
+      }
+      featureStory: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "feature"}}}) {
+        edges {
+          node {
+            frontmatter {
+              author
+              title
+              path
+              thumbnail
+              excerpt
+            }
+            html
+          }
+        }
+      }
+      featureBoxes: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "services"}}}) {
+        edges {
+          node {
+            frontmatter {
+              title
+              path
+              thumbnail
+              redirectToPage
+            }
+            html
+          }
+        }
+      }
+    }
+`

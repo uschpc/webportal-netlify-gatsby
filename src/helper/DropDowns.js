@@ -1,135 +1,342 @@
 import React from "react";
-import { BrowserRouter as Router} from "react-router-dom"
-import { Link } from "react-router-dom"
+// import { BrowserRouter as Router, Link} from "react-router-dom"
+import { Link } from "gatsby"
 import navlist from "../navigations.json";
 
-const assignedDropdownSubNav = (menubar) => {
-  let subNav = navlist.nav_items.filter((ele, i) => {
-    if (ele.label === menubar) {
-      return navlist.nav_items[i].sub_nav_items;
+const assignedDropdownSubNav = (menubar, nav) => {
+  let subNav = nav.filter((ele, i) => {
+    if (ele.node.frontmatter.parentEle === menubar) {
+      return ele.node.frontmatter;
     }
   });
-  return subNav[0];
+  return subNav;
 }
 
-const AboutSubNavDropdown = ({ current, prev }) => {
-  let subNav = assignedDropdownSubNav('About');
+const AboutSubNavDropdown = ({ current, prev, nav}) => {
+  let subNav = assignedDropdownSubNav('About', nav);
 
   return (
     <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
-      <div data-prevent-distortion>
-        <div className="dropdown-section">
-          <ul className="products-section">
-            {subNav.sub_nav_items.map((item, i) => {
-              return (
-              <li key={i}>
-                <Router>
-                  <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
-                </Router>
-              </li>
-              )
-            })}
-          </ul>
+    <div className="dropdown-content">  
+      <div className="row">
+        <div className="column">
+          <h4>
+            The Advanced Research Computing Center provides high-performance computing resources to the USC research community.  
+          </h4>         
         </div>
-      </div>
-    </div>
-  );
-};
-
-const ServicesSubNavDropdown = ({ current, prev }) => {
-  let subNav = assignedDropdownSubNav('Services');
-
-  return (
-    <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
-      <div data-prevent-distortion>
-        <div className="dropdown-section">
-          <ul className="products-section">
-            {subNav.sub_nav_items.map((item, i) => {
-                return (
+        <div className="column">
+          <ul>
+          {subNav.map((item, i) => {
+             if (i <= 3) {
+              return (
                 <li key={i}>
-                  <Router>
-                    <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
-                  </Router>
+                  <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
                 </li>
+                )}
+              }
+            )
+          }
+        </ul>
+        </div>
+        <div className="column">
+          {subNav.length > 4 && (
+            
+            <div className="links">
+            {subNav.map((item, i) => {
+              if (i > 3) {
+                return (
+                  <li key={i}>
+                    <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                    </li>
+                  )
+                }
+                  return ''  
+              })
+            }
+            </div>
+          )}
+        </div>
+      </div>
+  </div>
+  </div>
+  )
+};
+
+const ServicesSubNavDropdown = ({ current, prev, nav }) => {
+  let subNav = assignedDropdownSubNav('Services', nav);
+
+  return (
+    <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
+    <div className="dropdown-content">  
+      <div className="row">
+        <div className="column">
+        <h4>
+          The Advanced Research Computing Center offers a variety of services to support USC's research endeavors.  
+        </h4>       
+        </div>
+        <div className="column">
+          <ul>
+          {subNav.map((item, i) => {
+             if (i <= 3) {
+              return (
+                item.node.frontmatter.redirectToPage ? (
+                  <li key={i}>
+                    <Link className="heading" to={item.node.frontmatter.redirectToPage}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                  </li>
+                ) : (
+                  <li key={i}>
+                      <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                  </li>
                 )
-              })}
-          </ul>
+                )}
+              }
+            )
+          }
+        </ul>
+        </div>
+        <div className="column">
+          {subNav.length > 4 && (
+            
+            <div className="links">
+            {subNav.map((item, i) => {
+              if (i > 3) {
+                return (
+                  <li key={i}>
+                    <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                    </li>
+                  )
+                }
+                  return ''  
+              })
+            }
+            </div>
+          )}
         </div>
       </div>
-    </div>
-  );
+  </div>
+  </div>
+  )
 };
 
-const UserInfoSubNavDropdown = ({ current, prev }) => {
-  let subNav = assignedDropdownSubNav('User Information');
+const UserInfoSubNavDropdown = ({ current, prev, nav }) => {
+  let subNav = assignedDropdownSubNav('User Information', nav);
 
   return (
     <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
-      <div data-prevent-distortion>
-        <div className="dropdown-section">
-          <ul className="products-section">
-            {subNav.sub_nav_items.map((item, i) => {
+    <div className="dropdown-content">  
+      <div className="row">
+        <div className="column">
+        <h4>
+          The Advanced Research Computing Center strives to provide a complete and comprehensive user support experience.  
+        </h4>        
+        </div>
+        <div className="column">
+          <ul>
+          {subNav.map((item, i) => {
+             if (i <= 3) {
               return (
-              <li key={i}>
-                <Router>
-                  <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
-                </Router>
-              </li>
-              )
-            })}
-          </ul>
+                !item.node.frontmatter.externalPath ? (
+                  item.node.frontmatter.redirectToPage ? (
+                  <li key={i}>
+                    <Link className="heading" to={item.node.frontmatter.redirectToPage}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                    </li> 
+                ) : (
+                  <li key={i}>
+                    <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                  </li> 
+                  )
+                ) : (
+                  <li key={i}>
+                    <a className="heading" href={item.node.frontmatter.externalPath} target="_blank"><h3 className="heading">{item.node.frontmatter.title}</h3></a>
+                  </li>
+                )
+                )}
+              }
+            )
+          }
+        </ul>
+        </div>
+        <div className="column">
+          {subNav.length > 4 && (
+            <div className="links">
+            {subNav.map((item, i) => {
+              if (i > 3) {
+                return (
+                  !item.node.frontmatter.externalPath ? (
+                    item.node.frontmatter.redirectToPage ? (
+                      <li key={i}>
+                        <Link className="heading" to={item.node.frontmatter.redirectToPage}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                        </li> 
+                    ) : (
+                      <li key={i}>
+                        <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                      </li> 
+                    )
+                  ) : (
+                    <li key={i}>
+                      <a className="heading" href={item.node.frontmatter.externalPath} target="_blank"><h3 className="heading">{item.node.frontmatter.title}</h3></a>
+                    </li>
+                  )
+                  )}
+                  return ''  
+              })
+            }
+            </div>
+          )}
         </div>
       </div>
-    </div>
-  );
+  </div>
+  </div>
+  )
 };
 
-const EducationOutreachSubNavDropdown = ({ current, prev }) => {
-  let subNav = assignedDropdownSubNav('Education & Outreach');
-
-  return (
-    <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
-      <div data-prevent-distortion>
-        <div className="dropdown-section">
-          <ul className="products-section">
-            {subNav.sub_nav_items.map((item, i) => {
-              return (
-              <li key={i}>
-                <Router>
-                  <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
-                </Router>
-              </li>
+const EducationOutreachSubNavDropdown = ({ current, prev, nav }) => {
+  let subNav = assignedDropdownSubNav('Education & Outreach', nav);
+    return (
+      <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
+  
+      <div className="dropdown-content">  
+        <div className="row">
+          <div className="column">
+          <h4>
+            Supporting USC students and faculty in their computational research is the key mission of the Advanced Research Computing Center. 
+          </h4>    
+          </div>
+          <div className="column">
+            <ul>
+            {subNav.map((item, i) => {
+               if (i <= 3) {
+                return (
+                  <li key={i}>
+                      <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                    </li>
+                  )}
+                }
               )
-            })}
+            }
           </ul>
+          </div>
+          <div className="column">
+          {subNav.length > 4 && (
+            <div className="links">
+            {subNav.map((item, i) => {
+              if (i > 3) {
+                return (
+                  <li key={i}>
+                    <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                    </li>
+                  )
+                }
+                  return ''  
+              })
+            }
+            </div>
+          )}
         </div>
-      </div>
+        </div>
     </div>
-  );
+    </div>
+    )
 }
 
-const UserSupportSubNavDropdown = ({ current, prev }) => {
-  let subNav = assignedDropdownSubNav('User Support');
-
-  return (
-    <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
-      <div data-prevent-distortion>
-        <div className="dropdown-section">
-          <ul className="products-section">
-            {subNav.sub_nav_items.map((item, i) => {
+const UserSupportSubNavDropdown = ({ current, prev, nav }) => {
+  let subNav = assignedDropdownSubNav('User Support', nav);
+  if(subNav > 0) {
+    return (
+      <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
+        <div className="dropdown-content">  
+        <div className="row">
+          <div className="column">
+            <h4>Life is beautiful</h4>         
+          </div>
+        <div className="column">
+          <ul>
+          {subNav.map((item, i) => {
+             if (i <= 3) {
               return (
-              <li key={i}>
-                <Router>
-              <Link className="heading" to={item.path}><h3 className="heading">{item.label}</h3></Link>
-                </Router>
-              </li>
-              )
-            })}
-          </ul>
+                <li key={i}>
+                    <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                  </li>
+                )}
+              }
+            )
+          }
+        </ul>
         </div>
-      </div>
+        <div className="column">
+          {subNav.length > 4 && (
+            <div className="links">
+            {subNav.map((item, i) => {
+              if (i > 3) {
+                return (
+                  <li key={i}>
+                    <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                    </li>
+                  )
+                }
+                  return ''  
+              })
+            }
+            </div>
+          )}
+        </div>
+        </div>
     </div>
-  );
+      </div>
+    );
+  } else {
+    return ''
+  }
 }
 
-export { AboutSubNavDropdown, ServicesSubNavDropdown, UserInfoSubNavDropdown, EducationOutreachSubNavDropdown, UserSupportSubNavDropdown };
+const NewsEventsSubNavDropdown = ({ current, prev, nav }) => {
+  let subNav = assignedDropdownSubNav('News and Events', nav);
+
+    return (
+      <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
+        <div className="dropdown-content">  
+        <div className="row">
+          <div className="column">
+          <h4>
+            Find out how the Advanced Research Computing Center has been getting involved with the Trojan community.
+          </h4>       
+          </div>
+        <div className="column">
+          <ul>
+          {subNav.map((item, i) => {
+             if (i <= 3) {
+              return (
+                <li key={i}>
+                    <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                  </li>
+                )}
+              }
+            )
+          }
+        </ul>
+        </div>
+        <div className="column">
+          {subNav.length > 4 && (
+            
+            <div className="links">
+            {subNav.map((item, i) => {
+              if (i > 3) {
+                return (
+                  <li key={i}>
+                    <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
+                    </li>
+                  )
+                }
+                  return ''  
+              })
+            }
+            </div>
+          )}
+        </div>
+        </div>
+    </div>
+    </div>
+    );
+}
+
+export { AboutSubNavDropdown, ServicesSubNavDropdown, UserInfoSubNavDropdown, EducationOutreachSubNavDropdown, UserSupportSubNavDropdown, NewsEventsSubNavDropdown };

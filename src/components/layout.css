@@ -1,12 +1,9 @@
 html {
-  font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body {
   margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 article,
 aside,
@@ -69,7 +66,7 @@ mark {
   color: #000;
 }
 small {
-  font-size: 80%;
+  font-size: 90%;
 }
 sub,
 sup {
@@ -94,7 +91,6 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
   font-size: 1em;
 }
 figure {
@@ -110,7 +106,6 @@ input,
 optgroup,
 select,
 textarea {
-  font: inherit;
   margin: 0;
 }
 optgroup {
@@ -185,7 +180,6 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -200,8 +194,8 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
   font-weight: normal;
+  font-family: 'Source Sans Pro', sans-serif;
   word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
@@ -230,8 +224,6 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -247,8 +239,6 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
@@ -264,8 +254,6 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
@@ -281,8 +269,6 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
@@ -298,8 +284,6 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
@@ -315,8 +299,6 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;
@@ -506,14 +488,12 @@ dt {
 th {
   font-weight: bold;
 }
-li {
-  margin-bottom: calc(1.45rem / 2);
-}
 ol li {
   padding-left: 0;
 }
 ul li {
   padding-left: 0;
+  padding-right: 5px;
 }
 li > ol {
   margin-left: 1.45rem;
@@ -590,8 +570,6 @@ tt,
 code {
   background-color: hsla(0, 0%, 0%, 0.04);
   border-radius: 3px;
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
-    "Liberation Mono", Menlo, Courier, monospace;
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
@@ -618,3 +596,251 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+
+
+
+
+.navbar {
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown .dropbtn {
+  font-size: 18px;  
+  border: none;
+  outline: none;
+  color: black;
+  padding: 13px 0px;
+  background-color: inherit;
+  font-weight: bold;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  color:  rgba(153, 0, 0, 0.7);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: gray;
+  opacity: 0.9;
+  width: 100%;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 50;
+}
+
+.dropdown-content .header {
+  background: red;
+  padding: 16px;
+  color: white;
+}
+
+.dropdown-content .row {
+    display: flex;
+    width: 100%;
+    z-index: 100;
+    justify-content: center;
+    background: transparent;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  margin: 1px 0 0 0;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  width: 15%;
+  margin: 15px 20px;
+  height: 150px;
+}
+
+.column:first-of-type {
+  border-right: 1px solid white;
+}
+
+.column h3 {
+  color: white;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.column .links {
+  display: flex;
+  flex-direction: column;
+}
+
+.column a {
+  color: white;
+  text-decoration: none;
+  text-align: left;
+  font-size: 10px;
+  padding: 5px;
+}
+
+.column ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.column:last-child {
+  border-right: none;
+}
+
+.column a:hover, .column h3:hover {
+  color: rgba(153, 0, 0, 0.7);
+}
+
+.column h4 {
+  color: white;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: normal;
+  padding: 0 10px;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+.top-bar {
+  background: #ffcd05;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.top-bar .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar .row form {
+  margin: 5px;
+  position: relative;
+}
+
+.top-bar .row form input {
+    width: 172px;
+    height: 25px;
+    margin: 0;
+    padding: 0 27px 0 3px;
+    border: 2px solid #fff;
+    background: #fff;
+    font: 14px/19px Helvetica, Arial, sans-serif;
+    color: #333;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
+.top-bar .row form .arrow-search  {
+    display: block;
+    position: absolute;
+    top: 3px;
+    right: 2px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 21px;
+    height: 21px;
+    text-indent: -9999px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background: #fc0;
+    background-image: url(/images/searcharrow.png);
+    background-image: url(/images/searcharrow.png), -webkit-gradient(linear,left top,left bottom,color-stop(0, #fc0),color-stop(0.85, #D1A832));
+    background-image: url(/images/searcharrow.png), -moz-linear-gradient(center top,#fc0 0%,#D1A832 85%);
+    background-image: url(/images/searcharrow.png), -o-linear-gradient(center top,#fc0 0%,#D1A832 85%);
+}
+
+/* line 11, ../scss/layout/_header.scss */
+.tb-col-1 ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 20, ../scss/layout/_header.scss */
+.tb-col-1 ul li {
+  color: black;
+  display: inline-block;
+}
+/* line 24, ../scss/layout/_header.scss */
+.tb-col-1 ul.nav-top li {
+  /* border-left: 1px solid #000; */
+}
+/* line 27, ../scss/layout/_header.scss */
+.tb-col-1 ul.nav-top li a {
+  color: #000;
+  font-weight: normal;
+  margin: 0 2px;
+  font-size: 12px;
+  padding-left: 4px;
+  border-right: 1px solid #000;
+  padding-right: 4px;
+}
+.tb-col-1 ul.nav-top li.menu-item-13138 a {
+  border-right: none;
+}
+/* line 33, ../scss/layout/_header.scss */
+.tb-col-1 ul.nav-top li a:hover {
+  color: rgba(153, 0, 0, 0.7);;
+  text-decoration: underline;
+}
+/* line 39, ../scss/layout/_header.scss */
+.tb-col-1 ul.nav-top li a:first-child {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+/* line 46, ../scss/layout/_header.scss */
+.tb-col-2 {
+  text-align: right;
+}
+
+/* line 49, ../scss/layout/_header.scss */
+.header {
+  background: #990000;
+  border-bottom: 4px solid #e2e2e2;
+  color: #0569B1;
+  padding-top: 25px;
+  padding-bottom: 0;
+  position: relative;
+}
+/* line 57, ../scss/layout/_header.scss */
+.header .container {
+  overflow: visible;
+}
+
+/* line 64, ../scss/layout/_header.scss */
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+img.lazyloaded {
+  margin: 0;
+}
+
+/* line 70, ../scss/layout/_header.scss */
+#print-logo {
+  display: none;
+}
+

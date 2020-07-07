@@ -3,10 +3,16 @@ const fs = require("fs")
 const yaml = require('js-yaml');
 
 const dirPathNav = path.join(__dirname, "../src/data/settings")
+const dirPathFeatureBoxes = path.join(__dirname, "../src/feature-boxes")
+const dirPathFeatureStories = path.join(__dirname, "../src/featured-story")
+const dirPathLatestNews = path.join(__dirname, "../src/latest-news")
 const dirPath = path.join(__dirname, "../src/posts/content")
 const dirPathPages = path.join(__dirname, "../src/pages/content")
 let postlist = []
 let pagelist = []
+let featureBoxes = []
+let featureStories = []
+let latesNews = []
 
 const months = {
     "01": "January",
@@ -142,6 +148,190 @@ const getNavigations = () => {
     return 
 }
 
+const getFeatureBoxes = () => {
+    let obj = {}
+    fs.readdir(dirPathFeatureBoxes, (err, files) => {
+        if (err) {
+            return console.log("Failed to list contents of directory: " + err)
+        }
+        files.forEach((file, i) => {
+            let featureBox
+            let filePath = file.split(".")[0];
+            fs.readFile(`${dirPathFeatureBoxes}/${file}`, "utf8", (err, contents) => { 
+                const getMetadataIndices = (acc, elem, i) => {
+                    if (/^---/.test(elem)) {
+                        acc.push(i)
+                    }
+                    return acc
+                }
+                const parseMetadata = ({lines, metadataIndices}) => {
+                    if (metadataIndices.length > 0) {
+                        let metadata = lines.slice(metadataIndices[0] + 1, metadataIndices[1])
+                        metadata.forEach(line => {
+                            obj[line.split(": ")[0]] = line.split(": ")[1]
+                        })
+                        return obj
+                    }
+                }
+                const parseImages = ({lines, metadataIndices}) => {
+                    if (metadataIndices.length > 0) {
+                        let metadata = lines.slice(metadataIndices[0] + 1, metadataIndices[1])
+                        metadata.forEach(line => {
+                            obj[line.split(": ")[0]] = line.split(": ")[1]
+                        })
+                        return obj
+                    }
+                }
+                const parseContent = ({lines, metadataIndices}) => {
+                    if (metadataIndices.length > 0) {
+                        lines = lines.slice(metadataIndices[1] + 1, lines.length)
+                    }
+                    return lines.join("\n")
+                }
+                
+                const lines = contents.split("\n")
+                const metadataIndices = lines.reduce(getMetadataIndices, [])
+                const metadata = parseMetadata({lines, metadataIndices})
+                const images = parseImages({lines, metadataIndices})
+                const content = parseContent({lines, metadataIndices})
+
+                featureBox = {
+                    title: metadata.title ? metadata.title : "No title given",
+                    image: images.thumbnail ? images.thumbnail : "/images/logo-top-usc.jpg",
+                    content: content ? content : "No content given",
+                }
+                featureBoxes.push(featureBox);
+                let data = JSON.stringify(featureBoxes)
+                fs.writeFileSync("src/feature-boxes.json", data)
+            })
+        })
+    })
+    return 
+}
+
+const getFeatureStories = () => {
+    let obj = {}
+    fs.readdir(dirPathFeatureStories, (err, files) => {
+        if (err) {
+            return console.log("Failed to list contents of directory: " + err)
+        }
+        files.forEach((file, i) => {
+            let featureStory
+            fs.readFile(`${dirPathFeatureStories}/${file}`, "utf8", (err, contents) => { 
+                const getMetadataIndices = (acc, elem, i) => {
+                    if (/^---/.test(elem)) {
+                        acc.push(i)
+                    }
+                    return acc
+                }
+                const parseMetadata = ({lines, metadataIndices}) => {
+                    if (metadataIndices.length > 0) {
+                        let metadata = lines.slice(metadataIndices[0] + 1, metadataIndices[1])
+                        metadata.forEach(line => {
+                            obj[line.split(": ")[0]] = line.split(": ")[1]
+                        })
+                        return obj
+                    }
+                }
+                const parseImages = ({lines, metadataIndices}) => {
+                    if (metadataIndices.length > 0) {
+                        let metadata = lines.slice(metadataIndices[0] + 1, metadataIndices[1])
+                        metadata.forEach(line => {
+                            obj[line.split(": ")[0]] = line.split(": ")[1]
+                        })
+                        return obj
+                    }
+                }
+                const parseContent = ({lines, metadataIndices}) => {
+                    if (metadataIndices.length > 0) {
+                        lines = lines.slice(metadataIndices[1] + 1, lines.length)
+                    }
+                    return lines.join("\n")
+                }
+                
+                const lines = contents.split("\n")
+                const metadataIndices = lines.reduce(getMetadataIndices, [])
+                const metadata = parseMetadata({lines, metadataIndices})
+                const images = parseImages({lines, metadataIndices})
+                const content = parseContent({lines, metadataIndices})
+
+                featureStory = {
+                    title: metadata.title ? metadata.title : "No title given",
+                    image: images.thumbnail ? images.thumbnail : "/images/logo-top-usc.jpg",
+                    content: content ? content : "No content given",
+                }
+                featureStories.push(featureStory);
+                let data = JSON.stringify(featureStories)
+                fs.writeFileSync("src/feature-stories.json", data)
+            })
+        })
+    })
+    return 
+}
+
+const getLatestNews = () => {
+    let obj = {}
+    fs.readdir(dirPathLatestNews, (err, files) => {
+        if (err) {
+            return console.log("Failed to list contents of directory: " + err)
+        }
+        files.forEach((file, i) => {
+            let latestNews
+            fs.readFile(`${dirPathLatestNews}/${file}`, "utf8", (err, contents) => { 
+                const getMetadataIndices = (acc, elem, i) => {
+                    if (/^---/.test(elem)) {
+                        acc.push(i)
+                    }
+                    return acc
+                }
+                const parseMetadata = ({lines, metadataIndices}) => {
+                    if (metadataIndices.length > 0) {
+                        let metadata = lines.slice(metadataIndices[0] + 1, metadataIndices[1])
+                        metadata.forEach(line => {
+                            obj[line.split(": ")[0]] = line.split(": ")[1]
+                        })
+                        return obj
+                    }
+                }
+                const parseImages = ({lines, metadataIndices}) => {
+                    if (metadataIndices.length > 0) {
+                        let metadata = lines.slice(metadataIndices[0] + 1, metadataIndices[1])
+                        metadata.forEach(line => {
+                            obj[line.split(": ")[0]] = line.split(": ")[1]
+                        })
+                        return obj
+                    }
+                }
+                const parseContent = ({lines, metadataIndices}) => {
+                    if (metadataIndices.length > 0) {
+                        lines = lines.slice(metadataIndices[1] + 1, lines.length)
+                    }
+                    return lines.join("\n")
+                }
+                
+                const lines = contents.split("\n")
+                const metadataIndices = lines.reduce(getMetadataIndices, [])
+                const metadata = parseMetadata({lines, metadataIndices})
+                const images = parseImages({lines, metadataIndices})
+                const content = parseContent({lines, metadataIndices})
+
+                latestNews = {
+                    title: metadata.title ? metadata.title : "No title given",
+                    image: images.thumbnail ? images.thumbnail : "/images/logo-top-usc.jpg",
+                    content: content ? content : "No content given",
+                }
+                latesNews.push(latestNews);
+                let data = JSON.stringify(latesNews)
+                fs.writeFileSync("src/latest-news.json", data)
+            })
+        })
+    })
+    return 
+}
+
 getPosts()
 getPages()
 getNavigations()
+getFeatureBoxes()
+getFeatureStories()
+getLatestNews()

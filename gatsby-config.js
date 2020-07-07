@@ -17,12 +17,67 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `user-guides`,
+        path: `${__dirname}/src/user-guides`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `latest-news`,
+        path: `${__dirname}/src/latest-news`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `featured-story`,
+        path: `${__dirname}/src/featured-story`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `feature-boxes`,
+        path: `${__dirname}/src/feature-boxes`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `navigation`,
+        path: `${__dirname}/src/navigation`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `user-support`,
+        path: `${__dirname}/src/user-support`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-minify`,
       options: {
         removeAttributeQuotes: true,
         removeComments: true,
         minifyCSS: true,
         minifyJS: true
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-s3',
+      options: {
+	      bucketName: 'webportal-dev-td3pl856c23o'
       }
     },
     {
@@ -45,6 +100,7 @@ module.exports = {
         icon: `static/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-transformer-remark`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

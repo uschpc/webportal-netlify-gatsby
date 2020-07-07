@@ -8,6 +8,8 @@ nav_items:
         path: /people
       - label: Collaboration
         path: /collaboration
+      - label: Partnerships
+        path: /partnerships
   - label: Services
     path: /services
     sub_nav_items:
@@ -32,8 +34,8 @@ nav_items:
         path: /getting-started
       - label: Getting Help
         path: /getting-help
-      - label: User Guide
-        path: /user-guide
+      - label: User Guides
+        path: /user-guides
       - label: Resources
         path: /resources
   - label: Education & Outreach
@@ -45,14 +47,8 @@ nav_items:
         path: /learning-contents
       - label: Knowledgebase
         path: /knowledgebase
+  - label: News and Events
+    path: /education-and-outreach
   - label: User Support
     path: /user-support
-    sub_nav_items:
-      - label: Password Reset
-        path: /password-reset
-      - label: Asking Consultation
-        path: /asking-consultation
-      - label: Ticket Submission
-        path: /ticket-submission
-      - label: Resource Request Partnership & Projects
-        path: /resource-request-partnership-projects
+    sub_nav_items: []
