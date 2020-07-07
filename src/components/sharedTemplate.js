@@ -66,14 +66,14 @@ const SharedTemplate = (items) => {
                     <div className="right-col">
                         <div className="system-status">
                             <h3>System Status</h3>
-                            <iframe src="https://hpc-grafana.usc.edu/d-solo/vsUGHjmMk/compute-node-usage?orgId=1&refresh=30s&from=1593106620736&to=1593711420736&var-host=All&panelId=3" width="450" height="200" frameborder="0"></iframe>
+                            <iframe src="https://hpc-grafana.usc.edu/d-solo/vsUGHjmMk/compute-node-usage?orgId=1&refresh=30s&from=1593106620736&to=1593711420736&var-host=All&panelId=3" width="450" height="200" frameBorder="0"></iframe>
                             {/* <img src="/images/Supercomputers-history.png" /> */}
                         </div>
                         <div className="recent-news">
                             <h3>Recent Tweets</h3>
                             <TwitterTimelineEmbed
                                 sourceType="profile"
-                                screenName="SaurabhNemade"
+                                screenName="usccarc"
                                 options={{height: 400}}
                             />
                         </div>
