@@ -1,7 +1,7 @@
 ---
 author: James Hong
 id: 7
-date: 2020-06-15T00:00:00.000Z
+date: 2020-07-08T00:00:00.000Z
 title: Managing Allocations
 path: managing-allocations
 parentPath: user-information/user-guides/high-performance-computing/research-computing-user-portal
