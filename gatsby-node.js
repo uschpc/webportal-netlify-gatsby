@@ -11,16 +11,17 @@ const path = require('path')
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators
 
-  const postTemplate = path.resolve('src/templates/content-post.js')
+  const allNewsTemplate = path.resolve('src/templates/all-news-template.js')
   const coldFrontMainTemplate = path.resolve('src/templates/coldfront-main-template.js')
   const coldFrontTemplate = path.resolve('src/templates/coldfront-template.js')
   //const discoveryGuidesMainTemplate = path.resolve('src/templates/discoveryguides-main-template.js')
   const discoveryGuidesTemplate = path.resolve('src/templates/discoveryguides-template.js')
   const menuTemplate = path.resolve('src/templates/menu-template.js')
+  const postTemplate = path.resolve('src/templates/content-post.js')
+  const sharedMainTemplate = path.resolve('src/templates/shared-main-templates.js')
+  const softwareTemplate = path.resolve('src/templates/software-template.js')
   const userGuidesMainTemplate = path.resolve('src/templates/user-guides-main-template.js')
   const userGuidesTemplate = path.resolve('src/templates/user-guides-template.js')
-  const sharedMainTemplate = path.resolve('src/templates/shared-main-templates.js')
-  const allNewsTemplate = path.resolve('src/templates/all-news-template.js')
 
   return graphql(`
     {
@@ -51,6 +52,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       let path = '';
 
       switch(node.frontmatter.cat) {
+        case 'allNews':
+          template = allNewsTemplate;
+          path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+          break;
         case 'coldFront':
           template = coldFrontTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
@@ -69,20 +74,20 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
         }
         break;
-        case 'userSupport':
-          template = userGuidesMainTemplate;
+        case 'sharedTemplate':
+          template = coldFrontMainTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
-        case 'allNews':
-          template = allNewsTemplate;
+        case 'software':
+          template = softwareTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
         case 'userGuides':
           template = userGuidesTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
-        case 'sharedTemplate':
-          template = coldFrontMainTemplate;
+        case 'userSupport':
+          template = userGuidesMainTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
         default:
