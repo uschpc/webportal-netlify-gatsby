@@ -9,7 +9,6 @@ path: ticket-submission
 parentPath: user-information
 cat: userSupport
 parentEle: none
-externalPath: https://hpcaccount.usc.edu/static/web/supportform_redirect_dev.php
 ---
 
 If you're experiencing an issue with system resources or your CARC account, please see our [User Guides](https://arcc-dev.usc.edu/user-information/user-guides), [User Forum](https://hpc-discourse.usc.edu/categories), and [Frequently Asked Questions](https://arcc-dev.usc.edu/user-information/frequently-asked-questions) pages for help.
