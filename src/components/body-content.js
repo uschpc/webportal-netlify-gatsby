@@ -19,11 +19,11 @@ const BodyContent = ({news, featureStory, featureBoxes}) => {
                     <div className="bg-image">
                         <div className="content">
                             <div className="title">
-                                Advanced Research Computing
+                            The mission of the University of Southern California’s Center for Advanced Research Computing is to support the USC research community with an advanced cyberinfrastructure and research support program.
                             </div>
                             <div className="mission">
                                 {/* <a href="#">View Mission</a> */}
-                                <button className="mission-btn">View Mission</button>
+                                <button className="mission-btn"><a href="/about/mission/">View Mission</a></button>
                             </div>
                         </div>
                     </div>

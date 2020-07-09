@@ -8,18 +8,14 @@ const Pagination = () => {
     const [perPAge, setPerPage] = useState(10)
     const [currentPage, setCurrentPage] = useState(0)
 
-    handlePageClick = (e) => {
+    const handlePageClick = (e) => {
+        let x = = https://arcc-dev.usc.edu/user-information/ticket-submission;
         const selectedPage = e.selected;
-        const offset = selectedPage * this.state.perPage;
-  
-        this.setState({
-            currentPage: selectedPage,
-            offset: offset
-        }, () => {
-            this.receivedData()
-        });
-  
+        const offset = selectedPage * perPage;
+        setCurrentPage(currentPage);
+        setPerPage(perPAge);
     };
+
     return (
         <div>
             {this.state.postData}
@@ -31,7 +27,7 @@ const Pagination = () => {
                 pageCount={this.state.pageCount}
                 marginPagesDisplayed={2}
                 pageRangeDisplayed={5}
-                onPageChange={this.handlePageClick}
+                onPageChange={() => handlePageClick()}
                 containerClassName={"pagination"}
                 subContainerClassName={"pages pagination"}
                 activeClassName={"active"}/>

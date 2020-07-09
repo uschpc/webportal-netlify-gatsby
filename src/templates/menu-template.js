@@ -23,7 +23,7 @@ export default function Template({ data }) {
   
     return (
       <Layout {...data.navigation}>
-          <SEO title="User Guides"/>
+          <SEO title={content.frontmatter.title}/>
           <div className="nav-pages">
             <div className="container">
                 <div className="left-column">
@@ -68,18 +68,19 @@ export default function Template({ data }) {
                       {(content.frontmatter.uniqID === "news_Announcements") && <LatestNews {...data.news } flag={true} />}
                       {(content.frontmatter.uniqID === "news_Announcements") && (
                         <div className="category-link-wrapper type-primary">
-                          {/* <Link className="category-link category-link-lg category-news type-primary" to={"/education-and-outreach/news-and-updates/all-news"}> */}
-                            {/* <img src="/images/news-arrows.svg" />
+                          <Link className="category-link category-link-lg category-news type-primary" to={"/education-and-outreach/news-and-updates/all-news"}>
+                            <img src="/images/news-arrows.svg" />
                             <p>
                               View all Reasearch Computing News
-                            </p> */}
-                            <div className="all-latest-news">
+                            </p>
+                          </Link>
+                            {/* <div className="all-latest-news">
                               <Link className="btn latest-news" to={"/education-and-outreach/news-and-updates/all-news"}>
                                   <span className="txt">View all Reasearch Computing News</span>
                                   <span className="round"><i className="fa fa-chevron-right"></i></span>
                               </Link>
-                              {/* </a> */}
-                            </div>
+                              </a> 
+                            </div>  */}
                         </div>
                       )}
                     </>

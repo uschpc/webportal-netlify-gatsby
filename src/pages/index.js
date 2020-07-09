@@ -9,7 +9,7 @@ const IndexPage = ({data}) => {
 
   return (
       <Layout {...data.navigation}>
-          <SEO title="About" />
+          <SEO title="Home" />
           <Carsoul />
           <BodyContent {...data} />
           <Footer />

@@ -4,13 +4,13 @@ const Footer = () => {
     return (
         <div className="footer">
             <div className="inner">
-                <div className="col4 fl"> USC Research Computing<br /> 3434 South Grand Avenue<br />3rd Floor, Suite 302 (?)<br /> Los Angeles, CA 90089<br />
+                <div className="col4 fl"> USC Research Computing<br /> 3434 South Grand Avenue<br />3rd Floor (CAL Building)<br /> Los Angeles, CA 90089<br />
                     <a href="mailto:hpc@usc.edu" target="_blank">hpc@usc.edu</a>
                     <div className="social">
                         
-                        <i className="fa fa-youtube fa-2x"></i>
+                    <a href="https://github.com/uschpc"><i className="fa fa-youtube fa-2x"></i></a>
                         <a href="https://twitter.com/usccarc"><i className="fa fa-twitter fa-2x"></i></a>
-                        <i className="fa fa-github fa-2x"></i>
+                        <a href="https://www.youtube.com/channel/UCSkVXChGDx_LIRvTwdy5gVQ?view_as=subscriber"><i className="fa fa-github fa-2x"></i></a>
                         {/* <a className="sicon facebook" href="#" target="_blank" title="Facebook"></a> */}
                         {/* <a className="sicon twitter" href="#" target="_blank" title="Twitter"></a>
                         <a className="sicon instagram" href="#" target="_blank" title="Instagram"></a>
@@ -50,7 +50,7 @@ const Footer = () => {
                             </div>
                     </form> */}
                 </div>
-                <a href="https://usc.edu" target="_BLANK" className="logo-footer">
+                <a href="https://itservices.usc.edu/" target="_BLANK" className="logo-footer">
                     <div className="usc-logo"></div>
                 </a>
             </div>

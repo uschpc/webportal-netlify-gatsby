@@ -13,7 +13,7 @@ export default function Template({ data }) {
   let content = data.content;
     return (
       <Layout {...data.navigation}>
-          <SEO title="User Guides"/>
+          <SEO title={mainPage ? mainPage.frontmatter.title : content.frontmatter.title}/>
           <div className="user-guides-main-pages">
             <div className="container">
                 <div className="left-column">

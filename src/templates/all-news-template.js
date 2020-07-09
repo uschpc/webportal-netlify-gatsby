@@ -17,7 +17,7 @@ export default function Template({ data }) {
   
     return (
       <Layout {...data.navigation}>
-          <SEO title="User Guides"/>
+          <SEO title={data.news.frontmatter.title}/>
           <div className="nav-pages">
             <div className="container">
                 <div className="left-column">
