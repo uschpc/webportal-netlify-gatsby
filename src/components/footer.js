@@ -8,9 +8,9 @@ const Footer = () => {
                     <a href="mailto:hpc@usc.edu" target="_blank">hpc@usc.edu</a>
                     <div className="social">
                         
-                    <a href="https://github.com/uschpc"><i className="fa fa-youtube fa-2x"></i></a>
+                        <a href="https://www.youtube.com/channel/UCSkVXChGDx_LIRvTwdy5gVQ?view_as=subscriber"><i className="fa fa-youtube fa-2x"></i></a>
                         <a href="https://twitter.com/usccarc"><i className="fa fa-twitter fa-2x"></i></a>
-                        <a href="https://www.youtube.com/channel/UCSkVXChGDx_LIRvTwdy5gVQ?view_as=subscriber"><i className="fa fa-github fa-2x"></i></a>
+                        <a href="https://github.com/uschpc"><i className="fa fa-github fa-2x"></i></a>
                         {/* <a className="sicon facebook" href="#" target="_blank" title="Facebook"></a> */}
                         {/* <a className="sicon twitter" href="#" target="_blank" title="Twitter"></a>
                         <a className="sicon instagram" href="#" target="_blank" title="Instagram"></a>
