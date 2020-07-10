@@ -1,6 +1,6 @@
 ---
 title: "Upcoming Changes for USC Research Computing: Summer and Fall 2020"
-author: Andrea
+author: Andrea Renney
 path: upcoming-changes-summer-fall-2020
 parentEle: News and Events
 date: 2020-06-18T18:19:38.387Z
