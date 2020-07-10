@@ -10,11 +10,14 @@
             background-color: #990000 ;
             border-color: #990000 ;
             color: #fff;
+            font-size: 16px;
           }
           .pagination > li {
-              margin-left: 5px;
+            font-size: 16px;
+            margin-left: 5px;
           }
           .pagination > li > a{
+            font-size: 16px;
             -webkit-align-content: stretch;
             -ms-flex-line-pack: stretch;
             align-content: stretch;
