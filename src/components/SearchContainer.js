@@ -3,6 +3,7 @@ import postList from '../posts.json'
 import * as JsSearch from "js-search"
 import Markdown from "react-markdown"
 import { Link } from "gatsby"
+import Pagination from "./pagination.js"
 
 class Search extends Component {
   state = {
@@ -87,7 +88,8 @@ class Search extends Component {
         </div>
         <div className="post-list">
             <h2><span>Search Results:</span> {this.state.searchQuery ? this.state.searchQuery : 'All'}</h2>
-            {queryResults.length ? queryResults.map((item, i) => {
+            <Pagination queryResults={queryResults} flag />
+            {/* {queryResults.length ? queryResults.map((item, i) => {
                 return (  
                   item.node.frontmatter.title && (
                     <div className="posts" key={i}>
@@ -97,7 +99,7 @@ class Search extends Component {
                     </div>
                   )
                 )
-            }) :  <div className="posts">No Result Found</div>}
+            }) :  <div className="posts">No Result Found</div>} */}
         </div>
       </div>
     )

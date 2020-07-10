@@ -80,12 +80,6 @@ module.exports = {
 	      bucketName: 'webportal-dev-td3pl856c23o'
       }
     },
-    {
-      resolve: 'gatsby-plugin-zopfli',
-      options: {
-        extensions: ['css', 'html', 'js']
-      }
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

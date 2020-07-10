@@ -25,7 +25,7 @@ export default SearchIndex
 
 export const pageQuery = graphql`
     query{
-      md: allMarkdownRemark {
+      md: allMarkdownRemark(filter: {frontmatter: {title: {ne: ""}}}) {
         edges {
           node {
             frontmatter {
@@ -48,6 +48,7 @@ export const pageQuery = graphql`
               parentEle
               externalPath
               redirectToPage
+              parentPath
             }
           }
         }
