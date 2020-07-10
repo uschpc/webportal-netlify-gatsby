@@ -24,8 +24,6 @@ STEP 2:  Before you will be able to run jobs or get access to any of ARC's resou
 
 [Create New Project](create-a-new-project)  
 
-Generally, each PI should create one project.  
-
 
 STEP 3:  Next, you will need to request an allocation to at least one resource (cluster, storage, cloud, etc.).  Most projects should request an allocation of the 'Discovery' cluster:
 
