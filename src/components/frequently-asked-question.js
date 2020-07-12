@@ -24,7 +24,7 @@ const FAQ = (props) => {
         let h3Tags = []
         h3Tags = Object.entries(generateSubTags(title)).map((item, i) => {
             return (
-                `<li value="${item[1]}" class="${`${title}`}">${item[1]}</li>`
+                `<li key="${i}" value="${item[1]}" class="${`${title}`}">${item[1]}</li>`
             )
         })
         return h3Tags.join('');
@@ -39,9 +39,6 @@ const FAQ = (props) => {
             return o.innerHTML == e.target.getAttribute('value'); 
          });        
         h3Tags[index].scrollIntoView({block: "start"})
-        // let elementPosition = h3Tags[index].getBoundingClientRect().top;
-        // let h3OffsetPosition = elementPosition - headerOffset;
-        // window.scrollTo({top: h3OffsetPosition});
     }
 
     const addEvents = (title) => {
@@ -53,7 +50,7 @@ const FAQ = (props) => {
 
     const scrollToView = async (e) => {
         e.preventDefault();
-        var headerOffset = 45;
+        var headerOffset = 0;
         
         const index = _.findIndex(h2tags, function(o) { 
             return o.innerHTML == e.target.getAttribute('value'); 
@@ -63,9 +60,7 @@ const FAQ = (props) => {
         await !h2tags[index].classList.contains("sub-list-added") && h2tags[index].insertAdjacentHTML('afterend', `<span class="sup-items">${generateSubTitle(h2Title)}</span>`)
         addEvents(h2Title)
         h2tags[index].classList.add('sub-list-added')
-        let elementPosition = h2tags[index].getBoundingClientRect().top;
-        let offsetPosition = elementPosition - headerOffset;
-        window.scrollTo({top: offsetPosition});
+        h2tags[index].scrollIntoView({block: "start"})
         
     }
 
@@ -76,13 +71,11 @@ const FAQ = (props) => {
         <span className="content-wrapper">
         {h2tags.length > 0 && (
         <span className="content-container">
-            <span>
+            <span className="faq">
                 <h3>Contents</h3>
                 {h2tags.map((item, i) => {
                     return (
-                        <>
                         <li key={i} value={item.innerHTML} onClick={e => scrollToView(e)}>{item.innerHTML}</li>
-                        </>
                     )
                 })}
             </span>

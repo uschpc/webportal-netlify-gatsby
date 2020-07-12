@@ -5,7 +5,8 @@ import Markdown from "react-markdown"
 const CustomNews = (news) => { 
     const generateFreindlyDate = (date) => {
         let userFreindlyDaye = new Date(date)
-        return `${userFreindlyDaye.getMonth()}/${userFreindlyDaye.getDate()}/${userFreindlyDaye.getUTCFullYear()}`
+        console.log(date)
+        return `${userFreindlyDaye.getMonth() + 1}/${userFreindlyDaye.getDate()}/${userFreindlyDaye.getUTCFullYear()}`
     }
     return (
         <div className="block news-child-pages">

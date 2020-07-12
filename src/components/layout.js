@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -15,6 +15,39 @@ import "./layout.css"
 import "../style.less"
 
 const Layout = (props) => {
+
+  useEffect(() => {
+    if (props.uniqId === 'FAQ') {
+      const scrollToTopButton = document.getElementById('js-top');
+
+      const scrollFunc = () => {
+        let y = window.scrollY;
+        
+        if (y > 0) {
+          scrollToTopButton.className = "top-link show";
+        } else {
+          scrollToTopButton.className = "top-link hide";
+        }
+      };
+  
+        window.addEventListener("scroll", scrollFunc);
+  
+        const scrollToTop = () => {
+        const c = document.documentElement.scrollTop || document.body.scrollTop;
+    
+        if (c > 0) {
+          window.requestAnimationFrame(scrollToTop);
+          window.scrollTo(0, c - c / 10);
+        }
+      };
+  
+      scrollToTopButton.onclick = function(e) {
+        e.preventDefault();
+        scrollToTop();
+      }
+    }
+  }, [])
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -30,6 +63,14 @@ const Layout = (props) => {
       <Header siteTitle={data.site.siteMetadata.title} searchData={(e) => props.searchData(e)} nav={props.edges} uniqId={props.uniqId} />
       <div>
         <main>{props.children}</main>
+        {/* Back to top btn */}
+        {props.uniqId === 'FAQ' && (
+          <a className="top-link hide" href="" id="js-top">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg>
+            <span className="screen-reader-text">Back to top</span>
+          </a>
+        )}
+        
         <footer>
           © {new Date().getFullYear()},
           {` `}
