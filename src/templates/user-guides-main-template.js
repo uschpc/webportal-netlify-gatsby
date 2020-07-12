@@ -7,17 +7,18 @@ import Markdown from "react-markdown"
 import SideMenu from '../components/side-menu'
 import { Link } from 'gatsby'
 import UserGuideSideMenu from '../components/UserGuideSideMenu'
+import FAQ from '../components/frequently-asked-question'
 
 export default function Template({ data }) {
   let mainPage = data.mainPage;
   let content = data.content;
     return (
-      <Layout {...data.navigation}>
+      <Layout {...data.navigation} uniqId={content.frontmatter.uniqId}>
           <SEO title={mainPage ? mainPage.frontmatter.title : content.frontmatter.title}/>
           <div className="user-guides-main-pages">
             <div className="container">
                 <div className="left-column">
-                  <h3> {mainPage  || content.frontmatter.title === "Frequently Asked Questions" ? "User Information" : "User Support"}</h3>
+                  <h1> {mainPage  || content.frontmatter.title === "Frequently Asked Questions" ? "User Information" : "User Support"}</h1>
                   {mainPage || content.frontmatter.title === "Frequently Asked Questions" ? <UserGuideSideMenu content={mainPage || content} sideMenu={data.UserGuidesSideMenu} /> : <SideMenu {...data}/>}
                 </div>
                 <div className="middle-column">
@@ -43,7 +44,7 @@ export default function Template({ data }) {
                         <Markdown source={content.html} escapeHtml={false} />
                         <iframe className="ticket-submission" src="https://hpcaccount.usc.edu/static/web/supportform_simple.php" />
                       </>
-                    ) : <Markdown source={content.html} escapeHtml={false} />
+                    ) : content.frontmatter.uniqId === 'FAQ' ? <FAQ html={content.html} /> : <Markdown source={content.html} escapeHtml={false} />
                    )}
                    
                 </div>
@@ -93,6 +94,7 @@ export const coldFrontQuery = graphql`
           route
           routePath
           externalPath
+          uniqId
         }
       html
     }

@@ -176,7 +176,7 @@ class Navbar extends React.Component {
     }
 
     return (
-      <div className={`app-container ${(this.props.scrollY >= 124 && window.scrollY > 10) ? 'fixed' : 'default' } `}>
+      <div className={`app-container ${(this.props.scrollY >= 124 && window.scrollY > 10 && !this.props.uniqId) ? 'fixed' : 'default' } `}>
         <nav className="navbar-el" onMouseLeave={this.onMouseLeave}>
           {/* <img data-src="/images/usc_logo_new_design_small.svg" className={`small-logo ${(this.props.width >= 1695 && this.props.scrollY >= 124 && window.scrollY > 10) ? 'show' : 'hide' } `} src="/images/usc_logo_new_design_small.svg" /> */}
           {/* <img className={`small-logo right ${(this.props.width >= 1150 &&  this.props.scrollY >= 124 && window.scrollY > 10) ? 'show' : 'hide' } `} src="/images/shield_black.png" /> */}

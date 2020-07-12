@@ -51,7 +51,7 @@ const Header = (props) => {
               </a>
               </div>
           </div>
-          <Navbar width={width} scrollY={scrollY} nav={props.nav} />
+          <Navbar width={width} scrollY={scrollY} nav={props.nav} uniqId={props.uniqId} />
     </header>
   )
 }

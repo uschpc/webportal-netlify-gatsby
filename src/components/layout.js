@@ -27,7 +27,7 @@ const Layout = (props) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} searchData={(e) => props.searchData(e)} nav={props.edges} />
+      <Header siteTitle={data.site.siteMetadata.title} searchData={(e) => props.searchData(e)} nav={props.edges} uniqId={props.uniqId} />
       <div>
         <main>{props.children}</main>
         <footer>
