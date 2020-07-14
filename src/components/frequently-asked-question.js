@@ -55,18 +55,26 @@ const FAQ = (props) => {
         const index = _.findIndex(h2tags, function(o) { 
             return o.innerHTML == e.target.getAttribute('value'); 
          });
-
-        let h2Title = h2tags[index].innerHTML
-        await !h2tags[index].classList.contains("sub-list-added") && h2tags[index].insertAdjacentHTML('afterend', `<span class="sup-items">${generateSubTitle(h2Title)}</span>`)
-        addEvents(h2Title)
-        h2tags[index].classList.add('sub-list-added')
         h2tags[index].scrollIntoView({block: "start"})
-        
+    }
+
+    const loadSubTitles = () => {
+         _.findIndex(h2tags, function(o, index) { 
+            let title = o.innerHTML;
+            !h2tags[index].classList.contains("sub-list-added") && h2tags[index].insertAdjacentHTML('afterend', `<span class="sup-items">${generateSubTitle(title)}</span>`)
+            addEvents(title)
+            h2tags[index].classList.add('sub-list-added')
+        });
     }
 
     useEffect(() => {
-        loadH2Tags(generateH2Tags());
+        loadH2Tags(generateH2Tags())
     }, [])
+
+    useEffect(() => {
+        loadSubTitles()
+    }, [h2tags])
+
     return (
         <span className="content-wrapper">
         {h2tags.length > 0 && (

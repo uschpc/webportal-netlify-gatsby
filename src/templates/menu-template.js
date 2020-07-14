@@ -71,7 +71,7 @@ export default function Template({ data }) {
                           <Link className="category-link category-link-lg category-news type-primary" to={"/education-and-outreach/news-and-updates/all-news"}>
                             <img src="/images/news-arrows.svg" />
                             <p>
-                              View all Reasearch Computing News
+                              View all Research Computing News
                             </p>
                           </Link>
                             {/* <div className="all-latest-news">

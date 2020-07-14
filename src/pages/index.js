@@ -35,7 +35,7 @@ export const pageQuery = graphql`
           }
         }
       }
-      news: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "news"}}}) {
+      news: allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, filter: {frontmatter: {cat: {eq: "news"}}}) {
         edges {
           node {
             frontmatter {
