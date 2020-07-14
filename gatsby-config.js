@@ -8,6 +8,12 @@ module.exports = {
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-less`,
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GA_TRACKING_ID || "none",
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
