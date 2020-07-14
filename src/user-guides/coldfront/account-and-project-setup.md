@@ -8,6 +8,7 @@ parentPath: user-information/user-guides/high-performance-computing/research-com
 cat: coldFront
 parentPage: User Guides
 sideMenuParent: Research Computing User Portal
+excerpt: ColdFront user portal - project setup
 ---
 
 All active USC members have access to ARC resources and the user portal, but only faculty and staff members can act as Principle Investigators (PIs). In the user portal, PIs can create projects, request resource allocations for their projects, and add other users (including students) to the projects they control.
@@ -23,8 +24,6 @@ STEP 1: To begin, [Log in to the user portal](https://hpcaccount.usc.edu/). PIs 
 STEP 2:  Before you will be able to run jobs or get access to any of ARC's resources, you will need to create a project:  
 
 [Create New Project](create-a-new-project)  
-
-Generally, each PI should create one project.  
 
 
 STEP 3:  Next, you will need to request an allocation to at least one resource (cluster, storage, cloud, etc.).  Most projects should request an allocation of the 'Discovery' cluster:

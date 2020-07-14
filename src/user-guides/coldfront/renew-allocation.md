@@ -8,6 +8,7 @@ parentPath: user-information/user-guides/high-performance-computing/research-com
 cat: coldFront
 parentPage: User Guides
 sideMenuParent: Research Computing User Portal
+excerpt: ColdFront user portal - renewing project allocations
 ---
 
 Each type of resource offered by ARC has a different expiration policy.

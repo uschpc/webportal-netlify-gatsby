@@ -8,6 +8,7 @@ parentPath: user-information/user-guides/high-performance-computing/research-com
 cat: coldFront
 parentPage: User Guides
 sideMenuParent: Research Computing User Portal
+excerpt: ColdFront user portal - add users to project
 ---
 
 If you have students or other collaborators who will be working on your research project with you, you have the option to add them as users to your projects and allocations.

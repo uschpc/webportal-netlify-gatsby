@@ -14,7 +14,7 @@ const Footer = () => {
                 </div>
                 <div className="national-caps2">
                     <a href="/about/mission">Mission</a>
-                    <a href="/jobs">Jobs</a>
+                    <a href="https://usccareers.usc.edu/">Jobs</a>
                 </div>
                 <div className="subscribe">
                     <span className="national-caps2">

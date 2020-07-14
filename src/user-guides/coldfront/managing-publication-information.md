@@ -8,6 +8,7 @@ parentPath: user-information/user-guides/high-performance-computing/research-com
 cat: coldFront
 parentPage: User Guides
 sideMenuParent: Research Computing User Portal
+excerpt: ColdFront user portal - managing project publication information
 ---
 
 We ask faculty to upload their publication information to the user portal when the publication acknowledges ARC or the information contained directly relates to work done at ARC.  You are welcome to add all of your publications to the user portal, if you'd like.

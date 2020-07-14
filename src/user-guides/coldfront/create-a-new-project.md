@@ -8,14 +8,15 @@ parentPath: user-information/user-guides/high-performance-computing/research-com
 cat: coldFront
 parentPage: User Guides
 sideMenuParent: Research Computing User Portal
+excerpt: ColdFront user portal - create new project
 ---
 
-Generally, each PI should have one project. Some PIs may require additional projects depending on their roles at USC. Anyone teaching classes should create a separate project for each course taught, and these projects can be reused each semester.  Also, anyone using the cluster for work outside their general research area should create a separate project.
+Each PI should have one project. Some PIs may require additional projects depending on their roles at USC. Anyone teaching classes should create a separate project for each course taught, and these projects can be reused each semester.  Also, anyone using the cluster for work outside their general research area should create a separate project.
 
 > Note:  6/01/2020: HPC migrated all projects owned by a valid PI from our old uschpc cluster to the Discovery cluster as a convenience. Projects where the PI is a student were NOT migrated to the user portal.**
 
 ### User portal home page
-To create a new project, click on either the Projects link or the Project menu tab.
+To create a new project, click on either the Projects link or the Project menu tab - [Project Page](https://hpcaccount.usc.edu/project/)
 
 
 ### Projects page
@@ -31,18 +32,18 @@ Fill out the 4 fields:
   * The description should be *what?*
 * Field of science:
   * This drop-down list was taken from the National Science Foundation. If your field is not listed, please choose "Other".
-* Security:
-  * Regular projects should choose "Internal".
-  * If your project uses sensitive data, select the "Secure" option.
+* Cluster Type:
+  * Most projects should use our main cluster "Discovery".
+  * In the future we will have additional cluster options: Condo and AWS Cloud
 
 and click the "Save" button.
 
-![ColdFront Project page](/images/coldfront_addproject.gif)
+![ColdFront Project page](/images/coldfront_addproject.png)
 
 ### Project Detail page
 You will then be able to view all of your project information on the Project Detail page:  
 
-![ColdFront Project page](/images/coldfront_home.png)
+![ColdFront Project page](/images/coldfront_project_detail.gif)
 
 Entering your publication and grant information is not required to get started, but this information will be required to be updated on your [project renewal date each year](yearly-project-renewal).
 
