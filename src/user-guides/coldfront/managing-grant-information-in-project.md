@@ -8,6 +8,7 @@ parentPath: user-information/user-guides/high-performance-computing/research-com
 cat: coldFront
 parentPage: User Guides
 sideMenuParent: Research Computing User Portal
+excerpt: ColdFront user portal - managing project grant information
 ---
 
 We encourage all faculty members to provide information about the grants they've received that provide a percent credit to ARC, direct funds to ARC, and/or were awarded based on the use of ARC's resources.

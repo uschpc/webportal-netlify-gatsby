@@ -9,6 +9,7 @@ parentPath: user-information/user-guides/high-performance-computing/research-com
 cat: coldFront
 parentPage: User Guides
 sideMenuParent: Research Computing User Portal
+excerpt: ColdFront user portal - yearly project renewal
 ---
 
 Faculty are required to update their project information yearly in order to maintain active accounts at ARC.  This is a short but extremely important process.
