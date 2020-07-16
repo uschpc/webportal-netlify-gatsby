@@ -9,12 +9,13 @@ cat: navigation
 title: Location & Contact
 id: 4
 ---
-The Advanced Research Computing Center is located in the Carole A. Little (CAL) Building at the University of Southern California's University Park campus.
 
-3434 South Grand Avenue
+The Center for Advanced Research Computing is located in the Carole A. Little (CAL) Building at the University of Southern California's University Park campus.
 
-3rd Floor (CAL Building)
-
+3434 South Grand Avenue  
+3rd Floor (CAL Building)  
 Los Angeles, CA 90089
 
-Email: hpc@usc.edu
+Due to the ongoing COVID-19 pandemic, the CARC and most USC departments are currently working remotely. Access to the CAL building is limited, but general inquiries can always be directed to [hpc-support@usc.edu](hpc@usc.edu).
+
+If you're experiencing a technical issue, please [submit a help ticket](/user-information/ticket-submission).

@@ -7,11 +7,12 @@ parentPath: services
 cat: navigation
 parentEle: Services
 ---
+
 Computational research often requires resources that exceed those of a personal laptop or desktop computer. High-performance computing aggregates the resources from individual computers (known as *nodes*) into a cluster that works together to perform advanced, specialized computing jobs.
 
-The Advanced Research Computing Center launched its new high-performance computing cluster, Discovery, in June 2020. The new cluster marks a significant upgrade to the ARCC's cyberinfrastructure, and the first step in a major, user-focused overhaul of the program.
+The Center for Advanced Research Computing launched its new high-performance computing cluster, Discovery, in July 2020. The new cluster marks a significant upgrade to the CARC's cyberinfrastructure, and the first step in a major, user-focused overhaul of the program.
 
-Nearly 100 Gigabytes of storage space is provided for each user to store important code and configuration files in their home directories, and a robust Lustre-based filesystem offers daily snapshots to guard against accidental deletion of data. A rapidly growing fleet of state-of-the art multicore compute nodes is available for data-intensive research jobs, backed by an 800 Terabyte, high-throughput scratch filesystem. A low-latency, high-bandwidth InfiniBand network fabric facilitates intense research workloads on large data sets.
+Nearly 100 Gigabytes of storage space is provided for each user to store important code and configuration files in their home directories, and a robust Lustre-based file system offers daily snapshots to guard against accidental deletion of data. A rapidly growing fleet of state-of-the art multicore compute nodes is available for data-intensive research jobs, backed by an 800 Terabyte, high-throughput scratch file system. A low-latency, high-bandwidth InfiniBand network fabric facilitates intense research workloads on large data sets.
 
 Discovery includes an array of scientific software packages, both licensed and open source, for engineering, molecular simulation, and computational chemistry. Researchers can also install software packages or develop their own code within their project’s allotted storage.
 

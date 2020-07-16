@@ -20,7 +20,7 @@ body {
     overflow: hidden;
     .content-container {
       .shared {
-       
+
         &.system-status {
           .hide {
             display: none;
@@ -47,7 +47,7 @@ body {
         border: 4px solid lightgray;
       }
     }
-    
+
     .user-guides-main-pages {
       iframe {
         &.ticket-submission {
@@ -55,7 +55,7 @@ body {
           height: 100vh;
           border: none;
         }
-       
+
       }
     }
 
@@ -190,7 +190,7 @@ body {
               a {
                 font-size: 15px;
                 color: black;
-  
+
                 &:hover {
                   color: #990000;
                   text-decoration: underline;
@@ -214,7 +214,7 @@ body {
             }
           }
           a {
-            color: black; 
+            color: black;
             display: block;
             margin-left: 20px;
 
@@ -281,7 +281,7 @@ body {
                   -webkit-transition: all 0.3s;
                   transition: all 0.3s;
                 }
-              } 
+              }
               &:hover {
                 .txt {
                   color: white;
@@ -297,7 +297,7 @@ body {
                     left: 12%;
                   }
                 }
-              }             
+              }
             }
             .txt {
               font-size: 14px;
@@ -315,7 +315,7 @@ body {
               }
             }
           }
-          
+
         }
         .right-column{
           margin-top: 118px;
@@ -433,7 +433,7 @@ body {
               a {
                 font-size: 15px;
                 color: black;
-  
+
                 &:hover {
                   color: #990000;
                   text-decoration: underline;
@@ -468,12 +468,12 @@ body {
           }
           p {
             a {
-              color: #990000; 
+              color: #990000;
               display: unset;
             }
           }
           a {
-            color: black; 
+            color: black;
             display: block;
             margin: 0;
 
@@ -521,7 +521,7 @@ body {
         display: flex;
         justify-content: space-between;
 
-        
+
       .social {
         margin-top: 20px;
         a {
@@ -673,7 +673,7 @@ body {
                     -webkit-transition: all 0.3s;
                     transition: all 0.3s;
                   }
-                } 
+                }
                 &:hover {
                   .txt {
                     color: white;
@@ -689,7 +689,7 @@ body {
                       left: 12%;
                     }
                   }
-                }             
+                }
               }
               .txt {
                 font-size: 14px;
@@ -708,7 +708,7 @@ body {
               }
             }
           }
-          
+
         }
         a {
           &.logo-footer {
@@ -765,6 +765,14 @@ body {
         .slider-btn {
           overflow: hidden;
           margin: 30px auto 0 auto;
+          a {
+            color: white;
+          }
+          &:hover{
+            a {
+              color: #ffcd05;
+            }
+          }
         }
 
         .slider-btn::after {
@@ -792,7 +800,7 @@ body {
       }
     }
 
-    
+
   }
   -webkit-font-smoothing: antialiased;
   color: #6b7c93;
@@ -805,7 +813,7 @@ body {
     &.slick-initialized {
       overflow: hidden;
     }
-  } 
+  }
 .search-container {
   a {
     &.searchToggle {
@@ -834,7 +842,7 @@ body {
     }
     .searchWrap{
       .searchInner {
-      
+
         .form {
           form {
             background: #fafafa;
@@ -861,13 +869,13 @@ body {
               border: transparent;
               cursor: pointer;
             }
-            
+
           }
           }
         }
       }
     }
-    
+
   }
 }
 
@@ -1125,7 +1133,7 @@ p {
       background: white;
     }
   }
-  
+
   .app-container {
       background: white;
       position: absolute;
@@ -1226,12 +1234,12 @@ p {
     z-index: 6;
     width: 100%;
     margin: 0px auto;
-    
+
     .view-content {
       .bg-image {
         width: 100%;
         // background-image: url('/images/service-box-bg.jpg');
-        background-image: url('/images/McCarthyQuad.png');
+        background-image: url('/images/banner-image.png');
         // height: 350px;
         height: 396px;
         position: relative;
@@ -1246,7 +1254,7 @@ p {
           transform: translate(-50%, -50%);
 
           .title {
-            font-size: 30px;
+            font-size: 32px;
             text-align: center;
           }
           .mission {
@@ -1340,7 +1348,7 @@ p {
               width: 100px;
               margin: 20px 0 0 0;
               transition: all 0.5s ease-in-out;
-             
+
             }
             .features {
               color: black;
@@ -1384,7 +1392,7 @@ p {
           //     transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
           //     transform: translate(-50%, -50%) scale(0);
           //   }
-  
+
 
           //   &:hover {
           //     background: lightgray;
@@ -1486,7 +1494,7 @@ p {
                   font-size: 15px;
                 }
               }
-  
+
               .copy-text {
                 font-size: 12px;
                 font-weight: 500;
@@ -1527,7 +1535,7 @@ p {
                   color: rgba(153, 0, 0, 0.7);
                   vertical-align: -webkit-baseline-middle;
                 }
-               
+
               }
             }
             .event-date-long {
@@ -1535,7 +1543,7 @@ p {
                 vertical-align: -webkit-baseline-middle;
               }
             }
-           
+
             &:before {
               content: "";
               position: absolute;
@@ -1567,7 +1575,7 @@ p {
 
       }
     }
-  } 
+  }
   ul {
     li {
       position: relative;
@@ -1600,7 +1608,7 @@ p {
         border-top: solid 5px;
         text-align: center;
         padding: 45px 0;
-      }  
+      }
       &:first-child {
         float: left;
         width: 25%;
@@ -1644,8 +1652,8 @@ p {
 
     }
   }
-  
-} 
+
+}
 
 
 
@@ -1653,7 +1661,7 @@ p {
 
 
 
-// Animated Boxes 
+// Animated Boxes
 .box
 {
 	display: inline-block;
@@ -1721,20 +1729,20 @@ $speed: 1s;
     &:nth-child(odd) {
       border-right: orange solid 1px;
     }
-    
+
     &:hover{
-        
+
         &:after{
             opacity: 1;
             transform: translateY(0) rotateX(0);
         }
-        
+
         &:before{
             opacity: 0;
             transform: translateY(50%) rotateX(90deg);
         }
     }
-    
+
     &:after{
       height: 220px;
       display: flex;
@@ -1753,7 +1761,7 @@ $speed: 1s;
       content: attr(data-back);
       transform: translateY(-50%) rotateX(90deg);
     }
-    
+
     &:before{
       font-weight: bold;
       font-size: 20px;

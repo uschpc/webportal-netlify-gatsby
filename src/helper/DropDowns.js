@@ -17,12 +17,12 @@ const AboutSubNavDropdown = ({ current, prev, nav}) => {
 
   return (
     <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
-    <div className="dropdown-content">  
+    <div className="dropdown-content">
       <div className="row">
         <div className="column">
           <h4>
-            The Advanced Research Computing Center provides high-performance computing resources to the USC research community.  
-          </h4>         
+            The CARC provides high-performance computing resources to the USC research community.
+          </h4>
         </div>
         <div className="column">
           <ul>
@@ -40,7 +40,7 @@ const AboutSubNavDropdown = ({ current, prev, nav}) => {
         </div>
         <div className="column">
           {subNav.length > 4 && (
-            
+
             <div className="links">
             {subNav.map((item, i) => {
               if (i > 3) {
@@ -50,7 +50,7 @@ const AboutSubNavDropdown = ({ current, prev, nav}) => {
                     </li>
                   )
                 }
-                  return ''  
+                  return ''
               })
             }
             </div>
@@ -67,12 +67,12 @@ const ServicesSubNavDropdown = ({ current, prev, nav }) => {
 
   return (
     <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
-    <div className="dropdown-content">  
+    <div className="dropdown-content">
       <div className="row">
         <div className="column">
         <h4>
-          The Advanced Research Computing Center offers a variety of services to support USC's research endeavors.  
-        </h4>       
+          The variety of services offered by the CARC support USC's research endeavors.
+        </h4>
         </div>
         <div className="column">
           <ul>
@@ -96,7 +96,7 @@ const ServicesSubNavDropdown = ({ current, prev, nav }) => {
         </div>
         <div className="column">
           {subNav.length > 4 && (
-            
+
             <div className="links">
             {subNav.map((item, i) => {
               if (i > 3) {
@@ -106,7 +106,7 @@ const ServicesSubNavDropdown = ({ current, prev, nav }) => {
                     </li>
                   )
                 }
-                  return ''  
+                  return ''
               })
             }
             </div>
@@ -123,12 +123,12 @@ const UserInfoSubNavDropdown = ({ current, prev, nav }) => {
 
   return (
     <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
-    <div className="dropdown-content">  
+    <div className="dropdown-content">
       <div className="row">
         <div className="column">
         <h4>
-          The Advanced Research Computing Center strives to provide a complete and comprehensive user support experience.  
-        </h4>        
+          The CARC strives to provide a complete and comprehensive user support experience.
+        </h4>
         </div>
         <div className="column">
           <ul>
@@ -139,11 +139,11 @@ const UserInfoSubNavDropdown = ({ current, prev, nav }) => {
                   item.node.frontmatter.redirectToPage ? (
                   <li key={i}>
                     <Link className="heading" to={item.node.frontmatter.redirectToPage}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
-                    </li> 
+                    </li>
                 ) : (
                   <li key={i}>
                     <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
-                  </li> 
+                  </li>
                   )
                 ) : (
                   <li key={i}>
@@ -166,11 +166,11 @@ const UserInfoSubNavDropdown = ({ current, prev, nav }) => {
                     item.node.frontmatter.redirectToPage ? (
                       <li key={i}>
                         <Link className="heading" to={item.node.frontmatter.redirectToPage}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
-                        </li> 
+                        </li>
                     ) : (
                       <li key={i}>
                         <Link className="heading" to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}><h3 className="heading">{item.node.frontmatter.title}</h3></Link>
-                      </li> 
+                      </li>
                     )
                   ) : (
                     <li key={i}>
@@ -178,7 +178,7 @@ const UserInfoSubNavDropdown = ({ current, prev, nav }) => {
                     </li>
                   )
                   )}
-                  return ''  
+                  return ''
               })
             }
             </div>
@@ -194,13 +194,13 @@ const EducationOutreachSubNavDropdown = ({ current, prev, nav }) => {
   let subNav = assignedDropdownSubNav('Education & Outreach', nav);
     return (
       <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
-  
-      <div className="dropdown-content">  
+
+      <div className="dropdown-content">
         <div className="row">
           <div className="column">
           <h4>
-            Supporting USC students and faculty in their computational research is the key mission of the Advanced Research Computing Center. 
-          </h4>    
+            Supporting USC students and faculty in their computational research is the key mission of the CARC.
+          </h4>
           </div>
           <div className="column">
             <ul>
@@ -227,7 +227,7 @@ const EducationOutreachSubNavDropdown = ({ current, prev, nav }) => {
                     </li>
                   )
                 }
-                  return ''  
+                  return ''
               })
             }
             </div>
@@ -244,10 +244,10 @@ const UserSupportSubNavDropdown = ({ current, prev, nav }) => {
   if(subNav > 0) {
     return (
       <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
-        <div className="dropdown-content">  
+        <div className="dropdown-content">
         <div className="row">
           <div className="column">
-            <h4>Life is beautiful</h4>         
+            <h4>Life is beautiful</h4>
           </div>
         <div className="column">
           <ul>
@@ -274,7 +274,7 @@ const UserSupportSubNavDropdown = ({ current, prev, nav }) => {
                     </li>
                   )
                 }
-                  return ''  
+                  return ''
               })
             }
             </div>
@@ -294,12 +294,12 @@ const NewsEventsSubNavDropdown = ({ current, prev, nav }) => {
 
     return (
       <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>
-        <div className="dropdown-content">  
+        <div className="dropdown-content">
         <div className="row">
           <div className="column">
           <h4>
-            Find out how the Advanced Research Computing Center has been getting involved with the Trojan community.
-          </h4>       
+            Find out how the CARC has been getting involved with the Trojan community.
+          </h4>
           </div>
         <div className="column">
           <ul>
@@ -317,7 +317,7 @@ const NewsEventsSubNavDropdown = ({ current, prev, nav }) => {
         </div>
         <div className="column">
           {subNav.length > 4 && (
-            
+
             <div className="links">
             {subNav.map((item, i) => {
               if (i > 3) {
@@ -327,7 +327,7 @@ const NewsEventsSubNavDropdown = ({ current, prev, nav }) => {
                     </li>
                   )
                 }
-                  return ''  
+                  return ''
               })
             }
             </div>
