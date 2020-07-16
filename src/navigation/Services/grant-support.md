@@ -7,10 +7,17 @@ parentPath: services
 cat: navigation
 parentEle: Services
 ---
-The primary mission of the Advanced Research Computing Center will always be to support USC researchers in their work. To that end, the ARCC offers assistance to researchers who are seeking funding in the form of external grants from research centers and federal agencies, such as the National Science Foundation (NSF) and the National Institutes of Health (NIH).
 
-The ARCC enables researchers to perform the advanced, innovative computational research necessary to remain competitive in the academic world. Use of high-performance computing resources can elevate research possibilities to a level that's unreachable with the resources of a personal computer.
+The primary mission of the Center for Advanced Research Computing will always be to support USC researchers in their work. To that end, the CARC offers assistance to researchers who are seeking funding in the form of external grants from research centers and federal agencies, such as the National Science Foundation (NSF) and the National Institutes of Health (NIH).
 
-In addition to providing computing resources, the ARCC can directly assist researchers with the grant proposal process. *how?*
+The CARC enables researchers to perform the advanced, innovative computational research necessary to remain competitive in the academic world. Use of high-performance computing resources can elevate research possibilities to a level that's unreachable with the resources of a personal computer.
 
-If you would like to contact the ARCC for assistance related to grant support, please submit a request here. *link to web form?*
+In addition to providing computing resources, the CARC can directly assist researchers with the grant proposal process. The CARC will gladly provide letters of support for grant proposals from researchers who have utilized CARC resources in their research projects.
+
+If you would like to contact the CARC regarding grant proposals or publications, please contact us at hpc-support@usc.edu.
+
+### Acknowledging the CARC in your publications
+
+All forms of publication, including web pages, resulting from work done using CARC resources should include the following citation:
+
+*The authors acknowledge the Center for Advanced Research Computing (CARC) at the University of Southern California for providing computing resources that have contributed to the research results reported within this paper. URL: https://carc.usc.edu.*
