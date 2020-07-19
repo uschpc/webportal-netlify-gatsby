@@ -18,7 +18,7 @@ export default function Template({ data }) {
               <div className="page-body">
                 <div className="left-column">
                   <h2>User Guides</h2>
-                  <SideMenu {...data}/>
+                  <SideMenu {...data} parentMenuTitle="Software and Programming"/>
                 </div>
                 <div className="middle-column">
                 <h1>{post.frontmatter.title}</h1>
@@ -64,7 +64,7 @@ export const softwareQuery = graphql`
         }
       }
     }
-    subMenu: allMarkdownRemark(sort: {fields: frontmatter___id},filter: {frontmatter: {cat: {eq: "sharedTemplate"}}}) {
+    subMenu: allMarkdownRemark(sort: {fields: frontmatter___id},filter: {frontmatter: {cat: {eq: "software"}}}) {
       edges {
         node {
           frontmatter {

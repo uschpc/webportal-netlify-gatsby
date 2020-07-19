@@ -8,8 +8,8 @@ import SideMenu from '../components/side-menu'
 import Content from '../components/content'
 
 export default function Template({ data }) {
-  console.log('whast up')
     const post = data.content;
+    const items = data.content.frontmatter.uniqID === "software" ? data.Software.edges : data.dataManagement.edges
     return (
       <Layout {...data.navigation}>
           <SEO title={post.frontmatter.title}/>
@@ -35,6 +35,30 @@ export default function Template({ data }) {
                       </span>
                     )
                   })}
+                   {(data.content.frontmatter.title === "Data Management") && (
+                    <span>
+                      <h3>User Guides</h3>
+                      {items.map ((item, i) => {
+                        return (
+                          <Link key={i} className="coldfront-menu-items" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
+                              <li>{item.node.frontmatter.title}</li>
+                          </Link>
+                          )
+                      })}
+                    </span>
+                  )}
+                   {(data.content.frontmatter.title === "Software and Programming") && (
+                    <span>
+                      <h3>User Guides</h3>
+                      {items.map ((item, i) => {
+                        return (
+                          <Link key={i} className="coldfront-menu-items" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
+                              <li>{item.node.frontmatter.alternativeTitle}</li>
+                          </Link>
+                          )
+                      })}
+                    </span>
+                  )}
               </div>
               <div className="right-column">
                   <div className="system-status">
@@ -59,8 +83,35 @@ export const coldFrontQuery = graphql`
           path
           parentPath
           cat
+          uniqID
         }
         html
+      }
+      dataManagement: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "dataManagement"}}}) {
+        edges {
+          node {
+            frontmatter {
+              title
+              path
+              parentPath
+              cat
+            }
+            html
+          }
+        }
+      }
+      Software: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "software"}}}) {
+        edges {
+          node {
+            frontmatter {
+              alternativeTitle
+              path
+              parentPath
+              cat
+            }
+            html
+          }
+        }
       }
     allContent: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "sharedTemplate"}}}) {
       edges {

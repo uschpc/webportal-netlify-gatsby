@@ -12,6 +12,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators
 
   const allNewsTemplate = path.resolve('src/templates/all-news-template.js')
+  const allResearcherTemplate = path.resolve('src/templates/all-researcher-template.js')
   const coldFrontMainTemplate = path.resolve('src/templates/coldfront-main-template.js')
   const coldFrontTemplate = path.resolve('src/templates/coldfront-template.js')
   //const discoveryGuidesMainTemplate = path.resolve('src/templates/discoveryguides-main-template.js')
@@ -57,6 +58,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           template = allNewsTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
+        case 'allResearcher':
+          template = allResearcherTemplate;
+          path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+          break;
         case 'coldFront':
           template = coldFrontTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
@@ -65,12 +70,13 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           template = discoveryGuidesTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
-        case "dataManagment":
+        case "dataManagement":
           template = dataManagementTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
         case 'navigation':
-        case 'news':  {
+        case 'news':
+        case 'Researchers': {
           node.frontmatter.path !== 'user-guides' ? (
             template = menuTemplate
           ) : (

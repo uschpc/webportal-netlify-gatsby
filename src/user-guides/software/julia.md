@@ -3,6 +3,7 @@ author: Derek Strong
 id: 4
 date: 2020-06-04T12:00:00.387Z
 title: Using Julia on Discovery
+alternativeTitle: Julia
 path: julia
 parentPath: user-information/user-guides/software
 cat: software

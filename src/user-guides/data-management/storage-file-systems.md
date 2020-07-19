@@ -4,7 +4,7 @@ date: 2020-06-06T00:00:00.000Z
 title: Storage File Systems
 path: storage-file-systems
 parentPath: user-information/user-guides/data-management
-cat: dataManagment
+cat: dataManagement
 parentPage: User Guides
 sideMenuParent: Data Management
 ---

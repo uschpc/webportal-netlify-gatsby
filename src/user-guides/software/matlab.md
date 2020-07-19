@@ -3,6 +3,7 @@ author: Marco Olguin
 id: 3
 date: 2020-06-19T12:00:00.387Z
 title: Using MATLAB on Discovery
+alternativeTitle: MATLAB
 path: matlab
 parentPath: user-information/user-guides/software
 cat: software

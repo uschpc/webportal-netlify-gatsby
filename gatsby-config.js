@@ -46,6 +46,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `researcher-profiles`,
+        path: `${__dirname}/src/researcher-profiles`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `featured-story`,
         path: `${__dirname}/src/featured-story`,
       },

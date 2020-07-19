@@ -2,13 +2,13 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Footer from '../components/footer'
-import SharedTemplate from '../components/sharedTemplate'
 import Markdown from "react-markdown"
-import SideMenu from '../components/side-menu'
 import { Link } from 'gatsby'
 import Content from '../components/content'
 import LatestNews from '../components/latest-news'
 import CustomNews from '../components/custom-news'
+import Researcher from '../components/researchers'
+import ResearcherProfiles from '../components/researcher-profiles'
 
 const findSubMenu = (menubar, nav) => {
   const subNav = nav.edges.filter((ele, i) => {
@@ -18,7 +18,8 @@ const findSubMenu = (menubar, nav) => {
 }
 
 export default function Template({ data }) {
-  let content = data.content || data.newsContent;
+  let content = data.content || data.newsContent || data.researcherContent;
+  console.log(content.frontmatter.uniqID === "researcher")
   let subMenu = findSubMenu(content.frontmatter.parentEle, data.sideMenu)
   
     return (
@@ -63,26 +64,35 @@ export default function Template({ data }) {
                 <h1>{content.frontmatter.title}</h1>
                   {content.frontmatter.cat !== 'news' ? (
                     <>
-                      {(content.frontmatter.uniqID !== "news_Announcements") && <Content flag={true}/>}
-                      {(content.frontmatter.uniqID !== "news_Announcements") && <Markdown source={content.html} escapeHtml={false} />}
-                      {(content.frontmatter.uniqID === "news_Announcements") && <LatestNews {...data.news } flag={true} />}
+                      {(content.frontmatter.sharedID !== "news_Announcements_and_researcher_profile") && <Content flag={true}/>}
+                      {(content.frontmatter.sharedID !== "news_Announcements_and_researcher_profile") && <Markdown source={content.html} escapeHtml={false} />}
                       {(content.frontmatter.uniqID === "news_Announcements") && (
-                        <div className="category-link-wrapper type-primary">
-                          <Link className="category-link category-link-lg category-news type-primary" to={"/education-and-outreach/news-and-updates/all-news"}>
-                            <img src="/images/news-arrows.svg" />
-                            <p>
-                              View all Research Computing News
-                            </p>
-                          </Link>
-                            {/* <div className="all-latest-news">
-                              <Link className="btn latest-news" to={"/education-and-outreach/news-and-updates/all-news"}>
-                                  <span className="txt">View all Reasearch Computing News</span>
-                                  <span className="round"><i className="fa fa-chevron-right"></i></span>
-                              </Link>
-                              </a> 
-                            </div>  */}
-                        </div>
+                        <>
+                          <LatestNews {...data.news } flag={true} />
+                          <div className="category-link-wrapper type-primary">
+                            <Link className="category-link category-link-lg category-news type-primary" to={"/education-and-outreach/news-and-updates/all-news"}>
+                              <img src="/images/news-arrows.svg" />
+                              <p>
+                                View all Research Computing News
+                              </p>
+                            </Link>
+                          </div>
+                        </>
                       )}
+                      {(content.frontmatter.uniqID === "researcher_profile") && (
+                        <>
+                          <Researcher {...data.Researcher } flag={true} />
+                          <div className="category-link-wrapper type-primary">
+                            <Link className="category-link category-link-lg category-news type-primary" to={"/education-and-outreach/news-and-updates/all-researcher"}>
+                              <img src="/images/news-arrows.svg" />
+                              <p>
+                                View all Researcher Profiles
+                              </p>
+                            </Link>
+                          </div>
+                        </>
+                      )}
+                      {(content.frontmatter.cat === "Researchers") && <ResearcherProfiles {...data.researcherContent } /> }
                     </>
                   ) : (
                     <CustomNews {...data.newsContent }/>
@@ -128,6 +138,7 @@ export const coldFrontQuery = graphql`
           routePath
           parentEle
           uniqID
+          sharedID
         }
       html
     }
@@ -143,7 +154,35 @@ export const coldFrontQuery = graphql`
         }
       html
     }
+    researcherContent: markdownRemark(frontmatter: {cat: {eq: "Researchers"}, path: {eq: $slug}}) {
+      frontmatter {
+        title
+        parentEle
+        cat
+        thumbnail
+        date
+        excerpt
+        author
+        sharedID
+        }
+      html
+    }
     news: allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, filter: {frontmatter: {cat: {eq: "news"}}}) {
+      edges {
+        node {
+          frontmatter {
+            author
+            title
+            path
+            thumbnail
+            excerpt
+            parentPath
+          }
+          html
+        }
+      }
+    }
+    Researcher: allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, filter: {frontmatter: {cat: {eq: "Researchers"}}}) {
       edges {
         node {
           frontmatter {

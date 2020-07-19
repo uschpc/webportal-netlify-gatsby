@@ -4,7 +4,7 @@ date: 2020-06-06T00:00:00.000Z
 title: Data Management Overview
 path: data-management-overview
 parentPath: user-information/user-guides/data-management
-cat: dataManagment
+cat: dataManagement
 parentPage: User Guides
 sideMenuParent: Data Management
 ---

@@ -18,7 +18,7 @@ export default function Template({ data }) {
               <div className="page-body">
                 <div className="left-column">
                   <h2>User Guides</h2>
-                  <SideMenu {...data}/>
+                  <SideMenu {...data} parentMenuTitle="Data Management"/>
                 </div>
                 <div className="middle-column">
                   <h1>{data.content.frontmatter.title}</h1>
@@ -79,7 +79,7 @@ export const coldFrontQuery = graphql`
         }
       }
     }
-    subMenu: allMarkdownRemark(sort: {fields: frontmatter___id},filter: {frontmatter: {cat: {eq: "sharedTemplate"}}}) {
+    subMenu: allMarkdownRemark(sort: {fields: frontmatter___id},filter: {frontmatter: {cat: {eq: "dataManagement"}}}) {
       edges {
         node {
           frontmatter {
@@ -90,7 +90,7 @@ export const coldFrontQuery = graphql`
         }
       }
     }
-    content: markdownRemark(frontmatter: {cat: {eq: "dataManagment"}, path: {eq: $slug}}) {
+    content: markdownRemark(frontmatter: {cat: {eq: "dataManagement"}, path: {eq: $slug}}) {
       frontmatter {
         title
         path

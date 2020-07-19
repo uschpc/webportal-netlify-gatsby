@@ -6,5 +6,6 @@ path: researcher-profiles
 parentPath: education-and-outreach
 cat: navigation
 parentEle: News and Events
+sharedID: news_Announcements_and_researcher_profile
+uniqID: researcher_profile
 ---
-Let's see what happens

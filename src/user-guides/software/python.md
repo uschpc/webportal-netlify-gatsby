@@ -3,6 +3,7 @@ author: Ryan Sim
 id: 1
 date: 2020-06-14T00:00:00.000Z
 title: Using Python on Discovery
+alternativeTitle: Python
 path: python
 parentPath:  user-information/user-guides/software
 cat: software

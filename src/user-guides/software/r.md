@@ -3,6 +3,7 @@ author: Derek Strong
 id: 2
 date: 2020-06-04T12:00:00.387Z
 title: Using R on Discovery
+alternativeTitle: R
 path: r
 parentPath: user-information/user-guides/software
 cat: software
