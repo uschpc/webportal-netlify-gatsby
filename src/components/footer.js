@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 const Footer = () => {
     return (
@@ -13,8 +14,8 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="national-caps2">
-                    <a href="/about/mission">Mission</a>
-                    <a href="https://usccareers.usc.edu/">Jobs</a>
+                    <Link to="/about/mission">Mission</Link>
+                    <Link to="/about/jobs">Jobs</Link>
                 </div>
                 <div className="subscribe">
                     <span className="national-caps2">

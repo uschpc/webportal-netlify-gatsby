@@ -15,7 +15,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   const allResearcherTemplate = path.resolve('src/templates/all-researcher-template.js')
   const coldFrontMainTemplate = path.resolve('src/templates/coldfront-main-template.js')
   const coldFrontTemplate = path.resolve('src/templates/coldfront-template.js')
-  //const discoveryGuidesMainTemplate = path.resolve('src/templates/discoveryguides-main-template.js')
+  const jobsTemplate = path.resolve('src/templates/jobs.js')
   const discoveryGuidesTemplate = path.resolve('src/templates/discoveryguides-template.js')
   const dataManagementTemplate = path.resolve('src/templates/datamanagement-template.js')
   const menuTemplate = path.resolve('src/templates/menu-template.js')
@@ -73,6 +73,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         case "dataManagement":
           template = dataManagementTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+          break;
+        case "jobs":
+          template = jobsTemplate;
+          path = `${node.frontmatter.path}`
           break;
         case 'navigation':
         case 'news':

@@ -1,6 +1,7 @@
 import React from 'react';
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
+import { Link } from 'gatsby';
 
 const content = [
     {
@@ -31,20 +32,20 @@ const content = [
 
 const Carsoul = () => {
 	return (
-        <Slider className="slider-wrapper">
-      {content.map((item, index) => (
-        <div
-          key={index}
-          className="slider-content"
-          style={{ background: `url('${item.image}') no-repeat center center` }}
-        >
-          <div className="inner">
-            <h1>{item.title}</h1>
-            <p>{item.description}</p>
-            <button className="slider-btn"><a href={item.url}>{item.button}</a></button>
+      <Slider className="slider-wrapper">
+        {content.map((item, index) => (
+          <div
+            key={index}
+            className="slider-content"
+            style={{ background: `url('${item.image}') no-repeat center center` }}
+          >
+            <div className="inner">
+              <h1>{item.title}</h1>
+              <p>{item.description}</p>
+              <button className="slider-btn"><Link to={item.url}>{item.button}</Link></button>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
     </Slider>
     )
 }

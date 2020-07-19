@@ -3,6 +3,7 @@ import FeatureStories from './feature-stories.js';
 import ServiceBox from './service-box.js';
 import LatestNews from './latest-news.js';
 import UpcomingEvents from './upcoming-events.js';
+import { Link } from 'gatsby';
 
 const BodyContent = ({news, featureStory, featureBoxes}) => {
     return (
@@ -23,7 +24,7 @@ const BodyContent = ({news, featureStory, featureBoxes}) => {
                             </div>
                             <div className="mission">
                                 {/* <a href="#">View Mission</a> */}
-                                <button className="mission-btn"><a href="/about/mission/">View Mission</a></button>
+                                <button className="mission-btn"><Link to="/about/mission/">View Mission</Link></button>
                             </div>
                         </div>
                     </div>
