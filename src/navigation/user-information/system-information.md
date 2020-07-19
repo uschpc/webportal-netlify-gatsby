@@ -1,6 +1,6 @@
 ---
 title: System Information
-id: 3
+id: 2
 thumbnail: /images/sr-icon-4.png
 path: system-information
 parentPath: user-information

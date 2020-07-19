@@ -1,10 +1,10 @@
 ---
-title: Getting Started
-id: 1
+title: User Support
+id: 4
 thumbnail: /images/sr-icon-4.png
-path: getting-started
-parentPath: user-information/user-guides
-redirectToPage: user-information/user-guides/high-performance-computing/discovery/getting-started
+path: null
+parentPath: null
+redirectToPage: user-support
 cat: navigation
 parentEle: User Information
 ---

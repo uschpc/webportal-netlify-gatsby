@@ -48,12 +48,11 @@ export default function Template({ data }) {
                    )}
                    
                 </div>
-                <div className="right-column">
+                <div className="right-column show">
                     <div className="system-status">
-                        <h4>Related Links</h4>
-                        <h5>Some links</h5>
-                        <h5>Some links</h5>
-                        <h5>Some links</h5>
+                        <h3>System Status <a href="https://hpc-grafana.usc.edu/" target="_blank"><i class="fa fa-external-link" style={{fontSize:"24px"}}></i></a></h3>
+                        <iframe className="user-support" src="https://hpc-grafana.usc.edu/d-solo/vsUGHjmMk/compute-node-usage?orgId=1&refresh=300s&var-host=All&panelId=3" width="450" height="200" frameBorder="0"></iframe>
+                        <a className="view-more-graph" href="http://hpcaccount.usc.edu:8080/" target="_blank">View more graph</a>
                     </div>
                 </div>
               </div>

@@ -16,5 +16,3 @@ Launched in July 2020, USC Research Computing's high-performance computing clust
 
 The following user guides are designed to help you get started with your work on Discovery.
 
-Getting Started
-Running Jobs

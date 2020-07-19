@@ -1,11 +1,11 @@
 ---
 author: Yaseen A.
-id: 1
+id: 6
 date: 2020-06-04T00:00:00.00Z
-title: Getting Started
+title: Hybrid Cloud Computing
 excerpt: A quick-start guide for getting started on Discovery, the ARCC's high-performance computing cluster.
-thumbnail: /images/Flag.png
-path: getting-started
+thumbnail: /images/Cloud.png
+path: hybrid-cloud-computing
 route: User Guides
 parentPath: user-information/user-guides
 cat: userGuides

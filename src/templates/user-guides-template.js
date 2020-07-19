@@ -8,6 +8,7 @@ import SideMenu from '../components/side-menu'
 import Content from '../components/content'
 
 export default function Template({ data }) {
+  console.log('whast up')
     const post = data.content;
     return (
       <Layout {...data.navigation}>

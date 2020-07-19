@@ -16,6 +16,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   const coldFrontTemplate = path.resolve('src/templates/coldfront-template.js')
   //const discoveryGuidesMainTemplate = path.resolve('src/templates/discoveryguides-main-template.js')
   const discoveryGuidesTemplate = path.resolve('src/templates/discoveryguides-template.js')
+  const dataManagementTemplate = path.resolve('src/templates/datamanagement-template.js')
   const menuTemplate = path.resolve('src/templates/menu-template.js')
   const postTemplate = path.resolve('src/templates/content-post.js')
   const sharedMainTemplate = path.resolve('src/templates/shared-main-templates.js')
@@ -62,6 +63,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           break;
         case 'discoveryGuides':
           template = discoveryGuidesTemplate;
+          path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+          break;
+        case "dataManagment":
+          template = dataManagementTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
         case 'navigation':
