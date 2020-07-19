@@ -383,6 +383,26 @@ and (max-width : 767px) {
                         width: 100%;
                         a {
                             width: 49%;
+
+                            .block {
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        .pagination {
+                            li {
+                                width: 3.25rem;
+                                &.previous, &.next {
+                                    margin-right: 0;
+                                    margin-left: 0;
+                                    a {
+                                        width: 0.8em;
+                                    }
+                                }
+                            }
+                            
+                           
                         }
                     }
                     .right-column {
@@ -604,7 +624,7 @@ and (max-width : 767px) {
                 }
                 .bg-image .content{
                     .title {
-                        font-size: 25px;
+                        font-size: 18px;
                         text-align: center;
                     }
                 }
@@ -655,6 +675,10 @@ and (max-width : 767px) {
                     .social {
                         display: flex;
                         justify-content: center;
+                        margin: 0;
+                        a {
+                            width: auto;
+                        }
                     }
                     form {
                         .Subscribe-button {
@@ -691,6 +715,16 @@ and (max-width : 550px) {
                     display: block;
                     .middle-column{
                         width: 100%;
+                        .latest-news {
+                            display: block;
+                            .content {
+                                width: 100%;
+                                max-width: 100%;
+                            }
+                            img {
+                                width: 100%;
+                            }
+                        }
                         a {
                             width: 100%;
                         }

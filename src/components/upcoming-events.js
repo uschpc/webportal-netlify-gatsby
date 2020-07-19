@@ -3,11 +3,11 @@ import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 const UpcomingEvents = () => {
     return (
-        <div className="shared system-status">
-             <h2 className="iframe-graph">System Status</h2>
+        <div className="shared system-status homepage">
+             <h2 className="iframe-graph">System Status <a href="https://hpc-grafana.usc.edu/" target="_blank"><i class="fa fa-external-link" style={{fontSize:"24px"}}></i></a></h2>
             <iframe className="homepage" src="https://hpc-grafana.usc.edu/d-solo/vsUGHjmMk/compute-node-usage?orgId=1&refresh=300s&var-host=All&panelId=3" width="450" height="200" frameBorder="0"></iframe>
-            
-            <h2>Recent Tweets</h2>
+            <a className="view-more-graph" href="http://hpcaccount.usc.edu:8080/" target="_blank">View more graph</a>
+            <h2 className="margin">Recent Tweets</h2>
                 <TwitterTimelineEmbed
                     sourceType="profile"
                     screenName="usccarc"

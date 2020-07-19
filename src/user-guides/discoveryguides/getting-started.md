@@ -10,8 +10,6 @@ parentPage: User Guides
 sideMenuParent: Discovery
 ---
 
-# Getting started with Discovery
-
 This guide will help you get started with the Discovery computing cluster by instructing you on how to connect, log in, transfer data, and run jobs.
 
 An ARC account is **required** to log in to and use ARC resources. To apply for an ARC account, see [____]().

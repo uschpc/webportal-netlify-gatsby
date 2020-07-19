@@ -13,16 +13,16 @@ export default function Template({ data }) {
     return (
       <Layout {...data.navigation}>
           <SEO title={post.frontmatter.title}/>
-            <div className="coldFront-child-container">
+            <div className="coldFront-child-container discovery">
               {/* <MenuRoute {...data} title={data.content.frontmatter.title} /> */}
               <div className="page-body">
                 <div className="left-column">
-                  <h2>User Guides</h2>
+                  <h3>User Guides</h3>
                   <SideMenu {...data}/>
                 </div>
                 <div className="middle-column">
                 <h1>{post.frontmatter.title}</h1>
-                  <Content />
+                  <Content flag/>
                   <Markdown source={data.content.html} escapeHtml={false} />
                 </div>
                 <div className="right-column">

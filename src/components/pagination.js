@@ -5,15 +5,13 @@ import "../pagination.scss"
 
 const Pagination = (props) => {
     const [offset, setOffset] = useState(0)
-    const [perPage, setPerPage] = useState(5)
-    const [currentPage, setCurrentPage] = useState(0)
+    const perPage = 5
     const [pageCount, setPageCount] = useState(0)
     const [data, setData] = useState(null)
 
     const handlePageClick = (e) => {
         const selectedPage = e.selected
         const offset = selectedPage * perPage
-        setCurrentPage(selectedPage)
         setOffset(offset)
     };
 
@@ -33,7 +31,7 @@ const Pagination = (props) => {
                 </div> 
               </Link>
              )
-          }) : slice ? slice.map((item, i) => {
+          }) : slice.length ? slice.map((item, i) => {
             return (  
               item.node.frontmatter.title && (
                 <div className="posts" key={i}>
