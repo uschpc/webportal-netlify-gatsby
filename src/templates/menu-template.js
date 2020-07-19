@@ -19,7 +19,6 @@ const findSubMenu = (menubar, nav) => {
 
 export default function Template({ data }) {
   let content = data.content || data.newsContent || data.researcherContent;
-  console.log(content.frontmatter.uniqID === "researcher")
   let subMenu = findSubMenu(content.frontmatter.parentEle, data.sideMenu)
   
     return (

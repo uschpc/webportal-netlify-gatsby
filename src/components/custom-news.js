@@ -5,7 +5,6 @@ import Markdown from "react-markdown"
 const CustomNews = (news) => { 
     const generateFreindlyDate = (date) => {
         let userFreindlyDaye = new Date(date)
-        console.log(date)
         return `${userFreindlyDaye.getMonth() + 1}/${userFreindlyDaye.getDate()}/${userFreindlyDaye.getUTCFullYear()}`
     }
     return (
