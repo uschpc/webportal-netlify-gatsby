@@ -1,6 +1,5 @@
 ---
-excerpt: Instructions for enrolling in the ARCC's Condo Cluster Program and
-  subscribing to computing and storage resources.
+excerpt: Instructions for using the CARC's user portal for project and resource management.
 path: research-computing-user-portal
 parentPath: user-information/user-guides/high-performance-computing
 route: High-Performance Computing

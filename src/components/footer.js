@@ -15,7 +15,7 @@ const Footer = () => {
                 </div>
                 <div className="national-caps2">
                     <Link to="/about/mission">Mission</Link>
-                    <Link to="/about/jobs">Jobs</Link>
+                    <Link to="https://usccareers.usc.edu/">Jobs</Link>
                 </div>
                 <div className="subscribe">
                     <span className="national-caps2">

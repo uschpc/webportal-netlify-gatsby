@@ -9,8 +9,6 @@ parentPage: User Guides
 sideMenuParent: Data Management
 ---
 
-USC Research Computing
-
 ### Storage File Systems
 
 **Home Directory**

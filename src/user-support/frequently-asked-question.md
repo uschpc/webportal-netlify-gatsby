@@ -1,5 +1,5 @@
 ---
-excerpt: Your common questions about the ARCC and our services.
+excerpt: Your common questions about the CARC and our services.
 path: frequently-asked-questions
 author: Yaseen A
 thumbnail: /images/Question.png
