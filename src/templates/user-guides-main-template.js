@@ -51,7 +51,7 @@ export default function Template({ data }) {
                 <div className={`right-column ${content.frontmatter.uniqId !== 'FAQ' ? 'show' : 'hide'}`}>
                     <div className="system-status">
                         <h3>System Status <a href="https://hpc-grafana.usc.edu/" target="_blank"><i class="fa fa-external-link" style={{fontSize:"24px"}}></i></a></h3>
-                        <iframe className="user-support" src="https://hpc-grafana.usc.edu/d-solo/vsUGHjmMk/compute-node-usage?orgId=1&refresh=300s&var-host=All&panelId=3" width="450" height="200" frameBorder="0"></iframe>
+                        <iframe className="user-support" src="https://d2zckdyoh6khem.cloudfront.net/d-solo/vsUGHjmMk/compute-node-usage?orgId=1&refresh=300s&var-host=All&panelId=3" width="450" height="200" frameBorder="0"></iframe>
                         <a className="view-more-graph" href="http://hpcaccount.usc.edu:8080/" target="_blank">View more graph</a>
                     </div>
                 </div>
