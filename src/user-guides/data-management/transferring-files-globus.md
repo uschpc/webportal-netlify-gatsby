@@ -16,15 +16,15 @@ Globus provides a relatively simple and reliable way to access and move research
 
 To start using Globus, go to <https://www.globus.org> in your browser and click <b>Log In</b>. Type <b>University of Southern California</b> in the box that says "Use your existing organizational login".
 
-![Globus Software Set Up](globus-gfx/globus-login1.PNG)
+![Globus Software Set Up](/images/globus-gfx/globus-login1.PNG)
 
 Next you should get the Shibboleth page to enter your USC NetID.
 
-![Globus Software Set Up](globus-gfx/globus-login2.PNG)
+![Globus Software Set Up](/images/globus-gfx/globus-login2.PNG)
 
 After authenticating you'll land on the File Manager page.
 
-![Globus Software Set Up](globus-gfx/globus-filemgr1.PNG)
+![Globus Software Set Up](/images/globus-gfx/globus-filemgr1.PNG)
 
 ### Setting up Collections for file transfers and installing Globus Personal Connect
 
@@ -32,27 +32,27 @@ In Globus terminology, a user sets up a **Collection**, which is simply a place 
 
 In the Globus user interface, Collections are managed in terms of <b>Endpoints</b>. From the main Globus File Manager page, click on the <b>ENDPOINTS</b> link on the left panel.
 
-![Globus Software Set Up](globus-gfx/globus-coll1.PNG)
+![Globus Software Set Up](/images/globus-gfx/globus-coll1.PNG)
 
 On the upper right of the File Manager page page, click on <b>Create a personal endpoint</b>. You'll be presented with a link to download and install the software.
 
-![Globus Software Set Up](globus-gfx/globus-coll2.PNG)
+![Globus Software Set Up](/images/globus-gfx/globus-coll2.PNG)
 
 Now it's time to install the desktop service, Globus Connect Personal, that makes Globus work behind the scenes for you.
 
-![Globus Software Set Up](globus-gfx/globus-dl1.PNG)
+![Globus Software Set Up](/images/globus-gfx/globus-dl1.PNG)
 
 Running it will take you through the standard software installation process for your platform. Go ahead and start the Globus service on your computer.
 
-![Globus Software Set Up](globus-gfx/globus-dl2.PNG)
+![Globus Software Set Up](/images/globus-gfx/globus-dl2.PNG)
 
 A new window will pop up asking you to log in again.
 
-![Globus Software Set Up](globus-gfx/globus-inst-login1.PNG)
+![Globus Software Set Up](/images/globus-gfx/globus-inst-login1.PNG)
 
 Once in, go ahead and allow the setup to continue.
 
-![Globus Software Set Up](globus-gfx/globus-inst-login2.PNG)
+![Globus Software Set Up](/images/globus-gfx/globus-inst-login2.PNG)
 
 #### Globus Installation Guides
 
@@ -62,31 +62,31 @@ Once in, go ahead and allow the setup to continue.
 
 [How to Install: Linux](https://docs.globus.org/how-to/globus-connect-personal-linux/)
 
- You can now establish an Endpoint on your PC - Globus wants to call it a Collection. Under <b>Collection Name</b>, choose a descriptive name. <B>Do not choose the High Assurance option</b> - that feature is beyond the scope of this document.
+You can now establish an Endpoint on your PC - Globus wants to call it a Collection. Under <b>Collection Name</b>, choose a descriptive name. <B>Do not choose the High Assurance option</b> - that feature is beyond the scope of this document.
 
- ![Globus Software Set Up](globus-gfx/globus-inst-login3.PNG)
+![Globus Software Set Up](/images/globus-gfx/globus-inst-login3.PNG)
 
- Depending on whether Globus knows your account ID from a previous login or existing affiliation, you may be asked to generate a setup key for your collection. Go ahead and copy it to the clipboard of your computer. Keep this key if you are asked for it during the next one or two steps.
+Depending on whether Globus knows your account ID from a previous login or existing affiliation, you may be asked to generate a setup key for your collection. Go ahead and copy it to the clipboard of your computer. Keep this key if you are asked for it during the next one or two steps.
 
-![Globus Software Set Up](globus-gfx/globus-inst-key1.PNG)
+![Globus Software Set Up](/images/globus-gfx/globus-inst-key1.PNG)
 
- In the setup window, clicking <b>Save</b> will open yet another Globus front end interface. Click on <b>ENDPOINTS</b> and click on <b>Administered by You</b> on the right side of the middle menu. You should see the Endpoint you entered previously.
+In the setup window, clicking <b>Save</b> will open yet another Globus front end interface. Click on <b>ENDPOINTS</b> and click on <b>Administered by You</b> on the right side of the middle menu. You should see the Endpoint you entered previously.
 
-![Globus Software Set Up](globus-gfx/globus-inst-login4.PNG)
+![Globus Software Set Up](/images/globus-gfx/globus-inst-login4.PNG)
 
- Click on the Endpoint and in the next screen, choose the <b>Open in File Manager</b> button, which is the middle button on the right hand side. Ensure that this takes you to a listing of the files in your home directory, including subfolders into which you can navigate.
+Click on the Endpoint and in the next screen, choose the <b>Open in File Manager</b> button, which is the middle button on the right hand side. Ensure that this takes you to a listing of the files in your home directory, including subfolders into which you can navigate.
 
-![Globus Software Set Up](globus-gfx/globus-local-ep1.PNG)
+![Globus Software Set Up](/images/globus-gfx/globus-local-ep1.PNG)
 
 ### Setting up access to hpc-transfer.usc.edu
 
 To set up access to the hpc-transfer node, go to <b>ENDPOINTS</b> and click on <b>Shared with You</b> in the middle menu bar. Right above that, enter <b>hpc-transfer.usc.edu</b> in the search box and click the magnifying glass. The USC data transfer node endpoint should appear in the main window.
 
-![Globus Software Set Up](globus-gfx/globus-remote1.PNG)
+![Globus Software Set Up](/images/globus-gfx/globus-remote1.PNG)
 
 Click on the endpoint link and then click the <b>Activate</b> button on the right hand side.
 
-![Globus Software Set Up](globus-gfx/globus-remote2.PNG)
+![Globus Software Set Up](/images/globus-gfx/globus-remote2.PNG)
 
 You will be asked to log in.
 
@@ -94,7 +94,7 @@ You will be asked to log in.
 
 If you succesfully authenticate you will be granted an access certificate. You are connected to the USC data transfer node Endpoint.
 
-![Globus Software Set Up](globus-gfx/globus-remote3.PNG)
+![Globus Software Set Up](/images/globus-gfx/globus-remote3.PNG)
 
 Click on <b>Open in File Manager</b> and ensure you can see the files and directories in your home directory on the CARC cluster.
 
@@ -102,7 +102,7 @@ Click on <b>Open in File Manager</b> and ensure you can see the files and direct
 
 At this point you can navigate to the File Manager and be presented with the Globus transfer tool, which has a two-pane bi-directional paradigm.
 
-![Globus Software Set Up](globus-gfx/globus-fm1.PNG)
+![Globus Software Set Up](/images/globus-gfx/globus-fm1.PNG)
 
 For security, Globus requires you to specifically allow files and folders on your PC to be shared or transferred.
 
@@ -110,31 +110,31 @@ On Windows, to allow a folder contents to be transferred,  right click on the sm
 
 Select the <b>Options...</b> menu item.
 
-![Globus Software Set Up](globus-gfx/globus-svcopt1.PNG)
+![Globus Software Set Up](/images/globus-gfx/globus-svcopt1.PNG)
 
 You will be presented with a box to add a folder containing the files you want to transfer. If you click on the <b>+</b> sign on the lower right (highligted in blue) you will have a standard file explorer that gives you the ability to add a folder on your local hard drive. For now only keep the <b>Writable</b> option checked and the **Shareable** option unchecked.
 
-![Globus Software Set Up](globus-gfx/globus-svcopt2.PNG)
+![Globus Software Set Up](/images/globus-gfx/globus-svcopt2.PNG)
 
 Click the <b>Save</b> button to continue.
 
 On Mac, the process is similar. You access the the small Globus <b>g</b> icon in the menu bar and choose <b>Preferences...</b> and then the <b>Access</b> tab.
 
-![Globus Software Set Up](globus-gfx/globus-macadd.PNG)
+![Globus Software Set Up](/images/globus-gfx/globus-macadd.PNG)
 
 Now go back to the main Globus window. In the File Manager page, you should see the USC hpc-transfer Endpoint on the left column, and your local Endpoint in the right column. In the search field at the top of that column (designated by a blue magnifying glass), you can click once and be presented with the local Collection you specified earlier. Clicking on it fills the right column, and clicking on the blue right-angle arrow on the right allows you to navigate to the folder you designated. You'll see any files you placed in there.
 
-![Globus Software Set Up](globus-gfx/globus-fm2.PNG)
+![Globus Software Set Up](/images/globus-gfx/globus-fm2.PNG)
 
 Now in the right column highlight one, two, or all of the files in your local folder. Starting the transfer is as simple as clicking on the blue <b>Start</b> button. A popup window will appear in the upper right giving you the option to <b>View details</b>. That will take you to a screen where you can watch the progress, as well as view other information about your transfer job.
 
-![Globus Software Set Up](globus-gfx/globus-xfer1.PNG)
+![Globus Software Set Up](/images/globus-gfx/globus-xfer1.PNG)
 
 If your files are large Globus takes a few seconds or minutes to index them and get ready to transfer.
 
 When yout transfer completes, go back to the File Manager window. In the left pane, under the USC hpc-transfer Endpoint, click the refresh button in the middle menu (right under the <b>Path</b> field). The refresh button is the right-curling arrow, which will pull an updated listing of the files in your home directory on the USC data transfer node. If needed, scroll through the list and you will see your files there.
 
-![Globus Software Set Up](globus-gfx/globus-xfer2.PNG)
+![Globus Software Set Up](/images/globus-gfx/globus-xfer2.PNG)
 
 Notice that in the <b>Path</b> window Globus designates your home directory as a ```/~/``` symbol. Experiment with clicking on the file system navigation buttons to the right of folders as well as the up arrow in the Collection middle menu. You'll get an idea of where on the data transfer node and where on your PC you can upload and download files from.
 

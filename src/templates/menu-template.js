@@ -20,7 +20,7 @@ const findSubMenu = (menubar, nav) => {
 export default function Template({ data }) {
   let content = data.content || data.newsContent || data.researcherContent;
   let subMenu = findSubMenu(content.frontmatter.parentEle, data.sideMenu)
-  
+
     return (
       <Layout {...data.navigation}>
           <SEO title={content.frontmatter.title}/>
@@ -38,7 +38,7 @@ export default function Template({ data }) {
                                   {item.node.frontmatter.title}
                               </Link>
                           </ul>
-                        </div> 
+                        </div>
                       ) : (
                         <div className="side-menu" key={i}>
                           <ul>
@@ -46,7 +46,7 @@ export default function Template({ data }) {
                                   {item.node.frontmatter.title}
                               </Link>
                           </ul>
-                        </div> 
+                        </div>
                       )
                       ) : (
                         <div className="side-menu" key={i}>
@@ -55,7 +55,7 @@ export default function Template({ data }) {
                                   {item.node.frontmatter.title}
                               </a>
                           </ul>
-                        </div> 
+                        </div>
                       ))
                   })}
                 </div>
@@ -82,7 +82,7 @@ export default function Template({ data }) {
                         <>
                           <Researcher {...data.Researcher } flag={true} />
                           <div className="category-link-wrapper type-primary">
-                            <Link className="category-link category-link-lg category-news type-primary" to={"/education-and-outreach/news-and-updates/all-researcher"}>
+                            <Link className="category-link category-link-lg category-news type-primary" to={"news-and-updates/researcher-profiles/all-researchers"}>
                               <img src="/images/news-arrows.svg" />
                               <p>
                                 View all Researcher Profiles
@@ -96,8 +96,8 @@ export default function Template({ data }) {
                   ) : (
                     <CustomNews {...data.newsContent }/>
                   )}
-                 
-                    
+
+
                 </div>
                 <div className="right-column">
                     <div className="system-status">

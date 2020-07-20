@@ -17,7 +17,7 @@ const content = [
       description:
         "Technical upgrades, increased user support, and exciting new services are planned for the next few months",
       button: "Learn More",
-      url: "/education-and-outreach/news-and-updates/carc-name-change",
+      url: "/education-and-outreach/news-and-updates/upcoming-changes-summer-fall-2020",
       image: "/images/slider-image-2.png"
     },
     {
@@ -25,7 +25,7 @@ const content = [
       description:
         "New program offers COVID-19 researchers access to high performance computing systems",
       button: "Learn More",
-      url: "/education-and-outreach/news-and-updates/carc-name-change",
+      url: "/education-and-outreach/news-and-updates/covid-19-consortium",
       image: "/images/slider-image-3.png"
     }
   ];

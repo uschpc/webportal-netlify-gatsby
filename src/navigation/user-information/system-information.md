@@ -1,6 +1,6 @@
 ---
 title: System Information
-id: 2
+id: 3
 thumbnail: /images/sr-icon-4.png
 path: system-information
 parentPath: user-information
@@ -18,7 +18,7 @@ The CARC computing resource consists of 2 shared head nodes and a total of 30,00
 
 Each user has three file systems for their CARC account: the home directory, the project directory, and the scratch directory.
 
-For more information on our different file systems, see our [Storage File Systems user guide](user-information/user-guides/data-management/storage-file-systems).
+For more information on our different file systems, see our [Storage File Systems user guide](/user-information/user-guides/data-management/storage-file-systems).
 
 #### Home directory
 

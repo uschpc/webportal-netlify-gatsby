@@ -3,7 +3,7 @@ author: Yaseen A.
 id: 3
 date: 2020-06-04T00:00:00.00Z
 title: Hybrid Cloud
-excerpt: Information about CARC's Hybrid Cloud
+excerpt: Information about the CARC's cloud computing services.
 route: High-Performance Computing
 routePath: user-information/user-guides/high-performance-computing
 path: hybrid-cloud-system
@@ -23,6 +23,3 @@ A private cloud consists of computing resources used exclusively by one business
 
 ### Hybrid Cloud
 Often called “the best of both worlds,” hybrid clouds combine on-premises infrastructure, or private clouds, with public clouds so organizations can reap the advantages of both. In a hybrid cloud, data and applications can move between private and public clouds for greater flexibility and more deployment options. For instance, you can use the public cloud for high-volume, lower-security needs such as web-based email, and the private cloud (or other on-premises infrastructure) for sensitive, business-critical operations like financial reporting. In a hybrid cloud, “cloud bursting” is also an option. This is when an application or resource runs in the private cloud until there is a spike in demand (such as seasonal event like online shopping or tax filing), at which point the organization can “burst through” to the public cloud to tap into additional computing resources.
-
-
-

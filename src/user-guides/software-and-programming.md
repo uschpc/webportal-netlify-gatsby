@@ -3,7 +3,7 @@ author: Yaseen A.
 id: 3
 date: 2020-06-04T00:00:00.00Z
 title: Software and Programming
-excerpt: Information on the software available on Discovery, as well as instructions for installing your own software.
+excerpt: Information on the software available on CARC systems, as well as instructions for installing your own.
 thumbnail: /images/CommandLine.png
 path: software-and-programming
 parentPath: user-information/user-guides
