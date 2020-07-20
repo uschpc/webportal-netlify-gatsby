@@ -22,11 +22,12 @@
     "gatsby-source-filesystem": "^2.3.0",
     "gatsby-transformer-remark": "^2.8.12",
     "gatsby-transformer-sharp": "^2.5.0",
+    "graphql-playground-html": ">1.6.22",
     "html-react-parser": "^0.10.3",
+    "lodash": "^4.17.19",
     "js-search": "^2.0.0",
     "js-yaml": "^3.13.1",
     "less": "^3.11.1",
-    "lodash": "^4.17.15",
     "netlify-cms-app": "^2.12.11",
     "node-sass": "^4.14.0",
     "prop-types": "^15.7.2",
@@ -40,7 +41,8 @@
     "react-slick": "^0.25.2",
     "react-twitter-embed": "^3.0.3",
     "read-more-react": "^1.0.10",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "websocket-extensions": ">=0.1.4"
   },
   "devDependencies": {
     "prettier": "2.0.5"
