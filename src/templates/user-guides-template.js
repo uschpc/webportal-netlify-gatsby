@@ -21,7 +21,6 @@ export default function Template({ data }) {
               </div>
               <div className="middle-column">
                   <h1>{post.frontmatter.title}</h1>
-                  <Content />
                   <Markdown source={post.html} escapeHtml={false} />
                   {(post.frontmatter.title === 'High-Performance Computing') && data.allContent.edges.map((item, i) => {
                     return (
