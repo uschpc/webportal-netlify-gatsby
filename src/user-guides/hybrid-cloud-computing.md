@@ -12,26 +12,16 @@ cat: userGuides
 parentPage: User Guides
 ---
 
-The Center for Advanced Research Computing (CARC) offers consulting to help faculty and other campus researchers obtain access to and effectively use cloud computing resources through our relationship with Amazon Web Services (AWS) as a preferred vendor. The CARC will be adding support for Microsoft Azure and the Google Cloud Platform in the near future.
+USC's Center for Advanced Research Computing (CARC) is formulating a long-term hybrid cloud solution. The CARC will be building services to allow our researchers to utilize public, private, or hybrid cloud solutions in an effective, cost-efficient, and secure manner.
 
-The CARC can help:
+### Public Cloud
 
-* Determine if the cloud is a good fit to meet your research requirements.
-* Plan for and manage costs of custom cloud solutions.
-* Gain access to cloud computing resources, both for research and research-related instruction.
+Public cloud services, such as those from Amazon, Google, and Microsoft, are the most common way of deploying cloud computing. The cloud resources (like servers and storage) are owned and operated by a third-party cloud service provider and delivered over the Internet. With a public cloud, all hardware, software, and other supporting infrastructure is owned and managed by the cloud provider. In a public cloud, you share the same hardware, storage, and network devices with other organizations or cloud “tenants.” You access services and manage your account using a web browser. Public cloud deployments are frequently used to provide web-based email, online office applications, storage, and testing and development environments.
 
-### Amazon Web Services
+### Private Cloud
 
-[Amazon Web Services (AWS)](https://aws.amazon.com/) is USC's preferred and recommended cloud provider. AWS provides a broad set of infrastructure services, such as computing power, storage options, networking, and databases, all delivered as a utility: on-demand, available in minutes, with pay-as-you-go pricing.  All of these resources are maintained in secure data centers in multiple geographic locations.
+A private cloud consists of computing resources used exclusively by one business or organization. The private cloud can be physically located at your organization’s on-site data center, or it can be hosted by a third-party service provider. In a private cloud, the services and infrastructure are always maintained on a private network and the hardware and software are dedicated solely to your organization. In this way, a private cloud can make it easier for an organization to customize its resources to meet specific IT requirements. Private clouds are often used by government agencies, financial institutions, and any other mid- to large-size organizations with business-critical operations seeking enhanced control over their environment.
 
-The CARC works closely with public cloud vendors to provide research teams with cost-effective cloud access and meet federal compliance regulations (e.g., HIPAA, FERPA).
+### Hybrid Cloud
 
-### Does your research belong in the cloud?
-
-If your current research computing environment is costing you time, straining your budget, or giving you headaches, you may want to consider cloud computing, which offers a versatile and powerful platform for research computing. The CARC can help you understand the costs and benefits of the cloud.
-
-### Moving your research to the cloud
-
-The CARC can consult with you to help you understand what is involved in moving your research computing to the cloud. While cloud computing is relatively new, it has quickly become recognized as an empowering technology that is being widely adopted across many research domains.
-
-If you are interested in the cloud or not fully satisfied with your current computing solution, the CARC can help you build a model of how a cloud implementation would work for your research, and what it will cost you in time and money.
+Often called “the best of both worlds,” hybrid clouds combine on-premises infrastructure, or private clouds, with public clouds so organizations can reap the advantages of both. In a hybrid cloud, data and applications can move between private and public clouds for greater flexibility and more deployment options. For instance, you can use the public cloud for high-volume, lower-security needs such as web-based email, and the private cloud (or other on-premises infrastructure) for sensitive, business-critical operations like financial reporting. In a hybrid cloud, “cloud bursting” is also an option. This is when an application or resource runs in the private cloud until there is a spike in demand (such as seasonal event like online shopping or tax filing), at which point the organization can “burst through” to the public cloud to tap into additional computing resources.
