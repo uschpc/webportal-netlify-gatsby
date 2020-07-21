@@ -9,13 +9,13 @@ parentPage: User Guides
 sideMenuParent: Data Management
 ---
 
-Command line-based data transfer utilities (clients) are available natively on macOS and Linux systems and on Windows through applications such as PuTTY and Cygwin. The common utilities, `sftp`, `scp`, and `rsync`, are described on this page.
+CCommand line-based data transfer utilities (clients) are available natively on macOS and Linux systems and on Windows through applications such as PuTTY and Cygwin. The common utilities, `sftp`, `scp`, and `rsync`, are described on this page.
 
 > Note: Due to security risks, please be mindful of the type of information being transferred. Where possible, omit all information that may be considered confidential. For examples of confidential information that requires additional consideration, visit http://itservices.usc.edu/security/sensitive-info.
 
 ### SFTP: Secure File Transfer Protocol
 
-SFTP is a command line-based transfer tool that is the equivalent of a GUI-based SFTP client. Like SSH, SFTP requires an initial login and authentication, and your session will remain open until you exit or are disconnected. You will remain connected to HPC and able to upload (put) and download (get) files without further login or authentication.
+SFTP is a command line-based transfer tool that is the equivalent of a GUI-based SFTP client. Like SSH, SFTP requires an initial login and authentication, and your session will remain open until you exit or are disconnected. You will remain connected to CARC and able to upload (put) and download (get) files without further login or authentication.
 
 From your computer, log in to hpc-transfer.usc.edu and authenticate via Duo:
 
@@ -68,7 +68,7 @@ myplot1.jpg                                 100%   10KB   2.4MB/s   00:00
 
 ### SCP: Secure Copy Protocol
 
-`scp` is another convenient way to transfer a single file or directory. The following description assumes that `scp` is being used to transfer files between your local computer and HPC.
+`scp` is another convenient way to transfer a single file or directory. The following description assumes that `scp` is being used to transfer files between your local computer and CARC systems.
 
 Note: Unlike SFTP, login and authentication are requested for each use of the command. If you plan to do multiple transfers it is recommended that you use SFTP — either the command-line version or a GUI-based client, which will keep your session open so that multiple authentications are not required.
 
@@ -100,7 +100,7 @@ scp -r ttrojan@hpc-transfer.usc.edu:/scratch/ttrojan/myplots .
 
 ### Rsync: Remote Synchronization
 
-Rsync is a fast and versatile transfer utility for synchronizing files and directories. It is a good choice for manually transferring large amounts of data on or to HPC because only new or updated files are copied.
+Rsync is a fast and versatile transfer utility for synchronizing files and directories. It is a good choice for manually transferring large amounts of data on or to CARC systems because only new or updated files are copied.
 
 The command synchronizes the directory on the local computer, /source/path, with the directory on the remote computer, /destination/path. If /destination/path does not exist, it will be created. Of course, standard Linux file and directory permissions apply.
 
@@ -112,7 +112,7 @@ rsync </source/path> <hostname:/destination/path>
 
 Note: Unlike SFTP, login and authentication are requested for each use of the command.
 
-The following example copies a file from a local computer to an HPC directory:
+The following example copies a file from a local computer to a CARC directory:
 
 ```
 rsync -av --progress myplot1.jpg ttrojan@hpc-transfer.usc.edu:/scratch/ttrojan/

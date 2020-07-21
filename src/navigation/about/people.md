@@ -20,29 +20,34 @@ BD’s research interests are large-scale application optimization, parallel com
 
 ### Systems Engineering & Infrastructure
 
-The Systems Engineering & Infrastructure team
+The Systems Engineering & Infrastructure team oversees the installation and maintenance of the CARC's computing resources, including Discovery, the CARC's high-performance computing cluster.
 
-Jimi
-Bill
-Chris
+**Jimi Chu**
+
+**Bill Jendrzejek**
+
+**Chris Taylor**
 
 ### Research Facilitation & Applications
 
-The Research Facilitation & Applications team
+The Research Facilitation & Applications team collaborates with researchers to develop workflows and strategies. The team also supports user education by facilitating computing workshops and consulting sessions.
 
-Cesar
-Marco
-Derek
+**Cesar Sul**
+
+**Marco Olguin**
+
+**Derek Strong**
 
 ### Cloud Computing & Web Development
 
-The Cloud Computing & Web Development team
+The Cloud Computing & Web Development team leads the development and maintenance of our website and our Research Computing User Portal, as well as the development of our upcoming hybrid cloud computing environment.
 
-James
-Yaseen
+**James Hong**
+
+**Yaseen Alkhafaji**
 
 ### Communications & Content
 
-The Communications & Content team
+Communications & Content includes external, user-facing communication, such as news stories, announcements, and social media, as well as the creation and curation of all CARC content featured on our website.
 
-Andrea
+**Andrea Renney**

@@ -9,16 +9,16 @@ parentPage: User Guides
 sideMenuParent: Data Management
 ---
 
-For many HPC users, the most convenient way to transfer files between their computer and HPC is to use a GUI (graphical user interface)-based SFTP client. The SFTP client is installed and run on your computer. It works by connecting to the SFTP server running on discovery.usc.edu, enabling you to transfer files back and forth.
+For many CARC users, the most convenient way to transfer files between their computer and CARC systems is to use a GUI (graphical user interface)-based SFTP client. The SFTP client is installed and run on your computer. It works by connecting to the SFTP server running on discovery.usc.edu, enabling you to transfer files back and forth.
 
-Along with USC login credentials, Duo two-factor authentication (2FA) is required for HPC access. Most third-party SSH clients can be configured to use 2FA, and to maintain an open connection so as to minimize the number of authentication requests during a transfer session. Refer to the documentation for how to do this for your preferred client.
+Along with USC login credentials, Duo two-factor authentication (2FA) is required for CARC access. Most third-party SSH clients can be configured to use 2FA, and to maintain an open connection so as to minimize the number of authentication requests during a transfer session. Refer to the documentation for how to do this for your preferred client.
 
 You are welcome to use any SFTP client you wish. FileZilla, WinSCP and Cyberduck are popular choices.
 
 ### FileZilla
 You can download FileZilla from the vendor website at https://filezilla-project.org.
 
-Make sure to download FileZilla client. Once the installation is complete you will need to create an HPC profile. You can do so by going to the Site-Manager and clicking on "New site":
+Make sure to download FileZilla client. Once the installation is complete you will need to create a CARC profile. You can do so by going to the Site-Manager and clicking on "New site":
 
 ![Filezilla access set up](/images/hpc-file-transfer-gfx/fz-snip1.png)
 
@@ -26,7 +26,7 @@ For convenience you can click the Rename button to name the site something memor
 * Protocol: SFTP – SSH File Transfer Protocol
 * Host: discovery.usc.edu
 * Logon Type: Interactive
-* User: Your USC NetID/HPC username
+* User: Your USC NetID/username
 
 ![Filezilla access set up](/images/hpc-file-transfer-gfx/fz-snip2.png)
 
@@ -54,7 +54,7 @@ You can download Cyberduck from the vendor website at https://cyberduck.io/.
 Go to the Bookmark menu and choose New Bookmark and save these settings:
 
 Server: discovery.usc.edu
-Username: Your USC NetID/HPC username
+Username: Your USC NetID/username
 (Optional) SSH Private Key: The path to your private key (usually ~/.ssh/id_rsa)
 
 ![Cyberduck access set up](/images/hpc-file-transfer-gfx/cb-snip1.png)
