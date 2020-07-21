@@ -4,8 +4,8 @@ title: USC’s Center for High-Performance Computing (HPC) is now the Center for
 author: Andrea Renney
 path: carc-name-change
 parentEle: News and Events
-date: 2020-07-10
-parentPath: education-and-outreach/news-and-updates
+date: 2020-07-10T00:00:00.000Z
+parentPath: news-and-updates
 cat: news
 excerpt: Name change highlights the research-focused nature of the department
 thumbnail: /images/usc_official_bg_twitter_only.jpg
