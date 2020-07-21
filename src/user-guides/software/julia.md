@@ -20,7 +20,7 @@ To use Julia on Discovery, first load the corresponding module:
 module load julia
 ```
 
-This loads the default version, which is typically the newest version available. If you want a different version, be sure to specify the version of Julia when loading. For example:
+This loads the default version (currently 1.4.1). If you want a different version, be sure to specify the version of Julia when loading. For example:
 
 ```sh
 module load julia/1.0.5
@@ -28,11 +28,13 @@ module load julia/1.0.5
 
 To see the available versions of Julia, enter `module spider julia`.
 
+Note that this loads base Julia, so only the base Julia modules and functions are immediately available; you can install other Julia packages that you may need into your home directory (see guide below).
+
 ### Running Julia interactively
 
-After loading the module, to run Julia interactively on the login node, simply enter `julia`.
+After loading the module, to run Julia interactively on the **login node**, simply enter `julia`.
 
-To run Julia interactively on a compute node, first use Slurm's `salloc` command to reserve a node. For example:
+To run Julia interactively on a **compute node**, first use Slurm's `salloc` command to reserve a node. For example:
 
 ```sh
 salloc --time=1:00:00 --cpus-per-task=8 --mem-per-cpu=2GB
@@ -42,16 +44,16 @@ Once you are logged in to a compute node, load the module and then simply enter 
 
 ### Running Julia in batch mode
 
-To run Julia in batch mode, first create a Julia script. Then the `julia` command can be used to run the script as part of a Slurm job. Create a Slurm job script and submit it using Slurm's `sbatch` command.
+To run Julia in batch mode, create a Julia script and use the `julia` command to run the script as part of a Slurm job. Create a Slurm job script and submit it using Slurm's `sbatch` command.
 
-For a serial job, a Slurm job script would look something like this:
+For a simple serial job, a Slurm job script would look something like this:
 
 ```sh
 #!/bin/bash
 #SBATCH --export=none
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
-#SBATCH --mem-per-cpu=10GB
+#SBATCH --mem-per-cpu=2GB
 #SBATCH --time=1:00:00
 
 module load gcc
@@ -60,7 +62,7 @@ module load julia
 julia /path/to/script.jl
 ```
 
-Save this script as `jl.job`, for example, and then submit it by entering:
+Save this script as `jl.job`, for example, and then submit it:
 
 ```sh
 sbatch jl.job
@@ -68,23 +70,36 @@ sbatch jl.job
 
 ### Installing Julia packages
 
-You can install Julia packages inside your home directory. The easiest way to do this is by opening an interactive session of Julia and using the `Pkg.add()` function for registered Julia packages. By default, Julia will install packages in a `~/.julia/packages` directory inside your home directory:
+You can install Julia packages inside your home directory. By default, Julia will install packages in a `~/.julia/packages` directory inside your home directory. The easiest way to install is by opening an interactive session of Julia and using the package mode. To install a registered package, enter the `]` key to switch to package mode and then use the `add` command together with the package name. For example:
 
 ```julia
-using Pkg
-Pkg.add("DataFrames")
+add DataFrames
 ```
 
-> Note: We recommend keeping installed packages separated by Julia version (Major.Minor) to avoid compatibility issues.
+To install unregistered or development versions of packages, such as from GitHub or GitLab, use the URL path to the Git repository:
+
+```julia
+add https://github.com/JuliaData/DataFrames.jl
+```
+
+To exit package mode, enter the `Backspace` key on an empty line.
+
+You can also install packages in other locations, such as for use in a shared group or project library. You will need to change the relevant environment variable in the shell, before starting Julia:
+
+```sh
+export JULIA_DEPOT_PATH="/path/to/dir"
+```
+
+This changes the Julia depot location to the specified directory, and then packages will be installed to and loaded from a `/path/to/dir/packages` directory. After exporting this variable, you can simply start Julia and install and load packages like normal. Note that this line needs to be added to Slurm job scripts in order to load packages from that location. To reset this environment variable, enter `unset JULIA_DEPOT_PATH` in the shell.
 
 
 ### Installing a different version of Julia
 
-If you want a different version of Julia that is not currently installed on the cluster, please contact us at `hpc@usc.edu` and we may be able to install it for you.
+If you want a different version of Julia that is not currently installed on Discovery, please contact us at `hpc@usc.edu` and we may be able to install it for you.
 
-Alternatively, you can install a different version of Julia from official binaries inside your home directory. The following steps show how to do this using Julia version 1.4.2 as an example.
+Alternatively, you can install a different version of Julia inside your home directory from official binaries. The following steps show how to do this using Julia version 1.4.2 as an example.
 
-Find the binary file for the version of Julia that you want at https://www.julialang.org/downloads (one of the ‘Generic Linux Binaries for x86’ 64-bit files) and copy the link to the file. Then download the file into your home directory using `wget`:
+Find the binary file for the version of Julia that you want [here](https://www.julialang.org/downloads) (one of the 'Generic Linux Binaries for x86' 64-bit files) and copy the link to the file. Then download the file into your home directory using `wget`:
 
 ```sh
 wget https://julialang-s3.julialang.org/bin/linux/x64/1.4/julia-1.4.2-linux-x86_64.tar.gz
@@ -96,7 +111,7 @@ After the file is downloaded, unpack it by entering:
 tar -xvzf julia-1.4.2-linux-x86_64.tar.gz
 ```
 
-You can then start using this version of Julia by specifying the path to the binary file:
+You can then start using this version of Julia by entering the path to the binary file:
 
 ```sh
 ~/julia-1.4.2/bin/julia

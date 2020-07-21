@@ -87,7 +87,7 @@ Slurm allows you to specify many different types of resources. Below are some of
 
 For a complete listing of resource request syntax, run the command `man sbatch`.
 
-### GPUS
+### GPUs
 
 Some programs can take advantage of the unique hardware architecture in a graphics processing unit (GPU).
 

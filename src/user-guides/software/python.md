@@ -128,11 +128,11 @@ To see a list of all installed packages and their current and latest versions, r
 
     pip3 list -o --format columns
 
-#### HPC head nodes
+#### CARC head nodes
 
-ARC installs a number of distributed-computing-related packages when they install a new version of Python. The packages can vary for each version. Once sourced, you can list the loaded global packages and dependencies by running `pip3 list`
+CARC installs a number of distributed-computing-related packages when they install a new version of Python. The packages can vary for each version. Once sourced, you can list the loaded global packages and dependencies by running `pip3 list`
 
-ARC researchers are also encouraged to install their own Python packages on Discovery (or upgrade those that were pre-installed). By default, Python will install local (i.e., user) packages in your home directory, in the subdirectory named .local (the dot in front is part of the name and is required, (e.g., ~/.local, /home/rcf-40/ttrojan/.local). Python will create this directory if it does not already exist.
+CARC researchers are also encouraged to install their own Python packages on Discovery (or upgrade those that were pre-installed). By default, Python will install local (i.e., user) packages in your home directory, in the subdirectory named .local (the dot in front is part of the name and is required, (e.g., ~/.local, /home/rcf-40/ttrojan/.local). Python will create this directory if it does not already exist.
 
 To install Python packages in a library other than the default (`~/.local/lib/python3.6/site-packages`), you can use the `--target` option with `pip3`. The following command installs a package in your scratch directory:
 
