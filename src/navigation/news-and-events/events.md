@@ -3,7 +3,7 @@ title: Events
 id: 4
 thumbnail: /images/sr-icon-4.png
 path: events
-parentPath: education-and-outreach
+parentPath: news-and-updates
 cat: navigation
 parentEle: News and Events
 ---

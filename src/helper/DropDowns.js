@@ -298,7 +298,7 @@ const NewsEventsSubNavDropdown = ({ current, prev, nav }) => {
         <div className="row">
           <div className="column">
           <h4>
-            Find out how the CARC has been getting involved with the Trojan community.
+            Find out how the CARC has been getting involved with the Trojan community and beyond.
           </h4>
           </div>
         <div className="column">

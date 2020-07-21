@@ -69,7 +69,7 @@ export default function Template({ data }) {
                         <>
                           <LatestNews {...data.news } flag={true} />
                           <div className="category-link-wrapper type-primary">
-                            <Link className="category-link category-link-lg category-news type-primary" to={"/education-and-outreach/news-and-updates/all-news"}>
+                            <Link className="category-link category-link-lg category-news type-primary" to={"/news-and-updates/news-and-announcements/all-news"}>
                               <img src="/images/news-arrows.svg" />
                               <p>
                                 View all Research Computing News

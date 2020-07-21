@@ -11,6 +11,7 @@ cat: userGuides
 parentPage: User Guides
 uniqID: software
 ---
-USC Research Computing's high-performance computing cluster, Discovery, has been set up with a selection of software, compilers, and libraries for your use.
+
+The Center for High-Performance Computing's cluster, Discovery, has been set up with a selection of software, compilers, and libraries for your use.
 
 The following user guides provide instructions for using some of the more common software, as well as instructions on finding and loading different software and programs.

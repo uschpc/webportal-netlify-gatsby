@@ -1,6 +1,7 @@
 ---
 path: user_support_landing_page
 cat: userSupportLandingPage
+title: User Support
 route: User Support
 routePath: user-support
 ---

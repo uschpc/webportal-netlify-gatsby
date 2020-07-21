@@ -48,7 +48,7 @@ nav_items:
       - label: Knowledgebase
         path: /knowledgebase
   - label: News and Events
-    path: /education-and-outreach
+    path: /news-and-events
   - label: User Support
     path: /user-support
     sub_nav_items: []
