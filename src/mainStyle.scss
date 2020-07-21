@@ -341,6 +341,56 @@ body {
             }
           }
 
+          .content-wrapper {
+            .content-container{
+              width: 100%;
+              > span {
+                display: block;
+                padding: 0 0 20px 0;
+                margin-bottom: 20px;
+                border-bottom: 1px solid lightgray;
+              }
+    
+              h3 {
+                color: #990000;
+                font-size: 26px;
+              }
+      
+              li {
+                &:hover {
+                  &:hover {
+                    color: #990000;
+                    text-decoration: underline;
+                    cursor: pointer;
+                  }
+                }
+              }
+              .faq {
+                li {
+                  margin-left: 20px;
+                }
+              }
+            }
+            h2.sub-list-added {
+                color: #990000;
+                font-size: 26px;
+            }
+            .sup-items {
+              display: block;
+              padding: 0 0 20px 0;
+              border-bottom: 1px solid lightgray;
+              margin-bottom: 20px;
+              li {
+                margin-left: 20px;
+                &:hover {
+                  color: #990000;
+                  text-decoration: underline;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+
         }
         .right-column{
           margin-top: 118px;

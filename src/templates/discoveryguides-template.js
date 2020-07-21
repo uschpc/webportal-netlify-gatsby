@@ -17,12 +17,12 @@ export default function Template({ data }) {
               {/* <MenuRoute {...data} title={data.content.frontmatter.title} /> */}
               <div className="page-body">
                 <div className="left-column">
-                  <h3>User Guides</h3>
+                  <h2>User Guides</h2>
                   <SideMenu {...data}/>
                 </div>
                 <div className="middle-column">
                 <h1>{post.frontmatter.title}</h1>
-                  <Content flag/>
+                  <Content />
                   <Markdown source={data.content.html} escapeHtml={false} />
                 </div>
                 <div className="right-column">

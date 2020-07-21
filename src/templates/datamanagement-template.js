@@ -5,6 +5,7 @@ import SEO from '../components/seo'
 import Footer from '../components/footer'
 import Markdown from "react-markdown"
 import SideMenu from '../components/side-menu'
+import Content from '../components/content'
 // import MenuRoute from '../components/menu-route'
 
 export default function Template({ data }) {
@@ -21,6 +22,7 @@ export default function Template({ data }) {
                 </div>
                 <div className="middle-column">
                   <h1>{data.content.frontmatter.title}</h1>
+                  <Content />
                   <Markdown source={data.content.html} escapeHtml={false} />
                   {(data.content.frontmatter.title === "Discovery") && (
                     <span>
