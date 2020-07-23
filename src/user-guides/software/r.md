@@ -115,7 +115,7 @@ library(package_name, lib.loc = "/path/to/rpkgs")
 
 ### Installing a different version of R
 
-If you want a different version of R that is not currently installed on the cluster, please contact us at `hpc@usc.edu` and we may be able to install it for you.
+If you want a different version of R that is not currently installed on the cluster, please contact us at `hpc-support@usc.edu` and we may be able to install it for you.
 
 Alternatively, you can compile and install a different version of R from source inside your home directory. The following steps show how to do this using R version 4.0.0 as an example.
 

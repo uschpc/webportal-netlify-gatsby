@@ -4,7 +4,7 @@ author: Andrea Renney
 path: covid-19-consortium
 parentEle: News and Events
 date: 2020-03-24T00:00:00.000Z
-parentPath: news-and-updates/news-and-announcements
+parentPath: news-and-events/news-and-announcements
 cat: news
 excerpt: New program offers COVID-19 researchers access to high performance
   computing systems

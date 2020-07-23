@@ -11,7 +11,7 @@ cat: userSupport
 parentEle: none
 ---
 
-If you're experiencing an issue with system resources or your CARC account, please see our [User Guides](https://arcc-dev.usc.edu/user-information/user-guides), [User Forum](https://hpc-discourse.usc.edu/categories), and [Frequently Asked Questions](https://arcc-dev.usc.edu/user-information/frequently-asked-questions) pages for help.
+If you're experiencing an issue with system resources or your CARC account, please see the [User Guides](https://CARC-dev.usc.edu/user-information/user-guides), [User Forum](https://hpc-discourse.usc.edu/categories), and [Frequently Asked Questions](https://CARC-dev.usc.edu/user-information/frequently-asked-questions) pages for help.
 
 If you're experiencing an issue with your USC NetID or Duo Two-Factor Authentication, or you need help changing your password, please contact [USC IT Services](https://itservices.usc.edu/self-help/).
 

@@ -8,7 +8,7 @@ cat: navigation
 parentEle: Education & Outreach
 ---
 
-While the CARC offers [user guides](/user-information/user-guides) specific to our systems, there are many other online resources that are useful for improving your programming skills and deepening your understanding of research computing.
+While the CARC offers [user guides](/user-information/user-guides) specific to its systems, there are many other online resources that are useful for improving your programming skills and deepening your understanding of research computing.
 
 ### Software Carpentry
 
@@ -22,13 +22,13 @@ For more information on LinkedIn Learning, see https://itservices.usc.edu/linked
 
 ### edX
 
-Founded by MIT and Harvard, edX is a nonprofit organization that offers online courses from 140 higher education instititions. edX features both paid and no-cost courses that can be used to earn professional certificates and university credit.
+Founded by MIT and Harvard, edX is a nonprofit organization that offers online courses from 140 higher education institutions. edX features both paid and no-cost courses that can be used to earn professional certificates and university credit.
 
 For more information on edX, see https://www.edx.org/.
 
 ### Slurm documentation
 
-The CARC uses the Slurm job scheduling system for its computing cluster. In addition to our [Running Jobs user guide](/user-information/user-guides/running-jobs), official Slurm documentation can be found [here](https://slurm.schedmd.com/documentation.html).
+The CARC uses the Slurm job scheduling system for its computing cluster. In addition to the [Running Jobs user guide](/user-information/user-guides/running-jobs), official Slurm documentation can be found [here](https://slurm.schedmd.com/documentation.html).
 
 ### Programming language documentation
 

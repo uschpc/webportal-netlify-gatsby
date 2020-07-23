@@ -134,4 +134,4 @@ delete(pool)
 
 ### Requesting newer versions of MATLAB
 
-It may be necessary to run MATLAB using a version that is not currently available. Licensed software such as MATLAB requires license set up by CARC staff. If there is a new version of MATLAB that you want to use, please contact us at hpc@usc.edu to request an update.
+It may be necessary to run MATLAB using a version that is not currently available. Licensed software such as MATLAB requires license set up by CARC staff. If there is a new version of MATLAB that you want to use, please contact us at hpc-support@usc.edu to request an update.

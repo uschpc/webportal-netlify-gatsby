@@ -8,7 +8,7 @@ cat: navigation
 parentEle: Services
 ---
 
-The Center for Advanced Research Computing (CARC) offers consulting to help faculty and other campus researchers obtain access to and effectively use cloud computing resources through our relationship with Amazon Web Services (AWS) as a preferred vendor. The CARC will be adding support for Microsoft Azure and the Google Cloud Platform in the near future.
+The Center for Advanced Research Computing offers consulting to help faculty and other campus researchers obtain access to and effectively use cloud computing resources through its relationship with Amazon Web Services (AWS) as a preferred vendor. The CARC will be adding support for Microsoft Azure and the Google Cloud Platform in the near future.
 
 The CARC can help:
 
@@ -18,9 +18,9 @@ The CARC can help:
 
 ### Amazon Web Services
 
-[Amazon Web Services (AWS)](https://aws.amazon.com/) is USC's preferred and recommended cloud provider. AWS provides a broad set of infrastructure services, such as computing power, storage options, networking, and databases, all delivered as a utility: on-demand, available in minutes, with pay-as-you-go pricing.  All of these resources are maintained in secure data centers in multiple geographic locations.
+[Amazon Web Services (AWS)](https://aws.amazon.com/) is USC's preferred and recommended cloud provider. AWS provides a broad set of infrastructure services, such as computing power, storage options, networking, and databases, all delivered as a utility: on-demand, available in minutes, with pay-as-you-go pricing. All of these resources are maintained in secure data centers in multiple geographic locations.
 
-The CARC works closely with public cloud vendors to provide research teams with cost-effective cloud access and meet federal compliance regulations (e.g., HIPAA, FERPA).
+The CARC works closely with public cloud vendors to provide research teams with cost-effective cloud access while meeting federal compliance regulations (e.g., HIPAA, FERPA).
 
 ### Does your research belong in the cloud?
 

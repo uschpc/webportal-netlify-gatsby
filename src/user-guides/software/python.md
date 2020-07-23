@@ -144,7 +144,7 @@ To load a package, ensure you have appended your `PYTHONPATH` environment variab
 
 ### Installing a different version of Python
 
-If you want a different version of Python that is not currently installed on the cluster, please contact us at `hpc@usc.edu` and we may be able to install it for you.
+If you want a different version of Python that is not currently installed on the cluster, please contact us at `hpc-support@usc.edu` and we may be able to install it for you.
 
 Alternatively, you can compile and install a different version of Python from source inside your home directory. The following steps show how to do this using Python version 3.8.1 as an example.
 

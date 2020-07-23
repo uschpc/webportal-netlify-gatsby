@@ -11,11 +11,17 @@ uniqId: FAQ
 title: Frequently Asked Questions
 id: 4
 ---
+
+
 ## Accounts
+
+### How can I apply for a CARC account?
+
+You can log in to CARC systems using your USC NetID and password, so there is no additional requirement for CARC-specific account creation. However, in order to access CARC systems, you must either be the Principal Investigator (PI) of a research project or an authorized member of a PI's research project. For more information on CARC accounts, please see the [Accounts and Allocations page](/user-information/accounts).
 
 ### I forgot my password. How can I reset it?
 
-Because your CARC account is accessed using your USC NetID, the CARC does not have access to passwords and cannot reset them. You can reset your USC NetID password [here](https://netid.usc.edu/account_services/forgot_password) or [contact the ITS Customer Support Center](https://itservices.usc.edu/contact/)for assistance with resetting your account password.
+Because your CARC account is accessed using your USC NetID, the CARC does not have access to passwords and cannot reset them. You can reset your USC NetID password [here](https://netid.usc.edu/account_services/forgot_password) or [contact the ITS Customer Support Center](https://itservices.usc.edu/contact/) for assistance with resetting your account password.
 
 ### What is a quota?
 
@@ -91,7 +97,7 @@ Jobs can be run on the cluster in batch mode or in interactive mode. Batch proce
 
 Once your job is running interactively as expected, you should then submit it for batch processing. This is done by creating a simple text file, called a *Slurm script*, that specifies the cluster resources you need and the commands necessary to run your program.
 
-For details and examples on how to run jobs, see our [Running Jobs user guide](/user-information/user-guides/high-performance-computing/discovery/running-jobs).
+For details and examples on how to run jobs, see the [Running Jobs user guide](/user-information/user-guides/high-performance-computing/discovery/running-jobs).
 
 ### How can I tell when my job will run?
 
@@ -101,7 +107,7 @@ After submitting a job to the queue, you can use the command `squeue -j <job_id>
 
 You can check the status of your job using the `myqueue` command or the `squeue -u <username>` command, where `<username>` is your username. If your job is running but you are still unsure if your program is working, you can `ssh` into your compute nodes and use the command `top` to see what is running.
 
-In general, we recommend that users first request an interactive session to test out their jobs. This will give you immediate feedback if there are errors in your program or syntax. Once you are confident that your job can complete without your intervention, you are ready to submit a batch job using a Slurm script.
+In general, it is recommended that users first request an interactive session to test out their jobs. This will give you immediate feedback if there are errors in your program or syntax. Once you are confident that your job can complete without your intervention, you are ready to submit a batch job using a Slurm script.
 
 ### How do I tell if my job is running on multiple cores?
 
@@ -157,7 +163,7 @@ If you see only one process, your job is using only one core.
 
 ### How do I create a Slurm file?
 
-A Slurm file, or script, is a simple text file that contains your cluster resource requests and the commands necessary to run your program. See our [Running Jobs user guide](/user-information/user-guides/high-performance-computing/discovery/running-jobs) for instructions on creating Slurm job scripts.
+A Slurm file, or script, is a simple text file that contains your cluster resource requests and the commands necessary to run your program. See the [Running Jobs user guide](/user-information/user-guides/high-performance-computing/discovery/running-jobs) for instructions on creating Slurm job scripts.
 
 ### How do I specify which account to submit a job to?
 
@@ -196,13 +202,13 @@ If a job submission results in an error, please contact the CARC team by [submit
 
 ### How do I create/edit a text file?
 
-The CARC supports the following UNIX editors: Vim (vi), GNU nano, and GNU Emacs. Nano is the editor we teach in our workshops due to its ease of use.
+The CARC supports the following UNIX editors: Vim (vi), GNU nano, and GNU Emacs. Nano is the editor taught in the CARC's workshops due to its ease of use.
 
 Additional information on UNIX editors can be found in the [UNIX Overview](https://itservices.usc.edu/unix/) section of the ITS website.
 
 ### Can I use the local storage on a compute node?
 
-Yes, you can temporarily access the local disk space on a single node using the $TMPDIR environment variable in your job scripts. For a multi-node job you can use the /scratch file system as your working directory for all jobs.
+Yes, you can temporarily access the local disk space on a single node using the `$TMPDIR` environment variable in your job scripts. For a multi-node job you can use the /scratch file system as your working directory for all jobs.
 
 ## Cluster Resources: Data Files and Disk Space
 
@@ -212,17 +218,17 @@ Your project and home directories are backed up every day, as well as once a wee
 
 In order to be a candidate for data archiving, files must be closed and idle for at least 20 minutes. If you know the name and path of the file you deleted, we can search your backup directory and attempt to retrieve it.
 
-> Note: We’re more likely to recover your file from a daily backup than a weekly one, so contact us as soon as possible at hpc@usc.edu.
+> Note: We’re more likely to recover your file from a daily backup than a weekly one, so contact us as soon as possible at hpc-support@usc.edu.
 
-### Which filesystem should I store my project data in?
+### Which file system should I store my project data in?
 
-The CARC has several different filesystems, as summarized in the table below.
+The CARC has several different file systems, as summarized in the table below.
 
 | Name      | Path                                            | Amount of space                         | Backed up?                | Purpose                                                                                |
 |-----------|-------------------------------------------------|-----------------------------------------|---------------------------|----------------------------------------------------------------------------------------|
-| Home      | ~, /home/rcf-40/<user>                          | 1GB                                     | Yes                       | Configuration files, personal scripts.                                                 |
-| Project   | /home/rcf-proj/<proj_name>                      | Up to 5TB, shared amongst group members | Yes                       | Medium-term data storage while running CARC jobs.                                       |
-| Staging   | /staging/<proj_name>                            | 10TB per account                        | No                        | Short-term, high perfomance data storage.                                              |
+| Home      | ~, /home/rcf-40/<user>                          | 1 GB                                     | Yes                       | Configuration files, personal scripts.                                                 |
+| Project   | /home/rcf-proj/<proj_name>                      | Up to 5 TB, shared amongst group members | Yes                       | Medium-term data storage while running CARC jobs.                                       |
+| Staging   | /staging/<proj_name>                            | 10 TB per account                        | No                        | Short-term, high perfomance data storage.                                              |
 | Temporary | $TMPDIR (single node), $SCRATCHDIR (multi-node) | Varies, depends on resources requested  | No, deleted at end of job | Short-term (per job) high performance data storage. Not shared with other researchers. |
 
 The home, project, and scratch file systems are shared, which means that your usage can impact and be impacted by the activities of other users.
@@ -238,7 +244,7 @@ $ mkdir shared
 $ chmod g+wxs shared
 ```
 
-If you would like to consistently share data with a user who is not in your group, it is best to either have the PI add them to your project group or apply for a second account together. If this is not possible and you still need to share data, contact the CARC team at hpc@usc.edu to explore other options.
+If you would like to consistently share data with a user who is not in your group, it is best to either have the PI add them to your project group or apply for a second account together. If this is not possible and you still need to share data, contact the CARC team at hpc-support@usc.edu to explore other options.
 
 ### How do I check if I have enough disk space?
 
@@ -297,7 +303,7 @@ A comprehensive list of all software installed in the CARC environment can be fo
 
 ### How do I run MATLAB on CARC systems?
 
-See our [MATLAB user guide](/user-information/user-guides/software/matlab) for instructions.
+See the [MATLAB user guide](/user-information/user-guides/software/matlab) for instructions.
 
 ### Why am I getting a “command not found” error when I try to run a CARC application?
 

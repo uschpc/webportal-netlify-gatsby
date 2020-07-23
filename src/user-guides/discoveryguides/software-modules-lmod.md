@@ -2,12 +2,12 @@
 author: Ryan Sim
 id: 5
 date: 2020-06-14T00:00:00.000Z
-title: Software Modules (Lmod)
-alternativeTitle: Software Modules (Lmod)
+title: Software Module System 
 path: lmod
-parentPath: user-information/user-guides/software
-cat: software
+parentPath: user-information/user-guides/high-performance-computing/discovery
+cat: discoveryGuides
 parentPage: User Guides
+sideMenuParent: Discovery
 ---
 
 One of the biggest user-facing changes to the test cluster is trading the setup.sh method of using software for the **module system**. Lmod has the ability to track software dependencies to ensure you have better control of your environment - *no more logging out and then back in to reset your environment!*
