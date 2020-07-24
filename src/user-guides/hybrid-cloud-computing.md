@@ -12,7 +12,7 @@ cat: userGuides
 parentPage: User Guides
 ---
 
-USC's Center for Advanced Research Computing (CARC) is formulating a long-term hybrid cloud solution. The CARC will be building services to allow our researchers to utilize public, private, or hybrid cloud solutions in an effective, cost-efficient, and secure manner.
+The Center for Advanced Research Computing is formulating a long-term hybrid cloud solution. The CARC will be building services to allow researchers to utilize public, private, or hybrid cloud solutions in an effective, cost-efficient, and secure manner.
 
 ### Public Cloud
 

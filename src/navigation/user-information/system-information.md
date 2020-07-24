@@ -12,17 +12,17 @@ In 2020, the Center for Advanced Research Computing performed a major upgrade to
 
 ### Computing Resources
 
-The CARC computing resource consists of 2 shared head nodes and a total of 30,000 CPU cores in 1,600 compute nodes. The typical compute node has dual 8 to 16 core processors and resides on a 56 gigabit FDR Infiniband backbone.
+The CARC computing resource consists of 2 shared head nodes and a total of 30,000 CPU cores in 1,600 compute nodes. The typical compute node has dual 8 to 16 core processors and resides on a 56 gigabit FDR InfiniBand backbone.
 
 ### File Systems
 
 Each user has three file systems for their CARC account: the home directory, the project directory, and the scratch directory.
 
-For more information on our different file systems, see our [Storage File Systems user guide](/user-information/user-guides/data-management/storage-file-systems).
+For more information on the different file systems, see the [Storage File Systems user guide](/user-information/user-guides/data-management/storage-file-systems).
 
 #### Home directory
 
-Every user on Discovery has a 100GB allocation of home directory space. The home directory should be used for configuration files and personal scripts, but not for the bulk of your research work.
+Every user on Discovery has a 100 GB allocation of home directory space. The home directory should be used for configuration files and personal scripts, but not for the bulk of your research work.
 
 #### Project file system
 
@@ -40,6 +40,6 @@ The scratch directories - /scratch and /scratch2 - are high-performance parallel
 
 The CARC uses a customized distribution of the Community Enterprise Operating System (CentOS), built using the publicly available RPM Package Manager (RPM).  CentOS is a high-quality Linux distribution that gives the CARC complete control of its open-source software packages and is fully customized to suit advanced research computing needs, without the need for license fees.
 
-The CARC’s distribution of CentOS was modified for minor bug fixes and desired localized behavior. Many desktop and clustering-related packages were also added to our CentOS installation.
+The CARC’s distribution of CentOS was modified for minor bug fixes and desired localized behavior. Many desktop and clustering-related packages were also added to the CARC's CentOS installation.
 
 A number of white papers, tutorials, FAQs and other documentation on CentOS can be found on the [official CentOS website](https://www.centos.org/).

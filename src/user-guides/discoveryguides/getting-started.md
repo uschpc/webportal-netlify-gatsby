@@ -159,7 +159,7 @@ ssh <username>@hpc-transfer.usc.edu
 
 Remember to always transfer files into your home or scratch directories where you have sufficient disk space.
 
-If you need to frequently transfer files, plan to move large amounts of data, or need assistance transferring data from a private location, feel free to contact us at `hpc@usc.edu` for advice on how to do this efficiently.
+If you need to frequently transfer files, plan to move large amounts of data, or need assistance transferring data from a private location, feel free to contact us at `hpc-support@usc.edu` for advice on how to do this efficiently.
 
 #### Between your local machine and Discovery
 

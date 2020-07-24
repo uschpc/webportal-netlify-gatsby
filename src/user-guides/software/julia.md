@@ -96,7 +96,7 @@ This changes the Julia depot location to the specified directory, and then packa
 
 ### Installing a different version of Julia
 
-If you want a different version of Julia that is not currently installed on Discovery, please contact us at `hpc@usc.edu` and we may be able to install it for you.
+If you want a different version of Julia that is not currently installed on Discovery, please contact us at `hpc-support@usc.edu` and we may be able to install it for you.
 
 Alternatively, you can install a different version of Julia inside your home directory from official binaries. The following steps show how to do this using Julia version 1.4.2 as an example.
 

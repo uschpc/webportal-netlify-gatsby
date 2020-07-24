@@ -4,7 +4,7 @@ title: Benjamin Berman
 date: 2020-06-12T18:19:38.387Z
 thumbnail: /images/Benjamin.jpg
 path: benjamin-berman
-parentPath: /news-and-updates/researcher-profiles
+parentPath: /news-and-events/researcher-profiles
 cat: Researchers
 sharedID: news_Announcements_and_researcher_profile
 parentEle: News and Events

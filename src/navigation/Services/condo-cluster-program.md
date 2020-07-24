@@ -14,4 +14,4 @@ The Condo Cluster Program (CCP) is a service available to USC researchers that r
 
 The resources that a researcher subscribes to will be dedicated for use by their condo queue. Researchers also have the option to participate in a shared "Community Queue" of nodes. The Community Queue grants them access to idle nodes in other researchers' condo queues, giving them the flexibility to run larger jobs without having to invest in more dedicated resources.
 
-For more information on the Condo Cluster Program, including available resources, pricing, and the enrollment process, see the Condo Cluster Program user information page.
+The CARC is currently developing the policies for the new Condo Cluster Program. Later in 2020, information on the new Condo Cluster Program, including available resources, pricing, and the enrollment process, will be made available in the [Condo Cluster Program user guides](/user-information/user-guides/condo-cluster-program).

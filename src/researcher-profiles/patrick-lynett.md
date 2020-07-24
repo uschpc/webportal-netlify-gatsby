@@ -4,7 +4,7 @@ author: Center for Advanced Research Computing
 path: patrick-lynett
 parentEle: News and Events
 date: 2020-03-24
-parentPath: /news-and-updates/researcher-profiles
+parentPath: /news-and-events/researcher-profiles
 cat: Researchers
 sharedID: news_Announcements_and_researcher_profile
 excerpt: Patrick Lynett creates hydraulic models of coastal processes, studying the impact of complex waves and currents on critical coastal infrastructure.

@@ -69,7 +69,7 @@ export default function Template({ data }) {
                         <>
                           <LatestNews {...data.news } flag={true} />
                           <div className="category-link-wrapper type-primary">
-                            <Link className="category-link category-link-lg category-news type-primary" to={"/news-and-updates/news-and-announcements/all-news"}>
+                            <Link className="category-link category-link-lg category-news type-primary" to={"/news-and-events/news-and-announcements/all-news"}>
                               <img src="/images/news-arrows.svg" />
                               <p>
                                 View all Research Computing News
@@ -82,7 +82,7 @@ export default function Template({ data }) {
                         <>
                           <Researcher {...data.Researcher } flag={true} />
                           <div className="category-link-wrapper type-primary">
-                            <Link className="category-link category-link-lg category-news type-primary" to={"news-and-updates/researcher-profiles/all-researchers"}>
+                            <Link className="category-link category-link-lg category-news type-primary" to={"news-and-events/researcher-profiles/all-researchers"}>
                               <img src="/images/news-arrows.svg" />
                               <p>
                                 View all Researcher Profiles

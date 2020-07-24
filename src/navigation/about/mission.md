@@ -10,13 +10,14 @@ cat: navigation
 parentEle: About
 ---
 
+
 Established in 2000, the University of Southern California's Center for Advanced Research Computing Center (CARC) aims to provide advanced computational research support to USC faculty and students.
 
 When the needs of researchers exceed the capabilities of a personal computer, the CARC offers its support. Examples of services offered include high-performance computing, data storage and analysis, cloud computing, secure computing for sensitive data, and customized research partnerships.
 
-In August 2020, the CARC performed a major upgrade to its high-performance computing systems. The CARC computing resource currently consists of 2 shared head nodes and a total of 30,000 CPU cores in 1,600 compute nodes. The typical compute node has dual 8 to 16 core processors and resides on a 56 gigabit FDR Infiniband backbone.
+In August 2020, the CARC performed a major upgrade to its high-performance computing systems. The CARC computing resource currently consists of 2 shared head nodes and a total of 30,000 CPU cores in 1,600 compute nodes. The typical compute node has dual 8 to 16 core processors and resides on a 56 gigabit FDR InfiniBand backbone.
 
-Besides computing power, Discovery also has the capability of storing and analyzing large datasets. As the amount of data required for computational research continues to grow, adequate storage solutions have become a vital component of cyberinfrastructure. Discovery offers multicore compute nodes for data-intensive research jobs, backed by an 800 Terabyte, high-throughput scratch file system. A low-latency, high-bandwidth InfiniBand network fabric facilitates intense research workloads on large data sets. Nearly 100 Gigabytes of storage space is provided for each user to store important code and configuration files in their home directories.
+Besides computing power, Discovery also has the capability of storing and analyzing large datasets. As the amount of data required for computational research continues to grow, adequate storage solutions have become a vital component of cyberinfrastructure. Discovery offers multicore compute nodes for data-intensive research jobs, backed by an 800 terabyte, high-throughput scratch file system. A low-latency, high-bandwidth InfiniBand network fabric facilitates intense research workloads on large data sets. Nearly 100 gigabytes of storage space is provided for each user to store important code and configuration files in their home directories.
 
 During its existence, the CARC has continued to support and educate the USC community with computational research work. The use of CARC resources can be invaluable for researchers looking to further their research through grants and publications. In addition to standard user support, the CARC team also offers customized, collaborative research partnerships for researchers who traditionally have not benefited from the power of high-performance computing, but who recognize that their research requires access to more compute power.
 

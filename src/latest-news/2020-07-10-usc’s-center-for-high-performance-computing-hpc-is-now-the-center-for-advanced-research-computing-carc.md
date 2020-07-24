@@ -14,4 +14,4 @@ With the launch of its new high-performance computing cluster, USC’s Center fo
 
 This new name signifies the research support-focused direction the CARC is heading in. In addition to the new cluster and other system upgrades, the CARC will be expanding their services to include an updated, subscription-based condo node program, as well as a data archiving service. A new website, project resource user portal, and user education program will also be developed to support the research of USC’s faculty and students.
 
-A comprehensive list of the CARC’s system upgrades and upcoming changes can be found here: <https://carc.usc.edu/news-and-updates/news-and-announcements/upcoming-changes-summer-fall-2020>
+A comprehensive list of the CARC’s system upgrades and upcoming changes can be found here: <https://carc.usc.edu/news-and-events/news-and-announcements/upcoming-changes-summer-fall-2020>
