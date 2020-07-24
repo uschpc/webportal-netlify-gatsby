@@ -50,7 +50,7 @@ export default function Template({ data }) {
                 </div>
                 <div className={`right-column ${mainPage && mainPage.frontmatter.cat === 'userGuidesLandingPage' ? 'show' : 'hide'}`}>
                     <div className="system-status">
-                        <h4>Related Links</h4>
+                        <h2>Related Links</h2>
                         <ul>
                           <li><a href="https://hpc-grafana.usc.edu/d/vsUGHjmMk/compute-node-usage?orgId=1&refresh=30s" target="_blank">Compute node usage information</a></li>
                           <li><a href="https://hpcxdmod.usc.edu/" target="_blank">CPU hours/job size information</a></li>
