@@ -154,7 +154,7 @@ and (max-width : 1024px)  {
                 font-size: 32px;
                 margin: 10px 0;
                 .openbtn{
-                    min-width: 45px;
+                    width: 45px;
                     border: none;
                     &.show {
                         display: block;
@@ -163,6 +163,9 @@ and (max-width : 1024px)  {
                     }
                     &.hide {
                         display: none;
+                    }
+                    .hamburger-icon, .close-icon{
+                        margin: 0;
                     }
                 }
                 .btn-wrap{
@@ -188,7 +191,7 @@ and (max-width : 1024px)  {
                             &.hide {
                                 display: none;
                             }
-                            width: 40px;
+                            width: 45px;
                             img {
                                 margin: 0;
                             }
@@ -427,15 +430,17 @@ and (max-width : 767px) {
                 font-size: 32px;
                 margin: 10px 0;
                 .openbtn{
-                    min-width: 45px;
+                    width: 45px;
                     border: none;
                     &.show {
                         display: block;
                         text-align: center;
-                        font-size: 31px;
                     }
                     &.hide {
                         display: none;
+                    }
+                    .hamburger-icon, .close-icon{
+                        margin: 0;
                     }
                 }
                 .btn-wrap{
@@ -461,7 +466,7 @@ and (max-width : 767px) {
                             &.hide {
                                 display: none;
                             }
-                            width: 40px;
+                            width: 45px;
                             img {
                                 margin: 0;
                             }

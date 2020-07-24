@@ -15,7 +15,6 @@ import "./layout.css"
 import "../style.less"
 
 const Layout = (props) => {
-  console.log('asdasd', props.backToTopBtnFlag)
 
   useEffect(() => {
     if (props.uniqId === 'FAQ' || props.backToTopBtnFlag) {
