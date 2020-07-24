@@ -48,11 +48,13 @@ export default function Template({ data }) {
                    )}
 
                 </div>
-                <div className={`right-column ${content.frontmatter.uniqId !== 'FAQ' ? 'show' : 'hide'}`}>
+                <div className={`right-column ${mainPage.frontmatter.cat === 'userGuidesLandingPage' ? 'show' : 'hide'}`}>
                     <div className="system-status">
-                        <h3>System Status <a href="https://hpc-grafana.usc.edu/" target="_blank"><i class="fa fa-external-link" style={{fontSize:"24px"}}></i></a></h3>
-                        <iframe className="user-support" src="https://d2zckdyoh6khem.cloudfront.net/d-solo/vsUGHjmMk/compute-node-usage?orgId=1&refresh=300s&var-host=All&panelId=3" width="450" height="200" frameBorder="0"></iframe>
-                        <a className="view-more-graph" href="https://hpcxdmod.usc.edu/" target="_blank">View more graphs</a>
+                        <h4>Related Links</h4>
+                        <ul>
+                          <li><a href="https://hpc-grafana.usc.edu/d/vsUGHjmMk/compute-node-usage?orgId=1&refresh=30s" target="_blank">Compute node usage information</a></li>
+                          <li><a href="https://hpcxdmod.usc.edu/" target="_blank">CPU hours/job size information</a></li>
+                        </ul>
                     </div>
                 </div>
               </div>
@@ -84,6 +86,7 @@ export const coldFrontQuery = graphql`
           title
           route
           routePath
+          cat
         }
       html
     }
@@ -94,6 +97,7 @@ export const coldFrontQuery = graphql`
           routePath
           externalPath
           uniqId
+          cat
         }
       html
     }

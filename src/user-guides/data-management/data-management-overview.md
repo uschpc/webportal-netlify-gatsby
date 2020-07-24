@@ -7,6 +7,7 @@ parentPath: user-information/user-guides/data-management
 cat: dataManagement
 parentPage: User Guides
 sideMenuParent: Data Management
+backToTopBtnFlag: true
 ---
 
 Efficient and reliable data transfer can be achieved with a variety of useful tools, depending on if the storage location is a personal workstation or an external site. The choice of data transfer method depends heavily on the requirement of data sensitivity as well as familiarity of the user.

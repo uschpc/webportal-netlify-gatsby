@@ -8,6 +8,7 @@ path: python
 parentPath:  user-information/user-guides/software
 cat: software
 parentPage: User Guides
+backToTopBtnFlag: true
 ---
 
 [Python](https://www.python.org/) is an interpreted, general purpose programming language whose strength comes in the tools and libraries are associated with it.

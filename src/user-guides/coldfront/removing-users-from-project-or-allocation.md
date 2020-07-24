@@ -9,6 +9,7 @@ cat: coldFront
 parentPage: User Guides
 sideMenuParent: Research Computing User Portal
 excerpt: ColdFront user portal - removing users from project/allocation
+backToTopBtnFlag: true
 ---
 
 PIs should remove users from their project and allocation(s) once they are done working together.  This is an important step in ensuring your data is secure and accessed only by those you authorize.  

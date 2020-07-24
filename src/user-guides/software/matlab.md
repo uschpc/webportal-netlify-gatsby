@@ -8,6 +8,7 @@ path: matlab
 parentPath: user-information/user-guides/software
 cat: software
 parentPage: User Guides
+backToTopBtnFlag: true
 ---
 
 [MATLAB](https://www.mathworks.com/products/matlab.html) is a proprietary scientific computing language and environment.

@@ -6,6 +6,7 @@ path: software
 parentPath: user-information/user-guides
 cat: not-used
 parentPage: User Guides
+backToTopBtnFlag: true
 ---
 
 **Software User Guides Landing Page**

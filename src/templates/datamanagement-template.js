@@ -11,7 +11,7 @@ import Content from '../components/content'
 export default function Template({ data }) {
     const items = data.md.edges;
     return (
-      <Layout {...data.navigation}>
+      <Layout {...data.navigation} backToTopBtnFlag={data.content.frontmatter.backToTopBtnFlag}>
           <SEO title={data.content.frontmatter.title}/>
           <div className="coldFront-parent-container">
               {/* <MenuRoute {...data} title={data.content.frontmatter.title} /> */}
@@ -99,6 +99,7 @@ export const coldFrontQuery = graphql`
         cat
         route
         routePath
+        backToTopBtnFlag
       }
       html
     }

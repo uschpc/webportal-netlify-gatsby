@@ -10,6 +10,7 @@ cat: coldFront
 parentPage: User Guides
 sideMenuParent: Research Computing User Portal
 excerpt: ColdFront user portal - request new project allocation
+backToTopBtnFlag: true
 ---
 
 ### User portal home page

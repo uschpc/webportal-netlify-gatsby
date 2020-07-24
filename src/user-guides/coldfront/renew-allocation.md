@@ -9,6 +9,7 @@ cat: coldFront
 parentPage: User Guides
 sideMenuParent: Research Computing User Portal
 excerpt: ColdFront user portal - renewing project allocations
+backToTopBtnFlag: true
 ---
 
 Each type of resource offered by ARC has a different expiration policy.

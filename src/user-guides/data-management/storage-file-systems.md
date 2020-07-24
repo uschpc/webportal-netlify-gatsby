@@ -7,6 +7,7 @@ parentPath: user-information/user-guides/data-management
 cat: dataManagement
 parentPage: User Guides
 sideMenuParent: Data Management
+backToTopBtnFlag: true
 ---
 
 ### Home Directory

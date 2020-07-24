@@ -17,6 +17,19 @@ body {
          visibility: hidden;
          &.show {
            visibility: visible;
+           ul {
+             li{
+               margin-bottom: 10px;
+               a {
+                 color: black;
+                 &:hover {
+                  color: #990000;
+                  text-decoration: underline;
+                  cursor: pointer;
+                }
+               }
+             }
+           }
            h3 {
             display: flex;
             align-items: flex-end;
@@ -39,7 +52,7 @@ body {
             display: none;
           }
           iframe {
-            border: 4px solid #ffcd05;
+            border: none;
             margin-top: 20px;
             &.homepage{
               height: 262px;
@@ -1292,7 +1305,7 @@ p {
       &.hpc-logo{
         img {
           height: -webkit-fill-available;
-          max-height: 40%;
+          max-height: 48%;
         }
       }
     }
@@ -1530,10 +1543,13 @@ p {
               }
               h2 {
                 display: flex;
-                align-items: flex-end;
-                justify-content: space-between;
+                align-items: center;
+                justify-content: center;
+                position: relative;
                 a {
                   color: #990000;
+                  position: absolute;
+                  right: 10px;
                 }
               }
               .margin {

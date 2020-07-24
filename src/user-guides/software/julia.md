@@ -8,6 +8,7 @@ path: julia
 parentPath: user-information/user-guides/software
 cat: software
 parentPage: User Guides
+backToTopBtnFlag: true
 ---
 
 [Julia](https://www.julialang.org) is an open-source programming language designed for high-performance scientific and numerical computing.

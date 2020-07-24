@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Markdown from "react-markdown"
-import featureStories from '../feature-stories.json';
+import axios from 'axios';
 import { Link } from 'gatsby';
 
 const FeatureStories = (services) => {
+
+    useEffect(() => {
+        axios.get('https://hpc-discourse.usc.edu/latest.json',
+        {headers: {
+            "Api-Key" : "d8786b49f37517d04f621ba23f0de5b464de03a4bab2fb2c4011b4350ca0da72",
+            "Api-Username": "system",
+          }
+        })
+            .then(function (response) {
+                //handle success
+                console.log('success', response);
+            })
+            .catch(function (response) {
+                //handle error
+                console.log('err', response);
+            });
+    })
+
     return (
         <div className="shared press-release">
             <h2>Featured Story</h2>

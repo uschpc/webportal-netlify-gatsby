@@ -838,6 +838,9 @@ pre tt:after {
 img.lazyloaded {
   margin: 0;
 }
+img.main-logo {
+  margin: 0;
+}
 
 /* line 70, ../scss/layout/_header.scss */
 #print-logo {

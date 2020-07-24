@@ -8,6 +8,7 @@ parentPath: user-information/user-guides/high-performance-computing/discovery
 cat: discoveryGuides
 parentPage: User Guides
 sideMenuParent: Discovery
+backToTopBtnFlag: true
 ---
 
 This guide will help you get started with the Center for Advanced Research Computing's Discovery computing cluster by instructing you on how to connect, log in, transfer data, and run jobs.

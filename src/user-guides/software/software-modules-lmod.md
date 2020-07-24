@@ -8,6 +8,7 @@ path: lmod
 parentPath: user-information/user-guides/software
 cat: software
 parentPage: User Guides
+backToTopBtnFlag: true
 ---
 
 One of the biggest user-facing changes to the test cluster is trading the setup.sh method of using software for the **module system**. Lmod has the ability to track software dependencies to ensure you have better control of your environment - *no more logging out and then back in to reset your environment!*

@@ -8,6 +8,7 @@ parentPath: user-information/user-guides/high-performance-computing/discovery
 cat: discoveryGuides
 parentPage: User Guides
 sideMenuParent: Discovery
+backToTopBtnFlag: true
 ---
 
 This guide describes how to reserve compute time on Discovery for your jobs using the Slurm job scheduler.

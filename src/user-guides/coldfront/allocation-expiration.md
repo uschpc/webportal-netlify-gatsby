@@ -9,6 +9,7 @@ cat: coldFront
 parentPage: User Guides
 sideMenuParent: Research Computing User Portal
 excerpt: ColdFront user portal - allocation expiration
+backToTopBtnFlag: true
 ---
 
 ### What happens if a resource allocation expires?
