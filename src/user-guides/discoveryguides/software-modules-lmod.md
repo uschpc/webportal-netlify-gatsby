@@ -7,11 +7,8 @@ path: lmod
 parentPath: user-information/user-guides/high-performance-computing/discovery
 cat: discoveryGuides
 parentPage: User Guides
-<<<<<<< HEAD:src/user-guides/software/software-modules-lmod.md
 backToTopBtnFlag: true
-=======
 sideMenuParent: Discovery
->>>>>>> dde3840b160c51494c61f43b60121a94423ed9dc:src/user-guides/discoveryguides/software-modules-lmod.md
 ---
 
 One of the biggest user-facing changes to the test cluster is trading the setup.sh method of using software for the **module system**. Lmod has the ability to track software dependencies to ensure you have better control of your environment - *no more logging out and then back in to reset your environment!*
