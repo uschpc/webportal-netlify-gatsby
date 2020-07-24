@@ -48,7 +48,7 @@ export default function Template({ data }) {
                    )}
 
                 </div>
-                <div className={`right-column ${mainPage.frontmatter.cat === 'userGuidesLandingPage' ? 'show' : 'hide'}`}>
+                <div className={`right-column ${mainPage && mainPage.frontmatter.cat === 'userGuidesLandingPage' ? 'show' : 'hide'}`}>
                     <div className="system-status">
                         <h4>Related Links</h4>
                         <ul>
