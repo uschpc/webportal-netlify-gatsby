@@ -4,28 +4,6 @@ import axios from 'axios';
 import { Link } from 'gatsby';
 
 const FeatureStories = (services) => {
-    // testing discourse
-     const loadDataOnlyOnce = () => {
-        window.DiscourseEmbed = { discourseUrl: 'https://hpc-discourse.usc.edu/',
-                        discourseEmbedUrl: '/' };
-        var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
-        d.src = window.DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
-    }
-
-    useEffect(() => {
-        loadDataOnlyOnce();
-        axios.get('https://hpc-discourse.usc.edu/latest.json')
-            .then(function (response) {
-                //handle success
-                console.log('success', response);
-            })
-            .catch(function (response) {
-                //handle error
-                console.log('err', response);
-            });
-    })
-
     return (
         <div className="shared press-release">
             <h2>Featured Story</h2>
