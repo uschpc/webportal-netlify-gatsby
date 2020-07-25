@@ -15,7 +15,7 @@ const FeatureStories = (services) => {
 
     useEffect(() => {
         loadDataOnlyOnce();
-    })
+    }, [])
 
     return (
         <div className="shared press-release">
