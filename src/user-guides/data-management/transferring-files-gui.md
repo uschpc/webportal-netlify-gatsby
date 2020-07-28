@@ -7,6 +7,7 @@ parentPath: user-information/user-guides/data-management
 cat: dataManagement
 parentPage: User Guides
 sideMenuParent: Data Management
+backToTopBtnFlag: true
 ---
 
 For many CARC users, the most convenient way to transfer files between their computer and CARC systems is to use a GUI (graphical user interface)-based SFTP client. The SFTP client is installed and run on your computer. It works by connecting to the SFTP server running on discovery.usc.edu, enabling you to transfer files back and forth.

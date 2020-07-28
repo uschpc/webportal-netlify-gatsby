@@ -10,6 +10,7 @@ cat: coldFront
 parentPage: User Guides
 sideMenuParent: Research Computing User Portal
 excerpt: ColdFront user portal - request new project allocation
+backToTopBtnFlag: true
 ---
 
 Once a project has been created, an allocation to a computing and/or storage resource must also be requested. Allocations indicate what resources each project has access to and any limits associated with that access. Allocations expire either by date or when a limit is reached.

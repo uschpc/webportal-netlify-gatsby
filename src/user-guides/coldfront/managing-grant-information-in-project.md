@@ -9,6 +9,7 @@ cat: coldFront
 parentPage: User Guides
 sideMenuParent: Research Computing User Portal
 excerpt: ColdFront user portal - managing project grant information
+backToTopBtnFlag: true
 ---
 
 We encourage all faculty members to provide information about the grants they've received that provide a percent credit to the CARC, direct funds to the CARC, and/or were awarded based on the use of the CARC's resources.

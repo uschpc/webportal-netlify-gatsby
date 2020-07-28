@@ -7,6 +7,7 @@ path: lmod
 parentPath: user-information/user-guides/high-performance-computing/discovery
 cat: discoveryGuides
 parentPage: User Guides
+backToTopBtnFlag: true
 sideMenuParent: Discovery
 ---
 

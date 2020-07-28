@@ -7,11 +7,10 @@ import SideMenu from '../components/side-menu'
 import Markdown from "react-markdown"
 import Content from '../components/content'
 
-
 export default function Template({ data }) {
     const post = data.md;
     return (
-      <Layout {...data.navigation}>
+      <Layout {...data.navigation} backToTopBtnFlag={data.md.frontmatter.backToTopBtnFlag}>
           <SEO title={post.frontmatter.title}/>
             <div className="coldFront-child-container">
               {/* <MenuRoute {...data} title={data.content.frontmatter.title} /> */}
@@ -48,6 +47,7 @@ export const softwareQuery = graphql`
         path
         parentPath
         cat
+        backToTopBtnFlag
       }
       html
     }

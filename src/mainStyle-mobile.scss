@@ -126,6 +126,7 @@ and (max-width : 1024px)  {
                 }
                 .content-container {
                     flex-wrap: wrap;
+                    border: none;
                     .shared{
                         width: 50%;
                     }
@@ -142,6 +143,7 @@ and (max-width : 1024px)  {
                 }
                 .x-section{
                     margin: 3% 10%;
+                    border: none;
                 }
             }
         }
@@ -154,16 +156,18 @@ and (max-width : 1024px)  {
                 font-size: 32px;
                 margin: 10px 0;
                 .openbtn{
-                    min-width: 45px;
+                    width: 45px;
                     border: none;
                     &.show {
                         display: block;
                         text-align: center;
                         font-size: 31px;
-                        line-height: 1px;
                     }
                     &.hide {
                         display: none;
+                    }
+                    .hamburger-icon, .close-icon{
+                        margin: 0;
                     }
                 }
                 .btn-wrap{
@@ -185,12 +189,11 @@ and (max-width : 1024px)  {
                             cursor: pointer;
                             &.show {
                                 display: block;
-                                font-size: 29px;
                             }
                             &.hide {
                                 display: none;
                             }
-                            width: 40px;
+                            width: 45px;
                             img {
                                 margin: 0;
                             }
@@ -227,8 +230,13 @@ and (max-width : 1024px)  {
                             margin-right: 0;
                             margin-top: 1rem;
                             background-color: #fc0;
-                            padding: 18px 14px;
+                            padding: 13px 18px;
+                            border: none;
                             cursor: pointer;
+                            border-radius: 15px;
+                            font-size: 16px;
+                            cursor: pointer;
+                            font-weight: bold;
                         }
                         .hide {
                             display: none;
@@ -318,6 +326,9 @@ and (min-width : 320px)
 and (max-width : 767px) {
     #___gatsby {
         #gatsby-focus-wrapper {
+            .main-logo {
+                max-height: 38%;
+            }
             .pages-container {
                 margin: 40px 3%;
                 h1 {
@@ -426,21 +437,21 @@ and (max-width : 767px) {
                 font-size: 32px;
                 margin: 10px 0;
                 .openbtn{
-                    min-width: 45px;
+                    width: 45px;
                     border: none;
                     &.show {
                         display: block;
                         text-align: center;
-                        font-size: 31px;
-                        line-height: 1px;
                     }
                     &.hide {
                         display: none;
                     }
+                    .hamburger-icon, .close-icon{
+                        margin: 0;
+                    }
                 }
                 .btn-wrap{
                     display: flex;
-                    min-height: 36px;
                     flex-direction: row-reverse;
                     align-items: center;
                     button {
@@ -458,12 +469,11 @@ and (max-width : 767px) {
                             cursor: pointer;
                             &.show {
                                 display: block;
-                                font-size: 29px;
                             }
                             &.hide {
                                 display: none;
                             }
-                            width: 40px;
+                            width: 45px;
                             img {
                                 margin: 0;
                             }
@@ -500,8 +510,12 @@ and (max-width : 767px) {
                             margin-right: 0;
                             margin-top: 1rem;
                             background-color: #fc0;
-                            padding: 18px 14px;
+                            padding: 13px 18px;
+                            border: none;
                             cursor: pointer;
+                            border-radius: 15px;
+                            font-size: 16px;
+                            font-weight: bold;
                         }
                         .hide {
                             display: none;
@@ -602,9 +616,14 @@ and (max-width : 767px) {
                 .content-container {
                     width: 100%;
                     display: block;
+                    border: none;
                     .shared{
                         width: 100%;
                         margin-top: 30px;
+                        &.discourse {
+                            max-width: 95%;
+                            margin: 0 auto;
+                        }
                         h2 {
                             margin: 0;
                         }
@@ -630,6 +649,7 @@ and (max-width : 767px) {
                 }
                 .x-section {
                     margin: 1% 0;
+                    border: none;
                 }
                 .marginless-columns {
                     flex-direction: column;
@@ -742,8 +762,34 @@ and (max-width : 550px) {
                     }
                 }
             }
+            .app-container {
+                &.fixed {
+                    position: relative;
+                    .mobile-nav{
+                        margin-top: 0;
+                    }
+                }
+            }
             .footer {
                 z-index: 1;
+            }
+        }
+    }
+}
+
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 420px) {
+    #___gatsby {
+        #gatsby-focus-wrapper {
+            .main-logo {
+                max-height: 32%;
+            }
+            .mission-btn {
+                a {
+                    padding: 0;
+                    font-size: 16px;
+                }
             }
         }
     }

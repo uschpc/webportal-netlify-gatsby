@@ -10,6 +10,7 @@ cat: coldFront
 parentPage: User Guides
 sideMenuParent: Research Computing User Portal
 excerpt: ColdFront user portal - yearly project renewal
+backToTopBtnFlag: true
 ---
 
 Faculty are required to update their project information yearly in order to maintain active accounts at CARC.  This is a short but extremely important process.

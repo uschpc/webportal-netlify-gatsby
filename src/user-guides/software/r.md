@@ -8,6 +8,7 @@ path: r
 parentPath: user-information/user-guides/software
 cat: software
 parentPage: User Guides
+backToTopBtnFlag: true
 ---
 
 [R](https://www.r-project.org) is an open-source programming environment and language designed for statistical computing and graphics.

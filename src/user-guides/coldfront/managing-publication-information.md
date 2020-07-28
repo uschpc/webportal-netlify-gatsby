@@ -9,6 +9,7 @@ cat: coldFront
 parentPage: User Guides
 sideMenuParent: Research Computing User Portal
 excerpt: ColdFront user portal - managing project publication information
+backToTopBtnFlag: true
 ---
 
 We ask faculty to upload their publication information to the user portal when the publication acknowledges the CARC or the information contained in it directly relates to work done at the CARC. You are welcome to add all of your publications to the user portal, if you'd like.
