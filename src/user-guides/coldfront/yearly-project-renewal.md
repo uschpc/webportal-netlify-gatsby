@@ -12,19 +12,19 @@ sideMenuParent: Research Computing User Portal
 excerpt: ColdFront user portal - yearly project renewal
 ---
 
-Faculty are required to update their project information yearly in order to maintain active accounts at ARC.  This is a short but extremely important process.
+Faculty are required to update their project information yearly in order to maintain active accounts at CARC.  This is a short but extremely important process.
 
 Once a year, we ask that you:
-* Update your project description and field of science, if necessary.
-* Add new publications you may have.
-* Add or update grant information.
-* Verify the active users on your project and remove any that no longer work with you .
+* Update your project description and field of science, if necessary
+* Add new publications you may have
+* Add or update grant information
+* Verify the active users on your project and remove any that no longer work with you
 
 You can do all of this from your project's Project Detail page.
 
 ### Is it time to renew?
 
-If your project requires its yearly review, you will see a "Need Review" alert beside your project's name on the user portal home page:
+If your project requires its yearly review, you will see a "Needs Review" alert beside your project's name on the user portal home page:
 
 ![ColdFront Project Review](/images/coldfront_project_review.png)
 
@@ -44,10 +44,10 @@ If you have NOT updated your publications or grant information in the last year,
 
 ![ColdFront Project Explanation](/images/coldfront_project_detailexplanation.png)
 
-Once the project review is complete, you will see a green notification banner with "Project reviewed successfully" at the top of the page and a "project review pending" label in the Project Detail page.
+Once the project review is complete, you will see a green notification banner with "Project reviewed successfully" at the top of the page and a "project review pending" label in the Project Detail page:
+
+![ColdFront Project Review Complete](/images/coldfront_project_reviewcomplete.png)
 
 ### Review approval
 
-The project review is is submitted for review by the ARC director. If all is in order, they will approve the renewal and you will once again be able to renew and request new allocations. The 'project review pending' label will then disappear.
-
-![ColdFront Project Review Complete](/images/coldfront_project_reviewcomplete.png)
+The project review is submitted for review by the CARC director. If all is in order, they will approve the renewal and you will once again be able to renew and request new allocations. The "project review pending" label will then disappear.

@@ -29,8 +29,8 @@ When you return to the Project Detail page for that project, you will now see th
 
 ![Project Users - view manager](/images/coldfront_project_usermanager.jpg)
 
-When that user logs in to Coldfront, they will see your project and be able to add/remove users, request new allocations, and manage publications and grants.
+When that user logs in to the User Portal, they will see your project and be able to add/remove users, request new allocations, and manage publications and grants.
 
 ### Removing manager access
 
-If, at any time, you want to remove this elevated access for a user, simply go to the Project Detail page and change the user's role from Manager to User in the drop down list.
+If you want to remove this elevated access for a user, simply go to the Project Detail page and change the user's role from Manager to User in the drop down list.

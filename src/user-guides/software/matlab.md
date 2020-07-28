@@ -14,13 +14,15 @@ parentPage: User Guides
 
 ### Using MATLAB on Discovery
 
+Begin by logging in to Discovery. You can find instructions for this in the [Getting Started guide](user-information/user-guides/high-performance-computing/discovery/getting-started).
+
 To use MATLAB on Discovery, load the corresponding module:
 
 ```sh
 module load matlab
 ```
 
-This loads the default version, which is typically the newest version available. To load a specific version,  you can run a command similar to:
+This loads the default version, which is typically the newest version available. To load a specific version, you can run a command similar to:
 
 ```
 module load matlab/2019a
@@ -36,7 +38,7 @@ module avail matlab
 
 ### The MATLAB GUI
 
-Use of the MATLAB GUI is possible but **not recommended** as it requires X11 forwarding, which has poor performance. Instead, we recommend that users develop MATLAB scripts on their local computer and transfer them and any other input files to Discovery for command line use.
+Use of the MATLAB GUI is possible but **not recommended**, as it requires X11 forwarding, which has poor performance. Instead, we recommend that users develop MATLAB scripts on their local computer and transfer them and any other input files to Discovery for command line use.
 
 ### Running MATLAB interactively
 
@@ -76,9 +78,9 @@ Save this script as `matlab.slurm`, for example, and then submit like so:
 sbatch matlab.slurm
 ```
 
-### Parallel Computing Toolbox
+### Parallel computing toolbox
 
-To run a parallel MATLAB script, you will first need to create a **cluster profile** to start a pool of workers. There are two types of clusters, *local* and *remote*. A local cluster will run on a single compute node. A remote cluster is necessary when you want to run MATLAB across multiple compute nodes.
+To run a parallel MATLAB script, you will first need to create a **cluster profile** to start a pool of workers. There are two types of clusters: *local* and *remote*. A local cluster will run on a single compute node. A remote cluster is necessary when you want to run MATLAB across multiple compute nodes.
 
 #### Local cluster
 
@@ -106,16 +108,16 @@ Where `JobStorageLocation`, `SubmitArguments`, and `ResourceTemplate` are define
 |--|--|
 |`JobStorageLocation`|Path to directory for temporary job storage, e.g., `/home/rcf-proj/tt1/ttrojan/matlabJobStorage`|
 |`SubmitArguments`| Arguments to Slurm job scheduler|
-|`ResourceTemplate`|Template for compute resources (recommended to keep as is)|
+|`ResourceTemplate`|Template for compute resources (recommended to keep as-is)|
 
 
-Update `JobStorageLocation` and `SubmitArguments` as necessary. For example, you may wish to increase the time or memory requriements for your worker pool.
+Update `JobStorageLocation` and `SubmitArguments` as necessary. For example, you may wish to increase the time or memory requirements for your worker pool.
 
 #### Starting a pool of workers
 
 Once a cluster profile has been configured, the process for starting up a pool of workers for both a local and remote cluster is the same.
 
-Assuming you have created a cluster object named `cluster`, you can start up a pool of workers using the parpool command:
+Assuming you have created a cluster object named `cluster`, you can start up a pool of workers using the `parpool` command:
 
 ```
 pool=parpool(cluster,N)
@@ -124,7 +126,6 @@ pool=parpool(cluster,N)
 `N` is the number of workers to use. If starting a **local cluster**, N must be at least 1 less than the total number of available CPUs, as MATLAB requires 1 CPU to delegate work.
 
 If starting a **remote cluster**, MATLAB will submit a job requesting resources for `N` workers using the `ResourceTemplate` defined in the cluster profile.
-
 
 Make sure that you close your parallel pool when you are done with it by using the following command:
 

@@ -11,13 +11,12 @@ sideMenuParent: Research Computing User Portal
 excerpt: ColdFront user portal - create new project
 ---
 
-Each PI should have one project. Some PIs may require additional projects depending on their roles at USC. Anyone teaching classes should create a separate project for each course taught, and these projects can be reused each semester.  Also, anyone using the cluster for work outside their general research area should create a separate project.
+Each PI should have one project. Some PIs may require additional projects depending on their roles at USC. Anyone teaching classes should create a separate project for each course taught, and these projects can be reused each semester. Also, anyone using the cluster for work outside their general research area should create a separate project for that work.
 
-> Note:  6/01/2020: HPC migrated all projects owned by a valid PI from our old uschpc cluster to the Discovery cluster as a convenience. Projects where the PI is a student were NOT migrated to the user portal.**
+> Note:  6/01/2020: CARC migrated all projects owned by a valid PI from the old uschpc cluster to the Discovery cluster as a convenience. Projects where the PI is a student were NOT migrated to the user portal.
 
 ### User portal home page
-To create a new project, click on either the Projects link or the Project menu tab - [Project Page](https://hpcaccount.usc.edu/project/)
-
+To create a new project, click on either the Projects link or the Project menu tab to access the [Projects Page](https://hpcaccount.usc.edu/project/).
 
 ### Projects page
 Click on the "+Add a Project" button.  
@@ -27,14 +26,14 @@ Click on the "+Add a Project" button.
 ### Add/Create Project page
 Fill out the 4 fields:
 * Title:
-  * The title of your project should be *what?*
+  * The title of your project should be concise but descriptive of the work being done. Avoid titles such as "My project" or "Project 1".
 * Description:
-  * The description should be *what?*
+  * The description should include a brief summary of the work that is being done as well as the project's goal.
 * Field of science:
   * This drop-down list was taken from the National Science Foundation. If your field is not listed, please choose "Other".
 * Cluster Type:
-  * Most projects should use our main cluster "Discovery".
-  * In the future we will have additional cluster options: Condo and AWS Cloud
+  * **Discovery (Cluster Partition)**: CARC's main compute resource available to all USC faculty/staff and their students/collaborators. Most CARC researchers should be choosing Discovery as their cluster type
+  * In the future we will have additional cluster options: **Condo** and **AWS Cloud**
 
 and click the "Save" button.
 

@@ -10,11 +10,11 @@ cat: software
 parentPage: User Guides
 ---
 
-[Python](https://www.python.org/) is an interpreted, general purpose programming language whose strength comes in the tools and libraries are associated with it.
+[Python](https://www.python.org/) is an interpreted, general purpose programming language whose strength comes in the tools and libraries that are associated with it.
 
 ### Using Python on Discovery
 
-Begin by logging in to Discovery. You can find instructions for this in our [Getting Started guide](user-information/user-guides/high-performance-computing/discovery/getting-started).
+Begin by logging in to Discovery. You can find instructions for this in the [Getting Started guide](user-information/user-guides/high-performance-computing/discovery/getting-started).
 
 To use Python, load the corresponding module:
 
@@ -76,7 +76,7 @@ salloc --time=1:00:00 --cpus-per-task=8 --mem-per-cpu=2GB
 srun --pty bash
 ```
 
-Once you are logged in to a compute node, load the module and then enter `python3` or `python` to run Python interactively.
+Once you are logged in to a compute node, load the module and enter `python3` or `python` to run Python interactively.
 
 
 ### Running Python in batch mode
@@ -120,7 +120,7 @@ You can install new packages to your home directory with the following command:
 
     pip3 install <package name> --user
 
-For example, to upgrade the currently-installed Python package pytest, run the following command:
+For example, to upgrade the currently-installed Python package `pytest`, run the following command:
 
     pip3 install pytest --user --upgrade
 
@@ -130,9 +130,11 @@ To see a list of all installed packages and their current and latest versions, r
 
 #### CARC head nodes
 
-CARC installs a number of distributed-computing-related packages when they install a new version of Python. The packages can vary for each version. Once sourced, you can list the loaded global packages and dependencies by running `pip3 list`
+The CARC installs a number of distributed-computing-related packages when they install a new version of Python. The packages can vary for each version. Once sourced, you can list the loaded global packages and dependencies by running `pip3 list`.
 
-CARC researchers are also encouraged to install their own Python packages on Discovery (or upgrade those that were pre-installed). By default, Python will install local (i.e., user) packages in your home directory, in the subdirectory named .local (the dot in front is part of the name and is required, (e.g., ~/.local, /home/rcf-40/ttrojan/.local). Python will create this directory if it does not already exist.
+CARC researchers are also encouraged to install their own Python packages on Discovery (or upgrade those that were pre-installed). By default, Python will install local (i.e., user) packages in your home directory, in the subdirectory named `.local`. Python will create this directory if it does not already exist.
+
+>Note: The dot in front of the subdirectory name is part of the name and is required, e.g., `~/.local, /home/rcf-40/ttrojan/.local`.
 
 To install Python packages in a library other than the default (`~/.local/lib/python3.6/site-packages`), you can use the `--target` option with `pip3`. The following command installs a package in your scratch directory:
 

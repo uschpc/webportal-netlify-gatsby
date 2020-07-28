@@ -11,7 +11,7 @@ sideMenuParent: Research Computing User Portal
 excerpt: ColdFront user portal - managing project publication information
 ---
 
-We ask faculty to upload their publication information to the user portal when the publication acknowledges ARC or the information contained directly relates to work done at ARC.  You are welcome to add all of your publications to the user portal, if you'd like.
+We ask faculty to upload their publication information to the user portal when the publication acknowledges the CARC or the information contained in it directly relates to work done at the CARC. You are welcome to add all of your publications to the user portal, if you'd like.
 
 ### Adding Publications:
 
@@ -19,10 +19,9 @@ To add publications, click on the "Add Publication" button on the Project Detail
 
 ![ColdFront Add Publication](/images/coldfront_project_addpublication.jpg)
 
-You'll be presented with a box to enter a "Unique ID", which is the Digital Object Identifier (DOI) for your publication.  Enter your full DOI and click the Search button:
+You'll be presented with a box to enter a "Unique ID", which is the Digital Object Identifier (DOI) for your publication. Enter your full DOI and click the Search button:
 
 ![ColdFront Add Publication - search](/images/coldfront_project_addpublication_enter1.jpg)
-
 
 If the search yields the correct result, click the "Add Publication to Project" button:
 

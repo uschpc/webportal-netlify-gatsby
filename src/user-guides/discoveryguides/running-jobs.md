@@ -23,7 +23,7 @@ Jobs can be either **batch** jobs or **interactive** jobs, but both have two mai
 
 ### What is a job scheduler?
 
-Discovery is a shared system. To ensure fair access, we use a **job scheduler** to manage all requests for resources. The Slurm (Simple Linux Utility for Resource Management) job scheduler is an open-source job scheduler that allocates compute resources on clusters for queued, user-defined jobs.
+The Discovery computing cluster is a shared system. To ensure fair access, we use a **job scheduler** to manage all requests for resources. The Slurm (Simple Linux Utility for Resource Management) job scheduler is an open-source job scheduler that allocates compute resources on clusters for queued, user-defined jobs.
 
 ### Batch jobs
 
@@ -81,7 +81,7 @@ Slurm allows you to specify many different types of resources. Below are some of
 |`--ntasks=<number>`| Number of processes to run|
 | `-–mem=<number>` |Total memory (single node) |
 |`-–mem-per-cpu=<number>` |	Memory per processor core|
-|`-–constraint=<attribute>` |	Node property to request (e.g. avx, IB)|
+|`-–constraint=<attribute>` |	Node property to request (e.g., avx, IB)|
 |`-–partition=<partition_name>`| 	Request specified partition/queue|
 |`-–time=<HH:MM:SS>`| Max run time|
 

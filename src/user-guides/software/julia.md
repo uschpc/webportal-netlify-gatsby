@@ -14,6 +14,8 @@ parentPage: User Guides
 
 ### Using Julia on Discovery
 
+Begin by logging in to Discovery. You can find instructions for this in the [Getting Started guide](user-information/user-guides/high-performance-computing/discovery/getting-started).
+
 To use Julia on Discovery, first load the corresponding module:
 
 ```sh
@@ -28,7 +30,7 @@ module load julia/1.0.5
 
 To see the available versions of Julia, enter `module spider julia`.
 
-Note that this loads base Julia, so only the base Julia modules and functions are immediately available; you can install other Julia packages that you may need into your home directory (see guide below).
+Note that this loads base Julia, so only the base Julia modules and functions are immediately available. You can install other Julia packages that you may need into your home directory (see guide below).
 
 ### Running Julia interactively
 
@@ -84,13 +86,15 @@ add https://github.com/JuliaData/DataFrames.jl
 
 To exit package mode, enter the `Backspace` key on an empty line.
 
-You can also install packages in other locations, such as for use in a shared group or project library. You will need to change the relevant environment variable in the shell, before starting Julia:
+You can also install packages in other locations, such as for use in a shared group or project library. You will need to change the relevant environment variable in the shell before starting Julia:
 
 ```sh
 export JULIA_DEPOT_PATH="/path/to/dir"
 ```
 
-This changes the Julia depot location to the specified directory, and then packages will be installed to and loaded from a `/path/to/dir/packages` directory. After exporting this variable, you can simply start Julia and install and load packages like normal. Note that this line needs to be added to Slurm job scripts in order to load packages from that location. To reset this environment variable, enter `unset JULIA_DEPOT_PATH` in the shell.
+This changes the Julia depot location to the specified directory, and then packages will be installed to and loaded from a `/path/to/dir/packages` directory. After exporting this variable, you can simply start Julia and install and load packages like normal. Note that this line needs to be added to Slurm job scripts in order to load packages from that location.
+
+To reset this environment variable, enter `unset JULIA_DEPOT_PATH` in the shell.
 
 
 ### Installing a different version of Julia

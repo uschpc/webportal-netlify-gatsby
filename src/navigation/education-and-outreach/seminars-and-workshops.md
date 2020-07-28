@@ -14,6 +14,8 @@ All workshops are approximately two hours in length and are offered several time
 
 >Note: Due to the ongoing COVID-19 pandemic, all workshops are currently being held over Zoom.
 
+To see which courses are being taught by the CARC this month, see our [Events page](/news-and-events/events).
+
 The Research Facilitation & Applications team is frequently developing new workshops for CARC users, including workshops on useful software and programming languages. Currently, the following workshops are offered on a rotating basis:
 
 ### **Introduction to HPC**

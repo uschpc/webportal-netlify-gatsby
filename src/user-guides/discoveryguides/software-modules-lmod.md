@@ -2,7 +2,7 @@
 author: Ryan Sim
 id: 5
 date: 2020-06-14T00:00:00.000Z
-title: Software Module System 
+title: Software Module System
 path: lmod
 parentPath: user-information/user-guides/high-performance-computing/discovery
 cat: discoveryGuides
@@ -10,16 +10,15 @@ parentPage: User Guides
 sideMenuParent: Discovery
 ---
 
-One of the biggest user-facing changes to the test cluster is trading the setup.sh method of using software for the **module system**. Lmod has the ability to track software dependencies to ensure you have better control of your environment - *no more logging out and then back in to reset your environment!*
+One of the biggest user-facing changes to the CARC's new computing cluster is trading the setup.sh method of using software for the **module system** using Lmod. Lmod has the ability to track software dependencies to ensure you have better control of your environment - no more logging out and then back in to reset your environment!
 
 The official documentation for Lmod can be found here: https://lmod.readthedocs.io/en/latest/010_user.html
 
-Lmod can be used to access software packages and versions that you need to conduct your research. Here are some of the basics.
+Lmod can be used to access software packages and versions that you need to conduct your research.
 
 ### Checking available software
 
 To see what modules you can load into your environment, run the command `module avail`. You should see something similar to:
-
 
 ```sh
 --------/spack/apps/lmod/linux-centos7-x86_64/Core --------
@@ -38,17 +37,19 @@ If you have a fresh environment, only `Core` modules are available. These are us
 
 ###  Loading/unloading software
 
-Typically, loading modules is as simple as typing `module load <software_name>`. `<software_name>` must be visible when you run module avail.
+Typically, loading modules is as simple as typing `module load <software_name>`. `<software_name>` must be visible when you run `module avail`.
 
 By running:
 
     module load <software_name>
 
-Lmod will set your environment such that the software specified in `<software_name>` will be placed in your path. To see what environment variables have been set, you can run:
+Lmod will set your environment such that the software specified in `<software_name>` will be placed in your path.
+
+To see what environment variables have been set, you can run:
 
     module show <software_name>
 
-If there are multiple versions of `<software_name>` you can specify a version like so:
+If there are multiple versions of `<software_name>`, you can specify a version like so:
 
     module load <software_name>/<version>
 
@@ -60,7 +61,7 @@ If no version is specified:
 ```
    $ module load gcc
 ```
-the default version will be loaded. The default version is indicated with a (D) next to it.
+the default version will be loaded. The default version is indicated with a (D) next to it after running `module avail`.
 
 To unload a specific module you can run:
 
@@ -87,7 +88,7 @@ To totally clear your environment:
 ```
 
 ###  Finding software
-The first time you log in and run `module avail`, it may not seem like much software is available. This is actually a safety feature that prevents you from loading incompatible modules. If you would like to explore the software tree, you can start loading modules and new ones will unlock. To see all applications built with a certain compiler, you can load that compiler module. Everything built with that compiler will become visible in module avail.
+The first time you log in and run `module avail`, it may not seem like much software is available. This is actually a safety feature that prevents you from loading incompatible modules. If you would like to explore the software tree, you can start loading modules and new ones will unlock. For example, to see all applications built with a certain compiler, you can load that compiler module. Everything built with that compiler will become visible in `module avail`.
 
 The current naming scheme for modules is `<software_name>/<version>-xxxx`.
 

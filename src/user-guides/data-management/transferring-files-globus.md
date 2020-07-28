@@ -7,10 +7,11 @@ parentPath: user-information/user-guides/Data-Management
 cat: dataManagement
 parentPage: User Guides
 sideMenuParent: Data Management
-
 ---
 
-Globus provides a relatively simple and reliable way to access and move research data between systems with faster transfer speeds than tools such as SCP/SFTP and rsync. Globus requires some setup ahead of time, but it is robust and appropriate when the data transfer will take a long time or the connection will be periodically interrupted. It also allows you to share your data with colleagues, move  data back and forth between CARC storage systems and personal workstations, and restart or resume a failed or paused file transfer, even a very large one.
+Globus provides a relatively simple and reliable way to access and move research data between systems with faster transfer speeds than tools such as SCP/SFTP and Rsync. Globus requires some setup ahead of time, but it is robust and appropriate when your data transfer will take a long time or your connection will be periodically interrupted. It also allows you to share your data with colleagues, move data back and forth between CARC storage systems and personal workstations, and restart or resume a failed or paused file transfer - even a very large one.
+
+> Note: Due to security risks, please be mindful of the type of information being transferred. Where possible, omit all information that may be considered confidential. For examples of confidential information that requires additional consideration, visit http://itservices.usc.edu/security/sensitive-info.
 
 ### Getting started with Globus
 
@@ -50,7 +51,7 @@ A new window will pop up asking you to log in again.
 
 ![Globus Software Set Up](/images/globus-gfx/globus-inst-login1.PNG)
 
-Once in, go ahead and allow the setup to continue.
+Once logged in, allow the setup to continue.
 
 ![Globus Software Set Up](/images/globus-gfx/globus-inst-login2.PNG)
 
@@ -62,15 +63,17 @@ Once in, go ahead and allow the setup to continue.
 
 [How to Install: Linux](https://docs.globus.org/how-to/globus-connect-personal-linux/)
 
+#### Establishing an endpoint
+
 You can now establish an Endpoint on your PC - Globus wants to call it a Collection. Under <b>Collection Name</b>, choose a descriptive name. <B>Do not choose the High Assurance option</b> - that feature is beyond the scope of this document.
 
 ![Globus Software Set Up](/images/globus-gfx/globus-inst-login3.PNG)
 
-Depending on whether Globus knows your account ID from a previous login or existing affiliation, you may be asked to generate a setup key for your collection. Go ahead and copy it to the clipboard of your computer. Keep this key if you are asked for it during the next one or two steps.
+Depending on whether Globus knows your account ID from a previous login or existing affiliation, you may be asked to generate a setup key for your collection. Copy it to the clipboard of your computer. Keep this key if you are asked for it during the next one or two steps.
 
 ![Globus Software Set Up](/images/globus-gfx/globus-inst-key1.PNG)
 
-In the setup window, clicking <b>Save</b> will open yet another Globus front end interface. Click on <b>ENDPOINTS</b> and click on <b>Administered by You</b> on the right side of the middle menu. You should see the Endpoint you entered previously.
+In the setup window, clicking <b>Save</b> will open yet another Globus front end interface. Click on <b>ENDPOINTS</b> and then on <b>Administered by You</b> on the right side of the middle menu. You should see the Endpoint you entered previously.
 
 ![Globus Software Set Up](/images/globus-gfx/globus-inst-login4.PNG)
 
@@ -100,7 +103,7 @@ Click on <b>Open in File Manager</b> and ensure you can see the files and direct
 
 ### Getting ready to transfer files
 
-At this point you can navigate to the File Manager and be presented with the Globus transfer tool, which has a two-pane bi-directional paradigm.
+At this point you can navigate to the File Manager, where you will be presented with the Globus transfer tool, which has a two-pane bi-directional paradigm.
 
 ![Globus Software Set Up](/images/globus-gfx/globus-fm1.PNG)
 
@@ -112,17 +115,17 @@ Select the <b>Options...</b> menu item.
 
 ![Globus Software Set Up](/images/globus-gfx/globus-svcopt1.PNG)
 
-You will be presented with a box to add a folder containing the files you want to transfer. If you click on the <b>+</b> sign on the lower right (highligted in blue) you will have a standard file explorer that gives you the ability to add a folder on your local hard drive. For now only keep the <b>Writable</b> option checked and the **Shareable** option unchecked.
+You will be presented with a box to add a folder containing the files you want to transfer. If you click on the <b>+</b> sign on the lower right (highligted in blue) you will have a standard file explorer that gives you the ability to add a folder on your local hard drive. For now, only keep the <b>Writable</b> option checked and the **Shareable** option unchecked.
 
 ![Globus Software Set Up](/images/globus-gfx/globus-svcopt2.PNG)
 
 Click the <b>Save</b> button to continue.
 
-On Mac, the process is similar. You access the the small Globus <b>g</b> icon in the menu bar and choose <b>Preferences...</b> and then the <b>Access</b> tab.
+On a Mac, the process is similar. You access the the small Globus <b>g</b> icon in the top menu bar and choose <b>Preferences...</b> and then the <b>Access</b> tab.
 
 ![Globus Software Set Up](/images/globus-gfx/globus-macadd.PNG)
 
-Now go back to the main Globus window. In the File Manager page, you should see the USC hpc-transfer Endpoint on the left column, and your local Endpoint in the right column. In the search field at the top of that column (designated by a blue magnifying glass), you can click once and be presented with the local Collection you specified earlier. Clicking on it fills the right column, and clicking on the blue right-angle arrow on the right allows you to navigate to the folder you designated. You'll see any files you placed in there.
+Return to the main Globus window. In the File Manager page, you should see the USC hpc-transfer Endpoint on the left column, and your local Endpoint in the right column. In the search field at the top of that column (designated by a blue magnifying glass), you can click once and be presented with the local Collection you specified earlier. Clicking on it fills the right column, and clicking on the blue right-angle arrow on the right allows you to navigate to the folder you designated. You'll see any files you placed in there.
 
 ![Globus Software Set Up](/images/globus-gfx/globus-fm2.PNG)
 
@@ -130,7 +133,7 @@ Now in the right column highlight one, two, or all of the files in your local fo
 
 ![Globus Software Set Up](/images/globus-gfx/globus-xfer1.PNG)
 
-If your files are large Globus takes a few seconds or minutes to index them and get ready to transfer.
+If your files are large, Globus takes a few seconds or minutes to index them and get ready to transfer.
 
 When yout transfer completes, go back to the File Manager window. In the left pane, under the USC hpc-transfer Endpoint, click the refresh button in the middle menu (right under the <b>Path</b> field). The refresh button is the right-curling arrow, which will pull an updated listing of the files in your home directory on the USC data transfer node. If needed, scroll through the list and you will see your files there.
 
@@ -138,7 +141,7 @@ When yout transfer completes, go back to the File Manager window. In the left pa
 
 Notice that in the <b>Path</b> window Globus designates your home directory as a ```/~/``` symbol. Experiment with clicking on the file system navigation buttons to the right of folders as well as the up arrow in the Collection middle menu. You'll get an idea of where on the data transfer node and where on your PC you can upload and download files from.
 
-You don't have to transfer files one-by-one. By highlighting a folder and clicking the <b>Start</b> button you can move the folder and all its contents to the USC data transfer node. The two-column bi-directional layout of the file manager should suggest to you that to download files from the data transfer node you merely need to highlight them on the left and then click the <b>Start</b> button beneath it in the file transfer column.
+You don't have to transfer files one-by-one. By highlighting a folder and clicking the <b>Start</b> button, you can move the folder and all its contents to the USC data transfer node. The two-column bi-directional layout of the file manager should suggest to you that to download files from the data transfer node, you merely need to highlight them on the left and then click the <b>Start</b> button in the file transfer column.
 
 ### Helpful tips
 

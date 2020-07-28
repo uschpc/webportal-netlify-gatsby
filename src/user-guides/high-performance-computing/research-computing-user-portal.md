@@ -13,13 +13,13 @@ parentPage: User Guides
 id: 2
 ---
 
-The Center for Advanced Research Computing's User Portal is how users manage their projects and allocations on Discovery. Each user is granted access to the Research Computing User Portal when they create their CARC account.
+The Center for Advanced Research Computing's User Portal is how users manage their projects and allocations on CARC systems.
 
-The Research Computing User Portal uses ColdFront, an open source resource allocation management tool developed by the [University at Buffalo's Center for Computational Research](http://www.buffalo.edu/ccr.html). ColdFront supports the management of resources and user allocations to those resources.  The tool allows users to request and manage the access they and their students or collaborators have to the resources in CARC's data center.  
+The Research Computing User Portal uses ColdFront, an open source resource allocation management tool developed by the [University at Buffalo's Center for Computational Research](http://www.buffalo.edu/ccr.html). ColdFront supports the management of resources and user allocations to those resources.  The tool allows users to request and manage the access they and their students or collaborators have to the resources in the CARC's data center.  
 
-ColdFront was designed to be useful in varied high-performance computing environments.  The architecture is extensible and supports various back-ends, job schedulers, and ticketing systems, and it's database agnostic.  The CARC's implementation of this open source product interfaces with XDMoD (job metrics), SLURM (job scheduler), OpenLDAP, BeeGFS (storage), and JIRA (ticketing system).
+ColdFront was designed to be useful in varied high-performance computing environments. The architecture is extensible and supports various back-ends, job schedulers, and ticketing systems, and it is database agnostic.  The CARC's implementation of this open source product interfaces with XDMoD (job metrics), Slurm (job scheduler), OpenLDAP, BeeGFS (storage), and JIRA (ticketing system).
 
-The User Portal consists of 3 parts: **Projects**, **Allocations** and **Resources**.
+The User Portal handles the management of 3 components: **Projects**, **Allocations** and **Resources**.
 
 ![ColdFront parts](/images/coldfront_overview.png)
 
@@ -37,4 +37,4 @@ The User Portal consists of 3 parts: **Projects**, **Allocations** and **Resourc
 - All USC faculty & staff members can have at least one project
 - Each project has a description, field of research, grants, publications, and allocations to resources
 
-For more detailed information and step-by-step instructions, see our Research Computing User Portal User Guides below.
+For more detailed information and step-by-step instructions, see the Research Computing User Portal User Guides below.
