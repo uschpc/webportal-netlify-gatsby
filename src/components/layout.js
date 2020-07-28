@@ -17,7 +17,7 @@ import "../style.less"
 const Layout = (props) => {
 
   useEffect(() => {
-    if (props.uniqId === 'FAQ' || props.backToTopBtnFlag) {
+    if (props.backToTopBtnFlag) {
       const scrollToTopButton = document.getElementById('js-top');
 
       const scrollFunc = () => {
@@ -64,7 +64,7 @@ const Layout = (props) => {
       <div>
         <main>{props.children}</main>
         {/* Back to top btn */}
-        {props.uniqId === 'FAQ' || props.backToTopBtnFlag && (
+        {props.backToTopBtnFlag && (
           <a className="top-link hide" href="" id="js-top">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg>
             <span className="screen-reader-text">Back to top</span>
