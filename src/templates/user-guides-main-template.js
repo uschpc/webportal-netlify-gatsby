@@ -13,7 +13,7 @@ export default function Template({ data }) {
   let mainPage = data.mainPage;
   let content = data.content;
     return (
-      <Layout {...data.navigation} uniqId={content.frontmatter.uniqId}>
+      <Layout {...data.navigation} backToTopBtnFlag={content.frontmatter.backToTopBtnFlag}>
           <SEO title={mainPage ? mainPage.frontmatter.title : content.frontmatter.title}/>
           <div className="user-guides-main-pages">
             <div className="container">
@@ -97,6 +97,7 @@ export const coldFrontQuery = graphql`
           routePath
           externalPath
           uniqId
+          backToTopBtnFlag
           cat
         }
       html

@@ -8,6 +8,7 @@ parentEle: none
 parentPath: user-information
 cat: userSupport
 uniqId: FAQ
+backToTopBtnFlag: true
 title: Frequently Asked Questions
 id: 4
 ---
