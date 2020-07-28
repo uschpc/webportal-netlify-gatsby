@@ -126,6 +126,7 @@ and (max-width : 1024px)  {
                 }
                 .content-container {
                     flex-wrap: wrap;
+                    border: none;
                     .shared{
                         width: 50%;
                     }
@@ -142,6 +143,7 @@ and (max-width : 1024px)  {
                 }
                 .x-section{
                     margin: 3% 10%;
+                    border: none;
                 }
             }
         }
@@ -614,6 +616,7 @@ and (max-width : 767px) {
                 .content-container {
                     width: 100%;
                     display: block;
+                    border: none;
                     .shared{
                         width: 100%;
                         margin-top: 30px;
@@ -646,6 +649,7 @@ and (max-width : 767px) {
                 }
                 .x-section {
                     margin: 1% 0;
+                    border: none;
                 }
                 .marginless-columns {
                     flex-direction: column;
