@@ -8,7 +8,7 @@ date: 2020-07-10T00:00:00.000Z
 parentPath: news-and-events/news-and-announcements
 cat: news
 excerpt: Name change highlights the research-focused nature of the department
-thumbnail: /images/usc_official_bg_twitter_only.jpg
+thumbnail: /images/7305006266_e7851d0b45_c.jpg
 ---
 With the launch of its new high-performance computing cluster, USC’s Center for High-Performance Computing (HPC) has also officially changed its name to the Center for Advanced Research Computing (CARC).
 
