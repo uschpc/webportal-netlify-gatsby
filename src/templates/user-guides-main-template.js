@@ -13,7 +13,7 @@ export default function Template({ data }) {
   let mainPage = data.mainPage;
   let content = data.content;
     return (
-      <Layout {...data.navigation} backToTopBtnFlag={content.frontmatter.backToTopBtnFlag || data.sideMenu.frontmatter.backToTopBtnFlag}>
+      <Layout {...data.navigation} backToTopBtnFlag={content.frontmatter.backToTopBtnFlag}>
           <SEO title={mainPage ? mainPage.frontmatter.title : content.frontmatter.title}/>
           <div className="user-guides-main-pages">
             <div className="container">
@@ -124,7 +124,6 @@ export const coldFrontQuery = graphql`
             cat
             externalPath
             redirectToPage
-            backToTopBtnFlag
           }
         }
       }
