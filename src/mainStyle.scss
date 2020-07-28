@@ -1541,9 +1541,14 @@ p {
           width: 33.3%;
           text-align: center;
           h2 {
-            background-color: #ffcd05;
+            // background-color: #ffcd05;
             padding: 10px;
             margin: 0px 40px 0 0;
+            color: #990000;
+            text-transform: uppercase;
+            &.discourse-title {
+              margin: 0px 40px 20px 0;
+            }
           }
 
           &.system-status {
@@ -1591,6 +1596,76 @@ p {
                   color: #000;
                   order: 1;
                   background-color: #f4f2f2;
+                }
+                .feature-content {
+                  order: 2;
+                  min-height: 70px;
+                }
+                img {
+                  height: 262px;
+                }
+                &:hover {
+                  font-weight: 500;
+                  color: #000;
+                  h3, p {
+                    color: #990000;
+                  }
+                  h3 {
+                    text-decoration: underline;
+                  }
+                }
+              }
+              p {
+                color: #000;
+              }
+              h3, p {
+                padding: 5px
+              }
+              img {
+                margin-bottom: 0;
+              }
+              .feature-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 0;
+                width: 90%;
+                margin: 0 auto;
+                p {
+                  margin: 0;
+                  text-align: left;
+                }
+                a {
+                  width: 20%;
+                  color: #990000;
+                  font-size: 15px;
+                }
+              }
+
+              .copy-text {
+                font-size: 12px;
+                font-weight: 500;
+                color: #000;
+                a {
+                  color: rgba(153, 0, 0, 0.7);
+                }
+              }
+            }
+          }
+          .discourse-latest-news-block {
+            margin: 0px 40px 0 0;
+            display: flex;
+            flex-direction: column;
+
+            .block {
+              text-align: left;
+              a {
+                display: flex;
+                flex-direction: column;
+                .title {
+                  font-size: 16px;
+                  color: #000;
+                  margin: 0;
                 }
                 .feature-content {
                   order: 2;

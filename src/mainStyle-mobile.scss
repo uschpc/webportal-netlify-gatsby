@@ -617,6 +617,10 @@ and (max-width : 767px) {
                     .shared{
                         width: 100%;
                         margin-top: 30px;
+                        &.discourse {
+                            max-width: 95%;
+                            margin: 0 auto;
+                        }
                         h2 {
                             margin: 0;
                         }
