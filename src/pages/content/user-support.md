@@ -11,10 +11,10 @@ routePath: user-support
 
 **Consultations**: Consultations for CARC account holders are available outside of regularly scheduled office hours. These are recommended for:
 
--New condo owners, research groups, and instructors who wish to explore the CARC's services.
+ > New condo owners, research groups, and instructors who wish to explore the CARC's services,
 
--CARC users who have a complex and/or time-critical problem that is best resolved with a (virtual) face-to-face meeting.
+ > CARC users who have a complex and/or time-critical problem that is best resolved with a (virtual) face-to-face meeting, and
 
--Users who cannot attend the regularly scheduled office hours.
+ > Users who cannot attend the regularly scheduled office hours.
 
 If you'd like to request a consultation, please fill out a [consultation request](https://usc.qualtrics.com/jfe/form/SV_cYiW9xq8lug7yjb). Currently, all consultations are taking place via Zoom.

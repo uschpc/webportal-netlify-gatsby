@@ -7,7 +7,7 @@ const LatestNews = (news) => {
     return (
         !news.flag ? (
             <div className="shared news">
-                <h2>Latest News</h2>
+                <h2>CARC News</h2>
                 {news.edges.map((item, i) => {
                     return (
                         i < 2 && (
@@ -44,7 +44,7 @@ const LatestNews = (news) => {
                 })}
             </div>
         )
-        
+
     )
 }
 

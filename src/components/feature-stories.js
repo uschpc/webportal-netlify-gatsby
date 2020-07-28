@@ -20,7 +20,7 @@ const FeatureStories = (services) => {
 
     return (
         <div className="shared press-release discourse">
-            <h2 className="discourse-title">Latest Discourse Topics</h2>
+            <h2 className="discourse-title">Latest User Posts</h2>
             {result.length && result.map((item, i) => {
                 return (
                 <div className="discourse-latest-news-block" key={i}>
