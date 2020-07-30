@@ -722,7 +722,8 @@ pre tt:after {
 
 .top-bar {
   background: #ffcd05;
-  max-width: 80%;
+  width: 80%;
+  max-width: 1530px;
   margin: 0 auto;
 }
 

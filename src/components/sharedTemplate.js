@@ -1,5 +1,4 @@
 import React from 'react';
-import featureBox from '../feature-boxes.json';
 import { Link } from 'gatsby';
 import Markdown from "react-markdown"
 import { TwitterTimelineEmbed } from 'react-twitter-embed';

@@ -10,7 +10,6 @@ const Content = (props) => {
 
     const scrollToView = (e) => {
         e.preventDefault();
-        var headerOffset = 45;
         const index = _.findIndex(tags, function(o) { 
             return o.innerHTML == e.target.getAttribute('value'); 
          });

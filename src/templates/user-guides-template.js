@@ -16,7 +16,7 @@ export default function Template({ data }) {
           <div className="user-guides-pages">
           <div className="container">
               <div className="left-column">
-                <h2>User Guides</h2>
+                <Link to="/user-information/user-guides"><h2>User Guides</h2></Link> 
                 <SideMenu {...data}/>
               </div>
               <div className="middle-column">

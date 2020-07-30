@@ -144,6 +144,8 @@ and (max-width : 1024px)  {
                 .x-section{
                     margin: 3% 10%;
                     border: none;
+                    max-width: 100%;
+                    width: 100%;
                 }
             }
         }
@@ -316,6 +318,7 @@ and (max-width : 1024px)  {
             }
             .content-width-middile{
                 max-width: 95%;
+                width: 100%;
             }
         }
     }
@@ -418,6 +421,26 @@ and (max-width : 767px) {
                     }
                     .right-column {
                         display: none;
+                    }
+                }
+            }
+            .discourse-latest-news-block {
+                margin: 10px 0 0 0;
+                .block {
+                    a {
+                        text-align: center;
+                        display: block;
+                        .right-side {
+                            margin: 0 auto;
+                        }
+                        .left-side {
+                            .title {
+                                text-align: center;
+                            }
+                            .second-row {
+                                justify-content: center; 
+                            }
+                        }
                     }
                 }
             }
@@ -609,6 +632,7 @@ and (max-width : 767px) {
             }
             .content-width-middile{
                 max-width: 95%;
+                width: 100%;
             }
         }
         .region {
@@ -650,6 +674,8 @@ and (max-width : 767px) {
                 .x-section {
                     margin: 1% 0;
                     border: none;
+                    max-width: 100%;
+                    width: 100%;
                 }
                 .marginless-columns {
                     flex-direction: column;
@@ -661,6 +687,7 @@ and (max-width : 767px) {
                         }
                         .features{
                             font-size: 28px;
+                            text-align: center;
                         }
                     }
                 }
@@ -789,6 +816,23 @@ and (max-width : 420px) {
                 a {
                     padding: 0;
                     font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen 
+and (max-width : 1900px) {
+    #___gatsby {
+        #gatsby-focus-wrapper {
+            .discourse-latest-news-block {
+                .block {
+                    a {
+                        .right-side {
+                            display: none;
+                        }
+                    }
                 }
             }
         }

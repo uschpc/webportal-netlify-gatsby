@@ -171,8 +171,9 @@ body {
       }
 
       h1 {
-        padding: 10px 0;
-        margin: 30px 0;
+        margin: 20px 0;
+        border-bottom: 1px solid #c5c5c5;
+        padding: 20px 0;
         color: #990000;
       }
 
@@ -489,8 +490,10 @@ body {
 
 
       h1 {
+        margin: 20px 0;
+        border-bottom: 1px solid #c5c5c5;
+        padding: 20px 0;
         color: #990000;
-        margin: 30px 0;
       }
 
       .page-body {
@@ -573,7 +576,7 @@ body {
           }
           .content-container {
             display: block;
-            padding-top: 22px;
+            // padding-top: 22px;
             li {
               margin-left: 20px;
             }
@@ -633,6 +636,7 @@ body {
 
       .inner {
         width: 80%;
+        max-width: 1530px;
         margin: 0 auto;
         box-sizing: border-box;
         text-align: left;
@@ -1223,7 +1227,8 @@ p {
   justify-content: space-between;
   list-style: none;
   margin: 2px auto 0px auto;
-  max-width: 53%;
+  width: 53%;
+  max-width: 1530px;
   .navbar{
     border-radius: 15px;
   }
@@ -1306,7 +1311,8 @@ p {
     }
   }
   .content-width-middile {
-    max-width: 80%;
+    width: 80%;
+    max-width: 1530px;
     margin-left: auto;
     margin-right: auto;
     height: 100px;
@@ -1449,7 +1455,9 @@ p {
         }
       }
       .x-section {
-        margin: 1% 10%;
+        max-width: 1530px;
+        width: 80%;
+        margin: 0 auto;
         min-height: 175px;
       }
       .marginless-columns {
@@ -1540,6 +1548,7 @@ p {
         padding: 40px 0;
         border-top: 1px solid #c5c5c5;
         border-bottom: 1px solid #c5c5c5;
+        max-width: 1530px;
         .shared {
           width: 33.3%;
           text-align: center;
@@ -1662,13 +1671,16 @@ p {
 
             .block {
               text-align: left;
+              margin-bottom: 10px;
+              border-bottom: 1px solid #c5c5c5;
+              padding: 0 0 10px 0;
               a {
                 display: flex;
-                flex-direction: column;
                 .title {
                   font-size: 16px;
                   color: #000;
                   margin: 0;
+                  padding: 5px 0;
                 }
                 .feature-content {
                   order: 2;
@@ -1723,11 +1735,45 @@ p {
                   color: rgba(153, 0, 0, 0.7);
                 }
               }
+              .right-side{
+                width: 50px;
+                border-radius: 50%;
+                background-color: #efefef;
+                text-align: center;
+                padding: 10px 0;
+                font-size: 21px;
+                margin-right: 10px;
+                color: black;
+              }
+              .second-row {
+                display: flex;
+                align-items: center;
+                .category {
+                  color: black;
+                }
+              }
+              &:hover {
+                .second-row {
+                  .category {
+                    color: #990000;
+                  }
+                  .icon {
+                    background-color: #990000;
+                  }
+                }
+                a {
+                  .title {
+                    color: #990000;
+                  }
+                }
+              }
             }
-          }
-
-          &:last-child {
-            border-right: none;
+            &:last-child {
+              .block {
+                border: none;
+              }
+            
+            }
           }
 
           .postcard-left {

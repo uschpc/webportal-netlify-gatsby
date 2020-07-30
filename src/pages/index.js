@@ -64,7 +64,7 @@ export const pageQuery = graphql`
           }
         }
       }
-      featureBoxes: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "services"}}}) {
+      featureBoxes: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "services"}}}) {
         edges {
           node {
             frontmatter {
