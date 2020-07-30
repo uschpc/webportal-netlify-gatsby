@@ -821,3 +821,20 @@ and (max-width : 420px) {
         }
     }
 }
+
+@media only screen 
+and (max-width : 1900px) {
+    #___gatsby {
+        #gatsby-focus-wrapper {
+            .discourse-latest-news-block {
+                .block {
+                    a {
+                        .right-side {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
