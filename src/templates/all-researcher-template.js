@@ -13,7 +13,7 @@ const findSubMenu = (menubar, nav) => {
 }
 
 export default function Template({ data }) {
-  let subMenu = findSubMenu(data.news.frontmatter.parentEle, data.sideMenu)
+  let subMenu = findSubMenu(data.researcher.frontmatter.parentEle, data.sideMenu)
   let content = data.content;
   
     return (
@@ -22,7 +22,7 @@ export default function Template({ data }) {
           <div className="nav-pages">
             <div className="container">
                 <div className="left-column">
-                  <h3>{content.frontmatter.parentEle}</h3>
+                  <h3>{data.researcher.frontmatter.parentEle}</h3>
                   {subMenu.map((item, i) => {
                   return (
                     !item.node.frontmatter.externalPath ? (
