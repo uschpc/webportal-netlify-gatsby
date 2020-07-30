@@ -4,7 +4,11 @@ import Markdown from "react-markdown"
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 // import MenuRoute from './menu-route.js';
 
-const IframeGraph = lazy(() =>  <iframe className="user-support" src="https://d2zckdyoh6khem.cloudfront.net/d-solo/vsUGHjmMk/compute-node-usage?orgId=1&refresh=300s&var-host=All&panelId=3" width="450" height="200" frameBorder="0"></iframe>);
+const IframeGraph = lazy(() => {
+    return (
+        <iframe className="user-support" src="https://d2zckdyoh6khem.cloudfront.net/d-solo/vsUGHjmMk/compute-node-usage?orgId=1&refresh=300s&var-host=All&panelId=3"></iframe>
+    )
+});
 const renderLoader = () => <p>...Loading</p>;
 
 const SharedTemplate = (items) => {
