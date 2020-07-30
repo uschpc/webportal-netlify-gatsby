@@ -1,10 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'gatsby';
 import Markdown from "react-markdown"
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 // import MenuRoute from './menu-route.js';
 
 const SharedTemplate = (items) => {
+    const [ready, setReady] = useState(false)
+
+    useEffect(() => {
+        setTimeout(() => {
+            setReady(true)
+        }, 3000) 
+      }, [])
     return (
         <div className={items.className ? items.className : "user-support"}>
             <h1>{items.title}</h1>
@@ -65,7 +72,7 @@ const SharedTemplate = (items) => {
                     <div className="right-col">
                         <div className="system-status">
                             <h3>System Status <a href="https://hpc-grafana.usc.edu/d/vsUGHjmMk/compute-node-usage?orgId=1&refresh=30s" target="_blank"><i className="fa fa-external-link" style={{fontSize:"24px"}}></i></a></h3>
-                            <iframe className="user-support" loading="lazy" src="https://d2zckdyoh6khem.cloudfront.net/d-solo/vsUGHjmMk/compute-node-usage?orgId=1&refresh=300s&var-host=All&panelId=3" width="450" height="200" frameBorder="0"></iframe>
+                            {ready && <iframe className="user-support" loading="lazy" src="https://d2zckdyoh6khem.cloudfront.net/d-solo/vsUGHjmMk/compute-node-usage?orgId=1&refresh=300s&var-host=All&panelId=3" width="450" height="200" frameBorder="0"></iframe>}
                             <a className="view-more-graph" href="https://hpcxdmod.usc.edu/" target="_blank">View more graphs</a>
                         </div>
                         <div className="recent-news">
