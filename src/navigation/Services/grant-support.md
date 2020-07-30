@@ -14,7 +14,7 @@ The CARC enables researchers to perform the advanced, innovative computational r
 
 In addition to providing computing resources, the CARC can directly assist researchers with the grant proposal process. The CARC will gladly provide letters of support for grant proposals from researchers who have utilized CARC resources in their research projects.
 
-If you would like to contact the CARC regarding grant proposals or publications, please contact us at hpc-support@usc.edu.
+If you would like to contact the CARC regarding grant proposals or publications, please contact us at carc-support@usc.edu.
 
 ### Acknowledging the CARC in your publications
 

@@ -1,14 +1,17 @@
 ---
 author: Ryan Sim
+id: 2
 date: 2020-06-06T00:00:00.000Z
 title: Storage File Systems
 path: storage-file-systems
 parentPath: user-information/user-guides/data-management
-cat: dataManagment
+cat: dataManagement
 parentPage: User Guides
 sideMenuParent: Data Management
 backToTopBtnFlag: true
 ---
+
+All CARC account holders are assigned three directories where they can store files and run programs: **home**, **project**, and **scratch**.
 
 ### Home directory
 
@@ -24,7 +27,9 @@ Your home directory is located at:
 
 ### Project file system
 
-*... Update with new information ...*
+The new parallel project file system was deployed during the summer of 2020. This file system has a capacity of ***~10PB***. Each CARC user receives their own subdirectory within the directories of each project they belong to, and the quota for each project directory ranges between 1 and 5 GB.
+
+The project file system should be used for most of your CARC work, and it's also where you can collaborate with your research project group. Each project group member will have their own subdirectory within their group's project directory, where they can store data, scripts, and related files.
 
 The project directory can be located by typing:
 

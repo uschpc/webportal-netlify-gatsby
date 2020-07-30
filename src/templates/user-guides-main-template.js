@@ -52,8 +52,8 @@ export default function Template({ data }) {
                     <div className="system-status">
                         <h2>Related Links</h2>
                         <ul>
-                          <li><a href="https://hpc-grafana.usc.edu/d/vsUGHjmMk/compute-node-usage?orgId=1&refresh=30s" target="_blank">Compute node usage information</a></li>
-                          <li><a href="https://hpcxdmod.usc.edu/" target="_blank">CPU hours/job size information</a></li>
+                          <li><a href="https://hpc-grafana.usc.edu/d/vsUGHjmMk/compute-node-usage?orgId=1&refresh=30s" target="_blank">Current compute node usage</a></li>
+                          <li><a href="https://hpcxdmod.usc.edu/" target="_blank">Current CPU hours/job sizes</a></li>
                         </ul>
                     </div>
                 </div>

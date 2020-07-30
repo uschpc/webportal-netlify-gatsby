@@ -63,9 +63,9 @@ For GPUs, the charge per SU varies depending on the GPU model. The table below s
 
 Storage allocations are measured using disk space in terabytes (equivalent to 1,000 gigabytes).  
 
-All users of active projects automatically receive a storage allocation on the CARC project file system. The default allocation size is 1 TB for each project, which can be increased up to 5 TB per project, if needed, at no extra cost.
+All users of active projects automatically receive a storage allocation on the CARC project file system. The default allocation size is 1 TB per PI, which can be increased up to 5 TB per PI, if needed, at no extra cost. If a PI has multiple projects, the maximum allocation of 5 TB can be divided among the projects.
 
-If more than 5 TB is needed, a PI can request additional storage space through the Research Computing User Portal. The additional storage space in excess of the first 5 TB is a paid service. The current price is $40/TB/year. For example, when a project requires 10 TB of space, the annual charge for the data storage space will be:
+If more than 5 TB is needed, a PI can request additional storage space through the Research Computing User Portal. The additional storage space in excess of the first 5 TB is a paid service. The current price is $40/TB/year. For example, when a PI requires 10 TB of space, the annual charge for the data storage space will be:
 
 >10 TB per year = 5 TB free + (5 x $40/TB/year = $200/year)
 

@@ -17,7 +17,7 @@ If you're experiencing an issue with your USC NetID or Duo Two-Factor Authentica
 
 If you're unable to find a solution to your problem using the above resources, please use the form below to submit a help ticket to the Center for Advanced Research Computing. A CARC team member will contact you for more details.
 
-#### Information to Include
+## Information to Include
 
 When submitting your ticket, please include as much information as possible about the problem you're experiencing.
 

@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="footer">
             <div className="inner">
                 <div className="col4 fl"> USC Center for Advanced<br/> Research Computing<br/> 3434 South Grand Avenue<br />3rd Floor (CAL Building)<br /> Los Angeles, CA 90089<br />
-                    <a href="mailto:hpc-support@usc.edu" target="_blank">hpc-support@usc.edu</a>
+                    <a href="mailto:carc-support@usc.edu" target="_blank">carc-support@usc.edu</a>
                     <div className="social">
                         <a href="https://twitter.com/usccarc"><i className="fa fa-twitter fa-2x"></i></a>
                         <a href="https://github.com/uschpc"><i className="fa fa-github fa-2x"></i></a>

@@ -219,7 +219,7 @@ Your project and home directories are backed up every day, as well as once a wee
 
 In order to be a candidate for data archiving, files must be closed and idle for at least 20 minutes. If you know the name and path of the file you deleted, we can search your backup directory and attempt to retrieve it.
 
-> Note: We’re more likely to recover your file from a daily backup than a weekly one, so contact us as soon as possible at hpc-support@usc.edu.
+> Note: We’re more likely to recover your file from a daily backup than a weekly one, so contact us as soon as possible at carc-support@usc.edu.
 
 ### Which file system should I store my project data in?
 
@@ -245,7 +245,7 @@ $ mkdir shared
 $ chmod g+wxs shared
 ```
 
-If you would like to consistently share data with a user who is not in your group, it is best to either have the PI add them to your project group or apply for a second account together. If this is not possible and you still need to share data, contact the CARC team at hpc-support@usc.edu to explore other options.
+If you would like to consistently share data with a user who is not in your group, it is best to either have the PI add them to your project group or apply for a second account together. If this is not possible and you still need to share data, contact the CARC team at carc-support@usc.edu to explore other options.
 
 ### How do I check if I have enough disk space?
 

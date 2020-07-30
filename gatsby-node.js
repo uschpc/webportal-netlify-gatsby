@@ -22,6 +22,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   const postTemplate = path.resolve('src/templates/content-post.js')
   const sharedMainTemplate = path.resolve('src/templates/shared-main-templates.js')
   const softwareTemplate = path.resolve('src/templates/software-template.js')
+  //const cloudComputingTemplate = path.resolve('src/templates/cloud-computing-template.js')
   const userGuidesMainTemplate = path.resolve('src/templates/user-guides-main-template.js')
   const userGuidesTemplate = path.resolve('src/templates/user-guides-template.js')
 
@@ -97,6 +98,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           template = softwareTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
+        // case 'cloudComputing':
+        //   template = cloudComputingTemplate;
+        //   path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+        //   break;
         case 'userGuides':
           template = userGuidesTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
@@ -115,7 +120,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       createPage({
         path: path,
         component: template,
-        context: { 
+        context: {
           slug: node.frontmatter.path,
         }
       })

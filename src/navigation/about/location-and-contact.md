@@ -18,6 +18,6 @@ The Center for Advanced Research Computing is located in the Carole A. Little (C
 3rd Floor (CAL Building)  
 Los Angeles, CA 90089
 
-Due to the ongoing COVID-19 pandemic, the CARC and most USC departments are currently working remotely. Access to the CAL building is limited, but general inquiries can always be directed to [hpc-support@usc.edu](hpc-support@usc.edu).
+Due to the ongoing COVID-19 pandemic, the CARC and most USC departments are currently working remotely. Access to the CAL building is limited, but general inquiries can always be directed to [carc-support@usc.edu](carc-support@usc.edu).
 
 If you're experiencing a technical issue, please [submit a help ticket](/user-information/ticket-submission).

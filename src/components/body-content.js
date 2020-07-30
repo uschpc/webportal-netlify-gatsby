@@ -20,7 +20,7 @@ const BodyContent = ({news, featureStory, featureBoxes}) => {
                     <div className="bg-image">
                         <div className="content">
                             <div className="title">
-                            The mission of the University of Southern California’s Center for Advanced Research Computing is to support the USC research community with an advanced cyberinfrastructure and research support program.
+                            The University of Southern California’s Center for Advanced Research Computing supports the computational exploration of over 100 research groups from a variety of academic disciplines.
                             </div>
                             <div className="mission">
                                 {/* <a href="#">View Mission</a> */}

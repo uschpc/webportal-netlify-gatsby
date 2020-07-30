@@ -59,7 +59,3 @@ Once the renewal is approved by CARC staff, the status will change to "Active" a
 If a PI does not renew cluster allocations by the due date, all users in the group will be blocked from running jobs on the cluster that allocation is linked to. If you have an extenuating circumstance making it impossible to renew on time, please contact the CARC to request an extension.
 
 [More information on allocation expirations](allocation-expiration)
-
-### Renewing the allocation for a priority boost
-
-Users and PIs will get notification emails when the priority boost allocation is set to expire.  You **cannot** renew these yourself.  

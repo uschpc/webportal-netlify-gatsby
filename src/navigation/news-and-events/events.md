@@ -21,18 +21,18 @@ At this time, the only scheduled events the CARC is hosting are its weekly works
 Friday, August 14, 2020
 
 Description  
-How to enroll: Complete the [Activity Sign-Up page]() for this workshop and contact <hpc-support@usc.edu> for Zoom session details.
+How to enroll: Complete the [Activity Sign-Up page]() for this workshop and contact <carc-support@usc.edu> for Zoom session details.
 
 **Workshop**  
 
 Friday, August 21, 2020
 
 Description  
-How to enroll: Complete the [Activity Sign-Up page]() for this workshop and contact <hpc-support@usc.edu> for Zoom session details.
+How to enroll: Complete the [Activity Sign-Up page]() for this workshop and contact <carc-support@usc.edu> for Zoom session details.
 
 **Workshop**  
 
 Friday, August 28, 2020
 
 Description  
-How to enroll: Complete the [Activity Sign-Up page]() for this workshop and contact <hpc-support@usc.edu> for Zoom session details.
+How to enroll: Complete the [Activity Sign-Up page]() for this workshop and contact <carc-support@usc.edu> for Zoom session details.

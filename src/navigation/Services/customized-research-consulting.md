@@ -1,8 +1,8 @@
 ---
-title: Customized Research Consulting
+title: Research Partnerships
 id: 6
 thumbnail: /images/sr-icon-4.png
-path: customized-research-consulting
+path: research-partnerships
 parentPath: services
 cat: navigation
 parentEle: Services
@@ -16,4 +16,4 @@ The CARC's Research Facilitation & Applications team enables research computing 
 
 In addition to standard user support, the CARC offers a more in-depth, collaborative experience for researchers with specific and diverse needs. This type of specialized partnership is aimed at research teams that require customized support for their projects, including data management, workflow development, and software installation. Through this service, CARC staff function as consultants to researchers, offering their expertise in computational science.
 
-For more information on research partnerships with the CARC, please contact us at hpc-support@usc.edu.
+For more information on research partnerships with the CARC, please contact us at <carc-support@usc.edu>.
