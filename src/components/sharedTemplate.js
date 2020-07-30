@@ -1,9 +1,11 @@
-import React from 'react';
-import featureBox from '../feature-boxes.json';
+import React, { lazy, Suspense } from 'react';
 import { Link } from 'gatsby';
 import Markdown from "react-markdown"
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 // import MenuRoute from './menu-route.js';
+
+const IframeGraph = lazy(() =>  <iframe className="user-support" src="https://d2zckdyoh6khem.cloudfront.net/d-solo/vsUGHjmMk/compute-node-usage?orgId=1&refresh=300s&var-host=All&panelId=3" width="450" height="200" frameBorder="0"></iframe>);
+const renderLoader = () => <p>...Loading</p>;
 
 const SharedTemplate = (items) => {
     return (
@@ -66,7 +68,9 @@ const SharedTemplate = (items) => {
                     <div className="right-col">
                         <div className="system-status">
                             <h3>System Status <a href="https://hpc-grafana.usc.edu/d/vsUGHjmMk/compute-node-usage?orgId=1&refresh=30s" target="_blank"><i className="fa fa-external-link" style={{fontSize:"24px"}}></i></a></h3>
-                            <iframe className="user-support" src="https://d2zckdyoh6khem.cloudfront.net/d-solo/vsUGHjmMk/compute-node-usage?orgId=1&refresh=300s&var-host=All&panelId=3" width="450" height="200" frameBorder="0"></iframe>
+                            <Suspense fallback={renderLoader()}>
+                                <IframeGraph />
+                            </Suspense>
                             <a className="view-more-graph" href="https://hpcxdmod.usc.edu/" target="_blank">View more graphs</a>
                         </div>
                         <div className="recent-news">
