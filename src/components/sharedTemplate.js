@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from 'gatsby';
 import Markdown from "react-markdown"
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
