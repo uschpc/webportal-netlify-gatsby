@@ -48,15 +48,28 @@ export default function Template({ data }) {
                    )}
 
                 </div>
-                <div className={`right-column ${mainPage && mainPage.frontmatter.cat === 'userGuidesLandingPage' ? 'show' : 'hide'}`}>
-                    <div className="system-status">
-                        <h2>Related Links</h2>
-                        <ul>
-                          <li><a href="https://hpc-grafana.usc.edu/d/vsUGHjmMk/compute-node-usage?orgId=1&refresh=30s" target="_blank">Current compute node usage</a></li>
-                          <li><a href="https://hpcxdmod.usc.edu/" target="_blank">Current CPU hours/job sizes</a></li>
-                        </ul>
-                    </div>
-                </div>
+                {content.frontmatter.title !== "Frequently Asked Questions" ? (
+                   <div className={`right-column ${mainPage && mainPage.frontmatter.cat === 'userGuidesLandingPage' ? 'show' : 'hide'}`}>
+                   <div className="system-status">
+                       <h2>Related Links</h2>
+                       <ul>
+                         <li><a href="https://hpc-grafana.usc.edu/d/vsUGHjmMk/compute-node-usage?orgId=1&refresh=30s" target="_blank">Current compute node usage</a></li>
+                         <li><a href="https://hpcxdmod.usc.edu/" target="_blank">Current CPU hours/job sizes</a></li>
+                       </ul>
+                   </div>
+               </div>
+                ) : (
+                  <div className={`right-column ${mainPage && mainPage.frontmatter.cat === 'userGuidesLandingPage' ? 'show' : 'hide'}`}>
+                  <div className="system-status">
+                      <h4>Related Links</h4>
+                      <ul>
+                        <li><a href="https://hpc-grafana.usc.edu/d/vsUGHjmMk/compute-node-usage?orgId=1&refresh=30s" target="_blank">Current compute node usage</a></li>
+                        <li><a href="https://hpcxdmod.usc.edu/" target="_blank">Current CPU hours/job sizes</a></li>
+                      </ul>
+                  </div>
+              </div>
+                )}
+               
               </div>
           </div>
           <Footer />
