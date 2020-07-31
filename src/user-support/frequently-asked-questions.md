@@ -114,8 +114,8 @@ In general, it is recommended that users first request an interactive session to
 
 You can check the resources your program is consuming using the `top` process manager:
 
- 1. Request an interactive compute node using the `salloc` command.
- 2. Run your job.
+1. Request an interactive compute node using the `salloc` command.
+2. Run your job.
   ```
    >
   [ttrojan@hpc-login3 ~]$ salloc --ntasks=8  
@@ -136,7 +136,8 @@ You can check the resources your program is consuming using the `top` process ma
   ----------------------------------------
   [ttrojan@hpc3264 ~]$mpirun find
   ```
-  3. Open a second terminal window, `ssh` to your compute node, and run the `top` command. This will display the processes running on that node.
+
+3. Open a second terminal window, `ssh` to your compute node, and run the `top` command. This will display the processes running on that node.
 
   ```
   [ttrojan@hpc-login3 ~]$ ssh hpc3264
@@ -146,7 +147,6 @@ You can check the resources your program is consuming using the `top` process ma
   %Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
   KiB Mem : 65766384 total, 64225800 free,   970788 used,   569796 buff/cache
   KiB Swap:  8388604 total,  8388604 free,        0 used. 64535076 avail Mem
-
   PID USER         PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
   15191 ttrojan     20   0    139m   5684   1500 R   2.7  0.0   0:00.04 mpirun
   15195 ttrojan     20   0   15344    996    768 S   1.3  0.0   0:00.08 find
@@ -158,7 +158,7 @@ You can check the resources your program is consuming using the `top` process ma
   15206 ttrojan     20   0   15344    996    768 S   1.3  0.0   0:00.08 find
   15207 ttrojan     20   0   15344    996    768 S   1.3  0.0   0:00.08 find
   ```  
-  4. The number of your job processes should match the number of tasks (`ntasks`) requested in your `salloc` command.
+4. The number of your job processes should match the number of tasks (`ntasks`) requested in your `salloc` command.
 
 If you see only one process, your job is using only one core.
 
@@ -227,10 +227,10 @@ The CARC has several different file systems, as summarized in the table below.
 
 | Name      | Path                                            | Amount of space                         | Backed up?                | Purpose                                                                                |
 |-----------|-------------------------------------------------|-----------------------------------------|---------------------------|----------------------------------------------------------------------------------------|
-| Home      | ~, /home/rcf-40/<user>                          | 1 GB                                     | Yes                       | Configuration files, personal scripts.                                                 |
-| Project   | /home/rcf-proj/<proj_name>                      | Up to 5 TB, shared amongst group members | Yes                       | Medium-term data storage while running CARC jobs.                                       |
-| Staging   | /staging/<proj_name>                            | 10 TB per account                        | No                        | Short-term, high perfomance data storage.                                              |
-| Temporary | $TMPDIR (single node), $SCRATCHDIR (multi-node) | Varies, depends on resources requested  | No, deleted at end of job | Short-term (per job) high performance data storage. Not shared with other researchers. |
+| Home      | `~`, `/home1/<username>`                          | 100 GB per account                                     | Yes                       | Configuration files, personal scripts.                                                 |
+| Project   | `/home/rcf-proj/<proj_name>`                      | Up to 5 TB, shared amongst group members | Yes                       | Medium-term data storage while running CARC jobs.                                       |
+| Scratch (1 & 2)   | `/scratch/<username>`, `/scratch2/<username>`                           | 10 TB per file system per account                        | No                        | Short-term, high perfomance data storage.                                              |
+
 
 The home, project, and scratch file systems are shared, which means that your usage can impact and be impacted by the activities of other users.
 
@@ -325,62 +325,69 @@ $ sas
 
 There are three ways to do this:
 
- - **Use the `which` or `whereis` command to locate binary (executable) programs in your path.**
+1. **Use the `which` or `whereis` command to locate binary (executable) programs in your path.**
 
- The default CARC path only searches a few directories, so the program that you are seeking may not be discoverable. For example, programs under `/usr/usc` are not initially discoverable, which is why you have to source setup files to use them.
+   The default CARC path only searches a few directories, so the program that you are seeking may not be discoverable. For example, programs under `/usr/usc` are not initially discoverable, which is why you have to source setup files to use them.
 
- Example:
- ```
- $ which gcc
- /usr/bin/gcc
-
- $ whereis gcc
- gcc: /usr/bin/gcc /usr/lib/gcc /usr/libexec/gcc /usr/share/man/man1/gcc.1.gz
-
- $ source /usr/usc/gnu/gcc/5.3.0/setup.sh
- $ which gcc
- /usr/usc/gnu/gcc/5.3.0/bin/gcc
- ```
-
- - **Use the RPM package manager to locate programs or libraries that have been installed on a node.**
-
- The command `rpm` will not find programs and libraries installed under `/usr/usc`.
-
- >Note: Packages available on head nodes might not be available on compute nodes.
-
- Example:
-
+   Example:
+   ```
+   $ which gcc
+   /usr/bin/gcc
   ```
-  $ rpm -qa | fgrep atlas
-  atlas-3.8.4-2.el6.x86_64
-  atlas-devel-3.8.4-2.el6.x86_64
-
-  $ rpm -q --info atlas
-  Name        : atlas                        
-  Version     : 3.8.4                             
-  Release     : 2.el6                         
-  Build Date: Tue 20 Mar 2012 07:03:13 PM PDT
-  :
-  URL         : http://math-atlas.sourceforge.net/
-  Summary     : Automatically Tuned Linear Algebra Software
-  Description :
-  The ATLAS (Automatically Tuned Linear Algebra Software) project is an
-  :
-
-  $ rpm -q --filesbypkg atlas
-  atlas                     /etc/ld.so.conf.d/atlas-x86_64.conf
-  atlas                     /usr/lib64/atlas
-  atlas                     /usr/lib64/atlas/libatlas.so.3
-  :
-
-  $ rpm -q --filesbypkg atlas | fgrep blas
-  atlas                     /usr/lib64/atlas/libcblas.so.3
-  atlas                     /usr/lib64/atlas/libcblas.so.3.0
-  atlas                     /usr/lib64/atlas/libf77blas.so.3
-  :
   ```
+   $ whereis gcc
+   gcc: /usr/bin/gcc /usr/lib/gcc /usr/libexec/gcc /usr/share/man/man1/gcc.1.gz
+  ```
+  ```
+   $ source /usr/usc/gnu/gcc/5.3.0/setup.sh
+  ```
+  ```
+   $ which gcc
+   /usr/usc/gnu/gcc/5.3.0/bin/gcc
+  ```  
 
- - **Check the /usr/usc directory.**
+2. **Use the RPM package manager to locate programs or libraries that have been installed on a node.**
+
+    The command `rpm` will not find programs and libraries installed under `/usr/usc`.
+
+    >Note: Packages available on head nodes might not be available on compute nodes.
+
+    Example:
+
+    ```
+    $ rpm -qa | fgrep atlas
+    atlas-3.8.4-2.el6.x86_64
+    atlas-devel-3.8.4-2.el6.x86_64
+    ```
+    ```
+    $ rpm -q --info atlas
+    Name        : atlas                        
+    Version     : 3.8.4                             
+    Release     : 2.el6                         
+    Build Date: Tue 20 Mar 2012 07:03:13 PM PDT
+    :
+    URL         : http://math-atlas.sourceforge.net/
+    Summary     : Automatically Tuned Linear Algebra Software
+    Description :
+    The ATLAS (Automatically Tuned Linear Algebra Software) project is an
+    :
+    ```
+    ```
+    $ rpm -q --filesbypkg atlas
+    atlas                     /etc/ld.so.conf.d/atlas-x86_64.conf
+    atlas                     /usr/lib64/atlas
+    atlas                     /usr/lib64/atlas/libatlas.so.3
+    :
+    ```
+    ```
+    $ rpm -q --filesbypkg atlas | fgrep blas
+    atlas                     /usr/lib64/atlas/libcblas.so.3
+    atlas                     /usr/lib64/atlas/libcblas.so.3.0
+    atlas                     /usr/lib64/atlas/libf77blas.so.3
+    :
+    ```  
+
+3. **Check the /usr/usc directory.**
 
 ### How do I check if a Python package is installed on CARC systems?
 

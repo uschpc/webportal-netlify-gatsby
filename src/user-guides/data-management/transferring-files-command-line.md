@@ -86,9 +86,7 @@ For example:
 
 ```
 scp myplot1.jpg ttrojan@hpc-transfer.usc.edu:/scratch/ttrojan
-
 scp myplot1.jpg myplot2.jpg ttrojan@hpc-transfer.usc.edu:/scratch/ttrojan
-
 scp *.jpg ttrojan@hpc-transfer.usc.edu:/scratch/ttrojan
 ```
 
@@ -96,7 +94,6 @@ Similar to the copy (`cp`) command, you can copy whole directories using the `-r
 
 ```
 scp -r ./myplots ttrojan@hpc-transfer.usc.edu:/scratch/ttrojan
-
 scp -r ttrojan@hpc-transfer.usc.edu:/scratch/ttrojan/myplots .
 ```
 
@@ -127,7 +124,6 @@ building file list ...
 1 file to consider
 myplot1.jpg
        10079 100%    0.00kB/s    0:00:00 (xfer#1, to-check=0/1)
-
 sent 10208 bytes  received 42 bytes  1205.88 bytes/sec
 total size is 10079  speedup is 0.98
 ```

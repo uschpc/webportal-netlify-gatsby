@@ -15,7 +15,7 @@ backToTopBtnFlag: true
 
 ### Using MATLAB on Discovery
 
-Begin by logging in to Discovery. You can find instructions for this in the [Getting Started guide](user-information/user-guides/high-performance-computing/discovery/getting-started).
+Begin by logging in to Discovery. You can find instructions for this in the [Getting Started guide](/user-information/user-guides/high-performance-computing/discovery/getting-started).
 
 To use MATLAB on Discovery, load the corresponding module:
 
@@ -64,13 +64,14 @@ After creating a MATLAB script, you will need to create a Slurm job script to la
 #SBATCH --cpus-per-task=4
 #SBATCH --mem-per-cpu=10GB
 #SBATCH --time=1:00:00
+```
 
+Load the module and run MATLAB:
+
+```sh
 module load matlab
-
-# Don't include .m extension in your script name
+// Don't include the .m extension in your script name  
 matlab -r 'script_name'
-
-
 ```
 
 Save this script as `matlab.slurm`, for example, and then submit like so:

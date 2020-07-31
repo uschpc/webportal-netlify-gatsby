@@ -32,17 +32,16 @@ Batch jobs are the most common types of jobs run on Discovery. They are a list o
 
 Below is an example batch job script that launches a python script:
 
-    #!/bin/bash
-    #SBATCH --ntasks=1
-    #SBATCH --cpus-per-task=8
-    #SBATCH --time=1:00:00
-    #SBATCH --mem-per-cpu=2GB
-
-    module load gcc/8.3.0
-    module load python
-
-    python3 script.py
-
+```
+#!/bin/bash
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=8
+#SBATCH --time=1:00:00
+#SBATCH --mem-per-cpu=2GB
+module load gcc/8.3.0
+module load python
+python3 script.py
+```
 
 The top few lines of the file (that begin with `#SBATCH`) use options to specify the requested resources for your program. Then the next set of lines loads the required software modules (`module load ...`). After that, the remaining lines are commands that run your programs.
 
