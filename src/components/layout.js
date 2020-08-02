@@ -10,9 +10,10 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import navlist from "../navigations.json";
 import "./layout.css"
 import "../style.less"
+import PopUp from "./draggable";
+import "../draggable.scss"
 
 const Layout = (props) => {
 
@@ -70,13 +71,8 @@ const Layout = (props) => {
             <span className="screen-reader-text">Back to top</span>
           </a>
         )}
-        
-        <footer>
-          © {new Date().getFullYear()},
-          {` `}
-          <a href="#">USC Center for Advanced Research Computing</a>
-        </footer>
       </div>
+      <PopUp openModel={props.openModel} />
     </>
   )
 }

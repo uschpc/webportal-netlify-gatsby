@@ -7,12 +7,14 @@ const Pagination = (props) => {
     const [offset, setOffset] = useState(0)
     const perPage = 5
     const [pageCount, setPageCount] = useState(0)
-    const [data, setData] = useState(null)
+    const [data, setData] = useState([])
+    const [pageNumber, setPageNumber] = useState(0)
 
     const handlePageClick = (e) => {
         const selectedPage = e.selected
         const offset = selectedPage * perPage
         setOffset(offset)
+        setPageNumber(selectedPage)
     };
 
     let pageData = () => {
@@ -46,29 +48,34 @@ const Pagination = (props) => {
         setPageCount(pageCount)
     } 
 
+
     useEffect(() => {
         pageData()
     }, [offset], [])
 
     useEffect(() => {
         pageData()
+        setPageNumber(0)
     }, [props.queryResults], [])
 
     return (
         <div>
-            {data}
-            <ReactPaginate
-                previousLabel={""}
-                nextLabel={""}
-                breakLabel={"..."}
-                breakClassName={"break-me"}
-                pageCount={pageCount}
-                marginPagesDisplayed={2}
-                pageRangeDisplayed={5}
-                onPageChange={(e) => handlePageClick(e)}
-                containerClassName={"pagination"}
-                subContainerClassName={"pages pagination"}
-                activeClassName={"active"}/>
+              {data}
+              {data.length && (
+              <ReactPaginate
+                  previousLabel={""}
+                  nextLabel={""}
+                  breakLabel={"..."}
+                  breakClassName={"break-me"}
+                  pageCount={pageCount}
+                  forcePage={pageNumber}
+                  marginPagesDisplayed={2}
+                  pageRangeDisplayed={5}
+                  onPageChange={(e) => handlePageClick(e)}
+                  containerClassName={"pagination"}
+                  subContainerClassName={"pages pagination"}
+                  activeClassName={"active"}/>
+              )}
         </div>
     )
 }

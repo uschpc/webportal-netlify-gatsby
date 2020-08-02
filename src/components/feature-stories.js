@@ -50,7 +50,7 @@ const FeatureStories = (services) => {
                 return (
                 <div className="discourse-latest-news-block" key={i}>
                     <div className="block">
-                        <a href={`https://hpc-discourse.usc.edu/t/${item.slug}`}>
+                        <a href={`https://hpc-discourse.usc.edu/t/${item.slug}`} target="_blank">
                         <div className="right-side">{getFirstLetterOfUsers(item.last_poster_username)}</div>
                             <div className="left-side">
                                 <h3 className="title">{item.fancy_title}</h3>

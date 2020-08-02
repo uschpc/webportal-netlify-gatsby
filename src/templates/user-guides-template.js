@@ -58,6 +58,18 @@ export default function Template({ data }) {
                       })}
                     </span>
                   )}
+                   {(data.content.frontmatter.title === "Hybrid Cloud Computing") && (
+                    <span>
+                      <h3>User Guides</h3>
+                      {data.cloudComputing.edges.map ((item, i) => {
+                        return (
+                          <Link key={i} className="coldfront-menu-items" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
+                              <li>{item.node.frontmatter.title}</li>
+                          </Link>
+                          )
+                      })}
+                    </span>
+                  )}
               </div>
               <div className="right-column">
                   <div className="system-status">
@@ -104,6 +116,19 @@ export const coldFrontQuery = graphql`
           node {
             frontmatter {
               alternativeTitle
+              path
+              parentPath
+              cat
+            }
+            html
+          }
+        }
+      }
+      cloudComputing: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "cloudComputing"}}}) {
+        edges {
+          node {
+            frontmatter {
+              title
               path
               parentPath
               cat

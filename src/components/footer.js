@@ -50,6 +50,11 @@ const Footer = () => {
                     <div className="usc-logo"></div>
                 </a>
             </div>
+            <footer>
+                © {new Date().getFullYear()},
+                {` `}
+                <a href="#">USC Center for Advanced Research Computing</a>
+            </footer>
         </div>
     )
 }

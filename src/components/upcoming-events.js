@@ -1,13 +1,17 @@
 import React, {useEffect, useState} from 'react';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
-const UpcomingEvents = () => {
+const UpcomingEvents = (props) => {
     const [ready, setReady] = useState(false)
 
     const listener = () => {
         if (window.scrollY >= 162) {
             setReady(true)
         }
+    }
+    const openModel =(e) => {
+        e.preventDefault()
+        props.openModel(true)
     }
 
     useEffect(() => {
@@ -21,7 +25,7 @@ const UpcomingEvents = () => {
         <div className="shared system-status homepage">
              <h2 className="iframe-graph">System Status <a href="https://hpc-grafana.usc.edu/d/vsUGHjmMk/compute-node-usage?orgId=1&refresh=30s" target="_blank"><i className="fa fa-external-link" style={{fontSize:"24px"}}></i></a></h2>
             {ready && <iframe className="homepage" src="https://d2zckdyoh6khem.cloudfront.net/d-solo/vsUGHjmMk/compute-node-usage?orgId=1&refresh=300s&var-host=All&panelId=3" width="450" height="200" frameBorder="0"></iframe>}
-            <a className="view-more-graph" href="https://hpcxdmod.usc.edu/" target="_blank">View more graphs</a>
+            <a className="view-more-graph" href="#" onClick={(e) => openModel(e)}>View more graphs</a>
             <h2 className="margin">Recent Tweets</h2>
                 <TwitterTimelineEmbed
                     sourceType="profile"
