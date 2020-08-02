@@ -749,6 +749,20 @@ and (max-width : 767px) {
             }
         }
     } 
+    body {
+        &.modal-open {
+            > div[tabindex="-1"] {
+                width: 100%;
+                .modal-dialog {
+                    min-width: 100% !important;
+
+                    .slide {
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media only screen 
