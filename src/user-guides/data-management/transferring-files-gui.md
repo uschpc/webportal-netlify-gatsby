@@ -58,7 +58,7 @@ You can download Cyberduck from the vendor website at https://cyberduck.io/.
 
 Go to the Bookmark menu and choose New Bookmark. Save these settings:
 
-Server: discovery.usc.edu  
+> Server: discovery.usc.edu  
 Username: Your USC NetID/username  
 (Optional) SSH Private Key: The path to your private key (usually ~/.ssh/id_rsa)
 

@@ -15,7 +15,7 @@ backToTopBtnFlag: true
 
 ### Using Python on Discovery
 
-Begin by logging in to Discovery. You can find instructions for this in the [Getting Started guide](user-information/user-guides/high-performance-computing/discovery/getting-started).
+Begin by logging in to Discovery. You can find instructions for this in the [Getting Started guide](/user-information/user-guides/high-performance-computing/discovery/getting-started).
 
 To use Python, load the corresponding module:
 
@@ -54,12 +54,18 @@ $ python3
 Python 3.6.0 (default, Feb 17 2017, 15:36:40)
 [GCC 4.8.5 20150623 (Red Hat 4.8.5-4)] on linux
 Type "help", "copyright", "credits" or "license" for more information.
+```
 
-# If code in same directory where Python was invoked
+If the code is in the same directory where Python was invoked:
+
+```
 >>> exec(open('./hello.py').read())
 Hello Tommy
+```
 
-# If not, use an absolute path
+If it's not in the same directory, use an absolute path:
+
+```
 >>> exec(open('/home/rcf-proj/tt1/ttrojan/python/hello.py').read())
 Hello Tommy
 ```
@@ -72,8 +78,11 @@ To run Python interactively on a compute node, use Slurm's `salloc` command to r
 
 ```sh
 salloc --time=1:00:00 --cpus-per-task=8 --mem-per-cpu=2GB
+```
 
-#On Discovery
+On Discovery:
+
+```
 srun --pty bash
 ```
 
@@ -91,9 +100,10 @@ After creating a Python script, you will need to create a Slurm job script to la
 #SBATCH --mem-per-cpu=10GB
 #SBATCH --time=1:00:00
 
-module load python
+Load the module and run the `python3` or `python` command:
 
-python3 /path/to/script.py
+    module load python
+    python3 /path/to/script.py
 
 ```
 Save this script as `python.slurm`, for example, and then submit it to the job scheduler like so:

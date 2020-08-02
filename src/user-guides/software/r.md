@@ -15,7 +15,7 @@ backToTopBtnFlag: true
 
 ### Using R on Discovery
 
-Begin by logging in to Discovery. You can find instructions for this in the [Getting Started guide](user-information/user-guides/high-performance-computing/discovery/getting-started).
+Begin by logging in to Discovery. You can find instructions for this in the [Getting Started guide](/user-information/user-guides/high-performance-computing/discovery/getting-started).
 
 To use R on Discovery, first load the corresponding module:
 
@@ -58,13 +58,14 @@ For a simple serial job, a Slurm job script would look something like this:
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=2GB
 #SBATCH --time=1:00:00
-
-module load gcc/8.3.0
-module load openblas/0.3.8
-module load r/4.0.2
-
-Rscript --vanilla /path/to/script.R
 ```
+
+Load the modules and run the `Rscript` command:
+
+    module load gcc/8.3.0
+    module load openblas/0.3.8
+    module load r/4.0.2
+    Rscript --vanilla /path/to/script.R
 
 Save this script as `R.job`, for example, and then submit it:
 

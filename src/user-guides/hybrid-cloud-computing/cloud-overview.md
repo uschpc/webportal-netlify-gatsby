@@ -3,9 +3,9 @@ author: James Hong
 date: 2020-06-04T00:00:00.00Z
 title: Cloud Computing Overview
 excerpt: Information on using cloud computing resources through our preferred cloud providers.
-thumbnail: /images/Cloud.png
 path: cloud-computing-overview
 route: User Guides
+routePath: user-information/user-guides/hybrid-cloud-computing
 parentPath: user-information/user-guides/hybrid-cloud-computing
 cat: cloudComputing
 parentPage: User Guides

@@ -144,7 +144,6 @@ myquota
      name     |  id  ||    used    |    hard    ||  used   |  hard   
 --------------|------||------------|------------||---------|---------
        ttrojan|555555||  127.23 MiB|  100.00 GiB||     4530|  2000000
-
 --------------------------
 /scratch/ttrojan
       user/group     ||           size          ||    chunk files    
@@ -157,7 +156,7 @@ If you exceed the limits, you may receive a "disk quota exceeded" or similar err
 
 The `myquota` command is also useful if you forget where your directories are located.
 
-For more information on data management, see the [Data Management user guides](user-information/user-guides/data-management).
+For more information on data management, see the [Data Management user guides](/user-information/user-guides/data-management).
 
 ### Transferring files
 
@@ -173,7 +172,7 @@ Remember to always transfer files into your home or scratch directories where yo
 
 There are a number of ways to transfer files between your local machine and the Discovery cluster. These include the commands `sftp`, `scp`, or `rsync` as well as GUI apps like Cyberduck or FileZilla.
 
-For more information on transferring files between your local machine and the Discovery cluster, see the [Transferring Files using the Command Line user guide](user-information/user-guides/data-management).
+For more information on transferring files between your local machine and the Discovery cluster, see the [Transferring Files using the Command Line user guide](/user-information/user-guides/data-management).
 
 #### From the web to Discovery
 
@@ -191,7 +190,7 @@ To edit an existing file, enter the editor name as the command and then the path
 nano script.R
 ```
 
-For detailed instructions on transferring files, see the [Data Management user guides](user-information/user-guides/data-management).
+For detailed instructions on transferring files, see the [Data Management user guides](/user-information/user-guides/data-management).
 
 ### Installing and running software
 
@@ -221,7 +220,7 @@ This loads the default version of Python. Then, for example, enter `python` to b
 
 Researchers are encouraged to install any software, libraries, and packages necessary for their work. Consult the software's documentation on how to install from source or with pre-built binaries. Additionally, for a more controlled and portable computing environment, consider using a Singularity container for your software builds.
 
-For more information on installing software, see the [Software user guides](user-information/user-guides/software).
+For more information on installing software, see the [Software user guides](/user-information/user-guides/software).
 
 ### Testing your job
 
@@ -255,10 +254,8 @@ Your job script should look something like this:
 #SBATCH --cpus-per-task=2
 #SBATCH --mem-per-cpu=1GB
 #SBATCH --time=1:00:00
-
 module load gcc
 module load python
-
 python3 script.py
 ```
 
@@ -274,7 +271,7 @@ where the argument to the command is the job script's file name (e.g., `my.job`)
 
 Submitted jobs are processed remotely. The process is recorded and written to an output file in the same directory that your job script is stored in. By default, this output file is named `slurm-<jobid>.out`. This is a plain-text file, so you can view it using the `less` command: `less slurm-<jobid>.out`.
 
-For more information on creating and submitting Slurm job scripts, see the [Running Jobs user guide](user-information/user-guides/discovery/running-jobs).
+For more information on creating and submitting Slurm job scripts, see the [Running Jobs user guide](/user-information/user-guides/discovery/running-jobs).
 
 ### Monitoring your job
 
