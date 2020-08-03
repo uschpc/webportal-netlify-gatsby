@@ -1,0 +1,73 @@
+body {
+    position: relative;
+    .modal-dialog {
+        &.react-draggable {
+           
+        }
+    }
+    &.modal-open {
+        > div[tabindex="-1"] {
+            position: absolute !important;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            .modal {
+                &.fade {
+                    cursor: pointer;
+                    border: none;
+                    outline: none;
+                    .modal-content {
+                        background-color: #fff;
+                        border: 2px solid #980100;
+                        position: relative;
+                        .modal-header {
+                            display: flex;
+                            button {
+                                position: absolute;
+                                top: 2px;
+                                right: 5px;
+                                cursor: pointer;
+                            }
+                        }
+                        .modal-body {
+                            border: none !important;
+                            .homepage-model {
+                                border: none;
+                                height: 100%;
+                                width: 100%;
+                            }
+                            .slider-wrapper {
+                                height: 50vh;
+                                .track {
+                                    .slide {
+                                        height: 50vh;
+                                        padding: 0 50px 0 50px;
+                                        &:before {
+                                            height: auto;
+                                        }
+                                        &:first-child {
+                                            height: 90%;
+                                        }
+                                        h2 {
+                                            color: #990000;
+                                        }
+                                    }
+                                }
+                                polygon {
+                                    fill: #000
+                                }
+                                .previousButton {
+                                    transform: unset;
+                                }
+                            }
+                        }
+                    }
+                    .modal-dialog {
+
+                    }
+                }
+            }
+        }
+    }
+}

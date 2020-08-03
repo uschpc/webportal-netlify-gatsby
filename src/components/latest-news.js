@@ -7,16 +7,20 @@ const LatestNews = (news) => {
     return (
         !news.flag ? (
             <div className="shared news">
-                <h2>Latest News</h2>
+                <h2>CARC News</h2>
                 {news.edges.map((item, i) => {
                     return (
                         i < 2 && (
                             <div className="press-news-block" key={i}>
                                 <div className="block">
+                                <Link to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
                                     <h3 className="title">{item.node.frontmatter.title}</h3>
                                     <img src={item.node.frontmatter.thumbnail}></img>
-                                    <Markdown source={item.node.frontmatter.excerpt} escapeHtml={false} />
-                                    <Link className="copy-text" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>Read More</Link>
+                                    <div className="feature-content">
+                                        <Markdown source={item.node.frontmatter.excerpt} escapeHtml={false} />
+                                        {/* <Link className="copy-text" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>Read More</Link> */}
+                                    </div>
+                                </Link>
                                 </div>
                             </div>
                         )
@@ -40,7 +44,7 @@ const LatestNews = (news) => {
                 })}
             </div>
         )
-        
+
     )
 }
 

@@ -5,16 +5,50 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import navlist from "../navigations.json";
 import "./layout.css"
 import "../style.less"
+import PopUp from "./draggable";
+import "../draggable.scss"
 
 const Layout = (props) => {
+
+  useEffect(() => {
+    if (props.backToTopBtnFlag) {
+      const scrollToTopButton = document.getElementById('js-top');
+
+      const scrollFunc = () => {
+        let y = window.scrollY;
+        
+        if (y > 0) {
+          scrollToTopButton.className = "top-link show";
+        } else {
+          scrollToTopButton.className = "top-link hide";
+        }
+      };
+  
+        window.addEventListener("scroll", scrollFunc);
+  
+        const scrollToTop = () => {
+        const c = document.documentElement.scrollTop || document.body.scrollTop;
+    
+        if (c > 0) {
+          window.requestAnimationFrame(scrollToTop);
+          window.scrollTo(0, c - c / 10);
+        }
+      };
+  
+      scrollToTopButton.onclick = function(e) {
+        e.preventDefault();
+        scrollToTop();
+      }
+    }
+  }, [])
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -27,15 +61,18 @@ const Layout = (props) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} searchData={(e) => props.searchData(e)} nav={props.edges} />
+      <Header siteTitle={data.site.siteMetadata.title} searchData={(e) => props.searchData(e)} nav={props.edges} uniqId={props.uniqId} backToTopBtnFlag={props.backToTopBtnFlag} />
       <div>
         <main>{props.children}</main>
-        <footer>
-          © {new Date().getFullYear()},
-          {` `}
-          <a href="#">USC Center for Advanced Research Computing</a>
-        </footer>
+        {/* Back to top btn */}
+        {props.backToTopBtnFlag && (
+          <a className="top-link hide" href="" id="js-top">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg>
+            <span className="screen-reader-text">Back to top</span>
+          </a>
+        )}
       </div>
+      <PopUp openModel={props.openModel} />
     </>
   )
 }

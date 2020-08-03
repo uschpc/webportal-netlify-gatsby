@@ -6,15 +6,12 @@ path: condo-cluster-program
 parentPath: services
 cat: navigation
 parentEle: Services
-redirectToPage: user-information/user-guides/condo-cluster-program
 ---
-The primary mission of the Advanced Research Computing Center is to support USC researchers in their work. The ARCC strives to provide an excellent user experience, both on an ad hoc basis and through ongoing partnerships with research teams.
 
-In 2014, the ARCC (then called the Center for High-Performance Computing) was the recipient of a National Science Foundation grant (#1341935) to support the
-development of a high-performance computing facilitation program. Today, the ARCC employs three full-time Research Facilitators to provide support to the USC research community.
+In an effort to provide the most comprehensive support to the USC research community, the Center for Advanced Research Computing offers researchers a way to customize their experience with the Discovery cluster.
 
-The ARCC's Research Facilitators enable research computing through education, outreach, and training. Our Research Facilitators offer regular onboarding sessions and office hours at USC’s University Park and Health Sciences campuses, introductory and advanced training workshops, and in-person and remote consultations. Individual support requests are handled through a user ticketing system.
+The Condo Cluster Program (CCP) is a service available to USC researchers that require dedicated resources for their work. The CCP gives researchers the convenience of having their own dedicated compute nodes, without the responsibility of purchasing and maintaining the nodes themselves. The CCP operates on an annual subscription-based model, with research groups subscribing to their selected number of compute and storage resources on a yearly basis. All of the hardware is purchased and maintained by the CARC throughout the course of the subscription term.
 
-In addition to standard user support, the ARCC offers a more in-depth, collaborative experience for researchers with specific and diverse needs. This type of specialized partnership is aimed at research teams that require customized support for their projects, including data management, workflow development, and software installation. Through this service, ARCC staff function as consultants to researchers, offering their expertise in computational science.
+The resources that a researcher subscribes to will be dedicated for use by their condo queue. Researchers also have the option to participate in a shared "Community Queue" of nodes. The Community Queue grants them access to idle nodes in other researchers' condo queues, giving them the flexibility to run larger jobs without having to invest in more dedicated resources.
 
-For more information on research partnerships with the ARCC, please contact us at hpc@usc.edu.
+The CARC is currently developing the policies for the new Condo Cluster Program. Later in 2020, information on the new Condo Cluster Program, including available resources, pricing, and the enrollment process, will be made available in the [Condo Cluster Program user guides](/user-information/user-guides/condo-cluster-program).

@@ -8,6 +8,7 @@ parentPath: user-information/user-guides/high-performance-computing/discovery
 cat: discoveryGuides
 parentPage: User Guides
 sideMenuParent: Discovery
+backToTopBtnFlag: true
 ---
 
 This guide describes how to reserve compute time on Discovery for your jobs using the Slurm job scheduler.
@@ -23,7 +24,7 @@ Jobs can be either **batch** jobs or **interactive** jobs, but both have two mai
 
 ### What is a job scheduler?
 
-Discovery is a shared system. To ensure fair access, we use a **job scheduler** to manage all requests for resources. The Slurm (Simple Linux Utility for Resource Management) job scheduler is an open-source job scheduler that allocates compute resources on clusters for queued, user-defined jobs.
+The Discovery computing cluster is a shared system. To ensure fair access, we use a **job scheduler** to manage all requests for resources. The Slurm (Simple Linux Utility for Resource Management) job scheduler is an open-source job scheduler that allocates compute resources on clusters for queued, user-defined jobs.
 
 ### Batch jobs
 
@@ -31,17 +32,16 @@ Batch jobs are the most common types of jobs run on Discovery. They are a list o
 
 Below is an example batch job script that launches a python script:
 
-    #!/bin/bash
-    #SBATCH --ntasks=1
-    #SBATCH --cpus-per-task=8
-    #SBATCH --time=1:00:00
-    #SBATCH --mem-per-cpu=2GB
-
-    module load gcc/8.3.0
-    module load python
-
-    python3 script.py
-
+```
+#!/bin/bash
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=8
+#SBATCH --time=1:00:00
+#SBATCH --mem-per-cpu=2GB
+module load gcc/8.3.0
+module load python
+python3 script.py
+```
 
 The top few lines of the file (that begin with `#SBATCH`) use options to specify the requested resources for your program. Then the next set of lines loads the required software modules (`module load ...`). After that, the remaining lines are commands that run your programs.
 
@@ -81,13 +81,13 @@ Slurm allows you to specify many different types of resources. Below are some of
 |`--ntasks=<number>`| Number of processes to run|
 | `-–mem=<number>` |Total memory (single node) |
 |`-–mem-per-cpu=<number>` |	Memory per processor core|
-|`-–constraint=<attribute>` |	Node property to request (e.g. avx, IB)|
+|`-–constraint=<attribute>` |	Node property to request (e.g., avx, IB)|
 |`-–partition=<partition_name>`| 	Request specified partition/queue|
 |`-–time=<HH:MM:SS>`| Max run time|
 
 For a complete listing of resource request syntax, run the command `man sbatch`.
 
-### GPUS
+### GPUs
 
 Some programs can take advantage of the unique hardware architecture in a graphics processing unit (GPU).
 

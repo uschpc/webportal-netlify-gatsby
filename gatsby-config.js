@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `HPC`,
+    title: `USC Research Computing`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
@@ -8,6 +8,12 @@ module.exports = {
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-less`,
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GA_TRACKING_ID || "none",
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -35,6 +41,13 @@ module.exports = {
       options: {
         name: `latest-news`,
         path: `${__dirname}/src/latest-news`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `researcher-profiles`,
+        path: `${__dirname}/src/researcher-profiles`,
       },
     },
     {
@@ -78,12 +91,6 @@ module.exports = {
       resolve: 'gatsby-plugin-s3',
       options: {
 	      bucketName: 'webportal-dev-td3pl856c23o'
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-zopfli',
-      options: {
-        extensions: ['css', 'html', 'js']
       }
     },
     `gatsby-transformer-sharp`,

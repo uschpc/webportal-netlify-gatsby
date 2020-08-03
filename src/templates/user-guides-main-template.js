@@ -7,17 +7,18 @@ import Markdown from "react-markdown"
 import SideMenu from '../components/side-menu'
 import { Link } from 'gatsby'
 import UserGuideSideMenu from '../components/UserGuideSideMenu'
+import FAQ from '../components/frequently-asked-question'
 
 export default function Template({ data }) {
   let mainPage = data.mainPage;
   let content = data.content;
     return (
-      <Layout {...data.navigation}>
-          <SEO title="User Guides"/>
+      <Layout {...data.navigation} backToTopBtnFlag={content.frontmatter.backToTopBtnFlag}>
+          <SEO title={mainPage ? mainPage.frontmatter.title : content.frontmatter.title}/>
           <div className="user-guides-main-pages">
             <div className="container">
                 <div className="left-column">
-                  <h3> {mainPage  || content.frontmatter.title === "Frequently Asked Questions" ? "User Information" : "User Support"}</h3>
+                  <h1> {mainPage  || content.frontmatter.title === "Frequently Asked Questions" ? "User Information" : "User Support"}</h1>
                   {mainPage || content.frontmatter.title === "Frequently Asked Questions" ? <UserGuideSideMenu content={mainPage || content} sideMenu={data.UserGuidesSideMenu} /> : <SideMenu {...data}/>}
                 </div>
                 <div className="middle-column">
@@ -43,18 +44,32 @@ export default function Template({ data }) {
                         <Markdown source={content.html} escapeHtml={false} />
                         <iframe className="ticket-submission" src="https://hpcaccount.usc.edu/static/web/supportform_simple.php" />
                       </>
-                    ) : <Markdown source={content.html} escapeHtml={false} />
+                    ) : content.frontmatter.uniqId === 'FAQ' ? <FAQ html={content.html} /> : <Markdown source={content.html} escapeHtml={false} />
                    )}
-                   
+
                 </div>
-                <div className="right-column">
-                    <div className="system-status">
-                        <h4>Related Links</h4>
-                        <h5>Some links</h5>
-                        <h5>Some links</h5>
-                        <h5>Some links</h5>
-                    </div>
-                </div>
+                {content.frontmatter.title !== "Frequently Asked Questions" ? (
+                   <div className={`right-column ${mainPage && mainPage.frontmatter.cat === 'userGuidesLandingPage' ? 'show' : 'hide'}`}>
+                   <div className="system-status">
+                       <h2>Related Links</h2>
+                       <ul>
+                         <li><a href="https://hpc-grafana.usc.edu/d/vsUGHjmMk/compute-node-usage?orgId=1&refresh=30s" target="_blank">Current compute node usage</a></li>
+                         <li><a href="https://hpcxdmod.usc.edu/" target="_blank">Current CPU hours/job sizes</a></li>
+                       </ul>
+                   </div>
+               </div>
+                ) : (
+                  <div className={`right-column ${mainPage && mainPage.frontmatter.cat === 'userGuidesLandingPage' ? 'show' : 'hide'}`}>
+                  <div className="system-status">
+                      <h4>Related Links</h4>
+                      <ul>
+                        <li><a href="https://hpc-grafana.usc.edu/d/vsUGHjmMk/compute-node-usage?orgId=1&refresh=30s" target="_blank">Current compute node usage</a></li>
+                        <li><a href="https://hpcxdmod.usc.edu/" target="_blank">Current CPU hours/job sizes</a></li>
+                      </ul>
+                  </div>
+              </div>
+                )}
+               
               </div>
           </div>
           <Footer />
@@ -84,6 +99,7 @@ export const coldFrontQuery = graphql`
           title
           route
           routePath
+          cat
         }
       html
     }
@@ -93,6 +109,9 @@ export const coldFrontQuery = graphql`
           route
           routePath
           externalPath
+          uniqId
+          backToTopBtnFlag
+          cat
         }
       html
     }

@@ -11,16 +11,19 @@ const path = require('path')
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators
 
-  const postTemplate = path.resolve('src/templates/content-post.js')
+  const allNewsTemplate = path.resolve('src/templates/all-news-template.js')
+  const allResearcherTemplate = path.resolve('src/templates/all-researcher-template.js')
   const coldFrontMainTemplate = path.resolve('src/templates/coldfront-main-template.js')
   const coldFrontTemplate = path.resolve('src/templates/coldfront-template.js')
-  //const discoveryGuidesMainTemplate = path.resolve('src/templates/discoveryguides-main-template.js')
+  const jobsTemplate = path.resolve('src/templates/jobs.js')
   const discoveryGuidesTemplate = path.resolve('src/templates/discoveryguides-template.js')
+  const dataManagementTemplate = path.resolve('src/templates/datamanagement-template.js')
   const menuTemplate = path.resolve('src/templates/menu-template.js')
+  const postTemplate = path.resolve('src/templates/content-post.js')
+  const softwareTemplate = path.resolve('src/templates/software-template.js')
+  const cloudComputingTemplate = path.resolve('src/templates/cloud-computing-template.js')
   const userGuidesMainTemplate = path.resolve('src/templates/user-guides-main-template.js')
   const userGuidesTemplate = path.resolve('src/templates/user-guides-template.js')
-  const sharedMainTemplate = path.resolve('src/templates/shared-main-templates.js')
-  const allNewsTemplate = path.resolve('src/templates/all-news-template.js')
 
   return graphql(`
     {
@@ -51,6 +54,14 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       let path = '';
 
       switch(node.frontmatter.cat) {
+        case 'allNews':
+          template = allNewsTemplate;
+          path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+          break;
+        case 'allResearcher':
+          template = allResearcherTemplate;
+          path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+          break;
         case 'coldFront':
           template = coldFrontTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
@@ -59,8 +70,17 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           template = discoveryGuidesTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
+        case "dataManagement":
+          template = dataManagementTemplate;
+          path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+          break;
+        case "jobs":
+          template = jobsTemplate;
+          path = `${node.frontmatter.path}`
+          break;
         case 'navigation':
-        case 'news':  {
+        case 'news':
+        case 'Researchers': {
           node.frontmatter.path !== 'user-guides' ? (
             template = menuTemplate
           ) : (
@@ -69,20 +89,24 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
         }
         break;
-        case 'userSupport':
-          template = userGuidesMainTemplate;
+        case 'sharedTemplate':
+          template = coldFrontMainTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
-        case 'allNews':
-          template = allNewsTemplate;
+        case 'software':
+          template = softwareTemplate;
+          path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+          break;
+        case 'cloudComputing':
+          template = cloudComputingTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
         case 'userGuides':
           template = userGuidesTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
-        case 'sharedTemplate':
-          template = coldFrontMainTemplate;
+        case 'userSupport':
+          template = userGuidesMainTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
         default:
@@ -95,7 +119,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       createPage({
         path: path,
         component: template,
-        context: { 
+        context: {
           slug: node.frontmatter.path,
         }
       })

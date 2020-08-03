@@ -9,18 +9,18 @@ import Content from '../components/content'
 
 export default function Template({ data }) {
     const post = data.content;
+    const items = data.content.frontmatter.uniqID === "software" ? data.Software.edges : data.dataManagement.edges
     return (
       <Layout {...data.navigation}>
           <SEO title={post.frontmatter.title}/>
           <div className="user-guides-pages">
           <div className="container">
               <div className="left-column">
-                <h3>User Guides</h3>
+                <Link to="/user-information/user-guides"><h2>User Guides</h2></Link> 
                 <SideMenu {...data}/>
               </div>
               <div className="middle-column">
                   <h1>{post.frontmatter.title}</h1>
-                  <Content flag={true}/>
                   <Markdown source={post.html} escapeHtml={false} />
                   {(post.frontmatter.title === 'High-Performance Computing') && data.allContent.edges.map((item, i) => {
                     return (
@@ -34,6 +34,42 @@ export default function Template({ data }) {
                       </span>
                     )
                   })}
+                   {(data.content.frontmatter.title === "Data Management") && (
+                    <span>
+                      <h3>User Guides</h3>
+                      {items.map ((item, i) => {
+                        return (
+                          <Link key={i} className="coldfront-menu-items" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
+                              <li>{item.node.frontmatter.title}</li>
+                          </Link>
+                          )
+                      })}
+                    </span>
+                  )}
+                   {(data.content.frontmatter.title === "Software and Programming") && (
+                    <span>
+                      <h3>User Guides</h3>
+                      {items.map ((item, i) => {
+                        return (
+                          <Link key={i} className="coldfront-menu-items" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
+                              <li>{item.node.frontmatter.alternativeTitle}</li>
+                          </Link>
+                          )
+                      })}
+                    </span>
+                  )}
+                   {(data.content.frontmatter.title === "Hybrid Cloud Computing") && (
+                    <span>
+                      <h3>User Guides</h3>
+                      {data.cloudComputing.edges.map ((item, i) => {
+                        return (
+                          <Link key={i} className="coldfront-menu-items" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
+                              <li>{item.node.frontmatter.title}</li>
+                          </Link>
+                          )
+                      })}
+                    </span>
+                  )}
               </div>
               <div className="right-column">
                   <div className="system-status">
@@ -58,8 +94,48 @@ export const coldFrontQuery = graphql`
           path
           parentPath
           cat
+          uniqID
         }
         html
+      }
+      dataManagement: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "dataManagement"}}}) {
+        edges {
+          node {
+            frontmatter {
+              title
+              path
+              parentPath
+              cat
+            }
+            html
+          }
+        }
+      }
+      Software: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "software"}}}) {
+        edges {
+          node {
+            frontmatter {
+              alternativeTitle
+              path
+              parentPath
+              cat
+            }
+            html
+          }
+        }
+      }
+      cloudComputing: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "cloudComputing"}}}) {
+        edges {
+          node {
+            frontmatter {
+              title
+              path
+              parentPath
+              cat
+            }
+            html
+          }
+        }
       }
     allContent: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "sharedTemplate"}}}) {
       edges {

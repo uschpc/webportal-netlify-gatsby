@@ -1,8 +1,9 @@
 ---
-title: Customized Research Partnerships
+title: Research Partnerships
+id: 4
 path: research
 thumbnail: /images/Handshake.png
 cat: services
-redirectToPage:  services/customized-research-consulting
+redirectToPage:  services/research-partnerships
 ---
 We're now publishing remotely. Sorry for the inconvenience

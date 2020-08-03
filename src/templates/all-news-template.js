@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Footer from '../components/footer'
 import { Link } from 'gatsby'
+import Pagination from '../components/pagination'
 
 const findSubMenu = (menubar, nav) => {
   const subNav = nav.edges.filter((ele, i) => {
@@ -17,11 +18,11 @@ export default function Template({ data }) {
   
     return (
       <Layout {...data.navigation}>
-          <SEO title="User Guides"/>
+          <SEO title={data.news.frontmatter.title}/>
           <div className="nav-pages">
             <div className="container">
                 <div className="left-column">
-                  <h3>{content.frontmatter.parentEle}</h3>
+                  <h3>{data.news.frontmatter.parentEle}</h3>
                   {subMenu.map((item, i) => {
                   return (
                     !item.node.frontmatter.externalPath ? (
@@ -45,19 +46,7 @@ export default function Template({ data }) {
                 </div>
                 <div className="middle-column">
                 <h1>{data.news.frontmatter.title}</h1>
-                {data.allNews.edges.map((item, i) => {
-                  return (
-                    <Link className="news-url" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`} key={i}>
-                      <div className="latest-news" key={i}>
-                        <div className="content">
-                          <h3>{item.node.frontmatter.title}</h3>
-                          <h4>{item.node.frontmatter.excerpt}</h4>
-                        </div>
-                        <img src={item.node.frontmatter.thumbnail} />
-                      </div> 
-                    </Link>
-                   )
-                })}
+                <Pagination {...data.allNews} />
                 </div>
                 <div className="right-column">
                     <div className="system-status">

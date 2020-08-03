@@ -2,13 +2,13 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Footer from '../components/footer'
-import SharedTemplate from '../components/sharedTemplate'
 import Markdown from "react-markdown"
-import SideMenu from '../components/side-menu'
 import { Link } from 'gatsby'
 import Content from '../components/content'
 import LatestNews from '../components/latest-news'
 import CustomNews from '../components/custom-news'
+import Researcher from '../components/researchers'
+import ResearcherProfiles from '../components/researcher-profiles'
 
 const findSubMenu = (menubar, nav) => {
   const subNav = nav.edges.filter((ele, i) => {
@@ -18,12 +18,12 @@ const findSubMenu = (menubar, nav) => {
 }
 
 export default function Template({ data }) {
-  let content = data.content || data.newsContent;
+  let content = data.content || data.newsContent || data.researcherContent;
   let subMenu = findSubMenu(content.frontmatter.parentEle, data.sideMenu)
-  
+
     return (
       <Layout {...data.navigation}>
-          <SEO title="User Guides"/>
+          <SEO title={content.frontmatter.title}/>
           <div className="nav-pages">
             <div className="container">
                 <div className="left-column">
@@ -38,7 +38,7 @@ export default function Template({ data }) {
                                   {item.node.frontmatter.title}
                               </Link>
                           </ul>
-                        </div> 
+                        </div>
                       ) : (
                         <div className="side-menu" key={i}>
                           <ul>
@@ -46,7 +46,7 @@ export default function Template({ data }) {
                                   {item.node.frontmatter.title}
                               </Link>
                           </ul>
-                        </div> 
+                        </div>
                       )
                       ) : (
                         <div className="side-menu" key={i}>
@@ -55,7 +55,7 @@ export default function Template({ data }) {
                                   {item.node.frontmatter.title}
                               </a>
                           </ul>
-                        </div> 
+                        </div>
                       ))
                   })}
                 </div>
@@ -63,31 +63,41 @@ export default function Template({ data }) {
                 <h1>{content.frontmatter.title}</h1>
                   {content.frontmatter.cat !== 'news' ? (
                     <>
-                      {(content.frontmatter.uniqID !== "news_Announcements") && <Content flag={true}/>}
-                      {(content.frontmatter.uniqID !== "news_Announcements") && <Markdown source={content.html} escapeHtml={false} />}
-                      {(content.frontmatter.uniqID === "news_Announcements") && <LatestNews {...data.news } flag={true} />}
+                      {(content.frontmatter.sharedID !== "news_Announcements_and_researcher_profile") && <Content flag={true}/>}
+                      {(content.frontmatter.sharedID !== "news_Announcements_and_researcher_profile") && <Markdown source={content.html} escapeHtml={false} />}
                       {(content.frontmatter.uniqID === "news_Announcements") && (
-                        <div className="category-link-wrapper type-primary">
-                          {/* <Link className="category-link category-link-lg category-news type-primary" to={"/education-and-outreach/news-and-updates/all-news"}> */}
-                            {/* <img src="/images/news-arrows.svg" />
-                            <p>
-                              View all Reasearch Computing News
-                            </p> */}
-                            <div className="all-latest-news">
-                              <Link className="btn latest-news" to={"/education-and-outreach/news-and-updates/all-news"}>
-                                  <span className="txt">View all Reasearch Computing News</span>
-                                  <span className="round"><i className="fa fa-chevron-right"></i></span>
-                              </Link>
-                              {/* </a> */}
-                            </div>
-                        </div>
+                        <>
+                          <LatestNews {...data.news } flag={true} />
+                          <div className="category-link-wrapper type-primary">
+                            <Link className="category-link category-link-lg category-news type-primary" to={"/news-and-events/news-and-announcements/all-news"}>
+                              <img src="/images/news-arrows.svg" />
+                              <p>
+                                View all Research Computing News
+                              </p>
+                            </Link>
+                          </div>
+                        </>
                       )}
+                      {(content.frontmatter.uniqID === "researcher_profile") && (
+                        <>
+                          <Researcher {...data.Researcher } flag={true} />
+                          <div className="category-link-wrapper type-primary">
+                            <Link className="category-link category-link-lg category-news type-primary" to={"news-and-events/researcher-profiles/all-researchers"}>
+                              <img src="/images/news-arrows.svg" />
+                              <p>
+                                View all Researcher Profiles
+                              </p>
+                            </Link>
+                          </div>
+                        </>
+                      )}
+                      {(content.frontmatter.cat === "Researchers") && <ResearcherProfiles {...data.researcherContent } /> }
                     </>
                   ) : (
                     <CustomNews {...data.newsContent }/>
                   )}
-                 
-                    
+
+
                 </div>
                 <div className="right-column">
                     <div className="system-status">
@@ -127,6 +137,7 @@ export const coldFrontQuery = graphql`
           routePath
           parentEle
           uniqID
+          sharedID
         }
       html
     }
@@ -142,7 +153,35 @@ export const coldFrontQuery = graphql`
         }
       html
     }
-    news: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "news"}}}) {
+    researcherContent: markdownRemark(frontmatter: {cat: {eq: "Researchers"}, path: {eq: $slug}}) {
+      frontmatter {
+        title
+        parentEle
+        cat
+        thumbnail
+        date
+        excerpt
+        author
+        sharedID
+        }
+      html
+    }
+    news: allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, filter: {frontmatter: {cat: {eq: "news"}}}) {
+      edges {
+        node {
+          frontmatter {
+            author
+            title
+            path
+            thumbnail
+            excerpt
+            parentPath
+          }
+          html
+        }
+      }
+    }
+    Researcher: allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, filter: {frontmatter: {cat: {eq: "Researchers"}}}) {
       edges {
         node {
           frontmatter {

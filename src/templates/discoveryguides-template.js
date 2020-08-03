@@ -11,13 +11,13 @@ import Content from '../components/content'
 export default function Template({ data }) {
     const post = data.md;
     return (
-      <Layout {...data.navigation}>
+      <Layout {...data.navigation} backToTopBtnFlag={data.md.frontmatter.backToTopBtnFlag}>
           <SEO title={post.frontmatter.title}/>
-            <div className="coldFront-child-container">
+            <div className="coldFront-child-container discovery">
               {/* <MenuRoute {...data} title={data.content.frontmatter.title} /> */}
               <div className="page-body">
                 <div className="left-column">
-                  <h2>User Guides</h2>
+                  <Link to="/user-information/user-guides"><h2>User Guides</h2></Link> 
                   <SideMenu {...data}/>
                 </div>
                 <div className="middle-column">
@@ -48,6 +48,7 @@ export const discoveryGuidesQuery = graphql`
         path
         parentPath
         cat
+        backToTopBtnFlag
       }
       html
     }
