@@ -12,6 +12,7 @@ parentPath: user-information/user-guides/high-performance-computing
 cat: sharedTemplate
 parentPage: User Guides
 ---
-Launched in August 2020, the CARC's high-performance computing cluster, Discovery, allows researchers to conduct advanced computational research in a wide variety of scientific fields.
+
+Launched in August 2020, Discovery is a high-performance computing cluster, which is a collection of computers and disk arrays that are connected via fast networks. Discovery allows USC researchers to perform computing tasks, like data analyses and simulations, on a larger scale than is possible with a laptop or lab computer.
 
 The following user guides are designed to help you get started with your work on Discovery.

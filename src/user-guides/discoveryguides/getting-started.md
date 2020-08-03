@@ -172,15 +172,27 @@ Remember to always transfer files into your home or scratch directories where yo
 
 There are a number of ways to transfer files between your local machine and the Discovery cluster. These include the commands `sftp`, `scp`, or `rsync` as well as GUI apps like Cyberduck or FileZilla.
 
-For more information on transferring files between your local machine and the Discovery cluster, see the [Transferring Files using the Command Line user guide](/user-information/user-guides/data-management).
+For more information on transferring files between your local machine and the Discovery cluster, see the [Data Management user guides](/user-information/user-guides/data-management).
 
 #### From the web to Discovery
 
 You can transfer a file from the public internet directly to one of your directories on Discovery by using the commands `wget` or `curl` or, for Git repositories, `git clone`.
 
+Helpful links:
+
+ - [GNU Wget](https://www.gnu.org/software/wget/)  
+ - [curl](https://curl.haxx.se/docs/manpage.html)  
+ - [git clone](https://git-scm.com/docs/git-clone)
+
 ### Creating and editing files
 
 You can always create files on your personal computer and transfer them to Discovery, but sometimes it is easier to create them directly on Discovery. For plain-text files, you can use the `nano`, `vim`, or `emacs` text editors. Nano is the easiest editor to learn; Vim and Emacs both have steeper learning curves, but you may eventually find them more useful and productive.
+
+Links to text editors' webpages:
+
+ - [Nano](https://www.nano-editor.org/)  
+ - [Vim](https://www.vim.org/)  
+ - [Emacs](https://www.gnu.org/software/emacs/)
 
 To create a new file, simply enter the editor name as the command (e.g., `nano`).
 
@@ -224,6 +236,14 @@ For more information on installing software, see the [Software user guides](/use
 
 ### Testing your job
 
+A job consists of all the data, commands, scripts, and programs that will be used to obtain results. Jobs are submitted to the job scheduler, Slurm, which performs the following functions:
+
+- Schedules user-submitted jobs
+- Allocates user-requested computing resources
+- Processes user-submitted jobs
+
+A listing of common Slurm commands can be found [here](https://slurm.schedmd.com/pdfs/summary.pdf).
+
 We recommend that you first test your job interactively on a compute node before submitting it remotely to the Slurm job scheduler, ensuring that you will have quality results after the job completes. You can do this by requesting an interactive session with a compute node using the `salloc` command.
 
 For example, to request four processors for one hour, enter:
@@ -234,15 +254,11 @@ salloc --ntasks=4 --time=1:00:00
 
 After running the command, the job scheduler will add your job to the wait queue.
 
-Once your job starts, you can then test out your scripts and programs to make sure they work properly. Once you are confident that you know how your program will behave, you are ready to submit a job through the batch job scheduler.
+Once your job starts, you can then test out your scripts and programs to make sure they work properly. Once you are confident that you know how your program will behave, you are ready to submit a job through Slurm.
 
 ### Submitting your job
 
-A job consists of all the data, commands, scripts, and programs that will be used to obtain results. Jobs are submitted to the job scheduler, Slurm, which performs the following functions:
-
-- Schedules user-submitted jobs
-- Allocates user-requested computing resources
-- Processes user-submitted jobs
+After you have tested your job interactively and achieved the results you want, you can now submit your job to Slurm.
 
 To submit a job, first create a Slurm job script using one of the previously mentioned text editors.
 

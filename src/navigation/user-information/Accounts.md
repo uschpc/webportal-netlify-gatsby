@@ -20,7 +20,7 @@ CARC systems are accessed using your USC NetID and password, so there is no addi
 
 Duo Two-Factor Authentication is also required. If you have not already signed up for Duo on your USC NetID account, please visit [this page](https://itservices.usc.edu/duo/enroll) to enroll.
 
-Access to and use of resources is based on participation in projects. Project setup and resource allocation requests must be made by a project's PI using the [Research Computing User Portal](https://hpcaccount.usc.edu/). Detailed instructions for project and resource management are available in our [Research Computing User Portal user guides](/user-information/user-guides/high-performance-computing/research-computing-user-portal).
+Access to and use of resources is based on participation in projects. Project setup and resource allocation requests must be made by a project's PI using the [Research Computing User Portal](https://hpcaccount.usc.edu/). Detailed instructions for project and resource management are available in the [Research Computing User Portal user guides](/user-information/user-guides/high-performance-computing/research-computing-user-portal).
 
 ### Principal Investigator (PI) eligibility
 

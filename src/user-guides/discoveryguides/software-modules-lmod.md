@@ -11,11 +11,11 @@ backToTopBtnFlag: true
 sideMenuParent: Discovery
 ---
 
-One of the biggest user-facing changes to the CARC's new computing cluster is trading the setup.sh method of using software for the **module system** using Lmod. Lmod has the ability to track software dependencies to ensure you have better control of your environment - no more logging out and then back in to reset your environment!
+One of the biggest user-facing changes to the CARC's new computing cluster is trading the setup.sh method of using software for the **module system** using Lmod, a Lua-based module system. Lmod can be used to access the software packages and versions that you need to conduct your research.
+
+The benefit of Lmod over the setup.sh method of using software is that Lmod dynamically changes your environment based on the software you are using, unloading and reloading software-dependent modules so your libraries are compatible. These changes to your environment are necessary because, for example, libraries compiled with a certain compiler are not necessarily compatible with libraries compiled by a different compiler, and your environment must be changed to accommodate these incompatibilities. Previously, you would have to change your environment by logging out and logging back in. **With Lmod, this reset is done dynamically when you load new modules**.
 
 The official documentation for Lmod can be found here: https://lmod.readthedocs.io/en/latest/010_user.html
-
-Lmod can be used to access software packages and versions that you need to conduct your research.
 
 ### Checking available software
 
@@ -89,11 +89,10 @@ To totally clear your environment:
 ```
 
 ###  Finding software
+
 The first time you log in and run `module avail`, it may not seem like much software is available. This is actually a safety feature that prevents you from loading incompatible modules. If you would like to explore the software tree, you can start loading modules and new ones will unlock. For example, to see all applications built with a certain compiler, you can load that compiler module. Everything built with that compiler will become visible in `module avail`.
 
-The current naming scheme for modules is `<software_name>/<version>-xxxx`.
-
-Where `xxxx` is a 4 character hash (random looking characters).
+The current naming scheme for modules is `<software_name>/<version>`.
 
 #### Module spider
 If you know the name of a software package, you can use the `module spider` command to find out if it's available and how to load it.
