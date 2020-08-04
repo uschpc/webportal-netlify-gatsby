@@ -2,14 +2,13 @@
 author: James Hong
 id: 6
 date: 2020-07-08T00:00:00.000Z
-title: Removing Users
+title: Removing Users 
 path: removing-users-from-project-or-allocation
 parentPath: user-information/user-guides/high-performance-computing/research-computing-user-portal
 cat: coldFront
 parentPage: User Guides
 sideMenuParent: Research Computing User Portal
 excerpt: ColdFront user portal - removing users from project/allocation
-backToTopBtnFlag: true
 ---
 
 PIs should remove users from their project and allocation(s) once they are done working together. This is an important step in ensuring your data is secure and accessed only by those you authorize.  
