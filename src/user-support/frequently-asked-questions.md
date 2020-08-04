@@ -1,5 +1,5 @@
 ---
-excerpt: Your common questions about the CARC and our services.
+excerpt: Your common questions about CARC services and systems.
 path: frequently-asked-questions
 author: Yaseen A
 thumbnail: /images/Question.png
@@ -12,7 +12,6 @@ backToTopBtnFlag: true
 title: Frequently Asked Questions
 id: 4
 ---
-
 
 ## Accounts
 
@@ -86,7 +85,9 @@ The lines tell your computer to send two “alive” signals every 60 seconds be
 
 The default shell for new accounts is bash. You can check what your current shell is by typing the command:
 
-`user@hpc-login3 ~]$ echo $0`
+```
+user@hpc-login3 ~]$ echo $0
+```
 
 If you’d like to change the shell you are using, you can type `bash` or `csh` after the `echo $0` command to temporarily use a new shell. If you’d like to permanently change your default shell, you can contact the CARC team by [submitting a ticket](/user-information/ticket-submission).
 
@@ -181,21 +182,31 @@ where `<account_id>` is your account name of the form lc_xxx.
 
 To see a listing of all of your available accounts and your current core hour allocations in these accounts, use the following command:
 
-`mybalance -h`
+```
+mybalance -h
+```
 
 The default CARC allocation is used to run a job when no allocation is specified in the `salloc`, `srun`, and `sbatch` commands.
 
 You can override the default account by using the `-A` command:
 
-`sbatch –account=<account_id> myjob.slurm`
+```
+sbatch –account=<account_id> myjob.slurm
+```
 
 For further details on `salloc`, `srun`, and `sbatch`, please read the official manual pages available by typing the following on any CARC login node:
 
-`man salloc`
+```
+man salloc
+```
 
-`man srun`
+```
+man srun
+```
 
-`man sbatch`
+```
+man sbatch
+```
 
 ### How do I report a problem with a job submission?
 
@@ -274,7 +285,9 @@ To check your disk usage, use the `du` command.
 
 To list the largest directories from the current directory, use the following command:
 
-`$ du -s * | sort -nr | head -n10`
+```
+$ du -s * | sort -nr | head -n10
+```
 
  - `du -s *`: Summarizes disk usage of all files
 
@@ -284,7 +297,9 @@ To list the largest directories from the current directory, use the following co
 
 To list the top ten largest files from the current directory, use the following command:
 
-`$ du . | sort -nr | head -n10`
+```
+$ du . | sort -nr | head -n10
+```
 
  - `du .`: Shows disk usage of current directory
 
@@ -294,7 +309,9 @@ To list the top ten largest files from the current directory, use the following 
 
 To see all other options for `du`, use the following command:
 
-`$ man du`
+```
+$ man du
+```
 
 ## Software
 

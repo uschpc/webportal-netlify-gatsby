@@ -12,7 +12,7 @@ Throughout the year, the Center for Advanced Research Computing hosts numerous e
 
 Due to the ongoing COVID-19 pandemic, the CARC and most USC departments are currently working remotely. As such, all CARC events will take place virtually (e.g., via Zoom) for the foreseeable future.
 
-### Upcoming events
+## Upcoming events
 
 At this time, the only scheduled events the CARC is hosting are its weekly workshops. Each workshop is approximately two hours long and is hosted over Zoom.
 
