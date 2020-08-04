@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import _ from 'lodash'
 
-const Content = (props) => { 
+const Content = (props) => {
     const [tags, loadTags] = useState([]);
     let element = props.flag ? 'h2' : 'h3'
     const generateTags = () => {
@@ -10,15 +10,15 @@ const Content = (props) => {
 
     const scrollToView = (e) => {
         e.preventDefault();
-        const index = _.findIndex(tags, function(o) { 
-            return o.innerHTML == e.target.getAttribute('value'); 
+        const index = _.findIndex(tags, function(o) {
+            return o.innerHTML == e.target.getAttribute('value');
          });
         tags[index].scrollIntoView({block: "start"})
     }
 
     useEffect(() => {
         loadTags(generateTags());
-        
+
     }, [])
     return (
         <span className="content-wrapper">
@@ -32,9 +32,9 @@ const Content = (props) => {
                     )
                 })}
             </span>
-            
+
         </span>
-       )}   
+       )}
        </span>
     )
 }

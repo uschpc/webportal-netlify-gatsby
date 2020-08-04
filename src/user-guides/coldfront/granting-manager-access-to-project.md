@@ -20,15 +20,15 @@ To grant a user manager access, go to the Project Detail page for the project yo
 
 Click on the edit icon next to their username under the Actions column:
 
-![Project Edit User](/images/coldfront_project_edituser.jpg)
+![Project Edit User](/images/coldfront_project_edituser.png)
 
 Change the drop down option from User to Manager and click the Update button:
 
-![Project User Detail](/images/coldfront_project_userdetail.jpg)
+![Project User Detail](/images/coldfront_project_userdetail.png)
 
 When you return to the Project Detail page for that project, you will now see that user listed as a manager:
 
-![Project Users - view manager](/images/coldfront_project_usermanager.jpg)
+![Project Users - view manager](/images/coldfront_project_usersmanager.png)
 
 When that user logs in to the User Portal, they will see your project and be able to add/remove users, request new allocations, and manage publications and grants.
 

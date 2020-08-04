@@ -97,16 +97,19 @@ We keep three weeks of snapshots for /home1. You can think of these snapshots as
 
 ##### Project directory
 
-Your project directory has much more disk space and will be the directory you use for most CARC work. This is also where you will collaborate with your research group. It will be of the form:
+Each project member has their own subdirectory within their group's project directory, where they can store data, scripts, and related files. Users affiliated with multiple CARC projects will have multiple project directories so they can easily share their files with the appropriate groups.
 
+The new parallel project file system was deployed during the summer of 2020. This file system has a capacity of ~10PB. Each CARC user receives their own subdirectory within the directories of each project they belong to, and the quota for each project directory ranges between 1 and 5 GB.
+
+The project file system should be used for most of your CARC work, and it's also where you can collaborate with your research project group. Each project group member will have their own subdirectory within their group's project directory, where they can store data, scripts, and related files.
+
+The project directory can be located by typing:
+
+```sh
+/home/project/<user_name>
 ```
-/____
-```
 
-Each project member will have their own subdirectory within their group's project directory, where they can store data, scripts, and related files. Users affiliated with multiple CARC projects will have multiple project directories so they can easily share their files with the appropriate groups.
-
-
-<!-- Is this true? No backups, and only one /scratch? -->
+where `<user_name>` is your USC NetID (your email address without "@usc.edu").
 
 ##### Scratch directories
 

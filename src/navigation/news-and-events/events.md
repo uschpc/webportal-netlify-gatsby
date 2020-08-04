@@ -16,23 +16,18 @@ Due to the ongoing COVID-19 pandemic, the CARC and most USC departments are curr
 
 At this time, the only scheduled events the CARC is hosting are its weekly workshops. Each workshop is approximately two hours long and is hosted over Zoom.
 
-**Workshop**  
+**Workshop: Intro to HPC**  
 
-Friday, August 14, 2020
+*Friday, August 14, 2020  
+1:00-2:50 pm*
 
-Description  
-How to enroll: Complete the [Activity Sign-Up page]() for this workshop and contact <carc-support@usc.edu> for Zoom session details.
+An overview of the USC high-performance computing (HPC) cluster. This workshop covers how to connect, where and how to download files, the software repository, and using the batch job scheduler.
 
-**Workshop**  
+>How to enroll: Complete the [Activity Sign-Up page](https://docs.google.com/forms/d/e/1FAIpQLSdqDsvkTP9AsnO82mPzOvztXwp2hSCeD7D82Lt7kjOloe6liA/viewform) for this workshop and contact <carc-support@usc.edu> for Zoom session details.
 
-Friday, August 21, 2020
+**Workshop: CP2K: Running Ab Initio Molecular Dynamics Simulations**  
 
-Description  
-How to enroll: Complete the [Activity Sign-Up page]() for this workshop and contact <carc-support@usc.edu> for Zoom session details.
+*Friday, August 21, 2020  
+1:00-2:50 pm*
 
-**Workshop**  
-
-Friday, August 28, 2020
-
-Description  
-How to enroll: Complete the [Activity Sign-Up page]() for this workshop and contact <carc-support@usc.edu> for Zoom session details.
+>How to enroll: Complete the [Activity Sign-Up page](https://docs.google.com/forms/d/e/1FAIpQLSdqDsvkTP9AsnO82mPzOvztXwp2hSCeD7D82Lt7kjOloe6liA/viewform) for this workshop and contact <carc-support@usc.edu> for Zoom session details.

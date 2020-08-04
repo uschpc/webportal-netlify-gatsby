@@ -18,3 +18,7 @@ routePath: user-support
  > Users who cannot attend the regularly scheduled office hours.
 
 If you'd like to request a consultation, please fill out a [consultation request](https://usc.qualtrics.com/jfe/form/SV_cYiW9xq8lug7yjb). Currently, all consultations are taking place via Zoom.
+
+**New Users Meetings**: New users to the CARC are highly encouraged to sign up for a short introductory meeting that includes a presentation and discussion on CARC resources and using the CARC for your research.
+
+To register for a New Users Meeting, please submit a request [here](https://usc.qualtrics.com/jfe/form/SV_cYiW9xq8lug7yjb) and specify that you're requesting a New Users Meeting. Currently, all New Users Meetings are taking place via Zoom.
