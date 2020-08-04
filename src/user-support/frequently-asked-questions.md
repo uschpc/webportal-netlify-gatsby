@@ -1,5 +1,5 @@
 ---
-excerpt: Your common questions about the CARC and our services.
+excerpt: Your common questions about CARC services and systems.
 path: frequently-asked-questions
 author: Yaseen A
 thumbnail: /images/Question.png
@@ -12,7 +12,6 @@ backToTopBtnFlag: true
 title: Frequently Asked Questions
 id: 4
 ---
-
 
 ## Accounts
 
@@ -34,7 +33,7 @@ A quota can refer to any one of the following:
 
 Every project is configured with default quotas. Disk and file quotas for user home directories are permanent. Project Principal Investigators (PIs) may submit a request to increase their project, file, and computing quotas through the [Research Computing User Portal](/user-information/user-guides/high-performance-computing/research-computing-user-portal).
 
-You can check the quota on your RCF home directory by running the `myquota` command while logged in to a head node.
+You can check the quota on your home directory by running the `myquota` command while logged in to a head node.
 
 To check your compute (core) hours, run the `mybalance -h` command.
 
@@ -48,11 +47,13 @@ A PI can add users in the [Research Computing User Portal](/user-information/use
 
 ### How long will I be able to use my CARC account? Will my account access need to be renewed?
 
-If you are a member of a CARC project, the PI for that project can remove you at any time. Before the end of each fiscal year, the PI must renew the account to keep it active. Compute hours will expire mid-July and login access will expire around August. All members of non-renewed accounts will be removed in approximately mid-October.
+If you are a member of a CARC project, the PI for that project can remove you at any time.
+
+Before the end of each fiscal year, a PI must renew their project to keep it active. If a project is not renewed, compute hours will expire mid-July and login access will expire around August. All members of non-renewed projects will be removed in approximately mid-October.
 
 ### Will my account remain active if I leave USC?
 
-If you are no longer working on a CARC project, your account will be closed near the beginning of the semester following your departure from the university. If you are a member of a project that uses sensitive/secure data, your account will be disabled once you are no longer active with the university. Your data will not be deleted until your project’s PI requests that it be deleted.
+If you are no longer working on a CARC project, your account will be closed near the beginning of the semester following your departure from the university. If you are a member of a project that uses sensitive/secure data, your account will be closed once you are no longer active with the university. Your data will not be deleted until your project’s PI requests that it be deleted.
 
 If you wish to continue working with someone on a project at USC after you leave, it’s possible to keep your account active. You will need to register for a USC guest account through [iVIP](https://itservices.usc.edu/iam/ivip/) with the support of the PI. Your department’s [iVIP administrator](https://itservices.usc.edu/iam/ivip/administrators/) can help with this.
 
@@ -64,9 +65,11 @@ A PI may request a USC guest account for a collaborator outside of the universit
 
 ### How do I log into the CARC cluster?
 
-To log in to the Linux-based cluster resource, you will need to use `ssh` to access either hpc-login2 or hpc-login3.
+To log in to the Linux-based cluster resource, you will need to use `ssh` to access one of the CARC's login/head nodes, hpc-login2 or hpc-login3.
 
 These head nodes should only be used for editing and compiling programs; any computing should be done on the compute nodes. Computing jobs submitted to the head nodes may be terminated before they complete. To submit jobs to the compute nodes, use the Slurm resource manager.
+
+For more information on logging in to the cluster, see the [Getting Started with Discovery user guide](/user-information/user-guides/high-performance-computing/discovery/getting-started).
 
 ### How do I avoid getting logged out of the CARC systems due to a bad Wi-Fi connection?
 
@@ -84,9 +87,11 @@ The lines tell your computer to send two “alive” signals every 60 seconds be
 
 ### What shell am I using? Can I use a different shell?
 
-The default shell for new accounts is bash. You can check what your current shell is by typing the command:
+The default shell for new accounts is bash. You can check what your current shell is by typing the following command, where `<username>` is your USC NetID:
 
-`user@hpc-login3 ~]$ echo $0`
+```
+<username>@hpc-login3 ~]$ echo $0
+```
 
 If you’d like to change the shell you are using, you can type `bash` or `csh` after the `echo $0` command to temporarily use a new shell. If you’d like to permanently change your default shell, you can contact the CARC team by [submitting a ticket](/user-information/ticket-submission).
 
@@ -94,7 +99,7 @@ If you’d like to change the shell you are using, you can type `bash` or `csh` 
 
 ### How do I run jobs on the cluster?
 
-Jobs can be run on the cluster in batch mode or in interactive mode. Batch processing is performed remotely and without manual intervention. Interactive mode enables you to test your program and environment setup interactively using the `salloc` command.
+Jobs can be run on the cluster in batch mode or in interactive mode. Batch mode processing is performed remotely and without manual intervention. Interactive mode enables you to test your program and environment setup interactively using the `salloc` command.
 
 Once your job is running interactively as expected, you should then submit it for batch processing. This is done by creating a simple text file, called a *Slurm script*, that specifies the cluster resources you need and the commands necessary to run your program.
 
@@ -106,7 +111,7 @@ After submitting a job to the queue, you can use the command `squeue -j <job_id>
 
 ### How can I tell if my job is running?
 
-You can check the status of your job using the `myqueue` command or the `squeue -u <username>` command, where `<username>` is your username. If your job is running but you are still unsure if your program is working, you can `ssh` into your compute nodes and use the command `top` to see what is running.
+You can check the status of your job using the `myqueue` command or the `squeue -u <username>` command, where `<username>` is your username/USC NetID. If your job is running but you are still unsure if your program is working, you can `ssh` into your compute nodes and use the command `top` to see what is running.
 
 In general, it is recommended that users first request an interactive session to test out their jobs. This will give you immediate feedback if there are errors in your program or syntax. Once you are confident that your job can complete without your intervention, you are ready to submit a batch job using a Slurm script.
 
@@ -181,27 +186,39 @@ where `<account_id>` is your account name of the form lc_xxx.
 
 To see a listing of all of your available accounts and your current core hour allocations in these accounts, use the following command:
 
-`mybalance -h`
+```
+mybalance -h
+```
 
 The default CARC allocation is used to run a job when no allocation is specified in the `salloc`, `srun`, and `sbatch` commands.
 
-You can override the default account by using the `-A` command:
+You can override the default account by using the `-account` command:
 
-`sbatch –account=<account_id> myjob.slurm`
+```
+sbatch –account=<account_id> myjob.slurm
+```
 
-For further details on `salloc`, `srun`, and `sbatch`, please read the official manual pages available by typing the following on any CARC login node:
+For further details on `salloc`, `srun`, and `sbatch`, please read the official manual pages available by typing the following on any CARC login/head node:
 
-`man salloc`
+```
+man salloc
+```
 
-`man srun`
+```
+man srun
+```
 
-`man sbatch`
+```
+man sbatch
+```
 
 ### How do I report a problem with a job submission?
 
 If a job submission results in an error, please contact the CARC team by [submitting a ticket](/user-information/ticket-submission). Be sure to include the job ID, error message, and any additional information you can provide.
 
 ### How do I create/edit a text file?
+
+Text files are created and edited using text editors that are designed for writing code. These text editors differ from common word processors, such as Microsoft Word or Notepad.
 
 The CARC supports the following UNIX editors: Vim (vi), GNU nano, and GNU Emacs. Nano is the editor taught in the CARC's workshops due to its ease of use.
 
@@ -215,11 +232,9 @@ Yes, you can temporarily access the local disk space on a single node using the 
 
 ### I accidentally deleted a file, is it possible to recover it?
 
-Your project and home directories are backed up every day, as well as once a week. Daily backups are saved for up to a week while weekly backups are saved for up to a month.
+Your project and home directories provide 3-week snapshots with daily backups, so if you accidentally delete some of your important data, you can recover the data if the deletion was within the last three weeks. You should always keep extra backups of your important data since snapshots or semi-backups are not real backups.
 
-In order to be a candidate for data archiving, files must be closed and idle for at least 20 minutes. If you know the name and path of the file you deleted, we can search your backup directory and attempt to retrieve it.
-
-> Note: We’re more likely to recover your file from a daily backup than a weekly one, so contact us as soon as possible at carc-support@usc.edu.
+In order to be a candidate for snapshots, files must be closed and idle for at least 20 minutes. If you know the name and path of the file you deleted, we can search your backup directory and attempt to retrieve it.
 
 ### Which file system should I store my project data in?
 
@@ -227,10 +242,9 @@ The CARC has several different file systems, as summarized in the table below.
 
 | Name      | Path                                            | Amount of space                         | Backed up?                | Purpose                                                                                |
 |-----------|-------------------------------------------------|-----------------------------------------|---------------------------|----------------------------------------------------------------------------------------|
-| Home      | `~`, `/home1/<username>`                          | 100 GB per account                                     | Yes                       | Configuration files, personal scripts.                                                 |
-| Project   | `/home/rcf-proj/<proj_name>`                      | Up to 5 TB, shared amongst group members | Yes                       | Medium-term data storage while running CARC jobs.                                       |
-| Scratch (1 & 2)   | `/scratch/<username>`, `/scratch2/<username>`                           | 10 TB per file system per account                        | No                        | Short-term, high perfomance data storage.                                              |
-
+| Home      | `~`, `/home1/<username>`                          | 100 GB per account                                     | Yes                       | Configuration files, personal scripts                                                 |
+| Project   | `/home/project/<proj_name>`                      | Up to 5 TB, shared amongst group members | Yes                       | Medium-term data storage while running CARC jobs                                       |
+| Scratch (1 & 2)   | `/scratch/<username>`, `/scratch2/<username>`                           | 10 TB per file system per account                        | No                        | Short-term, high perfomance data storage                                              |
 
 The home, project, and scratch file systems are shared, which means that your usage can impact and be impacted by the activities of other users.
 
@@ -245,7 +259,7 @@ $ mkdir shared
 $ chmod g+wxs shared
 ```
 
-If you would like to consistently share data with a user who is not in your group, it is best to either have the PI add them to your project group or apply for a second account together. If this is not possible and you still need to share data, contact the CARC team at carc-support@usc.edu to explore other options.
+If you would like to consistently share data with a user who is not in your group, it is best to either have the PI add them to your project group or apply for a second account together. If this is not possible and you still need to share data, [submit a ticket](/user-information/ticket-submission) to explore other options.
 
 ### How do I check if I have enough disk space?
 
@@ -274,7 +288,9 @@ To check your disk usage, use the `du` command.
 
 To list the largest directories from the current directory, use the following command:
 
-`$ du -s * | sort -nr | head -n10`
+```
+$ du -s * | sort -nr | head -n10
+```
 
  - `du -s *`: Summarizes disk usage of all files
 
@@ -284,7 +300,9 @@ To list the largest directories from the current directory, use the following co
 
 To list the top ten largest files from the current directory, use the following command:
 
-`$ du . | sort -nr | head -n10`
+```
+$ du . | sort -nr | head -n10
+```
 
  - `du .`: Shows disk usage of current directory
 
@@ -294,7 +312,9 @@ To list the top ten largest files from the current directory, use the following 
 
 To see all other options for `du`, use the following command:
 
-`$ man du`
+```
+$ man du
+```
 
 ## Software
 
@@ -302,24 +322,11 @@ To see all other options for `du`, use the following command:
 
 A comprehensive list of all software installed in the CARC environment can be found in the `/usr/usc` directory. Most traditional UNIX utilities can be found in `/usr/bin`.
 
+For information on the CARC's software module system, which uses Lmod, see the [Software Module System user guide](/user-information/user-guides/high-performance-computing/discovery/lmod).
+
 ### How do I run MATLAB on CARC systems?
 
 See the [MATLAB user guide](/user-information/user-guides/software/matlab) for instructions.
-
-### Why am I getting a “command not found” error when I try to run a CARC application?
-
-The shell gives this error when it is unable to find the requested application in your search path ($PATH). It usually means that you forgot to set up your environment before you tried to use the application.
-
-On CARC systems, you must run (or “source”) a setup script to enable you to use CARC software. These scripts are named setup.sh (bash) and setup.tcsh (t shell) and are located in the directory of the version of the software you want to use.
-
-For example, if you want to run SAS in the bash shell, try the following commands:
-
-```
-$ sas
-bash: sas: command not found
-$ source /usr/usc/sas/default/setup.sh
-$ sas
-```
 
 ### How do I check if a program or library is installed on CARC systems?
 

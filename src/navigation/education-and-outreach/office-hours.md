@@ -12,7 +12,7 @@ parentEle: Education & Outreach
 
 Office hours are an opportunity for CARC users to ask questions about anything related to research computing. No appointments are necessary, and all levels of users and questions are welcomed. Office hours are typically held weekly at the University Park campus (UPC) and twice a month at the Health Sciences campus (HSC).
 
-Currently, all office hours are taking place via Zoom every Tuesday from 2:30-5:00 pm. Zoom meeting information for office hours is included in the monthly activity calendar email that all CARC users receive. If you are unable to find this calendar, please email carc-support@usc.edu for assistance.
+Currently, all office hours are taking place via Zoom every Tuesday from 2:30-5:00 pm. Zoom meeting information for office hours is included in the monthly activity calendar email that all CARC users receive. If you are unable to find this calendar, please email <carc-support@usc.edu> for assistance.
 
 ### Consultations
 
@@ -28,4 +28,4 @@ If you'd like to request a consultation, please fill out a [consultation request
 
 New users to the CARC are highly encouraged to sign up for a short introductory meeting that includes a presentation and discussion on CARC resources and using the CARC for your research.
 
-To register for a New Users Meeting, please submit a request [here](https://usc.qualtrics.com/jfe/form/SV_cYiW9xq8lug7yj). Currently, all New Users Meetings are taking place via Zoom.
+To register for a New Users Meeting, please submit a request [here](https://usc.qualtrics.com/jfe/form/SV_cYiW9xq8lug7yjb) and specify that you're requesting a New Users Meeting. Currently, all New Users Meetings are taking place via Zoom.

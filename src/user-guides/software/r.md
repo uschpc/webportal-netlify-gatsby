@@ -37,10 +37,11 @@ Note that this loads base R, so only the base R packages and functions are immed
 
 After loading the module, to run R interactively on the **login node**, simply enter `R`.
 
-To run R interactively on a **compute node**, first use Slurm's `salloc` command to reserve a node. For example:
+To run R interactively on a **compute node**, first use Slurm's `salloc` command to reserve a node and then use `srun` to start an interactive shell. For example:
 
 ```sh
 salloc --time=1:00:00 --cpus-per-task=8 --mem-per-cpu=2GB
+srun --pty bash
 ```
 
 Once you are logged in to a compute node, load the module and then simply enter `R`.
