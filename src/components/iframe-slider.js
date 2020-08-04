@@ -20,7 +20,7 @@ const content = [
 
 const IframeSlider = () => {
 	return (
-      <Slider className="slider-wrapper">
+      <Slider className="slider-wrapper" duration="0">
         {content.map((item, index) => (
           <div>
             <h2>{item.title}</h2>

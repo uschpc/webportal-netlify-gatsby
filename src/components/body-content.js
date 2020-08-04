@@ -16,7 +16,7 @@ const BodyContent = (props) => {
                 <div className="view-content">
                     <ServiceBox {...props.featureBoxes} />
                     <div className="content-container">
-                        <FeatureStories {...props.featureStory }/>
+                        <FeatureStories {...props.featureStory } announcements={props.Announcements}/>
                         <LatestNews {...props.news } />
                         <UpcomingEvents openModel={openModel}/>
                     </div>

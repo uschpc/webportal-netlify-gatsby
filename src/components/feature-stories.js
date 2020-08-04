@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import _ from 'lodash'
 import axios from 'axios';
+import Markdown from "react-markdown"
 
-const FeatureStories = (services) => {
+
+const FeatureStories = (props) => {
     const [result, setResult] = useState([])
     const [categories, setCategory] = useState([])
 
@@ -45,9 +47,24 @@ const FeatureStories = (services) => {
 
     return (
         <div className="shared press-release discourse">
+            <h2 className="margin Announcements">Announcements</h2>
+            <div className="Announcements-box">
+                <Markdown className="description" source={props.announcements.html} escapeHtml={false} />
+                <div className="by">{`By: ${props.announcements.frontmatter.author}`}</div>
+                <div className="date">{`By: ${props.announcements.frontmatter.date}`}</div>
+            </div>
+             {/* <div className="recent-news">
+                <h2>Recent Tweets</h2>
+                <TwitterTimelineEmbed
+                    sourceType="profile"
+                    screenName="usccarc"
+                    options={{height: 400, margin: '20px 0 20px 0'}}
+                />
+            </div> */}
             <h2 className="discourse-title">Latest User Posts</h2>
             {result.length && result.map((item, i) => {
                 return (
+                i < 6 && (
                 <div className="discourse-latest-news-block" key={i}>
                     <div className="block">
                         <a href={`https://hpc-discourse.usc.edu/t/${item.slug}`} target="_blank">
@@ -62,6 +79,7 @@ const FeatureStories = (services) => {
                         </a>
                     </div>
                 </div>
+                    )
                 )
             })}
         </div>
