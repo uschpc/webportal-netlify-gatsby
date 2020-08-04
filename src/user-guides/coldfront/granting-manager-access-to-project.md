@@ -9,7 +9,6 @@ cat: coldFront
 parentPage: User Guides
 sideMenuParent: Research Computing User Portal
 excerpt: ColdFront user portal - grant manager access to project
-backToTopBtnFlag: true
 ---
 
 PIs can grant manager access to users on their projects to allow for a trusted graduate student or lab director to manage the user accounts and allocations on a project.  This is done on a per-project basis, so you're able to allow a user to manage the project you're using for a course while still restricting access to other projects, such as your main research project.
