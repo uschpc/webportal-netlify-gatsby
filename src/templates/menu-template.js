@@ -63,7 +63,7 @@ export default function Template({ data }) {
                 <h1>{content.frontmatter.title}</h1>
                   {content.frontmatter.cat !== 'news' ? (
                     <>
-                      {(content.frontmatter.sharedID !== "news_Announcements_and_researcher_profile") && <Content flag={true}/>}
+                      {(content.frontmatter.sharedID !== "news_Announcements_and_researcher_profile") && <Content />}
                       {(content.frontmatter.sharedID !== "news_Announcements_and_researcher_profile") && <Markdown source={content.html} escapeHtml={false} />}
                       {(content.frontmatter.uniqID === "news_Announcements") && (
                         <>
