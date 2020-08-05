@@ -27,7 +27,7 @@ export default function Template({ data }) {
           <div className="nav-pages">
             <div className="container">
                 <div className="left-column">
-                  <h3>{content.frontmatter.parentEle}</h3>
+                  <h2>{content.frontmatter.parentEle}</h2>
                   {subMenu.map((item, i) => {
                   return (
                     !item.node.frontmatter.externalPath ? (
