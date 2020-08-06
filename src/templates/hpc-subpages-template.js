@@ -10,6 +10,7 @@ import SideMenu from '../components/side-menu'
 export default function Template({ data }) {
     const items = data.md.edges;
     const discovery = data.discovery.edges;
+    const parallelProgramming = data.parallelProgramming && data.parallelProgramming.edges;
     return (
       <Layout {...data.navigation}>
           <SEO title={data.content.frontmatter.title}/>
@@ -17,7 +18,7 @@ export default function Template({ data }) {
               {/* <MenuRoute {...data} title={data.content.frontmatter.title} /> */}
               <div className="page-body">
                 <div className="left-column">
-                  <Link to="/user-information/user-guides"><h2>User Guides</h2></Link> 
+                  <Link to="/user-information/user-guides"><h2>User Guides</h2></Link>
                   <SideMenu {...data}/>
                 </div>
                 <div className="middle-column">
@@ -55,6 +56,18 @@ export default function Template({ data }) {
                       })}
                     </span>
                   )}
+                  {(data.content.frontmatter.title === "Parallel Programming") && (
+                   <span>
+                     <h3>User Guides</h3>
+                     {parallelProgramming.map ((item, i) => {
+                       return (
+                         <Link key={i} className="coldfront-menu-items" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
+                             <li>{item.node.frontmatter.title}</li>
+                         </Link>
+                         )
+                     })}
+                   </span>
+                 )}
                 </div>
                 <div className="right-column">
                   <div className="system-status">
@@ -99,6 +112,19 @@ export const coldFrontQuery = graphql`
         }
       }
     }
+    parallelProgramming: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "parallelProgramming"}}}) {
+         edges {
+           node {
+             frontmatter {
+               title
+               path
+               parentPath
+               cat
+             }
+             html
+           }
+         }
+       }
     sideMenu: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "userGuides"}}}) {
       edges {
         node {
@@ -113,6 +139,17 @@ export const coldFrontQuery = graphql`
       }
     }
     subMenu: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "sharedTemplate"}}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            parentPath
+          }
+        }
+      }
+    }
+    subMenuLevel2: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "parallelProgramming"}}}) {
       edges {
         node {
           frontmatter {

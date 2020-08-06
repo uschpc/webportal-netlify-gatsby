@@ -13,7 +13,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
   const allNewsTemplate = path.resolve('src/templates/all-news-template.js')
   const allResearcherTemplate = path.resolve('src/templates/all-researcher-template.js')
-  const coldFrontMainTemplate = path.resolve('src/templates/coldfront-main-template.js')
+  const hpcSubpagesTemplate = path.resolve('src/templates/hpc-subpages-template.js')
   const coldFrontTemplate = path.resolve('src/templates/coldfront-template.js')
   const jobsTemplate = path.resolve('src/templates/jobs.js')
   const discoveryGuidesTemplate = path.resolve('src/templates/discoveryguides-template.js')
@@ -91,7 +91,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         }
         break;
         case 'sharedTemplate':
-          template = coldFrontMainTemplate;
+          template = hpcSubpagesTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
         case 'software':

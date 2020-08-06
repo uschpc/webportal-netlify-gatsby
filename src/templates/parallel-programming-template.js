@@ -18,6 +18,7 @@ export default function Template({ data }) {
                 <div className="left-column">
                   <Link to="/user-information/user-guides"><h2>User Guides</h2></Link>
                   <SideMenu {...data}/>
+                  <SideMenu {...data} parentMenuTitle = "Parallel Programming"/>
                 </div>
                 <div className="middle-column">
                 <h1>{post.frontmatter.title}</h1>
@@ -86,6 +87,7 @@ export const parallelProgrammingQuery = graphql`
         }
       }
     }
+
     content: markdownRemark(frontmatter: {cat: {eq: "parallelProgramming"}, path: {eq: $slug}}) {
       frontmatter {
         title

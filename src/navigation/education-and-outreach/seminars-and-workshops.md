@@ -39,7 +39,7 @@ Materials: https://github.com/uschpc/workshop-r-intro
 
 This workshop is designed for researchers who need to install software packages on CARC systems. Using examples, we will cover concepts such as Python package installation, downloading software, linking to libraries, using Makefiles, compiling and optimizing code, and handling dependencies. It is recommended that you take the introductory Linux workshop first if you have not previously worked in a Linux environment.
 
-### CP2K: Running Ab Initio Molecular Dynamics Simulations**  
+### CP2K: Running Ab Initio Molecular Dynamics Simulations
 
 An introduction to computational tools implemented within the CP2K program package. The most standard methods as well as some of the more advanced features will be introduced by overviews of background theory and through examples of application, while encouraging modular, flexible, and problem-oriented thinking. Recurring topics in the workshop are the scaling of algorithms, the combination of different levels of theory and of sampling, and tools and strategies for the analysis of results.
 

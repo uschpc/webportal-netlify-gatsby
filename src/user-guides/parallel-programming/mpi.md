@@ -3,17 +3,15 @@ author: Marco Olguin
 id: 1
 date: 2020-08-04T12:00:00
 title: Message Passing Interface (MPI)
-route: User Guides
-routePath: user-information/user-guides/high-performance-computing/parallel-programming
 path: mpi
 parentPath: user-information/user-guides/high-performance-computing/parallel-programming
 cat: parallelProgramming
 parentPage: User Guides
-sideMenuParent: parallelProgramming
+sideMenuParent: Parallel Programming
 backToTopBtnFlag: true
 ---
 
-Message Passing Interface (MPI) is a **message-passing standard** using in parallel programming. The MPI standard exists in numerous implementations, four of which the CARC provides support for:
+The Message Passing Interface (MPI) is a **message-passing standard** used in parallel programming. The MPI standard exists in numerous implementations, four of which the CARC provides support for:
 
  - MPICH
  - OpenMPI
@@ -46,7 +44,7 @@ module load <compiler> <MPI distribution>
 
 where:
 
-`<compiler>` is one of the compilers: `gcc` (GNU) or `intel` (Intel)) and  
+`<compiler>` is one of the compilers: `gcc` (GNU) or `intel` (Intel), and  
 `<MPI distribution>` is one of the MPI libraries: `mvapich2`, `openmpi`, `mpich-ucx`, or `intel-mpi`.
 
 *Example 1*: If you're running a program that was compiled with the Intel compilers and uses Intel MPI:
@@ -80,7 +78,7 @@ When you compile a parallel program, make sure that you record the version/modul
 
 ### Running MPI
 
-The `mpirun` command launches the parallel job. For help with `mpirun`, please consult the man pages (`man mpirun`) or run `mpirun --help`.
+The `mpirun` command launches the parallel job. For help with `mpirun`, please consult the manual pages (`man mpirun`) or run `mpirun --help`.
 
 To run on the Discovery cluster:
 
@@ -104,13 +102,15 @@ The `OMP_NUM_THREADS` count can be calculated automatically by utilizing SLURM-p
 // Find number of threads for OpenMP
 // Find number of MPI tasks per node
 set TPN=`echo $SLURM_TASKS_PER_NODE | cut -f 1 -d \(`
-
+```
+```
 // Find number of CPU cores per node
 set PPN=`echo $SLURM_JOB_CPUS_PER_NODE | cut -f 1 -d \(`
 @ THREADS = ( $PPN / $TPN )
 setenv OMP_NUM_THREADS $THREADS (if using sh or csh)
 export OMP_NUM_THREADS=$THREADS (if using bash)
-
+```
+```
 mpirun -genv $OMP_NUM_THREADS -genv MV2_ENABLE_AFFINITY 0 -np $SLURM_NTASKS ./mpi_plus_openmp_program.x
 ```
 
@@ -183,17 +183,20 @@ To run multi-threaded MVAPICH2 code compiled with Intel compilers:
 
 ```
 module load intel mvapich2
-
+```
+```
 // Find number of threads for OpenMP
 // Find number of MPI tasks per node
 set TPN=`echo $SLURM_TASKS_PER_NODE | cut -f 1 -d \(`
-
+```
+```
 // Find number of CPU cores per node
 set PPN=`echo $SLURM_JOB_CPUS_PER_NODE | cut -f 1 -d \(`
 @ THREADS = ( $PPN / $TPN )
 setenv OMP_NUM_THREADS $THREADS (if using sh or csh)
 export OMP_NUM_THREADS=$THREADS (if using bash)
-
+```
+```
 mpirun -genv OMP_NUM_THREADS $OMP_NUM_THREADS -genv MV2_ENABLE_AFFINITY 0 -genv KMP_AFFINITY verbose,granularity=core,compact,1,0 -np $SLURM_NTASKS ./mpi_program.x
 ```
 
@@ -228,7 +231,7 @@ mpiifort code.f90 -o code.x
 
 Intel MPI provides two different MPI fabrics for InfiniBand: one based on Open Fabrics Enterprise Distribution (OFED) and the other on Direct Access Programming Library (DAPL), denoted by `ofa` and `dapl`, respectively. Moreover, one can also specify intra-node communication, out of which the fastest should be shared memory (`shm`). According to our observations, the default fabrics is `shm:ofa`, which can be confirmed by using an environment variable `I_MPI_DEBUG` larger than 2.
 
-#### Single and multi-threaded process/thread affinity
+#### Single and multi-threaded process/thread affinity with Intel MPI
 
 Intel MPI pins processes and threads to sockets by default, so no additional runtime options should be needed unless the process/thread mapping needs to be different. If that is the case, consult the OpenMP interoperability guide. For the common default pinning:
 
@@ -238,6 +241,6 @@ mpirun -genv OMP_NUM_THREADS 2 -np 12 ./mpi_plus_openmp_program.x
 
 Intel MPI does the best job in pinning MPI tasks and OpenMP threads, but, in case of more exotic MPI-tasks/OpenMP thread combinations, a task/thread pinning script may be required.
 
-#### Common MPI ABI
+### Common MPI ABI
 
 From Intel MPI 5.0 and MPICH 3.1 (and MVAPICH2 1.9 and higher, which is based on MPICH 3.1), the libraries are interchangeable at the binary level, using common Application Binary Interface (ABI). This means that one can build the application with MPICH, but run it using the Intel MPI libraries, thus taking advantage of the Intel MPI functionality. See details about this at https://software.intel.com/en-us/articles/using-intelr-mpi-library-50-with-mpich3-based-applications.

@@ -239,15 +239,28 @@ Researchers are encouraged to install any software, libraries, and packages nece
 
 For more information on installing software, see the [Software user guides](/user-information/user-guides/software).
 
-### Testing your job
+### Running jobs
 
-A job consists of all the data, commands, scripts, and programs that will be used to obtain results. Jobs are submitted to the job scheduler, Slurm, which performs the following functions:
+A job consists of all the data, commands, scripts, and programs that will be used to obtain results.
+
+Because the Discovery computing cluster is a shared system, we use a **job scheduler** to manage all requests for resources. The Slurm (Simple Linux Utility for Resource Management) job scheduler is an open-source job scheduler that allocates compute resources on clusters for queued, user-defined jobs. It performs the following functions:
 
 - Schedules user-submitted jobs
 - Allocates user-requested computing resources
 - Processes user-submitted jobs
 
 A listing of common Slurm commands can be found [here](https://slurm.schedmd.com/pdfs/summary.pdf).
+
+The compute resources on Discovery are shared across many projects and users. When a user submits a job with Slurm, resources are divided using a using a fair share algorithm. This table summarizes the most important resource limits for jobs on the Discovery cluster:
+
+```
+Queue          Default Run Time  Max Run Time  Max Cores Available   Maximum Number of Jobs or Job Steps
+(Partition)                                                          (Running or Pending)
+-----------    ----------------  ------------  -------------------   -----------------------------------
+Main           1 Hour            48 Hours      768                   5000
+```
+
+### Testing your job
 
 We recommend that you first test your job interactively on a compute node before submitting it remotely to the Slurm job scheduler, ensuring that you will have quality results after the job completes. You can do this by requesting an interactive session with a compute node using the `salloc` command.
 
