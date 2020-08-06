@@ -108,7 +108,7 @@ Where `JobStorageLocation`, `SubmitArguments`, and `ResourceTemplate` are define
 
 |Cluster Attribute| Meaning|
 |--|--|
-|`JobStorageLocation`|Path to directory for temporary job storage, e.g., `/home/rcf-proj/tt1/ttrojan/matlabJobStorage`|
+|`JobStorageLocation`|Path to directory for temporary job storage, e.g., `/home/project/tt1/ttrojan/matlabJobStorage`|
 |`SubmitArguments`| Arguments to Slurm job scheduler|
 |`ResourceTemplate`|Template for compute resources (recommended to keep as-is)|
 

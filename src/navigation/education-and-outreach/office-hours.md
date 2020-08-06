@@ -1,11 +1,12 @@
 ---
 title: Office Hours and Consultations
-id: 2
+id: 1
 thumbnail: /images/sr-icon-4.png
 path: office-hours
 parentPath: education-and-outreach
 cat: navigation
 parentEle: Education & Outreach
+backToTopBtnFlag: true
 ---
 
 ### Office Hours
@@ -24,8 +25,14 @@ Consultations for CARC account holders are available outside of regularly schedu
 
 If you'd like to request a consultation, please fill out a [consultation request](https://usc.qualtrics.com/jfe/form/SV_cYiW9xq8lug7yjb). Currently, all consultations are taking place via Zoom.
 
-### New Users Meetings
+### Meetings for new users
 
 New users to the CARC are highly encouraged to sign up for a short introductory meeting that includes a presentation and discussion on CARC resources and using the CARC for your research.
 
 To register for a New Users Meeting, please submit a request [here](https://usc.qualtrics.com/jfe/form/SV_cYiW9xq8lug7yjb) and specify that you're requesting a New Users Meeting. Currently, all New Users Meetings are taking place via Zoom.
+
+### New faculty orientations
+
+New faculty, junior faculty, and graduate students can schedule short, high-level presentations with our Research Facilitation & Applications team to learn more about CARC resources, policies, and sponsored research assistance. Please email <carc-support@usc.edu> to schedule one of these presentations.
+
+For presentations to be held at new faculty orientations at the beginning of the academic year, please contact us well in advance to avoid potential scheduling conflicts.

@@ -45,7 +45,6 @@ module.exports = {
         i1: 'How do I run MATLAB on CARC systems?',
         i2: 'How do I check if a program or library is installed on CARC systems?',
         i3: 'How do I check if a Python package is installed on CARC systems?',
-        i4: 'How do I compile a program on CARC systems?',
-        i5: 'Where are the compilers located on CARC systems?',
+        i4: 'What compilers are available on CARC systems?'
     }
 }

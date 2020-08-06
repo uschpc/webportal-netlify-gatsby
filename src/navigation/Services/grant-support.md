@@ -16,7 +16,7 @@ In addition to providing computing resources, the CARC can directly assist resea
 
 If you would like to contact the CARC regarding grant proposals or publications, please contact us at carc-support@usc.edu.
 
-### Acknowledging the CARC in your publications
+## Acknowledging the CARC in your publications
 
 All forms of publication, including web pages, resulting from work done using CARC resources should include the following citation:
 

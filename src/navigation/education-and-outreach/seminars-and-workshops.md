@@ -1,11 +1,12 @@
 ---
-title: Seminars & Workshops
-id: 1
+title: Seminars and Workshops
+id: 2
 thumbnail: /images/sr-icon-4.png
 path: seminars-and-workshops
 parentPath: education-and-outreach
 cat: navigation
 parentEle: Education & Outreach
+backToTopBtnFlag: true
 ---
 
 Each month, the CARC's Research Facilitation & Applications team offers a number of workshops designed to introduce users to the computing cluster and its features.
@@ -18,22 +19,40 @@ To see which courses are being taught by the CARC this month, see our [Events pa
 
 The Research Facilitation & Applications team is frequently developing new workshops for CARC users, including workshops on useful software and programming languages. Currently, the following workshops are offered on a rotating basis:
 
-### **Introduction to HPC**
+### Introduction to HPC
 
-An overview of the USC high-performance computing (HPC) cluster. This workshop covers how to connect, where and how to download files, the software repository, and using the batch job scheduler.
+An overview of the CARC high-performance computing (HPC) cluster. This workshop covers how to connect, where and how to download files, the software repository, and using the batch job scheduler.
 
-### **Introduction to Linux**
+### Introduction to Linux
 
 This workshop covers the basic skills needed to be productive in a command line environment. It covers navigating the file system, running commands, file permissions, and basic bash scripting.
 
 Materials: https://hpc-carpentry.github.io/hpc-shell/
 
-### **Installing Software**
-
-An overview of common methods for building software. This workshop covers pre-built binaries, building code from source, and building code with dependent software.
-
-### **Introduction to R**
+### Introduction to R
 
 An introduction to the R programming environment and language for statistical computing and graphics. This workshop covers base R concepts and functions for importing, exporting, processing, summarizing, visualizing, and modeling data. It also covers how to install packages and develop R scripts and discusses best practices for R programming.
 
 Materials: https://github.com/uschpc/workshop-r-intro
+
+### Installing Software
+
+This workshop is designed for researchers who need to install software packages on CARC systems. Using examples, we will cover concepts such as Python package installation, downloading software, linking to libraries, using Makefiles, compiling and optimizing code, and handling dependencies. It is recommended that you take the introductory Linux workshop first if you have not previously worked in a Linux environment.
+
+### CP2K: Running Ab Initio Molecular Dynamics Simulations**  
+
+An introduction to computational tools implemented within the CP2K program package. The most standard methods as well as some of the more advanced features will be introduced by overviews of background theory and through examples of application, while encouraging modular, flexible, and problem-oriented thinking. Recurring topics in the workshop are the scaling of algorithms, the combination of different levels of theory and of sampling, and tools and strategies for the analysis of results.
+
+### Running Parallel MATLAB on the CARC Cluster
+
+This workshop is designed to teach researchers how to use MATLAB’s Parallel Computing Toolbox on the CARC cluster. This hands-on tutorial will cover topics such as creating and submitting parallel MATLAB job scripts with PBS, porting a serial MATLAB script to a parallel script, and optimizing CPU and memory usage. It is recommended that you take an introductory workshop first if you have not previously worked in a Linux or high-performance computing environment.
+
+### Working with Pegasus Workflows
+
+This workshop is designed to introduce researchers to using Pegasus workflows on CARC systems. This hands-on tutorial will cover workflow design, composition, and execution; how to execute an MPI application as part of a workflow; and how to monitor, debug, and analyze workflows using Pegasus tools. It is recommended that you take an introductory workshop first if you have not previously worked in a Linux or high-performance computing environment.
+
+### Advanced Topics in HPC Cluster Computing
+
+This workshop is designed for users who are currently running jobs and want to learn new techniques for speeding up and parallelizing their computations. Topics may include data upload, storage and staging, efficient use of the file system, PBS arguments, PBSDSH and job arrays, parallel math libraries, checkpointing and profilers, and compiler arguments to enhance performance.
+
+This workshop is intended for intermediate- and advanced-level HPC users. It is recommended that you take the Introduction to HPC workshop first if you have not previously worked in a high-performance computing environment.

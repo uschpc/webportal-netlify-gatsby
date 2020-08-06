@@ -85,13 +85,15 @@ All CARC account holders are assigned three directories where they can store fil
 
 ##### Home directory
 
-Your home directory contains 100 GB of disk space and is intended for personal configurations and settings as well as software installations. When you log in to Discovery, you will always start in your home directory. It will be of the form:
+Your home directory has a quota of 100 GB of disk space and 2 million files, and it is intended for personal configurations and settings as well as software installations. It is not intended for IO-intensive jobs to be run directly from /home.
+
+When you log in to Discovery, you will always start in your home directory. It will be of the form:
 
 ```
 /home1/<username>
 ```
 
-/home1 is a high-performance parallel file system, so you can run IO-intensive jobs directly from it. However, the quota for each user on /home1 is 100 GB and 2 million files. To easily switch to your home directory, enter the command `cd` from the directory you're in.
+To easily switch to your home directory, enter the command `cd` from the directory you're in.
 
 We keep three weeks of snapshots for /home1. You can think of these snapshots as semi-backups, meaning that if you accidentally deleted some data we would be able to recover it within three weeks. If the file was created and deleted within a one-day period, then the snapshot cannot recover it. You should always keep extra backups of your important data and other files because of this.
 

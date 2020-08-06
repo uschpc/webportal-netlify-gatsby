@@ -15,7 +15,7 @@ All CARC account holders are assigned three directories where they can store fil
 
 ### Home directory
 
-/home1 is a high-performance parallel file system for storing configuration files and personal scripts. Each CARC user has a 100 GB home directory quota.
+/home1 is a network file system for storing configuration files and personal scripts. Each CARC user has a 100 GB home directory quota.
 
 The home directory provides 3-week snapshots with daily backups, so if you accidentally delete some of your important data, you can recover the data if the deletion was within the last three weeks. You should always keep extra backups of your important data since snapshots or semi-backups are *not* real backups.
 

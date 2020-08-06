@@ -64,7 +64,7 @@ Hello Tommy
 If it's not in the same directory, use an absolute path:
 
 ```
->>> exec(open('/home/rcf-proj/tt1/ttrojan/python/hello.py').read())
+>>> exec(open('/home/project/tt1/ttrojan/python/hello.py').read())
 Hello Tommy
 ```
 

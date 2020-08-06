@@ -65,7 +65,7 @@ A PI may request a USC guest account for a collaborator outside of the universit
 
 ### How do I log into the CARC cluster?
 
-To log in to the Linux-based cluster resource, you will need to use `ssh` to access one of the CARC's login/head nodes, hpc-login2 or hpc-login3.
+To log in to the Linux-based cluster resource, you will need to use `ssh` to access one of the CARC's login/head nodes, discovery.usc.edu or discovery2.usc.edu.
 
 These head nodes should only be used for editing and compiling programs; any computing should be done on the compute nodes. Computing jobs submitted to the head nodes may be terminated before they complete. To submit jobs to the compute nodes, use the Slurm resource manager.
 
@@ -90,7 +90,7 @@ The lines tell your computer to send two “alive” signals every 60 seconds be
 The default shell for new accounts is bash. You can check what your current shell is by typing the following command, where `<username>` is your USC NetID:
 
 ```
-<username>@hpc-login3 ~]$ echo $0
+<username>@discovery ~]$ echo $0
 ```
 
 If you’d like to change the shell you are using, you can type `bash` or `csh` after the `echo $0` command to temporarily use a new shell. If you’d like to permanently change your default shell, you can contact the CARC team by [submitting a ticket](/user-information/ticket-submission).
@@ -122,31 +122,22 @@ You can check the resources your program is consuming using the `top` process ma
 1. Request an interactive compute node using the `salloc` command.
 2. Run your job.
   ```
-   >
-  [ttrojan@hpc-login3 ~]$ salloc --ntasks=8  
-  ----------------------------------------
-  Begin SLURM Prolog Wed 21 Feb 2018 02:34:35 PM PST
-  Job ID:        767
-  Username:      ttrojan
-  Accountname:   lc_usc1
-  Name:          bash
-  Partition:     quick
-  Nodes:         hpc3264
-  TasksPerNode:  15(x2)
-  CPUSPerTask:   Default[1]
-  TMPDIR:        /tmp/767.quick
-  Cluster:       uschpc
-  HSDA Account:  false
-  End SLURM Prolog
-  ----------------------------------------
-  [ttrojan@hpc3264 ~]$mpirun find
+   salloc --ntasks=8
+   salloc: Pending job allocation 24210
+   salloc: job 24210 queued and waiting for resources
+   salloc: job 24210 has been allocated resources
+   salloc: Granted job allocation 24210
+   salloc: Waiting for resource configuration
+   salloc: Nodes d3264 are ready for job
+
+  [ttrojan@d3264 ~]$mpirun find
   ```
 
 3. Open a second terminal window, `ssh` to your compute node, and run the `top` command. This will display the processes running on that node.
 
   ```
-  [ttrojan@hpc-login3 ~]$ ssh hpc3264
-  [ttrojan@hpc3264]$ top
+  [ttrojan@discovery ~]$ ssh d3264
+  [ttrojan@d3264]$ top
   top - 15:37:36 up 21:50,  1 user,  load average: 0.00, 0.01, 0.05
   Tasks: 285 total,   1 running, 284 sleeping,   0 stopped,   0 zombie
   %Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
@@ -250,36 +241,98 @@ The home, project, and scratch file systems are shared, which means that your us
 
 ### How do I share my project data with another user?
 
-If the user is already a member of your project, the project PI can create a shared folder in the top level directory of the project and set its permissions to be writable by the group by using the commands below.
+By default, your directories are set so that only you can read and write to them. This is to protect your data from other users.
 
-> Note: Only the project PI can create a directory.
+When sharing your files, please keep the following in mind:
+
+1. Never set the permissions of your own directories to **777**.
+    * This gives anyone on the cluster the ability to delete your files.
+1. Read permission is sufficient for most activities.
+    * Do not allow others to write to directories that you own.
+1. Do not change the permissions of your home directory and its subdirectories.
+    * If something goes wrong, your login will be blocked by our SSH checks.
+
+To allow guests to read files, you will need to create an access-control list (ACL) which allows you to specify permissions on a per-user basis.
+
+For example, to allow someone with the username `guest_user` read access to your scratch directory:
 
 ```
-$ mkdir shared
-$ chmod g+wxs shared
+// Allows new files to be shared
+setfacl -Rdm u:guest_user:r-x /scratch/guest_user
+
+// Allows existing files to be shared
+setfacl -Rm u:guest_user:r-x /scratch/guest_user
 ```
 
-If you would like to consistently share data with a user who is not in your group, it is best to either have the PI add them to your project group or apply for a second account together. If this is not possible and you still need to share data, [submit a ticket](/user-information/ticket-submission) to explore other options.
+By adding the `-d` option, new files and directories will have the same ACLs as their parent directory applied at creation. The `-R` option will recursively set access.
+
+To remove `guest_user`'s read access:
+
+```
+setfacl -Rdm u:guest_user:--- /scratch/guest_user
+setfacl -Rm u:guest_user:--- /scratch/guest_user
+```
+
+*(optional)*
+To completely remove `guest_user`'s record in the ACL entry:
+
+```
+setfacl -Rdx u:guest_user /scratch/user_name   
+setfacl -Rx u:guest_user /scratch/user_name
+```
+
+If you forget which permissions have been set, you can run `getfacl` to check which ACLs have been set:
+
+```
+[ttroj@discovery]$ getfacl /scratch2/user_name
+getfacl: Removing leading '/' from absolute path names
+# file: scratch2/user_name
+# owner: user_name
+# group: group_name
+user::rwx
+user:guest_user:r-x
+group::---
+mask::r-x
+other::---
+default:user::rwx
+default:user:guest_user:r-x
+default:group::---
+default:mask::r-x
+default:other::---
+```
+
+If you require further assistance, please [submit a ticket](/user-information/ticket-submission) to explore other options.
 
 ### How do I check if I have enough disk space?
 
 Before you submit a large job or install new software, you should check that you have sufficient disk space. Your home directory has limited space, so you should use your project directory for research and software installation.
 
-To check your quota, use the `myquota` command. Compare the results of both the *Files Used* and *Files Soft* sections and the *Bytes Used* and *Bytes Soft* sections for each directory. If the value of *Used* is close to the value of *Soft* in either case, you will need to delete files or request an increase in disk space from the [Research Computing User Portal](/user-information/user-guides/high-performance-computing/research-computing-user-portal).
+To check your quota, use the `myquota` command. Under `size`, compare the results of `used` and `hard`. If the value of `used` is close to the value of `hard`, you will need to delete files or request an increase in disk space from the [Research Computing User Portal](/user-information/user-guides/high-performance-computing/research-computing-user-portal).
+
+>Note: The `chunk files` section indicates the way your files and directories are divided up by the parallel file system, not the absolute number of files.
 
 ```
 $ myquota
----------------------------------------------
-Disk Quota for /home/rcf-40/ttrojan
-            Used     Soft    Hard
-     Files  1897     100000  101000
-     Bytes  651.15M  1.00G   1.00G
----------------------------------------------
-Disk Quota for /home/rcf-proj2/tt1
-            Used    Soft     Hard
-     Files  273680  1000000  1001000
-     Bytes  55.98G  1.00T    1.02T
----------------------------------------------
+--------------------------
+/home1/ttrojan
+      user/group     ||           size          ||    chunk files
+     name     |  id  ||    used    |    hard    ||  used   |  hard
+--------------|------||------------|------------||---------|---------
+      ttrojan|375879||   51.88 MiB|  100.00 GiB||     3461|  2000000
+
+--------------------------
+/scratch/ttrojan
+      user/group     ||           size          ||    chunk files
+     name     |  id  ||    used    |    hard    ||  used   |  hard
+--------------|------||------------|------------||---------|---------
+      ttrojan|375879||   13.20 GiB|   10.00 TiB||   162363|unlimited
+
+--------------------------
+/scratch2/ttrojan
+      user/group     ||           size          ||    chunk files
+     name     |  id  ||    used    |    hard    ||  used   |  hard
+--------------|------||------------|------------||---------|---------
+      ttrojan|375879||   22.87 GiB|   30.00 TiB||    10118|unlimited
 ```
 
 ### I’m running out of space. How do I check the size of my files and directories?
@@ -320,81 +373,49 @@ $ man du
 
 ### What software is available on CARC systems?
 
-A comprehensive list of all software installed in the CARC environment can be found in the `/usr/usc` directory. Most traditional UNIX utilities can be found in `/usr/bin`.
+Most traditional UNIX utilities can be found in `/usr/bin`. All software managed by CARC staff is available using the Lmod module system. See our [Software Module System user guide](/user-information/user-guides/high-performance-computing/discovery/lmod) for in-depth information.
 
-For information on the CARC's software module system, which uses Lmod, see the [Software Module System user guide](/user-information/user-guides/high-performance-computing/discovery/lmod).
+The short version is that we use the Lmod module system to manage your environment. To use a certain software, you must "load" its module, which will then dynamically change your environment settings.
+
+To check if a certain software is available, use the `module avail` command. The following example checks for `samtools`:
+
+```
+$ module avail samtools
+
+---------------- /spack/apps/lmod/linux-centos7-x86_64/gcc/8.3.0 ----------------
+   samtools/1.9    samtools/1.10 (D)
+
+  Where:
+   D:  Default Module
+
+Use "module spider" to find all possible modules and extensions.
+Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
+```
+
+Some software may not be built with the compiler in your current environment and will not show up when you use `module avail`.
 
 ### How do I run MATLAB on CARC systems?
 
-See the [MATLAB user guide](/user-information/user-guides/software/matlab) for instructions.
+See our [MATLAB user guide](/user-information/user-guides/software/matlab) for instructions.
+
+### Why am I getting a “command not found” error when I try to run a CARC application?
+
+The shell gives this error when it is unable to find the requested application in your search path (`$PATH`). You will either need to give the full path to the program you want to run or add the program to your `PATH` environment variable.
+
+For example, if your program is saved in `/scratch/ttroj/software/bin`, you can add the parent directory to your `PATH` like so:
+
+```
+export PATH=/scratch/ttroj/software/bin:${PATH}
+```
+
+Make sure you include `:${PATH}` so that your old `PATH` will be included in the new one.
+
 
 ### How do I check if a program or library is installed on CARC systems?
 
-There are three ways to do this:
+The easiest method is to use Lmod to check. If you know the name of the program, you can use `module avail <program_name>` to see if you can currently load its module.
 
-1. **Use the `which` or `whereis` command to locate binary (executable) programs in your path.**
-
-   The default CARC path only searches a few directories, so the program that you are seeking may not be discoverable. For example, programs under `/usr/usc` are not initially discoverable, which is why you have to source setup files to use them.
-
-   Example:
-   ```
-   $ which gcc
-   /usr/bin/gcc
-  ```
-  ```
-   $ whereis gcc
-   gcc: /usr/bin/gcc /usr/lib/gcc /usr/libexec/gcc /usr/share/man/man1/gcc.1.gz
-  ```
-  ```
-   $ source /usr/usc/gnu/gcc/5.3.0/setup.sh
-  ```
-  ```
-   $ which gcc
-   /usr/usc/gnu/gcc/5.3.0/bin/gcc
-  ```  
-
-2. **Use the RPM package manager to locate programs or libraries that have been installed on a node.**
-
-    The command `rpm` will not find programs and libraries installed under `/usr/usc`.
-
-    >Note: Packages available on head nodes might not be available on compute nodes.
-
-    Example:
-
-    ```
-    $ rpm -qa | fgrep atlas
-    atlas-3.8.4-2.el6.x86_64
-    atlas-devel-3.8.4-2.el6.x86_64
-    ```
-    ```
-    $ rpm -q --info atlas
-    Name        : atlas                        
-    Version     : 3.8.4                             
-    Release     : 2.el6                         
-    Build Date: Tue 20 Mar 2012 07:03:13 PM PDT
-    :
-    URL         : http://math-atlas.sourceforge.net/
-    Summary     : Automatically Tuned Linear Algebra Software
-    Description :
-    The ATLAS (Automatically Tuned Linear Algebra Software) project is an
-    :
-    ```
-    ```
-    $ rpm -q --filesbypkg atlas
-    atlas                     /etc/ld.so.conf.d/atlas-x86_64.conf
-    atlas                     /usr/lib64/atlas
-    atlas                     /usr/lib64/atlas/libatlas.so.3
-    :
-    ```
-    ```
-    $ rpm -q --filesbypkg atlas | fgrep blas
-    atlas                     /usr/lib64/atlas/libcblas.so.3
-    atlas                     /usr/lib64/atlas/libcblas.so.3.0
-    atlas                     /usr/lib64/atlas/libf77blas.so.3
-    :
-    ```  
-
-3. **Check the /usr/usc directory.**
+It may be the case that the desired software is installed but not "available". Lmod sometimes "hides" software if you don't have the necessary prerequisites loaded. If that's the case, you can use `module spider <program_name>`, which will search through the entire software stack. If the software is found, Lmod will tell you what modules need to be loaded first.
 
 ### How do I check if a Python package is installed on CARC systems?
 
@@ -403,7 +424,7 @@ The command `pip freeze` will display all the Python packages installed in the c
 Example:
 
 ```
-$ source /usr/usc/python/3.6.0/setup.sh
+$ module load python
 $ pip3 freeze
 appdirs==1.4.0
 cycler==0.10.0
@@ -417,63 +438,26 @@ scipy==0.18.1
 	:
 ```
 
-If you are using Python 2, you should use the following commands:
+### What compilers are available on CARC systems?
+
+For compatibility, CARC has multiple compilers available:
+
+|Compiler Type| Version|
+|---|---|
+|gcc| 4.9.4|
+|gcc| 8.3.0|
+|gcc| 9.2.0|
+|Intel| 18.0.4|
+|Intel| 19.0.4|
+
+Each compiler has its own software tree which is "unlocked" by loading the appropriate module. This ensures compatibility between applications. If you want to switch compilers, Lmod will automatically swap modules you have already loaded. For example, Cmake is installed in both gcc 8.3.0 and 9.2.0
 
 ```
-$ source /usr/usc/python/2.7.8/setup.sh
-$ pip freeze
-```
+module load gcc/8.3.0
+module load cmake
 
-### How do I compile a program on CARC systems?
-
-The CARC has the GNU, Portland Group, and Intel compilers, and MPI compiler wrappers installed in the `/usr/usc` directory.
-
-To use one of these compilers, you must source the appropriate setup.csh or setup.sh file each time you log in.
-
-For example, the following command sets up the Portland Group compiler:
-
-```
-source /usr/usc/pgi/default/setup.csh
-```
-
-### Where are the compilers located on CARC systems?
-
-GNU compilers come installed on the operating system and are, by default, in your path.
-
-Examples:
-```
-$ which gfortran
-/usr/bin/gfortran
-$ gfortran --version
-GNU Fortran (GCC) 4.8.5 20150623 (Red Hat 4.8.5-4)
-```
-```
-$ which f95
-/usr/bin/f95
-$ f95 --version
-GNU Fortran (GCC) 4.8.5 20150623 (Red Hat 4.8.5-4)
-```
-```
-$ which gcc
-/usr/bin/gcc
-$ gcc --version
-gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-4)
-```
-```
-$ which g++
-/usr/bin/g++
-$ g++ --version
-g++ (GCC) 4.8.5 20150623 (Red Hat 4.8.5-4)
-```
-
-For compatibility, we also have additional versions of GNU compilers which can be found under `/usr/usc/gnu/gcc`.
-
-Intel compilers are available under `/usr/usc/intel`. Choose the version of the compiler you want to use and source its setup file to access it.
-
-```
-$ source /usr/usc/intel/16.0/setup.sh
-$ which ifort
-/usr/usc/intel/16.0/compilers_and_libraries_2016.0.109/linux/bin/intel64/ifort
-```
-
-Java is available under `/usr/usc/java` and `/usr/usc/jdk`.
+# swap compilers
+module load gcc/9.2.0
+The following have been reloaded with a version change:
+  1) cmake/3.15.4 => cmake/3.16.2   2) gcc/9.2.0 => gcc/8.3.0
+ ```

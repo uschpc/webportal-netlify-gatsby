@@ -30,4 +30,6 @@ An overview of the USC high-performance computing (HPC) cluster. This workshop c
 *Friday, August 21, 2020  
 1:00-2:50 pm*
 
+An introduction to computational tools implemented within the CP2K program package. The most standard methods as well as some of the more advanced features will be introduced by overviews of background theory and through examples of application, while encouraging modular, flexible, and problem-oriented thinking. Recurring topics in the workshop are the scaling of algorithms, the combination of different levels of theory and of sampling, and tools and strategies for the analysis of results.
+
 >How to enroll: Complete the [Activity Sign-Up page](https://docs.google.com/forms/d/e/1FAIpQLSdqDsvkTP9AsnO82mPzOvztXwp2hSCeD7D82Lt7kjOloe6liA/viewform) for this workshop and contact <carc-support@usc.edu> for Zoom session details.
