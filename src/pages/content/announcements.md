@@ -2,7 +2,7 @@
 path: not-used
 cat: announcements
 title: ANNOUNCEMENTS
-date: 05/20/20
+date: August 10, 2020
 author: Yaseen A.
 ---
 
