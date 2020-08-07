@@ -83,10 +83,11 @@ and (max-width : 1024px)  {
                         display: none;
                     }
                     .middle-column{
-                        width: 70%;
+                        width: 100%;
                     }
                     .right-column {
                         width: 25%;
+                        display: none;
                     }
                 }
             }
@@ -363,6 +364,11 @@ and (max-width : 1024px)  {
                     font-weight: bold;
                 }
             }
+            .user-support {
+                h1 {
+                    width: 100%;
+                }
+            }
         }
     }
 }
@@ -426,7 +432,7 @@ and (max-width : 767px) {
                         width: 100%;
                     }
                     .right-column {
-                        width: 100%;
+                        display: none;
                     }
                 }
             }
