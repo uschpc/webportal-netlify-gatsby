@@ -77,7 +77,7 @@ The CARC systems will log you off of a head node after 20 minutes of inactivity,
 
 > Note: You will need to create a config file if one doesn’t exist.
 
-```
+```sh
 Host *
   ServerAliveInterval 60
   ServerAliveCountMax 2
@@ -89,7 +89,7 @@ The lines tell your computer to send two “alive” signals every 60 seconds be
 
 The default shell for new accounts is bash. You can check what your current shell is by typing the following command, where `<username>` is your USC NetID:
 
-```
+```sh
 <username>@discovery ~]$ echo $0
 ```
 
@@ -121,7 +121,7 @@ You can check the resources your program is consuming using the `top` process ma
 
 1. Request an interactive compute node using the `salloc` command.
 2. Run your job.
-  ```
+  ```sh
    salloc --ntasks=8
    salloc: Pending job allocation 24210
    salloc: job 24210 queued and waiting for resources
@@ -129,13 +129,12 @@ You can check the resources your program is consuming using the `top` process ma
    salloc: Granted job allocation 24210
    salloc: Waiting for resource configuration
    salloc: Nodes d3264 are ready for job
-
-  [ttrojan@d3264 ~]$mpirun find
+   [ttrojan@d3264 ~]$mpirun find
   ```
 
 3. Open a second terminal window, `ssh` to your compute node, and run the `top` command. This will display the processes running on that node.
 
-  ```
+  ```sh
   [ttrojan@discovery ~]$ ssh d3264
   [ttrojan@d3264]$ top
   top - 15:37:36 up 21:50,  1 user,  load average: 0.00, 0.01, 0.05
@@ -153,7 +152,8 @@ You can check the resources your program is consuming using the `top` process ma
   15205 ttrojan     20   0   15344    996    768 S   1.3  0.0   0:00.08 find
   15206 ttrojan     20   0   15344    996    768 S   1.3  0.0   0:00.08 find
   15207 ttrojan     20   0   15344    996    768 S   1.3  0.0   0:00.08 find
-  ```  
+  ```
+
 4. The number of your job processes should match the number of tasks (`ntasks`) requested in your `salloc` command.
 
 If you see only one process, your job is using only one core.
@@ -166,9 +166,8 @@ A Slurm file, or script, is a simple text file that contains your cluster resour
 
 If you only belong to a single project, there is no need to specify which account to use. If you are part of multiple projects, then the Slurm job scheduler will consume the core-hours allocation of your default project group unless you specify a different one. To avoid confusion, it is best to specify which project group's allocation to use in your Slurm script like so:
 
-```
+```sh
 #SLURM --account=<account_id>
-
 ```
 
 where `<account_id>` is your account name of the form lc_xxx.
@@ -177,7 +176,7 @@ where `<account_id>` is your account name of the form lc_xxx.
 
 To see a listing of all of your available accounts and your current core hour allocations in these accounts, use the following command:
 
-```
+```sh
 mybalance -h
 ```
 
@@ -185,21 +184,21 @@ The default CARC allocation is used to run a job when no allocation is specified
 
 You can override the default account by using the `-account` command:
 
-```
+```sh
 sbatch –account=<account_id> myjob.slurm
 ```
 
 For further details on `salloc`, `srun`, and `sbatch`, please read the official manual pages available by typing the following on any CARC login/head node:
 
-```
+```sh
 man salloc
 ```
 
-```
+```sh
 man srun
 ```
 
-```
+```sh
 man sbatch
 ```
 
@@ -256,10 +255,9 @@ To allow guests to read files, you will need to create an access-control list (A
 
 For example, to allow someone with the username `guest_user` read access to your scratch directory:
 
-```
+```sh
 // Allows new files to be shared
 setfacl -Rdm u:guest_user:r-x /scratch/guest_user
-
 // Allows existing files to be shared
 setfacl -Rm u:guest_user:r-x /scratch/guest_user
 ```
@@ -268,7 +266,7 @@ By adding the `-d` option, new files and directories will have the same ACLs as 
 
 To remove `guest_user`'s read access:
 
-```
+```sh
 setfacl -Rdm u:guest_user:--- /scratch/guest_user
 setfacl -Rm u:guest_user:--- /scratch/guest_user
 ```
@@ -276,19 +274,19 @@ setfacl -Rm u:guest_user:--- /scratch/guest_user
 *(optional)*
 To completely remove `guest_user`'s record in the ACL entry:
 
-```
+```sh
 setfacl -Rdx u:guest_user /scratch/user_name   
 setfacl -Rx u:guest_user /scratch/user_name
 ```
 
 If you forget which permissions have been set, you can run `getfacl` to check which ACLs have been set:
 
-```
+```sh
 [ttroj@discovery]$ getfacl /scratch2/user_name
 getfacl: Removing leading '/' from absolute path names
-# file: scratch2/user_name
-# owner: user_name
-# group: group_name
+// File: scratch2/user_name
+// Owner: user_name
+// Group: group_name
 user::rwx
 user:guest_user:r-x
 group::---
@@ -311,7 +309,7 @@ To check your quota, use the `myquota` command. Under `size`, compare the result
 
 >Note: The `chunk files` section indicates the way your files and directories are divided up by the parallel file system, not the absolute number of files.
 
-```
+```sh
 $ myquota
 --------------------------
 /home1/ttrojan
@@ -319,14 +317,12 @@ $ myquota
      name     |  id  ||    used    |    hard    ||  used   |  hard
 --------------|------||------------|------------||---------|---------
       ttrojan|375879||   51.88 MiB|  100.00 GiB||     3461|  2000000
-
 --------------------------
 /scratch/ttrojan
       user/group     ||           size          ||    chunk files
      name     |  id  ||    used    |    hard    ||  used   |  hard
 --------------|------||------------|------------||---------|---------
       ttrojan|375879||   13.20 GiB|   10.00 TiB||   162363|unlimited
-
 --------------------------
 /scratch2/ttrojan
       user/group     ||           size          ||    chunk files
@@ -341,7 +337,7 @@ To check your disk usage, use the `du` command.
 
 To list the largest directories from the current directory, use the following command:
 
-```
+```sh
 $ du -s * | sort -nr | head -n10
 ```
 
@@ -353,7 +349,7 @@ $ du -s * | sort -nr | head -n10
 
 To list the top ten largest files from the current directory, use the following command:
 
-```
+```sh
 $ du . | sort -nr | head -n10
 ```
 
@@ -365,7 +361,7 @@ $ du . | sort -nr | head -n10
 
 To see all other options for `du`, use the following command:
 
-```
+```sh
 $ man du
 ```
 
@@ -379,15 +375,12 @@ The short version is that we use the Lmod module system to manage your environme
 
 To check if a certain software is available, use the `module avail` command. The following example checks for `samtools`:
 
-```
+```sh
 $ module avail samtools
-
 ---------------- /spack/apps/lmod/linux-centos7-x86_64/gcc/8.3.0 ----------------
    samtools/1.9    samtools/1.10 (D)
-
   Where:
    D:  Default Module
-
 Use "module spider" to find all possible modules and extensions.
 Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
 ```
@@ -404,7 +397,7 @@ The shell gives this error when it is unable to find the requested application i
 
 For example, if your program is saved in `/scratch/ttroj/software/bin`, you can add the parent directory to your `PATH` like so:
 
-```
+```sh
 export PATH=/scratch/ttroj/software/bin:${PATH}
 ```
 
@@ -423,7 +416,7 @@ The command `pip freeze` will display all the Python packages installed in the c
 
 Example:
 
-```
+```sh
 $ module load python
 $ pip3 freeze
 appdirs==1.4.0
@@ -450,14 +443,13 @@ For compatibility, CARC has multiple compilers available:
 |Intel| 18.0.4|
 |Intel| 19.0.4|
 
-Each compiler has its own software tree which is "unlocked" by loading the appropriate module. This ensures compatibility between applications. If you want to switch compilers, Lmod will automatically swap modules you have already loaded. For example, Cmake is installed in both gcc 8.3.0 and 9.2.0
+Each compiler has its own software tree which is "unlocked" by loading the appropriate module. This ensures compatibility between applications. If you want to switch compilers, Lmod will automatically swap modules you have already loaded. For example, Cmake is installed in both gcc 8.3.0 and 9.2.0:
 
-```
+```sh
 module load gcc/8.3.0
 module load cmake
-
-# swap compilers
+// Swap compilers
 module load gcc/9.2.0
 The following have been reloaded with a version change:
   1) cmake/3.15.4 => cmake/3.16.2   2) gcc/9.2.0 => gcc/8.3.0
- ```
+```

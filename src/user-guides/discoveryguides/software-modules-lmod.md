@@ -15,7 +15,7 @@ One of the biggest user-facing changes to the CARC's new computing cluster is tr
 
 The benefit of Lmod over the setup.sh method of using software is that Lmod dynamically changes your environment based on the software you are using, unloading and reloading software-dependent modules so your libraries are compatible. These changes to your environment are necessary because, for example, libraries compiled with a certain compiler are not necessarily compatible with libraries compiled by a different compiler, and your environment must be changed to accommodate these incompatibilities. Previously, you would have to change your environment by logging out and logging back in. **With Lmod, this reset is done dynamically when you load new modules**.
 
-The official documentation for Lmod can be found here: https://lmod.readthedocs.io/en/latest/010_user.html
+The official documentation for Lmod can be found here: https://lmod.readthedocs.io/en/latest/010_user.html.
 
 ### Checking available software
 
@@ -25,10 +25,8 @@ To see what modules you can load into your environment, run the command `module 
 --------/spack/apps/lmod/linux-centos7-x86_64/Core --------
 gcc/4.9.4     gcc/9.2.0    (D)    intel/19.0.4 (D)
 gcc/8.3.0    intel/18.0.4        usc
-
 Where:
-D:  Default Module
-
+D: = the Default Module
 Use "module spider" to find all possible modules and extensions.
 Use "module keyword key1 key2 ..." to search for all possible modules
 matching any of the "keys".
@@ -130,7 +128,6 @@ If for some reason you need to use the `intel` compiler set, you can use the `mo
 
 ```
 module swap gcc intel
-
 The following have been reloaded with a version change:
   1) jellyfish/2.2.7 => jellyfish/2.3.0
 ```
@@ -142,9 +139,7 @@ The module system can also automatically replace or deactivate modules to ensure
 $ module load intel  # load default version of Intel compiler
 $ module load petsc  # load default version of PETSc
 $ module load gcc    # change compiler
-
 Lmod is automatically replacing "intel/17.0.4" with "gcc/7.1.0".
-
 Due to MODULEPATH changes, the following have been reloaded:
 1) impi/17.0.3     2) petsc/3.7
 

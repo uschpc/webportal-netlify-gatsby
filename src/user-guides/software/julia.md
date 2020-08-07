@@ -76,7 +76,9 @@ sbatch jl.job
 
 ### Installing Julia packages
 
-You can install Julia packages inside your home directory. By default, Julia will install packages in a `~/.julia/packages` directory inside your home directory. The easiest way to install is by opening an interactive session of Julia and using the package mode. To install a registered package, enter the `]` key to switch to package mode and then use the `add` command together with the package name. For example:
+You can install Julia packages inside your home directory. By default, Julia will install packages in a `~/.julia/packages` directory inside your home directory. The easiest way to install is by opening an interactive session of Julia and using the package mode.
+
+To install a registered package, enter the `]` key to switch to package mode and then use the `add` command together with the package name. For example:
 
 ```julia
 add DataFrames
@@ -103,11 +105,12 @@ To reset this environment variable, enter `unset JULIA_DEPOT_PATH` in the shell.
 
 ### Installing a different version of Julia
 
-If you want a different version of Julia that is not currently installed on Discovery, please contact us at `carc-support@usc.edu` and we may be able to install it for you.
+If you want a different version of Julia that is not currently installed on Discovery, please [submit a help ticket](/user-information/ticket-submission) and we may be able to install it for you.
+
 
 Alternatively, you can install a different version of Julia inside your home directory from official binaries. The following steps show how to do this using Julia version 1.4.2 as an example.
 
-Find the binary file for the version of Julia that you want [here](https://www.julialang.org/downloads) (one of the 'Generic Linux Binaries for x86' 64-bit files) and copy the link to the file. Then download the file into your home directory using `wget`:
+Find the binary file for the version of Julia that you want [here](https://www.julialang.org/downloads) (one of the "Generic Linux Binaries for x86" 64-bit files) and copy the link to the file. Then download the file into your home directory using `wget`:
 
 ```sh
 wget https://julialang-s3.julialang.org/bin/linux/x64/1.4/julia-1.4.2-linux-x86_64.tar.gz

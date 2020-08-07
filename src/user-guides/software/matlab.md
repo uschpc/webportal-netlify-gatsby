@@ -70,7 +70,7 @@ Load the module and run MATLAB:
 
 ```sh
 module load matlab
-// Don't include the .m extension in your script name  
+// Do not include the .m extension in your script name  
 matlab -r 'script_name'
 ```
 
@@ -137,4 +137,4 @@ delete(pool)
 
 ### Requesting newer versions of MATLAB
 
-It may be necessary to run MATLAB using a version that is not currently available. Licensed software such as MATLAB requires license set up by CARC staff. If there is a new version of MATLAB that you want to use, please contact us at carc-support@usc.edu to request an update.
+It may be necessary to run MATLAB using a version that is not currently available. Licensed software such as MATLAB requires license setup by CARC staff. If there is a new version of MATLAB that you want to use, please [submit a help ticket](/user-information/ticket-submission) and we may be able to install it for you.

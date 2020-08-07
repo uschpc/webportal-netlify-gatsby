@@ -22,7 +22,7 @@ export default function Template({ data }) {
   let subMenu = findSubMenu(content.frontmatter.parentEle, data.sideMenu)
 
     return (
-      <Layout {...data.navigation}>
+      <Layout {...data.navigation} backToTopBtnFlag={content.frontmatter.backToTopBtnFlag}>
           <SEO title={content.frontmatter.title}/>
           <div className="nav-pages">
             <div className="container">
@@ -138,6 +138,7 @@ export const coldFrontQuery = graphql`
           parentEle
           uniqID
           sharedID
+          backToTopBtnFlag
         }
       html
     }
