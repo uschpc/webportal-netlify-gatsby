@@ -6,4 +6,4 @@ date: August 10, 2020
 author: Yaseen A.
 ---
 
-An update to CARC storage allocations on the project file system
+Scheduled maintenance on August 9 on /scratch2 is now complete.

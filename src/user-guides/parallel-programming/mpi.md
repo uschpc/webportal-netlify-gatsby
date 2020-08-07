@@ -71,7 +71,7 @@ Compiling with MPI is quite straightforward. Below is a list of MPI-specific com
 | C++ | `mpicxx` | `icpc, g++` |
 | Fortran 77/90 | `mpif90, mpif77` | `ifort, gfortran` |
 
-When you compile a parallel program, make sure that you record the version/module of MPI used and add the corresponding `module load <mpi-library>` to your SLURM job script.
+When you compile a parallel program, make sure that you record the version/module of MPI used and add the corresponding `module load <mpi-library>` to your Slurm job script.
 
 >Note: Intel MPI supplies separate compiler commands (wrappers) for the Intel compilers, in the form of `mpiicc`, `mpiicpc` and `mpiifort`. Using `mpicc`, `mpicxx` and `mpif90` will call the GNU compilers.
 
@@ -88,7 +88,7 @@ mpirun -np $SLURM_NTASKS ./mpi_program.x
 
 The important parameter to include is the number of MPI processes specification (`-np`).
 
-The `$SLURM_NTASKS` variable corresponds to the SLURM task count (i.e., the number of MPI ranks) requested with the `#SBATCH --ntasks` option.
+The `$SLURM_NTASKS` variable corresponds to the Slurm task count (i.e., the number of MPI ranks) requested with the `#SBATCH --ntasks` option.
 
 ### Multi-threaded MPI
 
@@ -96,7 +96,7 @@ For optimal performance, especially in the case of multi-threaded parallel progr
 
 When running multi-threaded jobs, make sure to also link multi-threaded libraries (e.g., MKL, FFTW), and vice versa, link single threaded libraries to single threaded MPI programs.
 
-The `OMP_NUM_THREADS` count can be calculated automatically by utilizing SLURM-provided variables, assuming that all nodes have the same CPU core count. This can prevent accidental over or under-subscription when node or task count in the SLURM script changes:
+The `OMP_NUM_THREADS` count can be calculated automatically by utilizing Slurm-provided variables, assuming that all nodes have the same CPU core count. This can prevent accidental over or under-subscription when node or task count in the Slurm script changes:
 
 ```
 // Find number of threads for OpenMP

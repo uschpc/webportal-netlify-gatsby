@@ -31,3 +31,5 @@ If your current research computing environment is costing you time, straining yo
 The CARC can consult with you to help you understand what is involved in moving your research computing to the cloud. While cloud computing is relatively new, it has quickly become recognized as an empowering technology that is being widely adopted across many research domains.
 
 If you are interested in the cloud or not fully satisfied with your current computing solution, the CARC can help you build a model of how a cloud implementation would work for your research, and what it will cost you in time and money.
+
+For more information on our cloud computing services, see our [Hybrid Cloud Computing user guides](/user-information/user-guides/hybrid-cloud-computing).

@@ -113,7 +113,7 @@ sbatch python.slurm
 
 #### Discovery
 
-Python packages are not currently tracked in the module system. To see available packages, you can use the `pip3` and `freeze` commands:
+Python packages are not currently tracked in the [module system](/user-information/user-guides/high-performance-computing/discovery/lmod). To see available packages, you can use the `pip3` and `freeze` commands:
 
     pip3 freeze
     appdirs==1.4.3
@@ -176,7 +176,7 @@ Now navigate into the unpacked directory:
 cd Python-3.8.1
 ```
 
-Then configure the install while specifying an install directory inside your home directory, build, and install:
+Then configure the install while specifying an install directory inside your home directory, build using `make`, and install:
 
 ```sh
 ./configure --prefix=/home1/ttrojan/Python-3.8.1

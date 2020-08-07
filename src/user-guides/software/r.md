@@ -111,6 +111,6 @@ library(slurmR)
 
 ### Installing a different version of R
 
-If you want a different version of R that is not currently installed on Discovery, please contact us at `carc-support@usc.edu` and we may be able to install it for you.
+If you want a different version of R that is not currently installed on Discovery, please [submit a help ticket](/user-information/ticket-submission) and we may be able to install it for you.
 
-Alternatively, you can compile and install R from source inside your home directory, or you can use a Singularity container and install a different version there, either from official binaries or from source.
+Alternatively, you can compile and install R from source inside your home directory, or you can use a [Singularity container](https://singularity.lbl.gov/) and install a different version there, either from official binaries or from source.

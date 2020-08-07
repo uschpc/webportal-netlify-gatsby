@@ -77,6 +77,8 @@ To connect to Discovery using any of these, download and install the client and 
 
 Duo 2FA is required to access Discovery. If you have not already signed up for Duo on your USC NetID account, please visit [this page](https://itservices.usc.edu/duo/enroll) to enroll.
 
+> Note: The login node is a shared resource that is used by many users simultaneously. Be careful not to do tasks on the login node that will negatively impact other users, or we may terminate your process without warning. You may run small tests on the login node, but beyond that you should use the compute nodes.
+
 ### Organizing files
 
 #### File system
@@ -99,11 +101,9 @@ We keep three weeks of snapshots for /home1. You can think of these snapshots as
 
 ##### Project directory
 
-Each project member has their own subdirectory within their group's project directory, where they can store data, scripts, and related files. Users affiliated with multiple CARC projects will have multiple project directories so they can easily share their files with the appropriate groups.
+The new parallel project file system was deployed during the summer of 2020. This file system has a capacity of ~10 PB and consists of directories for different research project groups. The quota for each project directory ranges between 1 and 5 GB.
 
-The new parallel project file system was deployed during the summer of 2020. This file system has a capacity of ~10PB. Each CARC user receives their own subdirectory within the directories of each project they belong to, and the quota for each project directory ranges between 1 and 5 GB.
-
-The project file system should be used for most of your CARC work, and it's also where you can collaborate with your research project group. Each project group member will have their own subdirectory within their group's project directory, where they can store data, scripts, and related files.
+Each project member has their own subdirectory within their group's project directory, where they can store data, scripts, and related files. The project file system should be used for most of your CARC work, and it's also where you can collaborate with your research project group. Users affiliated with multiple CARC projects will have multiple project directories so they can easily share their files with the appropriate groups.
 
 The project directory can be located by typing:
 
@@ -117,7 +117,7 @@ where `<user_name>` is your USC NetID (your email address without "@usc.edu").
 
 The /scratch and /scratch2 file systems are high-performing, parallel file systems running ZFS/BeeGFS that are hosted on dedicated storage machines. They are shared resources for use by all CARC researchers. Data stored in /scratch and /scratch2 are retained and not deleted between jobs, but they are *not* backed up. Data should be periodically copied to a permanent project file system to decrease the risk of data loss.
 
-Directories are automatically created for each CARC user under /scratch and /scratch2 so that data can be stored there temporarily. These directories are accessible only to you, and each user account is limited to a 10TB quota for each of /scratch and /scratch2.
+Directories are automatically created for each CARC user under /scratch and /scratch2 so that data can be stored there temporarily. These directories are accessible only to you, and each user account is limited to a 10 TB quota for each of /scratch and /scratch2.
 
 Your scratch directory is located at:
 
@@ -139,7 +139,9 @@ Your scratch2 directory is located at:
 
 The Discovery cluster is a shared resource. As a result, there are quotas on usage to help ensure fair access to all USC researchers. There are quotas on the number of files stored and the amount of disk space used.
 
-To check your quotas, enter the command `myquota`. You can be in any of your directories when you enter this command. It will return results similar to the following:
+To check your quota, use the `myquota` command. Under `size`, compare the results of `used` and `hard`. If the value of `used` is close to the value of `hard`, you will need to delete files or request an increase in disk space from the [Research Computing User Portal](/user-information/user-guides/high-performance-computing/research-computing-user-portal).
+
+>Note: The `chunk files` section indicates the way your files and directories are divided up by the parallel file system, not the absolute number of files.
 
 ```
 myquota
@@ -165,7 +167,7 @@ For more information on data management, see the [Data Management user guides](/
 
 ### Transferring files
 
-The CARC has a dedicated data transfer node at `hpc-transfer.usc.edu` that is configured for fast file transfers. hpc-transfer is also a Globus endpoint. To access it, use hpc-transfer instead of the normal login node (@discovery.usc.edu) when logging in:
+The CARC has a dedicated data transfer node at `hpc-transfer.usc.edu` that is configured for fast file transfers. hpc-transfer is also a Globus endpoint. To access it, use `@hpc-transfer.usc.edu` instead of the normal login node (`@discovery.usc.edu`) when logging in:
 
 ```
 ssh <username>@hpc-transfer.usc.edu
@@ -175,7 +177,7 @@ Remember to always transfer files into your home or scratch directories where yo
 
 #### Between your local machine and Discovery
 
-There are a number of ways to transfer files between your local machine and the Discovery cluster. These include the commands `sftp`, `scp`, or `rsync` as well as GUI apps like Cyberduck or FileZilla.
+There are a number of ways to transfer files between your local machine and Discovery. These include the commands `sftp`, `scp`, or `rsync` as well as GUI apps like Cyberduck or FileZilla.
 
 For more information on transferring files between your local machine and the Discovery cluster, see the [Data Management user guides](/user-information/user-guides/data-management).
 
@@ -233,9 +235,11 @@ module load python
 
 This loads the default version of Python. Then, for example, enter `python` to begin an interactive Python session.
 
+For more information on the software module system, see our [Software Module System user guide](/user-information/user-guides/high-performance-computing/discovery/lmod).
+
 #### Installing your own software
 
-Researchers are encouraged to install any software, libraries, and packages necessary for their work. Consult the software's documentation on how to install from source or with pre-built binaries. Additionally, for a more controlled and portable computing environment, consider using a Singularity container for your software builds.
+Researchers are encouraged to install any software, libraries, and packages necessary for their work. Consult the software's documentation on how to install from source or with pre-built binaries. Additionally, for a more controlled and portable computing environment, consider using a [Singularity container](https://singularity.lbl.gov/) for your software builds.
 
 For more information on installing software, see the [Software user guides](/user-information/user-guides/software).
 
@@ -303,9 +307,13 @@ sbatch my.job
 
 where the argument to the command is the job script's file name (e.g., `my.job`).
 
-Submitted jobs are processed remotely. The process is recorded and written to an output file in the same directory that your job script is stored in. By default, this output file is named `slurm-<jobid>.out`. This is a plain-text file, so you can view it using the `less` command: `less slurm-<jobid>.out`.
+Submitted jobs are processed remotely. The process is recorded and written to an output file in the same directory that your job script is stored in. By default, this output file is named `slurm-<jobid>.out`. This is a plain-text file, so you can view it using the `less` command:
 
-For more information on creating and submitting Slurm job scripts, see the [Running Jobs user guide](/user-information/user-guides/discovery/running-jobs).
+```
+less slurm-<jobid>.out`.
+```
+
+For more information on creating and submitting Slurm job scripts, see the [Running Jobs user guide](/user-information/user-guides/high-performance-computing/discovery/running-jobs).
 
 ### Monitoring your job
 
@@ -345,4 +353,4 @@ Your job may remain in the queue for a short time, but its status will change to
 
 ### Getting help
 
-If you need additional assistance getting started with the CARC and Discovery, please see the [User Support page](/user-information/user-support) for more information.
+If you need additional assistance getting started with the CARC and Discovery, please see the [User Support page](/user-support) for more information.

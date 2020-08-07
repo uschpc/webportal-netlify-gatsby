@@ -6,6 +6,7 @@ path: accounts
 parentPath: user-information
 cat: navigation
 parentEle: User Information
+backToTopBtnFlag: true
 ---
 
 All USC students, staff, and faculty have access to the Center for Advanced Research Computing's systems for their research projects. The CARC offers different types and sizes of computing and storage resource allocations for these projects.
