@@ -1,15 +1,18 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, {useState} from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Footer from "../components/footer.js";
 import SharedTemplate from "../components/sharedTemplate"
 
 const UserSupportIndex = ({data}) => {
+  const [model, setModelFlag] = useState(false)
+  const openModel = () => {
+    setModelFlag(!model)
+  }
   return (
-      <Layout {...data.navigation}>
+      <Layout {...data.navigation} openModel={model}>
           <SEO title="user-support" />
-           <SharedTemplate title="User Support" cat="userSupport" {...data} />
+           <SharedTemplate title="User Support" cat="userSupport" {...data} openModel={openModel} />
           <Footer />
       </Layout>
   )

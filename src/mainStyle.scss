@@ -1499,7 +1499,9 @@ p {
           display: flex;
           min-height: 225px;
           justify-content: space-between;
-          margin: 0 10%;
+          width: 80%;
+          margin: 0 auto;
+          max-width: 1530px;
           align-items: center;
           .shared {
             font-weight: bold;
