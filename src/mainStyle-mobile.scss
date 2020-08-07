@@ -352,6 +352,17 @@ and (max-width : 1024px)  {
                     }
                 }
             }
+            .userSupport {
+                font-size: 1.125rem;
+                font-weight: 500;
+                text-decoration: none;
+                line-height: 1.5;
+                padding: 1rem 1rem 1rem 2rem;
+                a {
+                    color: black;
+                    font-weight: bold;
+                }
+            }
         }
     }
 }
