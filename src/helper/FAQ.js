@@ -43,11 +43,8 @@ module.exports = {
     Software: {
         i0: 'What software is available on CARC systems?',
         i1: 'How do I run MATLAB on CARC systems?',
-        i2: 'Why am I getting a “command not found” error when I try to run a CARC application?',
-        i3: 'How do I check if a program or library is installed on CARC systems?',
-        i4: 'How do I check if a Python package is installed on CARC systems?',
-        i4: 'How do I compile a program on CARC systems?',
-        i4: 'Where are the compilers located on CARC systems?',
-        i4: 'Where are the compilers located on CARC systems?',
+        i2: 'How do I check if a program or library is installed on CARC systems?',
+        i3: 'How do I check if a Python package is installed on CARC systems?',
+        i4: 'What compilers are available on CARC systems?'
     }
 }

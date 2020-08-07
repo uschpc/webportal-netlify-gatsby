@@ -35,7 +35,7 @@ Note that this loads base Julia, so only the base Julia modules and functions ar
 
 ### Running Julia interactively
 
-After loading the module, to run Julia interactively on the **login node**, simply enter `julia`.
+After loading the module, Julia can be run interactively on the **login node** by simply entering `julia`.
 
 To run Julia interactively on a **compute node**, first use Slurm's `salloc` command to reserve a node. For example:
 

@@ -3,7 +3,7 @@ author: Yaseen A.
 id: 1
 date: 2020-06-04T00:00:00.00Z
 title: High-Performance Computing
-excerpt: How to log in to CARC systems, run jobs, and manage your projects and allocations.
+excerpt: User guides for our computing cluster, Discovery; the Research Computing User Portal; and parallel computing.
 thumbnail: /images/Computer.png
 path: high-performance-computing
 route: User Guides
@@ -11,4 +11,5 @@ parentPath: user-information/user-guides
 cat: userGuides
 parentPage: User Guides
 ---
-How to log in to CARC systems, run jobs, and manage your projects and allocations.
+
+High-performance computing (HPC) aggregates the resources from individual computers (known as nodes) into a cluster that works together to perform advanced, specialized computing jobs. The Center for Advanced Research Computing launched its new high-performance computing cluster, Discovery, in August 2020. For more information on HPC, see our [High-Performance Computing page](/services/hpc). 

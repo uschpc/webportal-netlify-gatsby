@@ -13,7 +13,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
   const allNewsTemplate = path.resolve('src/templates/all-news-template.js')
   const allResearcherTemplate = path.resolve('src/templates/all-researcher-template.js')
-  const coldFrontMainTemplate = path.resolve('src/templates/coldfront-main-template.js')
+  const hpcSubpagesTemplate = path.resolve('src/templates/hpc-subpages-template.js')
   const coldFrontTemplate = path.resolve('src/templates/coldfront-template.js')
   const jobsTemplate = path.resolve('src/templates/jobs.js')
   const discoveryGuidesTemplate = path.resolve('src/templates/discoveryguides-template.js')
@@ -22,6 +22,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   const postTemplate = path.resolve('src/templates/content-post.js')
   const softwareTemplate = path.resolve('src/templates/software-template.js')
   const cloudComputingTemplate = path.resolve('src/templates/cloud-computing-template.js')
+  const parallelProgrammingTemplate = path.resolve('src/templates/parallel-programming-template.js')
   const userGuidesMainTemplate = path.resolve('src/templates/user-guides-main-template.js')
   const userGuidesTemplate = path.resolve('src/templates/user-guides-template.js')
 
@@ -90,7 +91,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         }
         break;
         case 'sharedTemplate':
-          template = coldFrontMainTemplate;
+          template = hpcSubpagesTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
         case 'software':
@@ -99,6 +100,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           break;
         case 'cloudComputing':
           template = cloudComputingTemplate;
+          path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+          break;
+        case 'parallelProgramming':
+          template = parallelProgrammingTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
         case 'userGuides':

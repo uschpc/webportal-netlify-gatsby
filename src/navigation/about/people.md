@@ -10,7 +10,7 @@ cat: navigation
 parentEle: About
 ---
 
-### Director, Center for Advanced Research Computing
+## Director, Center for Advanced Research Computing
 
 **Byoung-Do (BD) Kim**
 
@@ -18,7 +18,7 @@ BD joined USC’s Information Technology Services (ITS) in August 2019 to lead t
 
 BD’s research interests are large-scale application optimization, parallel computational models, and computational fluid dynamics. Recently, his focus has been extended to data-intensive computing and advanced system design for computation and data convergence models. He always looks for opportunities where the USC CARC team can maximize the potential of computational and data-enabled research by providing expertise in advanced computing and big data analysis.
 
-### Systems Engineering & Infrastructure
+## Systems Engineering & Infrastructure
 
 The Systems Engineering & Infrastructure team oversees the installation and maintenance of the CARC's computing resources, including Discovery, the CARC's high-performance computing cluster.
 
@@ -28,7 +28,7 @@ The Systems Engineering & Infrastructure team oversees the installation and main
 
 **Chris Taylor, Senior HPC Engineer**
 
-### Research Facilitation & Applications
+## Research Facilitation & Applications
 
 The Research Facilitation & Applications team collaborates with researchers to develop workflows and strategies. The team also supports user education by facilitating computing workshops and consulting sessions.
 
@@ -38,7 +38,7 @@ The Research Facilitation & Applications team collaborates with researchers to d
 
 **Derek Strong, Research Facilitator**
 
-### Cloud Computing & Web Development
+## Cloud Computing & Web Development
 
 The Cloud Computing & Web Development team leads the development and maintenance of the CARC's website and Research Computing User Portal, as well as the development of the upcoming hybrid cloud computing environment.
 
@@ -46,12 +46,12 @@ The Cloud Computing & Web Development team leads the development and maintenance
 
 **Yaseen Alkhafaji, Web Developer (Contracted)**
 
-### Communications & Content
+## Communications & Content
 
 Communications & Content includes external, user-facing communication, such as news stories, announcements, and social media, as well as the creation and curation of all content featured on the CARC's website.
 
 **Andrea Renney, IT Technical Writer**
 
-### Student Workers
+## Student Workers
 
 **Ryan Sim**

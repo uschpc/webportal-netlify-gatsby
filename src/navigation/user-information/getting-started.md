@@ -43,9 +43,11 @@ All CARC account holders are assigned three directories where they can store fil
 
 Each file system serves a different purpose:
 
- - **/home1** is a high-performance parallel file system for storing configuration files and personal scripts. Each CARC user has a 100 GB home directory quota.
- - The **/proj** directory should be used for most of your CARC work, and it's also where you can collaborate with your research project group. Each CARC user receives their own subdirectory within the directories of each project they belong to, and the quota for each project directory ranges between 1 and 5 GB.
- - **/scratch** and **/scratch2** are two parallel file systems that are shared among all CARC users. These file systems can be used for storing data temporarily and running I/O intensive jobs. Each CARC user receives a 10 TB quota for each of /scratch and /scratch2.
+- **/home1** is a network file system for storing configuration files and personal scripts. Each CARC user has a 100 GB home directory quota.
+
+- **/project**: Assignment to a project gives you access to a subdirectory of the /project parallel file system. Managed by a Principal Investigator, this is where you have access to between 1 and 5 TB of storage space (shared among the project's members), and where you can collaborate and share files with your research group. Use this high-performance file system for most of your research computing work at CARC.
+
+- **/scratch** and **/scratch2** are two parallel file systems that are shared among all CARC users. These file systems can be used for storing data temporarily and running I/O intensive jobs. Each CARC user receives a 10 TB quota for each of /scratch and /scratch2.
 
 > For detailed information on the different storage systems available, see our [Storage File Systems user guide](/user-information/user-guides/data-management/storage-file-systems) and our [System Information page](/user-information/system-information).
 

@@ -26,6 +26,15 @@ Jobs can be either **batch** jobs or **interactive** jobs, but both have two mai
 
 The Discovery computing cluster is a shared system. To ensure fair access, we use a **job scheduler** to manage all requests for resources. The Slurm (Simple Linux Utility for Resource Management) job scheduler is an open-source job scheduler that allocates compute resources on clusters for queued, user-defined jobs.
 
+The compute resources on Discovery are shared across many projects and users. When a user submits a job with Slurm, resources are divided using a using a fair share algorithm. This table summarizes the most important resource limits for jobs on the Discovery cluster:
+
+```
+Queue          Default Run Time  Max Run Time  Max Cores Available   Maximum Number of Jobs or Job Steps
+(Partition)                                                          (Running or Pending)
+-----------    ----------------  ------------  -------------------   -----------------------------------
+Main           1 Hour            48 Hours      768                   5000
+```
+
 ### Batch jobs
 
 Batch jobs are the most common types of jobs run on Discovery. They are a list of actions saved as a `bash` shell. The main advantage of batch jobs is that they don't require any human intervention to run properly. This makes them ideal for programs that run for a long time.

@@ -26,10 +26,10 @@ module load python
 This loads the default version, which is typically the newest version available. To load a specific version, you can run a command similar to:
 
 ```
-module load python/3.7.6-gkp7
+module load python/3.7.6
 ```
 
-where 3.7.6-gkp7 is the version you want.
+where 3.7.6 is the version you want.
 
 To see all available versions of Python, run the command:
 
@@ -37,12 +37,10 @@ To see all available versions of Python, run the command:
 module avail python
 ```
 
-### Using Python on head nodes
-
-Various versions of Python are stored at /usr/usc/python. Load, or source, the setup script for your selected version to configure your current environment to find and use that version of Python and pip. For example, python 3.6.0 can be loaded, its package listed, and the hello.py script run with the following commands, respectively:
+For example, python 3.7.4 can be loaded, its package listed, and the hello.py script run with the following commands, respectively:
 
 ```
-source /usr/usc/python/3.6.0/setup.sh
+module load python/3.7.4
 python3 hello.py
 pip3 list
 ```
@@ -66,7 +64,7 @@ Hello Tommy
 If it's not in the same directory, use an absolute path:
 
 ```
->>> exec(open('/home/rcf-proj/tt1/ttrojan/python/hello.py').read())
+>>> exec(open('/home/project/tt1/ttrojan/python/hello.py').read())
 Hello Tommy
 ```
 
@@ -87,7 +85,6 @@ srun --pty bash
 ```
 
 Once you are logged in to a compute node, load the module and enter `python3` or `python` to run Python interactively.
-
 
 ### Running Python in batch mode
 
@@ -141,7 +138,7 @@ To see a list of all installed packages and their current and latest versions, r
 
 #### CARC head nodes
 
-The CARC installs a number of distributed-computing-related packages when they install a new version of Python. The packages can vary for each version. Once sourced, you can list the loaded global packages and dependencies by running `pip3 list`.
+The CARC installs a number of distributed-computing-related packages when installing a new version of Python. The packages can vary for each version. Once sourced, you can list the loaded global packages and dependencies by running `pip3 list`.
 
 CARC researchers are also encouraged to install their own Python packages on Discovery (or upgrade those that were pre-installed). By default, Python will install local (i.e., user) packages in your home directory, in the subdirectory named `.local`. Python will create this directory if it does not already exist.
 

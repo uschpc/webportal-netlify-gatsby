@@ -39,6 +39,13 @@ export const pageQuery = graphql`
           }
         }
       }
+      Announcements: markdownRemark(frontmatter: {cat: {eq: "announcements"}}) {
+        frontmatter {
+          date,
+          author
+        }
+      html
+    }
       news: allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, filter: {frontmatter: {cat: {eq: "news"}}}) {
         edges {
           node {

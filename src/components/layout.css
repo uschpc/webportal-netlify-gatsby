@@ -615,7 +615,7 @@ pre tt:after {
 }
 
 .dropdown .dropbtn {
-  font-size: 18px;  
+  font-size: 18px;
   border: none;
   outline: none;
   color: black;
@@ -721,7 +721,7 @@ pre tt:after {
 
 
 .top-bar {
-  background: #ffcd05;
+  background: #FFCC00;
   width: 80%;
   max-width: 1530px;
   margin: 0 auto;
@@ -847,4 +847,3 @@ img.main-logo {
 #print-logo {
   display: none;
 }
-

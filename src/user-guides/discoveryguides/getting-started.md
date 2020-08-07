@@ -85,28 +85,33 @@ All CARC account holders are assigned three directories where they can store fil
 
 ##### Home directory
 
-Your home directory contains 100 GB of disk space and is intended for personal configurations and settings as well as software installations. When you log in to Discovery, you will always start in your home directory. It will be of the form:
+Your home directory has a quota of 100 GB of disk space and 2 million files, and it is intended for personal configurations and settings as well as software installations. It is not intended for IO-intensive jobs to be run directly from /home.
+
+When you log in to Discovery, you will always start in your home directory. It will be of the form:
 
 ```
 /home1/<username>
 ```
 
-/home1 is a high-performance parallel file system, so you can run IO-intensive jobs directly from it. However, the quota for each user on /home1 is 100 GB and 2 million files. To easily switch to your home directory, enter the command `cd` from the directory you're in.
+To easily switch to your home directory, enter the command `cd` from the directory you're in.
 
 We keep three weeks of snapshots for /home1. You can think of these snapshots as semi-backups, meaning that if you accidentally deleted some data we would be able to recover it within three weeks. If the file was created and deleted within a one-day period, then the snapshot cannot recover it. You should always keep extra backups of your important data and other files because of this.
 
 ##### Project directory
 
-Your project directory has much more disk space and will be the directory you use for most CARC work. This is also where you will collaborate with your research group. It will be of the form:
+Each project member has their own subdirectory within their group's project directory, where they can store data, scripts, and related files. Users affiliated with multiple CARC projects will have multiple project directories so they can easily share their files with the appropriate groups.
 
+The new parallel project file system was deployed during the summer of 2020. This file system has a capacity of ~10PB. Each CARC user receives their own subdirectory within the directories of each project they belong to, and the quota for each project directory ranges between 1 and 5 GB.
+
+The project file system should be used for most of your CARC work, and it's also where you can collaborate with your research project group. Each project group member will have their own subdirectory within their group's project directory, where they can store data, scripts, and related files.
+
+The project directory can be located by typing:
+
+```sh
+/home/project/<user_name>
 ```
-/____
-```
 
-Each project member will have their own subdirectory within their group's project directory, where they can store data, scripts, and related files. Users affiliated with multiple CARC projects will have multiple project directories so they can easily share their files with the appropriate groups.
-
-
-<!-- Is this true? No backups, and only one /scratch? -->
+where `<user_name>` is your USC NetID (your email address without "@usc.edu").
 
 ##### Scratch directories
 
@@ -172,15 +177,27 @@ Remember to always transfer files into your home or scratch directories where yo
 
 There are a number of ways to transfer files between your local machine and the Discovery cluster. These include the commands `sftp`, `scp`, or `rsync` as well as GUI apps like Cyberduck or FileZilla.
 
-For more information on transferring files between your local machine and the Discovery cluster, see the [Transferring Files using the Command Line user guide](/user-information/user-guides/data-management).
+For more information on transferring files between your local machine and the Discovery cluster, see the [Data Management user guides](/user-information/user-guides/data-management).
 
 #### From the web to Discovery
 
 You can transfer a file from the public internet directly to one of your directories on Discovery by using the commands `wget` or `curl` or, for Git repositories, `git clone`.
 
+Helpful links:
+
+ - [GNU Wget](https://www.gnu.org/software/wget/)  
+ - [curl](https://curl.haxx.se/docs/manpage.html)  
+ - [git clone](https://git-scm.com/docs/git-clone)
+
 ### Creating and editing files
 
 You can always create files on your personal computer and transfer them to Discovery, but sometimes it is easier to create them directly on Discovery. For plain-text files, you can use the `nano`, `vim`, or `emacs` text editors. Nano is the easiest editor to learn; Vim and Emacs both have steeper learning curves, but you may eventually find them more useful and productive.
+
+Links to text editors' webpages:
+
+ - [Nano](https://www.nano-editor.org/)  
+ - [Vim](https://www.vim.org/)  
+ - [Emacs](https://www.gnu.org/software/emacs/)
 
 To create a new file, simply enter the editor name as the command (e.g., `nano`).
 
@@ -222,6 +239,27 @@ Researchers are encouraged to install any software, libraries, and packages nece
 
 For more information on installing software, see the [Software user guides](/user-information/user-guides/software).
 
+### Running jobs
+
+A job consists of all the data, commands, scripts, and programs that will be used to obtain results.
+
+Because the Discovery computing cluster is a shared system, we use a **job scheduler** to manage all requests for resources. The Slurm (Simple Linux Utility for Resource Management) job scheduler is an open-source job scheduler that allocates compute resources on clusters for queued, user-defined jobs. It performs the following functions:
+
+- Schedules user-submitted jobs
+- Allocates user-requested computing resources
+- Processes user-submitted jobs
+
+A listing of common Slurm commands can be found [here](https://slurm.schedmd.com/pdfs/summary.pdf).
+
+The compute resources on Discovery are shared across many projects and users. When a user submits a job with Slurm, resources are divided using a using a fair share algorithm. This table summarizes the most important resource limits for jobs on the Discovery cluster:
+
+```
+Queue          Default Run Time  Max Run Time  Max Cores Available   Maximum Number of Jobs or Job Steps
+(Partition)                                                          (Running or Pending)
+-----------    ----------------  ------------  -------------------   -----------------------------------
+Main           1 Hour            48 Hours      768                   5000
+```
+
 ### Testing your job
 
 We recommend that you first test your job interactively on a compute node before submitting it remotely to the Slurm job scheduler, ensuring that you will have quality results after the job completes. You can do this by requesting an interactive session with a compute node using the `salloc` command.
@@ -234,15 +272,11 @@ salloc --ntasks=4 --time=1:00:00
 
 After running the command, the job scheduler will add your job to the wait queue.
 
-Once your job starts, you can then test out your scripts and programs to make sure they work properly. Once you are confident that you know how your program will behave, you are ready to submit a job through the batch job scheduler.
+Once your job starts, you can then test out your scripts and programs to make sure they work properly. Once you are confident that you know how your program will behave, you are ready to submit a job through Slurm.
 
 ### Submitting your job
 
-A job consists of all the data, commands, scripts, and programs that will be used to obtain results. Jobs are submitted to the job scheduler, Slurm, which performs the following functions:
-
-- Schedules user-submitted jobs
-- Allocates user-requested computing resources
-- Processes user-submitted jobs
+After you have tested your job interactively and achieved the results you want, you can now submit your job to Slurm.
 
 To submit a job, first create a Slurm job script using one of the previously mentioned text editors.
 
