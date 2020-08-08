@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 
 const generateSubMenuLevel2Items = (sideMenuTitle, pageTitle, subMenu) => {
   const { sideMenuParent, title } = pageTitle
+  console.log(sideMenuParent, title)
     if (sideMenuParent === sideMenuTitle) {
       return (
         <ul className="submenu-items-level-2">
@@ -39,6 +40,8 @@ const generateSubMenuLevel2Items = (sideMenuTitle, pageTitle, subMenu) => {
 
 const generateSubMenuItems = (title, pageTitle, data) => {
     let menuItem = data.parentMenuTitle || "High-Performance Computing"
+    console.log(data.parentMenuTitle, title)
+
     if (menuItem === title) {
       return (
         <ul className="submenu-items">
