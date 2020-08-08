@@ -32,6 +32,10 @@ body {
                 color: #990000;
                 display: unset;
                 margin-left: 0;
+                &:hover {
+                  color: #990000;
+                  text-decoration: underline;
+                }
               }
             }
           }
@@ -1383,7 +1387,7 @@ p {
       &.hpc-logo{
         img {
           height: -webkit-fill-available;
-          max-height: 48%;
+          max-height: 55%;
         }
       }
     }
@@ -1589,7 +1593,7 @@ p {
                     margin-bottom: 20px;
                   }
                   .border {
-                    border: 1px solid lightgray;
+                    // border: 1px solid lightgray;
                     margin-bottom: 20px;
                     .homepage {
                       margin-top: 0;
@@ -1627,8 +1631,8 @@ p {
               .Announcements-box {
                 width: 100%;
                 border: 1px solid lightgray;
-                height: 388px;
-                margin: 20px 0 20px 0;
+                height: 264px;
+                margin: 20px 0 0px 0;
                 font-size: 18px;
                 line-height: 24px;
                 font-weight: 300;
@@ -1640,7 +1644,7 @@ p {
                 align-items: center;
                 flex-direction: column;
                 img {
-                  width: 220px;
+                  width: 150px;
                   margin: 0;
                 }
                 .description {
@@ -1651,6 +1655,23 @@ p {
                   font-weight: bold;
                   margin-bottom: 20px;
                   font-size: 24px;
+                }
+              }
+              .links {
+                margin-bottom: 50px;
+                .link {
+                    display: flex;
+                    align-items: center;
+                    color: black;
+                    font-size: 14px;
+                    img {
+                      width: 20px;
+                      margin: 3px 5px 4px 0px;
+                    }
+                    &:hover {
+                      color: #990000;
+                      text-decoration: underline;
+                    }
                 }
               }
             }
