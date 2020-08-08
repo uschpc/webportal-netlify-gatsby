@@ -25,7 +25,7 @@ const Header = (props) => {
                             <li id="menu-item-85" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-85">
                               <a href="https://cio.usc.edu/">Office of the CIO</a></li>
                             <li id="menu-item-13138" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-13138"><a href="https://trojansecure.usc.edu/">Office of the CISO</a></li>
-                            </ul></div>							</li>	
+                            </ul></div>							</li>
                       </ul>
                     </div>
                   </div>
@@ -42,7 +42,7 @@ const Header = (props) => {
           </div>
           <div className="header-section second-section">
             <div className="content-width-middile">
-              <Link to="/" className="hpc-logo"> 
+              <Link to="/" className="hpc-logo">
                 {/* <img data-src="/images/usc_logo_new_design.svg" className=" lazyloaded" src="/images/usc_logo_new_design.svg" /> */}
                 <img data-src="/images/RedLogoFinal.png" className="main-logo" src="/images/RedLogoFinal.png" />
               </Link>

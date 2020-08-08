@@ -29,7 +29,7 @@ Amazon Web Services (AWS) is a public cloud platform that provides infrastructur
  - Network tools
  - Security tools
 
-USC’s AWS is offered through the Internet2 NET+ service agreement through the third party vendor DLT Solutions Inc. USC’s contract for AWS services through DLT is FERPA-, HIPAA- and [FISMA](https://aws.amazon.com/compliance/fisma/)-compliant. When HIPAA compliance is required, the USC AWS account that will be used to process the regulated data must explicitly be declared as needing HIPAA compliance.
+USC’s AWS is offered through the Internet2 NET+ service agreement through the third party vendor DLT Solutions Inc. USC’s contract for AWS services through DLT is FERPA-, [HIPAA](https://aws.amazon.com/compliance/hipaa-compliance/)- and [FISMA](https://aws.amazon.com/compliance/fisma/)-compliant. When HIPAA compliance is required, the USC AWS account that will be used to process the regulated data must explicitly be declared as needing HIPAA compliance.
 
 ### Requesting a USC AWS account
 
@@ -45,8 +45,8 @@ This service is available to USC academic and administrative units, researchers,
         * AWS accounts used for research may qualify for free data egress - see [AWS Offers Data Egress Discount to Researchers](https://aws.amazon.com/blogs/publicsector/aws-offers-data-egress-discount-to-researchers/)
 2.	Get a PO for your AWS operational funding.
     * Write the following exact text on the PO, to relate it to the Enterprise Customer Agreement with DLT for AWS:
-        * The terms of the Net+ agreement for AWS through DLT are incorporated by reference.
-        * This PO links to AWS account \<account number\> for a period of performance from now until \<date\>.
+        * "The terms of the Net+ agreement for AWS through DLT are incorporated by reference."
+        * "This PO links to AWS account \<account number\> for a period of performance from now until \<date\>."
           * Include your account number, which is provided after your AWS account is provisioned by ITS.
           * Unless you have a specific date in mind, use the last day of your current fiscal year, e.g., 6/30/20xx.
     * Make the PO payable to:  
@@ -88,7 +88,7 @@ This service is available to USC academic and administrative units, researchers,
 
 1.	ITS will use your answers above to create your AWS account through DLT.
 2.	ITS will escrow the root key of your account.
-3.	ITS will Shibbolize your AWS account console and configure your lead technical contact with PowerUser access to your account. This means that you will be able to access your AWS account console via your USC NetID and password with DUO two-factor authentication.
+3.	ITS will Shibbolize your AWS account console and configure your lead technical contact with PowerUser access to your account. This means that you will be able to access your AWS account console via your USC NetID and password with Duo two-factor authentication.
 4.	ITS will create generic roles that your PowerUser can configure as needed, to authorize additional users to access your AWS account as needed.
  *	ITS will communicate these roles and other information to your lead technical contact.
 5.	ITS will create ITS Support and ITS Security roles in your AWS account. ITS will use these roles solely to comply with USC security and audit requirements and to support your network connectivity needs, upon request.

@@ -8,6 +8,7 @@ path: people
 parentPath: about
 cat: navigation
 parentEle: About
+backToTopBtnFlag: true
 ---
 
 ## Director, Center for Advanced Research Computing

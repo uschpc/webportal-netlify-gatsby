@@ -8,6 +8,6 @@ route: User Support
 routePath: user-support
 ---
 
-Our user guides are designed to provide comprehensive, step-by-step instructions for a variety of scientific computing tasks. For more personalized support, please see our [User Support](/user-support) and [Research Partnerships](/services/research-partnerships) pages.
+Our user guides are designed to provide comprehensive, step-by-step instructions for a variety of scientific computing tasks. For more personalized support, please see our [User Support page](/user-support).
 
->Note: If you need to view a user guide from our old website (hpcc.usc.edu), please click [here](). Please note that some information, particularly information related to our file systems, storage, and software, may no longer be accurate.
+>Note: If you need to view a user guide from our old website (hpcc.usc.edu), please click [here](https://hpcc-old.usc.edu/). Please note that some information, particularly information related to our file systems, storage, and software, may no longer be accurate.

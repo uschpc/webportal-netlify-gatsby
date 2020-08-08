@@ -67,10 +67,10 @@ Access to and use of resources is based on participation in projects. Project se
 
 ### How to use the systems
 
-When using Discovery, you will notice several differences from your desktop or laptop environment:
+When using CARC systems, you will notice several differences from your desktop or laptop environment:
 
 - The interface is **command-line driven** (no graphical user interface)
-- Discovery uses the **CentOS Linux** operating system (not macOS or Windows)
+- The systems use the **CentOS Linux** operating system (not macOS or Windows)
 - You submit your programs to a **remote batch processing system**, or job scheduler, to run them
 
 The CARC has prepared user guides specific to its systems in the following categories:
