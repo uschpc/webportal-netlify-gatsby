@@ -44,11 +44,11 @@ const Header = (props) => {
             <div className="content-width-middile">
               <Link to="/" className="hpc-logo">
                 {/* <img data-src="/images/usc_logo_new_design.svg" className=" lazyloaded" src="/images/usc_logo_new_design.svg" /> */}
-                <img data-src="/images/RedLogoFinal.png" className="main-logo" src="/images/RedLogoFinal.png" />
+                <img data-src="/images/NewLogo.png" className="main-logo" src="/images/NewLogo.png" />
               </Link>
-              <a href="https://www.usc.edu/">
+              {/* <a href="https://www.usc.edu/">
                 <img data-src="/images/usc-primary-shield_black.png" className=" lazyloaded" src={(width > 570) ? '/images/usc-primary-shield_black.png' : '/images/shield_black.png' } />
-              </a>
+              </a> */}
               </div>
           </div>
           <Navbar width={width} scrollY={scrollY} nav={props.nav} uniqId={props.uniqId} backToTopBtnFlag={props.backToTopBtnFlag} />
