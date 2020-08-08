@@ -15,7 +15,7 @@ const Announcement = (props) => {
                 <Markdown className="description" source={props.announcements.html} escapeHtml={false} />
             </div>
             <div className="links">
-                <Link className="link" to="/news-and-events/news-and-announcements"><img src="/images/news-arrows.svg" />View News and Announcements</Link>
+                <Link className="link" to="/news-and-events/news-and-announcements"><img src="/images/news-arrows.svg" />View news and announcements</Link>
                 <Link className="link" to="/news-and-events/events"><img src="/images/news-arrows.svg" />View upcoming events</Link>
             </div>
              <div className="recent-news">
