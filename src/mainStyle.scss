@@ -1576,11 +1576,16 @@ p {
               padding: 10px;
               margin: 0px 40px 0 0;
               color: #990000;
+              line-height: normal;
               text-transform: uppercase;
               &.discourse-title {
-                margin: 0px 40px 20px 0;
+                margin: 0px 40px 0px 0;
               }
-
+            }
+            .discourse-logo {
+              width: 150px;
+              display: block;
+              margin: 10px 0;
             }
 
             &.system-status {
@@ -1594,9 +1599,12 @@ p {
                   }
                   .border {
                     // border: 1px solid lightgray;
-                    margin-bottom: 20px;
+                    margin-bottom: 15px;
                     .homepage {
                       margin-top: 0;
+                    }
+                    .links {
+                      min-height: 120px;
                     }
                   }
                 }
@@ -1658,8 +1666,9 @@ p {
                 }
               }
               .links {
-                margin-bottom: 50px;
+                margin-bottom: 15px;
                 margin-top: 8px;
+                min-height: 115px;
                 .link {
                     display: flex;
                     align-items: center;
