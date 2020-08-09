@@ -13,7 +13,7 @@ excerpt: ColdFront user portal - yearly project renewal
 backToTopBtnFlag: true
 ---
 
-Faculty are required to update their project information yearly in order to maintain active accounts at CARC.  This is a short but extremely important process.
+Faculty are required to update their project information yearly in order to maintain active accounts at the CARC.  This is a short but extremely important process.
 
 Once a year, we ask that you:
 * Update your project description and field of science, if necessary

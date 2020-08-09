@@ -22,7 +22,7 @@ You are welcome to use any SFTP client you wish. FileZilla, WinSCP, and Cyberduc
 ### FileZilla
 You can download FileZilla from the vendor website at https://filezilla-project.org.
 
-Make sure to download the FileZilla client, *not* the FileZilla server. Once the installation is complete, you will need to create a CARC profile on the client. You can do so by going to the Site-Manager and clicking on "New site":
+Make sure to download the FileZilla client, *not* the FileZilla server. Once the installation is complete, you will need to create a CARC profile on the client. You can do so by going to the Site Manager and clicking on "New site":
 
 ![Filezilla access set up](/images/hpc-file-transfer-gfx/fz-snip1.png)
 
@@ -76,7 +76,7 @@ Click Allow to accept the unknown fingerprint, and you will get the login popup.
 
 ![Cyberduck login 2](/images/hpc-file-transfer-gfx/cb-snip4.png)
 
-It won't log you in right away- you need one more step.
+It won't log you in right away - you need one more step.
 
 ![Cyberduck Duo push](/images/hpc-file-transfer-gfx/cb-snip5.png)
 

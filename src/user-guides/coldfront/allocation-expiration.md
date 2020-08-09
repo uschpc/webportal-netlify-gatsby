@@ -14,7 +14,7 @@ backToTopBtnFlag: true
 
 ### What happens if a resource allocation expires?
 
-If a PI does not renew a resource allocation by its due date, all users in the group will be blocked from accessing the resource (or running jobs on the cluster).  Renewals can be done beginning 60 days before the allocation expires so as to provide you with plenty of time to complete the process.  If you have an extenuating circumstance making it impossible to renew on time, please contact the CARC to request an extension.
+If a PI does not renew a resource allocation by its due date, all users in the group will be blocked from accessing the resource (or running jobs on the cluster).  Renewals can be done beginning 60 days before the allocation expires to provide you with plenty of time to complete the process.  If you have an extenuating circumstance making it impossible to renew on time, please contact the CARC to request an extension.
 
 Once an allocation has been expired for 60 days, users in that group will no longer be able to log in to the resource.  Accounts will be deactivated and data will be archived.  Please renew on time to avoid this inconvenience.
 

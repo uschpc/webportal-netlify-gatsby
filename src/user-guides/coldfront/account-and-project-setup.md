@@ -18,7 +18,7 @@ Even though a PI can log in to the user portal, they won't have access to CARC r
 
 The following is an overview of the steps required to start using CARC resources. For more detailed instructions, see each individual user guide linked below.  
 
-**STEP 1**: To begin, [Log in to the user portal](https://hpcaccount.usc.edu/). Once logged in, PIs should see a button to "+Add a Project" on the left hand side of the screen.
+**STEP 1**: To begin, [log in to the user portal](https://hpcaccount.usc.edu/). Once logged in, PIs should see a button to "+Add a Project" on the left hand side of the screen.
 
 **STEP 2**:  Before you will be able to run jobs or get access to any of the CARC's resources, you will need to create a project:  
 

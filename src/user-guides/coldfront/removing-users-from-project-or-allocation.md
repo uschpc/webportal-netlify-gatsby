@@ -2,38 +2,43 @@
 author: James Hong
 id: 6
 date: 2020-07-08T00:00:00.000Z
-title: Removing Users 
+title: Removing Users
 path: removing-users-from-project-or-allocation
 parentPath: user-information/user-guides/high-performance-computing/research-computing-user-portal
 cat: coldFront
 parentPage: User Guides
 sideMenuParent: Research Computing User Portal
 excerpt: ColdFront user portal - removing users from project/allocation
+backToTopBtnFlag: true
 ---
 
 PIs should remove users from their project and allocation(s) once they are done working together. This is an important step in ensuring your data is secure and accessed only by those you authorize.  
 
 ### Deleting a user from a project
 
-Most of the time, a student will graduate and no longer need a CARC account. In this case, please remove the user from your project. To do this, log in to user portal, click on your project, and click on the red "Remove Users" button in the Users section.  
+Most of the time, a student will graduate and no longer need a CARC account. In this case, please remove the user from your project. To do this, log in to the user portal, click on your project, and click on the red "Remove Users" button in the Users section:
 
 ![ColdFront Project Overview](/images/coldfront_project_overview.png)
 
-A list of all users on the project will be displayed and you can check the box next to each user you'd like to be removed:  
+A list of all users on the project will be displayed and you can check the box next to each user you'd like to remove:  
 
 ![ColdFront Project Remove Users](/images/coldfront_project_removeusers.jpg)
 
 Once you click the "Delete" button, the user will be removed from your project view. The CARC will receive a notification that you'd like the account removed and we will deactivate it.  Don't worry - this action isn't permanent.  We do not delete user accounts until the student is no longer affiliated with USC.
 
-If you decide you'd like to add the user back to the project or that you made a mistake, just [add them back](create-a-new-project) to your project and allocation(s).
+If you decide you'd like to add the user back to the project or that you made a mistake, just [add them back](adding-users-to-project-or-allocation) to your project and allocation(s).
 
 ### Deleting a user from an allocation only
 
 There are times when a faculty member has granted access to a user on an allocation for a private cluster or server.  If you only want to remove the user from an allocation and not an entire project, click on the folder icon next to the allocation name to be taken to the Allocation Detail page:  
 
+![ColdFront Allocation Edit](/images/coldfront_allocation_overview.jpg)
+
+Click the red "Remove Users" button:
+
 ![ColdFront Allocation Edit](/images/coldfront_allocation_edit.png)
 
-Click the red "Remove Users" button. You will then be shown a list of users with access to the allocation:
+You will then be shown a list of users with access to the allocation:
 
 ![ColdFront Allocation Remove User](/images/coldfront_allocation_removeuser.png)
 

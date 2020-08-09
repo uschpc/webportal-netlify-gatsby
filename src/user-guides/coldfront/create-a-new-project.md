@@ -14,7 +14,7 @@ backToTopBtnFlag: true
 
 Each PI should have one project. Some PIs may require additional projects depending on their roles at USC. Anyone teaching classes should create a separate project for each course taught, and these projects can be reused each semester. Also, anyone using the cluster for work outside their general research area should create a separate project for that work.
 
-> Note:  6/01/2020: CARC migrated all projects owned by a valid PI from the old uschpc cluster to the Discovery cluster as a convenience. Projects where the PI is a student were NOT migrated to the user portal.
+> Note:  6/01/2020: The CARC migrated all projects owned by a valid PI from the old uschpc cluster to the Discovery cluster as a convenience. Projects where the PI is a student were NOT migrated to the user portal.
 
 ### User portal home page
 To create a new project, click on either the Projects link or the Project menu tab to access the [Projects Page](https://hpcaccount.usc.edu/project/).
@@ -33,8 +33,8 @@ Fill out the 4 fields:
 * Field of science:
   * This drop-down list was taken from the National Science Foundation. If your field is not listed, please choose "Other".
 * Cluster Type:
-  * **Discovery (Cluster Partition)**: CARC's main compute resource available to all USC faculty/staff and their students/collaborators. Most CARC researchers should be choosing Discovery as their cluster type
-  * In the future we will have additional cluster options: **Condo** and **AWS Cloud**
+  * **Discovery (Cluster Partition)**: CARC's main compute resource available to all USC faculty/staff and their students/collaborators. Most CARC researchers should be choosing Discovery as their cluster type.
+  * In the future we will have additional cluster options: **Condo** and **AWS Cloud**.
 
 and click the "Save" button.
 
@@ -47,7 +47,7 @@ You will then be able to view all of your project information on the Project Det
 
 Entering your publication and grant information is not required to get started, but this information will be required to be updated on your [project renewal date each year](yearly-project-renewal).
 
-**To get started, you will need to request an allocation to a resource**. If you have other researchers working on your project, you can add users to your project. Please see the links below for instructions:  
+**Your next step is to request an allocation to a resource**. If you have other researchers working on your project, you can add users to your project. Please see the links below for instructions:  
 
 [Request New Allocation](request-new-allocation)  
 [Adding Users](adding-users-to-project-or-allocation)  

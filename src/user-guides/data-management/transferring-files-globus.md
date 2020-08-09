@@ -96,7 +96,7 @@ Click on the endpoint link and then click the <b>Activate</b> button on the righ
 
 You will be asked to log in.
 
->Note: Globus wants your username, which is your USC NetID <b>without</b> the <b>.usc.edu</b> part. This is as if you are logging into hpc-transfer.usc.edu with something like SCP or SSH. Enter your username and the password you use to log in to USC networks and servers.
+>Note: Globus wants your username, which is your USC NetID <b>without</b> the <b>.usc.edu</b> part. This is as if you are logging in to hpc-transfer.usc.edu with something like SCP or SSH. Enter your username and the password you use to log in to USC networks and servers.
 
 If you succesfully authenticate you will be granted an access certificate. You are connected to the USC data transfer node Endpoint.
 
@@ -112,7 +112,7 @@ At this point you can navigate to the File Manager, where you will be presented 
 
 For security, Globus requires you to specifically allow files and folders on your PC to be shared or transferred.
 
-On Windows, to allow a folder contents to be transferred,  right click on the small <b>g</b> (the Globus icon) in your running task icons in the task bar.
+On Windows, to allow a folder's contents to be transferred,  right click on the small <b>g</b> (the Globus icon) in your running task icons in the task bar.
 
 Select the <b>Options...</b> menu item.
 
@@ -124,7 +124,7 @@ You will be presented with a box to add a folder containing the files you want t
 
 Click the <b>Save</b> button to continue.
 
-On a Mac, the process is similar. You access the the small Globus <b>g</b> icon in the top menu bar and choose <b>Preferences...</b> and then the <b>Access</b> tab.
+On a Mac, the process is similar. You access the small Globus <b>g</b> icon in the top menu bar and choose <b>Preferences...</b> and then the <b>Access</b> tab.
 
 ![Globus Software Set Up](/images/globus-gfx/globus-macadd.PNG)
 
@@ -138,11 +138,11 @@ Now in the right column highlight one, two, or all of the files in your local fo
 
 If your files are large, Globus takes a few seconds or minutes to index them and get ready to transfer.
 
-When yout transfer completes, go back to the File Manager window. In the left pane, under the USC hpc-transfer Endpoint, click the refresh button in the middle menu (right under the <b>Path</b> field). The refresh button is the right-curling arrow, which will pull an updated listing of the files in your home directory on the USC data transfer node. If needed, scroll through the list and you will see your files there.
+When your transfer completes, go back to the File Manager window. In the left pane, under the USC hpc-transfer Endpoint, click the refresh button in the middle menu (right under the <b>Path</b> field). The refresh button is the right-curling arrow, which will pull an updated listing of the files in your home directory on the USC data transfer node. If needed, scroll through the list and you will see your files there.
 
 ![Globus Software Set Up](/images/globus-gfx/globus-xfer2.PNG)
 
-Notice that in the <b>Path</b> window Globus designates your home directory as a ```/~/``` symbol. Experiment with clicking on the file system navigation buttons to the right of folders as well as the up arrow in the Collection middle menu. You'll get an idea of where on the data transfer node and where on your PC you can upload and download files from.
+Notice that in the <b>Path</b> window Globus designates your home directory as a ```/~/``` symbol. Experiment with clicking on the file system navigation buttons to the right of folders as well as the up arrow in the Collection middle menu. You'll get an idea of where on the data transfer node and where on your PC you can upload and download files to/from.
 
 You don't have to transfer files one-by-one. By highlighting a folder and clicking the <b>Start</b> button, you can move the folder and all its contents to the USC data transfer node. The two-column bi-directional layout of the file manager should suggest to you that to download files from the data transfer node, you merely need to highlight them on the left and then click the <b>Start</b> button in the file transfer column.
 
@@ -152,4 +152,4 @@ You don't have to transfer files one-by-one. By highlighting a folder and clicki
 
 - Globus is capable of transferring a lot of small files, but in many cases you'll get faster transfers and better results by creating a TAR, GZIP, or ZIP file before trying to transfer data to/from the data transfer node.
 
-- Globus can restart a failed or paused transfer. Make a note of the task ID when you initiate a transfer or watch your email for a status update. Logging back into Globus will let you find your transfer job and restart it.
+- Globus can restart a failed or paused transfer. Make a note of the task ID when you initiate a transfer or watch your email for a status update. Logging back in to Globus will let you find your transfer job and restart it.

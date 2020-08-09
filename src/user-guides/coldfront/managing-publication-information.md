@@ -12,9 +12,9 @@ excerpt: ColdFront user portal - managing project publication information
 backToTopBtnFlag: true
 ---
 
-We ask faculty to upload their publication information to the user portal when the publication acknowledges the CARC or the information contained in it directly relates to work done at the CARC. You are welcome to add all of your publications to the user portal, if you'd like.
+We ask faculty to upload their publication information to the user portal when the publication acknowledges the CARC or the information contained in it directly relates to work done at on CARC systems. You are encouraged to add all of your publications to the user portal.
 
-### Adding Publications:
+### Adding publications
 
 To add publications, click on the "Add Publication" button on the Project Detail page for your project:
 
@@ -32,7 +32,7 @@ You will then be redirected back to your Project Detail page where you'll see yo
 
 ![ColdFront Publications](/images/coldfront_project_publications.jpg)
 
-### Removing Publications:
+### Removing publications
 
 You can delete a publication from your project by clicking the "Delete Publications" button on your Project Detail page.  You will be presented with a list of all the publications on the project. You can select the one(s) you wish to delete and click the "Delete Selected Publications from Project" button:
 

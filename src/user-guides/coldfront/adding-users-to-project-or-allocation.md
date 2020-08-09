@@ -48,7 +48,7 @@ Click the "Add Selected Users to Project" button when done.  You will see these 
 
 Users must be added to a project to be added to that project's allocation.  However, all users added to a project do not need to be added to every allocation held for that project.
 
-> Note:  You will see each user's status listed as 'active' immediately after adding them to a project or allocation. However, CARC staff need to modify user accounts to give them the access requested.  This is usually done within 1 business day of adding the user account to a project/allocation.  
+> Note:  You will see each user's status listed as "active" immediately after adding them to a project or allocation. However, CARC staff need to modify user accounts to give them the access requested.  This is usually done within 1 business day of adding the user account to a project/allocation.  
 
 ### Allocation Detail page
 
@@ -57,5 +57,8 @@ You can see all users that have access to an allocation on the Allocation Detail
 ![ColdFront Project Allocation Detail](/images/coldfront_allocationdetail.png)
 
 If you'd like to add a user from your project to an allocation they don't currently have access to, you can do this from the Allocation Detail page:
+
+![ColdFront Project Search Users](/images/coldfront_allocationdetail.png)
+
 
 Click the "Add Users" button.  Any users in your project that do not already have access to this allocation will be listed and available to be added.
