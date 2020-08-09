@@ -222,7 +222,7 @@ Yes, you can temporarily access the local disk space on a single node using the 
 
 ### I accidentally deleted a file, is it possible to recover it?
 
-Your project and home directories provide 3-week snapshots with daily backups, so if you accidentally delete some of your important data, you can recover the data if the deletion was within the last three weeks. You should always keep extra backups of your important data since snapshots or semi-backups are not real backups.
+Your project and home directories provide 2-week snapshots with daily backups, so if you accidentally delete some of your important data, you can recover the data if the deletion was within the last three weeks. You should always keep extra backups of your important data since snapshots or semi-backups are not real backups.
 
 In order to be a candidate for snapshots, files must be closed and idle for at least 20 minutes. If you know the name and path of the file you deleted, we can search your backup directory and attempt to retrieve it.
 

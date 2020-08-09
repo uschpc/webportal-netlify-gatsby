@@ -28,7 +28,7 @@ For the first half of 2020, USC Research Computing has been working on many diff
 
 Our new Research Computing cluster, Discovery, will debut in July to serve the USC research community. The new system comes with many changes that will provide better usability and a more sophisticated application layer. Noticeable improvements include:
 
-•	/home directory: Every user on Discovery will get a 100GB allocation of home directory space. The home directory provides 3-week snapshots with daily backups, so if you accidentally delete some of your important data, you can recover the data if the deletion was within the last three weeks.
+•	/home directory: Every user on Discovery will get a 100GB allocation of home directory space. The home directory provides 2-week snapshots with daily backups, so if you accidentally delete some of your important data, you can recover the data if the deletion was within the last three weeks.
 
 •	Rebuilt software stack: We have rebuilt a couple hundred new applications on the cluster, and the new application stack was built with the Lmod/Spack module build system. Users can use available software via module loading, and necessary environment variables and other dependencies associated with libraries, compilers, and MPI stacks are automatically managed. More details and instructions will be available in our new user guides.
 
