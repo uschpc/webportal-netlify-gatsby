@@ -12,6 +12,8 @@ cat: userGuides
 parentPage: User Guides
 ---
 
-Working with sensitive data that is governed by compliance regulations comes with additional requirements and restrictions that must be taken into consideration. The Center for Advanced Research Computing is currently developing a secure computing environment for such data. Later in 2020, details and system specifications will be made available on this page.
+Working with sensitive data that is governed by compliance regulations comes with additional requirements and restrictions that must be taken into consideration. The Center for Advanced Research Computing plans to deploy a Secure Research Computing Environment (SRCE) in the fall of 2020. The SRCE is designed for researchers who need to meet various compliance standards required to use highly sensitive data. The SRCE provides custom-sized servers (Windows, Linux, and/or containerized applications as a service) as well as secure data transfer methods for researchers.
 
-For details on USC's policies related to information security, including access and asset management, data protection, and information risk management, please see the Office of the Chief Information Security Officer (OCISO)'s [Information Security Policies & Standards page](https://trojansecure.usc.edu/information-security-policies/). You will need to log in with your USC NetID to view this page.
+The SRCE is configured with the appropriate security controls and minimizes the risk of exposing high-risk data. The SRCE makes it easier for researchers to implement necessary safeguards for research that is subject to regulatory or compliance requirements, including but not limited to, HIPAA, FERPA, CUI, and other grant-specific regulations.
+
+The user guides for the SRCE will be continuously updated here as the system is deployed. In the meantime, researchers managing sensitive data will find the following user guide with information on data sensitivity, data classification, and research data management useful.
