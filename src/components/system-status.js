@@ -68,17 +68,20 @@ const SystemStatus = (props) => {
                     <h2 className="iframe-graph">System Status <a href="#" onClick={(e) => openModel(e)}><i className="fa fa-external-link" style={{fontSize:"24px"}}></i></a></h2>
                     <div className="border">
                         {ready && <iframe className="homepage" src="https://d2zckdyoh6khem.cloudfront.net/d-solo/vsUGHjmMk/compute-node-usage?orgId=1&refresh=300s&var-host=All&panelId=3" width="450" height="200" frameBorder="0"></iframe>}
-                        <a className="view-more-graph" href="https://hpc-grafana.usc.edu/d/vsUGHjmMk/compute-node-usage?orgId=1&refresh=30s" target="_blank"><img src="/images/news-arrows.svg" />View compute system status</a>
-                        <a className="view-more-graph" href="https://hpcxdmod.usc.edu/" target="_blank"><img src="/images/news-arrows.svg" />View job status</a>
-                        <a className="view-more-graph" href="https://hpc-grafana.usc.edu/d/dLO8iCiGk/file-system-usage-and-io?orgId=1&refresh=30s" target="_blank"><img src="/images/news-arrows.svg" />View file system status</a>
+                        <div className="links">
+                            <a className="view-more-graph" href="https://hpc-grafana.usc.edu/d/vsUGHjmMk/compute-node-usage?orgId=1&refresh=30s" target="_blank"><img src="/images/news-arrows.svg" />View compute system status</a>
+                            <a className="view-more-graph" href="https://hpcxdmod.usc.edu/" target="_blank"><img src="/images/news-arrows.svg" />View job status</a>
+                            <a className="view-more-graph" href="https://hpc-grafana.usc.edu/d/dLO8iCiGk/file-system-usage-and-io?orgId=1&refresh=30s" target="_blank"><img src="/images/news-arrows.svg" />View file system status</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div className="container-right">
                 <h2 className="discourse-title">Latest User Posts</h2>
+                <img className="discourse-logo" src="/images/logo-discourse.png" />
                 {result.length && result.map((item, i) => {
                     return (
-                    i < 6 && (
+                    i < 5 && (
                     <div className="discourse-latest-news-block" key={i}>
                         <div className="block">
                             <a href={`https://hpc-discourse.usc.edu/t/${item.slug}`} target="_blank">

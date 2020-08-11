@@ -8,6 +8,6 @@ cat: navigation
 parentEle: Services
 ---
 
-Working with sensitive data that is governed by compliance regulations comes with additional requirements and restrictions that must be taken into consideration. The Center for Advanced Research Computing provides a secure computing environment for such data.
+Working with sensitive data that is governed by compliance regulations comes with additional requirements and restrictions that must be taken into consideration. The Center for Advanced Research Computing is currently developing a secure computing environment for such data. Later in 2020, full details and system specifications will be made available on this page and on the [Secure Computing user guide](/user-information/user-guides/secure-computing) pages.
 
-...
+If you're interested in using CARC systems but your research work includes sensitive data, please contact us at <carc-support@usc.edu> to discuss your options.

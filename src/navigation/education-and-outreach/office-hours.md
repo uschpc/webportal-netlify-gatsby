@@ -9,7 +9,7 @@ parentEle: Education & Outreach
 backToTopBtnFlag: true
 ---
 
-### Office Hours
+### Office hours
 
 Office hours are an opportunity for CARC users to ask questions about anything related to research computing. No appointments are necessary, and all levels of users and questions are welcomed. Office hours are typically held weekly at the University Park campus (UPC) and twice a month at the Health Sciences campus (HSC).
 

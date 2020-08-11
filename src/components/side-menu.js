@@ -39,6 +39,7 @@ const generateSubMenuLevel2Items = (sideMenuTitle, pageTitle, subMenu) => {
 
 const generateSubMenuItems = (title, pageTitle, data) => {
     let menuItem = data.parentMenuTitle || "High-Performance Computing"
+
     if (menuItem === title) {
       return (
         <ul className="submenu-items">

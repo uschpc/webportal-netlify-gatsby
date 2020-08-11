@@ -27,7 +27,7 @@ You will then be taken to the Request New Allocation page:
 
 ![ColdFront New Allocation](/images/coldfront_allocationnew.png)
 
-The Resource drop-down list contains the following resource options (only resources for your project cluster type are selectable):
+The Resource drop-down list contains the following resource options (only resources for your project's cluster type are selectable):
 
 * **Discovery (Cluster Partition)**: The CARC's main computing resource available to all USC faculty/staff and their students/collaborators. Once your allocation is approved, users will be provisioned in the Discovery cluster. Users can access CARC systems via SSH 1-2 hours after the allocation has been approved.
 * **size:**
@@ -35,16 +35,16 @@ The Resource drop-down list contains the following resource options (only resour
   * **medium**: 500,000 CPU/service unit hours (annual charges may apply)
   * **large**: 1,000,000 CPU/service unit hours (annual charges may apply)
   * **class**: 10,000 CPU/service unit hours per semester (free, for faculty teaching classes)
-* **Project Storage (Storage)**: Additional storage you can purchase if you require more than the initial 1 TB that CARC provides for free.
+* **Project Storage (Storage)**: Additional storage you can purchase if you require more than the initial 5 TB that the CARC provides for free.
 
 Select the resource you'd like access to and provide a justification for access to that resource. Your justification should include information on how you'll be using the resource and how many CPU/service unit hours you anticipate needing to use.
 
-If required, select the users on your project that you'd like to have access to this allocation.
+If required, select the users on your project that you'd like to grant access to this allocation.
 
 Click the Submit button when done.
 
-#### Allocation Status: Pending/New
-Your allocation will now display on your Project Detail page with a status of "Pending".
+#### Allocation Status: New
+Your allocation will now display on your Project Detail page with a status of "New".
 
 ![ColdFront Allocation Status Pending/New](/images/coldfront_allocationstatusnew.png)
 
@@ -61,8 +61,8 @@ If you have not completed a project review in the last 365 days, you will be req
 More information about the project review process can be found [here](yearly-project-renewal).
 
 ### I want access to a resource that isn't in my list!
-If there is a resource you think you should have access to but it's not in the drop-down list on the Request New Allocation page, please [submit a help ticket](/user-information/ticket-submission).  If you would like access to a departmental server or a colleague's cluster, the PI responsible for that resource may need to request the allocation for you.  
+If there is a resource you think you should have access to but it's not in the drop-down list on the Request New Allocation page, please [submit a help ticket](/user-information/ticket-submission). If you would like access to a departmental server or a colleague's cluster, the PI responsible for that resource may need to request the allocation for you.  
 
 ### PIs with departmental clusters
 
-If you would like a colleague to have access to your resource, please [submit a help ticket](/user-information/ticket-submission) to request this. It's important that you let the CARC know if that colleague is allowed to add users from their research group to your cluster. You will not be able to see any allocations or users that are added if this access is given. If you have questions, please contact the CARC.
+If you would like a colleague to have access to your resource, please [submit a help ticket](/user-information/ticket-submission) to request this. It's important that you let the CARC know if that colleague is allowed to add users from their research group to your cluster. You will not be able to see any allocations or users that are added if this access is given.

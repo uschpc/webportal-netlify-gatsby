@@ -49,7 +49,7 @@ An introduction to the R programming environment and language for statistical co
 
 Materials: https://github.com/uschpc/workshop-r-intro
 
-### HPC with R
+#### HPC with R
 
 This workshop covers intermediate topics in R programming using the CARC's high-performance computing cluster, Discovery, including data I/O, big data, memory usage, parallel computing, debugging, and profiling.
 

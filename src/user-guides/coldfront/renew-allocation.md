@@ -12,34 +12,11 @@ excerpt: ColdFront user portal - renewing project allocations
 backToTopBtnFlag: true
 ---
 
-Each type of resource offered by the CARC has a different expiration policy.
+All allocations expire at some point, either on a date or when a limit is reached. For example, an allocation to a cloud resource has a limit of the total number of core hours allowed by that user. Once the user has reached that number, the allocation expires. In order to renew an allocation, the PI who manages the project that the allocation falls under must take action.
 
-For example:
-* Allocations to the Discovery cluster expire annually
-* Allocations to private condo clusters expire every 5 years (or when the hardware warranty expires)
-* Allocations to cloud computing resources expire when the compute time is used up
+### How to renew allocations
 
-PIs and any users they authorize as "managers" on their projects are the only people that can renew an allocation.  
-
-### Allocation policies
-
-Renewals can be done beginning 60 days before the allocation expires to provide you with plenty of time to complete the process. For cluster allocations, users will receive email reminders that their cluster allocation is expiring at 30 days, 2 weeks, and 1 week before the date of expiration. PIs can click on the link in the email to go directly to the renewal page in the user portal, or they can click on the yellow button displaying "expires in X days" on the user portal's Project Detail page.
-
-![ColdFront Allocations](/images/coldfront_allocation_overview2.png)
-
-### Yearly project renewal
-
-Though faculty are not required to review their project with every allocation that requires renewal, they will not be allowed to renew an allocation unless the project has been reviewed at least once in the previous 365 days.
-
-If you try to renew an allocation without having completed a current project renewal, you will receive this error:
-
-![ColdFront Project Review](/images/coldfront_projectreviewnotification.png)
-
-For more details about the yearly project renewal, please see the [Yearly Project Renewal](yearly-project-renewal) user guide.
-
-### Allocation renewal
-
-If you have already completed your project renewal, you can renew your allocation by clicking on the "expires in X days" label next to the allocation, either on the user portal home page or on the Project Detail page for the project the allocation is associated with.
+If you have already completed your [project renewal](yearly-project-renewal), you can renew your allocation by clicking on the "expires in X days" label next to the allocation, either on the user portal home page or on the Project Detail page for the project the allocation is associated with:
 
 ![ColdFront Allocation Renewal](/images/coldfront_allocation_expires.png)
 
@@ -51,8 +28,25 @@ Click the "Submit" button and your request for renewal will be sent to CARC staf
 
 ![ColdFront Allocation Renew Requested](/images/coldfront_allocation_renewrequested.png)
 
-
 Once the renewal is approved by CARC staff, the status will change to "Active" and the End Date will be one year from date of activation.
+
+### Policies for the Discovery cluster
+
+Allocations for the academic (USC-HPC) cluster expire yearly.  Faculty must renew their allocation each year or access to the resource will be blocked for all group members. The CARC requires faculty to review and update their project(s) annually. If your project has not been reviewed in a year and an allocation for the project is expiring, you will be forced to complete the project review before renewing the allocation.  More details on the project review can be [found here](yearly-project-renewal).
+
+### Policies for storage
+
+The CARC provides each research group with up to 5 TB of storage for free, and 1 TB is the default allocation. This is included in the USC-HPC cluster allocation and not listed separately in the user portal.
+
+If you purchase additional storage, your allocation expires when the warranty on the storage expires. Before this date, the CARC will purchase a new storage solution and you will have an opportunity to purchase storage on that system. If you decide not to do that, you will need to remove your data off the CARC's network before the old system is retired.  We will provide plenty of notice before this occurs.
+
+At this time, all CARC storage allocations expire in December 2020.
+
+### Policies for a departmental server or cluster
+
+The allocations for departmental research servers or clusters are set to expire when their warranties expire.  Please discuss renewal with the CARC prior to the expiration of these warranties. Once a warranty expires, the CARC cannot fix or replace broken or problematic equipment, so it is imperative to discuss upgrades or replacements before the warranty on your equipment expires.
+
+The CARC's current policy is to retire anything that is more than 7 years old.
 
 ### What happens if the allocation expires?
 

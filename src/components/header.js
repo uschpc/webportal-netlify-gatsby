@@ -21,6 +21,8 @@ const Header = (props) => {
                       <ul>
                         <li>
                           <div className="menu-information-for-container"><ul id="menu-information-for" className="nav-top"><li id="menu-item-84" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-84">
+                            <a href="https://usc.edu/">USC</a></li>
+                            <li id="menu-item-84" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-84">
                             <a href="https://itservices.usc.edu/">USC ITS</a></li>
                             <li id="menu-item-85" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-85">
                               <a href="https://cio.usc.edu/">Office of the CIO</a></li>
@@ -44,11 +46,11 @@ const Header = (props) => {
             <div className="content-width-middile">
               <Link to="/" className="hpc-logo">
                 {/* <img data-src="/images/usc_logo_new_design.svg" className=" lazyloaded" src="/images/usc_logo_new_design.svg" /> */}
-                <img data-src="/images/RedLogoFinal.png" className="main-logo" src="/images/RedLogoFinal.png" />
+                <img data-src="/images/NewLogo.png" className="main-logo" src="/images/NewLogo.png" />
               </Link>
-              <a href="https://www.usc.edu/">
+              {/* <a href="https://www.usc.edu/">
                 <img data-src="/images/usc-primary-shield_black.png" className=" lazyloaded" src={(width > 570) ? '/images/usc-primary-shield_black.png' : '/images/shield_black.png' } />
-              </a>
+              </a> */}
               </div>
           </div>
           <Navbar width={width} scrollY={scrollY} nav={props.nav} uniqId={props.uniqId} backToTopBtnFlag={props.backToTopBtnFlag} />

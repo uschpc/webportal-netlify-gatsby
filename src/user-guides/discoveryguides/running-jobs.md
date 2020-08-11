@@ -34,8 +34,12 @@ The compute resources on Discovery are shared across many projects and users. Wh
 Queue          Default Run Time  Max Run Time  Max Cores Available   Maximum Number of Jobs or Job Steps
 (Partition)                                                          (Running or Pending)
 -----------    ----------------  ------------  -------------------   -----------------------------------
-Main           1 Hour            48 Hours      768                   5000
+Main           1 Hour            48 Hours      500                   5000
 ```
+
+It's important to consider the relationship between the number of cores available to your job and the number of jobs you can run. For instance, if you run a parallel job using 100 cores, you can only run up to 5 jobs.
+
+>The CARC is adding compute nodes and cores on an ongoing basis, so expect to find these limits changing as more resources become available.
 
 ### Batch jobs
 

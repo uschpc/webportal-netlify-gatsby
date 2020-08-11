@@ -97,11 +97,11 @@ When you log in to Discovery, you will always start in your home directory. It w
 
 To easily switch to your home directory, enter the command `cd` from the directory you're in.
 
-We keep three weeks of snapshots for /home1. You can think of these snapshots as semi-backups, meaning that if you accidentally deleted some data we would be able to recover it within three weeks. If the file was created and deleted within a one-day period, then the snapshot cannot recover it. You should always keep extra backups of your important data and other files because of this.
+We keep two weeks of snapshots for /home1. You can think of these snapshots as semi-backups, meaning that if you accidentally deleted some data we would be able to recover it within three weeks. If the file was created and deleted within a one-day period, then the snapshot cannot recover it. You should always keep extra backups of your important data and other files because of this.
 
 ##### Project directory
 
-The new parallel project file system was deployed during the summer of 2020. This file system has a capacity of ~10 PB and consists of directories for different research project groups. The quota for each project directory ranges between 1 and 5 GB.
+The new parallel project file system was deployed during the summer of 2020. This file system has a capacity of ~10 PB and consists of directories for different research project groups. The quota for each project directory ranges between 1 and 5 TB.
 
 Each project member has their own subdirectory within their group's project directory, where they can store data, scripts, and related files. The project file system should be used for most of your CARC work, and it's also where you can collaborate with your research project group. Users affiliated with multiple CARC projects will have multiple project directories so they can easily share their files with the appropriate groups.
 

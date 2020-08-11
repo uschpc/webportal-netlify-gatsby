@@ -15,6 +15,8 @@ Command line-based data transfer utilities (clients) are available natively on m
 
 > Note: Due to security risks, please be mindful of the type of information being transferred. Where possible, omit all information that may be considered confidential. For examples of confidential information that requires additional consideration, visit http://itservices.usc.edu/security/sensitive-info.
 
+The following examples show the login processes for the USC NetID `ttrojan`. You should log in with your own USC NetID, which is the first part of your USC email address (e.g., ttrojan@usc.edu's NetID is ttrojan).
+
 ### SFTP: Secure File Transfer Protocol
 
 SFTP is a command line-based transfer tool that is the equivalent of a GUI-based SFTP client. Like SSH, SFTP requires an initial login and authentication, and your session will remain open until you exit or are disconnected. You will remain connected to CARC systems with the ability to upload (`put`) and download (`get`) files without further login or authentication.
@@ -72,13 +74,12 @@ myplot1.jpg                                 100%   10KB   2.4MB/s   00:00
 
 SCP is another convenient way to transfer a single file or directory. The following description assumes that `scp` is being used to transfer files between your local computer and CARC systems.
 
-> Note: Unlike SFTP, login and authentication are requested for each use of the command. If you plan to do multiple transfers it is recommended that you use SFTP — either the command-line version or a GUI-based client, which will keep your session open so that multiple authentications are not required.
+> Note: Unlike SFTP, login and authentication are requested for each use of the command. If you plan to do multiple transfers, it is recommended that you use SFTP — either the command-line version or a GUI-based client, which will keep your session open so that multiple authentications are not required.
 
 You can copy a file(s) from a local directory (`/source/path`) to a remote directory (`/destination/path`), and vice-versa:
 
 ```
 scp </source/path> <hostname:/destination/path>
-
 scp <hostname:/source/path> </destination/path>
 ```
 

@@ -17,7 +17,7 @@ All CARC account holders are assigned three directories where they can store fil
 
 /home1 is a network file system for storing configuration files and personal scripts. Each CARC user has a 100 GB home directory quota.
 
-The home directory provides 3-week snapshots with daily backups, so if you accidentally delete some of your important data, you can recover the data if the deletion was within the last three weeks. You should always keep extra backups of your important data since snapshots or semi-backups are *not* real backups.
+The home directory provides 2-week snapshots with daily backups, so if you accidentally delete some of your important data, you can recover the data if the deletion was within the last three weeks. You should always keep extra backups of your important data since snapshots or semi-backups are *not* real backups.
 
 Your home directory is located at:
 
@@ -27,11 +27,9 @@ Your home directory is located at:
 
 ### Project file system
 
-Each project member has their own subdirectory within their group's project directory, where they can store data, scripts, and related files. Users affiliated with multiple CARC projects will have multiple project directories so they can easily share their files with the appropriate groups.
+The new parallel project file system was deployed during the summer of 2020. This file system has a capacity of ~10 PB and consists of directories for different research project groups. The quota for each project directory ranges between 1 and 5 TB. If more than 5 TB is needed, a project's Principal Investigator can request additional storage space at a cost of $40/TB/year. For more information on storage quotas and pricing, see the [Accounts and Allocations page](/user-information/accounts).
 
-The new parallel project file system was deployed during the summer of 2020. This file system has a capacity of ~10PB. Each CARC user receives their own subdirectory within the directories of each project they belong to, and the quota for each project directory ranges between 1 and 5 TB. If more than 5 TB is needed, a project's Principal Investigator can request additional storage space at a cost of $40/TB/year. For more information on storage quotas and pricing, see the [Accounts and Allocations page](/user-information/accounts).
-
-The project file system should be used for most of your CARC work, and it's also where you can collaborate with your research project group. Each project group member will have their own subdirectory within their group's project directory, where they can store data, scripts, and related files.
+Each project member has their own subdirectory within their group's project directory, where they can store data, scripts, and related files. The project file system should be used for most of your CARC work, and it's also where you can collaborate with your research project group. Users affiliated with multiple CARC projects will have multiple project directories so they can easily share their files with the appropriate groups.
 
 The project directory can be located by typing:
 

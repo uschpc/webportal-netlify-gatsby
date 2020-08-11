@@ -17,7 +17,7 @@ export default function Template({ data }) {
               <div className="page-body">
                 <div className="left-column">
                   <Link to="/user-information/user-guides"><h2>User Guides</h2></Link>
-                  <SideMenu {...data} parentMenuTitle="High-Performance Computing"/>
+                  <SideMenu {...data} parentMenuTitle="Secure Computing"/>
                 </div>
                 <div className="middle-column">
                 <h1>{post.frontmatter.title}</h1>
@@ -39,9 +39,9 @@ export default function Template({ data }) {
     )
 }
 
-export const parallelProgrammingQuery = graphql`
+export const secureComputingQuery = graphql`
   query($slug: String!) {
-    md: markdownRemark(frontmatter: {cat: {eq: "parallelProgramming"}, path: {eq: $slug}}) {
+    md: markdownRemark(frontmatter: {cat: {eq: "secureComputing"}, path: {eq: $slug}}) {
       frontmatter {
         title
         path
@@ -64,7 +64,7 @@ export const parallelProgrammingQuery = graphql`
         }
       }
     }
-    subMenu: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "sharedTemplate"}}}) {
+    subMenu: allMarkdownRemark(sort: {fields: frontmatter___id},filter: {frontmatter: {cat: {eq: "secureComputing"}}}) {
       edges {
         node {
           frontmatter {
@@ -75,7 +75,7 @@ export const parallelProgrammingQuery = graphql`
         }
       }
     }
-    subMenuLevel2: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "parallelProgramming"}}}) {
+    subMenuLevel2: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "secureComputing"}}}) {
       edges {
         node {
           frontmatter {
@@ -86,8 +86,7 @@ export const parallelProgrammingQuery = graphql`
         }
       }
     }
-
-    content: markdownRemark(frontmatter: {cat: {eq: "parallelProgramming"}, path: {eq: $slug}}) {
+    content: markdownRemark(frontmatter: {cat: {eq: "secureComputing"}, path: {eq: $slug}}) {
       frontmatter {
         title
         path

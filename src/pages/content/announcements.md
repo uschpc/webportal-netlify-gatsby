@@ -6,4 +6,4 @@ date: August 10, 2020
 author: Yaseen A.
 ---
 
-Scheduled maintenance on August 9 on /scratch2 is now complete.
+Welcome to the Center for Advanced Research Computing's new website! Follow us on Twitter @usccarc and check out our Discourse community at https://hpc-discourse.usc.edu/. 
