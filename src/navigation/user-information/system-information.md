@@ -11,11 +11,11 @@ backToTopBtnFlag: true
 
 In 2020, the Center for Advanced Research Computing performed a major upgrade to its systems. Its new high-performance computing cluster, Discovery, includes additional compute nodes and a rebuilt software stack, as well as new system configurations to better serve CARC users. A new, high-performing project file system was also deployed, offering more storage space and better performance.
 
-### Computing Resources
+### Computing resources
 
 The CARC computing resource consists of 2 shared head nodes and a total of 30,000 CPU cores in 1,600 compute nodes. The typical compute node has dual 8 to 16 core processors and resides on a 56 gigabit FDR InfiniBand backbone.
 
-### File Systems
+### File systems
 
 Each user has three file systems for their CARC account: the home directory, the project directory, and the scratch directory.
 
@@ -37,7 +37,7 @@ The scratch directories - /scratch and /scratch2 - are high-performance parallel
 
 /scratch has a capacity of 806 TB, and /scratch2 has a capacity of 709 TB. Each user receives a 10 TB storage allocation for each of /scratch and /scratch2.
 
-### Operating System
+### Operating system
 
 The CARC uses a customized distribution of the Community Enterprise Operating System (CentOS), built using the publicly available RPM Package Manager (RPM).  CentOS is a high-quality Linux distribution that gives the CARC complete control of its open-source software packages and is fully customized to suit advanced research computing needs, without the need for license fees.
 

@@ -12,12 +12,12 @@ const SystemStatus = (props) => {
     }
 
     const findCategories = (categoryId) => {
-        let result = _.filter(categories, function(cat) { 
+        let result = _.filter(categories, function(cat) {
             if (cat.subcategory_ids) {
                 if (cat.subcategory_ids.indexOf(categoryId) > -1) {
                     return cat.name
                 }
-            } 
+            }
          });
          return result[0] ? result[0].name : null
     }
@@ -100,7 +100,7 @@ const SystemStatus = (props) => {
                     )
                 })}
             </div>
-            
+
             <div className="hide">
                 <h2>Upcoming Events</h2>
                 <div className="postcard-left">
