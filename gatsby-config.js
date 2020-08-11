@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `USC Research Computing`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `USC Advanced Research Computing`,
+    description: `USC's Center for Advanced Research Computing supports computational research and data-driven solutions.`,
     author: `@gatsbyjs`,
   },
   plugins: [
@@ -104,7 +104,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `static/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `static/images/browser-icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-transformer-remark`,
