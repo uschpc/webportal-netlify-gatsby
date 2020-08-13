@@ -15,6 +15,8 @@ id: 3
 
 The Center for Advanced Research Computing's User Portal is how users manage their projects and allocations on CARC systems.
 
+>Note: If you're a condo node owner, you will still manage your resources and users at https://hpc-web.usc.edu/projects/. Support for condo nodes in the User Portal will be added once the CARC's [new Condo Cluster Program (CCP)](/services/condo-cluster-program) is developed. 
+
 The Research Computing User Portal uses ColdFront, an open source resource allocation management tool developed by the [University at Buffalo's Center for Computational Research](http://www.buffalo.edu/ccr.html). ColdFront supports the management of resources and user allocations to those resources.  The tool allows users to request and manage the access they and their students or collaborators have to the resources in the CARC's data center.  
 
 ColdFront was designed to be useful in varied high-performance computing environments. The architecture is extensible and supports various back-ends, job schedulers, and ticketing systems, and it is database agnostic.  The CARC's implementation of this open source product interfaces with XDMoD (job metrics), Slurm (job scheduler), OpenLDAP, BeeGFS (storage), and JIRA (ticketing system).

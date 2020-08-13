@@ -72,7 +72,7 @@ Platform: x86_64-pc-linux-gnu (64-bit)
 R is free software and comes with ABSOLUTELY NO WARRANTY.
 You are welcome to redistribute it under certain conditions.
 Type 'license()' or 'licence()' for distribution details.
-  Natural language support but running in an English locale
+Natural language support but running in an English locale
 R is a collaborative project with many contributors.
 Type 'contributors()' for more information and
 'citation()' on how to cite R or R packages in publications.
@@ -99,7 +99,7 @@ salloc: Nodes d0035 are ready for job
 ```
 ```sh
 user@d0035:~$ module load gcc/8.3.0 openblas/0.3.8 r/4.0.0
-user@d0035:~$ R
+user@d0035:~$ R   
 R version 4.0.0 (2020-04-24) -- "Arbor Day"
 Copyright (C) 2020 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
