@@ -18,7 +18,7 @@ export default function Template({ data }) {
               <div className="page-body">
                 <div className="left-column">
                   <Link to="/user-information/user-guides"><h2>User Guides</h2></Link> 
-                  <SideMenu {...data}/>
+                  <SideMenu {...data} parentMenuTitle="High-Performance Computing"/>
                 </div>
                 <div className="middle-column">
                 <h1>{post.frontmatter.title}</h1>
