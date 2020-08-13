@@ -1048,10 +1048,9 @@ body {
             -webkit-box-shadow: 0px 0px 12px 0px rgba(186, 186, 186, 0.62);
             -moz-box-shadow: 0px 0px 12px 0px rgba(186, 186, 186, 0.62);
           input {
-            // font-size: 10px;
+            font-size: 10px;
             width: 230px;
-            height: 20px;
-            outline-offset: 2px;
+            height: 30px;
             &.search{
               // background: center center no-repeat url('images/search-icon-black@2x.png');
               background-size: 24px auto;
@@ -1060,9 +1059,9 @@ body {
               position: absolute;
               top: 0;
               right: 0;
-              width: 22px;
+              width: 32px;
               background: center center no-repeat url('/images/search-icon-black@2x.png');
-              background-size: 12px auto;
+              background-size: 20px auto;
               text-indent: -9000em;
               border: transparent;
               cursor: pointer;
@@ -1402,7 +1401,7 @@ p {
       &.hpc-logo{
         img {
           height: -webkit-fill-available;
-          max-height: 58%;
+          max-height: 55%;
         }
       }
     }
