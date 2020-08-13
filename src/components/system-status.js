@@ -1,4 +1,6 @@
 import React, {useEffect, useState} from 'react';
+import ReactHtmlParser from 'react-html-parser';
+
 import _ from 'lodash'
 import axios from 'axios';
 
@@ -87,7 +89,7 @@ const SystemStatus = (props) => {
                             <a href={`https://hpc-discourse.usc.edu/t/${item.slug}`} target="_blank">
                             <div className="right-side">{getFirstLetterOfUsers(item.last_poster_username)}</div>
                                 <div className="left-side">
-                                    <h3 className="title">{item.fancy_title}</h3>
+                                    <h3 className="title">{ReactHtmlParser(item.fancy_title)}</h3>
                                     <div className="second-row">
                                         <div className="icon"></div>
                                         <div className="category">{findCategories(item.category_id) ? findCategories(item.category_id) : 'Announcements'}</div>
