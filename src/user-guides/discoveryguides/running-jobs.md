@@ -2,7 +2,7 @@
 author: Cesar Sul
 id: 2
 date: 2020-06-19T12:00:00.387Z
-title: Runnings Jobs on Discovery
+title: Running Jobs on Discovery
 path: running-jobs
 parentPath: user-information/user-guides/high-performance-computing/discovery
 cat: discoveryGuides

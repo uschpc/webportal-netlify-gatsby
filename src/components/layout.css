@@ -618,10 +618,11 @@ pre tt:after {
   font-size: 18px;
   border: none;
   outline: none;
-  color: black;
+  color: #777777;
   padding: 13px 0px;
   background-color: inherit;
-  font-weight: bold;
+  font-weight: normal;
+  font-family: 'Source Sans Pro', sans-serif;
   margin: 0;
 }
 
@@ -633,7 +634,7 @@ pre tt:after {
   display: none;
   position: absolute;
   background-color: gray;
-  opacity: 0.9;
+  opacity: 0.97;
   width: 100%;
   left: 0;
   right: 0;
