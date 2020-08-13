@@ -10,12 +10,31 @@ and (min-width : 1025px) {
 @media only screen 
 and (min-width : 1100px) and (max-width: 1500px) { 
     #___gatsby { 
+        #gatsby-focus-wrapper {
         .dropdown {
             .dropbtn {
                 font-size: 16px;
             }
         } 
+        .region.usc-hpc {
+            .view-content {
+                .content-container {
+                    .shared.discourse {
+                        .Announcements-box {
+                            .description {
+                                font-size: 13px;
+                            }
+                            .date {
+                                margin-bottom: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
     }
+ }
 }
 
 @media only screen 

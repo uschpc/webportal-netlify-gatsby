@@ -70,7 +70,7 @@ class Search extends Component {
         return Object.keys(item).some(key => {
           return item[key].frontmatter.title.toString().toLowerCase().search(searchInput) !== -1 ||
           item[key].frontmatter.excerpt && item[key].frontmatter.excerpt.toString().toLowerCase().search(searchInput) !== -1 || 
-          item[key].frontmatter.path && item[key].frontmatter.path.toString().toLowerCase().search(searchInput) !== -1 || 
+          item[key].frontmatter.title && item[key].frontmatter.title.toString().toLowerCase().search(searchInput) !== -1 || 
           item[key].html.toString().toLowerCase().search(searchInput) !== -1
         });
     });

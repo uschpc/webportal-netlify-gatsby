@@ -26,8 +26,16 @@ body {
     #gatsby-focus-wrapper{
       .page-body {
         .middle-column {
-          ul {
+          ul, ol {
             li {
+              ul {
+                  margin-bottom: 0;
+                  margin-top: 0;
+              }
+              p {
+                margin-bottom: 0;
+                margin-top: 0;
+              }
               a {
                 color: #990000;
                 display: unset;
@@ -243,6 +251,9 @@ body {
           h2 {
             color: #990000;
             font-size: 26px;
+            &:hover {
+              text-decoration: underline;
+            }
           }
 
           .side-menu {
@@ -570,6 +581,9 @@ body {
           h2 {
             color: #990000;
             font-size: 26px;
+            &:hover {
+              text-decoration: underline;
+            }
           }
 
           .side-menu {
@@ -1711,8 +1725,12 @@ p {
                     order: 2;
                     min-height: 70px;
                   }
-                  img {
+                  .image-wrapper {
                     height: 262px;
+                    background-color: #f4f2f2;
+                    img {
+                      height: auto;
+                    }
                   }
                   &:hover {
                     font-weight: 500;
