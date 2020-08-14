@@ -1,7 +1,7 @@
 ---
 author: Derek Strong
 id: 1
-date: 2020-06-03T12:00:00.387Z
+date: 2020-08-13T12:00:00.387Z
 title: Getting Started with Discovery
 path: getting-started
 parentPath: user-information/user-guides/high-performance-computing/discovery
@@ -51,7 +51,7 @@ To log in to the Discovery login node (also known as the *head node*), you will 
 
 #### SSH login
 
-##### On macOS or Linux
+##### On macOS and Linux
 
 macOS users can connect to Discovery using the Terminal application that is natively installed. Linux users can similarly use the natively installed terminal application that comes with their distribution of Linux (e.g., Terminal on Ubuntu).
 
@@ -61,17 +61,31 @@ To connect, open a new terminal window and enter:
 ssh <username>@discovery.usc.edu
 ```
 
-Be sure to substitute your USC NetID as the username. This is the same username for your USC email account (e.g., ttrojan@usc.edu's NetID is ttrojan). After entering the command, you will then be prompted to enter your USC NetID password. Again, this is the same password for your USC email account.
+Be sure to substitute your USC NetID as the username. This is the same username for your USC email account (e.g., ttrojan@usc.edu's NetID is ttrojan). After entering the command, you will then be prompted to enter your USC NetID password. This is the same password for your USC email account.
+
+>Note: There will be no visual feedback as you enter your password. This is a security feature designed to obscure your password and is expected.
+
+After entering your password, you will then see a Duo two-factor authentication prompt.
 
 ##### On Windows
 
-Windows users may need to download a third-party SSH client to connect to the CARC. You may use the client that works best for you. Here are a few of the most popular clients:
+Windows users may need to download and install a third-party SSH client to connect to Discovery. The most popular client is PuTTY, which is available through the [developer’s website](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). On Windows 10, there is also a natively available Windows Terminal that has a built-in SSH client.
 
-- Windows Terminal, which is natively available on Windows 10
-- PuTTY, which is available through the [developer’s website](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
-- X-Win32, which is available through the [USC software website](https://software.usc.edu/x-win32/)
+To connect using Windows Terminal, open a new terminal window and enter:
 
-To connect to Discovery using any of these, download and install the client and then launch a connection window. You will be asked to provide your USC NetID and password. Your NetID is the first part of your USC email address (e.g., ttrojan@usc.edu's NetID is ttrojan), and your password is the same as your email password. You will also need to enter the following hostname in order to connect: `discovery.usc.edu`.
+```
+ssh <username>@discovery.usc.edu
+```
+
+Be sure to substitute your USC NetID as the username. You will then be prompted to enter your USC NetID password.
+
+To connect using Putty, start in the Configuration window under the Session category and enter `discovery.usc.edu` as the hostname with port `22` and select Connection type: SSH. Then select Open to open a connection window, enter your USC NetID as the username, and finally enter your USC NetID password.
+
+Your USC NetID is the same username for your USC email account (e.g., ttrojan@usc.edu's NetID is ttrojan). Your USC NetID password is the same password for your USC email account. 
+
+>Note: There will be no visual feedback as you enter your password. This is a security feature designed to obscure your password and is expected.
+
+After entering your password, you will then see a Duo two-factor authentication prompt.
 
 #### Duo two-factor authentication (2FA)
 
@@ -144,19 +158,28 @@ To check your quota, use the `myquota` command. Under `size`, compare the result
 >Note: The `chunk files` section indicates the way your files and directories are divided up by the parallel file system, not the absolute number of files.
 
 ```
-myquota
+ttrojan@discovery:~$ myquota
+  
 --------------------------
 /home1/ttrojan
       user/group     ||           size          ||    chunk files    
      name     |  id  ||    used    |    hard    ||  used   |  hard   
 --------------|------||------------|------------||---------|---------
        ttrojan|555555||  127.23 MiB|  100.00 GiB||     4530|  2000000
+         
 --------------------------
 /scratch/ttrojan
       user/group     ||           size          ||    chunk files    
      name     |  id  ||    used    |    hard    ||  used   |  hard   
 --------------|------||------------|------------||---------|---------
        ttrojan|555555||  446.78 MiB|   10.00 TiB||     5797|unlimited
+         
+--------------------------
+/scratch2/ttrojan
+      user/group     ||           size          ||    chunk files    
+     name     |  id  ||    used    |    hard    ||  used   |  hard   
+--------------|------||------------|------------||---------|---------
+       ttrojan|555555||  200.34 MiB|   10.00 TiB||     4002|unlimited
 ```
 
 If you exceed the limits, you may receive a "disk quota exceeded" or similar error. Please note that the CARC is unable to increase the quota for your home directory.
@@ -261,7 +284,28 @@ The compute resources on Discovery are shared across many projects and users. Wh
 Queue          Default Run Time  Max Run Time  Max Cores Available   Maximum Number of Jobs or Job Steps
 (Partition)                                                          (Running or Pending)
 -----------    ----------------  ------------  -------------------   -----------------------------------
-Main           1 Hour            48 Hours      768                   5000
+Main           1 Hour            48 Hours      800                   5000
+```
+
+Jobs also depend on your project account allocations, and each job will subtract from your project's allocated core-hours. You can use the `myaccount` command to see your available and default accounts and usage for each account:
+
+```
+ttrojan@discovery:~$ myaccount
+  
+      User              Account             Def Acct                  QOS
+---------- -------------------- -------------------- --------------------
+   ttrojan                acct1                acct1               normal
+----------
+  
+----
+account usage: acct1
+--------------------------------------------------------------------------------
+Top 10 Users 2019-08-13T00:00:00 - 2020-08-12T23:59:59 (31622400 secs)
+Usage reported in Percentage of Total
+--------------------------------------------------------------------------------
+  Cluster     Login     Proper Name         Account     Used   Energy
+--------- --------- --------------- --------------- -------- --------
+discovery   ttrojan         ttrojan           acct1   10.03%    0.00%
 ```
 
 ### Testing your job
@@ -271,8 +315,10 @@ We recommend that you first test your job interactively on a compute node before
 For example, to request four processors for one hour, enter:
 
 ```
-salloc --ntasks=4 --time=1:00:00
+salloc --ntasks=4 --time=1:00:00 --account=<account_id>
 ```
+
+Be sure to use the correct account for your jobs. Without the `--account` option, your default account will be used. This is fine if you only have one project account.
 
 After running the command, the job scheduler will add your job to the wait queue.
 
@@ -292,12 +338,16 @@ Your job script should look something like this:
 #SBATCH --cpus-per-task=2
 #SBATCH --mem-per-cpu=1GB
 #SBATCH --time=1:00:00
+#SBATCH --account=<account_id>
+  
 module load gcc
 module load python
 python3 script.py
 ```
 
-The top few lines of the file (that begin with `#SBATCH`) use options to specify the requested resources for your program. Then the next set of lines loads the required software modules (`module load ...`). After that, the remaining lines are commands that run your programs.
+The top few lines of the file (that begin with `#SBATCH`) use options to specify the requested resources for your program. Be sure to use the correct account in your job scripts. Without the `--account` option, your default account will be used. This is fine if you only have one project account.
+
+The next set of lines loads the required software modules (`module load ...`). After that, the remaining lines are commands that run your programs.
 
 To submit a job, enter the command:
 
@@ -327,15 +377,15 @@ squeue -u <username>
 
 Each job is assigned a unique job identifier. It is sufficient to use only the numeric portion of the job ID when referencing a job or submitting a ticket.
 
-In the example below, the job 3271 has been placed in the "quick" partition (PARTITION) based on its requested time of 1 hour:
+In the example below, the job 3271 has been placed in the "main" partition (PARTITION) based on its requested time of 1 hour:
 
 ```
 squeue -u ttrojan
 JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
- 3271     quick   my.job  ttrojan  R      35:58      1 hpc1407
+ 3271      main   my.job  ttrojan  R      35:58      1 d05-09
 ```
 
-The job has been running for 35 minutes and 58 seconds (TIME). It has requested 4 tasks and was allocated 1 node (NODES), which is hpc1407 (NODELIST). The status of the job is "R" (running) (ST).
+The job has been running for 35 minutes and 58 seconds (TIME). It has requested 4 tasks and was allocated 1 node (NODES), which is d05-09 (NODELIST). The status of the job is "R" (running) (ST).
 
 You can also use the `squeue` command to estimate when your job will start:
 

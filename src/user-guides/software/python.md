@@ -72,16 +72,10 @@ Hello Tommy
 
 After loading the module, you can run Python 3.x interactively by entering the command `python3`. For versions 2.x, the command `python` will start the interactive mode.
 
-To run Python interactively on a compute node, use Slurm's `salloc` command to request compute resources and `srun` to start an interactive shell like so:
+To run Python interactively on a compute node, use Slurm's `salloc` command to request compute resources:
 
 ```sh
-salloc --time=1:00:00 --cpus-per-task=8 --mem-per-cpu=2GB
-```
-
-On Discovery:
-
-```
-srun --pty bash
+salloc --time=1:00:00 --cpus-per-task=8 --mem-per-cpu=2GB --account=<account_id>
 ```
 
 Once you are logged in to a compute node, load the module and enter `python3` or `python` to run Python interactively.
@@ -96,13 +90,13 @@ After creating a Python script, you will need to create a Slurm job script to la
 #SBATCH --cpus-per-task=4
 #SBATCH --mem-per-cpu=10GB
 #SBATCH --time=1:00:00
-
-Load the module and run the `python3` or `python` command:
-
-    module load python
-    python3 /path/to/script.py
-
+#SBATCH --account=<account_id>
+  
+module load gcc/8.3.0
+module load python/3.7.6
+python3 /path/to/script.py
 ```
+
 Save this script as `python.slurm`, for example, and then submit it to the job scheduler like so:
 
 ```sh

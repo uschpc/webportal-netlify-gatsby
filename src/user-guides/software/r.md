@@ -64,22 +64,28 @@ Please note that we do not currently support the use of the RStudio IDE on Disco
 After loading the module, to run R interactively on the **login node**, simply enter `R` and this will start a new R session:
 
 ```sh
-user@discovery:~$ module load r
-user@discovery:~$ R
-R version 4.0.0 (2020-04-24) -- "Arbor Day"
-Copyright (C) 2020 The R Foundation for Statistical Computing
-Platform: x86_64-pc-linux-gnu (64-bit)
-R is free software and comes with ABSOLUTELY NO WARRANTY.
-You are welcome to redistribute it under certain conditions.
-Type 'license()' or 'licence()' for distribution details.
-Natural language support but running in an English locale
-R is a collaborative project with many contributors.
-Type 'contributors()' for more information and
-'citation()' on how to cite R or R packages in publications.
-Type 'demo()' for some demos, 'help()' for on-line help, or
-'help.start()' for an HTML browser interface to help.
-Type 'q()' to quit R.
->
+  user@discovery:~$ module load r
+  user@discovery:~$ R
+    
+  R version 4.0.0 (2020-04-24) -- "Arbor Day"
+  Copyright (C) 2020 The R Foundation for Statistical Computing
+  Platform: x86_64-pc-linux-gnu (64-bit)
+    
+  R is free software and comes with ABSOLUTELY NO WARRANTY.
+  You are welcome to redistribute it under certain conditions.
+  Type 'license()' or 'licence()' for distribution details.
+    
+    Natural language support but running in an English locale
+    
+  R is a collaborative project with many contributors.
+  Type 'contributors()' for more information and
+  'citation()' on how to cite R or R packages in publications.
+     
+  Type 'demo()' for some demos, 'help()' for on-line help, or
+  'help.start()' for an HTML browser interface to help.
+  Type 'q()' to quit R.
+    
+  >
 ```
 
 Using R on the login node should be reserved for installing packages and non-intensive work.
@@ -89,7 +95,7 @@ Alternatively, using R interactively on a **compute node** is useful for more in
 To run R interactively on a compute node, first use Slurm's `salloc` command to reserve resources on a node. Once you are granted the resources and logged in to a compute node, load the modules and then enter `R`:
 
 ```sh
-user@discovery:~$ salloc --time=1:00:00 --ntasks=1 --cpus-per-task=8 --mem=16GB
+user@discovery:~$ salloc --time=1:00:00 --ntasks=1 --cpus-per-task=8 --mem=16GB --account=<account_id>
 salloc: Pending job allocation 24316
 salloc: job 24316 queued and waiting for resources
 salloc: job 24316 has been allocated resources
@@ -99,24 +105,30 @@ salloc: Nodes d0035 are ready for job
 ```
 ```sh
 user@d0035:~$ module load gcc/8.3.0 openblas/0.3.8 r/4.0.0
-user@d0035:~$ R   
+user@d0035:~$ R
+  
 R version 4.0.0 (2020-04-24) -- "Arbor Day"
 Copyright (C) 2020 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
+  
 R is free software and comes with ABSOLUTELY NO WARRANTY.
 You are welcome to redistribute it under certain conditions.
 Type 'license()' or 'licence()' for distribution details.
+  
   Natural language support but running in an English locale
+  
 R is a collaborative project with many contributors.
 Type 'contributors()' for more information and
 'citation()' on how to cite R or R packages in publications.
+  
 Type 'demo()' for some demos, 'help()' for on-line help, or
 'help.start()' for an HTML browser interface to help.
 Type 'q()' to quit R.
+  
 >
 ```
 
-Notice that the shell prompt changes to indicate that you are now on a compute node. Be sure to change the resource requests (the `--time=1:00:00 --ntasks=1 --cpus-per-task=8 --mem=16GB` part after your `salloc` command) as needed, such as the number of cores and memory required.
+Notice that the shell prompt changes to indicate that you are now on a compute node. Be sure to change the resource requests (the `--time=1:00:00 --ntasks=1 --cpus-per-task=8 --mem=16GB --account=<account_id>` part after your `salloc` command) as needed, such as the number of cores and memory required.
 
 To run R scripts from within R, use the `source()` function. Alternatively, to run R scripts from the shell, use the `Rscript` command, after loading the R module.
 
@@ -124,9 +136,11 @@ To exit the node and relinquish the job resources, enter `q()` to exit R and the
 
 ```sh
 > q()
+  
 user@d0035:~$ exit
 exit
 salloc: Relinquishing job allocation 24316
+  
 user@discovery:~$
 ```
 
@@ -203,11 +217,14 @@ Your R script should consist of the sequence of R commands needed for your analy
 // R script to filter and summarize data
 library(readr)
 library(dplyr)
+  
 dataset <- read_csv("/home1/user/R/data/dataset.csv")
+  
 data <-
   dataset %>%
   select(var1, var3, var5) %>%
   filter(var3 == TRUE)
+  
 summary(data)
 ```
 
@@ -221,10 +238,14 @@ A Slurm job script is a special type of Bash shell script that the Slurm job sch
 #SBATCH --cpus-per-task=8      // 8 cores
 #SBATCH --mem=16GB             // 16 GB of memory
 #SBATCH --time=1:00:00         // 1 hour run time
+#SBATCH --account=<account_id> // Account to charge resources to
+  
 module load gcc/8.3.0
 module load openblas/0.3.8
 module load r/4.0.0
+  
 cd /home1/user/R/scripts
+  
 Rscript --vanilla script.R
 ```
 
@@ -238,7 +259,7 @@ Save the job script as `R.job`, for example, and then submit it to the job sched
 user@discovery:~$ sbatch R.job
 Submitted batch job 275
 ```
-
+  
 The results of the job will be logged and, by default, saved to a file of the form `slurm-<jobid>.out` in the same directory where the job script is located.
 
 ### Parallel programming with R
@@ -256,10 +277,13 @@ The following is an example R script:
 ```r
 // Parallel computing with R on Discovery
 library(parallel)
+  
 // Define number of cores based on Slurm job script
 cores <- as.integer(Sys.getenv("SLURM_CPUS_PER_TASK")) - 1
+  
 // Create large datasets in parallel with same number of variables and store in list
 datasets <- mclapply(1:100, function(x) data.frame(matrix(rnorm(1000000), ncol = 1000)), mc.cores = cores)
+  
 // The serial analog is: lapply(1:100, function(x) data.frame(matrix(rnorm(1000000), ncol = 1000)))
 // Create model with same formula but accepting different data inputs
 model <- function(x) {
@@ -267,8 +291,10 @@ model <- function(x) {
   formula <- as.formula(paste("X1 ~ ", paste(xnames, collapse = "+")))
   lm(formula, x)
 }
+  
 // Run models in parallel and store results in list
 results <- mclapply(datasets, model, mc.cores = cores)
+  
 // The serial analog is: lapply(datasets, model)
 ```
 
@@ -286,9 +312,12 @@ A Slurm job script for this example could look similar to the previous example w
 #SBATCH --cpus-per-task=12     // 12 cores
 #SBATCH --mem=24GB             // 24 GB of memory
 #SBATCH --time=1:00:00         // 1 hour run time
+#SBATCH --account=<account_id> // account to charge resources to
+  
 module load gcc/8.3.0
 module load openblas/0.3.8
 module load r/4.0.0
+  
 Rscript --vanilla /path/to/script.R
 ```
 
