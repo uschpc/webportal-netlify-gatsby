@@ -129,6 +129,7 @@ You can check the resources your program is consuming using the `top` process ma
    salloc: Granted job allocation 24210
    salloc: Waiting for resource configuration
    salloc: Nodes d3264 are ready for job
+     
    [ttrojan@d3264 ~]$mpirun find
   ```
 
@@ -137,6 +138,7 @@ You can check the resources your program is consuming using the `top` process ma
   ```sh
   [ttrojan@discovery ~]$ ssh d3264
   [ttrojan@d3264]$ top
+    
   top - 15:37:36 up 21:50,  1 user,  load average: 0.00, 0.01, 0.05
   Tasks: 285 total,   1 running, 284 sleeping,   0 stopped,   0 zombie
   %Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
@@ -258,6 +260,7 @@ For example, to allow someone with the username `guest_user` read access to your
 ```sh
 // Allows new files to be shared
 setfacl -Rdm u:guest_user:r-x /scratch/guest_user
+  
 // Allows existing files to be shared
 setfacl -Rm u:guest_user:r-x /scratch/guest_user
 ```
@@ -283,7 +286,9 @@ If you forget which permissions have been set, you can run `getfacl` to check wh
 
 ```sh
 [ttroj@discovery]$ getfacl /scratch2/user_name
+  
 getfacl: Removing leading '/' from absolute path names
+  
 // File: scratch2/user_name
 // Owner: user_name
 // Group: group_name
@@ -317,12 +322,14 @@ $ myquota
      name     |  id  ||    used    |    hard    ||  used   |  hard
 --------------|------||------------|------------||---------|---------
       ttrojan|375879||   51.88 MiB|  100.00 GiB||     3461|  2000000
+        
 --------------------------
 /scratch/ttrojan
       user/group     ||           size          ||    chunk files
      name     |  id  ||    used    |    hard    ||  used   |  hard
 --------------|------||------------|------------||---------|---------
       ttrojan|375879||   13.20 GiB|   10.00 TiB||   162363|unlimited
+        
 --------------------------
 /scratch2/ttrojan
       user/group     ||           size          ||    chunk files
@@ -377,10 +384,13 @@ To check if a certain software is available, use the `module avail` command. The
 
 ```sh
 $ module avail samtools
+  
 ---------------- /spack/apps/lmod/linux-centos7-x86_64/gcc/8.3.0 ----------------
    samtools/1.9    samtools/1.10 (D)
+     
   Where:
    D:  Default Module
+     
 Use "module spider" to find all possible modules and extensions.
 Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
 ```
@@ -419,6 +429,7 @@ Example:
 ```sh
 $ module load python
 $ pip3 freeze
+  
 appdirs==1.4.0
 cycler==0.10.0
 Cython==0.25.2
@@ -448,8 +459,10 @@ Each compiler has its own software tree which is "unlocked" by loading the appro
 ```sh
 module load gcc/8.3.0
 module load cmake
+  
 // Swap compilers
 module load gcc/9.2.0
+  
 The following have been reloaded with a version change:
   1) cmake/3.15.4 => cmake/3.16.2   2) gcc/9.2.0 => gcc/8.3.0
 ```

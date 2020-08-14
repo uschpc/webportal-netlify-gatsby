@@ -1,7 +1,7 @@
 ---
 author: Marco Olguin
 id: 3
-date: 2020-06-19T12:00:00.387Z
+date: 2020-08-13T12:00:00.387Z
 title: Using MATLAB on Discovery
 alternativeTitle: MATLAB
 path: matlab
@@ -45,11 +45,10 @@ Use of the MATLAB GUI is possible but **not recommended**, as it requires X11 fo
 
 After loading the module, you can run MATLAB interactively by entering the command `matlab`.
 
-To run MATLAB interactively on a compute node, use Slurm's `salloc` command to request compute resources and `srun` to start an interactive shell like so:
+To run MATLAB interactively on a compute node, use Slurm's `salloc` command to request compute resources like so:
 
 ```sh
-salloc --time=1:00:00 --cpus-per-task=8 --mem-per-cpu=2GB
-srun --pty bash
+salloc --time=1:00:00 --cpus-per-task=8 --mem-per-cpu=2GB --account=<account_id>
 ```
 
 Once you are logged in to a compute node, load the module and then enter `matlab`.
@@ -64,12 +63,10 @@ After creating a MATLAB script, you will need to create a Slurm job script to la
 #SBATCH --cpus-per-task=4
 #SBATCH --mem-per-cpu=10GB
 #SBATCH --time=1:00:00
-```
-
-Load the module and run MATLAB:
-
-```sh
+#SBATCH --account=<account_id>
+  
 module load matlab
+  
 // Do not include the .m extension in your script name  
 matlab -r 'script_name'
 ```
@@ -98,6 +95,7 @@ To create a worker pool larger than can fit on a single node, MATLAB will submit
 
 ```
 cluster = parallel.cluster.Slurm;
+  
 set(cluster,'JobStorageLocation', your_directory_here);
 set(cluster,'HasSharedFilesystem', true);
 set(cluster,'SubmitArguments','--time=00:20:00 ');

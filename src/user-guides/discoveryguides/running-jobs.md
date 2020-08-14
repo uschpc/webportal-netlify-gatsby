@@ -1,7 +1,7 @@
 ---
 author: Cesar Sul
 id: 2
-date: 2020-06-19T12:00:00.387Z
+date: 2020-08-13T12:00:00.387Z
 title: Running Jobs on Discovery
 path: running-jobs
 parentPath: user-information/user-guides/high-performance-computing/discovery
@@ -34,12 +34,33 @@ The compute resources on Discovery are shared across many projects and users. Wh
 Queue          Default Run Time  Max Run Time  Max Cores Available   Maximum Number of Jobs or Job Steps
 (Partition)                                                          (Running or Pending)
 -----------    ----------------  ------------  -------------------   -----------------------------------
-Main           1 Hour            48 Hours      500                   5000
+Main           1 Hour            48 Hours      800                   5000
 ```
 
-It's important to consider the relationship between the number of cores available to your job and the number of jobs you can run. For instance, if you run a parallel job using 100 cores, you can only run up to 5 jobs.
+It is important to consider the relationship between the number of cores available to your job and the number of jobs you can run. For instance, if you run a parallel job using 100 cores for each parallel task, then you can only run up to 8 jobs.
 
 >The CARC is adding compute nodes and cores on an ongoing basis, so expect to find these limits changing as more resources become available.
+
+Jobs also depend on your project account allocations, and each job will subtract from your project's allocated core-hours. You can use the `myaccount` command to see your available and default accounts and usage for each:
+
+```
+ttrojan@discovery:~$ myaccount
+  
+      User              Account             Def Acct                  QOS
+---------- -------------------- -------------------- --------------------
+   ttrojan                acct1                acct1               normal
+----------
+  
+----
+account usage: acct1
+--------------------------------------------------------------------------------
+Top 10 Users 2019-08-13T00:00:00 - 2020-08-12T23:59:59 (31622400 secs)
+Usage reported in Percentage of Total
+--------------------------------------------------------------------------------
+  Cluster     Login     Proper Name         Account     Used   Energy
+--------- --------- --------------- --------------- -------- --------
+discovery   ttrojan         ttrojan           acct1   10.03%    0.00%
+```
 
 ### Batch jobs
 
@@ -49,12 +70,16 @@ Below is an example batch job script that launches a Python script:
 
 ```
 #!/bin/bash
+  
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
 #SBATCH --time=1:00:00
 #SBATCH --mem-per-cpu=2GB
+#SBATCH --account=<account_id>
+  
 module load gcc/8.3.0
 module load python
+  
 python3 script.py
 ```
 The top line:
@@ -72,9 +97,10 @@ The next few lines:
 #SBATCH --cpus-per-task=8
 #SBATCH --time=1:00:00
 #SBATCH --mem-per-cpu=2GB
+#SBATCH --account=<account_id>
 ```
 
-use options to specify the requested resources for your program.
+use options to specify the requested resources for your program. Be sure to use the correct account for your jobs (`<account_id>`). Without the `--account` option, your default account will be used. This is fine if you only have one project account.
 
 The next set of lines:
 
@@ -113,14 +139,14 @@ Interactive jobs are similar to batch jobs but all actions are typed manually on
 
 ### Common Slurm commands
 
-| Command| Action|
-|--|--|
+| Command | Action |
+|---|---|
 | `sbatch`  | Submits job scripts |
-| `salloc`  | Requests compute resources (used for interactive jobs)|
-| `srun`    | Launches tasks on compute resources (often used with salloc)|
-| `scancel` | Cancels a job|
-| `sinfo`   | Displays the state of partitions and nodes|
-| `squeue`  | Displays the state of jobs|
+| `salloc`  | Requests compute resources (used for interactive jobs) |
+| `srun`    | Launches tasks on compute resources (often used with salloc) |
+| `scancel` | Cancels a job |
+| `sinfo`   | Displays the state of partitions and nodes |
+| `squeue`  | Displays the state of jobs |
 
 To learn about all the options available for each command, enter `man <command>` for a specific command while logged in to the Slurm environment.
 
@@ -128,31 +154,43 @@ To learn about all the options available for each command, enter `man <command>`
 
 Slurm allows you to specify many different types of resources. Below are some of the more common resource requests:
 
-| Resource | Description|
+| Resource | Description |
 |---|---|
-|`--ntasks=<number>`| Number of processes to run|
-| `-–mem=<number>` |Total memory (single node) |
-|`-–mem-per-cpu=<number>` |	Memory per processor core|
-|`-–constraint=<attribute>` |	Node property to request (e.g., avx, IB)|
-|`-–partition=<partition_name>`| 	Request specified partition/queue|
-|`-–time=<HH:MM:SS>`| Max run time|
+| `--nodes=<number>`             | Number of nodes to use |
+| `--ntasks=<number>`            | Number of processes to run |
+| `--cpus-per-task=<number>`     | Number of cores per task |
+| `--mem=<number>`               | Total memory (single node) |
+| `--mem-per-cpu=<number>`       | Memory per processor core |
+| `--constraint=<attribute>`     | Node property to request (e.g., avx, IB) |
+| `--partition=<partition_name>` | Request specified partition/queue |
+| `--time=<HH:MM:SS>`            | Max run time |
+| `--account=<account_id>`       | Account to charge resources to |
+
+#### Nodes and tasks
+
+The default value for `--nodes` is 1. This number should be increased if you are running a parallel job using MPI, but otherwise it should be unchanged. The default value for `--ntasks` is also 1, and it should typically be increased if running a multi-node parallel job. The `--cpus-per-task` option is one you will want to explicitly change depending on the nature of your job. Most nodes on the main partition have 24 cores each, so typical values will be 8, 16, or 24 for multi-core parallel jobs. Note that serial jobs only require 1 core.
+
+For more information on MPI jobs, see the [Parallel Programming user guides](/user-information/user-guides/high-performance-computing/parallel-programming).
+
+#### Memory
 
 Since compute node memory is such an important part of running your job, the `#SBATCH --mem=0` slurm directive bears highlighting. It tells Slurm to use all of the available memory on each compute node. Otherwise, the max memory per CPU (`#SBATCH --mem-per-cpu=<value>`) can be calculated by taking the total shared memory per node and subtracting a few GB for system overhead, then dividing that number by the number of CPUs per node.
 
 *Example*: A compute node consisting of 24 CPUs with specs stating 96 GB of shared memory really has ~92 GB of usable memory.
 
-Here's a scenario where you may forget about considering memory overhead:
+Here is a scenario where you may forget about considering memory overhead:
 
 You may tabulate "96 GB / 24 CPUs = 4 GB" and add `#SBATCH --mem-per-cpu=4GB` to your job specification. Slurm will most likely complain about an incorrect memory request and will not submit the job.
+
 In that case, specify:
 
 ```
 #SBATCH --mem-per-cpu=3GB
 ```
 
-Setting `#SBATCH --mem=0` takes care of this problem.
+Setting `#SBATCH --mem=0` or specifying a value less than 92 GB, in this example, also takes care of this problem.
 
-For a complete listing of resource request syntax, run the command `man sbatch`.
+For a complete listing of resource request syntax, run the command `man sbatch` or see the Slurm documentation for [sbatch](https://slurm.schedmd.com/sbatch.html).
 
 ### GPUs
 

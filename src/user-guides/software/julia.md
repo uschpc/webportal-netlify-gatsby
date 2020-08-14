@@ -1,7 +1,7 @@
 ---
 author: Derek Strong
 id: 4
-date: 2020-06-04T12:00:00.387Z
+date: 2020-08-13T12:00:00.387Z
 title: Using Julia on Discovery
 alternativeTitle: Julia
 path: julia
@@ -40,7 +40,7 @@ After loading the module, Julia can be run interactively on the **login node** b
 To run Julia interactively on a **compute node**, first use Slurm's `salloc` command to reserve a node. For example:
 
 ```sh
-salloc --time=1:00:00 --cpus-per-task=8 --mem-per-cpu=2GB
+salloc --time=1:00:00 --cpus-per-task=8 --mem-per-cpu=2GB --account=<account_id>
 ```
 
 Once you are logged in to a compute node, load the module and then simply enter `julia`.
@@ -53,18 +53,14 @@ For a simple serial job, a Slurm job script would look something like this:
 
 ```sh
 #!/bin/bash
-#SBATCH --export=none
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=2GB
 #SBATCH --time=1:00:00
-```
-
-Load the modules and enter the `julia` command:
-
-```sh
-module load gcc
-module load julia
+#SBATCH --account=<account_id>
+  
+module load gcc/8.3.0
+module load julia/1.4.1
 julia /path/to/script.jl
 ```
 
@@ -102,11 +98,9 @@ This changes the Julia depot location to the specified directory, and then packa
 
 To reset this environment variable, enter `unset JULIA_DEPOT_PATH` in the shell.
 
-
 ### Installing a different version of Julia
 
 If you want a different version of Julia that is not currently installed on Discovery, please [submit a help ticket](/user-information/ticket-submission) and we may be able to install it for you.
-
 
 Alternatively, you can install a different version of Julia inside your home directory from official binaries. The following steps show how to do this using Julia version 1.4.2 as an example.
 
