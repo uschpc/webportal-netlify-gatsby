@@ -6,7 +6,7 @@
  */
 
 import React, { useEffect } from "react"
-import PropTypes from "prop-types"
+import PropTypes, { func } from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
@@ -35,6 +35,25 @@ const Layout = (props) => {
 
   useEffect(() => {
     // pageLocationOnBackBtn()
+    let externalLinks = document.querySelectorAll("a[href^='http']");
+    for ( let i = 0; i < externalLinks.length; i++ ) {
+      externalLinks[i].addEventListener('click', (e) => {
+        e.preventDefault()
+        let scrollPosition = window.scrollY
+        console.log('scrollPosition', scrollPosition)
+        sessionStorage.setItem("scrollPosition", scrollPosition);
+        window.location.href = e.target.href
+      })
+    }
+    if(sessionStorage.getItem("scrollPosition")) {
+      console.log('localStorage.scrollPosition', sessionStorage.getItem("scrollPosition"))
+      setTimeout(() => {
+        window.scrollTo(0, sessionStorage.getItem("scrollPosition"));
+        sessionStorage.removeItem("scrollPosition");
+      }, 100)
+      
+    }
+    
   }, [])
 
   useEffect(() => {
