@@ -50,7 +50,7 @@ const Layout = (props) => {
       setTimeout(() => {
         window.scrollTo(0, sessionStorage.getItem("scrollPosition"));
         sessionStorage.removeItem("scrollPosition");
-      }, 100)
+      }, 0)
       
     }
     
