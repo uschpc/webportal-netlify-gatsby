@@ -47,7 +47,6 @@ const Layout = (props) => {
       })
     }
     if(sessionStorage.getItem("scrollPosition")) {
-      console.log('localStorage.scrollPosition', sessionStorage.getItem("scrollPosition"))
       setTimeout(() => {
         window.scrollTo(0, sessionStorage.getItem("scrollPosition"));
         sessionStorage.removeItem("scrollPosition");
