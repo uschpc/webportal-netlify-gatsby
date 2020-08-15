@@ -42,7 +42,8 @@ const Layout = (props) => {
         let scrollPosition = window.scrollY
         console.log('scrollPosition', scrollPosition)
         sessionStorage.setItem("scrollPosition", scrollPosition);
-        window.location.href = e.target.href
+          window.location.href = e.target.href === undefined ? e.currentTarget.href : e.target.href
+       
       })
     }
     if(sessionStorage.getItem("scrollPosition")) {
