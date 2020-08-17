@@ -214,7 +214,7 @@ In order to submit jobs to the Slurm job scheduler, you will need to use R in ba
 Your R script should consist of the sequence of R commands needed for your analysis. For example:
 
 ```r
-// R script to filter and summarize data
+# R script to filter and summarize data
 library(readr)
 library(dplyr)
   
@@ -234,11 +234,11 @@ A Slurm job script is a special type of Bash shell script that the Slurm job sch
 
 ```sh
 #!/bin/bash
-#SBATCH --ntasks=1             // 1 process
-#SBATCH --cpus-per-task=8      // 8 cores
-#SBATCH --mem=16GB             // 16 GB of memory
-#SBATCH --time=1:00:00         // 1 hour run time
-#SBATCH --account=<account_id> // Account to charge resources to
+#SBATCH --ntasks=1             # 1 process
+#SBATCH --cpus-per-task=8      # 8 cores
+#SBATCH --mem=16GB             # 16 GB of memory
+#SBATCH --time=1:00:00         # 1 hour run time
+#SBATCH --account=<account_id> # Account to charge resources to
   
 module load gcc/8.3.0
 module load openblas/0.3.8
@@ -275,27 +275,27 @@ The following example uses the base `parallel` package with a single node and mu
 The following is an example R script:
 
 ```r
-// Parallel computing with R on Discovery
+# Parallel computing with R on Discovery
 library(parallel)
   
-// Define number of cores based on Slurm job script
+# Define number of cores based on Slurm job script
 cores <- as.integer(Sys.getenv("SLURM_CPUS_PER_TASK")) - 1
   
-// Create large datasets in parallel with same number of variables and store in list
+# Create large datasets in parallel with same number of variables and store in list
 datasets <- mclapply(1:100, function(x) data.frame(matrix(rnorm(1000000), ncol = 1000)), mc.cores = cores)
   
-// The serial analog is: lapply(1:100, function(x) data.frame(matrix(rnorm(1000000), ncol = 1000)))
-// Create model with same formula but accepting different data inputs
+# The serial analog is: lapply(1:100, function(x) data.frame(matrix(rnorm(1000000), ncol = 1000)))
+# Create model with same formula but accepting different data inputs
 model <- function(x) {
   xnames <- paste0("X", 2:1000)
   formula <- as.formula(paste("X1 ~ ", paste(xnames, collapse = "+")))
   lm(formula, x)
 }
   
-// Run models in parallel and store results in list
+# Run models in parallel and store results in list
 results <- mclapply(datasets, model, mc.cores = cores)
   
-// The serial analog is: lapply(datasets, model)
+# The serial analog is: lapply(datasets, model)
 ```
 
 A key step here is to match the requested resources in your Slurm job script to the number of cores used in your code, although you will typically want to reserve one core for overhead. This can be accomplished automatically using the Slurm environment variable `SLURM_CPUS_PER_TASK`, which equals the `--cpus-per-task` requested in the Slurm job script.
@@ -308,11 +308,11 @@ A Slurm job script for this example could look similar to the previous example w
 
 ```sh
 #!/bin/bash
-#SBATCH --ntasks=1             // 1 process
-#SBATCH --cpus-per-task=12     // 12 cores
-#SBATCH --mem=24GB             // 24 GB of memory
-#SBATCH --time=1:00:00         // 1 hour run time
-#SBATCH --account=<account_id> // account to charge resources to
+#SBATCH --ntasks=1             # 1 process
+#SBATCH --cpus-per-task=12     # 12 cores
+#SBATCH --mem=24GB             # 24 GB of memory
+#SBATCH --time=1:00:00         # 1 hour run time
+#SBATCH --account=<account_id> # account to charge resources to
   
 module load gcc/8.3.0
 module load openblas/0.3.8

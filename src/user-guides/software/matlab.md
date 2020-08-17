@@ -67,7 +67,7 @@ After creating a MATLAB script, you will need to create a Slurm job script to la
   
 module load matlab
   
-// Do not include the .m extension in your script name  
+# Do not include the .m extension in your script name  
 matlab -r 'script_name'
 ```
 
