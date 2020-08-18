@@ -26,6 +26,21 @@ body {
     #gatsby-focus-wrapper{
       .page-body, .container {
         .middle-column {
+          table {
+            tr {
+              td {
+                a {
+                  color: #990000;
+                  display: unset;
+                  margin-left: 0;
+                  &:hover {
+                    color: #990000;
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+          }
           ul, ol {
             li {
               ul {
