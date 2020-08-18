@@ -86,14 +86,16 @@ After creating a Python script, you will need to create a Slurm job script to la
 
 ```sh
 #!/bin/bash
+    
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem-per-cpu=10GB
 #SBATCH --time=1:00:00
 #SBATCH --account=<account_id>
-  
+    
 module load gcc/8.3.0
 module load python/3.7.6
+    
 python3 /path/to/script.py
 ```
 
@@ -103,11 +105,68 @@ Save this script as `python.slurm`, for example, and then submit it to the job s
 sbatch python.slurm
 ```
 
+Each line is described below:
+
+|Command or Slurm argument|Meaning|
+|----|----|
+|`#!/bin/bash`|Use `/bin/bash` to execute this script |
+|`#SBATCH`| Syntax that allows Slurm to read your requests (ignored by bash)|
+|`--ntasks=1` |  Ensures all resources stay on a single compute node|
+|`--cpus-per-task=4` | Reserves 4 CPUs for your exclusive use|
+|`--mem-per-cpu=10GB` |  Reserves 2 GB per CPU of memory for your exclusive use|
+|`--time=1:00:00` | Reserves resources described for 1 hour|
+|`--account=<account_id>` | Charge compute time to <account_id>. If not specified, you may use up the wrong PI's compute hours|
+|`module load gcc/8.3.0` | Load the `gcc` compiler [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
+|`module load python/3.7.6` | Load the `python` [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
+|`python /path/to/script.py` | Use `python` to run `script.py`|
+
+You can use the following `script.py` as an example. Make sure to save it in the same directory as python.slurm.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+  
+Y, X = np.mgrid[-3:3:200j, -3:3:200j]
+  
+x_pos=np.array((-1,-1,1, 1)) # X positions of point charges
+y_pos=np.array((1, -1,1,-1)) # Y positions of point charges
+q=np.array((-1,+1,+1,-1))    # Charge of point charges
+  
+# Calculate x and y components of electric field due to point charge
+def Ex(x0,y0,q):
+    return -q*(X-x0)/((X-x0)**2+(Y-y0)**2)
+def Ey(x0,y0,q):
+    return -q*(Y-y0)/((X-x0)**2+(Y-y0)**2)
+  
+# Calculate electric field due to multiple point charges
+Ex_total=Ex(x_pos[0],y_pos[0],q[0])+Ex(x_pos[1],y_pos[1],q[1])+Ex(x_pos[2],y_pos[2],q[2])+Ex(x_pos[3],y_pos[3],q[3])
+Ey_total=Ey(x_pos[0],y_pos[0],q[0])+Ey(x_pos[1],y_pos[1],q[1])+Ey(x_pos[2],y_pos[2],q[2])+Ey(x_pos[3],y_pos[3],q[3])
+E_total=np.sqrt((Ex_total**2+Ey_total**2))
+  
+# Clip E_total for aesthetic purposes
+clipped=np.clip(E_total,0,np.sqrt(3))
+  
+# Plot electric field lines, set color based on field strength
+fig1, ax1 = plt.subplots(1,1)
+strm = ax1.streamplot(X, Y, Ex_total, Ey_total, color=clipped, linewidth=2, density=1,cmap='PiYG')
+fig1.colorbar(strm.lines)
+  
+# Plot position of point charges
+ax1.plot(x_pos, y_pos, 'ro')
+  
+# Display plot, only works if X11 Forwarding is enabled
+plt.show()
+  
+# Save plot to working directory
+plt.savefig("plot.png",dpi=300)
+print("Plot saved!")
+```
+
 ### Installing Python packages
 
 #### Discovery
 
-Python packages are not currently tracked in the [module system](/user-information/user-guides/high-performance-computing/discovery/lmod). To see available packages, you can use the `pip3` and `freeze` commands:
+Python packages are not currently tracked in the [software module system](/user-information/user-guides/high-performance-computing/discovery/lmod). To see available packages, you can use the `pip3` and `freeze` commands:
 
     pip3 freeze
     appdirs==1.4.3
@@ -148,7 +207,7 @@ To load a package, ensure you have appended your `PYTHONPATH` environment variab
 
 ### Installing a different version of Python
 
-If you want a different version of Python that is not currently installed on the cluster, please contact us at `carc-support@usc.edu` and we may be able to install it for you.
+If you want to use a different version of Python that is not currently installed on the cluster, please [submit a help ticket](/user-information/ticket-submission) and we may be able to install it for you.
 
 Alternatively, you can compile and install a different version of Python from source inside your home directory. The following steps show how to do this using Python version 3.8.1 as an example.
 

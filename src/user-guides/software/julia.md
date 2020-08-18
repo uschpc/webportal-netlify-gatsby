@@ -53,18 +53,35 @@ For a simple serial job, a Slurm job script would look something like this:
 
 ```sh
 #!/bin/bash
+  
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=1
+#SBATCH --cpus-per-task=4
 #SBATCH --mem-per-cpu=2GB
 #SBATCH --time=1:00:00
 #SBATCH --account=<account_id>
   
 module load gcc/8.3.0
 module load julia/1.4.1
+  
 julia /path/to/script.jl
 ```
 
-Save this script as `jl.job`, for example, and then submit it:
+Each line is described below:
+
+|Slurm argument| Meaning|
+|---|---|
+|`#!/bin/bash`|Use `/bin/bash` to execute this script |
+|`#SBATCH`| Syntax that allows Slurm to read your requests (ignored by bash)|
+|`--ntasks=1` |  Ensures all resources stay on a single compute node|
+|`--cpus-per-task=4` | Reserves 4 CPUs for your exclusive use|
+|`--mem-per-cpu=2GB` |  Reserves 2 GB per CPU of memory for your exclusive use|
+|`--time=1:00:00` | Reserves resources described for 1 hour|
+|`--account=<account_id>` | Charge compute time to <account_id>. If not specified, you may use up the wrong PI's compute hours|
+|`module load gcc/8.3.0` | Load the `gcc` compiler [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
+|`module load julia/1.4.1` | Load the `julia` [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
+|`julia /path/to/script.jl` | Use `julia` to run `script.jl`|
+
+Save this Slurm script as `jl.job`, for example, and then submit it:
 
 ```sh
 sbatch jl.job

@@ -64,35 +64,35 @@ Please note that we do not currently support the use of the RStudio IDE on Disco
 After loading the module, to run R interactively on the **login node**, simply enter `R` and this will start a new R session:
 
 ```sh
-  user@discovery:~$ module load r
-  user@discovery:~$ R
-    
-  R version 4.0.0 (2020-04-24) -- "Arbor Day"
-  Copyright (C) 2020 The R Foundation for Statistical Computing
-  Platform: x86_64-pc-linux-gnu (64-bit)
-    
-  R is free software and comes with ABSOLUTELY NO WARRANTY.
-  You are welcome to redistribute it under certain conditions.
-  Type 'license()' or 'licence()' for distribution details.
-    
-    Natural language support but running in an English locale
-    
-  R is a collaborative project with many contributors.
-  Type 'contributors()' for more information and
-  'citation()' on how to cite R or R packages in publications.
-     
-  Type 'demo()' for some demos, 'help()' for on-line help, or
-  'help.start()' for an HTML browser interface to help.
-  Type 'q()' to quit R.
-    
-  >
+user@discovery:~$ module load r
+user@discovery:~$ R
+  
+R version 4.0.0 (2020-04-24) -- "Arbor Day"
+Copyright (C) 2020 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+  
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+  
+  Natural language support but running in an English locale
+  
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+  
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+  
+>
 ```
 
 Using R on the login node should be reserved for installing packages and non-intensive work.
 
 Alternatively, using R interactively on a **compute node** is useful for more intensive work like exploring data, testing models, and debugging.
 
-To run R interactively on a compute node, first use Slurm's `salloc` command to reserve resources on a node. Once you are granted the resources and logged in to a compute node, load the modules and then enter `R`:
+To run R interactively on a compute node, first use Slurm's `salloc` command to reserve resources on a node: 
 
 ```sh
 user@discovery:~$ salloc --time=1:00:00 --ntasks=1 --cpus-per-task=8 --mem=16GB --account=<account_id>
@@ -103,6 +103,9 @@ salloc: Granted job allocation 24316
 salloc: Waiting for resource configuration
 salloc: Nodes d0035 are ready for job
 ```
+
+Once you are granted the resources and logged in to a compute node, load the modules and then enter `R`:
+
 ```sh
 user@d0035:~$ module load gcc/8.3.0 openblas/0.3.8 r/4.0.0
 user@d0035:~$ R
@@ -128,7 +131,9 @@ Type 'q()' to quit R.
 >
 ```
 
-Notice that the shell prompt changes to indicate that you are now on a compute node. Be sure to change the resource requests (the `--time=1:00:00 --ntasks=1 --cpus-per-task=8 --mem=16GB --account=<account_id>` part after your `salloc` command) as needed, such as the number of cores and memory required.
+Notice that the shell prompt changes from `user@discovery` to `user@d0035` to indicate that you are now on a compute node (d0035).
+
+Be sure to change the resource requests (the `--time=1:00:00 --ntasks=1 --cpus-per-task=8 --mem=16GB --account=<account_id>` part after your `salloc` command) as needed, such as the number of cores and memory required.
 
 To run R scripts from within R, use the `source()` function. Alternatively, to run R scripts from the shell, use the `Rscript` command, after loading the R module.
 
@@ -234,6 +239,7 @@ A Slurm job script is a special type of Bash shell script that the Slurm job sch
 
 ```sh
 #!/bin/bash
+  
 #SBATCH --ntasks=1             # 1 process
 #SBATCH --cpus-per-task=8      # 8 cores
 #SBATCH --mem=16GB             # 16 GB of memory
@@ -249,7 +255,24 @@ cd /home1/user/R/scripts
 Rscript --vanilla script.R
 ```
 
-You can adjust the resources requested based on your needs, but remember that fewer resources requested leads to less queue time for your job. Additionally, the `--vanilla` option for the `Rscript` command will ensure a clean R session that helps with the reproducibility of jobs.
+Each line is described below:
+
+|Command or Slurm argument| Meaning|
+|---|---|
+|`#!/bin/bash`| Use `/bin/bash` to execute this script |
+|`#SBATCH`| Syntax that allows Slurm to read your requests (ignored by bash)|
+|`--ntasks=1` |  Ensures all resources stay on a single compute node|
+|`--cpus-per-task=8` | Reserves 8 CPUs for your exclusive use|
+|`--mem=10GB` |  Reserves 16 GB of memory for your exclusive use|
+|`--time=1:00:00` | Reserves resources described for 1 hour|
+|`--account=<account_id>` | Charge compute time to <account_id>. If not specified, you may use up the wrong PI's compute hours|
+|`module load gcc/8.3.0` | Load the `gcc` compiler [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
+|`module load openblas/0.3.8` | Load the `openblas` [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
+|`module load r/4.0.0` | Load the `r` [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod). Note that R requires both `gcc` and `openblas`|
+|`cd /home1/user/R/scripts` | Change to the directory where your R script is|
+|`Rscript --vanilla script.R` | Use `Rscript` to run `script.R`. The `--vanilla` option will ensure a clean R session that helps with the reproducibility of jobs|
+
+You can adjust the resources requested based on your needs, but remember that fewer resources requested leads to less queue time for your job. 
 
 You can develop R scripts and job scripts on your local machine and then transfer them to Discovery, or you can use one of the available text editors on Discovery to develop them (`nano`, `vim`, or `emacs`).
 
@@ -259,7 +282,7 @@ Save the job script as `R.job`, for example, and then submit it to the job sched
 user@discovery:~$ sbatch R.job
 Submitted batch job 275
 ```
-  
+
 The results of the job will be logged and, by default, saved to a file of the form `slurm-<jobid>.out` in the same directory where the job script is located.
 
 ### Parallel programming with R
@@ -286,6 +309,7 @@ datasets <- mclapply(1:100, function(x) data.frame(matrix(rnorm(1000000), ncol =
   
 # The serial analog is: lapply(1:100, function(x) data.frame(matrix(rnorm(1000000), ncol = 1000)))
 # Create model with same formula but accepting different data inputs
+  
 model <- function(x) {
   xnames <- paste0("X", 2:1000)
   formula <- as.formula(paste("X1 ~ ", paste(xnames, collapse = "+")))
@@ -308,15 +332,18 @@ A Slurm job script for this example could look similar to the previous example w
 
 ```sh
 #!/bin/bash
+  
 #SBATCH --ntasks=1             # 1 process
 #SBATCH --cpus-per-task=12     # 12 cores
 #SBATCH --mem=24GB             # 24 GB of memory
 #SBATCH --time=1:00:00         # 1 hour run time
-#SBATCH --account=<account_id> # account to charge resources to
+#SBATCH --account=<account_id> # Account to charge resources to
   
 module load gcc/8.3.0
 module load openblas/0.3.8
 module load r/4.0.0
+  
+cd /home1/user/R/scripts
   
 Rscript --vanilla /path/to/script.R
 ```
