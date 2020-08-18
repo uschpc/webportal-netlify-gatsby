@@ -399,7 +399,7 @@ Some software may not be built with the compiler in your current environment and
 
 ### How do I run MATLAB on CARC systems?
 
-See our [MATLAB user guide](/user-information/user-guides/software/matlab) for instructions.
+See our [MATLAB user guide](/user-information/user-guides/software-and-programming/matlab) for instructions.
 
 ### Why am I getting a “command not found” error when I try to run a CARC application?
 

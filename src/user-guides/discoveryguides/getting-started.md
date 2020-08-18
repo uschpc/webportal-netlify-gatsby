@@ -264,7 +264,7 @@ For more information on the software module system, see our [Software Module Sys
 
 Researchers are encouraged to install any software, libraries, and packages necessary for their work. Consult the software's documentation on how to install from source or with pre-built binaries. Additionally, for a more controlled and portable computing environment, consider using a [Singularity container](https://singularity.lbl.gov/) for your software builds.
 
-For more information on installing software, see the [Software user guides](/user-information/user-guides/software).
+For more information on installing software, see the [Software and Programming user guides](/user-information/user-guides/software-and-programming).
 
 ### Running jobs
 

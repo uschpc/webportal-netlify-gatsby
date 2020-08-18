@@ -5,7 +5,7 @@ date: 2020-08-13T12:00:00.387Z
 title: Using MATLAB on Discovery
 alternativeTitle: MATLAB
 path: matlab
-parentPath: user-information/user-guides/software
+parentPath: user-information/user-guides/software-and-programming
 cat: software
 parentPage: User Guides
 backToTopBtnFlag: true

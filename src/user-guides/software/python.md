@@ -5,7 +5,7 @@ date: 2020-06-14T00:00:00.000Z
 title: Using Python on Discovery
 alternativeTitle: Python
 path: python
-parentPath:  user-information/user-guides/software
+parentPath:  user-information/user-guides/software-and-programming
 cat: software
 parentPage: User Guides
 backToTopBtnFlag: true

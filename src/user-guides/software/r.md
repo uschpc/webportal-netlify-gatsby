@@ -5,7 +5,7 @@ date: 2020-06-04T12:00:00.387Z
 title: Using R on Discovery
 alternativeTitle: R
 path: r
-parentPath: user-information/user-guides/software
+parentPath: user-information/user-guides/software-and-programming
 cat: software
 parentPage: User Guides
 backToTopBtnFlag: true
