@@ -5,7 +5,7 @@ date: 2020-08-13T12:00:00.387Z
 title: Using MATLAB on Discovery
 alternativeTitle: MATLAB
 path: matlab
-parentPath: user-information/user-guides/software
+parentPath: user-information/user-guides/software-and-programming
 cat: software
 parentPage: User Guides
 backToTopBtnFlag: true
@@ -59,6 +59,7 @@ After creating a MATLAB script, you will need to create a Slurm job script to la
 
 ```sh
 #!/bin/bash
+  
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem-per-cpu=10GB
@@ -67,11 +68,36 @@ After creating a MATLAB script, you will need to create a Slurm job script to la
   
 module load matlab
   
-// Do not include the .m extension in your script name  
-matlab -r 'script_name'
+# Do not include the .m extension in your script name (simple_plot.m)
+matlab -r 'simple_plot'
 ```
 
-Save this script as `matlab.slurm`, for example, and then submit like so:
+Each line is described below:
+
+|Command or Slurm argument| Meaning|
+|---|---|
+|`#!/bin/bash`|Use `/bin/bash` to execute this script |
+|`#SBATCH`| Syntax that allows Slurm to read your requests (ignored by bash)|
+|`--ntasks=1` |  Ensures all resources stay on a single compute node|
+|`--cpus-per-task=4` | Reserves 4 CPUs for your exclusive use|
+|`--mem-per-cpu=10GB` |  Reserves 10 GB per CPU of memory for your exclusive use|
+|`--time=1:00:00` | Reserves resources described for 1 hour|
+|`--account=<account_id>` | Charge compute time to <account_id>. If not specified, you may use up the wrong PI's compute hours|
+|`module load matlab` | Load the `matlab` [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
+|`matlab -r 'simple_plot'` | Use `matlab` to run `simple_plot.m`|
+
+You can use the folloiwng `simple_plot.m` as an example:
+
+```matlab
+x=[-pi:0.05:pi];
+y=sin(x);
+  
+fig=figure();
+plot(x,y);
+print(fig,'plot','-dpng')
+```
+
+Save this Slurm script as `matlab.slurm`, for example, and then submit like so:
 
 ```sh
 sbatch matlab.slurm

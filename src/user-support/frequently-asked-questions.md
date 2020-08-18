@@ -258,10 +258,10 @@ To allow guests to read files, you will need to create an access-control list (A
 For example, to allow someone with the username `guest_user` read access to your scratch directory:
 
 ```sh
-// Allows new files to be shared
+# Allows new files to be shared
 setfacl -Rdm u:guest_user:r-x /scratch/guest_user
   
-// Allows existing files to be shared
+# Allows existing files to be shared
 setfacl -Rm u:guest_user:r-x /scratch/guest_user
 ```
 
@@ -289,9 +289,9 @@ If you forget which permissions have been set, you can run `getfacl` to check wh
   
 getfacl: Removing leading '/' from absolute path names
   
-// File: scratch2/user_name
-// Owner: user_name
-// Group: group_name
+# File: scratch2/user_name
+# Owner: user_name
+# Group: group_name
 user::rwx
 user:guest_user:r-x
 group::---
@@ -399,7 +399,7 @@ Some software may not be built with the compiler in your current environment and
 
 ### How do I run MATLAB on CARC systems?
 
-See our [MATLAB user guide](/user-information/user-guides/software/matlab) for instructions.
+See our [MATLAB user guide](/user-information/user-guides/software-and-programming/matlab) for instructions.
 
 ### Why am I getting a “command not found” error when I try to run a CARC application?
 
@@ -460,7 +460,7 @@ Each compiler has its own software tree which is "unlocked" by loading the appro
 module load gcc/8.3.0
 module load cmake
   
-// Swap compilers
+# Swap compilers
 module load gcc/9.2.0
   
 The following have been reloaded with a version change:

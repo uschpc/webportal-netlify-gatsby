@@ -13,7 +13,7 @@ parentEle: About
 
 Established in 2000, the University of Southern California's Center for Advanced Research Computing (CARC) aims to provide advanced computational research support to USC faculty and students.
 
-When the needs of researchers exceed the capabilities of a personal computer, the CARC offers its support. Examples of services offered include high-performance computing, data storage and analysis, cloud computing, secure computing for sensitive data, and customized research partnerships.
+When the needs of researchers exceed the capabilities of a personal computer, the CARC offers its support. Examples of services offered include high-performance computing, data storage and analysis, cloud computing, secure computing for sensitive data, research computing workshops, and customized research partnerships.
 
 In August 2020, the CARC performed a major upgrade to its high-performance computing systems. The CARC computing resource currently consists of 2 shared head nodes and a total of 30,000 CPU cores in 1,600 compute nodes. The typical compute node has dual 8 to 16 core processors and resides on a 56 gigabit FDR InfiniBand backbone.
 

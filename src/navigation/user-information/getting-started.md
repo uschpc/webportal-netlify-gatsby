@@ -13,7 +13,7 @@ The information on this page is designed to provide an introductory overview for
 
 ### What is the Center for Advanced Research Computing?
 
-USC's Center for Advanced Research Computing (CARC) provides advanced computational research support to USC faculty and students. When the needs of researchers exceed the capabilities of a personal computer, the CARC offers its support. Examples of services offered include high-performance computing, data storage and analysis, cloud computing, secure computing for sensitive data, and customized research partnerships.
+USC's Center for Advanced Research Computing (CARC) provides advanced computational research support to USC faculty and students. When the needs of researchers exceed the capabilities of a personal computer, the CARC offers its support. Examples of services offered include high-performance computing, data storage and analysis, cloud computing, secure computing for sensitive data, research computing workshops, and customized research partnerships.
 
 Currently, the CARC supports more than 100 research groups across a variety of disciplines in the USC community.
 

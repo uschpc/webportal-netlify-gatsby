@@ -11,7 +11,7 @@ sideMenuParent: Data Management
 backToTopBtnFlag: true
 ---
 
-For many CARC users, the most convenient way to transfer files between their computer and CARC systems is to use a GUI (graphical user interface)-based SFTP client. The SFTP client is installed and run on your computer. It works by connecting to the SFTP server running on discovery.usc.edu, enabling you to transfer files back and forth.
+For many CARC users, the most convenient way to transfer files between their computer and CARC systems is to use a GUI (graphical user interface)-based SFTP client. The SFTP client is installed and run on your computer. It works by connecting to the SFTP server running on CARC systems, enabling you to transfer files back and forth. You can connect to either the main Discovery login nodes or, for better performance, the hpc-transfer1 or hpc-transfer2 nodes, which are dedicated, high-speed data transfer nodes.
 
 Along with USC login credentials, Duo two-factor authentication (2FA) is required for CARC access. Most third-party SSH clients can be configured to use 2FA, and to maintain an open connection so as to minimize the number of authentication requests during a transfer session. Refer to your preferred client's documentation for how to do this.
 
@@ -20,6 +20,7 @@ You are welcome to use any SFTP client you wish. FileZilla, WinSCP, and Cyberduc
 > Note: Due to security risks, please be mindful of the type of information being transferred. Where possible, omit all information that may be considered confidential. For examples of confidential information that requires additional consideration, visit http://itservices.usc.edu/security/sensitive-info.
 
 ### FileZilla
+
 You can download FileZilla from the vendor website at https://filezilla-project.org.
 
 Make sure to download the FileZilla client, *not* the FileZilla server. Once the installation is complete, you will need to create a CARC profile on the client. You can do so by going to the Site Manager and clicking on "New site":

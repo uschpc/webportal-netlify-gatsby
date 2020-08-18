@@ -99,12 +99,12 @@ When running multi-threaded jobs, make sure to also link multi-threaded librarie
 The `OMP_NUM_THREADS` count can be calculated automatically by utilizing Slurm-provided variables, assuming that all nodes have the same CPU core count. This can prevent accidental over or under-subscription when node or task count in the Slurm script changes:
 
 ```
-// Find number of threads for OpenMP
-// Find number of MPI tasks per node
+# Find number of threads for OpenMP
+# Find number of MPI tasks per node
 set TPN=`echo $SLURM_TASKS_PER_NODE | cut -f 1 -d \(`
 ```
 ```
-// Find number of CPU cores per node
+# Find number of CPU cores per node
 set PPN=`echo $SLURM_JOB_CPUS_PER_NODE | cut -f 1 -d \(`
 @ THREADS = ( $PPN / $TPN )
 setenv OMP_NUM_THREADS $THREADS (if using sh or csh)
@@ -185,12 +185,12 @@ To run multi-threaded MVAPICH2 code compiled with Intel compilers:
 module load intel mvapich2
 ```
 ```
-// Find number of threads for OpenMP
-// Find number of MPI tasks per node
+# Find number of threads for OpenMP
+# Find number of MPI tasks per node
 set TPN=`echo $SLURM_TASKS_PER_NODE | cut -f 1 -d \(`
 ```
 ```
-// Find number of CPU cores per node
+# Find number of CPU cores per node
 set PPN=`echo $SLURM_JOB_CPUS_PER_NODE | cut -f 1 -d \(`
 @ THREADS = ( $PPN / $TPN )
 setenv OMP_NUM_THREADS $THREADS (if using sh or csh)

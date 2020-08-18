@@ -13,7 +13,11 @@ sideMenuParent: Discovery
 
 One of the biggest user-facing changes to the CARC's new computing cluster is trading the setup.sh method of using software for the **module system** using Lmod, a Lua-based module system. Lmod can be used to access the software packages and versions that you need to conduct your research.
 
-The benefit of Lmod over the setup.sh method of using software is that Lmod dynamically changes your environment based on the software you are using, unloading and reloading software-dependent modules so your libraries are compatible. These changes to your environment are necessary because, for example, libraries compiled with a certain compiler are not necessarily compatible with libraries compiled by a different compiler, and your environment must be changed to accommodate these incompatibilities. Previously, you would have to change your environment by logging out and logging back in. **With Lmod, this reset is done dynamically when you load new modules**.
+The benefit of Lmod over the setup.sh method of using software is that Lmod dynamically changes your environment based on the software you are using, unloading and reloading software-dependent modules using **module files** so your libraries are compatible.
+
+Module files are configuration files that contain information to make an application or library available during your login session. Typically, a module file contains instructions to initialize or modify environment variables, such as `PATH`. Loading a module will only make compatible software available for your use. 
+
+A module system like Lmod is extremely helpful because, for example, libraries compiled with a certain compiler are not necessarily compatible with libraries compiled by a different compiler, and your environment must be changed to accommodate these incompatibilities. Previously, you would have to change your environment by logging out and logging back in. **With Lmod, this reset is done dynamically when you load new modules**.
 
 The official documentation for Lmod can be found here: https://lmod.readthedocs.io/en/latest/010_user.html.
 
@@ -60,7 +64,7 @@ If no version is specified:
 ```
    $ module load gcc
 ```
-the default version will be loaded. The default version is indicated with a (D) next to it after running `module avail`.
+the default version will be loaded. The default version is indicated with a (D) next to it after running `module avail`. 
 
 To unload a specific module you can run:
 
