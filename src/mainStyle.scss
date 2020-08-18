@@ -1625,6 +1625,9 @@ p {
                 .system-status-graph{
                   .iframe-graph {
                     margin-bottom: 20px;
+                    a {
+                      visibility: hidden;
+                    }
                   }
                   .border {
                     // border: 1px solid lightgray;
