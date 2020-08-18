@@ -70,7 +70,9 @@ Hello Tommy
 
 ### Running Python interactively
 
-After loading the module, you can run Python 3.x interactively by entering the command `python3`. For versions 2.x, the command `python` will start the interactive mode.
+Running Python interactively will allow you to test out any installations and compiler settings without submitting and waiting for a Slurm script.
+
+After loading the module, you can run Python 3.x interactively by entering the command `python3`. For versions 2.x, the command `python` will start the interactive mode. 
 
 To run Python interactively on a compute node, use Slurm's `salloc` command to request compute resources:
 
@@ -78,11 +80,24 @@ To run Python interactively on a compute node, use Slurm's `salloc` command to r
 salloc --time=1:00:00 --cpus-per-task=8 --mem-per-cpu=2GB --account=<account_id>
 ```
 
+Each argument to the `salloc` command is described below:
+
+|Slurm argument|Meaning|
+|----|----|
+|`--time=1:00:00` | Reserves resources described for 1 hour. Acceptable time formats include "minutes", "minutes:seconds", "hours:minutes:seconds", "days-hours", "days-hours:minutes" and "days-hours:minutes:seconds"|
+|`--cpus-per-task=4` | Reserves 4 CPUs for your exclusive use|
+|`--mem-per-cpu=10GB` |  Reserves 2 GB per CPU of memory for your exclusive use|
+|`--account=<account_id>` | Charge compute time to <account_id>. If not specified, you may use up the wrong PI's compute hours|
+
+A more comprehensive list of sbatch commands can be found [here](https://slurm.schedmd.com/sbatch.html).
+
 Once you are logged in to a compute node, load the module and enter `python3` or `python` to run Python interactively.
 
 ### Running Python in batch mode
 
-After creating a Python script, you will need to create a Slurm job script to launch your Python program. The Slurm script might look like this:
+In most scenarios, you will want to create a Slurm script to run your code without your input.
+
+After creating your Python script, you will need to create a Slurm job script to launch your Python program. The Slurm script might look like this:
 
 ```sh
 #!/bin/bash
@@ -97,12 +112,6 @@ module load gcc/8.3.0
 module load python/3.7.6
     
 python3 /path/to/script.py
-```
-
-Save this script as `python.slurm`, for example, and then submit it to the job scheduler like so:
-
-```sh
-sbatch python.slurm
 ```
 
 Each line is described below:
@@ -120,7 +129,13 @@ Each line is described below:
 |`module load python/3.7.6` | Load the `python` [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
 |`python /path/to/script.py` | Use `python` to run `script.py`|
 
-You can use the following `script.py` as an example. Make sure to save it in the same directory as python.slurm.
+Save this Slurm script as `python.slurm`, for example, and then submit it to the job scheduler like so:
+
+```sh
+sbatch python.slurm
+```
+
+You can use the following `script.py` as an example. Make sure to save it in the same directory as `python.slurm`.
 
 ```python
 import numpy as np
@@ -166,7 +181,7 @@ print("Plot saved!")
 
 #### Discovery
 
-Python packages are not currently tracked in the [software module system](/user-information/user-guides/high-performance-computing/discovery/lmod). To see available packages, you can use the `pip3` and `freeze` commands:
+Python packages are not currently tracked in the [software module system](/user-information/user-guides/high-performance-computing/discovery/lmod). Before interacting with Python packages, loading the Python module first is necessary. To see available packages, you can use the `pip3` and `freeze` commands in the terminal:
 
     pip3 freeze
     appdirs==1.4.3
