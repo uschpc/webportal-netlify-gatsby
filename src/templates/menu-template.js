@@ -9,6 +9,8 @@ import LatestNews from '../components/latest-news'
 import CustomNews from '../components/custom-news'
 import Researcher from '../components/researchers'
 import ResearcherProfiles from '../components/researcher-profiles'
+import Projects from '../components/projects'
+import ProjectPages from '../components/project-pages'
 
 const findSubMenu = (menubar, nav) => {
   const subNav = nav.edges.filter((ele, i) => {
@@ -19,7 +21,7 @@ const findSubMenu = (menubar, nav) => {
 
 export default function Template({ data }) {
 
-  let content = data.content || data.newsContent || data.researcherContent;
+  let content = data.content || data.newsContent || data.researcherContent || data.projectContent;
   let subMenu = findSubMenu(content.frontmatter.parentEle, data.sideMenu)
 
     return (
@@ -93,6 +95,20 @@ export default function Template({ data }) {
                         </>
                       )}
                       {(content.frontmatter.cat === "Researchers") && <ResearcherProfiles {...data.researcherContent } /> }
+                      {(content.frontmatter.uniqID === "current_projects") && (
+                        <>
+                          <Projects {...data.projects } />
+                          <div className="category-link-wrapper type-primary">
+                            <Link className="category-link category-link-lg category-news type-primary" to={"education-and-outreach/current-projects/all-projects"}>
+                              <img src="/images/news-arrows.svg" />
+                              <p>
+                                View all Projects
+                              </p>
+                            </Link>
+                          </div>
+                        </>
+                      )}
+                      {(content.frontmatter.cat === "projects") && <ProjectPages {...data.projectContent } /> }
                     </>
                   ) : (
                     <CustomNews {...data.newsContent }/>
@@ -168,6 +184,19 @@ export const coldFrontQuery = graphql`
         }
       html
     }
+    projectContent: markdownRemark(frontmatter: {cat: {eq: "projects"}, path: {eq: $slug}}) {
+      frontmatter {
+        title
+        parentEle
+        cat
+        thumbnail
+        date
+        excerpt
+        author
+        sharedID
+        }
+      html
+    }
     news: allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, filter: {frontmatter: {cat: {eq: "news"}}}) {
       edges {
         node {
@@ -184,6 +213,21 @@ export const coldFrontQuery = graphql`
       }
     }
     Researcher: allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, filter: {frontmatter: {cat: {eq: "Researchers"}}}) {
+      edges {
+        node {
+          frontmatter {
+            author
+            title
+            path
+            thumbnail
+            excerpt
+            parentPath
+          }
+          html
+        }
+      }
+    }
+    projects: allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, filter: {frontmatter: {cat: {eq: "projects"}}}) {
       edges {
         node {
           frontmatter {

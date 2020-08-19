@@ -70,7 +70,7 @@ const SharedTemplate = (items) => {
                 {items.cat === 'userSupport' ? (
                     <div className="right-col">
                         <div className="system-status">
-                            <h3>System Status <a href="#" onClick={(e) => openModel(e)}><i className="fa fa-external-link" style={{fontSize:"24px"}}></i></a></h3>
+                            <h3>System Status <a className="fa-external-link" href="#" onClick={(e) => openModel(e)}><i className="fa fa-external-link" style={{fontSize:"24px"}}></i></a></h3>
                             {/* <a className="view-more-graph" href="https://hpcxdmod.usc.edu/" target="_blank">View more graphs</a> */}
                             <div className="border">
                                 <iframe className="user-support" src="https://d2zckdyoh6khem.cloudfront.net/d-solo/vsUGHjmMk/compute-node-usage?orgId=1&refresh=300s&var-host=All&panelId=3" width="450" height="200" frameBorder="0"></iframe>

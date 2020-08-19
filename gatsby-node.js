@@ -26,6 +26,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   const parallelProgrammingTemplate = path.resolve('src/templates/parallel-programming-template.js')
   const userGuidesMainTemplate = path.resolve('src/templates/user-guides-main-template.js')
   const userGuidesTemplate = path.resolve('src/templates/user-guides-template.js')
+  const currentProjects = path.resolve('src/templates/current-projects.js')
 
   return graphql(`
     {
@@ -64,6 +65,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           template = allResearcherTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
+        case 'allProjects':
+          template = currentProjects;
+          path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+          break;
         case 'coldFront':
           template = coldFrontTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
@@ -82,6 +87,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           break;
         case 'navigation':
         case 'news':
+        case 'projects':
         case 'Researchers': {
           node.frontmatter.path !== 'user-guides' ? (
             template = menuTemplate

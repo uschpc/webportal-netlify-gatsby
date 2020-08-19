@@ -24,6 +24,15 @@ body {
   }
   #___gatsby {
     #gatsby-focus-wrapper{
+      .user-support {
+        .right-col {
+          .system-status {
+            a.fa-external-link {
+              visibility: hidden;
+            }
+          }
+        }
+      }
       .page-body, .container {
         .middle-column {
           table {
@@ -41,7 +50,7 @@ body {
               }
             }
           }
-          ul, ol {
+          ul:not(.pagination), ol:not(.pagination) {
             li {
               ul {
                   margin-bottom: 0;
