@@ -61,7 +61,7 @@ const Pagination = (props) => {
     return (
         <div>
               {data}
-              {data.length && (
+              {data.length ? (
               <ReactPaginate
                   previousLabel={""}
                   nextLabel={""}
@@ -75,7 +75,7 @@ const Pagination = (props) => {
                   containerClassName={"pagination"}
                   subContainerClassName={"pages pagination"}
                   activeClassName={"active"}/>
-              )}
+              ) : ''}
         </div>
     )
 }
