@@ -1,14 +1,14 @@
 ---
-author: Yaseen A.
+sharedID: news_Announcements_and_researcher_profile
 title: Project 1
-date: 2020-06-16T18:19:38.387Z
-thumbnail: /images/cool-car-2.jpg
+author: Yaseen A.
 path: project-1
+parentEle: Education & Outreach
+date: 2020-06-16T18:19:38.387Z
 parentPath: /education-and-outreach/current-projects
 cat: projects
-parentEle: Education & Outreach
-sharedID: news_Announcements_and_researcher_profile
-excerpt: Remo Rohs and his research team create high-throughput computational methods for the prediction of DNA shape.
+excerpt: Project short descr....
+thumbnail: /images/cool-car-2.jpg
 ---
 
 Project 1 details here
