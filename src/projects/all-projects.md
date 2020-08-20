@@ -6,6 +6,6 @@ thumbnail: /images/class-2020.png
 path: all-projects
 parentPath: education-and-outreach/current-projects
 cat: allProjects
-parentEle: News and Events
+parentEle:  Education & Outreach
 excerpt: some text here
 ---

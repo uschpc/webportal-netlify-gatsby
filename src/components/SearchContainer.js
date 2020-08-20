@@ -65,24 +65,26 @@ class Search extends Component {
     // dataToSearch.addIndex("path") // sets the index attribute for the data
     // dataToSearch.addIndex("html") // sets the index attribute for the data
     dataToSearch.addDocuments(searchArray) // adds the data to be searched
-    // const searchQuery = window.location.search.split('?') ? window.location.search.split('?')[1].split('=')[1] : "";
-    // this.searchData(searchQuery, true);
+    const searchQuery = window.location.search.split('?') ? window.location.search.split('?')[1].split('=')[1] : "";
     this.setState({ search: dataToSearch, isLoading: false, searchArray })
+    setTimeout(() => {
+      this.searchData(searchQuery, true);
+    }, 0)
 
   }
   /**
    * handles the input change and perform a search with js-search
    * in which the results will be added to the state
    */
-  searchData = (qry) => {
+  searchData = (qry, flag) => {
     const { search } = this.state
     let queryResult = []
-    queryResult = search.search(qry.target.value) 
+    queryResult = search.search(!flag ? qry.target.value : qry) 
     if (!queryResult.length) {
       search.addIndex("html")
       queryResult = search.search(qry.target.value) 
     }
-    this.setState({ searchQuery: qry.target.value, searchResults: queryResult })
+    this.setState({ searchQuery: !flag ? qry.target.value : qry, searchResults: queryResult })
   }
   render() {
     const { searchArray, searchResults, searchQuery } = this.state
