@@ -31,11 +31,15 @@ If you believe you're eligible for PI status but this isn't reflected in the Res
 
 ### Computing resource allocations
 
-The CARC offers two types of computing resource allocations: class and research. For both resources, the unit of SU (System Unit) is used. One SU indicates one hour's use of a single CPU core.
+The CARC offers three types of computing resource allocations: class, graduate student project, and research. For both resources, the unit of SU (System Unit) is used. One SU indicates one hour's use of a single CPU core.
 
 #### Class allocations
 
 The class allocation supports academic classes with limited size and timeline. It supports up to 10,000 SUs and expires at the end of a semester. Faculty who need a class allocation should request this resource in the Research Computing User Portal at least two weeks before the beginning of the semester.
+
+#### Graduate student project (GSP) allocations
+
+The graduate student project (GSP) allocation supports up to 100,000 SUs and is designed for graduate students who conduct research work that is separate from a PI's main research project. A PI can create a project for a graduate student and request a new GSP allocation for it in the [Research Computing User Portal](/user-information/user-guides/high-performance-computing/research-computing-user-portal). A graduate student seeking a GSP allocation still requires their PI/advisor to create the project and request the allocation for them, as only a PI can do this. 
 
 #### Research allocations
 
