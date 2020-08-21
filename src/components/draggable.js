@@ -23,6 +23,7 @@ export default class PopUp extends React.Component {
         this.setState({
             showModal: true
           });
+          window.open('http://example.com/child-path','Data','height=250,width=250');
       }
     }
   }

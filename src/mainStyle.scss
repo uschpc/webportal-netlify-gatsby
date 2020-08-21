@@ -24,9 +24,33 @@ body {
   }
   #___gatsby {
     #gatsby-focus-wrapper{
+      .user-support {
+        .right-col {
+          .system-status {
+            a.fa-external-link {
+              visibility: hidden;
+            }
+          }
+        }
+      }
       .page-body, .container {
         .middle-column {
-          ul, ol {
+          table {
+            tr {
+              td {
+                a {
+                  color: #990000;
+                  display: unset;
+                  margin-left: 0;
+                  &:hover {
+                    color: #990000;
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+          }
+          ul:not(.pagination), ol:not(.pagination) {
             li {
               ul {
                   margin-bottom: 0;
@@ -1610,6 +1634,9 @@ p {
                 .system-status-graph{
                   .iframe-graph {
                     margin-bottom: 20px;
+                    a {
+                      visibility: hidden;
+                    }
                   }
                   .border {
                     // border: 1px solid lightgray;

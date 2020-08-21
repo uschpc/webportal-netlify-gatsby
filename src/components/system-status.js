@@ -67,7 +67,7 @@ const SystemStatus = (props) => {
         <div className="shared system-status homepage">
             <div className="container-left">
                 <div className="system-status-graph">
-                    <h2 className="iframe-graph">System Status <a href="#" onClick={(e) => openModel(e)}><i className="fa fa-external-link" style={{fontSize:"24px"}}></i></a></h2>
+                    <h2 className="iframe-graph">System Status <a className="fa-external-link" href="#" onClick={(e) => openModel(e)}><i className="fa fa-external-link" style={{fontSize:"24px"}}></i></a></h2>
                     <div className="border">
                         {ready && <iframe className="homepage" src="https://d2zckdyoh6khem.cloudfront.net/d-solo/vsUGHjmMk/compute-node-usage?orgId=1&refresh=300s&var-host=All&panelId=3" width="450" height="200" frameBorder="0"></iframe>}
                         <div className="links">

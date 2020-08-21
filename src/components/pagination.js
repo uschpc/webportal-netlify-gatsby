@@ -35,11 +35,11 @@ const Pagination = (props) => {
              )
           }) : slice.length ? slice.map((item, i) => {
             return (  
-              item.node.frontmatter.title && (
+              item.title && (
                 <div className="posts" key={i}>
-                    <h3>{item.node.frontmatter.title}</h3>
-                    <h4>{item.node.frontmatter.excerpt}</h4>
-                    <Link to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}>Read More</Link>
+                    <h3>{item.title}</h3>
+                    <h4>{item.excerpt}</h4>
+                    <Link to={item.parentPath ? `${item.parentPath}/${item.path}` : item.path}>Read More</Link>
                 </div>
               )
             )
@@ -61,7 +61,7 @@ const Pagination = (props) => {
     return (
         <div>
               {data}
-              {data.length && (
+              {data.length ? (
               <ReactPaginate
                   previousLabel={""}
                   nextLabel={""}
@@ -75,7 +75,7 @@ const Pagination = (props) => {
                   containerClassName={"pagination"}
                   subContainerClassName={"pages pagination"}
                   activeClassName={"active"}/>
-              )}
+              ) : ''}
         </div>
     )
 }

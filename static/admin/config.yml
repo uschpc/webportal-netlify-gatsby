@@ -103,6 +103,22 @@ collections:
       - {label: "Short description", name: "excerpt", widget: "string"}
       - {label: "Researcher Profiles thumbnail", name: "thumbnail", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Current Projects"
+    label: "Current Projects"
+    folder: "src/projects"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Slug", name: "path", widget: "string"}
+      - {label: "parent menu", name: "parentEle", widget: "string", default: 'Education & Outreach'}
+      - {label: "date", name: "date", widget: "date", default: "{{year}}-{{month}}-{{day}}", format: 'YYYY-MM-DD'}
+      - {label: "parent path", name: "parentPath", widget: "string", default: 'news-and-events'}
+      - {label: "Category", name: "cat", widget: "string", default: 'news'}
+      - {label: "Short description", name: "excerpt", widget: "string"}
+      - {label: "Projects thumbnail", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: settings
     label: Settings
     files:

@@ -182,7 +182,8 @@ body {
             padding: 11px;
             img {
               height: 212px;
-              order: 1
+              order: 1;
+              object-fit: cover;
             }
             .title {
               color: black;
@@ -233,7 +234,56 @@ body {
             padding: 11px;
             img {
               width: 300px;
-              order: 1
+              order: 1;
+              object-fit: cover;
+            }
+            .title {
+              color: black;
+              font-weight: 500;
+              font-size: 17px;
+              order: 2
+            }
+            p {
+              font-size: 14px;
+              color: #686766;
+              order: 3;
+            }
+            .copy-text {
+              display: none;
+              width: 100%;
+              color: #686766;
+              order: 4;
+            }
+            &:hover {
+              text-decoration: none;
+              background-color: #f3f3f3;
+              color: #4e4e4d;
+              h3, p {
+                color: #990000;
+              }
+            }
+          }
+        }
+      }
+      &.projects {
+        display: flex;
+        justify-content: end;
+        flex-wrap: wrap;
+        h2 {
+          display: none;
+        }
+        .press-projects-block {
+          width: 33%;
+          margin-bottom: 25px;
+          .block {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            padding: 11px;
+            img {
+              width: 300px;
+              order: 1;
+              object-fit: cover;
             }
             .title {
               color: black;
