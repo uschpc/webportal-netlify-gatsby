@@ -9,6 +9,7 @@ parentPath:  user-information/user-guides/software-and-programming
 cat: software
 parentPage: User Guides
 backToTopBtnFlag: true
+excerpt: A user guide for Python, an open-source, general purpose programming language whose strength comes in the tools and libraries that are associated with it.
 ---
 
 [Python](https://www.python.org/) is an open-source, general purpose programming language whose strength comes in the tools and libraries that are associated with it.

@@ -9,6 +9,7 @@ cat: dataManagement
 parentPage: User Guides
 sideMenuParent: Data Management
 backToTopBtnFlag: true
+excerpt: A user guide about transferring your files using command line utilities. 
 ---
 
 Command line-based data transfer utilities (clients) are available natively on macOS and Linux systems and on Windows through an application like [PuTTY](https://www.putty.org/). The common utilities `sftp`, `scp`, and `rsync` are described on this page.

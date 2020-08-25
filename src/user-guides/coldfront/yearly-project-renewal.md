@@ -9,7 +9,7 @@ parentPath: user-information/user-guides/high-performance-computing/research-com
 cat: coldFront
 parentPage: User Guides
 sideMenuParent: Research Computing User Portal
-excerpt: ColdFront user portal - yearly project renewal
+excerpt: Information on renewing your projects annually in the Research Computing User Portal.
 backToTopBtnFlag: true
 ---
 

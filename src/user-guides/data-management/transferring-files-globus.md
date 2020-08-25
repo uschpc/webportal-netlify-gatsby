@@ -9,7 +9,7 @@ cat: dataManagement
 parentPage: User Guides
 sideMenuParent: Data Management
 backToTopBtnFlag: true
-
+excerpt: A user guide for Globus, a fast and reliable data transfer service.
 ---
 
 Globus provides a relatively simple and reliable way to access and move research data between systems with faster transfer speeds than tools such as SCP/SFTP and Rsync. Globus requires some setup ahead of time, but it is robust and appropriate when your data transfer will take a long time or your connection will be periodically interrupted. It also allows you to share your data with colleagues, move data back and forth between CARC storage systems and personal workstations, and restart or resume a failed or paused file transfer - even a very large one.

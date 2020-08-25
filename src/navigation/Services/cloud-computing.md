@@ -6,6 +6,7 @@ path: cloud-computing
 parentPath: services
 cat: navigation
 parentEle: Services
+excerpt: Information on the CARC's cloud computing services.
 ---
 
 The Center for Advanced Research Computing offers consulting to help faculty and other campus researchers obtain access to and effectively use cloud computing resources through its relationship with Amazon Web Services (AWS) as a preferred vendor. The CARC will be adding support for Microsoft Azure and the Google Cloud Platform in the near future.

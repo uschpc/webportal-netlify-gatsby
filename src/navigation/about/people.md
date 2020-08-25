@@ -9,6 +9,7 @@ parentPath: about
 cat: navigation
 parentEle: About
 backToTopBtnFlag: true
+excerpt: CARC teams and the staff that belong to them.
 ---
 
 ## Director, Center for Advanced Research Computing

@@ -8,4 +8,5 @@ cat: navigation
 parentEle: News and Events
 sharedID: news_Announcements_and_researcher_profile
 uniqID: news_Announcements
+excerpt: News about the CARC.
 ---

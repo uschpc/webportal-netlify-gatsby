@@ -9,6 +9,7 @@ cat: parallelProgramming
 parentPage: User Guides
 sideMenuParent: Parallel Programming
 backToTopBtnFlag: true
+excerpt: A user guide on the Message Passing Interface (MPI), which is used in parallel programming.
 ---
 
 The Message Passing Interface (MPI) is a **message-passing standard** used in parallel programming. The MPI standard exists in numerous implementations, four of which the CARC provides support for:

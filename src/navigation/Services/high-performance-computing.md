@@ -6,6 +6,7 @@ path: hpc
 parentPath: services
 cat: navigation
 parentEle: Services
+excerpt: Information on the CARC's high-performance computing resources and services.
 ---
 
 Computational research often requires resources that exceed those of a personal laptop or desktop computer. High-performance computing aggregates the resources from individual computers (known as *nodes*) into a cluster that works together to perform advanced, specialized computing jobs.

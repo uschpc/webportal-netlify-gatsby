@@ -8,4 +8,5 @@ cat: navigation
 parentEle: News and Events
 sharedID: news_Announcements_and_researcher_profile
 uniqID: researcher_profile
+excerpt: Current CARC researchers and descriptions of their work.
 ---

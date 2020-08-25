@@ -9,6 +9,7 @@ cat: dataManagement
 parentPage: User Guides
 sideMenuParent: Data Management
 backToTopBtnFlag: true
+excerpt: How to transfer your files using a graphical user interface (GUI).
 ---
 
 For many CARC users, the most convenient way to transfer files between their computer and CARC systems is to use a GUI (graphical user interface)-based SFTP client. The SFTP client is installed and run on your computer. It works by connecting to the SFTP server running on CARC systems, enabling you to transfer files back and forth. You can connect to either the main Discovery login nodes or, for better performance, the hpc-transfer1 or hpc-transfer2 nodes, which are dedicated, high-speed data transfer nodes.

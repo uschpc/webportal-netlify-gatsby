@@ -3,7 +3,7 @@ author: J. Hong
 id: 2
 date: 2020-07-28T00:00:00.00Z
 title: AWS Account Setup
-excerpt: Information to request for an ITS-managed AWS account
+excerpt: Information on how to request an ITS-managed AWS account.
 route: User Guides
 routePath: user-information/user-guides/hybrid-cloud-computing
 path: aws-account-setup

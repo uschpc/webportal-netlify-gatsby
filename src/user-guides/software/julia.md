@@ -9,6 +9,7 @@ parentPath: user-information/user-guides/software-and-programming
 cat: software
 parentPage: User Guides
 backToTopBtnFlag: true
+excerpt: A user guide for Julia, an open-source programming language designed for high-performance scientific and numerical computing.
 ---
 
 [Julia](https://www.julialang.org) is an open-source programming language designed for high-performance scientific and numerical computing.

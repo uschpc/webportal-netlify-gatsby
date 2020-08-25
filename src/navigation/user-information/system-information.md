@@ -7,6 +7,7 @@ parentPath: user-information
 cat: navigation
 parentEle: User Information
 backToTopBtnFlag: true
+excerpt: Information on system specifications. 
 ---
 
 In 2020, the Center for Advanced Research Computing performed a major upgrade to its systems. Its new high-performance computing cluster, Discovery, includes additional compute nodes and a rebuilt software stack, as well as new system configurations to better serve CARC users. A new, high-performing project file system was also deployed, offering more storage space and better performance.

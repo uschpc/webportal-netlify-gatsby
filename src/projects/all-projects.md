@@ -7,5 +7,5 @@ path: all-projects
 parentPath: education-and-outreach/current-projects
 cat: allProjects
 parentEle:  Education & Outreach
-excerpt: some text here
+excerpt: Projects that the CARC is currently involved in or supporting.
 ---

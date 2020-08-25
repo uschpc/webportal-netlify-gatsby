@@ -7,6 +7,7 @@ parentPath: news-and-events
 cat: navigation
 parentEle: News and Events
 backToTopBtnFlag: true
+excerpt: Monthly CARC events and registration instructions.
 ---
 
 Throughout the year, the Center for Advanced Research Computing hosts numerous events with the goal of educating the USC community on research computing topics.

@@ -7,6 +7,7 @@ parentPath: user-information
 cat: navigation
 parentEle: User Information
 backToTopBtnFlag: true
+excerpt: An introduction to the CARC for new users.
 ---
 
 The information on this page is designed to provide an introductory overview for new CARC users. Links to more detailed information and complete user guides can be found at the end of each section of this page.
