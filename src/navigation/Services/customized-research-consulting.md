@@ -6,6 +6,7 @@ path: research-partnerships
 parentPath: services
 cat: navigation
 parentEle: Services
+excerpt: Information on the customized support for research offered by the CARC.
 ---
 
 The primary mission of the Center for Advanced Research Computing is to support USC researchers in their work. The CARC strives to provide an excellent user experience, both on an ad hoc basis and through ongoing partnerships with research teams.

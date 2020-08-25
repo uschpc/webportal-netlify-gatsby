@@ -3,7 +3,7 @@ author: Yaseen A.
 id: 4
 date: 2020-06-04T00:00:00.00Z
 title: Hybrid Cloud Computing
-excerpt: Information on using cloud computing resources through our preferred cloud providers.
+excerpt: Information on the CARC's cloud computing services.
 thumbnail: /images/Cloud.png
 path: hybrid-cloud-computing
 route: User Guides

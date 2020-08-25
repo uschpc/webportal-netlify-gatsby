@@ -8,4 +8,5 @@ cat: navigation
 parentEle: Education & Outreach
 sharedID: news_Announcements_and_researcher_profile
 uniqID: current_projects
+excerpt: Projects that the CARC is currently involved in or supporting.
 ---

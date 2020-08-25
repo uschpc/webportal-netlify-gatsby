@@ -8,7 +8,7 @@ parentPath: user-information/user-guides/high-performance-computing/research-com
 cat: coldFront
 parentPage: User Guides
 sideMenuParent: Research Computing User Portal
-excerpt: ColdFront user portal - managing project publication information
+excerpt: How to add and remove publication information from your projects in the Research Computing User Portal.
 backToTopBtnFlag: true
 ---
 

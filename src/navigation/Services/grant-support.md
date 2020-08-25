@@ -6,6 +6,7 @@ path: grant-support
 parentPath: services
 cat: navigation
 parentEle: Services
+excerpt: Information on the CARC's support for grant applications, as well as publication credit information.
 ---
 
 The primary mission of the Center for Advanced Research Computing will always be to support USC researchers in their work. To that end, the CARC offers assistance to researchers who are seeking funding in the form of external grants from research centers and federal agencies, such as the National Science Foundation (NSF) and the National Institutes of Health (NIH).

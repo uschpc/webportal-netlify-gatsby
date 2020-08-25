@@ -9,7 +9,7 @@ parentPath: user-information/user-guides/high-performance-computing/research-com
 cat: coldFront
 parentPage: User Guides
 sideMenuParent: Research Computing User Portal
-excerpt: ColdFront user portal - request new project allocation
+excerpt: How to request a new allocation for your project in the Research Computing User Portal.
 backToTopBtnFlag: true
 ---
 

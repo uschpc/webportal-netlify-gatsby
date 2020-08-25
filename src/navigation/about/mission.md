@@ -8,6 +8,7 @@ path: mission
 parentPath: about
 cat: navigation
 parentEle: About
+excerpt: The mission and history of the CARC.
 ---
 
 

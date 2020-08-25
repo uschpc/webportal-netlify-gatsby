@@ -7,6 +7,7 @@ parentPath: education-and-outreach
 cat: navigation
 parentEle: Education & Outreach
 backToTopBtnFlag: true
+exceprt: Descriptions of the research computing workshops regularly offered by the CARC.
 ---
 
 Each month, the CARC's Research Facilitation & Applications team offers a number of workshops designed to introduce users to the computing cluster and its features.

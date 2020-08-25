@@ -9,6 +9,7 @@ parentPath: user-information/user-guides/software-and-programming
 cat: software
 parentPage: User Guides
 backToTopBtnFlag: true
+excerpt: A user guide for R, an open-source programming environment and language designed for statistical computing and graphics.
 ---
 
 [R](https://www.r-project.org) is an open-source programming environment and language designed for statistical computing and graphics.

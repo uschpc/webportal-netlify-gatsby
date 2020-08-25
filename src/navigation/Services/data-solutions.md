@@ -6,6 +6,7 @@ path: data-solutions
 parentPath: services
 cat: navigation
 parentEle: Services
+excerpt: Information on the CARC's data services.
 ---
 
 As the amount of data used in computational research continues to grow, so too does the need for computing solutions that can manage large data sets. The Center for Advanced Research Computing offers solutions for researchers that have more data than they can manage on a personal computer.

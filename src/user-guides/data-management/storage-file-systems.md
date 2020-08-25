@@ -9,6 +9,7 @@ cat: dataManagement
 parentPage: User Guides
 sideMenuParent: Data Management
 backToTopBtnFlag: true
+excerpt: A breakdown of the file systems available to CARC users.
 ---
 
 All CARC account holders are assigned three directories where they can store files and run programs: **home**, **project**, and **scratch**.

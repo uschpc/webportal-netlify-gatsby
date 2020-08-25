@@ -8,6 +8,7 @@ parentEle: About
 cat: navigation
 title: Location & Contact
 id: 4
+excerpt: Find out how to contact the CARC.
 ---
 
 The Center for Advanced Research Computing is located in the Carole A. Little (CAL) Building at the University of Southern California's University Park campus.

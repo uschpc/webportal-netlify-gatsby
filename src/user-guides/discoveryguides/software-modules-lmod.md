@@ -9,6 +9,7 @@ cat: discoveryGuides
 parentPage: User Guides
 backToTopBtnFlag: true
 sideMenuParent: Discovery
+excerpt: An introduction to the software module system on Discovery.
 ---
 
 One of the biggest user-facing changes to the CARC's new computing cluster is trading the setup.sh method of using software for the **module system** using Lmod, a Lua-based module system. Lmod can be used to access the software packages and versions that you need to conduct your research.

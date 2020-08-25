@@ -7,6 +7,7 @@ parentPath: user-information
 cat: navigation
 parentEle: User Information
 backToTopBtnFlag: true
+excerpt: How to get access to your CARC account and what resources you have available.
 ---
 
 All USC students, staff, and faculty have access to the Center for Advanced Research Computing's systems for their research projects. The CARC offers different types and sizes of computing and storage resource allocations for these projects.

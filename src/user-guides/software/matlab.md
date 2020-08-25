@@ -9,6 +9,7 @@ parentPath: user-information/user-guides/software-and-programming
 cat: software
 parentPage: User Guides
 backToTopBtnFlag: true
+excerpt: A user guide for MATLAB, a proprietary scientific computing language and environment.
 ---
 
 [MATLAB](https://www.mathworks.com/products/matlab.html) is a proprietary scientific computing language and environment.

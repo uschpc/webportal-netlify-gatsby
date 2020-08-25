@@ -6,6 +6,7 @@ path: secure-computing
 parentPath: services
 cat: navigation
 parentEle: Services
+excerpt: Information on the CARC's secure computing system for sensitive data.
 ---
 
 Working with sensitive data that is governed by compliance regulations comes with additional requirements and restrictions that must be taken into consideration. The Center for Advanced Research Computing is currently developing a secure computing environment for such data. Later in 2020, full details and system specifications will be made available on this page and on the [Secure Computing user guide](/user-information/user-guides/secure-computing) pages.
