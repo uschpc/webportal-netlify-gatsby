@@ -1,5 +1,5 @@
 ---
-path: not-used
+path: null
 cat: announcements
 title: ANNOUNCEMENTS
 date: August 10, 2020

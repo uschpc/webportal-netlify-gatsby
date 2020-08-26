@@ -9,7 +9,7 @@ const ProjectPages = (project) => {
     }
     return (
         <div className="block project-child-pages">
-            <img src={project.frontmatter.thumbnail}></img>
+            <img src={project.frontmatter.thumbnail} alt={project.frontmatter.author}></img>
             <h3 className="excerpt">{project.frontmatter.excerpt}</h3>
             <h4 className="date">{generateFreindlyDate(project.frontmatter.date)}</h4>
             <h4 className="author">{`By ${project.frontmatter.author}`}</h4>

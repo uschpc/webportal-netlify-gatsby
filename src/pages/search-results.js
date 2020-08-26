@@ -1,11 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
-import pagelist from "../pages.json";
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Markdown from "react-markdown"
-import Carsoul from "../components/slider.js";
-import BodyContent from "../components/body-content.js";
 import Footer from "../components/footer.js";
 import Search from "../components/SearchContainer.js";
 

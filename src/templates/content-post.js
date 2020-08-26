@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -20,7 +20,9 @@ const findSubMenu = (menubar, nav) => {
   return subNav ? subNav : null;
 }
 
+
 export default function Template({ data }) {
+
   const pathName = typeof window !== 'undefined' ? window.location.pathname.split('/')[1] : '';
   // const loadDataOnlyOnce = () => {
   //   let pathName = typeof window !== 'undefined' ? window.location.href

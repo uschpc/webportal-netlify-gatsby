@@ -17,24 +17,7 @@ import "../draggable.scss"
 
 const Layout = (props) => {
 
-  const pageLocationOnBackBtn = () => {
-    window.scroll(function () {
-      //set scroll position in session storage
-      if (window.scrollTop() > 500)
-        sessionStorage.scrollPos = window.scrollTop();
-    });
-
-    var init = setTimeout(function(){
-       //return scroll position in session storage
-       if (sessionStorage.scrollPos > 500){
-          document.getElementsByTagName('html').animate({ scrollTop: sessionStorage.scrollPos },2000);
-        }
-      },1000);
-    window.onload = init;
-  }
-
   useEffect(() => {
-    // pageLocationOnBackBtn()
     let externalLinks = document.querySelectorAll("a[href^='http']");
     for ( let i = 0; i < externalLinks.length; i++ ) {
       externalLinks[i].addEventListener('click', (e) => {
@@ -53,7 +36,6 @@ const Layout = (props) => {
       }, 0)
       
     }
-    
   }, [])
 
   useEffect(() => {
