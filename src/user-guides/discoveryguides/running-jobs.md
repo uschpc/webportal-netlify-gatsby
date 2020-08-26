@@ -9,6 +9,7 @@ cat: discoveryGuides
 parentPage: User Guides
 sideMenuParent: Discovery
 backToTopBtnFlag: true
+excerpt: How to run your jobs on Discovery using the Slurm job scheduler.
 ---
 
 This guide describes how to reserve compute time on Discovery for your jobs using the Slurm job scheduler.

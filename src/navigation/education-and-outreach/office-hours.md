@@ -7,6 +7,7 @@ parentPath: education-and-outreach
 cat: navigation
 parentEle: Education & Outreach
 backToTopBtnFlag: true
+excerpt: How to speak with members of the Research Facilitation & Applications team.
 ---
 
 ### Office hours

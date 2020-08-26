@@ -8,11 +8,11 @@ parentPath: user-information/user-guides/high-performance-computing/research-com
 cat: coldFront
 parentPage: User Guides
 sideMenuParent: Research Computing User Portal
-excerpt: ColdFront user portal - create new project
+excerpt: How to create a new project in the Research Computing User Portal.
 backToTopBtnFlag: true
 ---
 
-Each PI should have one project. Some PIs may require additional projects depending on their roles at USC. Anyone teaching classes should create a separate project for each course taught, and these projects can be reused each semester. Also, anyone using the cluster for work outside their general research area should create a separate project for that work.
+Each PI should have one project. Some PIs may require additional projects depending on their roles at USC. Anyone teaching classes should create a separate project for each course taught, and these projects can be reused each semester. Also, anyone using the cluster for work outside their general research area should create a separate project for that work. This includes graduate student research projects, which can be created as separate projects with a graduate student project (GSP) allocation.
 
 > Note:  6/01/2020: The CARC migrated all projects owned by a valid PI from the old uschpc cluster to the Discovery cluster as a convenience. Projects where the PI is a student were NOT migrated to the user portal.
 

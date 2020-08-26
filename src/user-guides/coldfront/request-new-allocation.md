@@ -9,7 +9,7 @@ parentPath: user-information/user-guides/high-performance-computing/research-com
 cat: coldFront
 parentPage: User Guides
 sideMenuParent: Research Computing User Portal
-excerpt: ColdFront user portal - request new project allocation
+excerpt: How to request a new allocation for your project in the Research Computing User Portal.
 backToTopBtnFlag: true
 ---
 
@@ -35,6 +35,7 @@ The Resource drop-down list contains the following resource options (only resour
   * **medium**: 500,000 CPU/service unit hours (annual charges may apply)
   * **large**: 1,000,000 CPU/service unit hours (annual charges may apply)
   * **class**: 10,000 CPU/service unit hours per semester (free, for faculty teaching classes)
+  * **graduate research**: 100,000 CPU/service unit hours (free, for graduate students conducting research work that is separate from a PI's main research project)
 * **Project Storage (Storage)**: Additional storage you can purchase if you require more than the initial 5 TB that the CARC provides for free.
 
 Select the resource you'd like access to and provide a justification for access to that resource. Your justification should include information on how you'll be using the resource and how many CPU/service unit hours you anticipate needing to use.

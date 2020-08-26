@@ -6,6 +6,7 @@ path: condo-cluster-program
 parentPath: services
 cat: navigation
 parentEle: Services
+excerpt: Information on the CARC's Condo Cluster Program (CCP).
 ---
 
 In an effort to provide the most comprehensive support to the USC research community, the Center for Advanced Research Computing offers researchers a way to customize their experience with the Discovery cluster.

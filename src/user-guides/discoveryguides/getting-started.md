@@ -9,6 +9,7 @@ cat: discoveryGuides
 parentPage: User Guides
 sideMenuParent: Discovery
 backToTopBtnFlag: true
+excerpt: A user guide for using Discovery, particularly for new users.
 ---
 
 This guide will help you get started with the Center for Advanced Research Computing's Discovery computing cluster by instructing you on how to connect, log in, transfer data, and run jobs.
@@ -113,9 +114,9 @@ To easily switch to your home directory, enter the command `cd` from the directo
 
 We keep two weeks of snapshots for /home1. You can think of these snapshots as semi-backups, meaning that if you accidentally deleted some data we would be able to recover it within three weeks. If the file was created and deleted within a one-day period, then the snapshot cannot recover it. You should always keep extra backups of your important data and other files because of this.
 
-##### Project directory
+##### Project file system
 
-The new parallel project file system was deployed during the summer of 2020. This file system has a capacity of ~10 PB and consists of directories for different research project groups. The quota for each project directory ranges between 1 and 5 TB.
+A new parallel project file system will be deployed in September 2020. This file system has a capacity of ~10 PB and consists of directories for different research project groups. The quota for each project directory ranges between 1 and 5 TB.
 
 Each project member has their own subdirectory within their group's project directory, where they can store data, scripts, and related files. The project file system should be used for most of your CARC work, and it's also where you can collaborate with your research project group. Users affiliated with multiple CARC projects will have multiple project directories so they can easily share their files with the appropriate groups.
 
@@ -127,7 +128,7 @@ The project directory can be located by typing:
 
 where `<user_name>` is your USC NetID (your email address without "@usc.edu").
 
-##### Scratch directories
+##### Scratch file systems
 
 The /scratch and /scratch2 file systems are high-performing, parallel file systems running ZFS/BeeGFS that are hosted on dedicated storage machines. They are shared resources for use by all CARC researchers. Data stored in /scratch and /scratch2 are retained and not deleted between jobs, but they are *not* backed up. Data should be periodically copied to a permanent project file system to decrease the risk of data loss.
 

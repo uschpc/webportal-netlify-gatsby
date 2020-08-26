@@ -8,6 +8,7 @@ parentEle: About
 cat: navigation
 title: Partnerships
 id: 3
+excerpt: Collaborative partnerships with other organizations.
 ---
 
 The Center for Advanced Research Computing is proud to hold collaborative relationships with the organizations below. In addition to these, the CARC is actively seeking other partnerships that will broaden its research opportunities and expand its outreach.

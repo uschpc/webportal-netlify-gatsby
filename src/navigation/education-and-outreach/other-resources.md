@@ -7,6 +7,7 @@ parentPath: education-and-outreach
 cat: navigation
 backToTopBtnFlag: true
 parentEle: Education & Outreach
+excerpt: External resources related to research computing.
 ---
 
 While the CARC offers [user guides](/user-information/user-guides) specific to its systems, there are many other online resources that are useful for improving your programming skills and deepening your understanding of research computing.

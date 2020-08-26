@@ -102,7 +102,7 @@ export default function Template({ data }) {
                             <Link className="category-link category-link-lg category-news type-primary" to={"education-and-outreach/current-projects/all-projects"}>
                               <img src="/images/news-arrows.svg" />
                               <p>
-                                View all Projects
+                                View all projects
                               </p>
                             </Link>
                           </div>
