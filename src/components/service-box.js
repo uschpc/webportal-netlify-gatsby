@@ -10,14 +10,14 @@ const ServiceBox = (services) => {
                         !item.node.frontmatter.redirectToPage ? (
                             <div className="shared" key={i}>
                                 <Link to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.path}/${item.node.frontmatter.path}` : item.node.frontmatter.path}>
-                                    <img className="features-icon" src={item.node.frontmatter.thumbnail} />
+                                    <img className="features-icon" src={item.node.frontmatter.thumbnail} alt={item.node.frontmatter.title} />
                                     <span className="features">{item.node.frontmatter.title}</span>
                                 </Link>
                             </div>
                             ) : (
                             <div className="shared" key={i}>
                                 <Link to={item.node.frontmatter.redirectToPage}>
-                                    <img className="features-icon" src={item.node.frontmatter.thumbnail} />
+                                    <img className="features-icon" src={item.node.frontmatter.thumbnail} alt={item.node.frontmatter.title} />
                                     <span className="features">{item.node.frontmatter.title}</span>
                                 </Link>
                             </div>

@@ -4,13 +4,13 @@ import SEO from "../components/seo"
 import Carsoul from "../components/slider.js";
 import BodyContent from "../components/body-content.js";
 import Footer from "../components/footer.js";
-import { checkPropTypes } from "prop-types";
 
 const IndexPage = (props) => {
   const [model, setModelFlag] = useState(false)
   const openModel = () => {
     setModelFlag(!model)
   }
+
   return (
       <Layout {...props.data.navigation} openModel={model}>
           <SEO title="Home" />
@@ -41,8 +41,9 @@ export const pageQuery = graphql`
       }
       Announcements: markdownRemark(frontmatter: {cat: {eq: "announcements"}}) {
         frontmatter {
-          date,
+          date
           author
+          path
         }
       html
     }

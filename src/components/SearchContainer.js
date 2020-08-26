@@ -93,7 +93,7 @@ class Search extends Component {
       <div>
         <div className="form-item">
           <label htmlFor="edit-search">Search</label>
-          <img src="/images/search-icon-black@2x.png" />
+          <img src="/images/search-icon-black@2x.png" alt="search icon" />
           <input placeholder="Search..." data-drupal-selector="edit-search" type="text" id="edit-search" name="search" value={this.state.searchQuery} size="30" maxLength="128" className="form-text" onChange={e => this.searchData(e)} />
         </div>
         <div className="post-list">
