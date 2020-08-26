@@ -8,7 +8,7 @@
 
 const path = require('path')
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
+exports.createPages = ({ boundActionCreators, graphql, actions }) => {
   const { createPage } = boundActionCreators
 
   const allNewsTemplate = path.resolve('src/templates/all-news-template.js')
@@ -131,14 +131,16 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           break;
       }
 
-
-      createPage({
-        path: path,
-        component: template,
-        context: {
-          slug: node.frontmatter.path,
-        }
-      })
+      if (node.frontmatter.path) {
+        createPage({
+          path: path,
+          component: template,
+          context: {
+            slug: node.frontmatter.path,
+          }
+        })
+      }
+      
     })
   })
 }

@@ -12,7 +12,7 @@ const Projects = (project) => {
                         <Link className="press-projects-block" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`} key={i}>
                             <div className="block">
                                 <h3 className="title">{item.node.frontmatter.title}</h3>
-                                <img src={item.node.frontmatter.thumbnail}></img>
+                                <img src={item.node.frontmatter.thumbnail} alt={item.node.frontmatter.title}></img>
                                 <Markdown source={item.node.frontmatter.excerpt} escapeHtml={false} />
                             </div>
                         </Link>
