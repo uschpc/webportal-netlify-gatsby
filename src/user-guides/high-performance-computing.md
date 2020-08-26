@@ -3,7 +3,7 @@ author: Yaseen A.
 id: 1
 date: 2020-06-04T00:00:00.00Z
 title: High-Performance Computing
-excerpt: User guides for our computing cluster, Discovery; the Research Computing User Portal; and parallel computing.
+excerpt: User guides for our computing cluster, Discovery, as well as the Research Computing User Portal.
 thumbnail: /images/Computer.png
 path: high-performance-computing
 route: User Guides
