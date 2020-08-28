@@ -68,9 +68,12 @@ and (max-width : 1024px)  {
     body {
         #PopupSignupForm_0 {
             div.mc-modal {
-              top: 0% !important;
+              top: 25% !important;
               height: auto;
               left: 0;
+              .mc-layout__modalContent {
+                max-height: 580px;
+              }
             }
           }
     }
