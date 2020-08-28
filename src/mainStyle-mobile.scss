@@ -410,8 +410,10 @@ and (max-width : 767px) {
     body {
         #PopupSignupForm_0 {
             div.mc-modal {
-              top: 0% !important;
-            }
+                top: 0% !important;
+                height: auto;
+                left: 0;
+              }
           }
     }
     #___gatsby {
