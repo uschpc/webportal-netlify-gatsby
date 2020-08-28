@@ -30,7 +30,7 @@ export default function Template({ data }) {
                          return (
                              <Link to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path} key={i}>
                                  <div className="user-support-box">
-                                      <img src={item.node.frontmatter.thumbnail} />
+                                      <img src={item.node.frontmatter.thumbnail} alt={item.node.frontmatter.title} />
                                      <p className="title">{item.node.frontmatter.title}</p>
                                      <p className="description">{item.node.frontmatter.excerpt}</p>
                                  </div>

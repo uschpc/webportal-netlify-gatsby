@@ -16,7 +16,7 @@ const LatestNews = (news) => {
                                 <Link to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
                                     <h3 className="title">{item.node.frontmatter.title}</h3>
                                     <div className="image-wrapper">
-                                       <img src={item.node.frontmatter.thumbnail}></img>
+                                       <img src={item.node.frontmatter.thumbnail} alt={item.node.frontmatter.title}></img>
                                     </div>
                                     <div className="feature-content">
                                         <Markdown source={item.node.frontmatter.excerpt} escapeHtml={false} />

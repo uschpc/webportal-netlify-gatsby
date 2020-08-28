@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link } from 'gatsby';
 
 const Footer = () => {
@@ -22,7 +22,7 @@ const Footer = () => {
                         <p>Mailing List</p>
                     </span>
                     <br /> Sign up to receive information about upcoming<br />
-                    events, exhibitions, school news and more.
+                    system upgrades, events, and announcements.
                     <br />
                     <div id="mc_embed_signup">
                         <form action="https://usc.us10.list-manage.com/subscribe/post?u=1bdd19e9fa2d811ef66b3485a&amp;id=a97e98a50e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>

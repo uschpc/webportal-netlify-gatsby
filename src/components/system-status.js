@@ -71,16 +71,16 @@ const SystemStatus = (props) => {
                     <div className="border">
                         {ready && <iframe className="homepage" src="https://d2zckdyoh6khem.cloudfront.net/d-solo/vsUGHjmMk/compute-node-usage?orgId=1&refresh=300s&var-host=All&panelId=3" width="450" height="200" frameBorder="0"></iframe>}
                         <div className="links">
-                            <a className="view-more-graph" href="https://hpc-grafana.usc.edu/d/vsUGHjmMk/compute-node-usage?orgId=1&refresh=30s" target="_blank"><img src="/images/news-arrows.svg" />View compute system status</a>
+                            <a className="view-more-graph" href="https://hpc-grafana.usc.edu/d/vsUGHjmMk/compute-node-usage?orgId=1&refresh=30s" target="_blank"><img src="/images/news-arrows.svg" alt="View compute system status" />View compute system status</a>
                             <a className="view-more-graph" href="https://hpcxdmod.usc.edu/" target="_blank"><img src="/images/news-arrows.svg" />View job status</a>
-                            <a className="view-more-graph" href="https://hpc-grafana.usc.edu/d/dLO8iCiGk/file-system-usage-and-io?orgId=1&refresh=30s" target="_blank"><img src="/images/news-arrows.svg" />View file system status</a>
+                            <a className="view-more-graph" href="https://hpc-grafana.usc.edu/d/dLO8iCiGk/file-system-usage-and-io?orgId=1&refresh=30s" target="_blank"><img src="/images/news-arrows.svg" alt="View file system status" />View file system status</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="container-right">
                 <h2 className="discourse-title">Latest User Posts</h2>
-                <img className="discourse-logo" src="/images/logo-discourse.png" />
+                <img className="discourse-logo" src="/images/logo-discourse.png" alt="Latest User Posts from Discourse" />
                 {result.length && result.map((item, i) => {
                     return (
                     i < 5 && (

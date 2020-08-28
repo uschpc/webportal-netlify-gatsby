@@ -65,6 +65,13 @@ and (min-width : 1025px) and (max-width: 1250px) {
 @media only screen 
 and (min-width : 768px) 
 and (max-width : 1024px)  { 
+    body {
+        #PopupSignupForm_0 {
+            div.mc-modal {
+              top: 0% !important;
+            }
+          }
+    }
     #___gatsby {
         #gatsby-focus-wrapper {
             .main-logo {
@@ -398,6 +405,13 @@ and (max-width : 1024px)  {
 @media only screen 
 and (min-width : 320px) 
 and (max-width : 767px) {
+    body {
+        #PopupSignupForm_0 {
+            div.mc-modal {
+              top: 0% !important;
+            }
+          }
+    }
     #___gatsby {
         #gatsby-focus-wrapper {
             .discourse-logo {

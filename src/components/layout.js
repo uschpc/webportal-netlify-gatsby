@@ -6,7 +6,7 @@
  */
 
 import React, { useEffect } from "react"
-import PropTypes, { func } from "prop-types"
+import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
@@ -14,27 +14,11 @@ import "./layout.css"
 import "../style.less"
 import PopUp from "./draggable";
 import "../draggable.scss"
+import {Helmet} from "react-helmet";
 
 const Layout = (props) => {
 
-  const pageLocationOnBackBtn = () => {
-    window.scroll(function () {
-      //set scroll position in session storage
-      if (window.scrollTop() > 500)
-        sessionStorage.scrollPos = window.scrollTop();
-    });
-
-    var init = setTimeout(function(){
-       //return scroll position in session storage
-       if (sessionStorage.scrollPos > 500){
-          document.getElementsByTagName('html').animate({ scrollTop: sessionStorage.scrollPos },2000);
-        }
-      },1000);
-    window.onload = init;
-  }
-
   useEffect(() => {
-    // pageLocationOnBackBtn()
     let externalLinks = document.querySelectorAll("a[href^='http']");
     for ( let i = 0; i < externalLinks.length; i++ ) {
       externalLinks[i].addEventListener('click', (e) => {
@@ -100,6 +84,9 @@ const Layout = (props) => {
 
   return (
     <>
+     <Helmet>
+          <script src="https://chimpstatic.com/mcjs-connected/js/users/1bdd19e9fa2d811ef66b3485a/274284bf0b2cd2f1ec24e01e7.js"></script>
+      </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} searchData={(e) => props.searchData(e)} nav={props.edges} uniqId={props.uniqId} backToTopBtnFlag={props.backToTopBtnFlag} />
       <div>
         <main>{props.children}</main>

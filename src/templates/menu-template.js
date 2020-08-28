@@ -73,7 +73,7 @@ export default function Template({ data }) {
                           <LatestNews {...data.news } flag={true} />
                           <div className="category-link-wrapper type-primary">
                             <Link className="category-link category-link-lg category-news type-primary" to={"/news-and-events/news-and-announcements/all-news"}>
-                              <img src="/images/news-arrows.svg" />
+                              <img src="/images/news-arrows.svg" alt="View all Research Computing News" />
                               <p>
                                 View all Research Computing News
                               </p>
@@ -86,7 +86,7 @@ export default function Template({ data }) {
                           <Researcher {...data.Researcher } flag={true} />
                           <div className="category-link-wrapper type-primary">
                             <Link className="category-link category-link-lg category-news type-primary" to={"news-and-events/researcher-profiles/all-researchers"}>
-                              <img src="/images/news-arrows.svg" />
+                              <img src="/images/news-arrows.svg" alt="View all Researcher Profiles" />
                               <p>
                                 View all Researcher Profiles
                               </p>
@@ -95,7 +95,7 @@ export default function Template({ data }) {
                         </>
                       )}
                       {(content.frontmatter.cat === "Researchers") && <ResearcherProfiles {...data.researcherContent } /> }
-                      {(content.frontmatter.uniqID === "current_projects") && (
+                      {/* {(content.frontmatter.uniqID === "current_projects") && (
                         <>
                           <Projects {...data.projects } />
                           <div className="category-link-wrapper type-primary">
@@ -107,8 +107,8 @@ export default function Template({ data }) {
                             </Link>
                           </div>
                         </>
-                      )}
-                      {(content.frontmatter.cat === "projects") && <ProjectPages {...data.projectContent } /> }
+                      )} */}
+                      {/* {(content.frontmatter.cat === "projects") && <ProjectPages {...data.projectContent } /> } */}
                     </>
                   ) : (
                     <CustomNews {...data.newsContent }/>

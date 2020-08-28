@@ -29,7 +29,7 @@ const Pagination = (props) => {
                     <h3>{item.node.frontmatter.title}</h3>
                     <h4>{item.node.frontmatter.excerpt}</h4>
                   </div>
-                  <img src={item.node.frontmatter.thumbnail} />
+                  <img src={item.node.frontmatter.thumbnail} alt={item.node.frontmatter.title} />
                 </div> 
               </Link>
              )

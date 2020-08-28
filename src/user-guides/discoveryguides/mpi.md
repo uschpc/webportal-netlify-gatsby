@@ -1,13 +1,13 @@
 ---
 author: Marco Olguin
-id: 1
+id: 5
 date: 2020-08-04T12:00:00
 title: Message Passing Interface (MPI)
 path: mpi
-parentPath: user-information/user-guides/high-performance-computing/parallel-programming
-cat: parallelProgramming
+parentPath: user-information/user-guides/high-performance-computing/discovery
+cat: discoveryGuides
 parentPage: User Guides
-sideMenuParent: Parallel Programming
+sideMenuParent: Discovery
 backToTopBtnFlag: true
 excerpt: A user guide on the Message Passing Interface (MPI), which is used in parallel programming.
 ---
