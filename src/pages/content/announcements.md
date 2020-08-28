@@ -2,8 +2,8 @@
 path: null
 cat: announcements
 title: ANNOUNCEMENTS
-date: August 10, 2020
+date: August 27, 2020
 author: Yaseen A.
 ---
 
-Welcome to the Center for Advanced Research Computing's new website! Follow us on Twitter @usccarc and check out our Discourse community at https://hpc-discourse.usc.edu/. 
+Sign up for the CARC's monthly newsletter and mailing list for updates on new systems and services, helpful tips, and upcoming workshops: http://eepurl.com/g84G09 

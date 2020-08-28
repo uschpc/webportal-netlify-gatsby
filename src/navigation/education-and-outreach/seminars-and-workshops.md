@@ -32,6 +32,10 @@ This workshop covers the basic skills needed to be productive in a command line 
 
 Materials: https://hpc-carpentry.github.io/hpc-shell/
 
+#### Software Modules on Discovery
+
+This workshop introduces CARC users to Discovery's software module system using Lmod, a Lua-based module system. Users will learn how to manage their environment, find software, and load modules. This workshop is recommended for new users and for experienced CARC users who may not be familiar with a module system.
+
 ### Advanced topics in research computing
 
 #### Installing Software
