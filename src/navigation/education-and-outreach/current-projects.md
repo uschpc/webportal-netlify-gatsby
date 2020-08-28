@@ -6,6 +6,11 @@ path: current-projects
 parentPath: education-and-outreach
 cat: navigation
 parentEle: Education & Outreach
+excerpt: Projects that the CARC is currently involved in or supporting.
 ---
 
-some content here about current projects
+Intro
+
+### Project 1
+
+### Project 2

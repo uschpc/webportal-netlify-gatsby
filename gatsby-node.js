@@ -23,7 +23,7 @@ exports.createPages = ({ boundActionCreators, graphql, actions }) => {
   const softwareTemplate = path.resolve('src/templates/software-template.js')
   const cloudComputingTemplate = path.resolve('src/templates/cloud-computing-template.js')
   const secureComputingTemplate = path.resolve('src/templates/secure-computing-template.js')
-  const parallelProgrammingTemplate = path.resolve('src/templates/parallel-programming-template.js')
+//  const parallelProgrammingTemplate = path.resolve('src/templates/parallel-programming-template.js')
   const userGuidesMainTemplate = path.resolve('src/templates/user-guides-main-template.js')
   const userGuidesTemplate = path.resolve('src/templates/user-guides-template.js')
   const currentProjects = path.resolve('src/templates/current-projects.js')
@@ -113,10 +113,10 @@ exports.createPages = ({ boundActionCreators, graphql, actions }) => {
           template = secureComputingTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
-        case 'parallelProgramming':
-          template = parallelProgrammingTemplate;
-          path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
-          break;
+        // case 'parallelProgramming':
+        //   template = parallelProgrammingTemplate;
+        //   path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+        //   break;
         case 'userGuides':
           template = userGuidesTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
