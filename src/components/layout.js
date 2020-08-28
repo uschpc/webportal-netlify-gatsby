@@ -25,7 +25,6 @@ const Layout = (props) => {
   }
 
   useEffect(() => {
-    loadNewsLetter()
     let externalLinks = document.querySelectorAll("a[href^='http']");
     for ( let i = 0; i < externalLinks.length; i++ ) {
       externalLinks[i].addEventListener('click', (e) => {
@@ -41,6 +40,7 @@ const Layout = (props) => {
       setTimeout(() => {
         window.scrollTo(0, sessionStorage.getItem("scrollPosition"));
         sessionStorage.removeItem("scrollPosition");
+        loadNewsLetter()
       }, 0)
       
     }
