@@ -18,7 +18,14 @@ import "../draggable.scss"
 
 const Layout = (props) => {
 
+  const loadNewsLetter = () => {
+    return (
+      !function(c,h,i,m,p){ return m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}
+    )
+  }
+
   useEffect(() => {
+    loadNewsLetter()
     let externalLinks = document.querySelectorAll("a[href^='http']");
     for ( let i = 0; i < externalLinks.length; i++ ) {
       externalLinks[i].addEventListener('click', (e) => {
@@ -84,8 +91,7 @@ const Layout = (props) => {
   return (
     <>
      <Helmet>
-       <script src="https://chimpstatic.com/mcjs-connected/js/users/1bdd19e9fa2d811ef66b3485a/274284bf0b2cd2f1ec24e01e7.js"></script>
-        <script id="mcjs">{!function(c,h,i,m,p){ return m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}}</script>
+        <script id="mcjs" src="https://chimpstatic.com/mcjs-connected/js/users/1bdd19e9fa2d811ef66b3485a/274284bf0b2cd2f1ec24e01e7.js"></script>
       </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} searchData={(e) => props.searchData(e)} nav={props.edges} uniqId={props.uniqId} backToTopBtnFlag={props.backToTopBtnFlag} />
       <div>
