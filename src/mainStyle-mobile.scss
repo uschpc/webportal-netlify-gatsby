@@ -72,7 +72,7 @@ and (max-width : 1024px)  {
               height: auto;
               left: 0;
               .mc-layout__modalContent {
-                max-height: 580px;
+                max-height: 580px !important;
               }
             }
           }
