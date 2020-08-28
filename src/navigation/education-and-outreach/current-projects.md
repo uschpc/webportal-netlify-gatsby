@@ -9,8 +9,4 @@ parentEle: Education & Outreach
 excerpt: Projects that the CARC is currently involved in or supporting.
 ---
 
-Intro
-
-### Project 1
-
-### Project 2
+Coming soon.
