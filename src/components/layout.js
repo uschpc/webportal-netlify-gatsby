@@ -40,10 +40,12 @@ const Layout = (props) => {
       setTimeout(() => {
         window.scrollTo(0, sessionStorage.getItem("scrollPosition"));
         sessionStorage.removeItem("scrollPosition");
-        loadNewsLetter()
       }, 0)
       
     }
+    setTimeout(() => {
+      loadNewsLetter()
+    }, 500)
   }, [])
 
   useEffect(() => {
