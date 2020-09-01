@@ -11,6 +11,7 @@ cat: userSupport
 parentEle: none
 ---
 
+
 If you're experiencing an issue with system resources or your CARC account, please see the [User Guides](https://CARC-dev.usc.edu/user-information/user-guides), [User Forum](https://hpc-discourse.usc.edu/categories), and [Frequently Asked Questions](https://CARC-dev.usc.edu/user-information/frequently-asked-questions) pages for help.
 
 If you're experiencing an issue with your USC NetID or Duo Two-Factor Authentication, or you need help changing your password, please contact [USC IT Services](https://itservices.usc.edu/self-help/).
@@ -24,19 +25,19 @@ When submitting your ticket, please include as much information as possible abou
 If you're trying to run a **job**, please include:
 
  - Job ID
- - Lines from your Slurm file or job submission request
+ - Slurm job script
  - Error messages
  - Slurm output or error files
+ - Scripts or relevant portions of your code
  - Screenshots
- - Portions of your code, e.g., any libraries you install or import
  - Did some jobs run on some nodes but not on others?
- - Is the behaviour reproducible or erratic?
- - Has the behavior you’re experiencing changed recently? When?
+ - Is the behavior reproducible or erratic?
+ - Has the behavior you are experiencing changed recently? When?
 
 If you're trying to use or install **software**, please include:
 
  - Name and version of the software
+ - Error messages
  - Commands that give you an error
- - Any error messages you receive
- - A link to the website or GitHub repository you installed the software from
+ - A link to the website or GitHub repository for the software
  - A link to the installation directions
