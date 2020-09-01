@@ -32,7 +32,7 @@ More information on the Campus Cyberinfrastructure (CC*) Program: https://www.ns
 
 ##### Collaborators: Liliya T. Sahharova, Evgeniy G. Gordeev, Dmitry B. Eremin, and Valentine P. Ananikov  
 
-On August 19, 2020, the American Chemical Society's *ACS Catalysis* published "Pd-Catalyzed Synthesis of Densely Functionalized Cyclopropyl Vinyl Sulfides Reveals the Origin of High Selectivity in a Fundamental Alkyne Insertion Step," which included a publication credit for work done on the CARC's Discovery cluster by Dmitry B. Eremin. 
+On August 19, 2020, the American Chemical Society's *ACS Catalysis* published "Pd-Catalyzed Synthesis of Densely Functionalized Cyclopropyl Vinyl Sulfides Reveals the Origin of High Selectivity in a Fundamental Alkyne Insertion Step," which included an acknowledgement for work done on the CARC's Discovery cluster by Dmitry B. Eremin. 
 
 From the publication abstract:
 >"We show that the insertion of alkyne into the Pd−S bond proceeds by an asynchronous mechanism, which starts with metal−carbon binding and resolves into diverse transient structures. We further demonstrate that dynamic involvement of these structures ensures regioselectivity of the entire process, thus providing a mechanistic link that has long been missing. Alkyne insertion into the metal−heteroatom bond is a fundamental elementary step and a corner stone of catalysis and organometallic chemistry that works for a large variety of metals and heteroatoms. Mastering its Markovnikov vs anti-Markovnikov selectivity provides powerful opportunities for the design of selective functionalization routes."
