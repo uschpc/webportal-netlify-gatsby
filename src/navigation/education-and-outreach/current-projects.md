@@ -28,7 +28,7 @@ More information on the grant: https://www.nsf.gov/awardsearch/showAward?AWD_ID=
 
 More information on the Campus Cyberinfrastructure (CC*) Program: https://www.nsf.gov/pubs/2020/nsf20507/nsf20507.htm
 
-### Publication credit in American Chemical Society's ACS Catalysis
+### Publication acknowledgement in American Chemical Society's ACS Catalysis
 
 ##### Collaborators: Liliya T. Sahharova, Evgeniy G. Gordeev, Dmitry B. Eremin, and Valentine P. Ananikov  
 
