@@ -1,13 +1,12 @@
 ---
-title: USC’s Center for High-Performance Computing (HPC) is now the Center for
-  Advanced Research Computing (CARC)
+title: USC's Center for Advanced Research Computing (CARC) Officially Launches
 author: Andrea Renney
 path: carc-name-change
 parentEle: News and Events
 date: 2020-07-10T00:00:00.000Z
 parentPath: news-and-events/news-and-announcements
 cat: news
-excerpt: Name change highlights the research-focused nature of the department
+excerpt: Name change from HPC highlights the research-focused nature of the department
 thumbnail: /images/7305006266_e7851d0b45_c.jpg
 ---
 With the launch of its new high-performance computing cluster, USC’s Center for High-Performance Computing (HPC) has also officially changed its name to the Center for Advanced Research Computing (CARC).
