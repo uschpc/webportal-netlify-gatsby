@@ -5,12 +5,20 @@ import { Link } from 'gatsby';
 
 const content = [
     {
-      title: "Center for High-Performance Computing is now Center for Advanced Research Computing",
+      title: "USC's Center for Advanced Research Computing (CARC) Officially Launches",
       description:
-        "Name change highlights the research-focused nature of the department",
+        "Name change from HPC highlights the research-focused nature of the department",
       button: "Read More",
       url: "/news-and-events/news-and-announcements/carc-name-change",
       image: "/images/slider-image-4-small.jpg"
+    },
+    {
+      title: "Exploring New Features on the CARC Website",
+      description:
+        "New website has an updated design and many new features for users",
+      button: "Read More",
+      url: "/news-and-events/news-and-announcements/website-new-features",
+      image: "/images/slider-image-1-small.jpg"
     },
     {
       title: "Upcoming Changes for USC Research Computing: Summer and Fall 2020",
@@ -19,14 +27,6 @@ const content = [
       button: "Read More",
       url: "/news-and-events/news-and-announcements/upcoming-changes-summer-fall-2020",
       image: "/images/slider-image-2-small.jpg"
-    },
-    {
-      title: "White House Announces COVID-19 High Performance Computing Consortium",
-      description:
-        "New program offers COVID-19 researchers access to high performance computing systems",
-      button: "Read More",
-      url: "/news-and-events/news-and-announcements/covid-19-consortium",
-      image: "/images/slider-image-1-small.jpg"
     }
   ];
 
