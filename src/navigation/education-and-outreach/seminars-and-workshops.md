@@ -10,13 +10,13 @@ backToTopBtnFlag: true
 exceprt: Descriptions of the research computing workshops regularly offered by the CARC.
 ---
 
+**To see which courses are being taught by the CARC this month, see our [Events page](/news-and-events/events).**
+
 Each month, the CARC's Research Facilitation & Applications team offers a number of workshops designed to introduce users to the computing cluster and its features.
 
-All workshops are approximately two hours in length and are offered several times a year. Workshops are announced via the hpc-announce-l@usc.edu mailing list. All CARC account holders and members are added to this list automatically.
+All workshops are approximately two hours in length and are offered several times a year. Workshops are announced via the hpc-announce-l@usc.edu mailing list and the monthly [CARC newsletter](https://usc.us10.list-manage.com/subscribe?u=1bdd19e9fa2d811ef66b3485a&id=a97e98a50e).
 
 >Note: Due to the ongoing COVID-19 pandemic, all workshops are currently being held over Zoom.
-
-To see which courses are being taught by the CARC this month, see our [Events page](/news-and-events/events).
 
 The Research Facilitation & Applications team is frequently developing new workshops for CARC users, including workshops on useful software and programming languages. Currently, the following workshops are offered on a rotating basis:
 
