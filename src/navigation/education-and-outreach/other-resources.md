@@ -12,6 +12,8 @@ excerpt: External resources related to research computing.
 
 While the CARC offers [user guides](/user-information/user-guides) specific to its systems, there are many other online resources that are useful for improving your programming skills and deepening your understanding of research computing.
 
+In addition to the following resources, CARC staff also regularly post resources and tips on our [Discourse platform](https://hpc-discourse.usc.edu/).
+
 ### Software Carpentry
 
 Software Carpentry is a great resource for learning essential skills related to research computing. The organization offers in-person and online workshops that teach lessons on Unix, Git, and programming languages. The learning materials for these workshops are made available for free on [their website](https://software-carpentry.org/).
