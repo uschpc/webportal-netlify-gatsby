@@ -114,7 +114,7 @@ export default function Template({ data }) {
                   ) : (
                     <CustomNews {...data.newsContent }/>
                   )}
-                   {content.frontmatter.secCat === 'events' && <ZoomMeeting />}
+                   {content.frontmatter.secCat === 'events' && <ZoomMeeting html={content.html} />}
 
 
                 </div>

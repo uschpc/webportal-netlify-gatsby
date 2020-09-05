@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios' 
+import Markdown from "react-markdown"
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+import Loader from 'react-loader-spinner'
 
-const ZoomMeeting = () => {
+
+const ZoomMeeting = ({html}) => {
     const [meetings, fetchMeetings] = useState(null)
 
     const formatDate = (time) => {
@@ -21,6 +25,7 @@ const ZoomMeeting = () => {
     return (
         meetings ? (
             <>
+            <Markdown source={html} escapeHtml={false} />
             <h2 className="meetings-heading">USC Advanced Research Computing - Upcoming Events</h2>
             {meetings.map((meeting, index) => {
                 return (
@@ -44,7 +49,18 @@ const ZoomMeeting = () => {
                 )
             })}
             </>
-        ) : ""
+        ) :  (
+            <div className="meeting-loader">
+                <Loader
+                    type="TailSpin"
+                    color="#990000"
+                    height={100}
+                    width={100}
+                    margin='0 auto'
+                    textAlign="center"
+                />
+            </div>
+        )
     )
 }
 
