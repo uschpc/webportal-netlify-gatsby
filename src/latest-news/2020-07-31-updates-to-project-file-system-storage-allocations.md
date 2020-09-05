@@ -7,7 +7,7 @@ date: 2020-07-31
 parentPath: news-and-events/news-and-announcements
 cat: news
 excerpt: A new per-PI quota and pricing model for storage in the project file system
-thumbnail: /images/shahadat-rahman-bfrqnkbulyq-unsplash-1-.jpg
+thumbnail: /images/shahadat-rahman-bfrqnkbulyq-unsplash-1-.webp
 ---
 With our new project file system comes a change to our storage allocation quota and policy.
 
