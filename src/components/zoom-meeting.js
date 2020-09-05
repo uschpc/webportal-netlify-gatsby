@@ -29,7 +29,7 @@ const ZoomMeeting = ({html}) => {
             <h2 className="meetings-heading">USC Advanced Research Computing - Upcoming Events</h2>
             {meetings.map((meeting, index) => {
                 return (
-                    <div className="meetings" key={index}>
+                    <div className={`meetings ${(meetings.length - 1) === index ? 'last': ''}`} key={index}>
                         <h3 className="topic">{meeting.topic}</h3>
                         <div className="agenda">{meeting.agenda}</div>
                         <div className="meeting-info">
@@ -38,8 +38,8 @@ const ZoomMeeting = ({html}) => {
                                 <div className="time"><span>Time:</span> {formatTime(meeting.start_time)}</div>
                             </div>
                             <div className="middile-column">
-                                <div className="duration"><span>duration:</span> {meeting.duration} minutes</div>
-                                <div className="timezone"><span>timezone:</span> {meeting.timezone}</div>
+                                <div className="duration"><span>Duration:</span> {meeting.duration} minutes</div>
+                                <div className="timezone"><span>Timezone:</span> {meeting.timezone}</div>
                             </div>
                             <div className="right-column-btn">
                                 <a href={meeting.join_url} target="_blank">Register</a>
