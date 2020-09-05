@@ -2,7 +2,7 @@
 author: Center for Advanced Research Computing
 title: Remo Rohs
 date: 2020-06-16T18:19:38.387Z
-thumbnail: /images/Remo.jpg
+thumbnail: /images/Remo.webp
 path: remo-rohs
 parentPath: /news-and-events/researcher-profiles
 cat: Researchers

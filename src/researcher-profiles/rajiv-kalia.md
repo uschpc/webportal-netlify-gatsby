@@ -8,7 +8,7 @@ parentPath: /news-and-events/researcher-profiles
 cat: Researchers
 sharedID: news_Announcements_and_researcher_profile
 excerpt: Rajiv Kalia investigates key biophysical processes and related applications for developing new paths in future drug delivery and gene therapies.
-thumbnail: /images/Rajiv.jpg
+thumbnail: /images/Rajiv.webp
 ---
 
 Rajiv Kalia is a professor of computer science, chemical engineering, and materials science in the USC Viterbi School of Engineering, and a professor of physics and astronomy in the USC Dornsife College of Letters, Arts, and Sciences. His multidisciplinary research concentrates in the areas of biophysics and materials science.
