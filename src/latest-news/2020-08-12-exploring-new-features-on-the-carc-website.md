@@ -8,6 +8,7 @@ parentPath: news-and-events/news-and-announcements
 cat: news
 excerpt: New website has an updated design and many new features for users
 thumbnail: /images/home-page-small.webp
+thumbnailForSafari: /images/home-page-small.png
 ---
 Announced in August 2020, the Center for Advanced Research Computing's new website is a major upgrade to USC's Research Computing program. In addition to its updated design, the website also includes numerous new features not seen on our previous website.
 

@@ -21,7 +21,7 @@ const findSubMenu = (menubar, nav) => {
 }
 
 export default function Template({ data }) {
-
+  var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   let content = data.content || data.newsContent || data.researcherContent || data.projectContent;
   let subMenu = findSubMenu(content.frontmatter.parentEle, data.sideMenu)
 
@@ -71,7 +71,7 @@ export default function Template({ data }) {
                       {(content.frontmatter.sharedID !== "news_Announcements_and_researcher_profile") && <Markdown source={content.html} escapeHtml={false} />}
                       {(content.frontmatter.uniqID === "news_Announcements") && (
                         <>
-                          <LatestNews {...data.news } flag={true} />
+                          <LatestNews {...data.news } isSafari={isSafari} flag={true} />
                           <div className="category-link-wrapper type-primary">
                             <Link className="category-link category-link-lg category-news type-primary" to={"/news-and-events/news-and-announcements/all-news"}>
                               <img src="/images/news-arrows.svg" alt="View all Research Computing News" />
@@ -84,7 +84,7 @@ export default function Template({ data }) {
                       )}
                       {(content.frontmatter.uniqID === "researcher_profile") && (
                         <>
-                          <Researcher {...data.Researcher } flag={true} />
+                          <Researcher {...data.Researcher } isSafari={isSafari} flag={true} />
                           <div className="category-link-wrapper type-primary">
                             <Link className="category-link category-link-lg category-news type-primary" to={"news-and-events/researcher-profiles/all-researchers"}>
                               <img src="/images/news-arrows.svg" alt="View all Researcher Profiles" />
@@ -95,7 +95,7 @@ export default function Template({ data }) {
                           </div>
                         </>
                       )}
-                      {(content.frontmatter.cat === "Researchers") && <ResearcherProfiles {...data.researcherContent } /> }
+                      {(content.frontmatter.cat === "Researchers") && <ResearcherProfiles {...data.researcherContent } isSafari={isSafari} /> }
                       {/* {(content.frontmatter.uniqID === "current_projects") && (
                         <>
                           <Projects {...data.projects } />
@@ -112,7 +112,7 @@ export default function Template({ data }) {
                       {/* {(content.frontmatter.cat === "projects") && <ProjectPages {...data.projectContent } /> } */}
                     </>
                   ) : (
-                    <CustomNews {...data.newsContent }/>
+                    <CustomNews {...data.newsContent } isSafari={isSafari}/>
                   )}
                    {content.frontmatter.secCat === 'events' && <ZoomMeeting html={content.html} />}
 
@@ -171,6 +171,7 @@ export const coldFrontQuery = graphql`
         date
         excerpt
         author
+        thumbnailForSafari
         }
       html
     }
@@ -184,6 +185,7 @@ export const coldFrontQuery = graphql`
         excerpt
         author
         sharedID
+        thumbnailForSafari
         }
       html
     }
@@ -210,6 +212,7 @@ export const coldFrontQuery = graphql`
             thumbnail
             excerpt
             parentPath
+            thumbnailForSafari
           }
           html
         }
@@ -225,6 +228,7 @@ export const coldFrontQuery = graphql`
             thumbnail
             excerpt
             parentPath
+            thumbnailForSafari
           }
           html
         }

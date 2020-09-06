@@ -6,6 +6,7 @@ import SystemStatus from './system-status.js';
 import { Link } from 'gatsby';
 
 const BodyContent = (props) => {
+    var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
     const openModel = () => {
         props.openModel(true)
     }
@@ -17,7 +18,7 @@ const BodyContent = (props) => {
                         <ServiceBox {...props.featureBoxes} />
                         <div className="content-container">
                             <Announcement {...props.featureStory } announcements={props.Announcements}/>
-                            <LatestNews {...props.news } />
+                            <LatestNews {...props.news } isSafari={isSafari} />
                             <SystemStatus openModel={openModel}/>
                         </div>
                         <div className="bg-image">

@@ -68,6 +68,7 @@ export const pageQuery = graphql`
               thumbnail
               excerpt
               parentPath
+              thumbnailForSafari
             }
             html
           }

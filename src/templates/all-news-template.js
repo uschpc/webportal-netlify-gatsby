@@ -13,6 +13,7 @@ const findSubMenu = (menubar, nav) => {
 }
 
 export default function Template({ data }) {
+  var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   let subMenu = findSubMenu(data.news.frontmatter.parentEle, data.sideMenu)
   let content = data.content;
   
@@ -46,7 +47,7 @@ export default function Template({ data }) {
                 </div>
                 <div className="middle-column">
                 <h1>{data.news.frontmatter.title}</h1>
-                <Pagination {...data.allNews} />
+                <Pagination {...data.allNews} isSafari={isSafari} />
                 </div>
                 <div className="right-column">
                     <div className="system-status">
@@ -85,6 +86,7 @@ export const coldFrontQuery = graphql`
             cat
             excerpt
             thumbnail
+            thumbnailForSafari
           }
         }
       }
