@@ -4,9 +4,10 @@ import ServiceBox from './service-box.js';
 import LatestNews from './latest-news.js';
 import SystemStatus from './system-status.js';
 import { Link } from 'gatsby';
+import window from 'global'
 
 const BodyContent = (props) => {
-    let isSafari = typeof navigator !== undefined && /^((?!chrome|android).)*safari/i.test(navigator.userAgent) || false
+    let isSafari = /^((?!chrome|android).)*safari/i.test(window.navigator.userAgent) || false
     const openModel = () => {
         props.openModel(true)
     }

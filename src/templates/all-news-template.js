@@ -4,6 +4,7 @@ import SEO from '../components/seo'
 import Footer from '../components/footer'
 import { Link } from 'gatsby'
 import Pagination from '../components/pagination'
+import window from 'global'
 
 const findSubMenu = (menubar, nav) => {
   const subNav = nav.edges.filter((ele, i) => {
@@ -13,7 +14,7 @@ const findSubMenu = (menubar, nav) => {
 }
 
 export default function Template({ data }) {
-  let isSafari = typeof navigator !== undefined && /^((?!chrome|android).)*safari/i.test(navigator.userAgent) || false
+  let isSafari = /^((?!chrome|android).)*safari/i.test(window.navigator.userAgent) || false
   let subMenu = findSubMenu(data.news.frontmatter.parentEle, data.sideMenu)
   let content = data.content;
   

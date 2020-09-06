@@ -12,6 +12,8 @@ import ResearcherProfiles from '../components/researcher-profiles'
 import Projects from '../components/projects'
 import ProjectPages from '../components/project-pages'
 import ZoomMeeting from '../components/zoom-meeting'
+import window from 'global'
+
 
 const findSubMenu = (menubar, nav) => {
   const subNav = nav.edges.filter((ele, i) => {
@@ -21,7 +23,7 @@ const findSubMenu = (menubar, nav) => {
 }
 
 export default function Template({ data }) {
-  let isSafari = typeof navigator !== undefined && /^((?!chrome|android).)*safari/i.test(navigator.userAgent) || false
+  let isSafari = /^((?!chrome|android).)*safari/i.test(window.navigator.userAgent) || false
   let content = data.content || data.newsContent || data.researcherContent || data.projectContent;
   let subMenu = findSubMenu(content.frontmatter.parentEle, data.sideMenu)
 
