@@ -7,7 +7,6 @@ import { useScroll } from './custom-hooks/useScroll'
 
 const Header = (props) => {
   const { scrollY, width } = useScroll();
-  let isSafari = /^((?!chrome|android).)*safari/i.test(typeof navigator !== 'undefined' && navigator.userAgent) || false
 
   return (
     <header className='header-container'>
@@ -46,11 +45,7 @@ const Header = (props) => {
             <div className="content-width-middile">
               <Link to="/" className="hpc-logo">
                 {/* <img data-src="/images/usc_logo_new_design.svg" className=" lazyloaded" src="/images/usc_logo_new_design.svg" /> */}
-                {isSafari ? (
-                  <img data-src="/images/NewLogo.png" className="main-logo" src="/images/NewLogo.png" alt="USC Center for Advanced Research Computing Logo" />
-                ) : (
-                  <img data-src="/images/NewLogo.webp" className="main-logo" src="/images/NewLogo.webp" alt="USC Center for Advanced Research Computing Logo" />
-                )}
+                <img data-src="/images/NewLogo.png" className="main-logo" src="/images/NewLogo.png" alt="USC Center for Advanced Research Computing Logo" />
               </Link>
               {/* <a href="https://www.usc.edu/">
                 <img data-src="/images/usc-primary-shield_black.png" className=" lazyloaded" src={(width > 570) ? '/images/usc-primary-shield_black.png' : '/images/shield_black.png' } />

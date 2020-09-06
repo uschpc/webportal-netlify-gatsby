@@ -162,7 +162,6 @@ class Navbar extends React.Component {
   render() {
     let CurrentDropdown;
     let PreviousDropdown;
-    let isSafari = /^((?!chrome|android).)*safari/i.test(typeof navigator !== 'undefined' && navigator.userAgent) || false
 
     const previousIndex = this.state.activeIndices[this.state.activeIndices.length - 2];
     const currentIndex = this.state.activeIndices[this.state.activeIndices.length - 1];
@@ -228,7 +227,7 @@ class Navbar extends React.Component {
             <button className={`openbtn ${this.state.openNavIcon ? 'show' : 'hide'}`} onClick={() => this.openNav()}><img className="hamburger-icon" src="/images/Hamburger_icon.svg.png" /></button>  
             <button className={`openbtn ${this.state.closeNavIcon ? 'show' : 'hide'}`} onClick={()=> this.closeNav()}><img className="close-icon" src="/images/close.png" /></button>  
             <button className={`search__toggle__icon ${this.state.openSearchIcon ? 'hide' : 'show'}`} onClick={() => this.openSearchNav()}>
-              <img src={`/images/white-magnifying-glass.${isSafari ? 'png' : 'webp' }`} />
+              <img src={`/images/white-magnifying-glass.png`} />
             </button>
             <button className={`search__toggle__icon ${this.state.openSearchIcon ? 'show' : 'hide'}`} onClick={() => this.closeSearchNav()}>
               <img className="close-icon" src="/images/close.png" />
