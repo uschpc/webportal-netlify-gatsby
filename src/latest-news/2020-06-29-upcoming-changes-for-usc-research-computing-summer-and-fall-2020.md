@@ -8,8 +8,7 @@ parentPath: news-and-events/news-and-announcements
 cat: news
 excerpt: Technical upgrades, increased user support, and exciting new services
   are planned for the next few months
-thumbnail: /images/9042079701_82c9f20225_c.webp
-thumbnailForSafari: /images/9042079701_82c9f20225_c.jpg
+thumbnail: /images/9042079701_82c9f20225_c.jpg
 ---
 For the first half of 2020, USC Research Computing has been working on many different projects to improve its service quality and the experience for our users. While some of our legacy systems have been experiencing issues recently, the Research Computing team has been working relentlessly to deliver improved high-performance computing systems and services that will change the computing environment, user support and education, and overall business model of USC Research Computing. There are many changes scheduled to be announced during the summer and the fall 2020 semester. Below is a summary of the many exciting changes in the works.
 

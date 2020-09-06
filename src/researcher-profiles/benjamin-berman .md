@@ -2,8 +2,7 @@
 author: Center for Advanced Research Computing
 title: Benjamin Berman
 date: 2020-06-12T18:19:38.387Z
-thumbnail: /images/Benjamin.webp
-thumbnailForSafari: /images/Benjamin.jpg
+thumbnail: /images/Benjamin.jpg
 path: benjamin-berman
 parentPath: /news-and-events/researcher-profiles
 cat: Researchers

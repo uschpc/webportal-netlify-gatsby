@@ -8,8 +8,7 @@ parentPath: /news-and-events/researcher-profiles
 cat: Researchers
 sharedID: news_Announcements_and_researcher_profile
 excerpt: Meghan Miller’s work centers around structural seismology and tectonophysics, through which she studies earthquakes, tectonic processes, and plate motions.
-thumbnail: /images/Meghan.webp
-thumbnailForSafari: /images/Meghan.jpg
+thumbnail: /images/Meghan.jpg
 ---
 
 Meghan Miller is an assistant professor in the Department of Earth Sciences at the USC Dana and David Dornsife College of Letters, Arts, and Sciences. Her work centers around structural seismology and tectonophysics, through which she studies earthquakes, tectonic processes, and plate motions as a means of understanding the Earth’s evolution.

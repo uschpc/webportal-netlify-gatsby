@@ -2,8 +2,7 @@
 author: Center for Advanced Research Computing
 title: Mahta Moghaddam
 date: 2020-06-14T18:19:38.387Z
-thumbnail: /images/Mahta.webp
-thumbnailForSafari: /images/Mahta.jpg
+thumbnail: /images/Mahta.jpg
 path: mahta-moghaddam
 parentPath: /news-and-events/researcher-profiles
 cat: Researchers

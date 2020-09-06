@@ -9,7 +9,7 @@ const ResearcherProfiles = (researcher) => {
     }
     return (
         <div className="block researcher-child-pages">
-            <img src={researcher.isSafari ? researcher.frontmatter.thumbnailForSafari : researcher.frontmatter.thumbnail} alt={researcher.frontmatter.author}></img>
+            <img src={researcher.frontmatter.thumbnail} alt={researcher.frontmatter.author}></img>
             <h3 className="excerpt">{researcher.frontmatter.excerpt}</h3>
             <h4 className="date">{generateFreindlyDate(researcher.frontmatter.date)}</h4>
             <h4 className="author">{`By ${researcher.frontmatter.author}`}</h4>

@@ -9,7 +9,7 @@ const CustomNews = (news) => {
     }
     return (
         <div className="block news-child-pages">
-            <img src={news.isSafari ? news.frontmatter.thumbnailForSafari : news.frontmatter.thumbnail}></img>
+            <img src={news.frontmatter.thumbnail}></img>
             <h3 className="excerpt">{news.frontmatter.excerpt}</h3>
             <h4 className="date">{generateFreindlyDate(news.frontmatter.date)}</h4>
             <h4 className="author">{`By ${news.frontmatter.author}`}</h4>
