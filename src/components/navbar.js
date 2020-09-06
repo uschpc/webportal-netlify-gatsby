@@ -163,7 +163,7 @@ class Navbar extends React.Component {
   render() {
     let CurrentDropdown;
     let PreviousDropdown;
-    let isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    let isSafari = typeof navigator !== undefined && /^((?!chrome|android).)*safari/i.test(navigator.userAgent) || false
 
     const previousIndex = this.state.activeIndices[this.state.activeIndices.length - 2];
     const currentIndex = this.state.activeIndices[this.state.activeIndices.length - 1];

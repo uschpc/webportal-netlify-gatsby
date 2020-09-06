@@ -13,7 +13,7 @@ const findSubMenu = (menubar, nav) => {
 }
 
 export default function Template({ data }) {
-  var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  let isSafari = typeof navigator !== undefined && /^((?!chrome|android).)*safari/i.test(navigator.userAgent) || false
   let subMenu = findSubMenu(data.news.frontmatter.parentEle, data.sideMenu)
   let content = data.content;
   
