@@ -228,7 +228,7 @@ class Navbar extends React.Component {
             <button className={`openbtn ${this.state.openNavIcon ? 'show' : 'hide'}`} onClick={() => this.openNav()}><img className="hamburger-icon" src="/images/Hamburger_icon.svg.png" /></button>  
             <button className={`openbtn ${this.state.closeNavIcon ? 'show' : 'hide'}`} onClick={()=> this.closeNav()}><img className="close-icon" src="/images/close.png" /></button>  
             <button className={`search__toggle__icon ${this.state.openSearchIcon ? 'hide' : 'show'}`} onClick={() => this.openSearchNav()}>
-              <img src="/images/white-magnifying-glass.png" />
+              <img src="/images/white-magnifying-glass.webp" />
             </button>
             <button className={`search__toggle__icon ${this.state.openSearchIcon ? 'show' : 'hide'}`} onClick={() => this.closeSearchNav()}>
               <img className="close-icon" src="/images/close.png" />
