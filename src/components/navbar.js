@@ -1,7 +1,6 @@
 import React from "react"
 import { AboutSubNavDropdown, ServicesSubNavDropdown, UserInfoSubNavDropdown, EducationOutreachSubNavDropdown, UserSupportSubNavDropdown, NewsEventsSubNavDropdown } from "../helper/DropDowns";
 import DropDownsContainer from "../helper/DropDownsContainer";
-import window from 'global'
 
 import "../mainStyle.scss";
 import { Link } from "gatsby";
@@ -163,7 +162,7 @@ class Navbar extends React.Component {
   render() {
     let CurrentDropdown;
     let PreviousDropdown;
-    let isSafari = /^((?!chrome|android).)*safari/i.test(window.navigator.userAgent) || false
+    let isSafari = /^((?!chrome|android).)*safari/i.test(typeof navigator !== 'undefined' && navigator.userAgent) || false
 
     const previousIndex = this.state.activeIndices[this.state.activeIndices.length - 2];
     const currentIndex = this.state.activeIndices[this.state.activeIndices.length - 1];

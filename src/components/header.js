@@ -4,12 +4,10 @@ import React from "react"
 import Navbar from "./navbar"
 import SearchBar from "./search-bar"
 import { useScroll } from './custom-hooks/useScroll'
-import window from 'global'
-
 
 const Header = (props) => {
   const { scrollY, width } = useScroll();
-  let isSafari = /^((?!chrome|android).)*safari/i.test(window.navigator.userAgent) || false
+  let isSafari = /^((?!chrome|android).)*safari/i.test(typeof navigator !== 'undefined' && navigator.userAgent) || false
 
   return (
     <header className='header-container'>
