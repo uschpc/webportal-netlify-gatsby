@@ -4,7 +4,6 @@ import { Link } from 'gatsby';
 import latestNews from '../latest-news.json';
 
 const LatestNews = (news) => {
-    console.log(news)
     return (
         !news.flag ? (
             <div className="shared news">
