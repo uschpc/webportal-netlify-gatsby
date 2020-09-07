@@ -85,6 +85,13 @@ export const coldFrontQuery = graphql`
             cat
             excerpt
             thumbnail
+            featuredImage {
+              childImageSharp {
+                fluid(fit: COVER, maxHeight: 212) {
+                  src
+                }
+              }
+            }
           }
         }
       }

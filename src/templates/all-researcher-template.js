@@ -85,6 +85,13 @@ export const allResearcherQuery = graphql`
             cat
             excerpt
             thumbnail
+            featuredImage {
+              childImageSharp {
+                fluid(fit: COVER, maxHeight: 212) {
+                  src
+                }
+              }
+            }
           }
         }
       }

@@ -4,6 +4,7 @@ import { Link } from 'gatsby';
 import latestNews from '../latest-news.json';
 
 const LatestNews = (news) => {
+    console.log(news)
     return (
         !news.flag ? (
             <div className="shared news">
@@ -16,7 +17,8 @@ const LatestNews = (news) => {
                                 <Link to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
                                     <h3 className="title">{item.node.frontmatter.title}</h3>
                                     <div className="image-wrapper">
-                                       <img src={item.node.frontmatter.thumbnail} alt={item.node.frontmatter.title}></img>
+                                       {/* <img src={item.node.frontmatter.thumbnail} alt={item.node.frontmatter.title}></img> */}
+                                       <img src={item.node.frontmatter.featuredImage.childImageSharp.fluid.src} alt={item.node.frontmatter.title}></img>
                                     </div>
                                     <div className="feature-content">
                                         <Markdown source={item.node.frontmatter.excerpt} escapeHtml={false} />
@@ -37,7 +39,8 @@ const LatestNews = (news) => {
                             <Link className="press-news-block" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`} key={i}>
                                 <div className="block">
                                     <h3 className="title">{item.node.frontmatter.title}</h3>
-                                    <img src={item.node.frontmatter.thumbnail} ></img>
+                                    {/* <img src={item.node.frontmatter.thumbnail} ></img> */}
+                                    <img src={item.node.frontmatter.featuredImage.childImageSharp.fluid.src} ></img>
                                     <Markdown source={item.node.frontmatter.excerpt} escapeHtml={false} />
                                 </div>
                             </Link>

@@ -8,6 +8,20 @@
 
 const path = require('path')
 
+exports.onCreateNode = ({ node, actions }) => {
+  const { createNodeField } = actions
+
+  if (node.internal.type === `MarkdownRemark` && node.frontmatter.thumbnail) {
+      const path = `../../static${node.frontmatter.thumbnail}`;
+
+       createNodeField({
+          node,
+          name: 'thumbnail',
+          value: path
+       });
+  }
+}
+
 exports.createPages = ({ boundActionCreators, graphql, actions }) => {
   const { createPage } = boundActionCreators
 

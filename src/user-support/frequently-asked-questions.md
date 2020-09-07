@@ -3,6 +3,7 @@ excerpt: Your common questions about CARC services and systems.
 path: frequently-asked-questions
 author: Yaseen A
 thumbnail: /images/Question.png
+featuredImage: ../../static/images/Question.png
 date: 2020-04-22T18:19:38.387Z
 parentEle: none
 parentPath: user-information

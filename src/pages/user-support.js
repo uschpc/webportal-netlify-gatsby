@@ -29,6 +29,13 @@ export const pageQuery = graphql`
               title
               path
               thumbnail
+              featuredImage {
+                childImageSharp {
+                  fluid(fit: COVER, maxHeight: 80) {
+                    src
+                  }
+                }
+              }
               parentPath
               excerpt
               id

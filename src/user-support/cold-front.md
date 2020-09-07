@@ -4,6 +4,7 @@ id: 2
 date: 2020-04-22T18:19:38.387Z
 title: Research Computing User Portal
 thumbnail: /images/Door.png
+featuredImage: ../../static/images/Door.png
 excerpt: Request and manage resources and allocations for your projects.
 path: research-computing-user-portal-v2
 parentPath: user-information/user-guides/high-performance-computing

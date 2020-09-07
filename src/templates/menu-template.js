@@ -207,6 +207,13 @@ export const coldFrontQuery = graphql`
             title
             path
             thumbnail
+            featuredImage {
+              childImageSharp {
+                fluid(fit: COVER, maxHeight: 212) {
+                  src
+                }
+              }
+            }
             excerpt
             parentPath
           }
@@ -222,6 +229,13 @@ export const coldFrontQuery = graphql`
             title
             path
             thumbnail
+            featuredImage {
+              childImageSharp {
+                fluid(fit: COVER, maxHeight: 212) {
+                  src
+                }
+              }
+            }
             excerpt
             parentPath
           }

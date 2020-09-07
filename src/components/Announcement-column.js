@@ -9,7 +9,9 @@ const Announcement = (props) => {
         <div className="shared press-release discourse">
             <h2 className="margin Announcements">Announcements</h2>
             <div className="Announcements-box">
-                <img src="/images/Comment.png" alt="Announcements" />
+                <img src={props.announcements.frontmatter.featuredImage.childImageSharp.fluid.src} alt="Announcements" />
+                {/* <img src="/images/Comment.png" alt="Announcements" /> */}
+                
                 {/* <div className="by">{`By: ${props.announcements.frontmatter.author}`}</div> */}
                 <div className="date">{props.announcements.frontmatter.date}</div>
                 <Markdown className="description" source={props.announcements.html} escapeHtml={false} />

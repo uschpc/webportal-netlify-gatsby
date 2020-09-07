@@ -3,6 +3,7 @@ author: Center for Advanced Research Computing
 title: Andrew McMahon
 date: 2020-06-15T18:19:38.387Z
 thumbnail: /images/Andrew.jpg
+featuredImage: ../../static/images/Andrew.jpg
 path: andrew-mcmahon
 parentPath: /news-and-events/researcher-profiles
 cat: Researchers

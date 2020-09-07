@@ -30,7 +30,8 @@ export default function Template({ data }) {
                          return (
                              <Link to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path} key={i}>
                                  <div className="user-support-box">
-                                      <img src={item.node.frontmatter.thumbnail} alt={item.node.frontmatter.title} />
+                                      <img src={item.node.frontmatter.featuredImage.childImageSharp.fluid.src} alt={item.node.frontmatter.title} />
+                                      {/* <img src={item.node.frontmatter.thumbnail} alt={item.node.frontmatter.title} /> */}
                                      <p className="title">{item.node.frontmatter.title}</p>
                                      <p className="description">{item.node.frontmatter.excerpt}</p>
                                  </div>
@@ -86,6 +87,13 @@ export const coldFrontQuery = graphql`
             title
             path
             thumbnail
+            featuredImage {
+              childImageSharp {
+                fluid(fit: COVER, maxHeight: 80) {
+                  src
+                }
+              }
+            }
             parentPath
             cat
             excerpt
