@@ -7,6 +7,7 @@ parentPath: education-and-outreach
 cat: navigation
 parentEle: Education & Outreach
 excerpt: Projects that the CARC is currently involved in or supporting.
+backToTopBtnFlag: true
 ---
 
 The Center for Advanced Research Computing collaborates with researchers on their work in numerous ways. In addition to providing computing and storage resources, education, and user support, the CARC also works closely with researchers on their applications for research grants and awards and on their academic publications.
