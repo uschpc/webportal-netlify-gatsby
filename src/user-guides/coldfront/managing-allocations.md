@@ -48,7 +48,7 @@ Allocations for the academic (USC-HPC) cluster expire yearly.  Faculty must rene
 
 #### Policies for storage
 
-The CARC provides each research group with up to 5 TB of storage for free, and 1 TB is the default allocation. This is included in the USC-HPC cluster allocation and not listed separately in the user portal.
+The CARC provides each research group with up to 10 TB of storage for free, and 5 TB is the default allocation per project. This is included in the USC-HPC cluster allocation and not listed separately in the user portal.
 
 If you purchase additional storage, your allocation expires when the warranty on the storage expires. Before this date, the CARC will purchase a new storage solution and you will have an opportunity to purchase storage on that system. If you decide not to do that, you will need to remove your data off the CARC's network before the old system is retired.  We will provide plenty of notice before this occurs.
 

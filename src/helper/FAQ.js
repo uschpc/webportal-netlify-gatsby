@@ -28,14 +28,7 @@ module.exports = {
     },
     'Cluster Resources: Data Files and Disk Space': {
         i0: 'I accidentally deleted a file, is it possible to recover it?',
-        i1: 'Which filesystem should I store my project data in?',
-        i2: 'How do I share my project data with another user?',
-        i3: 'How do I check if I have enough disk space?',
-        i4: 'I’m running out of space. How do I check the size of my files and directories?',
-    },
-    'Cluster Resources: Data Files and Disk Space': {
-        i0: 'I accidentally deleted a file, is it possible to recover it?',
-        i1: 'Which filesystem should I store my project data in?',
+        i1: 'Which file system should I store my project data in?',
         i2: 'How do I share my project data with another user?',
         i3: 'How do I check if I have enough disk space?',
         i4: 'I’m running out of space. How do I check the size of my files and directories?',
