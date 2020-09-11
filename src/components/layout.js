@@ -14,7 +14,6 @@ import "./layout.css"
 import "../style.less"
 import PopUp from "./draggable";
 import "../draggable.scss"
-import {Helmet} from "react-helmet";
 
 const Layout = (props) => {
 
@@ -24,7 +23,6 @@ const Layout = (props) => {
       externalLinks[i].addEventListener('click', (e) => {
         e.preventDefault()
         let scrollPosition = window.scrollY
-        console.log('scrollPosition', scrollPosition)
         sessionStorage.setItem("scrollPosition", scrollPosition);
           window.location.href = e.target.href === undefined ? e.currentTarget.href : e.target.href
        
@@ -84,9 +82,6 @@ const Layout = (props) => {
 
   return (
     <>
-     <Helmet>
-          <script src="https://chimpstatic.com/mcjs-connected/js/users/1bdd19e9fa2d811ef66b3485a/274284bf0b2cd2f1ec24e01e7.js"></script>
-      </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} searchData={(e) => props.searchData(e)} nav={props.edges} uniqId={props.uniqId} backToTopBtnFlag={props.backToTopBtnFlag} />
       <div>
         <main>{props.children}</main>

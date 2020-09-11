@@ -55,6 +55,13 @@ export const pageQuery = graphql`
           date
           author
           path
+          featuredImage {
+            childImageSharp {
+              fluid(fit: COVER, maxHeight: 120) {
+                src
+              }
+            }
+          }
         }
       html
     }
@@ -66,6 +73,13 @@ export const pageQuery = graphql`
               title
               path
               thumbnail
+              featuredImage {
+                childImageSharp {
+                  fluid(fit: COVER, maxHeight: 262) {
+                    src
+                  }
+                }
+              }
               excerpt
               parentPath
             }
@@ -94,6 +108,13 @@ export const pageQuery = graphql`
               title
               path
               thumbnail
+              featuredImage {
+                childImageSharp {
+                  fluid(fit: COVER, maxHeight: 200) {
+                    src
+                  }
+                }
+              }
               redirectToPage
             }
             html

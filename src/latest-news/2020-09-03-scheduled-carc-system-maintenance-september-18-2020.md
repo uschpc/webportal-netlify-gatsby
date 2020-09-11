@@ -6,9 +6,10 @@ parentEle: News and Events
 date: 2020-09-03T00:00:00.000Z
 parentPath: news-and-events/news-and-announcements
 cat: news
-excerpt: Systems will be inaccessible while CARC staff perform necessary
-  maintenance and upgrades
+excerpt: Systems will be inaccessible while staff perform necessary maintenance,
+  upgrades
 thumbnail: /images/15043922336_c25892f515_c.jpg
+featuredImage: ../../static/images/15043922336_c25892f515_c.jpg
 ---
 On September 18, our systems will undergo full-day maintenance, which will include improving Discovery’s interconnection network performance and installing our new project file system. System downtime will begin at 8:00 am and is projected to finish by the evening.
 

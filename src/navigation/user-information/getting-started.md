@@ -46,7 +46,7 @@ Each file system serves a different purpose:
 
 - **/home1** is a network file system for storing configuration files and personal scripts. Each CARC user has a 100 GB home directory quota.
 
-- **/project**: Assignment to a project gives you access to a subdirectory of the /project parallel file system. Managed by a Principal Investigator, this is where you have access to between 1 and 5 TB of storage space (shared among the project's members), and where you can collaborate and share files with your research group. Use this high-performance file system for most of your research computing work at CARC.
+- **/project**: Assignment to a project gives you access to a subdirectory of the /project parallel file system. Managed by a Principal Investigator, this is where you have access to 5 TB (by default) of storage space (shared among the project's members), and where you can collaborate and share files with your research group. Use this high-performance file system for most of your research computing work at CARC.
 
     - Note: The new project file system will be deployed in September 2020.
 

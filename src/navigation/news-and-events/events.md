@@ -5,6 +5,8 @@ thumbnail: /images/sr-icon-4.png
 path: events
 parentPath: news-and-events
 cat: navigation
+secCat: events
+sharedID: news_Announcements_and_researcher_profile
 parentEle: News and Events
 backToTopBtnFlag: true
 excerpt: Monthly CARC events and registration instructions.
@@ -17,28 +19,6 @@ Due to the ongoing COVID-19 pandemic, the CARC and most USC departments are curr
 ## Upcoming events
 
 At this time, the only scheduled events the CARC is hosting are weekly research computing workshops. Each workshop is approximately two hours long and is hosted over Zoom.
-
---
-
-**Workshop: Intro to Linux**  
-
-*Friday, September 4, 2020  
-1:00-2:50 pm*  
-
-This workshop covers the basic skills needed to be productive in a command line environment. It covers navigating the file system, running commands, file permissions, and basic bash scripting.
-
->**How to enroll**: Complete the [Activity Sign-Up page](https://docs.google.com/forms/d/e/1FAIpQLSdqDsvkTP9AsnO82mPzOvztXwp2hSCeD7D82Lt7kjOloe6liA/viewform) for this workshop and contact <carc-support@usc.edu> for Zoom session details.
-
---
-
-**Workshop: Intro to HPC**  
-
-*Friday, September 11, 2020  
-1:00-2:50 pm*  
-
-An overview of the CARC high-performance computing (HPC) cluster. This workshop covers how to connect, where and how to download files, the software repository, and using the batch job scheduler.
-
->**How to enroll**: Complete the [Activity Sign-Up page](https://docs.google.com/forms/d/e/1FAIpQLSdqDsvkTP9AsnO82mPzOvztXwp2hSCeD7D82Lt7kjOloe6liA/viewform) for this workshop and contact <carc-support@usc.edu> for Zoom session details.
 
 --
 

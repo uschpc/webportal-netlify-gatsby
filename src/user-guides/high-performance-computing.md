@@ -5,6 +5,7 @@ date: 2020-06-04T00:00:00.00Z
 title: High-Performance Computing
 excerpt: User guides for our computing cluster, Discovery, as well as the Research Computing User Portal.
 thumbnail: /images/Computer.png
+featuredImage: ../../static/images/Computer.png
 path: high-performance-computing
 route: User Guides
 parentPath: user-information/user-guides

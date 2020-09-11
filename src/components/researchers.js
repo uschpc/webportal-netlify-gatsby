@@ -14,7 +14,8 @@ const Researcher = (news) => {
                                 <div className="block">
                                 <Link to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
                                     <h3 className="title">{item.node.frontmatter.title}</h3>
-                                    <img src={item.node.frontmatter.thumbnail} alt={item.node.frontmatter.title}></img>
+                                    {/* <img src={item.node.frontmatter.thumbnail} alt={item.node.frontmatter.title}></img> */}
+                                    <img src={item.node.frontmatter.featuredImage.childImageSharp.fluid.src} alt={item.node.frontmatter.title}></img>
                                     <div className="feature-content">
                                         <Markdown source={item.node.frontmatter.excerpt} escapeHtml={false} />
                                     </div>
@@ -33,7 +34,8 @@ const Researcher = (news) => {
                             <Link className="press-researcher-block" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`} key={i}>
                                 <div className="block">
                                     <h3 className="title">{item.node.frontmatter.title}</h3>
-                                    <img src={item.node.frontmatter.thumbnail} alt={item.node.frontmatter.title}></img>
+                                    {/* <img src={item.node.frontmatter.thumbnail} alt={item.node.frontmatter.title}></img> */}
+                                    <img src={item.node.frontmatter.featuredImage.childImageSharp.fluid.src} alt={item.node.frontmatter.title}></img>
                                     <Markdown source={item.node.frontmatter.excerpt} escapeHtml={false} />
                                 </div>
                             </Link>

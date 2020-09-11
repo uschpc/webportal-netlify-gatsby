@@ -3,8 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import Navbar from "./navbar"
 import SearchBar from "./search-bar"
-import { useScroll } from './custom-hooks/useScroll';
-
+import { useScroll } from './custom-hooks/useScroll'
 
 const Header = (props) => {
   const { scrollY, width } = useScroll();

@@ -26,7 +26,7 @@ Access to and use of resources is based on participation in projects. Project se
 
 ### Principal Investigator (PI) eligibility
 
-PhD-level researchers, which include faculty, research staff, and postdocs, are eligible for PI status, which is required for project creation and allocation requests. If you're eligible for PI status, the Research Computing User Portal will recognize this when you log in and you will automatically be granted PI permissions (account creation, resource requests, adding users to a project, etc.).
+PhD-level researchers, which include faculty, research staff, and postdocs (but not PhD students), are eligible for PI status, which is required for project creation and allocation requests. If you're eligible for PI status, the Research Computing User Portal will recognize this when you log in and you will automatically be granted PI permissions (account creation, resource requests, adding users to a project, etc.).
 
 If you believe you're eligible for PI status but this isn't reflected in the Research Computing User Portal, please [submit a help ticket](/user-information/ticket-submission) to the CARC.
 
@@ -40,7 +40,9 @@ The class allocation supports academic classes with limited size and timeline. I
 
 #### Graduate student project (GSP) allocations
 
-The graduate student project (GSP) allocation supports up to 100,000 SUs and is designed for graduate students who conduct research work that is separate from a PI's main research project. A PI can create a project for a graduate student and request a new GSP allocation for it in the [Research Computing User Portal](/user-information/user-guides/high-performance-computing/research-computing-user-portal). A graduate student seeking a GSP allocation still requires their PI/advisor to create the project and request the allocation for them, as only a PI can do this. 
+The graduate student project (GSP) allocation supports up to 100,000 SUs and is designed for students who conduct research work that is separate from a PI's main research project. A PI can create a project for a student and request a new GSP allocation for it in the [Research Computing User Portal](/user-information/user-guides/high-performance-computing/research-computing-user-portal). A student seeking a GSP allocation still requires their PI/advisor to create the project and request the allocation for them, as only a PI can do this. 
+
+> Note: This allocation was designed for graduate students, but a PI may also create this allocation for undergraduate students that they advise.
 
 #### Research allocations
 
@@ -69,11 +71,11 @@ For GPUs, the charge per SU varies depending on the GPU model. The table below s
 
 Storage allocations are measured using disk space in terabytes (equivalent to 1,000 gigabytes).  
 
-All users of active projects automatically receive a storage allocation on the CARC project file system. The default allocation size is 1 TB per PI, which can be increased up to 5 TB per PI, if needed, at no extra cost. If a PI has multiple projects, the maximum allocation of 5 TB can be divided among the projects.
+All active projects automatically receive a storage allocation on the CARC project file system. The default minimum allocation size is 5 TB per project, and each PI receives a maximum allocation of 10 TB for their project(s) at no cost. All users for a project will have access to that project's allocation.
 
-If more than 5 TB is needed, a PI can request additional storage space through the Research Computing User Portal. The additional storage space in excess of the first 5 TB is a paid service. The current price is $40/TB/year. For example, when a PI requires 10 TB of space, the annual charge for the data storage space will be:
+If more than 10 TB is needed, a PI can request additional storage space through the Research Computing User Portal. The additional storage space in excess of the first 10 TB is a paid service. Additional storage space can be added in increments of 5 TB, and the current price is $200/5 TB/year. For example, when a PI requires 20 TB total of space, the annual cost for the data storage space will be:
 
->10 TB per year = 5 TB free + (5 x $40/TB/year = $200/year)
+>20 TB per year = 10 TB free + (2 x $200/5 TB/year) = $400 annual cost
 
 ### Yearly renewal of allocations
 

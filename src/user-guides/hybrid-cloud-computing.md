@@ -5,6 +5,7 @@ date: 2020-06-04T00:00:00.00Z
 title: Hybrid Cloud Computing
 excerpt: Information on the CARC's cloud computing services.
 thumbnail: /images/Cloud.png
+featuredImage: ../../static/images/Cloud.png
 path: hybrid-cloud-computing
 route: User Guides
 parentPath: user-information/user-guides

@@ -11,6 +11,7 @@ import Researcher from '../components/researchers'
 import ResearcherProfiles from '../components/researcher-profiles'
 import Projects from '../components/projects'
 import ProjectPages from '../components/project-pages'
+import ZoomMeeting from '../components/zoom-meeting'
 
 const findSubMenu = (menubar, nav) => {
   const subNav = nav.edges.filter((ele, i) => {
@@ -20,7 +21,6 @@ const findSubMenu = (menubar, nav) => {
 }
 
 export default function Template({ data }) {
-
   let content = data.content || data.newsContent || data.researcherContent || data.projectContent;
   let subMenu = findSubMenu(content.frontmatter.parentEle, data.sideMenu)
 
@@ -113,6 +113,8 @@ export default function Template({ data }) {
                   ) : (
                     <CustomNews {...data.newsContent }/>
                   )}
+                   {/* {content.frontmatter.secCat === 'events' && <ZoomMeeting html={content.html} />} */}
+                   {content.frontmatter.secCat === 'events' && <Markdown source={content.html} escapeHtml={false} />}
 
 
                 </div>
@@ -156,6 +158,7 @@ export const coldFrontQuery = graphql`
           uniqID
           sharedID
           backToTopBtnFlag
+          secCat
         }
       html
     }
@@ -205,6 +208,13 @@ export const coldFrontQuery = graphql`
             title
             path
             thumbnail
+            featuredImage {
+              childImageSharp {
+                fluid(fit: COVER, maxHeight: 212) {
+                  src
+                }
+              }
+            }
             excerpt
             parentPath
           }
@@ -220,6 +230,13 @@ export const coldFrontQuery = graphql`
             title
             path
             thumbnail
+            featuredImage {
+              childImageSharp {
+                fluid(fit: COVER, maxHeight: 212) {
+                  src
+                }
+              }
+            }
             excerpt
             parentPath
           }
