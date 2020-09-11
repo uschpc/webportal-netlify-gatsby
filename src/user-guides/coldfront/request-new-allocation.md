@@ -35,7 +35,7 @@ The Resource drop-down list contains the following resource options (only resour
   * **medium**: 500,000 CPU/service unit hours (annual charges may apply)
   * **large**: 1,000,000 CPU/service unit hours (annual charges may apply)
   * **class**: 10,000 CPU/service unit hours per semester (free, for faculty teaching classes)
-  * **graduate research**: 100,000 CPU/service unit hours (free, for graduate students conducting research work that is separate from a PI's main research project)
+  * **graduate research**: 100,000 CPU/service unit hours (free, for students conducting research work that is separate from a PI's main research project)
 * **Project Storage (Storage)**: Additional storage you can purchase if you require more than the initial 10 TB that the CARC provides to each PI for free.
 
 Select the resource you'd like access to and provide a justification for access to that resource. Your justification should include information on how you'll be using the resource and how many CPU/service unit hours you anticipate needing to use.

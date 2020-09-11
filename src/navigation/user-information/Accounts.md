@@ -40,7 +40,9 @@ The class allocation supports academic classes with limited size and timeline. I
 
 #### Graduate student project (GSP) allocations
 
-The graduate student project (GSP) allocation supports up to 100,000 SUs and is designed for graduate students who conduct research work that is separate from a PI's main research project. A PI can create a project for a graduate student and request a new GSP allocation for it in the [Research Computing User Portal](/user-information/user-guides/high-performance-computing/research-computing-user-portal). A graduate student seeking a GSP allocation still requires their PI/advisor to create the project and request the allocation for them, as only a PI can do this. 
+The graduate student project (GSP) allocation supports up to 100,000 SUs and is designed for students who conduct research work that is separate from a PI's main research project. A PI can create a project for a student and request a new GSP allocation for it in the [Research Computing User Portal](/user-information/user-guides/high-performance-computing/research-computing-user-portal). A student seeking a GSP allocation still requires their PI/advisor to create the project and request the allocation for them, as only a PI can do this. 
+
+> Note: This allocation was designed for graduate students, but a PI may also create this allocation for undergraduate students that they advise.
 
 #### Research allocations
 
