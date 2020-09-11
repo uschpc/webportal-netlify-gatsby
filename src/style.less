@@ -520,16 +520,25 @@ body {
           display: flex;
           width: 100%;
           place-content: space-between;
-          .middile-column, .left-column {
+          .middile-meeting-column, .left-meeting-column {
             width: 40%;
             margin: 0;
           }
-          .right-column-btn {
-            a { 
-              color: #900;
-              &:hover {
-                text-decoration: underline;
-              }
+        }
+        .right-column-btn {
+          padding: 10px;
+          background-color: #ffcd05;
+          color: black;
+          font-weight: bold;
+          width: 121px;
+          border-radius: 15px;
+          text-align: center;
+          margin: 15px 0 5px 0;
+          a { 
+            font-size: 21px;
+            color: #900;
+            &:hover {
+              color: rgba(153, 0, 0, 0.7);
             }
           }
         }

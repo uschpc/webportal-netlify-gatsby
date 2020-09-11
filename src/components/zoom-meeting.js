@@ -33,17 +33,17 @@ const ZoomMeeting = ({html}) => {
                         <h3 className="topic">{meeting.topic}</h3>
                         <div className="agenda">{meeting.agenda}</div>
                         <div className="meeting-info">
-                            <div className="left-column">
+                            <div className="left-meeting-column">
                                 <div className="date"><span>Date:</span> {formatDate(meeting.start_time)}</div>
                                 <div className="time"><span>Time:</span> {formatTime(meeting.start_time)}</div>
                             </div>
-                            <div className="middile-column">
+                            <div className="middile-meeting-column">
                                 <div className="duration"><span>Duration:</span> {meeting.duration} minutes</div>
                                 <div className="timezone"><span>Timezone:</span> {meeting.timezone}</div>
                             </div>
-                            <div className="right-column-btn">
-                                <a href={meeting.join_url} target="_blank">Register</a>
-                            </div>
+                        </div>
+                        <div className="right-column-btn">
+                            <a href={meeting.join_url} target="_blank">Register</a>
                         </div>
                     </div>
                 )
