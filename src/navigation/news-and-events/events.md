@@ -24,7 +24,7 @@ At this time, the only scheduled events the CARC is hosting are weekly research 
 
 **Workshop: Software Modules on Discovery (NEW!)**  
 
-*Friday, September 18, 2020  
+*Friday, September 25, 2020  
 1:00-2:50 pm*  
 
 This workshop introduces CARC users to Discovery's software module system using Lmod, a Lua-based module system. Users will learn how to manage their environment, find software, and load modules. This workshop is recommended for new users and for experienced CARC users who may not be familiar with a module system.

@@ -60,15 +60,15 @@ After creating a MATLAB script, you will need to create a Slurm job script to la
 
 ```sh
 #!/bin/bash
-  
+
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem-per-cpu=10GB
 #SBATCH --time=1:00:00
 #SBATCH --account=<account_id>
-  
+
 module load matlab
-  
+
 # Do not include the .m extension in your script name (simple_plot.m)
 matlab -r 'simple_plot'
 ```
@@ -92,7 +92,7 @@ You can use the folloiwng `simple_plot.m` as an example:
 ```matlab
 x=[-pi:0.05:pi];
 y=sin(x);
-  
+
 fig=figure();
 plot(x,y);
 print(fig,'plot','-dpng')
@@ -122,11 +122,11 @@ To create a worker pool larger than can fit on a single node, MATLAB will submit
 
 ```
 cluster = parallel.cluster.Slurm;
-  
+
 set(cluster,'JobStorageLocation', your_directory_here);
 set(cluster,'HasSharedFilesystem', true);
 set(cluster,'SubmitArguments','--time=00:20:00 ');
-set(cluster,'ResourceTemplate','--ntasks=^N^ -L mdcs@hpc-licenses:^N^');
+set(cluster,'ResourceTemplate','--ntasks=^N^);
 ```
 
 Where `JobStorageLocation`, `SubmitArguments`, and `ResourceTemplate` are defined below:

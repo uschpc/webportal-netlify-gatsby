@@ -87,7 +87,7 @@ export const allResearcherQuery = graphql`
             thumbnail
             featuredImage {
               childImageSharp {
-                fluid(fit: COVER, maxHeight: 212) {
+                fluid(fit: COVER, maxHeight: 300) {
                   src
                 }
               }

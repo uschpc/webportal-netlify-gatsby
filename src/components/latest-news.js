@@ -1,7 +1,6 @@
 import React from 'react';
 import Markdown from "react-markdown"
 import { Link } from 'gatsby';
-import latestNews from '../latest-news.json';
 
 const LatestNews = (news) => {
     return (
