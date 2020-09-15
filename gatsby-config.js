@@ -107,7 +107,7 @@ module.exports = {
           resolve: `gatsby-remark-vscode`,
           options: {
             theme: "Eva Light",
-            extensions: ['Eva-Theme']
+            extensions: ['eva-theme']
           }
         }]
       }
