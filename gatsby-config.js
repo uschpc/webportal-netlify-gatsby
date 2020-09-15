@@ -106,8 +106,8 @@ module.exports = {
         plugins: [{
           resolve: `gatsby-remark-vscode`,
           options: {
-            theme: "Monochrome Light", // Update this line to update theme. Options: [Eva Dark, Eva Dark Bold, Eva Dark Italic, Eva Light, Eva Light Bold, Eval Light Italic]
-            extensions: ['monochrome']
+            theme: "Eva Light",
+            extensions: ['eva-theme']
           }
         }]
       }
