@@ -22,9 +22,9 @@ module.exports = {
         i4: 'How do I create a Slurm file?',
         i5: 'How do I specify which account to submit a job to?',
         i6: 'How do I know which allocation I should use to submit a job if I am in multiple CARC allocations? How do I specify a certain allocation?',
-        i6: 'How do I report a problem with a job submission?',
-        i7: 'How do I create/edit a text file?',
-        i8: 'Can I use the local storage on a compute node?',
+        i7: 'How do I report a problem with a job submission?',
+        i8: 'How do I create/edit a text file?',
+        i9: 'Can I use the local storage on a compute node?',
     },
     'Cluster Resources: Data Files and Disk Space': {
         i0: 'I accidentally deleted a file, is it possible to recover it?',

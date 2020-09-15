@@ -1,15 +1,12 @@
 import React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Footer from "../components/footer.js";
-import SharedTemplate from "../components/sharedTemplate"
 
 const UserSupportIndex = ({data}) => {
   return (
       <Layout {...data.navigation}>
           <SEO title="user-support" />
-          <iframe src="https://d2zckdyoh6khem.cloudfront.net/d-solo/vsUGHjmMk/compute-node-usage?orgId=1&refresh=30s&from=1593106620736&to=1593711420736&var-host=All&panelId=3" width="450" height="200" frameBorder="0"></iframe>
+          <iframe title="IT Support" src="https://d2zckdyoh6khem.cloudfront.net/d-solo/vsUGHjmMk/compute-node-usage?orgId=1&refresh=30s&from=1593106620736&to=1593711420736&var-host=All&panelId=3" width="450" height="200" frameBorder="0"></iframe>
       </Layout>
   )
 }

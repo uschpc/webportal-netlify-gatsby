@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Markdown from "react-markdown"
 import Footer from '../components/footer'
 import SideMenu from '../components/side-menu'
-import Content from '../components/content'
+// import Content from '../components/content'
 
 export default function Template({ data }) {
     const post = data.content;

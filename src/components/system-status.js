@@ -72,7 +72,7 @@ const SystemStatus = (props) => {
                         {ready && <iframe className="homepage" src="https://d2zckdyoh6khem.cloudfront.net/d-solo/vsUGHjmMk/compute-node-usage?orgId=1&refresh=300s&var-host=All&panelId=3" width="450" height="200" frameBorder="0"></iframe>}
                         <div className="links">
                             <a className="view-more-graph" href="https://hpc-grafana.usc.edu/d/vsUGHjmMk/compute-node-usage?orgId=1&refresh=30s" target="_blank"><img src="/images/news-arrows.svg" alt="View compute system status" />View compute system status</a>
-                            <a className="view-more-graph" href="https://hpcxdmod.usc.edu/" target="_blank"><img src="/images/news-arrows.svg" />View job status</a>
+                            <a className="view-more-graph" href="https://hpcxdmod.usc.edu/" target="_blank"><img src="/images/news-arrows.svg" alt="View job status"/>View job status</a>
                             <a className="view-more-graph" href="https://hpc-grafana.usc.edu/d/dLO8iCiGk/file-system-usage-and-io?orgId=1&refresh=30s" target="_blank"><img src="/images/news-arrows.svg" alt="View file system status" />View file system status</a>
                         </div>
                     </div>

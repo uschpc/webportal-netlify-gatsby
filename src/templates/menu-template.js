@@ -9,9 +9,9 @@ import LatestNews from '../components/latest-news'
 import CustomNews from '../components/custom-news'
 import Researcher from '../components/researchers'
 import ResearcherProfiles from '../components/researcher-profiles'
-import Projects from '../components/projects'
-import ProjectPages from '../components/project-pages'
-import ZoomMeeting from '../components/zoom-meeting'
+// import Projects from '../components/projects'
+// import ProjectPages from '../components/project-pages'
+// import ZoomMeeting from '../components/zoom-meeting'
 
 const findSubMenu = (menubar, nav) => {
   const subNav = nav.edges.filter((ele, i) => {

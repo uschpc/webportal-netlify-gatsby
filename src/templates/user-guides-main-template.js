@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Footer from '../components/footer'
-import SharedTemplate from '../components/sharedTemplate'
+// import SharedTemplate from '../components/sharedTemplate'
 import Markdown from "react-markdown"
 import SideMenu from '../components/side-menu'
 import { Link } from 'gatsby'
@@ -43,7 +43,7 @@ export default function Template({ data }) {
                     content.frontmatter.title === "Ticket Submission" ? (
                       <>
                         <Markdown source={content.html} escapeHtml={false} />
-                        <iframe className="ticket-submission" src="https://hpcaccount.usc.edu/static/web/supportform_simple.php" />
+                        <iframe title="Ticket Submission" className="ticket-submission" src="https://hpcaccount.usc.edu/static/web/supportform_simple.php" />
                       </>
                     ) : content.frontmatter.uniqId === 'FAQ' ? <FAQ html={content.html} /> : <Markdown source={content.html} escapeHtml={false} />
                    )}

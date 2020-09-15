@@ -1,7 +1,6 @@
 import React from "react";
 // import { BrowserRouter as Router, Link} from "react-router-dom"
 import { Link } from "gatsby"
-import navlist from "../navigations.json";
 
 const assignedDropdownSubNav = (menubar, nav) => {
   let subNav = nav.filter((ele, i) => {

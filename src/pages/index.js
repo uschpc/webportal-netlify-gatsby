@@ -15,7 +15,7 @@ const IndexPage = (props) => {
   }
   useEffect(() => {
     setFlag(true)
-  })
+  }, [])
 
   return (
       <Layout {...props.data.navigation} openModel={model}>

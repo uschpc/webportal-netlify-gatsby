@@ -100,6 +100,18 @@ module.exports = {
 	      bucketName: 'webportal-dev-td3pl856c23o'
       }
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [{
+          resolve: `gatsby-remark-vscode`,
+          options: {
+            theme: "Eva Light",
+            extensions: ['Eva-Theme']
+          }
+        }]
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -114,7 +126,6 @@ module.exports = {
         icon: `static/images/browser-icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-transformer-remark`,
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-meta-redirect`
     // this (optional) plugin enables Progressive Web App + Offline functionality
@@ -122,3 +133,5 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
 }
+
+
