@@ -57,3 +57,4 @@ Communications & Content includes external, user-facing communication, such as n
 ## Student Workers
 
 **Ryan Sim**
+**Caroline Jin**

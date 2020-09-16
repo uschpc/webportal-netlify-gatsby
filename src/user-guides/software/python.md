@@ -180,3 +180,11 @@ To install Python packages in a library other than the default (`~/.local/lib/py
 To load a package, ensure you have appended your `PYTHONPATH` environment variable like so:
 
     export PYTHONPATH=/scratch/<username>/python_packages:${PYTHONPATH}
+
+### Additional resources
+
+If you have questions about or need help with Python, please [submit a help ticket](/user-information/ticket-submission) and we will assist you.
+
+[Python](https://www.python.org/)  
+[Python documentation](https://www.python.org/doc/)  
+[Anaconda user guide](/user-information/user-guides/software-and-programming/anaconda)  

@@ -1,6 +1,6 @@
 ---
 author: Derek Strong
-id: 2
+id: 3
 date: 2020-06-04T12:00:00.387Z
 title: Using R on Discovery
 alternativeTitle: R
@@ -38,9 +38,9 @@ To see all available versions of R, enter:
 module spider r
 ```
 
-The R modules depend on the gcc/8.3.0 and openblas/0.3.8 modules, which are loaded by default when logging in to Discovery. These modules need to be loaded first because R was built with the GCC 8.3.0 compiler and linked to the OpenBLAS 0.3.8 linear algebra library for improved performance. Loading the modules also ensures that any R packages installed from source are built with these versions of GCC and OpenBLAS.
+The R modules depend on the `gcc/8.3.0` and `openblas/0.3.8` modules, which are loaded by default when logging in to Discovery. These modules need to be loaded first because R was built with the GCC 8.3.0 compiler and linked to the OpenBLAS 0.3.8 linear algebra library for improved performance. Loading the modules also ensures that any R packages installed from source are built with these versions of GCC and OpenBLAS.
 
-In Slurm job scripts, these modules should be loaded explicitly before loading R:
+In Slurm job scripts, the `gcc` and `openblas` modules should be loaded explicitly before loading R:
 
 ```sh
 module load gcc/8.3.0
@@ -355,8 +355,10 @@ If you have questions about or need help with developing parallel code for R, pl
 
 ### Additional resources
 
+If you have questions about or need help with R, please [submit a help ticket](/user-information/ticket-submission) and we will assist you.
+
 [R Project](https://www.r-project.org)  
 [R Manuals](https://cran.r-project.org/manuals.html)  
 [CRAN Task View on High-Performance and Parallel Computing with R](https://cran.r-project.org/web/views/HighPerformanceComputing.html)  
 [Programming with Big Data in R](https://pbdr.org/)  
-[rOpenSci](https://ropensci.org/)
+[rOpenSci](https://ropensci.org/)  

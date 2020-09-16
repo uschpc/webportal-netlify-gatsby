@@ -15,7 +15,9 @@ const Footer = () => {
                 </div>
                 <div className="national-caps2">
                     <Link to="/about/mission">Mission</Link>
+                    <Link to="/about/location-and-contact">Contact</Link>
                     <a href="https://usccareers.usc.edu/">Jobs</a>
+                    <Link to="/about/license">Distribution License</Link>
                 </div>
                 <div className="subscribe">
                     <span className="national-caps2">

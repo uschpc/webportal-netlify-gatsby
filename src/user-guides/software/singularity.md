@@ -1,6 +1,6 @@
 ---
 author: Derek Strong
-id: 5
+id: 6
 date: 2020-09-09T12:00:00.387Z
 title: Using Singularity on Discovery
 alternativeTitle: Singularity
