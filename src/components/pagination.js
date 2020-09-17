@@ -10,6 +10,11 @@ const Pagination = (props) => {
     const [data, setData] = useState([])
     const [pageNumber, setPageNumber] = useState(0)
 
+    const generateFreindlyDate = (date) => {
+      let userFreindlyDaye = new Date(date)
+      return `${userFreindlyDaye.getMonth() + 1}/${userFreindlyDaye.getDate()}/${userFreindlyDaye.getUTCFullYear()}`
+  }
+
     const handlePageClick = (e) => {
         const selectedPage = e.selected
         const offset = selectedPage * perPage
@@ -28,6 +33,7 @@ const Pagination = (props) => {
                   <div className="content">
                     <h3>{item.node.frontmatter.title}</h3>
                     <h4>{item.node.frontmatter.excerpt}</h4>
+            { item.node.frontmatter.date && <h4 className="date">{generateFreindlyDate(item.node.frontmatter.date)}</h4> }
                   </div>
                   {/* <img src={item.node.frontmatter.thumbnail} alt={item.node.frontmatter.title} /> */}
                   <img src={item.node.frontmatter.featuredImage.childImageSharp.fluid.src} alt={item.node.frontmatter.title} />
