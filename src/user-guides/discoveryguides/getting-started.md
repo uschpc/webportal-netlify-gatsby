@@ -118,12 +118,20 @@ We keep two weeks of snapshots for /home1. You can think of these snapshots as s
 
 The project file system has a capacity of 10 PB and consists of directories for different research project groups. The default quota for each project directory is 5 TB, which can be increased to 10 TB at no cost. If more than 10 TB is needed, a project's Principal Investigator can request additional storage space in 5 TB increments at a cost of $200/5 TB/year. For more information on storage quotas and pricing, see the [Accounts and Allocations page](/user-information/accounts).
 
-Each project member has their own subdirectory within their group's project directory, where they can store data, scripts, and related files. The project file system should be used for most of your CARC work, and it's also where you can collaborate with your research project group. Users affiliated with multiple CARC projects will have multiple project directories so they can easily share their files with the appropriate groups.
+Each project member has access to their group's project directory, where they can store data, scripts, and related files. The project file system should be used for most of your CARC work, and it's also where you can collaborate with your research project group. Users affiliated with multiple CARC projects will have access to multiple project directories so they can easily share their files with the appropriate groups.
 
-The project directory can be located by typing:
+A project directory can be located by typing:
 
 ```sh
-/home/project/<user_name>
+/project/<PI_name>_xxx
+```
+
+`<PI_name>` is the username of the project owner, and `xxx` is a 2 or 3 digit project ID number. You can also find the project ID and path on the project page in the [User Portal](/user-information/user-guides/high-performance-computing/research-computing-user-portal).
+
+To create your own subdirectory within your project's directory:
+
+```sh
+mkdir /project/<PI_name>_xxx/<username>
 ```
 
 where `<user_name>` is your USC NetID (your email address without "@usc.edu").
