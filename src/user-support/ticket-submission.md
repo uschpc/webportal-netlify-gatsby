@@ -42,3 +42,9 @@ If you're trying to use or install **software**, please include:
  - Commands that give you an error
  - A link to the website or GitHub repository for the software
  - A link to the installation directions
+
+If you're requesting a **consultation**, please include:
+
+ - Your top 3 preferred dates and times to meet
+ - The type of consultation you're requesting
+ - Any relevant details or specific topics you'd like to discuss

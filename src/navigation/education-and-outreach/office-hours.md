@@ -24,13 +24,13 @@ Consultations for CARC account holders are available outside of regularly schedu
  - CARC users who have a complex and/or time-critical problem that is best resolved with a (virtual) face-to-face meeting.
  - Users who cannot attend the regularly scheduled office hours.
 
-If you'd like to request a consultation, please fill out a [consultation request](https://usc.qualtrics.com/jfe/form/SV_cYiW9xq8lug7yjb). Currently, all consultations are taking place via Zoom.
+If you'd like to request a consultation, please [submit a help ticket](/user-information/ticket-submission) and select "Consultation Request" for the ticket category. Currently, all consultations are taking place via Zoom.
 
 ### Meetings for new users
 
 New users to the CARC are highly encouraged to sign up for a short introductory meeting that includes a presentation and discussion on CARC resources and using the CARC for your research.
 
-To register for a New Users Meeting, please submit a request [here](https://usc.qualtrics.com/jfe/form/SV_cYiW9xq8lug7yjb) and specify that you're requesting a New Users Meeting. Currently, all New Users Meetings are taking place via Zoom.
+To register for a new user meeting, please [submit a help ticket](/user-information/ticket-submission) and specify that you're requesting a new user meeting. Currently, all new user meetings are taking place via Zoom.
 
 ### New faculty orientations
 
