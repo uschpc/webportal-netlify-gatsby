@@ -30,7 +30,7 @@ Every user on Discovery has a 100 GB allocation of home directory space. The hom
 
 #### Project file system
 
-The new parallel project file system will be deployed in September 2020. This file system has a capacity of 10 PB. Each CARC user receives their own subdirectory within the directories of each project they belong to, and the default quota for each project directory is 5 TB.
+The project file system has a capacity of 10 PB and consists of directories for different research project groups. The default quota for each project directory is 5 TB, which can be increased to 10 TB at no cost. If more than 10 TB is needed, a project's Principal Investigator can request additional storage space in 5 TB increments at a cost of $200/5 TB/year. For more information on storage quotas and pricing, see the [Accounts and Allocations page](/user-information/accounts).
 
 The project file system should be used for most of your CARC work, and it's also where you can collaborate with your research project group. Each project group member will have their own subdirectory within their group's project directory, where they can store data, scripts, and related files.
 
