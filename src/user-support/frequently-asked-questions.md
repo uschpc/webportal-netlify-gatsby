@@ -236,7 +236,7 @@ The CARC has several different file systems, as summarized in the table below.
 | Name      | Path                                            | Amount of space                         | Backed up?                | Purpose                                                                                |
 |-----------|-------------------------------------------------|-----------------------------------------|---------------------------|----------------------------------------------------------------------------------------|
 | Home      | `~`, `/home1/<username>`                          | 100 GB per account                                     | Yes                       | Configuration files, personal scripts                                                 |
-| Project   | `/home/project/<proj_name>`                      | Default of 5 TB (can be increased in 5 TB increments), shared amongst group members | Yes                       | Medium-term data storage while running CARC jobs                                       |
+| Project   | `/project/<PI_name>_xxx`                      | Default of 5 TB (can be increased in 5 TB increments), shared amongst group members | Yes                       | Medium-term data storage while running CARC jobs                                       |
 | Scratch (1 & 2)   | `/scratch/<username>`, `/scratch2/<username>`                           | 10 TB per file system per account                        | No                        | Short-term, high perfomance data storage                                              |
 
 The home, project, and scratch file systems are shared, which means that your usage can impact and be impacted by the activities of other users.
