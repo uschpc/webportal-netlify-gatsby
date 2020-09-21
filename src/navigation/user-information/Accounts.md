@@ -56,9 +56,16 @@ The table below shows a summary of the computing allocation tiers and their size
 | Medium          | 500,000         |
 | Large           | 1,000,000       |
 
-#### Graphical Processing Unit (GPU) allocations
+### System Unit (SU) charges
 
-For GPUs, the charge per SU varies depending on the GPU model. The table below shows the SU charge for different GPU models.
+Each job will subtract from your project's allocated System Units (SUs) depending on the types of resources you request:
+
+| Resource reserved for 1 hour| SUs Charged |
+|---|---|
+| 1 CPU/core  | 1    |
+| 1 GB memory | 0.25 |
+
+For graphics processing units (GPUs), the SU charge varies depending on the GPU model. The table below shows the SU charge for different GPU models for one hour.
 
 | GPU Model | System Unit (SU) Charge |
 |-----------|-------------------------|
@@ -66,6 +73,8 @@ For GPUs, the charge per SU varies depending on the GPU model. The table below s
 | K80       | 4                       |
 | P100      | 6                       |
 | V100      | 8                       |
+
+> Note: SUs are charged based on resources that you *request*, not what is actually used. Be sure not to request more resources than your program requires.
 
 ### Storage resource allocations
 

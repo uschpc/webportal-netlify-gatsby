@@ -46,13 +46,21 @@ Discovery is a shared resource, so we put limits on the size and duration of job
 |oneweek| 1 hour    | 168 hours  | 800| 50  |
 |debug  | 30 minutes| 30  minutes| 4  | 5   |
 
-Jobs also depend on your project account allocations, and each job will subtract from your project's allocated Service Units (SUs) depending on the types of resources you request:
+Jobs also depend on your project account allocations, and each job will subtract from your project's allocated System Units (SUs) depending on the types of resources you request:
 
 | Resource reserved for 1 hour| SUs Charged |
 |---|---|
 | 1 CPU/core  | 1    |
-| 1 GPU       | 4    |
 | 1 GB memory | 0.25 |
+
+For GPUs, the SU charge varies depending on the GPU model. The table below shows the SU charge for different GPU models for one hour.
+
+| GPU Model | System Unit (SU) Charge |
+|-----------|-------------------------|
+| K20, K40  | 2                       |
+| K80       | 4                       |
+| P100      | 6                       |
+| V100      | 8                       |
 
 > Note: SUs are charged based on resources that you *request*, not what is actually used. Be sure not to request more resources than your program requires.
 
