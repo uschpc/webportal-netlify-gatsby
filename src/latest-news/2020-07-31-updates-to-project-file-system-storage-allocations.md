@@ -6,7 +6,7 @@ parentEle: News and Events
 date: 2020-09-10
 parentPath: news-and-events/news-and-announcements
 cat: news
-excerpt: A new per-PI quota and pricing model for storage in the project file system
+excerpt: A new default quota and pricing model for storage in the project file system
 thumbnail: /images/shahadat-rahman-bfrqnkbulyq-unsplash-1-.jpg
 featuredImage: ../../static/images/shahadat-rahman-bfrqnkbulyq-unsplash-1-.jpg
 ---

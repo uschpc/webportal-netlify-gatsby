@@ -56,17 +56,6 @@ The table below shows a summary of the computing allocation tiers and their size
 | Medium          | 500,000         |
 | Large           | 1,000,000       |
 
-#### Graphical Processing Unit (GPU) allocations
-
-For GPUs, the charge per SU varies depending on the GPU model. The table below shows the SU charge for different GPU models.
-
-| GPU Model | System Unit (SU) Charge |
-|-----------|-------------------------|
-| K20, K40  | 2                       |
-| K80       | 4                       |
-| P100      | 6                       |
-| V100      | 8                       |
-
 ### Storage resource allocations
 
 Storage allocations are measured using disk space in terabytes (equivalent to 1,000 gigabytes).  

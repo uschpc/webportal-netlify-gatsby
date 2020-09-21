@@ -1,6 +1,6 @@
 ---
 author: Marco Olguin
-id: 3
+id: 4
 date: 2020-08-13T12:00:00.387Z
 title: Using MATLAB on Discovery
 alternativeTitle: MATLAB
@@ -163,3 +163,10 @@ delete(pool)
 ### Requesting newer versions of MATLAB
 
 It may be necessary to run MATLAB using a version that is not currently available. Licensed software such as MATLAB requires license setup by CARC staff. If there is a new version of MATLAB that you want to use, please [submit a help ticket](/user-information/ticket-submission) and we may be able to install it for you.
+
+### Additional resources
+
+If you have questions about or need help with MATLAB, please [submit a help ticket](/user-information/ticket-submission) and we will assist you.
+
+[MATLAB](https://www.mathworks.com/products/matlab.html)  
+[MATLAB documentation](https://www.mathworks.com/help/matlab/)  

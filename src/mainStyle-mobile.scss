@@ -904,6 +904,10 @@ and (max-width : 550px) {
                             .content {
                                 width: 100%;
                                 max-width: 100%;
+                                h4.date {
+                                    position: relative;
+                                    margin: 0;
+                                }
                             }
                             img {
                                 width: 100%;

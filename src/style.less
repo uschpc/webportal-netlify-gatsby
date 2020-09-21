@@ -214,6 +214,9 @@ body {
                 color: #990000;
               }
             }
+            h4.date {
+              order: 2
+            }
           }
         }
       }
@@ -361,12 +364,18 @@ body {
         .content {
           max-width: 70%;
           padding-bottom: 15px;
+          position: relative;
           h3 {
             color: #990000;
             line-height: 1.5;
           }
           h4 {
             font-size: 1rem;
+            &.date {
+              position: absolute;
+              margin-top: 5px;
+              bottom: 0;
+            }
           }
 
         }

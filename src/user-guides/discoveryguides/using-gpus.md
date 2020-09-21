@@ -64,3 +64,14 @@ To load the modules, you can run:
 module load cuda/10.1.243
 module load cudnn/8.0.2-10.1
 ```
+
+### System Unit (SU) charges
+
+Each job will subtract from your project's allocated System Units (SUs) depending on the types of resources you request. For GPUs, the SU charge varies depending on the GPU model. The table below shows the SU charge for different GPU models for one hour.
+
+| GPU Model | System Unit (SU) Charge |
+|-----------|-------------------------|
+| K20, K40  | 2                       |
+| K80       | 4                       |
+| P100      | 6                       |
+| V100      | 8                       |

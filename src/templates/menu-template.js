@@ -207,6 +207,7 @@ export const coldFrontQuery = graphql`
             author
             title
             path
+            date
             thumbnail
             featuredImage {
               childImageSharp {

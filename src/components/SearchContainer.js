@@ -82,7 +82,7 @@ class Search extends Component {
     queryResult = search.search(!flag ? qry.target.value : qry) 
     if (!queryResult.length) {
       search.addIndex("html")
-      queryResult = search.search(qry.target.value) 
+      queryResult = search.search(!flag ? qry.target.value : qry) 
     }
     this.setState({ searchQuery: !flag ? qry.target.value : qry, searchResults: queryResult })
   }
