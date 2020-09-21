@@ -46,7 +46,7 @@ To create your own subdirectory within your project's directory:
 mkdir /project/<PI_name>_xxx/<username>
 ```
 
-where `<user_name>` is your USC NetID (your email address without "@usc.edu").
+where `<username>` is your USC NetID (your email address without "@usc.edu").
 
 ### Scratch file systems
 
