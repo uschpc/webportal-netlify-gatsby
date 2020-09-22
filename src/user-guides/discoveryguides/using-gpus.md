@@ -16,15 +16,16 @@ Some programs can take advantage of the unique hardware architecture in a graphi
 
 ### Requesting GPU resources
 
-To request a GPU, add one of the following lines to your Slurm job script:
+To request a GPU, add one of the following `sbatch` options to your Slurm job script:
 
+```sh
+#SBATCH --gres=gpu:<number>
 ```
---gres=gpu:<number>
-```
+
 or
 
-```
---gres=gpu:<gpu_type>:<number>
+```sh
+#SBATCH --gres=gpu:<gpu_type>:<number>
 ```
 
 where:
@@ -34,7 +35,7 @@ where:
 
 Use the chart below to determine which `gpu_type` to specify:
 
-|`gpu_type` 	|Max number of GPUs per node 	|GPU model|
+|`gpu_type` | Max number of GPUs per node | GPU model|
 |---|---|---|
 |k20 	|2| NVIDIA Tesla K20 |
 |k40 	|2| NVIDIA Tesla K40 |
@@ -42,32 +43,9 @@ Use the chart below to determine which `gpu_type` to specify:
 |p100 	|2| NVIDIA Tesla P100 |
 |v100 	|2| NVIDIA Tesla V100 |
 
-### Loading corresponding modules
+#### System Unit (SU) charges
 
-GPU-enabled software often requires the [CUDA toolkit](https://developer.nvidia.com/cuda-toolkit) or the [cuDNN](https://developer.nvidia.com/cudnn) library. These are available as modules can be found by running:
-
-```
-module avail cuda
-module avail cudnn
-```
-
-or
-
-```
-# Look for modules that contain 'cud' in the name
-module avail cud
-```
-
-To load the modules, you can run:
-
-```
-module load cuda/10.1.243
-module load cudnn/8.0.2-10.1
-```
-
-### System Unit (SU) charges
-
-Each job will subtract from your project's allocated System Units (SUs) depending on the types of resources you request. For GPUs, the SU charge varies depending on the GPU model. The table below shows the SU charge for different GPU models for one hour.
+Each job will subtract from your project's allocated System Units (SUs) depending on the types of resources you request. For GPUs, the SU charge varies depending on the GPU model. The following table shows the SU charge for different GPU models for one hour:
 
 | GPU Model | System Unit (SU) Charge |
 |-----------|-------------------------|
@@ -75,3 +53,46 @@ Each job will subtract from your project's allocated System Units (SUs) dependin
 | K80       | 4                       |
 | P100      | 6                       |
 | V100      | 8                       |
+
+### Loading corresponding modules
+
+GPU-enabled software often requires the [CUDA toolkit](https://developer.nvidia.com/cuda-toolkit) or the [cuDNN](https://developer.nvidia.com/cudnn) library. These are available as modules can be found by running:
+
+```sh
+module avail cuda
+module avail cudnn
+```
+
+or
+
+```sh
+# Look for modules that contain 'cud' in the name
+module avail cud
+```
+
+To load the modules, you can run, for example:
+
+```sh
+module load cuda/10.1.243
+module load cudnn/8.0.2-10.1
+```
+
+### Example Slurm job script
+
+The following is an example Slurm job script for GPU jobs:
+
+```sh
+#!/bin/bash
+#SBATCH --gres=gpu:k40:1        # 1 node with 1 K40 GPU
+#SBATCH --ntasks=1              # 1 process
+#SBATCH --cpus-per-task=8       # 8 CPUs
+#SBATCH --mem=16GB              # 16 GB of memory
+#SBATCH --time=1:00:00          # 1 hour run time
+#SBATCH --account=<account_id>  # Account to charge resources to
+  
+module load gcc/8.3.0
+module load cuda/10.1.243
+  
+nvcc program.cu -o program
+./program
+```

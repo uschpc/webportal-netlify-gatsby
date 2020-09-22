@@ -26,7 +26,7 @@ module load matlab
 
 This loads the default version, which is typically the newest version available. To load a specific version, you can run a command similar to:
 
-```
+```sh
 module load matlab/2019a
 ```
 
@@ -34,11 +34,15 @@ This command loads version 2019a of MATLAB.
 
 To see all available versions of MATLAB, run the command:
 
-```
+```sh
 module avail matlab
 ```
 
-### The MATLAB GUI
+#### Requesting newer versions of MATLAB
+
+It may be necessary to run MATLAB using a version that is not currently available. Licensed software such as MATLAB requires license setup by CARC staff. If there is a new version of MATLAB that you want to use, please [submit a help ticket](/user-information/ticket-submission) and we may be able to install it for you.
+
+#### MATLAB GUI
 
 Use of the MATLAB GUI is possible but **not recommended**, as it requires X11 forwarding, which has poor performance. Instead, we recommend that users develop MATLAB scripts on their local computer and transfer them and any other input files to Discovery for command line use.
 
@@ -66,9 +70,9 @@ After creating a MATLAB script, you will need to create a Slurm job script to la
 #SBATCH --mem-per-cpu=10GB
 #SBATCH --time=1:00:00
 #SBATCH --account=<account_id>
-
+  
 module load matlab
-
+  
 # Do not include the .m extension in your script name (simple_plot.m)
 matlab -r 'simple_plot'
 ```
@@ -92,7 +96,7 @@ You can use the folloiwng `simple_plot.m` as an example:
 ```matlab
 x=[-pi:0.05:pi];
 y=sin(x);
-
+  
 fig=figure();
 plot(x,y);
 print(fig,'plot','-dpng')
@@ -112,7 +116,7 @@ To run a parallel MATLAB script, you will first need to create a **cluster profi
 
 By default, MATLAB will create a local cluster. If you would like to explicitly start one, you can do so by adding the following to your script:
 
-```
+```matlab
 cluster = parallel.cluster.Local
 ```
 
@@ -120,13 +124,13 @@ cluster = parallel.cluster.Local
 
 To create a worker pool larger than can fit on a single node, MATLAB will submit a Slurm job on your behalf to allocate resources. To do this, add the following lines to your script:
 
-```
+```matlab
 cluster = parallel.cluster.Slurm;
-
+  
 set(cluster,'JobStorageLocation', your_directory_here);
 set(cluster,'HasSharedFilesystem', true);
-set(cluster,'SubmitArguments','--time=00:20:00 ');
-set(cluster,'ResourceTemplate','--ntasks=^N^);
+set(cluster,'SubmitArguments','--time=00:20:00');
+set(cluster,'ResourceTemplate','--ntasks=^N^');
 ```
 
 Where `JobStorageLocation`, `SubmitArguments`, and `ResourceTemplate` are defined below:
@@ -146,7 +150,7 @@ Once a cluster profile has been configured, the process for starting up a pool o
 
 Assuming you have created a cluster object named `cluster`, you can start up a pool of workers using the `parpool` command:
 
-```
+```matlab
 pool=parpool(cluster,N)
 ```
 
@@ -156,13 +160,9 @@ If starting a **remote cluster**, MATLAB will submit a job requesting resources 
 
 Make sure that you close your parallel pool when you are done with it by using the following command:
 
-```
+```matlab
 delete(pool)
 ```
-
-### Requesting newer versions of MATLAB
-
-It may be necessary to run MATLAB using a version that is not currently available. Licensed software such as MATLAB requires license setup by CARC staff. If there is a new version of MATLAB that you want to use, please [submit a help ticket](/user-information/ticket-submission) and we may be able to install it for you.
 
 ### Additional resources
 
@@ -170,3 +170,4 @@ If you have questions about or need help with MATLAB, please [submit a help tick
 
 [MATLAB](https://www.mathworks.com/products/matlab.html)  
 [MATLAB documentation](https://www.mathworks.com/help/matlab/)  
+[MATLAB parallel computing documentation](https://www.mathworks.com/help/parallel-computing/)
