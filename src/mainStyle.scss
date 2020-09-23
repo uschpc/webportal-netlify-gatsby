@@ -53,6 +53,20 @@ body {
 
   #___gatsby {
     #gatsby-focus-wrapper{
+      p {
+        code {
+          background-color: #EBEEF5;
+        }
+      }
+      tbody {
+        tr {
+          td {
+            code {
+              background-color: #EBEEF5;
+            }
+          }
+        }
+      }
       .user-support {
         .right-col {
           .system-status {
@@ -98,6 +112,9 @@ body {
                   color: #990000;
                   text-decoration: underline;
                 }
+              }
+              code {
+                background-color: #EBEEF5;
               }
             }
           }
