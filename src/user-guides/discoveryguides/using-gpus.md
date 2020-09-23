@@ -1,6 +1,6 @@
 ---
 author: Cesar Sul
-id: 6
+id: 7
 date: 2020-09-08T12:00:00.387Z
 title: Using GPUs on Discovery
 path: using-gpus

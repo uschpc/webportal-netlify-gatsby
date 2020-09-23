@@ -3,7 +3,6 @@ import Markdown from "react-markdown"
 import { Link } from 'gatsby';
 
 const Projects = (project) => {
-    console.log('asdasd', project)
     return (
         <div className="shared projects">
             {project.edges.map((item, i) => {
