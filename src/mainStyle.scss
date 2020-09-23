@@ -53,6 +53,11 @@ body {
 
   #___gatsby {
     #gatsby-focus-wrapper{
+      p {
+        code {
+          background-color: #EBEEF5;
+        }
+      }
       .user-support {
         .right-col {
           .system-status {
