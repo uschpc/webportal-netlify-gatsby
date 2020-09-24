@@ -11,7 +11,7 @@ const UserSupportIndex = ({data}) => {
   }
   return (
       <Layout {...data.navigation} openModel={model}>
-          <SEO title="user-support" />
+          <SEO title="User Support" />
            <SharedTemplate title="User Support" cat="userSupport" {...data} openModel={openModel} />
           <Footer />
       </Layout>

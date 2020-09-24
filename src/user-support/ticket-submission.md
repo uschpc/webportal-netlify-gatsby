@@ -48,3 +48,11 @@ If you're requesting a **consultation**, please include:
  - Your top 3 preferred dates and times to meet
  - The type of consultation you're requesting
  - Any relevant details or specific topics you'd like to discuss
+
+If you're requesting a **storage allocation increase**, please include:
+
+ - Your project ID
+ - Your desired allocation size
+ - The reason for your increase
+
+> The CARC team will consult with you to determine your storage needs and the total cost.

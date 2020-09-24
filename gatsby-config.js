@@ -106,8 +106,10 @@ module.exports = {
         plugins: [{
           resolve: `gatsby-remark-vscode`,
           options: {
-            theme: "Eva Light",
-            extensions: ['eva-theme']
+            //Solarized Light background color is #fdf6e3
+            theme: 'Solarized Light',
+            //theme: 'Eva Light',
+            //extensions: ['eva-theme']
           }
         }]
       }
