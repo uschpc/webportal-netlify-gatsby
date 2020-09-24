@@ -66,6 +66,10 @@ If more than 10 TB is needed, a PI can request additional storage space through 
 
 >20 TB per year = 10 TB free + (2 x $200/5 TB/year) = $400 annual cost
 
+If you're requesting a **new storage allocation** and require more than 10 TB, you can request your allocation in the [User Portal](http://hpcaccount.usc.edu) and indicate the amount of storage you need (in 5 TB increments). See the [Request New Allocation user guide](/user-information/user-guides/high-performance-computing/research-computing-user-portal/request-new-allocation) for more information.
+
+If you have an **existing storage allocation** but would like to increase the amount of storage, please [submit a help ticket](/user-information/ticket-submission) under the "Accounts/Access" category. Please include your project ID, desired allocation size, and reason for this increase. The CARC team will consult with you to determine your needs and the total cost.
+
 ### Yearly renewal of allocations
 
 The duration of computing and storage resource allocations is  one year. Each year, PIs must renew their projects and associated allocations in the Research Computing User Portal. Changes to allocation sizes or types can be made during this renewal. Failure to apply for a renewal will result in the deletion of all data and the space will become available for use by other users.
