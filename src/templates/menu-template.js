@@ -11,7 +11,7 @@ import Researcher from '../components/researchers'
 import ResearcherProfiles from '../components/researcher-profiles'
 // import Projects from '../components/projects'
 // import ProjectPages from '../components/project-pages'
-// import ZoomMeeting from '../components/zoom-meeting'
+import ZoomMeeting from '../components/zoom-meeting'
 
 const findSubMenu = (menubar, nav) => {
   const subNav = nav.edges.filter((ele, i) => {
@@ -113,8 +113,7 @@ export default function Template({ data }) {
                   ) : (
                     <CustomNews {...data.newsContent }/>
                   )}
-                   {/* {content.frontmatter.secCat === 'events' && <ZoomMeeting html={content.html} />} */}
-                   {content.frontmatter.secCat === 'events' && <Markdown source={content.html} escapeHtml={false} />}
+                   { content.frontmatter.secCat === 'events' && <ZoomMeeting html={content.html} /> }
 
 
                 </div>
