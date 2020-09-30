@@ -15,8 +15,25 @@ const ZoomMeeting = ({html}) => {
 
     const formatTime = (time) => {
         time = new Date(time)
-        return time.toLocaleString('en-US', { hour: 'numeric', hour12: true })
+        return time.toLocaleString('en-US', { hour: 'numeric', hour12: true, minute:'2-digit' })
          
+    }
+
+    const formatDuration = (duration) => {
+        let minutes = duration % 60;
+        let hours = (duration - minutes) / 60;
+
+        return `${hours}:${minutes}`
+         
+    }
+
+    const getFreindlyDate = (num) => {
+        let hours = Math.floor(num / 60);  
+        let minutes = num % 60;
+        if (hours >= 1 ) {
+            return `${hours}:${minutes} Hr` 
+        }
+        return `${hours}:${minutes} Mi`
     }
 
     useEffect(() => {
@@ -70,7 +87,7 @@ const ZoomMeeting = ({html}) => {
                                 <div className="time"><span>Time:</span> {formatTime(meeting.start_time ? meeting.start_time : meeting.occurrences[0].start_time)}</div>
                             </div>
                             <div className="middile-meeting-column">
-                                <div className="duration"><span>Duration:</span> {meeting.duration ? meeting.duration : meeting.occurrences[0].duration} minutes</div>
+                                <div className="duration"><span>Duration:</span> {formatDuration(meeting.duration ? meeting.duration : meeting.occurrences[0].duration)} Hr</div>
                                 <div className="timezone"><span>Timezone:</span> {meeting.timezone}</div>
                             </div>
                         </div>
