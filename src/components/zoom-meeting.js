@@ -6,7 +6,7 @@ import Loader from 'react-loader-spinner'
 
 
 const ZoomMeeting = ({html}) => {
-    const [meetings, fetchMeetings] = useState(null)
+    const [meetingResults, fetchMeetings] = useState(null)
 
     const formatDate = (time) => {
         let [month, date, year]    = ( new Date(time) ).toLocaleDateString().split("/")
@@ -15,30 +15,79 @@ const ZoomMeeting = ({html}) => {
 
     const formatTime = (time) => {
         time = new Date(time)
-        return time.toLocaleString('en-US', { hour: 'numeric', hour12: true })
+        return time.toLocaleString('en-US', { hour: 'numeric', hour12: true, minute:'2-digit' })
          
     }
 
+    const formatDuration = (duration) => {
+        let minutes = duration % 60;
+        let hours = (duration - minutes) / 60;
+
+        return `${hours}:${minutes}`
+         
+    }
+
+    const getFreindlyDate = (num) => {
+        let hours = Math.floor(num / 60);  
+        let minutes = num % 60;
+        if (hours >= 1 ) {
+            return `${hours}:${minutes} Hr` 
+        }
+        return `${hours}:${minutes} Mi`
+    }
+
     useEffect(() => {
-        axios.get(`https://hpcaccount.usc.edu/static/zoom/zoom_listmeetings.php`).then( res => fetchMeetings(res.data.meetings) )
+        (async () => {
+            let resultArray = []
+            let promissesArray = []
+            let promiss = null
+            let result = await axios.get(`https://hpcaccount.usc.edu/static/zoom/zoom_listmeetings.php`)
+            let meetings = result.data.meetings 
+            meetings.forEach(({id}, index) => {
+                promiss = axios.get(`https://hpcaccount.usc.edu/static/zoom/zoom_getmeeting.php?id=${id}`)
+                promissesArray.push(promiss)    
+                // meetings[index].occurrences = res.data.occurrences
+            })
+            let meetingResults = await Promise.all(promissesArray)
+            meetingResults.forEach(meeting => {
+                resultArray.push(meeting.data)
+            })
+            fetchMeetings(resultArray)
+        })()
     }, [])
+
+    // useEffect(() => {
+    //     let process = null
+    //     let promissesArray = []
+    //     meetings.length && meetings.forEach(({id}) => {
+    //         axios.get(`https://hpcaccount.usc.edu/static/zoom/zoom_getmeeting.php?id=${id}`).then( res => console.log('coco', res) )
+    //     })
+    // }, flag)
     return (
-        meetings ? (
+        meetingResults ? (
             <>
             <Markdown source={html} escapeHtml={false} />
             <h2 className="meetings-heading">USC Advanced Research Computing - Upcoming Events</h2>
-            {meetings.map((meeting, index) => {
+            {meetingResults.map((meeting, index) => {
+                console.log('inside', meetingResults)
                 return (
-                    <div className={`meetings ${(meetings.length - 1) === index ? 'last': ''}`} key={index}>
+                    <div className={`meetings ${(meetingResults.length - 1) === index ? 'last': ''}`} key={index}>
                         <h3 className="topic">{meeting.topic}</h3>
                         <div className="agenda">{meeting.agenda}</div>
                         <div className="meeting-info">
                             <div className="left-meeting-column">
-                                <div className="date"><span>Date:</span> {formatDate(meeting.start_time)}</div>
-                                <div className="time"><span>Time:</span> {formatTime(meeting.start_time)}</div>
+                                <div className="date"><span>Date:</span> {
+                                meeting.occurrences ? 
+                                meeting.occurrences.map(oc => {
+                                    return <li>{formatDate(oc.start_time)}</li>
+                                        }
+                                        ) : 
+                                        formatDate(meeting.start_time) }
+                                    </div>
+                                <div className="time"><span>Time:</span> {formatTime(meeting.start_time ? meeting.start_time : meeting.occurrences[0].start_time)}</div>
                             </div>
                             <div className="middile-meeting-column">
-                                <div className="duration"><span>Duration:</span> {meeting.duration} minutes</div>
+                                <div className="duration"><span>Duration:</span> {formatDuration(meeting.duration ? meeting.duration : meeting.occurrences[0].duration)} Hr</div>
                                 <div className="timezone"><span>Timezone:</span> {meeting.timezone}</div>
                             </div>
                         </div>

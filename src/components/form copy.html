@@ -1,0 +1,340 @@
+<html class="chrome">
+    <head>
+        <link rel="stylesheet" id="hpc-custom-style-css" href="style.css" type="text/css" media="all" />
+    </head>
+    <body class="page-template page-template-template-create-customer page-template-template-create-customer-php page page-id-3323">
+        <div id="wrapper">
+            <div class="create-customer-page">
+                <div class="create-customer-container">
+                    <div class="form-container">
+                        <div class="form-side">
+                            <div class="section-title one">Select your system</div>
+                            <form class="create-customer-form show one" novalidate="novalidate">
+                                <div class="form-section shipping">
+                                    <!-- <div class="form-section-title"></div> -->
+                                    <div class="split-inputs">
+                                        <div class="form-row system">
+                                            <!-- <label class="form-label" for="systemSelection">CPU Type</label> -->
+                                            <select class="form-input" id="systemSelection" name="systemSelection" onchange="getOptionSelected()">
+                                                <option value="">Select a system</option>
+                                                <option value="CPU">CPU</option>
+                                                <option value="GPU">GPU</option>
+                                                <option value="HPE">HPE</option>
+                                                <option value="HPE">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="section-title">Select your configuration</div>
+                            <form class="create-customer-form two" novalidate="novalidate">
+                                <div class="form-section shipping">
+                                    <!-- <div class="form-section-title"></div> -->
+                                    <div class="form-row">
+                                        <label class="form-label" for="firstname">Condo project title</label>
+                                        <input type="text" id="Condo-project-title" name="CondoProjectTitle" class="form-input" />
+                                    </div>
+
+                                    <div class="split-inputs">
+                                        <div class="form-row">
+                                            <label class="form-label" for="cpuType">CPU Type</label>
+                                            <select class="form-input" id="cpuType" name="cpuType">
+                                                <option value=""></option>
+                                                <option value="AK">1</option>
+                                                <option value="AR">2</option>
+                                                <option value="AL">3</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-row">
+                                            <label class="form-label" for="gpuType">GPU Type</label>
+
+                                            <select class="form-input" id="cpuType" name="gpuType">
+                                                <option value=""></option>
+                                                <option value="AK">1</option>
+                                                <option value="AR">2</option>
+                                                <option value="AL">3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="split-inputs">
+                                        <div class="form-row">
+                                            <label class="form-label" for="memorySize">Memory size (GB)</label>
+                                            <select class="form-input" id="memorySize" name="memorySize">
+                                                <option value=""></option>
+                                                <option value="AK">1</option>
+                                                <option value="AR">2</option>
+                                                <option value="AL">3</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-row">
+                                            <label class="form-label" for="numberNodes">Number of nodes</label>
+
+                                            <select class="form-input" id="numberNodes" name="numberNodes">
+                                                <option value=""></option>
+                                                <option value="AK">1</option>
+                                                <option value="AR">2</option>
+                                                <option value="AL">3</option>
+                                            </select>
+                                    </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="section-title">Select the number of nodes you plan to purchase</div>
+                            <form class="create-customer-form" novalidate="novalidate">
+                                <div class="form-section shipping">
+                                    <!-- <div class="form-section-title"></div> -->
+                                    <div class="split-inputs">
+                                        <div class="form-row nodes">
+                                            <label class="form-label" for="numberNodes">Number of nodes</label>
+                                            <select class="form-input" id="numberNodes" name="numberNodes">
+                                                <option value=""></option>
+                                                <option value="AK">1</option>
+                                                <option value="AR">2</option>
+                                                <option value="AL">3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="section-title">Order Info</div>
+                            <form class="create-customer-form" novalidate="novalidate">
+                                <div class="form-section shipping">
+                                    <!-- <div class="form-section-title"></div> -->
+                                    <div class="form-row">
+                                        <label class="form-label" for="firstname">Condo project title</label>
+                                        <input type="text" id="Condo-project-title" name="CondoProjectTitle" class="form-input" />
+                                    </div>
+
+                                    <div class="split-inputs">
+                                        <div class="form-row">
+                                            <label class="form-label" for="cpuType">CPU Type</label>
+                                            <select class="form-input" id="cpuType" name="cpuType">
+                                                <option value=""></option>
+                                                <option value="AK">1</option>
+                                                <option value="AR">2</option>
+                                                <option value="AL">3</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-row">
+                                            <label class="form-label" for="gpuType">GPU Type</label>
+
+                                            <select class="form-input" id="cpuType" name="gpuType">
+                                                <option value=""></option>
+                                                <option value="AK">1</option>
+                                                <option value="AR">2</option>
+                                                <option value="AL">3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="split-inputs">
+                                        <div class="form-row">
+                                            <label class="form-label" for="memorySize">Memory size (GB)</label>
+                                            <select class="form-input" id="memorySize" name="memorySize">
+                                                <option value=""></option>
+                                                <option value="AK">1</option>
+                                                <option value="AR">2</option>
+                                                <option value="AL">3</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-row">
+                                            <label class="form-label" for="numberNodes">Number of nodes</label>
+
+                                            <select class="form-input" id="numberNodes" name="numberNodes">
+                                                <option value=""></option>
+                                                <option value="AK">1</option>
+                                                <option value="AR">2</option>
+                                                <option value="AL">3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="section-title">Billing Info</div>
+
+                            <form class="create-customer-form" novalidate="novalidate">
+                                <div class="form-section shipping">
+                                    <!-- <div class="form-section-title"></div> -->
+                                    <div class="form-row">
+                                        <label class="form-label" for="name">Name</label>
+
+                                        <input type="text" id="name" name="name" class="form-input" />
+                                    </div>
+
+                                    <div class="form-row">
+                                        <label class="form-label" for="department">Department</label>
+
+                                        <input type="text" id="department" name="department" class="form-input" />
+                                    </div>
+
+                                    <div class="form-row" id="new-customer">
+                                        <label class="form-label" for="emailaddress">Email Address</label>
+            
+                                        <input type="text" id="emailaddress" name="emailaddress" class="form-input">
+                                    </div>
+
+                                    <div class="form-row">
+                                        <label class="form-label" for="phone">Phone Number</label>
+
+                                        <input type="text" id="phone" name="phone" class="form-input" placeholder="(000) 000-0000" />
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="summary-side">
+                            <div class="items-in-cart">
+                                <div class="section-header">
+                                    <div class="section-title"><span class="amount">3</span> Item<span class="plural">s</span> in Cart</div>
+
+                                    <div class="link">
+                                        <a href="/cart" class="edit-link">Edit</a>
+                                    </div>
+                                </div>
+
+                                <div class="item-breakdown">
+                                    <div class="item">
+                                        <div class="image">
+                                            <img src="../../static/images/Computer.png" data-target="OBD-II" class="active" />
+                                            <img src="../../static/images/Computer.png" data-target="12-Volt" />
+                                        </div>
+
+                                        <div class="details">
+                                            <div class="name">CPU type 1</div>
+                                            <div class="name">GPU type 2</div>
+                                            <div class="name">Memory Size (GB) 2</div>
+                                            <div class="device-type"><span></span></div>
+                                            <div class="quantity"><span class="count">3</span> x $<span class="price">12</span> / Month</div>
+                                        </div>
+
+                                        <div class="total-price">$<span>36</span></div>
+                                    </div>
+                                </div>
+
+                                <div id="item-template">
+                                    <div class="item">
+                                        <div class="image">
+                                            <img src="../../static/images/Computer.png" data-target="OBD-II" />
+                                            <img src="../../static/images/Computer.png" data-target="12-Volt" />
+                                        </div>
+
+                                        <div class="details">
+                                            <div class="name">CPU type 2</div>
+                                            <div class="device-type"><span></span></div>
+                                            <div class="quantity"><span class="count"></span> x $<span class="price"></span> / Month</div>
+                                        </div>
+
+                                        <div class="total-price">$<span></span></div>
+                                    </div>
+                                </div>
+
+                                <div class="total-container">
+                                    <div class="line-item subtotal">
+                                        <div class="name">Subtotal</div>
+                                        <div class="value">$36</div>
+                                    </div>
+
+                                    <div class="line-item">
+                                        <div class="name">Hardware Cost</div>
+                                        <div class="value">$0</div>
+                                    </div>
+
+                                    <div class="line-item">
+                                        <div class="name">Shipping</div>
+                                        <div class="value">FREE</div>
+                                    </div>
+
+                                    <div class="line-item total">
+                                        <div class="name">Total / Month</div>
+                                        <div class="value">$36</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                 
+                    <div class="actions-row">
+                        <div class="btns">
+                            <div class="primary-btn large block-btn" id="create-customer-submit">Submit</div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </body>
+    <script>
+        let elementIndex = '.one'
+        function getOptionSelected() {
+            let e = document.getElementById("systemSelection");
+            let optionSelected = e.options[e.selectedIndex].value;
+            switch(elementIndex) {
+                case '.one':
+                elementIndex = '.two'
+                break
+            }
+            let closestEle = document.querySelector(`.form-side .create-customer-form${elementIndex}`)
+            closestEle.insertAdjacentHTML('beforeend', `
+            <div class="form-section shipping">
+                <div class="split-inputs">
+                    <div class="form-row">
+                        <label class="form-label" for="${optionSelected}type">${optionSelected} Type</label>
+                        <select class="form-input" id="${optionSelected}type" name="${optionSelected}type">
+                            <option value=""></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label class="form-label" for="ramType">RAM Type</label>
+
+                        <select class="form-input" id="ramType" name="ramType">
+                            <option value=""></option>
+                            <option value="1">256MB</option>
+                            <option value="2">512MB</option>
+                            <option value="3">1028MB</option>
+                        </select>
+                    </div>
+                </div>
+                ${optionSelected === 'GPU' && (`
+                    <div class="split-inputs">
+                        <div class="form-row">
+                        <label class="form-label" for="cpuType">CPU Type</label>
+                        <select class="form-input" id="cpuType" name="cpuType">
+                            <option value=""></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                </div>
+                `)}
+                <div class="split-inputs">
+                    <div class="form-row">
+                        <label class="form-label" for="memorySize">Memory size (GB)</label>
+                        <select class="form-input" id="memorySize" name="memorySize">
+                            <option value=""></option>
+                            <option value="AK">1</option>
+                            <option value="AR">2</option>
+                            <option value="AL">3</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label class="form-label" for="numberNodes">Number of nodes</label>
+
+                        <select class="form-input" id="numberNodes" name="numberNodes">
+                            <option value=""></option>
+                            <option value="AK">1</option>
+                            <option value="AR">2</option>
+                            <option value="AL">3</option>
+                        </select>
+                </div>
+                </div>
+            </div>
+            `)
+            closestEle.classList.add("show");
+        }
+       
+    </script>
+</html>
