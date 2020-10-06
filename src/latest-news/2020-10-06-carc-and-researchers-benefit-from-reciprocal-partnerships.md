@@ -1,14 +1,13 @@
 ---
-title: "CARC and Researchers Benefit from Reciprocal Partnerships "
+title: "CARC and Researchers Benefit from Reciprocal Partnerships"
 author: Andrea Renney
 path: carc-research-partnerships-benefits
 parentEle: News and Events
 date: 2020-10-06
 parentPath: news-and-events/news-and-announcements
 cat: news
-excerpt: Resources, research grants, and system testing are perks of
-  collaborating with the CARC
-featuredImage: /images/48244573107_225cd2fefd_c.jpg
+excerpt: Resources, research grants, and system testing are perks of collaborating with the CARC
+featuredImage: /images/usc-entrance-sign.jpg
 ---
 USC’s Center for Advanced Research Computing provides advanced computational research systems to the USC community. The CARC goes further than just providing resources, though: it also collaborates closely with the university’s wide variety of research groups, supporting their specialized needs and furthering their research.
 
