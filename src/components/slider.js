@@ -5,6 +5,14 @@ import { Link } from 'gatsby';
 
 const content = [
   {
+    title: "CARC and Researchers Benefit from Reciprocal Partnerships",
+    description:
+      "Resources, research grants, and system testing are perks of collaborating with the CARC",
+    button: "Read More",
+    url: "/news-and-events/news-and-announcements/carc-research-partnerships-benefits",
+    image: "/images/slider-image-1-small.jpg"
+  },
+  {
     title: "USC's Center for Advanced Research Computing (CARC) Officially Launches",
     description:
       "Name change from HPC highlights the research-focused nature of the department",
@@ -18,14 +26,6 @@ const content = [
       "New website has an updated design and many new features for users",
     button: "Read More",
     url: "/news-and-events/news-and-announcements/website-new-features",
-    image: "/images/slider-image-1-small.jpg"
-  },
-  {
-    title: "Upcoming Changes for USC Research Computing: Summer and Fall 2020",
-    description:
-      "Technical upgrades, increased user support, and exciting new services are planned for the next few months",
-    button: "Read More",
-    url: "/news-and-events/news-and-announcements/upcoming-changes-summer-fall-2020",
     image: "/images/slider-image-4-small.jpg"
   }
   ];

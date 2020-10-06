@@ -199,10 +199,10 @@ For more information on data management, see the [Data Management user guides](/
 
 ### Transferring files
 
-The CARC has a dedicated data transfer node at `hpc-transfer.usc.edu` that is configured for fast file transfers. hpc-transfer is also a Globus endpoint. To access it, use `@hpc-transfer.usc.edu` instead of the normal login node (`@discovery.usc.edu`) when logging in:
+The CARC has two dedicated data transfer nodes at `hpc-transfer1.usc.edu` and `hpc-transfer2.usc.edu` that are configured for fast file transfers. These nodes are also [Globus endpoints](/user-information/user-guides/Data-Management/transferring-files-globus). To access these nodes, use `@hpc-transfer1.usc.edu` or `@hpc-transfer2.usc.edu` instead of the normal login node (`@discovery.usc.edu`) when logging in:
 
 ```
-ssh <username>@hpc-transfer.usc.edu
+ssh <username>@hpc-transfer1.usc.edu
 ```
 
 Remember to always transfer files into your home or scratch directories where you have sufficient disk space.
