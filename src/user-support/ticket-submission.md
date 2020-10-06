@@ -12,7 +12,6 @@ cat: userSupport
 parentEle: none
 ---
 
-
 If you're experiencing an issue with system resources or your CARC account, please see the [User Guides](https://CARC-dev.usc.edu/user-information/user-guides), [User Forum](https://hpc-discourse.usc.edu/categories), and [Frequently Asked Questions](https://CARC-dev.usc.edu/user-information/frequently-asked-questions) pages for help.
 
 If you're experiencing an issue with your USC NetID or Duo Two-Factor Authentication, or you need help changing your password, please contact [USC IT Services](https://itservices.usc.edu/self-help/).
@@ -31,16 +30,18 @@ If you're trying to run a **job**, please include:
  - Slurm output or error files
  - Scripts or relevant portions of your code
  - Screenshots
+ - Expected vs. actual behavior
  - Did some jobs run on some nodes but not on others?
  - Is the behavior reproducible or erratic?
  - Has the behavior you are experiencing changed recently? When?
+ - Steps to reproduce
 
 If you're trying to use or install **software**, please include:
 
  - Name and version of the software
  - Error messages
  - Commands that give you an error
- - A link to the website or GitHub repository for the software
+ - A link to the website or source code repository for the software
  - A link to the installation directions
 
 If you're requesting a **consultation**, please include:
