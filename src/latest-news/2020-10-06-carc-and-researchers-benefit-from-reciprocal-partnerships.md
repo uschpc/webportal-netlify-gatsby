@@ -1,9 +1,9 @@
 ---
-title: "CARC and Researchers Benefit from Reciprocal Partnerships"
+title: CARC and Researchers Benefit from Reciprocal Partnerships
 author: Andrea Renney
 path: carc-research-partnerships-benefits
 parentEle: News and Events
-date: 2020-10-06
+date: 2020-10-06T00:00:00.000Z
 parentPath: news-and-events/news-and-announcements
 cat: news
 excerpt: Resources, research grants, and system testing are perks of collaborating with the CARC
