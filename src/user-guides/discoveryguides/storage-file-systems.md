@@ -9,63 +9,119 @@ cat: discoveryGuides
 parentPage: User Guides
 sideMenuParent: Discovery
 backToTopBtnFlag: true
-excerpt: A breakdown of the file systems available to CARC users.
+excerpt: A description of the file systems available to CARC users.
 ---
 
 All CARC account holders are assigned three directories where they can store files and run programs: **home**, **project**, and **scratch**.
 
-### Home directory
+You can list the directories available to you and storage use for each by entering the command `myquota`.
 
-/home1 is a network file system for storing configuration files and personal scripts. Each CARC user has a 100 GB home directory quota.
+### Home file system
 
-The home directory provides 2-week snapshots with daily backups, so if you accidentally delete some of your important data, you can recover the data if the deletion was within the last three weeks. You should always keep extra backups of your important data since snapshots or semi-backups are *not* real backups.
+The /home1 file system consists of personal directories for users, running ZFS/BeeGFS and hosted on dedicated storage machines. Your home directory has a quota of 100 GB of disk space and 2 million files. It is intended for storing personal files, configuration files, and software installations. It is not intended for I/O-intensive jobs.
 
-Your home directory is located at:
+When you log in to Discovery, you will always start in your home directory, which is located at:
 
 ```sh
-/home1/<user_name>
+/home1/<username>
 ```
+
+Use the `cd` command to quickly change to your home directory from another directory.
+
+We keep two weeks of snapshots for files in your home directory. You can think of these snapshots as semi-backups. If you accidentally delete some data, then we will be able to recover it if it was captured by a snapshot in the past two weeks. If data was created and deleted within a one-day period, between snapshots, then we will not be able to recover it. You should always keep extra backups of your important data and other files because of this.
 
 ### Project file system
 
-The project file system has a capacity of 8.4 PB of usable space and consists of directories for different research project groups. The default quota for each project directory is 5 TB, which can be increased to 10 TB at no cost. If more than 10 TB is needed, a project's Principal Investigator can request additional storage space in 5 TB increments at a cost of $200/5 TB/year. For more information on storage quotas and pricing, see the [Accounts and Allocations page](/user-information/accounts).
+The project file system has a total capacity of 8.4 PB of usable space and consists of directories for different research project groups, running ZFS/BeeGFS and hosted on dedicated storage machines. The default quota for each project directory is 5 TB of disk space and 30 million files. 
 
-Each project member has access to their group's project directory, where they can store data, scripts, and related files. The project file system should be used for most of your CARC work, and it's also where you can collaborate with your research project group. Users affiliated with multiple CARC projects will have access to multiple project directories so they can easily share their files with the appropriate groups.
+Each PI gets 10 TB of free space across projects. If more than 10 TB is needed, a PI can request additional storage space in 5 TB increments at a cost of $200/5 TB/year. For more information on storage quotas and pricing, see the [Accounts and Allocations page](/user-information/accounts).
 
-A project directory can be located by typing:
+Each project member has access to their group's project directory, where they can store data, scripts, and related files. The project directory should be used for most of your CARC work, and it's also where you can collaborate with your research project group. Users affiliated with multiple CARC projects will have access to multiple project directories so they can easily share their files with the appropriate groups.
 
-```sh
-/project/<PI_name>_xxx
-```
-
-`<PI_name>` is the username of the project owner, and `xxx` is a 2 or 3 digit project ID number. You can also find the project ID and path on the project page in the [User Portal](/user-information/user-guides/high-performance-computing/research-computing-user-portal).
-
-To create your own subdirectory within your project's directory:
+Project directories are located at:
 
 ```sh
-mkdir /project/<PI_name>_xxx/<username>
+/project/<PI_name>_<id>
 ```
 
-where `<username>` is your USC NetID (your email address without "@usc.edu").
+where `<PI_name>` is the username of the project owner, and `<id>` is a 2 or 3 digit project ID number.
+
+You can list your project directories and storage use by entering the command `myquota`. You can also find the project ID and directory path on the project page in the [User Portal](/user-information/user-guides/high-performance-computing/research-computing-user-portal).
+
+To create your own subdirectory within your project's directory, enter a command like:
+
+```sh
+mkdir /project/<PI_name>_<id>/<username>
+```
+
+where `<username>` is your USC NetID (your email address without "@usc.edu"). If needed, you can change the permissions of this folder using a `chmod` or `setfacl` command.
+
+We keep two weeks of snapshots for files in your project directories. You can think of these snapshots as semi-backups. If you accidentally delete some data, then we will be able to recover it if it was captured by a snapshot in the past two weeks. If data was created and deleted within a one-day period, between snapshots, then we will not be able to recover it. You should always keep extra backups of your important data and other files because of this.
 
 ### Scratch file systems
 
-The /scratch and /scratch2 file systems are high-performing, parallel file systems running ZFS/BeeGFS that are hosted on dedicated storage machines. They are shared resources for use by all CARC researchers. Data stored in /scratch and /scratch2 are retained and not deleted between jobs, but they are *not* backed up. Data should be periodically copied to a permanent project file system to decrease the risk of data loss.
+The /scratch and /scratch2 file systems offer high-performance, parallel I/O, running ZFS/BeeGFS and hosted on dedicated storage machines. /scratch has a total capacity of 806 TB, and /scratch2 has a total capacity of 709 TB. A 10 TB directory in each of /scratch and /scratch2 is automatically created for each CARC user.
 
-Directories are automatically created for each CARC user under /scratch and /scratch2 so that data can be stored there temporarily. These directories are accessible only to you, and each user account is limited to a 10 TB quota for each of /scratch and /scratch2.
+The scratch file systems are intended for temporary and intermediate data. Data stored in /scratch and /scratch2 are retained and not deleted between jobs, but they are *not* backed up. If needed, data stored here should be periodically backed up to decrease the risk of data loss.
 
-Your scratch directory is located at:
-
-```sh
-/scratch/<user_name>
-```
-
-/scratch has a capacity of 806 TB. Use the `cds` command to quickly change to your scratch directory.
-
-Your scratch2 directory is located at:
+Your /scratch directory is located at:
 
 ```sh
-/scratch2/<user_name>
+/scratch/<username>
 ```
 
-/scratch2 has a capacity of 709 TB. Use the `cds2` command to quickly change to your scratch2 directory.
+Use the `cds` command to quickly change to your /scratch directory from another directory.
+
+Your /scratch2 directory is located at:
+
+```sh
+/scratch2/<username>
+```
+
+Use the `cds2` command to quickly change to your /scratch2 directory from another directory.
+
+### Limits on disk space and number of files
+
+The Discovery cluster is a shared resource. As a result, there are quotas on usage to help ensure fair access to all USC researchers. There are quotas on both the number of files stored and the amount of disk space used.
+
+To check your quota, use the `myquota` command. Under `size`, compare the results of `used` and `hard`. If the value of `used` is close to the value of `hard`, you will need to delete files or request an increase in disk space from the [User Portal](/user-information/user-guides/high-performance-computing/research-computing-user-portal).
+
+> Note: The `chunk files` section indicates the way your files and directories are divided up by the parallel file system, not the absolute number of files.
+
+```sh
+ttrojan@discovery:~$ myquota
+  
+--------------------------
+/home1/ttrojan
+      user/group     ||           size          ||    chunk files    
+     name     |  id  ||    used    |    hard    ||  used   |  hard   
+--------------|------||------------|------------||---------|---------
+       ttrojan|555555||  127.23 MiB|  100.00 GiB||     4530|  2000000
+         
+--------------------------
+/scratch/ttrojan
+      user/group     ||           size          ||    chunk files    
+     name     |  id  ||    used    |    hard    ||  used   |  hard   
+--------------|------||------------|------------||---------|---------
+       ttrojan|555555||  446.78 MiB|   10.00 TiB||     5797|unlimited
+         
+--------------------------
+/scratch2/ttrojan
+      user/group     ||           size          ||    chunk files    
+     name     |  id  ||    used    |    hard    ||  used   |  hard   
+--------------|------||------------|------------||---------|---------
+       ttrojan|555555||  200.34 MiB|   10.00 TiB||     4002|unlimited
+
+--------------------------
+/project/ttrojan_120
+      user/group     ||           size          ||    chunk files
+     name     |  id  ||    used    |    hard    ||  used   |  hard
+--------------|------||------------|------------||---------|---------
+   ttrojan_120| 32853||   16.92 GiB|    5.00 TiB||     1134| 30000000
+```
+
+If you exceed the limits, you may receive a "disk quota exceeded" or similar error. Please note that we are unable to increase the quota for your home directory.
+
+The `myquota` command is also useful if you forget where your directories are located.
+
+For more information on data management, see the [Data Management user guides](/user-information/user-guides/data-management).

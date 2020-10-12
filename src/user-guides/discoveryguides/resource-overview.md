@@ -1,7 +1,7 @@
 ---
 author: Cesar Sul
 id: 2
-date: 2020-09-14T12:00:00.387Z
+date: 2020-10-12T12:00:00.387Z
 title: Discovery Resource Overview
 path: discovery-resources
 parentPath: user-information/user-guides/high-performance-computing/discovery
@@ -42,9 +42,9 @@ Discovery is a shared resource, so we put limits on the size and duration of job
 
 |Queue (or partition)| Default run time| Maximum run time|  Maximum concurrent cores|   Maximum number of jobs or job steps (running or pending)|
 |---|---|---|---|---|
-|main   | 1 hour    |  48 hours  | 800| 5,000|
-|oneweek| 1 hour    | 168 hours  | 800| 50  |
-|debug  | 30 minutes| 30  minutes| 4  | 5   |
+|main   | 1 hour    |  48 hours  | 1,200 | 5,000 |
+|oneweek| 1 hour    | 168 hours  | 1,200 | 50   |
+|debug  | 30 minutes| 30  minutes| 24   | 5    |
 
 Jobs also depend on your project account allocations, and each job will subtract from your project's allocated System Units (SUs) depending on the types of resources you request:
 
@@ -53,7 +53,7 @@ Jobs also depend on your project account allocations, and each job will subtract
 | 1 CPU/core  | 1    |
 | 1 GB memory | 0.25 |
 
-For GPUs, the SU charge varies depending on the GPU model. The table below shows the SU charge for different GPU models for one hour.
+For GPUs, the SU charge varies depending on the GPU model. The table below shows the SU charge for different GPU models for one hour:
 
 | GPU Model | System Unit (SU) Charge |
 |-----------|-------------------------|

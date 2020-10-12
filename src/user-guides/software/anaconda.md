@@ -1,7 +1,7 @@
 ---
 author: Derek Strong
-id: 2
-date: 2020-09-14T12:00:00.387Z
+id: 3
+date: 2020-10-12T12:00:00.387Z
 title: Using Anaconda on Discovery
 alternativeTitle: Anaconda
 path: anaconda
@@ -9,10 +9,10 @@ parentPath: user-information/user-guides/software-and-programming
 cat: software
 parentPage: User Guides
 backToTopBtnFlag: true
-excerpt: A user guide for Anaconda, a package and environment manager for Python and R.
+excerpt: A user guide for Anaconda, a package and environment manager.
 ---
 
-[Anaconda](https://www.anaconda.com/) is a package and environment manager for a large number of open-source data science packages for Python and R. 
+[Anaconda](https://www.anaconda.com/) is a package and environment manager primarily used for open-source data science packages for Python and R. Other programming languages like C/C++, FORTRAN, Java, Scala, Ruby, and Lua are also supported.
 
 ### Using Anaconda on Discovery
 
@@ -24,7 +24,7 @@ To use Anaconda on Discovery, first load the corresponding module:
 module load anaconda3
 ```
 
-The Anaconda module depends on the `gcc/8.3.0` module, which is loaded by default when logging in to Discovery. This module needs to be loaded first because Anaconda was installed with the GCC 8.3.0 compiler.
+The Anaconda module depends on the `gcc/8.3.0` module, which is loaded by default when logging in to Discovery. This module needs to be loaded first because Anaconda was installed with the GCC 8.3.0 compiler, though other compilers can be used within Anaconda environments.
 
 In Slurm job scripts, the `gcc` module should be loaded explicitly before loading Anaconda:
 
@@ -33,45 +33,45 @@ module load gcc/8.3.0
 module load anaconda3
 ```
 
-[Conda](https://docs.conda.io/en/latest/) is a package manager that installs, runs, and updates packages and their dependencies, and it is included in all versions of Anaconda. Many Conda packages are pre-installed with Anaconda in the base Conda environment, including the popular data science packages for Python like pandas, NumPy, SciPy, matplotlib, and scikit-learn.
+Included in all versions of Anaconda, [Conda](https://docs.conda.io/en/latest/) is the package and environment manager that installs, runs, and updates packages and their dependencies. Many Conda packages are pre-installed with Anaconda in the base Conda environment, including the popular data science packages for Python like pandas, NumPy, SciPy, matplotlib, and scikit-learn.
 
-To see the full list of available Conda packages, enter:
+To see the full list of available Conda packages in the base environment, enter:
 
 ```sh
 conda list
 ```
 
-To use these packages, first initialize Anaconda:
+To use these packages or create your own Conda environment, first initialize your shell to use Conda:
 
 ```sh
 conda init bash
 ```
 
-This modifies your `~/.bashrc` file and activates the base environment, which will be reflected in your shell prompt:
+This modifies your `~/.bashrc` file. Then enter `source ~/.bashrc` and this will activate the base environment, which will be reflected in your shell prompt:
 
 ```sh
 (base) user@discovery:~$
 ```
 
-This will now be activated every time you log in to Discovery.
-
-### Installing Anaconda packages
-
-You can install other Anaconda packages that you may need in a new Conda environment in your home or project directory. Conda environments are isolated project environments designed to manage distinct package requirements and dependencies for different analysis projects.
-
-First initialize Anaconda if needed:
+The base environment will now be activated every time you log in to Discovery. To disable this, you can move the Conda initialization lines from your `~/.bashrc` file to a separate file and then source that file when needed to enable activating environments. For example, create a `~/.condainit` file with these lines and then enter `source ~/.condainit`. Alternatively, to change the Conda configuration, enter:
 
 ```sh
-conda init bash
+conda config --set auto_activate_base false
 ```
 
-This will activate the base environment. Then create a new Conda environment in your home directory:
+which will create a `~/.condarc` file to override the default behavior of automatically activating the base environment when logging in. Read more about Conda configuration [here](https://docs.conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html).
+
+### Installing Conda packages
+
+You can install other Conda packages that you may need in a new Conda environment in your home or project directory. Conda environments are isolated project environments designed to manage distinct package requirements and dependencies for different projects.
+
+To create a new Conda environment in your home directory, enter:
 
 ```sh
 conda create --name <env_name>
 ```
 
-Then activate the environment:
+where `<env_name>` is the name of your environment. Then activate the environment:
 
 ```sh
 conda activate <env_name>
@@ -89,16 +89,16 @@ Next use the `conda install <pkg>` command. For example, to install the `csvkit`
 conda install csvkit
 ```
 
-You can also create a new environment in your project directory instead:
+You can also create a new environment in your project directory instead using the `--prefix` option:
 
 ```sh
-conda create --prefix /project/<path>
+conda create --prefix /project/<project_id>/<env_name>
 ```
 
-Then activate the environment:
+where `<project_id>` is your project's account ID. Then activate the environment:
 
 ```sh
-conda activate /project/<path>
+conda activate /project/<project_id>/<env_name>
 ```
 
 To view a list of all your Conda environments, enter:
@@ -120,7 +120,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
 
-Using Python on the login node should be reserved for non-intensive work.
+> Note: Using Python on the login node should be reserved for non-intensive work.
 
 Alternatively, using Python interactively on a **compute node** is useful for more intensive work like exploring data, testing models, and debugging.
 
@@ -144,7 +144,7 @@ Each argument to the `salloc` command is described below:
 |`--ntasks=1` |  Ensures all resources stay on a single compute node|
 |`--cpus-per-task=8` | Reserves 8 CPUs for your exclusive use|
 |`--mem=16GB` |  Reserves 16 GB of memory for your exclusive use|
-|`--account=<account_id>` | Charge compute time to <account_id>. If not specified, you may use up the wrong PI's compute hours|
+|`--account=<account_id>` | Charges compute time to <account_id>. If not specified, you may use up the wrong PI's compute hours|
 
 Be sure to change the resource requests as needed, such as the number of cores and memory required. A more comprehensive list of `salloc`/`sbatch` options can be found [here](https://slurm.schedmd.com/sbatch.html).
 
@@ -192,18 +192,20 @@ A Slurm job script is a special type of Bash shell script that the Slurm job sch
 
 ```sh
 #!/bin/bash
-  
+
 #SBATCH --ntasks=1             # 1 process
 #SBATCH --cpus-per-task=8      # 8 cores
 #SBATCH --mem=16GB             # 16 GB of memory
 #SBATCH --time=1:00:00         # 1 hour run time
 #SBATCH --account=<account_id> # Account to charge resources to
-  
+
 module load gcc/8.3.0
 module load anaconda3
-  
+
+eval "$(conda shell.bash hook)"
+
 conda activate env
-  
+
 python /path/to/script.py
 ```
 
@@ -217,9 +219,10 @@ Each line is described below:
 |`--cpus-per-task=8` | Reserves 8 CPUs for your exclusive use|
 |`--mem=16GB` |  Reserves 16 GB of memory for your exclusive use|
 |`--time=1:00:00` | Reserves resources described for 1 hour|
-|`--account=<account_id>` | Charge compute time to <account_id>. If not specified, you may use up the wrong PI's compute hours|
+|`--account=<account_id>` | Charges compute time to <account_id>. If not specified, you may use up the wrong PI's compute hours|
 |`module load gcc/8.3.0` | Load the `gcc` compiler [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
 |`module load anaconda3` | Load the `anaconda3` [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
+|`eval "$(conda shell.bash hook)"` | Initialize the shell to use Conda|
 |`conda activate env` | Activate your Conda environment|
 |`python /path/to/script.py` | Use `python` to run `script.py`|
 
@@ -242,4 +245,5 @@ If you have questions about or need help with Anaconda, please [submit a help ti
 
 [Anaconda](https://www.anaconda.com/)  
 [Anaconda documentation](https://docs.anaconda.com/anaconda/)  
+[Conda documentation](https://conda.io/en/latest/)  
 [Python user guide](/user-information/user-guides/software-and-programming/python)  
