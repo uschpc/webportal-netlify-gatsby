@@ -158,45 +158,6 @@ Your scratch2 directory is located at:
 
 /scratch2 has a capacity of 709 TB. Use the `cds2` command to quickly change to your scratch2 directory.
 
-#### Limits on disk space and number of files
-
-The Discovery cluster is a shared resource. As a result, there are quotas on usage to help ensure fair access to all USC researchers. There are quotas on the number of files stored and the amount of disk space used.
-
-To check your quota, use the `myquota` command. Under `size`, compare the results of `used` and `hard`. If the value of `used` is close to the value of `hard`, you will need to delete files or request an increase in disk space from the [Research Computing User Portal](/user-information/user-guides/high-performance-computing/research-computing-user-portal).
-
->Note: The `chunk files` section indicates the way your files and directories are divided up by the parallel file system, not the absolute number of files.
-
-```
-ttrojan@discovery:~$ myquota
-  
---------------------------
-/home1/ttrojan
-      user/group     ||           size          ||    chunk files    
-     name     |  id  ||    used    |    hard    ||  used   |  hard   
---------------|------||------------|------------||---------|---------
-       ttrojan|555555||  127.23 MiB|  100.00 GiB||     4530|  2000000
-         
---------------------------
-/scratch/ttrojan
-      user/group     ||           size          ||    chunk files    
-     name     |  id  ||    used    |    hard    ||  used   |  hard   
---------------|------||------------|------------||---------|---------
-       ttrojan|555555||  446.78 MiB|   10.00 TiB||     5797|unlimited
-         
---------------------------
-/scratch2/ttrojan
-      user/group     ||           size          ||    chunk files    
-     name     |  id  ||    used    |    hard    ||  used   |  hard   
---------------|------||------------|------------||---------|---------
-       ttrojan|555555||  200.34 MiB|   10.00 TiB||     4002|unlimited
-```
-
-If you exceed the limits, you may receive a "disk quota exceeded" or similar error. Please note that the CARC is unable to increase the quota for your home directory.
-
-The `myquota` command is also useful if you forget where your directories are located.
-
-For more information on data management, see the [Data Management user guides](/user-information/user-guides/data-management).
-
 ### Transferring files
 
 The CARC has two dedicated data transfer nodes at `hpc-transfer1.usc.edu` and `hpc-transfer2.usc.edu` that are configured for fast file transfers. These nodes are also [Globus endpoints](/user-information/user-guides/Data-Management/transferring-files-globus). To access these nodes, use `@hpc-transfer1.usc.edu` or `@hpc-transfer2.usc.edu` instead of the normal login node (`@discovery.usc.edu`) when logging in:

@@ -1,7 +1,7 @@
 ---
 author: Ryan Sim
-id: 1
-date: 2020-06-14T00:00:00.000Z
+id: 2
+date: 2020-10-12T00:00:00.000Z
 title: Using Python on Discovery
 alternativeTitle: Python
 path: python
@@ -9,7 +9,7 @@ parentPath:  user-information/user-guides/software-and-programming
 cat: software
 parentPage: User Guides
 backToTopBtnFlag: true
-excerpt: A user guide for Python, an open-source, general purpose programming language whose strength comes in the tools and libraries that are associated with it.
+excerpt: A user guide for Python, an open-source, general purpose programming language.
 ---
 
 [Python](https://www.python.org/) is an open-source, general purpose programming language whose strength comes in the tools and libraries that are associated with it.
@@ -38,15 +38,71 @@ module spider python
 
 #### Installing a different version of Python
 
-If you want to use a different version of Python that is not currently installed on Discovery, please [submit a help ticket](/user-information/ticket-submission) and we will install it for you. Alternatively, you can compile and install a different version of Python from source inside your home directory.
+If you want to use a different version of Python that is not currently installed on Discovery, please [submit a help ticket](/user-information/ticket-submission) and we will install it for you. Alternatively, you can compile and install a different version of Python from source in your home or project directory.
 
 #### Pre-installed packages
 
-Many popular Python packages have already been installed on Discovery. Use the `pip3 list` command to view them. You can install other Python packages that you need into your home directory (see section below).
+Many popular Python packages have already been installed on Discovery. Use the `pip3 list` command to view them. You can install other Python packages that you need in your home directory (see section below).
 
 #### Jupyter notebooks
 
 Please note that we do not currently support the use of Jupyter notebooks on Discovery. We will add support for Jupyter later in 2020 as part of a new hybrid cloud computing system.
+
+### Installing Python packages
+
+After loading the Python module (in this case, version 3), to install packages in your home directory, enter:
+
+```sh
+pip3 install --user <package_name>
+```
+
+For example, to install the Python package `csvkit`, enter:
+
+```sh
+pip3 install --user csvkit
+```
+
+By default, Python will install local (i.e., user) packages in your home directory (`~/.local/lib/python3.7/site-packages`).
+
+To install Python packages in a library other than the default, you can use the `--target` option with `pip3`. For example, to install a package in a project directory, enter:
+
+```sh
+pip3 install <package_name> --target /project/<project_id>/python/pkgs
+```
+
+where `<project_id>` is your project's account ID. To load packages from this location, ensure you have appended your `PYTHONPATH` environment variable to include this directory:
+
+```sh
+export PYTHONPATH=/project/<project_id>/python/pkgs:${PYTHONPATH}
+```
+
+To automatically set this variable when logging in to Discovery, add this line to your `~/.bash_profile`. Additionally, add this line to your Slurm job scripts that depend on the packages installed in this location.
+
+#### Creating virtual environments
+
+You can also create environments for your packages. Python's virtual environments are isolated project environments designed to manage distinct package requirements and dependencies for different projects.
+
+To create a virtual environment, navigate to the directory where you want it to be installed, such as your home or project directory, and enter:
+
+```sh
+python3 -m venv <env_name>
+```
+
+where `<env_name>` is the name of your environment. This will create a `<env_name>` subdirectory in the current directory. To activate the environment, enter:
+
+```sh
+source <env_name>/bin/activate
+```
+
+This will be reflected in your shell prompt:
+
+```sh
+(<env_name>) user@discovery:~$
+```
+
+Now when you install packages, they will automatically be installed in your `<env_name>` environment and directory (e.g., `./<env_name>/lib/python3.7/site-packages`). Additionally, add a similar line to your Slurm job scripts that use this Python environment, but be sure to include the absolute path.
+
+To deactivate the environment, enter `deactivate`.
 
 ### Running Python interactively
 
@@ -67,7 +123,7 @@ Each argument to the `salloc` command is described below:
 |`--time=1:00:00` | Reserves resources described for 1 hour. Acceptable time formats include "minutes", "minutes:seconds", "hours:minutes:seconds", "days-hours", "days-hours:minutes" and "days-hours:minutes:seconds"|
 |`--cpus-per-task=8` | Reserves 8 CPUs for your exclusive use|
 |`--mem-per-cpu=2GB` |  Reserves 2 GB per CPU of memory for your exclusive use|
-|`--account=<account_id>` | Charge compute time to <account_id>. If not specified, you may use up the wrong PI's compute hours|
+|`--account=<account_id>` | Charges compute time to <account_id>. If not specified, you may use up the wrong PI's compute hours|
 
 A more comprehensive list of `salloc`/`sbatch` options can be found [here](https://slurm.schedmd.com/sbatch.html).
 
@@ -106,7 +162,7 @@ Each line is described below:
 |`--cpus-per-task=4` | Reserves 4 CPUs for your exclusive use|
 |`--mem-per-cpu=10GB` |  Reserves 10 GB per CPU of memory for your exclusive use|
 |`--time=1:00:00` | Reserves resources described for 1 hour|
-|`--account=<account_id>` | Charge compute time to <account_id>. If not specified, you may use up the wrong PI's compute hours|
+|`--account=<account_id>` | Charges compute time to <account_id>. If not specified, you may use up the wrong PI's compute hours|
 |`module load gcc/8.3.0` | Load the `gcc` compiler [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
 |`module load python/3.7.6` | Load the `python` [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
 |`python /path/to/script.py` | Use `python` to run `script.py`|
@@ -158,28 +214,6 @@ plt.show()
 plt.savefig("plot.png",dpi=300)
 print("Plot saved!")
 ```
-
-### Installing Python packages
-
-After loading the Python module, you can install packages to your home directory with the following command:
-
-    pip3 install <package_name> --user
-
-For example, to upgrade the currently-installed Python package `pytest`, run the following command:
-
-    pip3 install pytest --user --upgrade
-
-By default, Python will install local (i.e., user) packages in your home directory, in the subdirectory named `.local`. Python will create this directory if it does not already exist.
-
-> Note: The dot in front of the subdirectory name is part of the name, indicating a hidden directory, and is required, e.g., `~/.local, /home1/ttrojan/.local`.
-
-To install Python packages in a library other than the default (`~/.local/lib/python3.7/site-packages`), you can use the `--target` option with `pip3`. The following command installs a package in your scratch directory:
-
-    pip3 install <package_name> --target /scratch/<username>/python_packages
-
-To load a package, ensure you have appended your `PYTHONPATH` environment variable like so:
-
-    export PYTHONPATH=/scratch/<username>/python_packages:${PYTHONPATH}
 
 ### Additional resources
 
