@@ -1,6 +1,6 @@
 ---
 author: Derek Strong
-id: 5
+id: 6
 date: 2020-08-13T12:00:00.387Z
 title: Using Julia on Discovery
 alternativeTitle: Julia

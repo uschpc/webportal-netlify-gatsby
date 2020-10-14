@@ -117,9 +117,9 @@ See our extensive [Frequently Asked Questions page](/user-information/frequently
 
 #### Discourse user forum
 
-The CARC uses [Discourse](https://www.discourse.org/), a question-and-answer community forum, to facilitate discussion and knowledge sharing among users. The user forum is a great resource for discussing CARC-related topics, asking non-urgent technical questions, and sharing ideas. The CARC team monitors the forum for questions, but users are also encouraged to interact with each other.
+The CARC uses [Discourse](https://www.discourse.org/), a question-and-answer community forum, to facilitate discussion and knowledge sharing among users. The User Forum is a great resource for discussing CARC-related topics, asking non-urgent technical questions, and sharing ideas. The CARC team monitors the forum for questions, but users are also encouraged to interact with each other.
 
->You can access the CARC's Discourse platform [here](https://hpc-discourse.usc.edu/).
+>You can access the CARC's User Forum [here](https://hpc-discourse.usc.edu/).
 
 #### Ticket submission
 

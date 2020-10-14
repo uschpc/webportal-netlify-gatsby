@@ -12,7 +12,7 @@ excerpt: External resources related to research computing.
 
 While the CARC offers [user guides](/user-information/user-guides) specific to its systems, there are many other online resources that are useful for improving your programming skills and deepening your understanding of research computing.
 
-In addition to the following resources, CARC staff also regularly post resources and tips on our [Discourse platform](https://hpc-discourse.usc.edu/).
+In addition to the following resources, CARC staff also regularly post resources and tips on our [User Forum](https://hpc-discourse.usc.edu/).
 
 ### Software Carpentry
 
