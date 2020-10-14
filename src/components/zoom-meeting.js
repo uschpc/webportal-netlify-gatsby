@@ -3,6 +3,7 @@ import axios from 'axios'
 import Markdown from "react-markdown"
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 import Loader from 'react-loader-spinner'
+import moment from 'moment'
 
 
 const ZoomMeeting = ({html}) => {
@@ -43,33 +44,29 @@ const ZoomMeeting = ({html}) => {
             let promiss = null
             let result = await axios.get(`https://hpcaccount.usc.edu/static/zoom/zoom_listmeetings.php`)
             let meetings = result.data.meetings 
-            meetings.forEach(({id}, index) => {
-                promiss = axios.get(`https://hpcaccount.usc.edu/static/zoom/zoom_getmeeting.php?id=${id}`)
-                promissesArray.push(promiss)    
-                // meetings[index].occurrences = res.data.occurrences
+            meetings.forEach(({id, start_time}, index) => {
+                let today = moment().format()
+                let notPastDueEvents = moment(start_time).isAfter(today)
+                if (notPastDueEvents) {
+                    promiss = axios.get(`https://hpcaccount.usc.edu/static/zoom/zoom_getmeeting.php?id=${id}`)
+                    promissesArray.push(promiss)   
+                }
             })
-            let meetingResults = await Promise.all(promissesArray)
-            meetingResults.forEach(meeting => {
-                resultArray.push(meeting.data)
-            })
+            if (promissesArray.length) {
+                let meetingResults = await Promise.all(promissesArray)
+                meetingResults.forEach(meeting => {
+                    resultArray.push(meeting.data)
+                })
+            }
             fetchMeetings(resultArray)
         })()
     }, [])
-
-    // useEffect(() => {
-    //     let process = null
-    //     let promissesArray = []
-    //     meetings.length && meetings.forEach(({id}) => {
-    //         axios.get(`https://hpcaccount.usc.edu/static/zoom/zoom_getmeeting.php?id=${id}`).then( res => console.log('coco', res) )
-    //     })
-    // }, flag)
     return (
         meetingResults ? (
             <>
             <Markdown source={html} escapeHtml={false} />
             <h2 className="meetings-heading">USC Advanced Research Computing - Upcoming Events</h2>
             {meetingResults.map((meeting, index) => {
-                console.log('inside', meetingResults)
                 return (
                     <div className={`meetings ${(meetingResults.length - 1) === index ? 'last': ''}`} key={index}>
                         <h3 className="topic">{meeting.topic}</h3>

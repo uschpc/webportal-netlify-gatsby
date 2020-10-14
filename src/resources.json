@@ -1,0 +1,64 @@
+{
+    "resources":[
+       {
+          "tool":"BEDTools",
+          "version":"1.0",
+          "description":"BEDTools utilities allow one to intersect, merge, count, complement, and shuffle genomic intervals from multiple files in widely-used genomic file formats such as BAM",
+          "links":"https://google.com"
+       },
+       {
+        "tool":"BLAST+",
+        "version":"1.0",
+        "description":"BLAST+ is a suite of command-line tools that offers applications for BLAST search, BLAST database creation/examination, and sequence filtering.",
+        "links":"https://google.com"
+     },
+     {
+        "tool":"BWA",
+        "version":"1.0",
+        "description":"BWA is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome.",
+        "links":"https://google.com"
+     },
+     {
+        "tool":"Bowtie2",
+        "version":"1.0",
+        "description":"Bowtie2 is a memory-efficient tool for aligning short sequences to long reference genom",
+        "links":"https://google.com"
+     },
+     {
+        "tool":"FastQC",
+        "version":"1.0",
+        "description":"FastQC is a Java application that generates a comprehensive quality control report for raw sequencing data.",
+        "links":"https://google.com"
+     },
+     {
+        "tool":"GATK",
+        "version":"1.0",
+        "description":"The Genome Analysis Toolkit provide tools for variant discovery. In addition to SNP and INDEL identification in germline DNA and RNAseq data, GATK tools include somatic short variant calling, as well as tackle copy number and structural variation.",
+        "links":"https://google.com"
+     },
+     {
+        "tool":"Picard",
+        "version":"1.0",
+        "description":"Hellenistic history and culture",
+        "links":"https://google.com"
+     },
+     {
+        "tool":"SAMTools",
+        "version":"1.0",
+        "description":"Spliced Transcripts Alignment to a Reference (STAR) is a RNA-seq aligner based on an algorithm that uses sequential maximum mappable seed search in uncompressed suffix arrays followed by seed clustering and stitching procedure.",
+        "links":"https://google.com"
+     },
+     {
+        "tool":"SPAdes",
+        "version":"1.0",
+        "description":"Picard is a set of command line tools for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF.",
+        "links":"https://google.com"
+     },
+     {
+        "tool":"STAR",
+        "version":"1.0",
+        "description":"Hellenistic history and culture",
+        "links":"https://google.com"
+     }
+    ]
+ }

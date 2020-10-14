@@ -20,6 +20,7 @@ const BodyContent = (props) => {
                             <LatestNews {...props.news } />
                             <SystemStatus openModel={openModel}/>
                         </div>
+                        
                         <div className="bg-image">
                             <div className="content">
                                 <div className="title">

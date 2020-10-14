@@ -51,7 +51,6 @@
   .primary-btn.large {
     font-size: 16px;
     font-weight: 500;
-    padding-top: 25px;
     text-transform: uppercase;
     line-height: 1.5;
     width: 139px;
@@ -59,7 +58,6 @@
   }
   .primary-btn.block-btn {
     width: 100%;
-    visibility: hidden;
   }
   .outline-btn {
     background-color: #ffffff;
@@ -75,7 +73,6 @@
   .outline-btn.large {
     font-size: 16px;
     font-weight: 500;
-    padding-top: 13px;
     text-transform: uppercase;
     line-height: 1.5;
     width: 139px;
@@ -1243,12 +1240,13 @@
   .create-customer-page .create-customer-container .form-container .form-side .create-customer-form .form-section .split-inputs .form-row.system {
     width: 100%;
   }
-  .create-customer-page .create-customer-container .form-container .form-side .create-customer-form .form-section .split-inputs .form-row:last-child {
-    /* padding-left: 30px; */
-  }
   .create-customer-page .create-customer-container .actions-row {
-    padding: 0 0 70px;
-    display: flex;
+    /* padding: 0 0 70px;
+    display: flex; */
+    display: none;
+  }
+  .create-customer-page .create-customer-container .actions-row.show {
+    display: block;
   }
   .create-customer-page .create-customer-container .actions-row .link-holder {
     flex: 1 1 auto;
