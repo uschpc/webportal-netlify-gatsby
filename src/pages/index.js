@@ -75,7 +75,7 @@ export const pageQuery = graphql`
               thumbnail
               featuredImage {
                 childImageSharp {
-                  fluid(fit: COVER, maxHeight: 262) {
+                  fluid(maxHeight: 450) {
                     src
                   }
                 }
