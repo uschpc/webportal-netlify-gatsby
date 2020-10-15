@@ -30,6 +30,8 @@ Use the `cd` command to quickly change to your home directory from another direc
 
 We keep two weeks of snapshots for files in your home directory. You can think of these snapshots as semi-backups. If you accidentally delete some data, then we will be able to recover it if it was captured by a snapshot in the past two weeks. If data was created and deleted within a one-day period, between snapshots, then we will not be able to recover it. You should always keep extra backups of your important data and other files because of this.
 
+If you need to recover a deleted file, please contact the CARC team by [submitting a ticket](/user-information/ticket-submission) and we will determine if a snapshot of the file exists.
+
 ### Project file system
 
 The project file system has a total capacity of 8.4 PB of usable space and consists of directories for different research project groups, running ZFS/BeeGFS and hosted on dedicated storage machines. The default quota for each project directory is 5 TB of disk space and 30 million files. 
@@ -57,6 +59,8 @@ mkdir /project/<PI_name>_<id>/<username>
 where `<username>` is your USC NetID (your email address without "@usc.edu"). If needed, you can change the permissions of this folder using a `chmod` or `setfacl` command.
 
 We keep two weeks of snapshots for files in your project directories. You can think of these snapshots as semi-backups. If you accidentally delete some data, then we will be able to recover it if it was captured by a snapshot in the past two weeks. If data was created and deleted within a one-day period, between snapshots, then we will not be able to recover it. You should always keep extra backups of your important data and other files because of this.
+
+If you need to recover a deleted file, please contact the CARC team by [submitting a ticket](/user-information/ticket-submission) and we will determine if a snapshot of the file exists.
 
 ### Scratch file systems
 

@@ -10,7 +10,7 @@ module.exports = {
         i7: 'My project collaborator is not at USC. Can they apply for an account?',
     },
     'Cluster Resources: General Questions': {
-        i0: 'How do I log into the CARC cluster?',
+        i0: 'How do I log in to the CARC cluster?',
         i1: 'How do I avoid getting logged out of the CARC systems due to a bad Wi-Fi connection?',
         i2: 'What shell am I using? Can I use a different shell?',
     },
@@ -23,11 +23,11 @@ module.exports = {
         i5: 'How do I specify which account to submit a job to?',
         i6: 'How do I know which allocation I should use to submit a job if I am in multiple CARC allocations? How do I specify a certain allocation?',
         i7: 'How do I report a problem with a job submission?',
-        i8: 'How do I create/edit a text file?',
+        i8: 'How do I create or edit a text file?',
         i9: 'Can I use the local storage on a compute node?',
     },
     'Cluster Resources: Data Files and Disk Space': {
-        i0: 'I accidentally deleted a file, is it possible to recover it?',
+        i0: 'I accidentally deleted a file. Is it possible to recover it?',
         i1: 'Which file system should I store my project data in?',
         i2: 'How do I share my project data with another user?',
         i3: 'How do I check if I have enough disk space?',
@@ -35,9 +35,8 @@ module.exports = {
     },
     Software: {
         i0: 'What software is available on CARC systems?',
-        i1: 'How do I run MATLAB on CARC systems?',
-        i2: 'How do I check if a program or library is installed on CARC systems?',
-        i3: 'How do I check if a Python package is installed on CARC systems?',
-        i4: 'What compilers are available on CARC systems?'
+        i1: 'How do I run [software] on CARC systems?',
+        i2: 'Why am I getting a “command not found” error when I try to run a CARC application?',
+        i3: 'What compilers are available on CARC systems?'
     }
 }

@@ -1,7 +1,7 @@
 ---
 author: James Hong
 id: 4
-date: 2020-07-08T00:00:00.000Z
+date: 2020-10-13T00:00:00.000Z
 title: Request New Allocation
 path: request-new-allocation
 route: User Guides
@@ -44,6 +44,8 @@ If required, select the users on your project that you'd like to grant access to
 
 Click the Submit button when done.
 
+> Note: If there is a resource you think you should have access to but it's not in the drop-down list on the Request New Allocation page, please [submit a help ticket](/user-information/ticket-submission). If you would like access to a departmental server or a colleague's cluster, the PI responsible for that resource may need to request the allocation for you.  
+
 #### Allocation Status: New
 Your allocation will now display on your Project Detail page with a status of "New".
 
@@ -61,8 +63,9 @@ If you have not completed a project review in the last 365 days, you will be req
 
 More information about the project review process can be found [here](yearly-project-renewal).
 
-### I want access to a resource that isn't in my list!
-If there is a resource you think you should have access to but it's not in the drop-down list on the Request New Allocation page, please [submit a help ticket](/user-information/ticket-submission). If you would like access to a departmental server or a colleague's cluster, the PI responsible for that resource may need to request the allocation for you.  
+### Increasing an existing storage allocation
+
+If you have an **existing storage allocation** but would like to increase the amount of storage, please [submit a help ticket](/user-information/ticket-submission) under the "Accounts/Access" category. Please include your project ID, desired allocation size, and reason for this increase. The CARC team will consult with you to determine your needs and the total cost.
 
 ### PIs with departmental clusters
 

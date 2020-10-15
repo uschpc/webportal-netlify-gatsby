@@ -88,7 +88,7 @@ export const coldFrontQuery = graphql`
             thumbnail
             featuredImage {
               childImageSharp {
-                fluid(fit: COVER, maxHeight: 212) {
+                fluid(maxHeight: 250, quality: 100, fit: COVER) {
                   src
                 }
               }
