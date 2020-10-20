@@ -70,17 +70,29 @@ export default function Template({ data }) {
                       })}
                     </span>
                   )}
-                  {(data.content.frontmatter.title === "Secure Computing") && (
-                   <span>
-                     <h3>User Guides</h3>
-                     {data.secureComputing.edges.map ((item, i) => {
-                       return (
-                         <Link key={i} className="coldfront-menu-items" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
-                             <li>{item.node.frontmatter.title}</li>
-                         </Link>
-                         )
-                     })}
-                   </span>
+                   {(data.content.frontmatter.title === "Condo Cluster Program") && (
+                    <span>
+                      <h3>User Guides</h3>
+                      {data.condoCluster.edges.map ((item, i) => {
+                        return (
+                          <Link key={i} className="coldfront-menu-items" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
+                              <li>{item.node.frontmatter.title}</li>
+                          </Link>
+                          )
+                      })}
+                    </span>
+                  )}
+                   {(data.content.frontmatter.title === "Secure Computing") && (
+                    <span>
+                      <h3>User Guides</h3>
+                      {data.secureComputing.edges.map ((item, i) => {
+                        return (
+                          <Link key={i} className="coldfront-menu-items" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
+                              <li>{item.node.frontmatter.title}</li>
+                          </Link>
+                          )
+                      })}
+                  </span>
                  )}
               </div>
               <div className="right-column">
@@ -137,6 +149,19 @@ export const coldFrontQuery = graphql`
         }
       }
       cloudComputing: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "cloudComputing"}}}) {
+        edges {
+          node {
+            frontmatter {
+              title
+              path
+              parentPath
+              cat
+            }
+            html
+          }
+        }
+      }
+      condoCluster: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "condoCluster"}}}) {
         edges {
           node {
             frontmatter {
