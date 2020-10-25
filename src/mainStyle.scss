@@ -53,6 +53,10 @@ body {
 
   #___gatsby {
     #gatsby-focus-wrapper{
+      h4.navigation-heading {
+        color: #990000;
+        font-size: 24px;
+      }
       .resources {
         margin: 44px 10%;
         thead {
@@ -765,6 +769,15 @@ body {
               a {
                 margin: 0;
               }
+            }
+            &.list-item-subpages {
+              margin: 0;
+               a {
+                color: black !important;
+                &:hover {
+                  color: #990000 !important;
+                }
+               }
             }
           }
           .content-container {
