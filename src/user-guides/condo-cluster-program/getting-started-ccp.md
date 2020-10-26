@@ -14,27 +14,35 @@ parentPage: User Guides
 
 The information on this page is designed to provide an introductory overview for new Condo Cluster Program (CCP) users. Links to more detailed information and complete user guides can be found at the end of each section of this page.
 
-For a general overview of the CARC, see our main [Getting Started page](/user-information/getting-started).
+For a general overview of the Center for Advanced Research Computing, see our main [Getting Started page](/user-information/getting-started).
 
 ### What is the Condo Cluster Program?
 
+The CARC's Condo Cluster Program (CCP) is a service available to USC researchers that require dedicated computing and/or storage resources for their work. The CCP gives researchers the convenience of having their own dedicated compute nodes, without the responsibility of purchasing and maintaining the nodes themselves. The CCP operates on both an annual subscription-based model, with research groups subscribing to their selected number of compute and storage resources on a yearly basis, as well as an outright purchase basis, with research groups "leasing" compute or storage resources from the CARC for a fixed term (e.g., five years). All hardware is maintained by the CARC throughout the course of the subscription or lease term.
 
+The resources that a researcher leases or subscribes to will be dedicated for use by their condo queue. Researchers also have the option to participate in a shared "Community Queue" of nodes. The Community Queue grants them access to idle nodes in other researchers' condo queues, giving them the flexibility to run larger jobs without having to invest in more dedicated resources.
 
 > For more information on CCP policies, see our main [Condo Cluster Program page](/user-information/ccp).
 
+### What is the difference between leasing resources and subscribing to resources?
+
+Our subscription-based model allows researchers to subscribe to computing and storage resources on a yearly basis. The subscription model is ideal for researchers who anticipate changes to their resource requirements or for researchers who only require CCP resources for a shorter period of time (minimum of one year). The CARC purchases and maintains the resources and all related hardware throughout the course of the subscription term.
+
+Our outright purchase model is the classic pricing model that we've used for condo purchases in previous years. Researchers choose the resources they need and the CARC purchases and maintains them for the lease term (e.g., five years). The leasing researchers effectively own their resources, and at the end of their lease period, the resources are retired. The CARC maintains the resources and all related hardware throughout the course of the lease term.
+
+For pricing and policies, see our [Pricing page](/user-information/ccp/pricing).
+
 ### What's the difference between the CCP's Endeavour cluster and the Discovery cluster?
 
-
+The Discovery cluster is a "public" cluster in the sense that it is open to all CARC users to run their jobs and store their data. The Endeavour cluster is comprised of the condo resources that CCP users lease or subscribe to, but each research group's own resources are for their dedicated use only. 
 
 ### Introduction to CCP systems
 
 #### Endeavour cluster
 
-Endeavour is a high-performance computing cluster, which is a collection of computers and disk arrays that are connected via fast networks. Endeavour allows USC researchers to perform computing tasks, like data analyses and simulations, on a larger scale than is possible with a laptop or lab computer.
+Endeavour is a high-performance computing cluster, which is a collection of computers and disk arrays that are connected via fast networks. High-performance computing allows USC researchers to perform computing tasks, like data analyses and simulations, on a larger scale than is possible with a laptop or lab computer.
 
-The following schematic depicts the CARC cyberinfrastructure and how the parts of the cluster connect with one another:
 
-![Cyberinfrastructure overview](/images/discovery_infra.png)
 
 #### Storage file systems
 
@@ -50,7 +58,7 @@ Each file system serves a different purpose:
 
 > For detailed information on the different storage systems available, see our [Storage File Systems user guide](/user-information/user-guides/data-management/storage-file-systems) and our [System Information page](/user-information/system-information).
 
-### Accessing CARC systems
+### Accessing CCP systems
 
 All USC students, staff, and faculty have access to the CARC's systems for their research projects. In order to access the CARC's systems, you must either be the Principal Investigator (PI) of a research project or an authorized member of a PI's research project.
 

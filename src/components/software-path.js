@@ -11,7 +11,6 @@ const SoftwarePath = () => {
     const [copied, updatecopied] = useState(false)
     const handleSelection = (e) => {
         const value = e.target.value
-        console.log(path)
         updatePath(value)
         updatecopied(false)
     }

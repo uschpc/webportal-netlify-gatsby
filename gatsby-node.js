@@ -42,6 +42,8 @@ exports.createPages = ({ boundActionCreators, graphql, actions }) => {
   const userGuidesMainTemplate = path.resolve('src/templates/user-guides-main-template.js')
   const userGuidesTemplate = path.resolve('src/templates/user-guides-template.js')
   const currentProjects = path.resolve('src/templates/current-projects.js')
+  const condoClusterProgramPagesTemplate = path.resolve('src/templates/condo-cluster-program-pages.js')
+  const condoClusterProgramSubPagesTemplate = path.resolve('src/templates/condo-cluster-program-sub-pages.js')
 
   return graphql(`
     {
@@ -112,6 +114,14 @@ exports.createPages = ({ boundActionCreators, graphql, actions }) => {
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
         }
         break;
+        case 'condoClusterProgram':
+          template = condoClusterProgramPagesTemplate
+          path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+          break
+        case 'condoClusterProgramEnrollmentSubPages':
+          template = condoClusterProgramSubPagesTemplate
+          path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+          break
         case 'sharedTemplate':
           template = hpcSubpagesTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`

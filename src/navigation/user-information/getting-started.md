@@ -107,7 +107,7 @@ If you want to improve your overall understanding of research computing, the CAR
 
 #### Weekly office hours
 
-Every week, the Research Facilitation & Applications team hosts an office hour for CARC users to ask questions about anything related to research computing. No appointments are necessary, and all levels of users and questions are welcomed. Currently, all office hours are taking place via Zoom **every Tuesday from 2:30-5:00 pm**. Office hours are drop-in and do not require registration, but you will need a USC NetID to join the Zoom meeting.
+Every week, the Research Facilitation & Applications team hosts office hours for CARC users to ask questions about anything related to research computing. No appointments are necessary, and all levels of users and questions are welcomed. Currently, all office hours are taking place via Zoom **every Tuesday from 2:30-5:00 pm**. Office hours are drop-in and do not require registration, but you will need a USC NetID to join the Zoom meeting.
 
 >For more information, see our [Office Hours and Consultations page](/education-and-outreach/office-hours).
 
