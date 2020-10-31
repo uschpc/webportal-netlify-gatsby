@@ -17,7 +17,7 @@ export default function Template({ data }) {
     useEffect(() => {
       if (scrollY >= 240) setPositionFlag(true)
       else setPositionFlag(false)
-    }, [scrollY, window.scrollY, window.pageYOffset])
+    }, [scrollY])
     return (
       <Layout {...data.navigation}>
           <SEO title={post.frontmatter.title}/>
