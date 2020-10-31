@@ -15,7 +15,7 @@ export default function Template({ data }) {
     const post = data.content;
     const items = data.content.frontmatter.uniqID === "software" ? data.Software.edges : data.dataManagement.edges
     useEffect(() => {
-      if (scrollY >= 240 && window.scrollY >= 240 && window.pageYOffset >= 240) setPositionFlag(true)
+      if (scrollY >= 240) setPositionFlag(true)
       else setPositionFlag(false)
     }, [scrollY, window.scrollY, window.pageYOffset])
     return (
