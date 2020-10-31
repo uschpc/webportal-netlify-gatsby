@@ -368,6 +368,13 @@ body {
         .left-column {
           width: 15%;
           margin-top: 119px;
+          .position-fixed {
+            &.start {
+              
+            }
+            &.reset {
+            }
+          }
 
           h2 {
             color: #990000;
@@ -698,6 +705,13 @@ body {
         .left-column {
           width: 15%;
           margin-top: 119px;
+          .position-fixed {
+            &.start {
+              
+            }
+            &.reset {
+            }
+          }
 
           h2 {
             color: #990000;
@@ -1454,7 +1468,7 @@ p {
   }
 }
 .header-container {
-  background-color: #303030;
+  // background-color: #303030;
   height: 147px;
   position: relative;
 
