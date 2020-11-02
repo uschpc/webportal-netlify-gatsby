@@ -16,8 +16,10 @@ export default function Template({ data }) {
               {/* <MenuRoute {...data} title={data.content.frontmatter.title} /> */}
               <div className="page-body">
                 <div className="left-column">
-                  <Link to="/user-information/user-guides"><h2>User Guides</h2></Link> 
-                  <SideMenu {...data}/>
+                  <div className="position-fixed">
+                    <Link to="/user-information/user-guides"><h2>User Guides</h2></Link> 
+                    <SideMenu {...data}/>
+                  </div>
                 </div>
                 <div className="middle-column">
                   <h1>{data.content.frontmatter.title}</h1>

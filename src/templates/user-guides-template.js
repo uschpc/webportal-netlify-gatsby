@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -6,18 +6,28 @@ import Markdown from "react-markdown"
 import Footer from '../components/footer'
 import SideMenu from '../components/side-menu'
 // import Content from '../components/content'
+import { useScroll } from '../components/custom-hooks/useScroll'
 
 export default function Template({ data }) {
+    const { scrollY } = useScroll();
+    const [scrollPositionFlag, setPositionFlag] = useState(false)
+    console.log('scrollY', scrollY)
     const post = data.content;
     const items = data.content.frontmatter.uniqID === "software" ? data.Software.edges : data.dataManagement.edges
+    useEffect(() => {
+      if (scrollY >= 240) setPositionFlag(true)
+      else setPositionFlag(false)
+    }, [scrollY])
     return (
       <Layout {...data.navigation}>
           <SEO title={post.frontmatter.title}/>
           <div className="user-guides-pages">
           <div className="container">
               <div className="left-column">
-                <Link to="/user-information/user-guides"><h2>User Guides</h2></Link>
-                <SideMenu {...data}/>
+                <div className={`position-fixed ${(scrollPositionFlag) ? 'start' : 'reset'}`}>
+                  <Link to="/user-information/user-guides"><h2>User Guides</h2></Link>
+                  <SideMenu {...data}/>
+                </div>
               </div>
               <div className="middle-column">
                   <h1>{post.frontmatter.title}</h1>
