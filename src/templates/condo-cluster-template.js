@@ -16,10 +16,8 @@ export default function Template({ data }) {
               {/* <MenuRoute {...data} title={data.content.frontmatter.title} /> */}
               <div className="page-body">
                 <div className="left-column">
-                  <div className="position-fixed">
-                    <Link to="/user-information/user-guides"><h2>User Guides</h2></Link>
-                    <SideMenu {...data} parentMenuTitle="Secure Computing"/>
-                  </div>
+                  <Link to="/user-information/user-guides"><h2>User Guides</h2></Link> 
+                  <SideMenu {...data} parentMenuTitle="Condo Cluster Program"/>
                 </div>
                 <div className="middle-column">
                 <h1>{post.frontmatter.title}</h1>
@@ -41,9 +39,9 @@ export default function Template({ data }) {
     )
 }
 
-export const secureComputingQuery = graphql`
+export const condoClusterQuery = graphql`
   query($slug: String!) {
-    md: markdownRemark(frontmatter: {cat: {eq: "secureComputing"}, path: {eq: $slug}}) {
+    md: markdownRemark(frontmatter: {cat: {eq: "condoCluster"}, path: {eq: $slug}}) {
       frontmatter {
         title
         path
@@ -66,7 +64,7 @@ export const secureComputingQuery = graphql`
         }
       }
     }
-    subMenu: allMarkdownRemark(sort: {fields: frontmatter___id},filter: {frontmatter: {cat: {eq: "secureComputing"}}}) {
+    subMenu: allMarkdownRemark(sort: {fields: frontmatter___id},filter: {frontmatter: {cat: {eq: "condoCluster"}}}) {
       edges {
         node {
           frontmatter {
@@ -77,7 +75,7 @@ export const secureComputingQuery = graphql`
         }
       }
     }
-    subMenuLevel2: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "secureComputing"}}}) {
+    subMenuLevel2: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "condoCluster"}}}) {
       edges {
         node {
           frontmatter {
@@ -88,7 +86,7 @@ export const secureComputingQuery = graphql`
         }
       }
     }
-    content: markdownRemark(frontmatter: {cat: {eq: "secureComputing"}, path: {eq: $slug}}) {
+    content: markdownRemark(frontmatter: {cat: {eq: "condoCluster"}, path: {eq: $slug}}) {
       frontmatter {
         title
         path

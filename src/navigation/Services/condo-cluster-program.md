@@ -2,7 +2,7 @@
 title: Condo Cluster Program
 id: 3
 thumbnail: /images/sr-icon-4.png
-path: condo-cluster-program
+path: condo-cluster-programs
 parentPath: services
 cat: navigation
 parentEle: Services

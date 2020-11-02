@@ -1,7 +1,7 @@
 ---
-author: Yaseen A
+author: Andrea 
 id: 1
-date: 2020-04-22T18:19:38.387Z
+date: 2020-10-21T18:19:38.387Z
 title: Ticket Submission
 thumbnail: /images/Envelope.png
 featuredImage: ../../static/images/Envelope.png
@@ -57,3 +57,5 @@ If you're requesting a **storage allocation increase**, please include:
  - The reason for your increase
 
 > The CARC team will consult with you to determine your storage needs and the total cost.
+
+Please submit your ticket using the form below. Alternatively, you can email us at <carc-support@usc.edu>. 

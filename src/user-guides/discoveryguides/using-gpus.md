@@ -43,6 +43,8 @@ Use the chart below to determine which `gpu_type` to specify:
 |p100 	|2| NVIDIA Tesla P100 |
 |v100 	|2| NVIDIA Tesla V100 |
 
+The maximum number of GPUs that a user can use at one time, in one job or across multiple jobs, is 36.
+
 #### System Unit (SU) charges
 
 Each job will subtract from your project's allocated System Units (SUs) depending on the types of resources you request. For GPUs, the SU charge varies depending on the GPU model. The following table shows the SU charge for different GPU models for one hour:

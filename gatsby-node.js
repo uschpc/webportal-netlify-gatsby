@@ -36,11 +36,14 @@ exports.createPages = ({ boundActionCreators, graphql, actions }) => {
   const postTemplate = path.resolve('src/templates/content-post.js')
   const softwareTemplate = path.resolve('src/templates/software-template.js')
   const cloudComputingTemplate = path.resolve('src/templates/cloud-computing-template.js')
+  const condoClusterTemplate = path.resolve('src/templates/condo-cluster-template.js')
   const secureComputingTemplate = path.resolve('src/templates/secure-computing-template.js')
 //  const parallelProgrammingTemplate = path.resolve('src/templates/parallel-programming-template.js')
   const userGuidesMainTemplate = path.resolve('src/templates/user-guides-main-template.js')
   const userGuidesTemplate = path.resolve('src/templates/user-guides-template.js')
   const currentProjects = path.resolve('src/templates/current-projects.js')
+  const condoClusterProgramPagesTemplate = path.resolve('src/templates/condo-cluster-program-pages.js')
+  const condoClusterProgramSubPagesTemplate = path.resolve('src/templates/condo-cluster-program-sub-pages.js')
 
   return graphql(`
     {
@@ -111,6 +114,14 @@ exports.createPages = ({ boundActionCreators, graphql, actions }) => {
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
         }
         break;
+        case 'condoClusterProgram':
+          template = condoClusterProgramPagesTemplate
+          path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+          break
+        case 'condoClusterProgramEnrollmentSubPages':
+          template = condoClusterProgramSubPagesTemplate
+          path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+          break
         case 'sharedTemplate':
           template = hpcSubpagesTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
@@ -121,6 +132,10 @@ exports.createPages = ({ boundActionCreators, graphql, actions }) => {
           break;
         case 'cloudComputing':
           template = cloudComputingTemplate;
+          path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+          break;
+        case 'condoCluster':
+          template = condoClusterTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
         case 'secureComputing':

@@ -53,6 +53,10 @@ body {
 
   #___gatsby {
     #gatsby-focus-wrapper{
+      h4.navigation-heading {
+        color: #990000;
+        font-size: 24px;
+      }
       .resources {
         margin: 44px 10%;
         thead {
@@ -364,6 +368,13 @@ body {
         .left-column {
           width: 15%;
           margin-top: 119px;
+          .position-fixed {
+            &.start {
+              
+            }
+            &.reset {
+            }
+          }
 
           h2 {
             color: #990000;
@@ -694,6 +705,13 @@ body {
         .left-column {
           width: 15%;
           margin-top: 119px;
+          .position-fixed {
+            &.start {
+              
+            }
+            &.reset {
+            }
+          }
 
           h2 {
             color: #990000;
@@ -765,6 +783,15 @@ body {
               a {
                 margin: 0;
               }
+            }
+            &.list-item-subpages {
+              margin: 0;
+               a {
+                color: black !important;
+                &:hover {
+                  color: #990000 !important;
+                }
+               }
             }
           }
           .content-container {
@@ -1441,7 +1468,7 @@ p {
   }
 }
 .header-container {
-  background-color: #303030;
+  // background-color: #303030;
   height: 147px;
   position: relative;
 

@@ -6,9 +6,21 @@ import Footer from '../components/footer'
 import SideMenu from '../components/side-menu'
 import Markdown from "react-markdown"
 import Content from '../components/content'
+import NavigationSideMenu from '../components/navigation-side-menu'
+
+const findSubMenu = (menubar, nav) => {
+    const subNav = nav.edges.filter((ele, i) => {
+      return (ele.node.frontmatter.parentEle === menubar)
+      });
+    return subNav ? subNav : null;
+  }
+
 
 export default function Template({ data }) {
     const post = data.md;
+    let content = data.content
+    let sideMenu = findSubMenu('User Information', data.sideMenu)
+
     return (
       <Layout {...data.navigation} backToTopBtnFlag={data.md.frontmatter.backToTopBtnFlag}>
           <SEO title={post.frontmatter.title}/>
@@ -16,10 +28,8 @@ export default function Template({ data }) {
               {/* <MenuRoute {...data} title={data.content.frontmatter.title} /> */}
               <div className="page-body">
                 <div className="left-column">
-                  <div className="position-fixed">
-                    <Link to="/user-information/user-guides"><h2>User Guides</h2></Link>
-                    <SideMenu {...data} parentMenuTitle="Secure Computing"/>
-                  </div>
+                  <Link to="/user-information/ccp"><h2>User information</h2></Link> 
+                  <NavigationSideMenu sideMenu={sideMenu} subMenu={data.subMenu} subMenuLevel2={data.subMenuLevel2} title={post.frontmatter.title} sideMenuParent="Enrollment Information" parentMenuTitle="Condo Cluster Program" />
                 </div>
                 <div className="middle-column">
                 <h1>{post.frontmatter.title}</h1>
@@ -41,9 +51,9 @@ export default function Template({ data }) {
     )
 }
 
-export const secureComputingQuery = graphql`
+export const condoClusterProgramsSubPagesQuery = graphql`
   query($slug: String!) {
-    md: markdownRemark(frontmatter: {cat: {eq: "secureComputing"}, path: {eq: $slug}}) {
+    md: markdownRemark(frontmatter: {cat: {eq: "condoClusterProgramEnrollmentSubPages"}, path: {eq: $slug}}) {
       frontmatter {
         title
         path
@@ -53,7 +63,20 @@ export const secureComputingQuery = graphql`
       }
       html
     }
-    sideMenu: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "userGuides"}}}) {
+    content123: markdownRemark(frontmatter: {cat: {eq: "navigation"}, path: {eq: $slug}}) {
+        frontmatter {
+          title
+          route
+          routePath
+          parentEle
+          uniqID
+          sharedID
+          backToTopBtnFlag
+          secCat
+        }
+      html
+    }
+    sideMenu: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "navigation"}}}) {
       edges {
         node {
           frontmatter {
@@ -62,11 +85,12 @@ export const secureComputingQuery = graphql`
             parentPath
             externalPath
             redirectToPage
+            parentEle
           }
         }
       }
     }
-    subMenu: allMarkdownRemark(sort: {fields: frontmatter___id},filter: {frontmatter: {cat: {eq: "secureComputing"}}}) {
+    subMenu: allMarkdownRemark(sort: {fields: frontmatter___id},filter: {frontmatter: {cat: {eq: "condoClusterProgram"}}}) {
       edges {
         node {
           frontmatter {
@@ -77,7 +101,7 @@ export const secureComputingQuery = graphql`
         }
       }
     }
-    subMenuLevel2: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "secureComputing"}}}) {
+    subMenuLevel2: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "condoClusterProgramEnrollmentSubPages"}}}) {
       edges {
         node {
           frontmatter {
@@ -88,7 +112,7 @@ export const secureComputingQuery = graphql`
         }
       }
     }
-    content: markdownRemark(frontmatter: {cat: {eq: "secureComputing"}, path: {eq: $slug}}) {
+    content: markdownRemark(frontmatter: {cat: {eq: "condoClusterProgramEnrollmentSubPages"}, path: {eq: $slug}}) {
       frontmatter {
         title
         path

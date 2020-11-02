@@ -28,7 +28,7 @@ The Systems Engineering & Infrastructure team oversees the installation and main
 
 **Bill Jendrzejek, HPC Engineer**
 
-**Chris Taylor, Senior HPC Engineer**
+**Chris Taylor, HPC DevOps Engineer**
 
 ## Research Facilitation & Applications
 

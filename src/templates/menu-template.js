@@ -114,6 +114,30 @@ export default function Template({ data }) {
                     <CustomNews {...data.newsContent }/>
                   )}
                    { content.frontmatter.secCat === 'events' && <ZoomMeeting html={content.html} /> }
+                   {(content.frontmatter.uniqID === 'condoClusterProgram') && data.allContent.edges.map((item, i) => {
+                    return (
+                      <span className="list-item" key={i}>
+                        {item.node.frontmatter.redirectToPage ? (
+                           <Link to={item.node.frontmatter.redirectToPage}>
+                           {item.node.frontmatter.title}
+                           </Link>
+                        ) : (
+                          <Link to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}>
+                           {item.node.frontmatter.title}
+                          </Link>
+                        )}
+                        <p className="description">{item.node.frontmatter.excerpt}</p>
+                        {data.allContent.edges.length - 1 === i && (
+                          <>
+                              <Link to="/user-information/user-guides/condo-cluster-program">
+                                User Guides
+                              </Link>
+                              <p className="description">Some text here</p>
+                          </>
+                          )}
+                      </span>
+                    )
+                  })}
 
 
                 </div>
@@ -172,6 +196,22 @@ export const coldFrontQuery = graphql`
         author
         }
       html
+    }
+    allContent: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "condoClusterProgram"}}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            parentPath
+            parentEle
+            redirectToPage
+            cat
+            excerpt
+          }
+          html
+        }
+      }
     }
     researcherContent: markdownRemark(frontmatter: {cat: {eq: "Researchers"}, path: {eq: $slug}}) {
       frontmatter {

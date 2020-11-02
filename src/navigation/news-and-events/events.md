@@ -18,3 +18,4 @@ Due to the ongoing COVID-19 pandemic, the CARC and most USC departments are curr
 
 At this time, the only scheduled events the CARC is hosting are weekly research computing workshops. Each workshop is approximately two hours long and is hosted over Zoom.
 
+For additional workshops and training related to research, see USC's Office of Research's [calendar of events](https://research.usc.edu/events/).
