@@ -1,7 +1,7 @@
 ---
 author: Cesar Sul
 id: 2
-date: 2020-10-30T12:00:00.387Z
+date: 2020-11-04T12:00:00.387Z
 title: Discovery Resource Overview
 path: discovery-resources
 parentPath: user-information/user-guides/high-performance-computing/discovery
@@ -32,9 +32,10 @@ The chart below describes the various Linux computing partitions available on Di
 |main|60|16|64|xeon-2640v3|2.60 GHz|None|e06-[01-22,24],e10-12,e11-[26-27,29,45,47],e13-[11,26,28-48],e15-[10,12,14,16,18,20,22,24]|
 |main|82|20|64|xeon-2640v4|2.40 GHz|None|d17-[03-44],d18-[01-38],d22-[51-52]|
 |main|81|24|94|xeon-4116|2.10 GHz|None|d05-[03-15,26-42],d06-[15-29],d11-[09-47]|
-|oneweek|16|16|64|xeon-2640v2|2.00 GHz|None|e01-[46,48,52,62,64,76,78],e02-[40-41,43,45,47,49,51,53,55],e05-[42,76,78,80]|
+|oneweek|14|16|64|xeon-2650v2|2.60 GHz|None|e01-[46,48,52,62,64],e02-[40-41,43,45,47,49,51,53,55]|
+|oneweek|2|16|256|xeon-2650v2|2.60 GHz|None|e01-[76,78]|
 
-> Note: This information is current as of October 29, 2020. Use the `sinfo2` command for similar information.
+> Note: This information is current as of November 4, 2020. Use the `sinfo2` command for similar information.
 
 ### Job limits
 
