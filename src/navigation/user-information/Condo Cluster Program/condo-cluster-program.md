@@ -8,8 +8,7 @@ cat: navigation
 parentEle: User Information
 backToTopBtnFlag: true
 uniqID: condoClusterProgram
-#remove the redirect once all User Information pages are done
-redirectToPage: user-information/user-guides/condo-cluster-program
+#redirectToPage: user-information/user-guides/condo-cluster-program
 ---
 
 The Condo Cluster Program (CCP) is a service available to USC researchers that require dedicated resources for their work. The CCP gives researchers the convenience of having their own dedicated compute nodes, without the responsibility of purchasing and maintaining the nodes themselves. 

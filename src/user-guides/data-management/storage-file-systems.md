@@ -20,7 +20,7 @@ You can list the directories available to you and storage use for each by enteri
 
 The /home1 file system consists of personal directories for users, running ZFS/BeeGFS and hosted on dedicated storage machines. Your home directory has a quota of 100 GB of disk space and 2 million files. It is intended for storing personal files, configuration files, and software installations. It is not intended for I/O-intensive jobs.
 
-When you log in to Discovery, you will always start in your home directory, which is located at:
+When you log in, you will always start in your home directory, which is located at:
 
 ```sh
 /home1/<username>
@@ -34,7 +34,7 @@ If you need to recover a deleted file, please contact the CARC team by [submitti
 
 ### Project file system
 
-The project file system has a total capacity of 8.4 PB of usable space and consists of directories for different research project groups, running ZFS/BeeGFS and hosted on dedicated storage machines. The default quota for each project directory is 5 TB of disk space and 30 million files. 
+The project file system has a total capacity of 8.4 PB of usable space and consists of directories for different research project groups, running ZFS/BeeGFS and hosted on dedicated storage machines. The default quota for each project directory is 5 TB of disk space and 30 million files.
 
 Each PI gets 10 TB of free space across projects. If more than 10 TB is needed, a PI can request additional storage space in 5 TB increments at a cost of $200/5 TB/year. For more information on storage quotas and pricing, see the [Accounts and Allocations page](/user-information/accounts).
 
@@ -86,7 +86,7 @@ Use the `cds2` command to quickly change to your /scratch2 directory from anothe
 
 ### Limits on disk space and number of files
 
-The Discovery cluster is a shared resource. As a result, there are quotas on usage to help ensure fair access to all USC researchers. There are quotas on both the number of files stored and the amount of disk space used.
+CARC clusters are shared resources. As a result, there are quotas on usage to help ensure fair access to all USC researchers. There are quotas on both the number of files stored and the amount of disk space used.
 
 To check your quota, use the `myquota` command. Under `size`, compare the results of `used` and `hard`. If the value of `used` is close to the value of `hard`, you will need to delete files or request an increase in disk space from the [User Portal](/user-information/user-guides/high-performance-computing/research-computing-user-portal).
 
@@ -94,21 +94,21 @@ To check your quota, use the `myquota` command. Under `size`, compare the result
 
 ```sh
 ttrojan@discovery:~$ myquota
-  
+
 --------------------------
 /home1/ttrojan
       user/group     ||           size          ||    chunk files    
      name     |  id  ||    used    |    hard    ||  used   |  hard   
 --------------|------||------------|------------||---------|---------
        ttrojan|555555||  127.23 MiB|  100.00 GiB||     4530|  2000000
-         
+
 --------------------------
 /scratch/ttrojan
       user/group     ||           size          ||    chunk files    
      name     |  id  ||    used    |    hard    ||  used   |  hard   
 --------------|------||------------|------------||---------|---------
        ttrojan|555555||  446.78 MiB|   10.00 TiB||     5797|unlimited
-         
+
 --------------------------
 /scratch2/ttrojan
       user/group     ||           size          ||    chunk files    
@@ -124,7 +124,7 @@ ttrojan@discovery:~$ myquota
    ttrojan_120| 32853||   16.92 GiB|    5.00 TiB||     1134| 30000000
 ```
 
-If you exceed the limits, you may receive a "disk quota exceeded" or similar error. Please note that we are unable to increase the quota for your home directory.
+If you exceed the limits, you may receive a "disk quota exceeded" or similar error. CARC researchers can have up to 10 TB of storage per PI free, and any storage in excess of this 10 TB can be purchased. See the [Accounts and Allocations](/user-information/accounts) for information on how to purchase additional storage. Please note that we are unable to increase the quota for your home directory. 
 
 The `myquota` command is also useful if you forget where your directories are located.
 

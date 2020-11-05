@@ -1,6 +1,6 @@
 ---
 author: Derek Strong
-id: 6
+id: 8
 date: 2020-08-31T12:00:00.387Z
 title: Slurm Job Script Templates
 path: slurm-templates
