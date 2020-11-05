@@ -27,7 +27,7 @@ A common mistake for new users is to run heavy workloads directly on the login n
 
 ### What is a job scheduler?
 
-HPC clusters consits of shared resources. To ensure fair access, we use a **job scheduler** to manage all requests for resources. The Slurm (Simple Linux Utility for Resource Management) job scheduler is an open-source job scheduler that allocates compute resources on clusters for queued, user-defined jobs. When a user submits a job with Slurm, resources are divided using a using a fair share algorithm.
+CARC HPC clusters consist of shared resources. To ensure fair access, we use a **job scheduler** to manage all requests for resources. The Slurm (Simple Linux Utility for Resource Management) job scheduler is an open-source job scheduler that allocates compute resources on clusters for queued, user-defined jobs. When a user submits a job with Slurm, resources are divided using a using a fair share algorithm.
 
 
 Jobs also depend on your project account allocations, and each job will subtract from your project's allocated core-hours. You can use the `myaccount` command to see your available and default accounts and usage for each:
@@ -208,7 +208,7 @@ Use the chart below to determine which gpu_type to specify:
 
 ### Queue times
 
-CARC resources are shared so you should expect to wait some amount of time after requesting resources. Generally, if you request a lot of resources or very specific resources, you can expect to wait longer for Slurm to assign resources to you.
+CARC resources are shared, so you should expect to wait some amount of time after requesting resources. Generally, if you request a lot of resources or very specific resources, you can expect to wait longer for Slurm to assign resources to you.
 
 ### Job monitoring
 

@@ -30,13 +30,17 @@ As the amount of data used in research continues to grow with the popularity of 
 
 #### Discovery cluster
 
-Discovery is a high-performance computing cluster, which is a collection of computers and disk arrays that are connected via fast networks. Discovery allows USC researchers to perform computing tasks, like data analyses and simulations, on a larger scale than is possible with a laptop or lab computer.
+Discovery is a high-performance computing cluster, which is a collection of computers and disk arrays that are connected via fast networks. Discovery allows USC researchers to perform computing tasks, like data analyses and simulations, on a larger scale than is possible with a laptop or lab computer. The Discovery cluster is the CARC's public cluster; any CARC user can use Discovery.
 
 The following schematic depicts the CARC cyberinfrastructure and how the parts of the cluster connect with one another:
 
 ![Cyberinfrastructure overview](/images/discovery_infra.png)
 
 > For detailed information on the Discovery cluster, see our [Getting Started with Discovery user guide](/user-information/user-guides/high-performance-computing/discovery/getting-started) and our [System Information page](/user-information/system-information).
+
+#### Endeavour condo cluster
+
+Endeavour is a high-performance computing cluster like Discovery, but Endeavour is comprised of  resources that Condo Cluster Program (CCP) users lease or subscribe to, with each research group's resources dedicated for their use only. For more information on the CCP, see the [Condo Cluster Program pages](/user-information/ccp).
 
 #### Storage file systems
 
@@ -77,13 +81,16 @@ When using CARC systems, you will notice several differences from your desktop o
 The CARC has prepared user guides specific to its systems in the following categories:
 
 [High-Performance Computing](/user-information/user-guides/high-performance-computing)  
-How to log in to Discovery, run jobs, and manage your projects and allocations.
+How to log in to Discovery and Endeavour and run jobs.
 
 [Data Management](/user-information/user-guides/data-management)  
 An overview of the different storage directories available to you, and instructions on transferring files between your personal computer and Discovery.
 
 [Software and Programming](/user-information/user-guides/software-and-programming)  
 Information on the software available on Discovery, as well as instructions for installing your own software.
+
+[Research Computing User Portal](/user-information/user-guides/research-computing-user-portal)  
+How to create and manage your projects and resource allocations.
 
 >Our main user guides page can be accessed [here](/user-information/user-guides).
 

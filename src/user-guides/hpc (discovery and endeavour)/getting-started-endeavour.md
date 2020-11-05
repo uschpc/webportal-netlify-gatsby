@@ -3,7 +3,7 @@ author: Andrea Renney
 id: 2
 date: 2020-10-21T00:00:00.000Z
 title: Getting Started with Endeavour (Condo Cluster Program)
-excerpt: An introductory overview for CARC users in the Condo Cluster Program (CCP).
+excerpt: A getting started guide for Endeavour, the CARC's condo cluster.
 path: getting-started-endeavour
 parentPath: user-information/user-guides/high-performance-computing/discovery
 cat: discoveryGuides
@@ -22,7 +22,7 @@ The CARC's Condo Cluster Program (CCP) is a service available to USC researchers
 
 The resources that a researcher leases or subscribes to will be dedicated for use by their condo queue. Researchers also have the option to participate in a shared "Community Queue" of nodes. The Community Queue grants them access to idle nodes in other researchers' condo queues, giving them the flexibility to run larger jobs without having to invest in more dedicated resources.
 
-> For more information on CCP policies, see our main [Condo Cluster Program page](/user-information/ccp).
+> For more information on CCP policies, see our main [Condo Cluster Program pages](/user-information/ccp).
 
 ### What is the difference between leasing resources and subscribing to resources?
 
@@ -56,7 +56,7 @@ Each file system serves a different purpose:
 
 - **/scratch** and **/scratch2** are two parallel file systems that are shared among all CARC users. These file systems can be used for storing data temporarily and running I/O intensive jobs. Each CARC user receives a 10 TB quota for each of /scratch and /scratch2.
 
-> For detailed information on the different storage systems available, see our [Storage File Systems user guide](/user-information/user-guides/data-management/storage-file-systems) and our [System Information page](/user-information/system-information).
+For detailed information on the different storage systems available, see our [Storage File Systems user guide](/user-information/user-guides/data-management/storage-file-systems) and our [System Information page](/user-information/system-information).
 
 ### Accessing your CCP resources
 
@@ -116,17 +116,18 @@ When using CCP resources, you will notice several differences from your desktop 
 - The systems use the **CentOS Linux** operating system (not macOS or Windows)
 - You submit your programs to a **remote batch processing system**, or job scheduler, to run them
 
-The CCP's Endeavour cluster is very similar to the main Discovery cluster. As such, the majority of the [user guides related to Discovery](/user-information/user-guides/high-performance-computing/discovery) are also applicable to Endeavour. 
+The CCP's Endeavour cluster is very similar to the main Discovery cluster. As such, the majority of our user guides are applicable to both Discovery and Endeavour. 
 
 The following are user guides that can be applied to Endeavour:
+
+[High-Performance Computing](/user-information/user-guides/high-performance-computing)  
+How to log in to Discovery and Endeavour and run jobs.
 
 [Data Management](/user-information/user-guides/data-management)  
 An overview of the different storage directories available to you, and instructions on transferring files between your personal computer and CARC systems.
 
 [Software and Programming](/user-information/user-guides/software-and-programming)  
-Information on the software available on Discovery, as well as instructions for installing your own software.
-
-Our [Discovery user guides](/user-information/user-guides/high-performance-computing/discovery) are specific to logging in to and running jobs on the Discovery cluster, but they may still be helpful for CCP users. 
+Information on the software available on Endeavour, as well as instructions for installing your own software.
 
 The [Research Computing User Portal user guides](/user-information/user-guides/high-performance-computing/research-computing-user-portal) provide instructions for using the CARC user portal to create and manage research projects, add or remove project users, and submit your annual project renewal. 
 

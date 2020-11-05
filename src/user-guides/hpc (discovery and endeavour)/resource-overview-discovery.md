@@ -12,7 +12,7 @@ backToTopBtnFlag: true
 excerpt: Information on Discovery's compute nodes and job limits.
 ---
 
-The Center for Advanced Research Computing's high-performance computing cluster, Discovery, has over 400 compute nodes available for users to run their jobs on.
+The Center for Advanced Research Computing's general use high-performance computing cluster, Discovery, has over 400 compute nodes available for users to run their jobs on.
 
 For general CARC system specifications, see our [System Information page](/user-information/system-information).
 

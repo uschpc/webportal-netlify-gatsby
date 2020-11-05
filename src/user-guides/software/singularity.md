@@ -2,7 +2,7 @@
 author: Derek Strong
 id: 6
 date: 2020-09-09T12:00:00.387Z
-title: Using Singularity on Discovery
+title: Using Singularity
 alternativeTitle: Singularity
 path: singularity
 parentPath: user-information/user-guides/software-and-programming
@@ -12,21 +12,21 @@ backToTopBtnFlag: true
 excerpt: A user guide for Singularity, an open-source application for creating and running software containers.
 ---
 
-[Singularity](https://sylabs.io/singularity/) is an open-source application for creating and running software containers, designed primarily for scientific computing and Linux-based computing clusters like Discovery. Singularity containers enable self-contained, stable, portable, and reproducible computing environments and software stacks that can be shared and used across different machines and computing clusters, such as for research collaborations spanning multiple institutions.
+[Singularity](https://sylabs.io/singularity/) is an open-source application for creating and running software containers, designed primarily for scientific computing and Linux-based computing clusters like Discovery and Endeavour. Singularity containers enable self-contained, stable, portable, and reproducible computing environments and software stacks that can be shared and used across different machines and computing clusters, such as for research collaborations spanning multiple institutions.
 
-### Using Singularity on Discovery
+### Using Singularity
 
-Begin by logging in to Discovery. You can find instructions for this in the [Getting Started guide](/user-information/user-guides/high-performance-computing/discovery/getting-started).
+Begin by logging in. You can find instructions for this in the [Getting Started with Discovery](/user-information/user-guides/high-performance-computing/discovery/getting-started-discovery) or [Getting Started with Endeavour](/user-information/user-guides/high-performance-computing/discovery/getting-started-endeavour) user guides.
 
-Singularity is installed on Discovery outside of the module system, so there is no need to load a software module in order to use it. Instead, you can directly use the `singularity` commands. Please note that the commands that require `sudo` will not be available to you on Discovery. The current version installed is 3.6.1.
+Singularity is installed on Discovery and Endeavour outside of the module system, so there is no need to load a software module in order to use it. Instead, you can directly use the `singularity` commands. Please note that the commands that require `sudo` will not be available to you on Discovery or Endeavour. The current version installed is 3.6.1.
 
 To view manual pages, enter `singularity help`.
 
 ### Getting Singularity container images
 
-A **container image** is a single executable file that defines the software environment for a container and runs the container. A single container image can be used to run multiple instances of the same container concurrently for different jobs. The containers are isolated, as the name implies, so you can install any software within a container as if you are the root user. Additionally, there is a separate root file system within a container to store installed software, but containers can still access and interact with file systems on the host system, Discovery.
+A **container image** is a single executable file that defines the software environment for a container and runs the container. A single container image can be used to run multiple instances of the same container concurrently for different jobs. The containers are isolated, as the name implies, so you can install any software within a container as if you are the root user. Additionally, there is a separate root file system within a container to store installed software, but containers can still access and interact with file systems on the host system, Discovery/Endeavour.
 
-To get a container for use on Discovery, you can either pull (i.e., download) pre-built container images or externally build a custom container image from a definition file and then transfer it to Discovery.
+To get a container for use on Discovery or Endeavour, you can either pull (i.e., download) pre-built container images or externally build a custom container image from a definition file and then transfer it to the cluster.
 
 > Note: When getting containers, by default, Singularity will create a `~/.singularity/cache` directory inside your home directory to store cache files, which can quickly use a lot of storage space. You can change this location to a directory with more storage space (e.g., your /scratch directory) by setting the environment variable SINGULARITY_CACHEDIR. For example:
 > 
@@ -34,11 +34,11 @@ To get a container for use on Discovery, you can either pull (i.e., download) pr
 > export SINGULARITY_CACHEDIR=/scratch/<user>/.singularity
 > ```
 > 
-> This line can also be added to your `~/.bash_profile` found in your home directory, so that this variable is automatically set every time you log in to Discovery.
+> This line can also be added to your `~/.bash_profile` found in your home directory, so that this variable is automatically set every time you log in to the cluster.
 
 #### Pulling pre-built images
 
-If you have already identified a pre-built container image that contains all the software you need, such as from the cloud-based sources [Singularity Library](https://cloud.sylabs.io/library) (`library://`), [Singularity Hub](https://singularity-hub.org/) (`shub://`), or [Docker Hub](https://hub.docker.com/) (`docker://`), then you can simply pull this image into Discovery.
+If you have already identified a pre-built container image that contains all the software you need, such as from the cloud-based sources [Singularity Library](https://cloud.sylabs.io/library) (`library://`), [Singularity Hub](https://singularity-hub.org/) (`shub://`), or [Docker Hub](https://hub.docker.com/) (`docker://`), then you can simply pull this image into the cluster.
 
 For example, to get a basic Ubuntu image from the Singularity Library, enter:
 
@@ -66,11 +66,11 @@ Once the image is downloaded, it is then ready to be used.
 
 #### Building images from a definition file
 
-You can also build a custom container image by using a definition file that instructs the build process. For security reasons we do not allow users to build directly on Discovery; you must build externally and then transfer the image to Discovery.
+You can also build a custom container image by using a definition file that instructs the build process. For security reasons we do not allow users to build directly on our systems; you must build externally and then transfer the image to the cluster.
 
-The easiest way to build containers for use on Discovery is to use the cloud-based Singularity [remote builder](https://cloud.sylabs.io/), which is integrated with the Singularity Library. To use this service, you can sign in with your GitHub, GitLab, Google, or Microsoft account. Currently, you are limited to 11 GB of free storage for your container builds. Once signed in, you simply submit a definition file and it builds the image. With a token, you can then pull the container image directly into Discovery.
+The easiest way to build containers for use on our systems is to use the cloud-based Singularity [remote builder](https://cloud.sylabs.io/), which is integrated with the Singularity Library. To use this service, you can sign in with your GitHub, GitLab, Google, or Microsoft account. Currently, you are limited to 11 GB of free storage for your container builds. Once signed in, you simply submit a definition file and it builds the image. With a token, you can then pull the container image directly into the cluster.
 
-Alternatively, on your local machine you can install a virtual machine application like [Multipass](https://multipass.run/) and then create a Linux-based virtual machine and install Singularity inside of it in order to then build a container image from a definition file. Once built, you can transfer the container image to Discovery.
+Alternatively, on your local machine you can install a virtual machine application like [Multipass](https://multipass.run/) and then create a Linux-based virtual machine and install Singularity inside of it in order to then build a container image from a definition file. Once built, you can transfer the container image to the cluster.
 
 #### Example
 
@@ -116,9 +116,9 @@ This can be saved in a file with the name `julia.def`, for example. For more det
 
 Next, sign in to the Singularity remote builder, navigate to the Remote Builder page, either upload your definition file or copy and paste the contents, and then select "Build". It will then display a build log.
 
-Assuming the build is successful, you can then pull the container image into Discovery using the provided library path. You will first need to create and enter an access token in order to access your remote builder account from Discovery. Navigate to the Access Tokens page and select "Create a New Access Token". Copy the created token and then on Discovery run the `singularity remote login` command to enter the token.
+Assuming the build is successful, you can then pull the container image into the cluster using the provided library path. You will first need to create and enter an access token in order to access your remote builder account from the cluster. Navigate to the Access Tokens page and select "Create a New Access Token". Copy the created token and then on the cluster run the `singularity remote login` command to enter the token.
 
-> Note: The access token expires every 30 days, so this step will need to be repeated every 30 days to continue using the remote builder with Discovery.
+> Note: The access token expires every 30 days, so this step will need to be repeated every 30 days to continue using the remote builder with the cluster.
 
 You can pull the image from your personal library with a generic command like the following:
 
@@ -126,13 +126,13 @@ You can pull the image from your personal library with a generic command like th
 singularity pull <container> library://<user>/<path>
 ```
 
-where `<container>` is the name for the container image, `<user>` is your username for your Singularity remote builder account (not your Discovery account), and `<path>` is the provided path to the image. For example:
+where `<container>` is the name for the container image, `<user>` is your username for your Singularity remote builder account (not your Discovery/Endeavour account), and `<path>` is the provided path to the image. For example:
 
 ```sh
 singularity pull julia.sif library://ttrojan/remote-builds/rb-5f591c829a193de1c6102f6c
 ```
 
-Alternatively, you can use the `singularity build --remote` command to submit a definition file to the remote builder that will then build the image in the cloud and automatically download it to Discovery. This also requires an access token. For example:
+Alternatively, you can use the `singularity build --remote` command to submit a definition file to the remote builder that will then build the image in the cloud and automatically download it to the cluster. This also requires an access token. For example:
 
 ```sh
 singularity build --remote julia.sif julia.def
@@ -170,7 +170,7 @@ singularity run <container>
 
 This will execute the defined sequence of commands.
 
-Singularity will automatically mount the `/tmp` and `$PWD` directories from the host system, Discovery, in the container when it is run. To mount other directories, such as your `/scratch` or `/scratch2` directories, use the `--bind` option. For example:
+Singularity will automatically mount the `/tmp` and `$PWD` directories from the host system, Discovery/Endeavour, in the container when it is run. To mount other directories, such as your `/scratch` or `/scratch2` directories, use the `--bind` option. For example:
 
 ```sh
 singularity exec --bind /scratch/ttrojan julia.sif julia /scratch/ttrojan/script.jl

@@ -129,7 +129,7 @@ export default function Template({ data }) {
                         <p className="description">{item.node.frontmatter.excerpt}</p>
                         {data.allContent.edges.length - 1 === i && (
                           <>
-                              <Link to="/user-information/user-guides/condo-cluster-program">
+                              <Link to="/user-information/user-guides/high-performance-computing">
                                 User Guides
                               </Link>
                               <p className="description">Some text here</p>

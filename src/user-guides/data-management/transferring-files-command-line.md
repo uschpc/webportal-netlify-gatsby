@@ -16,7 +16,7 @@ Command line-based data transfer utilities (clients) are available natively on m
 
 > Note: Due to security risks, please be mindful of the type of information being transferred. Where possible, omit all information that may be considered confidential. For examples of confidential information that requires additional consideration, visit [http://itservices.usc.edu/security/sensitive-info](http://itservices.usc.edu/security/sensitive-info).
 
-The following examples show the login processes for the USC NetID `ttrojan`. You should log in with your own USC NetID, which is the first part of your USC email address (e.g., ttrojan@usc.edu's NetID is ttrojan). You can use either the main Discovery login nodes or, for better performance, the hpc-transfer1 or hpc-transfer2 nodes, which are dedicated, high-speed data transfer nodes.
+The following examples show the login processes for the USC NetID `ttrojan`. You should log in with your own USC NetID, which is the first part of your USC email address (e.g., ttrojan@usc.edu's NetID is ttrojan). You can use either the main Discovery or Endeavour login nodes (discovery.usc.edu or endeavour.usc.edu) or, for better performance, the hpc-transfer1 or hpc-transfer2 nodes, which are dedicated, high-speed data transfer nodes.
 
 ### SFTP: Secure File Transfer Protocol
 
