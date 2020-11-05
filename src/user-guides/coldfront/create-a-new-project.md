@@ -14,8 +14,6 @@ backToTopBtnFlag: true
 
 Each PI should have one project. Some PIs may require additional projects depending on their roles at USC. Anyone teaching classes should create a separate project for each course taught, and these projects can be reused each semester. Also, anyone using the cluster for work outside their general research area should create a separate project for that work. This includes student research projects, which can be created as separate projects with a graduate student project (GSP) allocation.
 
-> Note:  6/01/2020: The CARC migrated all projects owned by a valid PI from the old uschpc cluster to the Discovery cluster as a convenience. Projects where the PI is a student were NOT migrated to the user portal.
-
 ### User portal home page
 To create a new project, click on either the Projects link or the Project menu tab to access the [Projects Page](https://hpcaccount.usc.edu/project/).
 
@@ -33,7 +31,7 @@ Fill out the 4 fields:
 * Field of science:
   * This drop-down list was taken from the National Science Foundation. If your field is not listed, please choose "Other".
 * Cluster Type:
-  * **Discovery (Cluster Partition)**: CARC's main compute resource available to all USC faculty/staff and their students/collaborators. Most CARC researchers should be choosing Discovery as their cluster type.
+  * **Discovery (Cluster Partition)**: CARC's main computing resource available to all USC faculty/staff and their students/collaborators. Most CARC researchers should be choosing Discovery as their cluster type.
   * In the future we will have additional cluster options: **Condo** and **AWS Cloud**.
 
 and click the "Save" button.

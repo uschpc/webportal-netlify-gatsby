@@ -30,9 +30,9 @@ Our subscription-based model allows researchers to subscribe to computing and st
 
 Our outright purchase model is the classic pricing model that we've used for condo purchases in previous years. Researchers choose the resources they need and the CARC purchases and maintains them for the lease term (e.g., five years). The leasing researchers effectively own their resources, and at the end of their lease period, the resources are retired. The CARC maintains the resources and all related hardware throughout the course of the lease term.
 
-For pricing and policies, see our [Pricing page](/user-information/ccp/pricing).
+For pricing and policies, see our [Pricing page](/user-information/ccp/program-information/pricing).
 
-### What's the difference between the CCP's Endeavour cluster and the Discovery cluster?
+### What is the difference between the CCP's Endeavour cluster and the Discovery cluster?
 
 The Discovery cluster is a "public" cluster in the sense that it is open to all CARC users to run their jobs and store their data. The Endeavour cluster is comprised of the condo resources that CCP users lease or subscribe to, but each research group's own resources are for their dedicated use only. 
 

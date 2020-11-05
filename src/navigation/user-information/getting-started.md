@@ -36,11 +36,11 @@ The following schematic depicts the CARC cyberinfrastructure and how the parts o
 
 ![Cyberinfrastructure overview](/images/discovery_infra.png)
 
-> For detailed information on the Discovery cluster, see our [Getting Started with Discovery user guide](/user-information/user-guides/high-performance-computing/discovery/getting-started) and our [System Information page](/user-information/system-information).
+> For detailed information on the Discovery cluster, see our [Getting Started with Discovery user guide](/user-information/user-guides/high-performance-computing/discovery/getting-started-discovery) and our [System Information page](/user-information/system-information).
 
 #### Endeavour condo cluster
 
-Endeavour is a high-performance computing cluster like Discovery, but Endeavour is comprised of  resources that Condo Cluster Program (CCP) users lease or subscribe to, with each research group's resources dedicated for their use only. For more information on the CCP, see the [Condo Cluster Program pages](/user-information/ccp).
+Endeavour is a high-performance computing cluster like Discovery, but Endeavour is comprised of  resources that Condo Cluster Program (CCP) users lease or subscribe to, with each research group's resources dedicated for their use only. For more information on the CCP, see the [Condo Cluster Program pages](/user-information/ccp). For detailed information on the Endeavour cluster, see our [Getting Started with Endeavour user guide](/user-information/user-guides/high-performance-computing/discovery/getting-started-endeavour)
 
 #### Storage file systems
 
@@ -84,10 +84,10 @@ The CARC has prepared user guides specific to its systems in the following categ
 How to log in to Discovery and Endeavour and run jobs.
 
 [Data Management](/user-information/user-guides/data-management)  
-An overview of the different storage directories available to you, and instructions on transferring files between your personal computer and Discovery.
+An overview of the different storage directories available to you, and instructions on transferring files between your personal computer and CARC systems.
 
 [Software and Programming](/user-information/user-guides/software-and-programming)  
-Information on the software available on Discovery, as well as instructions for installing your own software.
+Information on the software available on CARC systems, as well as instructions for installing your own software.
 
 [Research Computing User Portal](/user-information/user-guides/research-computing-user-portal)  
 How to create and manage your projects and resource allocations.

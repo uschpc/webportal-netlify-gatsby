@@ -132,7 +132,7 @@ export default function Template({ data }) {
                               <Link to="/user-information/user-guides/high-performance-computing">
                                 User Guides
                               </Link>
-                              <p className="description">Some text here</p>
+                              <p className="description">User guides for the Endeavour condo cluster and the general use Discovery cluster. Information on logging in, file systems, and running jobs. </p>
                           </>
                           )}
                       </span>
