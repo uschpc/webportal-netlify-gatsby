@@ -13,9 +13,7 @@ parentPage: User Guides
 id: 3
 ---
 
-The Center for Advanced Research Computing's User Portal is how users manage their projects and allocations on CARC systems.
-
->Note: If you're a condo node owner, you will still manage your resources and users at https://hpc-web.usc.edu/projects/. Support for condo nodes in the User Portal will be added once the CARC's [new Condo Cluster Program (CCP)](/services/condo-cluster-program) is developed. 
+The Center for Advanced Research Computing's User Portal is how users manage their projects and allocations on CARC systems. Projects and allocations on both the general use Discovery cluster and the Endeavour condo cluster are managed on the User Portal.
 
 The Research Computing User Portal uses ColdFront, an open source resource allocation management tool developed by the [University at Buffalo's Center for Computational Research](http://www.buffalo.edu/ccr.html). ColdFront supports the management of resources and user allocations to those resources.  The tool allows users to request and manage the access they and their students or collaborators have to the resources in the CARC's data center.  
 

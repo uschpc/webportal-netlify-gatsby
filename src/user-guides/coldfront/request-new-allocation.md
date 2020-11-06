@@ -35,9 +35,10 @@ The Resource drop-down list contains the following resource options (only resour
   * **large**: 1,000,000 CPU/service unit hours (annual charges may apply)
   * **class**: 10,000 CPU/service unit hours per semester (free, for faculty teaching classes)
   * **graduate research**: 100,000 CPU/service unit hours (free, for students conducting research work that is separate from a PI's main research project)
-* **Endeavour (Cluster Partition) - Condo Subscription**: Allow PIs to purchase extra compute resources that will be shared among other condominium users until the primary user requires access to the resource. A queue management system gives vested PIs top priority to the hardware he/she has purchased for a defined period whenever the PI needs the resource. We use wall-time limits and/or pre-emption to interrupt other users' jobs as needed to give vested PIs access to their share.  Condo subscription hardware and costs:
-  * Lenovo nx360 with 16 CPU cores and 64GB memory: $400 per year 
-  * Lenovo nx360 with 20 CPU cores and 64GB memory: $500 per year
+* **NEW: Endeavour (Cluster Partition) - Condo Subscription**: Allows research groups to subscribe to their selected number of compute and storage resources on a yearly basis. The resources that a research group subscribes to will be dedicated for use by their condo job queue. All of the hardware is purchased and maintained by the CARC throughout the course of the subscription term. See the CARC's [Condo Cluster Program Information page](/user-information/ccp/program-information) for details.  
+Condo subscription hardware and costs:
+  * Lenovo NX360 with 16 CPU cores and 64 GB memory: $400 per year 
+  * Lenovo NX360 with 20 CPU cores and 64 GB memory: $500 per year
 * **Project Storage (Storage)**: Additional storage you can purchase if you require more than the initial 10 TB that the CARC provides to each PI for free.
 
 Select the resource you'd like access to and provide a justification for access to that resource. Your justification should include information on how you'll be using the resource and how many CPU/service unit hours you anticipate needing to use.
