@@ -5,7 +5,7 @@ date: 2020-06-04T00:00:00.00Z
 title: Pricing
 excerpt: Pricing for the Condo Cluster Program's subscription and direct purchase models.
 routePath: user-information/ccp/program-information
-path: pricing
+#path: pricing
 parentPath: user-information/ccp/program-information
 cat: condoClusterProgramEnrollmentSubPages
 parentPage: User Information

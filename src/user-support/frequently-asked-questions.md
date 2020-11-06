@@ -381,9 +381,7 @@ To see other options, view the manual page by entering `man du`.
 
 ### What is the Condo Cluster Program?
 
-The CARC's Condo Cluster Program (CCP) is a service available to USC researchers that require dedicated computing and/or storage resources for their work. The CCP gives researchers the convenience of having their own dedicated compute nodes, without the responsibility of purchasing and maintaining the nodes themselves. The CCP operates on both an annual subscription-based model, with research groups subscribing to their selected number of compute and storage resources on a yearly basis, as well as an outright purchase basis, with research groups "leasing" compute or storage resources from the CARC for a fixed term (e.g., five years). All hardware is maintained by the CARC throughout the course of the subscription or lease term.
-
-The resources that a researcher leases or subscribes to will be dedicated for use by their condo queue. Researchers also have the option to participate in a shared "Community Queue" of nodes. The Community Queue grants them access to idle nodes in other researchers' condo queues, giving them the flexibility to run larger jobs without having to invest in more dedicated resources.
+The CARC's Condo Cluster Program (CCP) is a service available to USC researchers that require dedicated computing and/or storage resources for their work. The CCP gives researchers the convenience of having their own dedicated compute nodes, without the responsibility of purchasing and maintaining the nodes themselves. The CCP operates on both an annual subscription-based model, with research groups subscribing to their selected number of compute and storage resources on a yearly basis, as well as an outright purchase basis, with research groups purchasing compute or storage resources from the CARC for a fixed term (e.g., five years). All hardware is maintained by the CARC throughout the course of the subscription or lease term.
 
 > For more information on CCP policies, see our main [Condo Cluster Program pages](/user-information/ccp).
 
@@ -393,7 +391,7 @@ Our subscription-based model allows researchers to subscribe to computing and st
 
 Our outright purchase model is the classic pricing model that we've used for condo purchases in previous years. Researchers choose the resources they need and the CARC purchases and maintains them for the lease term (e.g., five years). The leasing researchers effectively own their resources, and at the end of their lease period, the resources are retired. The CARC maintains the resources and all related hardware throughout the course of the lease term.
 
-For pricing and policies, see our [Pricing page](/user-information/ccp/program-information/pricing).
+For pricing and policies, see the [Program Information page](/user-information/ccp/program-information).
 
 ### What is the difference between the Endeavour cluster and the Discovery cluster?
 

@@ -18,9 +18,7 @@ For a general overview of the Center for Advanced Research Computing, see our ma
 
 ### What is the Condo Cluster Program?
 
-The CARC's Condo Cluster Program (CCP) is a service available to USC researchers that require dedicated computing and/or storage resources for their work. The CCP gives researchers the convenience of having their own dedicated compute nodes, without the responsibility of purchasing and maintaining the nodes themselves. The CCP operates on both an annual subscription-based model, with research groups subscribing to their selected number of compute and storage resources on a yearly basis, as well as an outright purchase basis, with research groups "leasing" compute or storage resources from the CARC for a fixed term (e.g., five years). All hardware is maintained by the CARC throughout the course of the subscription or lease term.
-
-The resources that a researcher leases or subscribes to will be dedicated for use by their condo queue. Researchers also have the option to participate in a shared "Community Queue" of nodes. The Community Queue grants them access to idle nodes in other researchers' condo queues, giving them the flexibility to run larger jobs without having to invest in more dedicated resources.
+The CARC's Condo Cluster Program (CCP) is a service available to USC researchers that require dedicated computing and/or storage resources for their work. The CCP gives researchers the convenience of having their own dedicated compute nodes, without the responsibility of purchasing and maintaining the nodes themselves. The CCP operates on both an annual subscription-based model, with research groups subscribing to their selected number of compute and storage resources on a yearly basis, as well as a traditional purchase model, with research groups purchasing compute or storage resources from the CARC for a fixed term (e.g., five years). All hardware is maintained by the CARC throughout the course of the subscription or lease term.
 
 > For more information on CCP policies, see our main [Condo Cluster Program pages](/user-information/ccp).
 
@@ -30,11 +28,15 @@ Our subscription-based model allows researchers to subscribe to computing and st
 
 Our outright purchase model is the classic pricing model that we've used for condo purchases in previous years. Researchers choose the resources they need and the CARC purchases and maintains them for the lease term (e.g., five years). The leasing researchers effectively own their resources, and at the end of their lease period, the resources are retired. The CARC maintains the resources and all related hardware throughout the course of the lease term.
 
-For pricing and policies, see our [Pricing page](/user-information/ccp/program-information/pricing).
+For pricing and policies, see the [Program Information page](/user-information/ccp/program-information).
 
 ### What is the difference between the CCP's Endeavour cluster and the Discovery cluster?
 
 The Discovery cluster is a "public" cluster in the sense that it is open to all CARC users to run their jobs and store their data. The Endeavour cluster is comprised of the condo resources that CCP users lease or subscribe to, but each research group's own resources are for their dedicated use only. 
+
+Endeavour's application stack and module system are identical to those of the Discovery cluster; users won’t see any difference between Endeavour and Discovery when using applications. 
+
+One key difference between Endeavour and Discovery is configuration of the Slurm job scheduler. The Slurm configurations on Discovery are geared for use on a shared cluster system, but on Endeavour, each research group can have customized Slurm configurations on their condo nodes. For more information about custom Slurm configurations on Endeavour, please contact us at <carc-condo@usc.edu>. 
 
 ### Introduction to CCP systems
 
@@ -43,6 +45,8 @@ The Discovery cluster is a "public" cluster in the sense that it is open to all 
 Endeavour is a high-performance computing cluster, which is a collection of computers and disk arrays that are connected via fast networks. High-performance computing allows USC researchers to perform computing tasks, like data analyses and simulations, on a larger scale than is possible with a laptop or lab computer.
 
 The difference between the Endeavour cluster and the Discovery cluster is that the Endeavour cluster is comprised of the condo resources that CCP users lease or subscribe to, but each research group's own resources are for their dedicated use only. The Discovery cluster is the CARC's public cluster; any CARC user, including CCP users, can use Discovery.
+
+On Endeavour, each research group can have customized Slurm configurations on their condo nodes. For more information about custom Slurm configurations on Endeavour, please contact us at <carc-condo@usc.edu>. 
 
 #### Storage file systems
 

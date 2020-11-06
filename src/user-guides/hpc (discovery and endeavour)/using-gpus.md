@@ -2,17 +2,17 @@
 author: Cesar Sul
 id: 9
 date: 2020-09-08T12:00:00.387Z
-title: Using GPUs on Discovery
+title: Using GPUs
 path: using-gpus
 parentPath: user-information/user-guides/high-performance-computing/discovery
 cat: discoveryGuides
 parentPage: User Guides
 sideMenuParent: Discovery
 backToTopBtnFlag: true
-excerpt: How to utilize the graphics processing units (GPUs) on Discovery.
+excerpt: How to utilize the graphics processing units (GPUs) on Discovery or Endeavour.
 ---
 
-Some programs can take advantage of the unique hardware architecture in a graphics processing unit (GPU). GPUs can be used for specialized scientific computing work, including 3D modelling and machine learning. The CARC's Discovery cluster offers five different models of GPUs for use with your jobs.
+Some programs can take advantage of the unique hardware architecture in a graphics processing unit (GPU). GPUs can be used for specialized scientific computing work, including 3D modelling and machine learning. The CARC's Discovery cluster offers five different models of GPUs for use with your jobs. [Condo Cluster Program](/user-information/ccp) users participating in the traditional purchase model have the option to include GPU nodes in their dedicated resources.
 
 ### Requesting GPU resources
 
