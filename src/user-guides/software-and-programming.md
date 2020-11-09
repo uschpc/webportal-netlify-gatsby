@@ -13,6 +13,6 @@ parentPage: User Guides
 uniqID: software
 ---
 
-The Center for High-Performance Computing's cluster, Discovery, has been set up with a selection of software, programming languages, compilers, and libraries for your use.
+The Center for Advanced Research Computing's general use high-performance computing cluster, Discovery, and the Endeavour condo cluster have been set up with a selection of software, compilers, and libraries for your use.
 
-The following user guides provide instructions for using some of the more common programming languages, as well as instructions for navigating the CARC's software module system.
+The following user guides provide instructions for using some of the more common software, as well as instructions on finding and loading different software and programs.

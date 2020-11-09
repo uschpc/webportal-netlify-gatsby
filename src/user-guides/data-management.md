@@ -49,4 +49,4 @@ Below are four example scenarios that provide some insight into which data trans
 | Amazon Web Services (AWS) | Any CARC file system | When transferring files from an AWS server to CARC systems | hpc-transfer1/2 nodes (CLI, GUI) |
 | Other HPC center | Any CARC file system | When transferring files from another university to CARC systems | Globus |
 
-The following user guides provide information on the different storage file systems available to you as well as instructions for transferring your data to Discovery.
+The following user guides provide information on the different storage file systems available to you as well as instructions for transferring your data to the Discovery or Endeavour cluster.

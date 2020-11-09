@@ -75,3 +75,9 @@ If you have an **existing storage allocation** but would like to increase the am
 The duration of computing and storage resource allocations is  one year. Each year, PIs must renew their projects and associated allocations in the Research Computing User Portal. Changes to allocation sizes or types can be made during this renewal. Failure to apply for a renewal will result in the deletion of all data and the space will become available for use by other users.
 
 For more information on yearly project renewals, see the [Yearly Project Renewal user guide](/user-information/user-guides/high-performance-computing/research-computing-user-portal/yearly-project-renewal).
+
+### Condo Cluster Program (CCP) 
+
+The CARC's Condo Cluster Program (CCP) is a service available to USC researchers that require dedicated computing and/or storage resources for their work. The CCP gives researchers the convenience of having their own dedicated compute nodes, without the responsibility of purchasing and maintaining the nodes themselves. 
+
+For more information on how to enroll in the CCP, see the [Condo Cluster Program pages](/user-information/ccp).

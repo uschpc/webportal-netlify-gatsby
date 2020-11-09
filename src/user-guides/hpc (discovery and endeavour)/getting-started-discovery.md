@@ -3,7 +3,7 @@ author: Derek Strong
 id: 1
 date: 2020-08-13T12:00:00.387Z
 title: Getting Started with Discovery
-path: getting-started
+path: getting-started-discovery
 parentPath: user-information/user-guides/high-performance-computing/discovery
 cat: discoveryGuides
 parentPage: User Guides
@@ -16,11 +16,13 @@ This guide will help you get started with the Center for Advanced Research Compu
 
 A CARC account is **required** to log in to and use CARC resources. For information on applying for a CARC account, see the [Accounts and Allocations page](/user-information/accounts).
 
+If your project is located on the Endeavour condo cluster and not Discovery, see the [Getting Started with Endeavour user guide](/user-information/user-guides/high-performance-computing/discovery/getting-started-endeavour). However, the contents of this Discovery guide will still be largely relevant to work on Endeavour, with the exception of the login node.
+
 ### Overview
 
 #### Discovery cluster
 
-Discovery is a high-performance computing cluster, which is a collection of computers and disk arrays that are connected via fast networks. Discovery allows USC researchers to perform computing tasks, like data analyses and simulations, on a larger scale than is possible with a laptop or lab computer.
+Discovery is the CARC's general use high-performance computing cluster, which is a collection of computers and disk arrays that are connected via fast networks. Discovery allows USC researchers to perform computing tasks, like data analyses and simulations, on a larger scale than is possible with a laptop or lab computer.
 
 The following schematic depicts the CARC cyberinfrastructure and how the parts of the cluster connect with one another:
 
@@ -246,7 +248,7 @@ Because the Discovery computing cluster is a shared system, we use a **job sched
 - Allocates user-requested computing resources
 - Processes user-submitted jobs
 
-A listing of common Slurm commands can be found [here](https://slurm.schedmd.com/pdfs/summary.pdf).
+For more information on creating and submitting Slurm job scripts, see the [Running Jobs user guide](/user-information/user-guides/high-performance-computing/discovery/running-jobs). A listing of common Slurm commands can be found [here](https://slurm.schedmd.com/pdfs/summary.pdf).
 
 The compute resources on Discovery are shared across many projects and users. When a user submits a job with Slurm, resources are divided using a using a fair share algorithm. This table summarizes the most important resource limits for jobs on the Discovery cluster:
 

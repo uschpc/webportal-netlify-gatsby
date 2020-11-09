@@ -66,7 +66,7 @@ A PI may request a USC guest account for a collaborator outside of the universit
 
 ## Cluster Resources: General Questions
 
-### How do I log in to the CARC cluster?
+### How do I log in to the Discovery cluster?
 
 To log in to the Linux-based cluster, you will need to use `ssh` to access one of Discovery's head nodes, where `<username>` is your USC NetID:
 
@@ -376,6 +376,26 @@ du . | sort -nr | head -n 10
 - `head -n 10`: Shows the first ten lines from head
 
 To see other options, view the manual page by entering `man du`.
+
+## Cluster Resources: Endeavour/Condo Cluster Program
+
+### What is the Condo Cluster Program?
+
+The CARC's Condo Cluster Program (CCP) is a service available to USC researchers that require dedicated computing and/or storage resources for their work. The CCP gives researchers the convenience of having their own dedicated compute nodes, without the responsibility of purchasing and maintaining the nodes themselves. The CCP operates on both an annual subscription-based model, with research groups subscribing to their selected number of compute and storage resources on a yearly basis, as well as an outright purchase basis, with research groups purchasing compute or storage resources from the CARC for a fixed term (e.g., five years). All hardware is maintained by the CARC throughout the course of the subscription or lease term.
+
+> For more information on CCP policies, see our main [Condo Cluster Program pages](/user-information/ccp).
+
+### What is the difference between leasing resources and subscribing to resources?
+
+Our subscription-based model allows researchers to subscribe to computing and storage resources on a yearly basis. The subscription model is ideal for researchers who anticipate changes to their resource requirements or for researchers who only require CCP resources for a shorter period of time (minimum of one year). The CARC purchases and maintains the resources and all related hardware throughout the course of the subscription term.
+
+Our outright purchase model is the classic pricing model that we've used for condo purchases in previous years. Researchers choose the resources they need and the CARC purchases and maintains them for the lease term (e.g., five years). The leasing researchers effectively own their resources, and at the end of their lease period, the resources are retired. The CARC maintains the resources and all related hardware throughout the course of the lease term.
+
+For pricing and policies, see the [Program Information page](/user-information/ccp/program-information).
+
+### What is the difference between the Endeavour cluster and the Discovery cluster?
+
+The Discovery cluster is a "public" cluster in the sense that it is open to all CARC users to run their jobs and store their data. The Endeavour cluster is comprised of the condo resources that CCP users lease or subscribe to, but each research group's own resources are for their dedicated use only.
 
 ## Software
 

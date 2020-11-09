@@ -2,7 +2,7 @@
 author: Marco Olguin
 id: 5
 date: 2020-08-13T12:00:00.387Z
-title: Using MATLAB on Discovery
+title: Using MATLAB
 alternativeTitle: MATLAB
 path: matlab
 parentPath: user-information/user-guides/software-and-programming
@@ -14,11 +14,11 @@ excerpt: A user guide for MATLAB, a proprietary scientific computing language an
 
 [MATLAB](https://www.mathworks.com/products/matlab.html) is a proprietary scientific computing language and environment.
 
-### Using MATLAB on Discovery
+### Using MATLAB
 
-Begin by logging in to Discovery. You can find instructions for this in the [Getting Started guide](/user-information/user-guides/high-performance-computing/discovery/getting-started).
+Begin by logging in. You can find instructions for this in the [Getting Started with Discovery](/user-information/user-guides/high-performance-computing/discovery/getting-started-discovery) or [Getting Started with Endeavour](/user-information/user-guides/high-performance-computing/discovery/getting-started-endeavour) user guides.
 
-To use MATLAB on Discovery, load the corresponding module:
+To use MATLAB, load the corresponding module:
 
 ```sh
 module load matlab
@@ -44,7 +44,7 @@ It may be necessary to run MATLAB using a version that is not currently availabl
 
 #### MATLAB GUI
 
-Use of the MATLAB GUI is possible but **not recommended**, as it requires X11 forwarding, which has poor performance. Instead, we recommend that users develop MATLAB scripts on their local computer and transfer them and any other input files to Discovery for command line use.
+Use of the MATLAB GUI is possible but **not recommended**, as it requires X11 forwarding, which has poor performance. Instead, we recommend that users develop MATLAB scripts on their local computer and transfer them and any other input files to the cluster for command line use.
 
 ### Running MATLAB interactively
 

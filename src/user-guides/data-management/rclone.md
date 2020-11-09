@@ -16,9 +16,9 @@ Rclone is an open-source, command-line utility for managing files in cloud stora
 
 ### Loading the rclone module
 
-Begin by logging in to Discovery. You can find instructions for this in the [Getting Started guide](/user-information/user-guides/high-performance-computing/discovery/getting-started).
+Begin by logging in. You can find instructions for this in the [Getting Started with Discovery](/user-information/user-guides/high-performance-computing/discovery/getting-started-discovery) or [Getting Started with Endeavour](/user-information/user-guides/high-performance-computing/discovery/getting-started-endeavour) user guides.
 
-On Discovery, rclone is already available as a [software module](/user-information/user-guides/software-and-programming/lmod). To use rclone on Discovery, first load the corresponding module:
+On CARC clusters, rclone is already available as a [software module](/user-information/user-guides/software-and-programming/lmod). To use rclone, first load the corresponding module:
 
 ```sh
 module load rclone
@@ -82,11 +82,11 @@ Choose "1" as `scope` to allow access to all files.
 
 `Edit advanced config? (y\n)`: Enter "n" for `Edit advanced config? (y\n)`.
 
-`Use auto config?`: Since Discovery does not have access to a web browser, remote setup must be used instead of auto configuration. Enter "n" when prompted `Use auto config?`.
+`Use auto config?`: Since CARC clusters do not have access to a web browser, remote setup must be used instead of auto configuration. Enter "n" when prompted `Use auto config?`.
 
 A URL will be generated that can be copied and pasted into your local web browser to give permission to rclone to access your selected Google account's Drive. Once you've navigated to the URL, click "Allow" and copy the generated code. 
 
-Paste the code copied from your local web browser into your Discovery session's terminal prompt `Enter verification code`.
+Paste the code copied from your local web browser into your session's terminal prompt `Enter verification code`.
 
 Enter "n" for `Configure this as a team drive?` if the setup is for personal use or does not require a team drive. 
 

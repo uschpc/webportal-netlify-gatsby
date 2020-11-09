@@ -62,10 +62,13 @@ export default function Template({ data }) {
                 {content.frontmatter.title !== "Frequently Asked Questions" ? (
                    <div className={`right-column ${mainPage && mainPage.frontmatter.cat === 'userGuidesLandingPage' ? 'show' : 'hide'}`}>
                    <div className="system-status">
-                       <h2>System Info</h2>
+                       <h2>Quick Links to Useful Guides</h2>
                        <ul>
-                         <li><a href="https://hpc-grafana.usc.edu/d/vsUGHjmMk/compute-node-usage?orgId=1&refresh=30s" target="_blank">Current compute node usage</a></li>
-                         <li><a href="https://hpcxdmod.usc.edu/" target="_blank">Current CPU hours/job sizes</a></li>
+                         <li><a href="https://carc.usc.edu/user-information/user-guides/high-performance-computing/discovery/getting-started" target="_blank">Getting Started with the Discovery Cluster</a></li>
+                         <li><a href="https://carc.usc.edu/user-information/user-guides/high-performance-computing/discovery/getting-started-endeavour" target="_blank">Getting Started with the Endeavour Condo Cluster</a></li>
+                         <li><a href="https://carc.usc.edu/user-information/user-guides/data-management/storage-file-systems" target="_blank">Storage File Systems</a></li>
+                         <li><a href="https://carc.usc.edu/user-information/user-guides/high-performance-computing/research-computing-user-portal/account-and-project-setup" target="_blank">User Portal Project Setup</a></li>
+                         <li><a href="https://carc.usc.edu/user-information/user-guides/high-performance-computing/discovery/running-jobs" target="_blank">Running Jobs on CARC Systems</a></li>
                        </ul>
                    </div>
                </div>

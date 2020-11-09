@@ -73,9 +73,9 @@ export default function Template({ data }) {
                           <LatestNews {...data.news } flag={true} />
                           <div className="category-link-wrapper type-primary">
                             <Link className="category-link category-link-lg category-news type-primary" to={"/news-and-events/news-and-announcements/all-news"}>
-                              <img src="/images/news-arrows.svg" alt="View all Research Computing News" />
+                              <img src="/images/news-arrows.svg" alt="View all CARC News" />
                               <p>
-                                View all Research Computing News
+                                View all CARC News
                               </p>
                             </Link>
                           </div>
@@ -129,10 +129,10 @@ export default function Template({ data }) {
                         <p className="description">{item.node.frontmatter.excerpt}</p>
                         {data.allContent.edges.length - 1 === i && (
                           <>
-                              <Link to="/user-information/user-guides/condo-cluster-program">
+                              <Link to="/user-information/user-guides/high-performance-computing">
                                 User Guides
                               </Link>
-                              <p className="description">Some text here</p>
+                              <p className="description">User guides for the Endeavour condo cluster and the general use Discovery cluster. Information on logging in, file systems, and running jobs. </p>
                           </>
                           )}
                       </span>

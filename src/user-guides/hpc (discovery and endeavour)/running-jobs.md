@@ -1,8 +1,8 @@
 ---
 author: Cesar Sul
-id: 5
+id: 7
 date: 2020-08-13T12:00:00.387Z
-title: Running Jobs on Discovery
+title: Running Jobs on the Cluster
 path: running-jobs
 parentPath: user-information/user-guides/high-performance-computing/discovery
 cat: discoveryGuides
@@ -12,7 +12,7 @@ backToTopBtnFlag: true
 excerpt: How to run your jobs on Discovery using the Slurm job scheduler.
 ---
 
-This guide describes how to reserve compute time on Discovery for your jobs using the Slurm job scheduler.
+This guide describes how to reserve compute time on CARC high-performance computing clusters (both Discovery and the Endeavour condo cluster) for your jobs using the Slurm job scheduler.
 
 ### What is a job?
 
@@ -23,35 +23,23 @@ Jobs can be either **batch** jobs or **interactive** jobs, but both have two mai
 * A description of requested compute resources
 * A set of actions to run on compute resources
 
-A common mistake for new users is to run heavy workloads directly on the login node (discovery.usc.edu or discovery2.usc.edu). Unless you are doing a quick test, **please make sure to run your program as a job**. Processes left running on login nodes may be terminated without warning.
+A common mistake for new users is to run heavy workloads directly on the login node (discovery.usc.edu or endeavour.usc.edu). Unless you are doing a quick test, **please make sure to run your program as a job**. Processes left running on login nodes may be terminated without warning.
 
 ### What is a job scheduler?
 
-The Discovery computing cluster is a shared system. To ensure fair access, we use a **job scheduler** to manage all requests for resources. The Slurm (Simple Linux Utility for Resource Management) job scheduler is an open-source job scheduler that allocates compute resources on clusters for queued, user-defined jobs.
+CARC HPC clusters consist of shared resources. To ensure fair access, we use a **job scheduler** to manage all requests for resources. The Slurm (Simple Linux Utility for Resource Management) job scheduler is an open-source job scheduler that allocates compute resources on clusters for queued, user-defined jobs. When a user submits a job with Slurm, resources are divided using a using a fair share algorithm.
 
-The compute resources on Discovery are shared across many projects and users. When a user submits a job with Slurm, resources are divided using a using a fair share algorithm. This table summarizes the most important resource limits for jobs on the Discovery cluster:
-
-```
-Queue          Default Run Time  Max Run Time  Max Cores Available   Maximum Number of Jobs or Job Steps
-(Partition)                                                          (Running or Pending)
------------    ----------------  ------------  -------------------   -----------------------------------
-Main           1 Hour            48 Hours      800                   5000
-```
-
-It is important to consider the relationship between the number of cores available to your job and the number of jobs you can run. For instance, if you run a parallel job using 100 cores for each parallel task, then you can only run up to 8 jobs.
-
->The CARC is adding compute nodes and cores on an ongoing basis, so expect to find these limits changing as more resources become available.
 
 Jobs also depend on your project account allocations, and each job will subtract from your project's allocated core-hours. You can use the `myaccount` command to see your available and default accounts and usage for each:
 
 ```
 ttrojan@discovery:~$ myaccount
-  
+
       User              Account             Def Acct                  QOS
 ---------- -------------------- -------------------- --------------------
    ttrojan                acct1                acct1               normal
 ----------
-  
+
 ----
 account usage: acct1
 --------------------------------------------------------------------------------
@@ -65,22 +53,22 @@ discovery   ttrojan         ttrojan           acct1   10.03%    0.00%
 
 ### Batch jobs
 
-Batch jobs are the most common types of jobs run on Discovery. They are a list of actions saved as a `bash` script. The main advantage of batch jobs is that they don't require any human intervention to run properly. This makes them ideal for programs that run for a long time.
+Batch jobs are the most common types of jobs. They are a list of actions saved as a `bash` script. The main advantage of batch jobs is that they don't require any human intervention to run properly. This makes them ideal for programs that run for a long time.
 
 Below is an example batch job script that launches a Python script:
 
 ```
 #!/bin/bash
-  
+
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
 #SBATCH --time=1:00:00
 #SBATCH --mem-per-cpu=2GB
 #SBATCH --account=<account_id>
-  
+
 module load gcc/8.3.0
 module load python
-  
+
 python3 script.py
 ```
 The top line:
@@ -220,7 +208,7 @@ Use the chart below to determine which gpu_type to specify:
 
 ### Queue times
 
-As Discovery is a shared system, you should expect to wait some amount of time after requesting resources. Generally, if you request a lot of resources or very specific resources, you can expect to wait longer for Slurm to assign resources to you.
+CARC resources are shared, so you should expect to wait some amount of time after requesting resources. Generally, if you request a lot of resources or very specific resources, you can expect to wait longer for Slurm to assign resources to you.
 
 ### Job monitoring
 

@@ -1,7 +1,7 @@
 ---
 author: Cesar Sul
-id: 2
-date: 2020-10-12T12:00:00.387Z
+id: 3
+date: 2020-11-04T12:00:00.387Z
 title: Discovery Resource Overview
 path: discovery-resources
 parentPath: user-information/user-guides/high-performance-computing/discovery
@@ -12,29 +12,30 @@ backToTopBtnFlag: true
 excerpt: Information on Discovery's compute nodes and job limits.
 ---
 
-The Center for Advanced Research Computing's high-performance computing cluster, Discovery, has over 400 compute nodes available for users to run their jobs on.
+The Center for Advanced Research Computing's general use high-performance computing cluster, Discovery, has over 400 compute nodes available for users to run their jobs on.
 
 For general CARC system specifications, see our [System Information page](/user-information/system-information).
 
 ### Compute nodes
 
-The chart below describes the various Linux computing partitions available on Discovery, their names, and information on the partitions’ computing power. These are general use nodes available to all HPC researchers.
+The chart below describes the various Linux computing partitions available on Discovery, their names, and information on the partitions' computing power. These are general use nodes available to all HPC researchers.
 
-|Partition|Nodes|CPUs|Memory (GB)|CPU type|GPUs|Nodelist |
-|---|---|---|---|---|---|---|
-|debug|1|24|94|xeon-4116|None|d10-02 |
-|epyc-64|32|64|256|epyc-7542|None|b22-[01-32] |
-|main|18|16|64|xeon-2640v3|k40|e07-[01-16,18],e09-18 |
-|main|1|32|191|xeon-6130|v100|d13-09 |
-|main|28|32|191|xeon-6130|v100|d11-[02-04],d13-[02-08,10-11],d14-[03-18] |
-|main|41|20|128|xeon-2640v4|p100|d23-[10-16],e21-[01-16],e22-[01-16],e23-[01-02] |
-|main|45|20|64|xeon-2640v4|k40|e16-[01-24],e17-[01-02,04,06-07,09-24] |
-|main|60|16|64|xeon-2640v3|None|e06-[01-22,24],e10-12,e11-[26-27,29,45,47],e13-[11,26,28-48],e15-[10,12,14,16,18,20,22,24] |
-|main|82|20|64|xeon-2640v4|None|d17-[03-44],d18-[01-38],d22-[51-52] |
-|main|84|24|94|xeon-4116|None|d05-[03-15,26-42],d06-[15-29],d11-[09-47] |
-|oneweek|20|16|64|xeon-2640v2|None|e01-[46,48,52,62,64,76,78],e02-[40-41,43,45,47,49,51,53,55],e05-[42,76,78,80] |
+|Partition|Nodes|CPUs|Memory (GB)|CPU type|CPU freq|GPUs|Nodelist|
+|---|---|---|---|---|---|---|--|
+|debug|1|24|94|xeon-4116|2.10 GHz|None|d10-02|
+|debug|5|16|64|xeon-2640v2|2.00 GHz|None|e01-60,e05-[42,76,78,80]|
+|epyc-64|32|64|256|epyc-7542|2.90 GHz|None|b22-[01-32]|
+|main|18|16|64|xeon-2640v3|2.60 GHz|k40|e07-[01-16,18],e09-18|
+|main|29|32|191|xeon-6130|2.10 GHz|v100|d11-[02-04],d13-[02-11],d14-[03-18]|
+|main|41|20|128|xeon-2640v4|2.40 GHz|p100|d23-[10-16],e21-[01-16],e22-[01-16],e23-[01-02]|
+|main|45|20|64|xeon-2640v4|2.40 GHz|k40|e16-[01-24],e17-[01-02,04,06-07,09-24]|
+|main|60|16|64|xeon-2640v3|2.60 GHz|None|e06-[01-22,24],e10-12,e11-[26-27,29,45,47],e13-[11,26,28-48],e15-[10,12,14,16,18,20,22,24]|
+|main|82|20|64|xeon-2640v4|2.40 GHz|None|d17-[03-44],d18-[01-38],d22-[51-52]|
+|main|81|24|94|xeon-4116|2.10 GHz|None|d05-[03-15,26-42],d06-[15-29],d11-[09-47]|
+|oneweek|14|16|64|xeon-2650v2|2.60 GHz|None|e01-[46,48,52,62,64],e02-[40-41,43,45,47,49,51,53,55]|
+|oneweek|2|16|256|xeon-2650v2|2.60 GHz|None|e01-[76,78]|
 
-> Note: This information is current as of September 9, 2020.
+> Note: This information is current as of November 4, 2020. Use the `sinfo2` command for similar information.
 
 ### Job limits
 

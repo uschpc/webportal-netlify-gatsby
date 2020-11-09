@@ -36,6 +36,7 @@ exports.createPages = ({ boundActionCreators, graphql, actions }) => {
   const postTemplate = path.resolve('src/templates/content-post.js')
   const softwareTemplate = path.resolve('src/templates/software-template.js')
   const cloudComputingTemplate = path.resolve('src/templates/cloud-computing-template.js')
+  const condoClusterTemplate = path.resolve('src/templates/condo-cluster-template.js')
   const secureComputingTemplate = path.resolve('src/templates/secure-computing-template.js')
 //  const parallelProgrammingTemplate = path.resolve('src/templates/parallel-programming-template.js')
   const userGuidesMainTemplate = path.resolve('src/templates/user-guides-main-template.js')
@@ -131,6 +132,10 @@ exports.createPages = ({ boundActionCreators, graphql, actions }) => {
           break;
         case 'cloudComputing':
           template = cloudComputingTemplate;
+          path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+          break;
+        case 'condoCluster':
+          template = condoClusterTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
         case 'secureComputing':
