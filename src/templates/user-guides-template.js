@@ -12,9 +12,9 @@ export default function Template({ data }) {
     const { scrollY } = useScroll();
     const [scrollPositionFlag, setPositionFlag] = useState(false)
     const post = data.content;
+    console.log(123, post)
     const discovery = data.discovery.edges;
     const coldFront = data.md.edges;
-    console.log('asdasdasd2020', post)
 
     let subMenu = []
 
@@ -248,20 +248,6 @@ export const coldFrontQuery = graphql`
           }
         }
       }
-    allContent: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "sharedTemplate"}}}) {
-      edges {
-        node {
-          frontmatter {
-            title
-            path
-            parentPath
-            cat
-            excerpt
-          }
-          html
-        }
-      }
-    }
     sideMenu: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "userGuides"}}}) {
       edges {
         node {

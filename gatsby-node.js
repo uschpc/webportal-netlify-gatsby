@@ -147,7 +147,6 @@ exports.createPages = ({ boundActionCreators, graphql, actions }) => {
         //   path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
         //   break;
         case 'userGuides':
-        case 'sharedTemplate': 
           template = userGuidesTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break;
