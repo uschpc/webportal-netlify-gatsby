@@ -12,7 +12,6 @@ export default function Template({ data }) {
     const { scrollY } = useScroll();
     const [scrollPositionFlag, setPositionFlag] = useState(false)
     const post = data.content;
-    console.log(123, post)
     const discovery = data.discovery.edges;
     const coldFront = data.md.edges;
 
