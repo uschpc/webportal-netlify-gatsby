@@ -7,7 +7,7 @@ path: discovery-resources
 parentPath: user-information/user-guides/high-performance-computing/discovery
 cat: discoveryGuides
 parentPage: User Guides
-sideMenuParent: Discovery
+sideMenuParent: High-Performance Computing
 backToTopBtnFlag: true
 excerpt: Information on Discovery's compute nodes and job limits.
 ---

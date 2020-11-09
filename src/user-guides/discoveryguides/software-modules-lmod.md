@@ -8,7 +8,7 @@ parentPath: user-information/user-guides/high-performance-computing/discovery
 cat: discoveryGuides
 parentPage: User Guides
 backToTopBtnFlag: true
-sideMenuParent: Discovery
+sideMenuParent: High-Performance Computing
 excerpt: An introduction to the software module system on Discovery.
 ---
 

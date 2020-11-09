@@ -10,6 +10,7 @@ import SideMenu from '../components/side-menu'
 export default function Template({ data }) {
     const items = data.md.edges;
     const discovery = data.discovery.edges;
+
     return (
       <Layout {...data.navigation}>
           <SEO title={data.content.frontmatter.title}/>
@@ -19,7 +20,7 @@ export default function Template({ data }) {
                 <div className="left-column">
                   <div className="position-fixed">
                     <Link to="/user-information/user-guides"><h2>User Guides</h2></Link>
-                    <SideMenu {...data} parentMenuTitle="High-Performance Computing"/>
+                    <SideMenu {...data}/>
                   </div>
                 </div>
                 <div className="middle-column">

@@ -11,8 +11,13 @@ import { useScroll } from '../components/custom-hooks/useScroll'
 export default function Template({ data }) {
     const { scrollY } = useScroll();
     const [scrollPositionFlag, setPositionFlag] = useState(false)
-    console.log('scrollY', scrollY)
     const post = data.content;
+    const discovery = data.discovery.edges;
+    const coldFront = data.md.edges;
+    console.log('asdasdasd2020')
+
+    let subMenu = []
+
     const items = data.content.frontmatter.uniqID === "software" ? data.Software.edges : data.dataManagement.edges
     useEffect(() => {
       if (scrollY >= 240) setPositionFlag(true)
@@ -26,24 +31,24 @@ export default function Template({ data }) {
               <div className="left-column">
                 <div className={`position-fixed ${(scrollPositionFlag) ? 'start' : 'reset'}`}>
                   <Link to="/user-information/user-guides"><h2>User Guides</h2></Link>
-                  <SideMenu {...data}/>
+                  <SideMenu {...data} parentMenuTitle={post.frontmatter.title} />
                 </div>
               </div>
               <div className="middle-column">
                   <h1>{post.frontmatter.title}</h1>
                   <Markdown source={post.html} escapeHtml={false} />
-                  {(post.frontmatter.title === 'High-Performance Computing') && data.allContent.edges.map((item, i) => {
-                    return (
-                      <span key={i}>
-                        <Link to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path}>
-                            <div className="user-support-box">
-                                <p className="title">{item.node.frontmatter.title}</p>
-                            </div>
-                        </Link>
-                        <p className="description">{item.node.frontmatter.excerpt}</p>
-                      </span>
-                    )
-                  })}
+                  {(post.frontmatter.title === "High-Performance Computing") && (
+                        <span>
+                          <h3>User Guides</h3>
+                          {discovery.map ((item, i) => {
+                            return (
+                              <Link key={i} className="coldfront-menu-items" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
+                                  <li>{item.node.frontmatter.title}</li>
+                              </Link>
+                              )
+                          })}
+                        </span>
+                      )}
                    {(data.content.frontmatter.title === "Data Management") && (
                     <span>
                       <h3>User Guides</h3>
@@ -92,6 +97,18 @@ export default function Template({ data }) {
                      })}
                    </span>
                  )}
+                  {(data.content.frontmatter.uniqID === "user_portal") && (
+                    <span>
+                      <h3>User Guides</h3>
+                      {coldFront.map ((item, i) => {
+                        return (
+                          <Link key={i} className="coldfront-menu-items" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
+                              <li>{item.node.frontmatter.title}</li>
+                          </Link>
+                          )
+                      })}
+                    </span>
+                  )}
               </div>
               <div className="right-column">
                   <div className="system-status">
@@ -110,6 +127,19 @@ export default function Template({ data }) {
 
 export const coldFrontQuery = graphql`
   query($slug: String!) {
+    md: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "coldFront"}}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            parentPath
+            cat
+          }
+          html
+        }
+      }
+    }
     content: markdownRemark(frontmatter: {cat: {eq: "userGuides"}, path: {eq: $slug}}) {
         frontmatter {
           title
@@ -121,6 +151,19 @@ export const coldFrontQuery = graphql`
         html
       }
       dataManagement: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "dataManagement"}}}) {
+        edges {
+          node {
+            frontmatter {
+              title
+              path
+              parentPath
+              cat
+            }
+            html
+          }
+        }
+      }
+      discovery: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "discoveryGuides"}}}) {
         edges {
           node {
             frontmatter {
@@ -200,7 +243,73 @@ export const coldFrontQuery = graphql`
         }
       }
     }
-    subMenu: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "sharedTemplate"}}}) {
+    subMenu: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "coldFront"}}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            parentPath
+          }
+        }
+      }
+    }
+    subMenuCF: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "coldFront"}}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            parentPath
+          }
+        }
+      }
+    }
+    subMenuDG: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "discoveryGuides"}}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            parentPath
+          }
+        }
+      }
+    }
+    subMenuCC: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "cloudComputing"}}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            parentPath
+          }
+        }
+      }
+    }
+    subMenuSC: allMarkdownRemark(sort: {fields: frontmatter___id},filter: {frontmatter: {cat: {eq: "secureComputing"}}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            parentPath
+          }
+        }
+      }
+    }
+    subMenuSW: allMarkdownRemark(sort: {fields: frontmatter___id},filter: {frontmatter: {cat: {eq: "software"}}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            parentPath
+          }
+        }
+      }
+    }
+    subMenuDM: allMarkdownRemark(sort: {fields: frontmatter___id},filter: {frontmatter: {cat: {eq: "dataManagement"}}}) {
       edges {
         node {
           frontmatter {

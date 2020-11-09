@@ -427,6 +427,11 @@ body {
                   color: #990000;
                   text-decoration: underline;
                 }
+                &.coldfront-menu-items {
+                  &.focused {
+                    color: #990000;
+                  }
+                }
               }
             }
           }
@@ -763,6 +768,11 @@ body {
                 &:hover {
                   color: #990000;
                   text-decoration: underline;
+                }
+                &.coldfront-menu-items {
+                  &.focused {
+                    color: #990000;
+                  }
                 }
               }
             }

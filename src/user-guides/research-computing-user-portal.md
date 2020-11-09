@@ -5,12 +5,13 @@ parentPath: user-information/user-guides/high-performance-computing
 route: High-Performance Computing
 author: Yaseen A.
 routePath: user-information/user-guides/high-performance-computing
+featuredImage: ../../static/images/Door.png
 date: 2020-06-04T00:00:00.000Z
-cat: sharedTemplate
+cat: userGuides
 title: Research Computing User Portal
 uniqID: user_portal
 parentPage: User Guides
-id: 3
+id: 6
 ---
 
 The Center for Advanced Research Computing's User Portal is how users manage their projects and allocations on CARC systems.

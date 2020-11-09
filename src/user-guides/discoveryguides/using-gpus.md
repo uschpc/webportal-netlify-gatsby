@@ -7,7 +7,7 @@ path: using-gpus
 parentPath: user-information/user-guides/high-performance-computing/discovery
 cat: discoveryGuides
 parentPage: User Guides
-sideMenuParent: Discovery
+sideMenuParent: High-Performance Computing
 backToTopBtnFlag: true
 excerpt: How to utilize the graphics processing units (GPUs) on Discovery.
 ---

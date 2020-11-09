@@ -7,7 +7,7 @@ path: getting-started
 parentPath: user-information/user-guides/high-performance-computing/discovery
 cat: discoveryGuides
 parentPage: User Guides
-sideMenuParent: Discovery
+sideMenuParent: High-Performance Computing
 backToTopBtnFlag: true
 excerpt: A user guide for using Discovery, particularly for new users.
 ---

@@ -7,7 +7,7 @@ path: storage-file-systems
 parentPath: user-information/user-guides/high-performance-computing/discovery
 cat: discoveryGuides
 parentPage: User Guides
-sideMenuParent: Discovery
+sideMenuParent: High-Performance Computing
 backToTopBtnFlag: true
 excerpt: A description of the file systems available to CARC users.
 ---

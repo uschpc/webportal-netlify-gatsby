@@ -7,7 +7,7 @@ path: running-jobs
 parentPath: user-information/user-guides/high-performance-computing/discovery
 cat: discoveryGuides
 parentPage: User Guides
-sideMenuParent: Discovery
+sideMenuParent: High-Performance Computing
 backToTopBtnFlag: true
 excerpt: How to run your jobs on Discovery using the Slurm job scheduler.
 ---

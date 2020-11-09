@@ -12,7 +12,6 @@ import FAQ from '../components/frequently-asked-question'
 export default function Template({ data }) {
   let mainPage = data.mainPage;
   let content = data.content;
-
     return (
       <Layout {...data.navigation} backToTopBtnFlag={content.frontmatter.backToTopBtnFlag}>
           <SEO title={mainPage ? mainPage.frontmatter.title : content.frontmatter.title}/>
@@ -31,15 +30,23 @@ export default function Template({ data }) {
                      <Markdown source={mainPage.html} escapeHtml={false} />
                      {data.md.edges.map ((item, i) => {
                          return (
-                             <Link to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path} key={i}>
-                                 <div className="user-support-box">
-                                      <img src={item.node.frontmatter.featuredImage.childImageSharp.fluid.src} alt={item.node.frontmatter.title} />
-                                      {/* <img src={item.node.frontmatter.thumbnail} alt={item.node.frontmatter.title} /> */}
-                                     <p className="title">{item.node.frontmatter.title}</p>
-                                     <p className="description">{item.node.frontmatter.excerpt}</p>
-                                 </div>
-                             </Link>
-                         )
+                          !item.node.frontmatter.redirectToPage ? (
+                            <Link to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path} key={i}>
+                                <div className="user-support-box">
+                                     <img src={item.node.frontmatter.featuredImage.childImageSharp.fluid.src} alt={item.node.frontmatter.title} />
+                                    <p className="title">{item.node.frontmatter.title}</p>
+                                    <p className="description">{item.node.frontmatter.excerpt}</p>
+                                </div>
+                            </Link>
+                        ) : (
+                         <Link to={item.node.frontmatter.redirectToPage} key={i}>
+                           <div className="user-support-box">
+                               <img src={item.node.frontmatter.featuredImage.childImageSharp.fluid.src} alt={item.node.frontmatter.title} />
+                               <p className="title">{item.node.frontmatter.title}</p>
+                               <p className="description">{item.node.frontmatter.excerpt}</p>
+                           </div>
+                       </Link>
+                        ))
                      })}
                      </span>
                    ) : (
@@ -89,6 +96,7 @@ export const coldFrontQuery = graphql`
           frontmatter {
             title
             path
+            redirectToPage
             thumbnail
             featuredImage {
               childImageSharp {

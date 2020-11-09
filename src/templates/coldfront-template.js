@@ -19,7 +19,7 @@ export default function Template({ data }) {
                 <div className="left-column">
                   <div className="position-fixed">
                     <Link to="/user-information/user-guides"><h2>User Guides</h2></Link> 
-                    <SideMenu {...data} parentMenuTitle="High-Performance Computing"/>
+                    <SideMenu {...data} parentMenuTitle="Research Computing User Portal"/>
                   </div>
                 </div>
                 <div className="middle-column">
@@ -67,7 +67,7 @@ export const coldFrontQuery = graphql`
         }
       }
     }
-    subMenu: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "sharedTemplate"}}}) {
+    subMenu: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "coldFront"}}}) {
       edges {
         node {
           frontmatter {

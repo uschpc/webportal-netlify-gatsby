@@ -9,7 +9,7 @@ featuredImage: ../../static/images/Group.png
 path: condo-cluster-program
 route: User Guides
 parentPath: user-information/user-guides
-cat: userGuides
+cat: userGuides1
 parentPage: User Guides
 ---
 
