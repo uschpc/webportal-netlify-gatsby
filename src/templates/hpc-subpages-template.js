@@ -10,6 +10,7 @@ import SideMenu from '../components/side-menu'
 export default function Template({ data }) {
     const items = data.md.edges;
     const discovery = data.discovery.edges;
+    console.log('54as6d54a6sd54a6s5d46a5sd46a5sd46as54d645s')
 
     return (
       <Layout {...data.navigation}>

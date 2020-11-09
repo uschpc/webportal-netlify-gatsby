@@ -14,7 +14,7 @@ export default function Template({ data }) {
     const post = data.content;
     const discovery = data.discovery.edges;
     const coldFront = data.md.edges;
-    console.log('asdasdasd2020')
+    console.log('asdasdasd2020', post)
 
     let subMenu = []
 
@@ -36,6 +36,14 @@ export default function Template({ data }) {
               </div>
               <div className="middle-column">
                   <h1>{post.frontmatter.title}</h1>
+                  {(post.frontmatter.uniqID === "user_portal") && (
+                    <div className="login">
+                      <a href="https://hpcaccount.usc.edu/" className="btn login-to-user-portal" target="_blank">
+                        <span className="txt">Log in to Portal</span>
+                        <span className="round"><i className="fa fa-chevron-right"></i></span>
+                      </a>
+                   </div>
+                  )}
                   <Markdown source={post.html} escapeHtml={false} />
                   {(post.frontmatter.title === "High-Performance Computing") && (
                         <span>

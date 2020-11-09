@@ -85,11 +85,9 @@ const generateSubMenuItems = (title, pageTitle, data) => {
 
 const SideMenu = (data) => {
   let pageTitle = data.mainPage ? data.mainPage.frontmatter.title : data.content.frontmatter.title;
-  console.log(data)
     return (
         <div className="side-menu">
             {data.sideMenu.edges.map((item, i) => {
-              console.log(item.node.frontmatter.title === data.parentMenuTitle, item.node.frontmatter.title, data.parentMenuTitle)
                 return (
                   !item.node.frontmatter.externalPath ? (
                     !item.node.frontmatter.redirectToPage ? (
