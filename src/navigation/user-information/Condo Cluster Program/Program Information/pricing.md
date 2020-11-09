@@ -10,6 +10,7 @@ parentPath: user-information/ccp/program-information
 cat: condoClusterProgramEnrollmentSubPages
 parentPage: User Information
 parentEle: User Information
+backToTopBtnFlag: true
 ---
 
 Pricing for the Condo Cluster Program's subscription and direct purchase models.

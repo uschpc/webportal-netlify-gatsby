@@ -14,6 +14,7 @@ cat: condoClusterProgram
 parentPage: User Information
 parentEle: User Information
 excerpt: Information on the Condo Cluster Program, its purchase models, and pricing.
+backToTopBtnFlag: true
 ---
 
 In an effort to provide the most comprehensive support to the USC research community, the Center for Advanced Research Computing offers researchers a way to customize their experience with advanced computing systems through the Condo Cluster Program. 
@@ -103,4 +104,4 @@ Detailed information on the Endeavour condo cluster, including how to log in and
 
 ### What's next?
 
-This is just a starting point for the new Condo Cluster Program. The CARC is currently developing more detailed policies . More information will be available in the next 6 months as we upgrade the Endeavour cluster and add more features for CCP users. If you have any questions about the CCP, please contact us at <carc-condo@usc.edu>. 
+This is just a starting point for the new Condo Cluster Program. The CARC is currently developing more detailed policies. More information will be available in the next 6 months as we upgrade the Endeavour cluster and add more features for CCP users. If you have any questions about the CCP, please contact us at <carc-condo@usc.edu>. 
