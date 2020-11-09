@@ -17,7 +17,7 @@ export default function Template({ data }) {
 
     let subMenu = []
 
-    const items = data.dataManagement.edges
+    const items = data.content.frontmatter.uniqID === "software" ? data.Software.edges : data.dataManagement.edges
     useEffect(() => {
       if (scrollY >= 240) setPositionFlag(true)
       else setPositionFlag(false)
