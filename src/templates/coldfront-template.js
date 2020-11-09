@@ -19,7 +19,7 @@ export default function Template({ data }) {
                 <div className="left-column">
                   <div className="position-fixed">
                     <Link to="/user-information/user-guides"><h2>User Guides</h2></Link> 
-                    <SideMenu {...data} parentMenuTitle="Research Computing User Portal"/>
+                    <SideMenu {...data} parentMenuTitle="Project and Allocation Management"/>
                   </div>
                 </div>
                 <div className="middle-column">

@@ -22,11 +22,11 @@ The CARC's Condo Cluster Program (CCP) is a service available to USC researchers
 
 > For more information on CCP policies, see our main [Condo Cluster Program pages](/user-information/ccp).
 
-### What is the difference between leasing resources and subscribing to resources?
+### What is the difference between the subscription model and the traditional purchase model?
 
 Our subscription-based model allows researchers to subscribe to computing and storage resources on a yearly basis. The subscription model is ideal for researchers who anticipate changes to their resource requirements or for researchers who only require CCP resources for a shorter period of time (minimum of one year). The CARC purchases and maintains the resources and all related hardware throughout the course of the subscription term.
 
-Our outright purchase model is the classic pricing model that we've used for condo purchases in previous years. Researchers choose the resources they need and the CARC purchases and maintains them for the lease term (e.g., five years). The leasing researchers effectively own their resources, and at the end of their lease period, the resources are retired. The CARC maintains the resources and all related hardware throughout the course of the lease term.
+Our traditional purchase model is the classic pricing model that we've used for condo purchases in previous years. Researchers choose the resources they need and the CARC purchases and maintains them for the lease term (e.g., five years). The leasing researchers effectively own their resources, and at the end of their lease period, the resources are retired. The CARC maintains the resources and all related hardware throughout the course of the lease term.
 
 For pricing and policies, see the [Program Information page](/user-information/ccp/program-information).
 

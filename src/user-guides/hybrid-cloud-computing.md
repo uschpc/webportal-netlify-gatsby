@@ -1,6 +1,6 @@
 ---
 author: Yaseen A.
-id: 4
+id: 5
 date: 2020-06-04T00:00:00.00Z
 title: Hybrid Cloud Computing
 excerpt: Information on the CARC's cloud computing services.
