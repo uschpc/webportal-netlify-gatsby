@@ -4,7 +4,7 @@ id: 3
 date: 2020-11-04T12:00:00.387Z
 title: Discovery Resource Overview
 path: discovery-resources
-parentPath: user-information/user-guides/high-performance-computing/discovery
+parentPath: user-information/user-guides/high-performance-computing
 cat: discoveryGuides
 parentPage: User Guides
 sideMenuParent: High-Performance Computing

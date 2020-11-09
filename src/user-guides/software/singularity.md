@@ -3,7 +3,6 @@ author: Derek Strong
 id: 6
 date: 2020-09-09T12:00:00.387Z
 title: Using Singularity
-alternativeTitle: Singularity
 path: singularity
 parentPath: user-information/user-guides/software-and-programming
 cat: software
@@ -16,7 +15,7 @@ excerpt: A user guide for Singularity, an open-source application for creating a
 
 ### Using Singularity
 
-Begin by logging in. You can find instructions for this in the [Getting Started with Discovery](/user-information/user-guides/high-performance-computing/discovery/getting-started-discovery) or [Getting Started with Endeavour](/user-information/user-guides/high-performance-computing/discovery/getting-started-endeavour) user guides.
+Begin by logging in. You can find instructions for this in the [Getting Started with Discovery](/user-information/user-guides/high-performance-computing/getting-started-discovery) or [Getting Started with Endeavour](/user-information/user-guides/high-performance-computing/getting-started-endeavour) user guides.
 
 Singularity is installed on Discovery and Endeavour outside of the module system, so there is no need to load a software module in order to use it. Instead, you can directly use the `singularity` commands. Please note that the commands that require `sudo` will not be available to you on Discovery or Endeavour. The current version installed is 3.6.1.
 

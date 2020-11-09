@@ -3,7 +3,6 @@ author: Derek Strong
 id: 6
 date: 2020-08-13T12:00:00.387Z
 title: Using Julia
-alternativeTitle: Julia
 path: julia
 parentPath: user-information/user-guides/software-and-programming
 cat: software
@@ -16,7 +15,7 @@ excerpt: A user guide for Julia, an open-source programming language designed fo
 
 ### Using Julia
 
-Begin by logging in. You can find instructions for this in the [Getting Started with Discovery](/user-information/user-guides/high-performance-computing/discovery/getting-started-discovery) or [Getting Started with Endeavour](/user-information/user-guides/high-performance-computing/discovery/getting-started-endeavour) user guides.
+Begin by logging in. You can find instructions for this in the [Getting Started with Discovery](/user-information/user-guides/high-performance-computing/getting-started-discovery) or [Getting Started with Endeavour](/user-information/user-guides/high-performance-computing/getting-started-endeavour) user guides.
 
 You can use Julia in either interactive or batch modes. Ultimately, you will submit your Julia jobs using batch mode with Julia scripts as part of Slurm job scripts. You can use interactive mode to install packages and explore data, for example.
 
@@ -227,8 +226,8 @@ Each line is described below:
 |`--mem=16GB` |  Reserves 16 GB of memory for your exclusive use|
 |`--time=1:00:00` | Reserves resources described for 1 hour|
 |`--account=<account_id>` | Charge compute time to <account_id>. If not specified, you may use up the wrong PI's compute hours|
-|`module load gcc/8.3.0` | Load the `gcc` compiler [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
-|`module load julia/1.4.1` | Load the `julia` [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
+|`module load gcc/8.3.0` | Load the `gcc` compiler [environment module](/user-information/user-guides/high-performance-computing/lmod)|
+|`module load julia/1.4.1` | Load the `julia` [environment module](/user-information/user-guides/high-performance-computing/lmod)|
 |`julia /path/to/script.jl` | Use `julia` to run `script.jl`|
 
 You can adjust the resources requested based on your needs, but remember that fewer resources requested leads to less queue time for your job.
@@ -254,7 +253,7 @@ user@discovery:~$ squeue -u user
 
 If there is no job status listed, then this means the job has completed.
 
-For more information on job status and running jobs, see the [Running Jobs guide](/user-information/user-guides/high-performance-computing/discovery/running-jobs).
+For more information on job status and running jobs, see the [Running Jobs guide](/user-information/user-guides/high-performance-computing/running-jobs).
 
 ### Additional resources
 

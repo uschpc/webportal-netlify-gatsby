@@ -4,10 +4,10 @@ id: 4
 date: 2020-11-04T12:00:00.387Z
 title: Endeavour Resource Overview
 path: endeavour-resources
-parentPath: user-information/user-guides/high-performance-computing/discovery
+parentPath: user-information/user-guides/high-performance-computing
 cat: discoveryGuides
 parentPage: User Guides
-sideMenuParent: Discovery
+sideMenuParent: High-Performance Computing
 backToTopBtnFlag: true
 excerpt: Information on compute nodes and job limits for the Endeavour condo cluster.
 ---

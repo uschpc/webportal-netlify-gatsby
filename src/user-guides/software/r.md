@@ -3,7 +3,6 @@ author: Derek Strong
 id: 4
 date: 2020-06-04T12:00:00.387Z
 title: Using R
-alternativeTitle: R
 path: r
 parentPath: user-information/user-guides/software-and-programming
 cat: software
@@ -16,7 +15,7 @@ excerpt: A user guide for R, an open-source programming environment and language
 
 ### Using R
 
-Begin by logging in. You can find instructions for this in the [Getting Started with Discovery](/user-information/user-guides/high-performance-computing/discovery/getting-started-discovery) or [Getting Started with Endeavour](/user-information/user-guides/high-performance-computing/discovery/getting-started-endeavour) user guides.
+Begin by logging in. You can find instructions for this in the [Getting Started with Discovery](/user-information/user-guides/high-performance-computing/getting-started-discovery) or [Getting Started with Endeavour](/user-information/user-guides/high-performance-computing/getting-started-endeavour) user guides.
 
 You can use R in either interactive or batch modes. Ultimately, you will submit your R jobs using batch mode with R scripts as part of Slurm job scripts. You can use interactive mode to install packages and explore data, for example.
 
@@ -267,9 +266,9 @@ Each line is described below:
 |`--mem=10GB` |  Reserves 16 GB of memory for your exclusive use|
 |`--time=1:00:00` | Reserves resources described for 1 hour|
 |`--account=<account_id>` | Charge compute time to <account_id>. If not specified, you may use up the wrong PI's compute hours|
-|`module load gcc/8.3.0` | Load the `gcc` compiler [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
-|`module load openblas/0.3.8` | Load the `openblas` [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
-|`module load r/4.0.0` | Load the `r` [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod). Note that R requires both `gcc` and `openblas`|
+|`module load gcc/8.3.0` | Load the `gcc` compiler [environment module](/user-information/user-guides/high-performance-computing/lmod)|
+|`module load openblas/0.3.8` | Load the `openblas` [environment module](/user-information/user-guides/high-performance-computing/lmod)|
+|`module load r/4.0.0` | Load the `r` [environment module](/user-information/user-guides/high-performance-computing/lmod). Note that R requires both `gcc` and `openblas`|
 |`cd /home1/user/R/scripts` | Change to the directory where your R script is|
 |`Rscript --vanilla script.R` | Use `Rscript` to run `script.R`. The `--vanilla` option will ensure a clean R session that helps with the reproducibility of jobs|
 

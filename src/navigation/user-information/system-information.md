@@ -16,9 +16,9 @@ In 2020, the Center for Advanced Research Computing performed a major upgrade to
 
 The CARC's Discovery computing cluster consists of 2 shared head nodes and a total of 30,000 CPU cores in 1,600 compute nodes. The typical compute node has dual 8 to 16 core processors and resides on a 56 gigabit FDR InfiniBand backbone.
 
-For detailed information on Discovery's computing resources, see the [Discovery Resource Overview](/user-information/user-guides/high-performance-computing/discovery/discovery-resources).
+For detailed information on Discovery's computing resources, see the [Discovery Resource Overview](/user-information/user-guides/high-performance-computing/discovery-resources).
 
-For detailed information on the Endeavour [condo cluster](/user-information/ccp)'s computing resources, see the [Endeavour Resource Overview](/user-information/user-guides/high-performance-computing/discovery/endeavour-resources).
+For detailed information on the Endeavour [condo cluster](/user-information/ccp)'s computing resources, see the [Endeavour Resource Overview](/user-information/user-guides/high-performance-computing/endeavour-resources).
 
 ### File systems
 

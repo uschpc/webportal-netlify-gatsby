@@ -4,7 +4,7 @@ id: 9
 date: 2020-09-08T12:00:00.387Z
 title: Using GPUs
 path: using-gpus
-parentPath: user-information/user-guides/high-performance-computing/discovery
+parentPath: user-information/user-guides/high-performance-computing
 cat: discoveryGuides
 parentPage: User Guides
 sideMenuParent: High-Performance Computing

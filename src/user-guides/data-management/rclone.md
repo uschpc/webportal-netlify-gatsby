@@ -16,7 +16,7 @@ Rclone is an open-source, command-line utility for managing files in cloud stora
 
 ### Loading the rclone module
 
-Begin by logging in. You can find instructions for this in the [Getting Started with Discovery](/user-information/user-guides/high-performance-computing/discovery/getting-started-discovery) or [Getting Started with Endeavour](/user-information/user-guides/high-performance-computing/discovery/getting-started-endeavour) user guides.
+Begin by logging in. You can find instructions for this in the [Getting Started with Discovery](/user-information/user-guides/high-performance-computing/getting-started-discovery) or [Getting Started with Endeavour](/user-information/user-guides/high-performance-computing/getting-started-endeavour) user guides.
 
 On CARC clusters, rclone is already available as a [software module](/user-information/user-guides/software-and-programming/lmod). To use rclone, first load the corresponding module:
 

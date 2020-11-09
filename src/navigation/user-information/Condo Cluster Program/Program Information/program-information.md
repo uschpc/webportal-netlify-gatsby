@@ -39,7 +39,7 @@ Currently, the CARC offers two different compute node configurations to choose f
 
 > We recognize that these are not the latest and greatest compute nodes currently on the market, and we are in the process of purchasing a new batch of compute nodes for the Condo Cluster Program. The COVID-19 situation has delayed this process, but the new compute nodes will be available for subscription on the Endeavour cluster in early 2021.
 
-Subscriptions to condo compute nodes can be requested via the CARC's User Portal. See the [Request New Allocation](/user-information/user-guides/high-performance-computing/research-computing-user-portal/request-new-allocation) user guide for details on how to request a condo subscription for your research project.
+Subscriptions to condo compute nodes can be requested via the CARC's User Portal. See the [Request New Allocation](/user-information/user-guides/research-computing-user-portal/request-new-allocation) user guide for details on how to request a condo subscription for your research project.
 
 ### Traditional purchase model
 
@@ -49,7 +49,7 @@ Like the annual subscription model, research groups will have exclusive access t
 
 A condo purchase request is possible during the CARC's annual condo purchase request period, which will occur during the fall semester. The whole process of purchase request, system configuration, vendor selection, purchasing, system installation, and deployment typically takes six months. The purchased resources will be in service for 5 years, and after this service period, the CARC will decommission these condo nodes. 
 
-> The CARC is still in the process of preparing for the annual condo purchase request period for 2020. Once the request period opens, PIs will use the [User Portal](/user-information/user-guides/high-performance-computing/research-computing-user-portal) to select and purchase their desired condo resources.
+> The CARC is still in the process of preparing for the annual condo purchase request period for 2020. Once the request period opens, PIs will use the [User Portal](/user-information/user-guides/research-computing-user-portal) to select and purchase their desired condo resources.
 
 The following table summarizes the CPU and GPU nodes that will be available for purchase using the traditional purchase model:
 
@@ -99,7 +99,7 @@ The Endeavour condo cluster is a dedicated HPC system for Condo Cluster Program 
 
 One key difference between Endeavour and Discovery is configuration of the Slurm job scheduler. The Slurm configurations on Discovery are geared for use on a shared cluster system, but on Endeavour, each research group can have customized Slurm configurations on their condo nodes. For more information about custom Slurm configurations on Endeavour, please contact us at <carc-condo@usc.edu>. 
 
-Detailed information on the Endeavour condo cluster, including how to log in and access the cluster, can be found in the [Getting Started with Endeavour user guide](/user-information/user-guides/high-performance-computing/discovery/getting-started-endeavour). User guides applicable to both Endeavour and Discovery can be found in the [High-Performance Computing](/user-information/user-guides/high-performance-computing) user guides section.
+Detailed information on the Endeavour condo cluster, including how to log in and access the cluster, can be found in the [Getting Started with Endeavour user guide](/user-information/user-guides/high-performance-computing/getting-started-endeavour). User guides applicable to both Endeavour and Discovery can be found in the [High-Performance Computing](/user-information/user-guides/high-performance-computing) user guides section.
 
 ### What's next?
 

@@ -48,7 +48,7 @@ Project directories are located at:
 
 where `<PI_name>` is the username of the project owner, and `<id>` is a 2 or 3 digit project ID number.
 
-You can list your project directories and storage use by entering the command `myquota`. You can also find the project ID and directory path on the project page in the [User Portal](/user-information/user-guides/high-performance-computing/research-computing-user-portal).
+You can list your project directories and storage use by entering the command `myquota`. You can also find the project ID and directory path on the project page in the [User Portal](/user-information/user-guides/research-computing-user-portal).
 
 To create your own subdirectory within your project's directory, enter a command like:
 
@@ -88,7 +88,7 @@ Use the `cds2` command to quickly change to your /scratch2 directory from anothe
 
 CARC clusters are shared resources. As a result, there are quotas on usage to help ensure fair access to all USC researchers. There are quotas on both the number of files stored and the amount of disk space used.
 
-To check your quota, use the `myquota` command. Under `size`, compare the results of `used` and `hard`. If the value of `used` is close to the value of `hard`, you will need to delete files or request an increase in disk space from the [User Portal](/user-information/user-guides/high-performance-computing/research-computing-user-portal).
+To check your quota, use the `myquota` command. Under `size`, compare the results of `used` and `hard`. If the value of `used` is close to the value of `hard`, you will need to delete files or request an increase in disk space from the [User Portal](/user-information/user-guides/research-computing-user-portal).
 
 > Note: The `chunk files` section indicates the way your files and directories are divided up by the parallel file system, not the absolute number of files.
 

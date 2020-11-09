@@ -8,7 +8,7 @@ featuredImage: ../../static/images/Door.png
 excerpt: Request and manage resources and allocations for your projects.
 path: research-computing-user-portal-v2
 parentPath: user-information/user-guides/high-performance-computing
-redirectToPage: user-information/user-guides/high-performance-computing/research-computing-user-portal
+redirectToPage: user-information/user-guides/research-computing-user-portal
 cat: userSupport
 parentEle: none
 ---

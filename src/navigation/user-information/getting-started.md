@@ -36,11 +36,11 @@ The following schematic depicts the CARC cyberinfrastructure and how the parts o
 
 ![Cyberinfrastructure overview](/images/discovery_infra.png)
 
-> For detailed information on the Discovery cluster, see our [Getting Started with Discovery user guide](/user-information/user-guides/high-performance-computing/discovery/getting-started-discovery) and our [System Information page](/user-information/system-information).
+> For detailed information on the Discovery cluster, see our [Getting Started with Discovery user guide](/user-information/user-guides/high-performance-computing/getting-started-discovery) and our [System Information page](/user-information/system-information).
 
 #### Endeavour condo cluster
 
-Endeavour is a high-performance computing cluster like Discovery, but Endeavour is comprised of  resources that Condo Cluster Program (CCP) users lease or subscribe to, with each research group's resources dedicated for their use only. For more information on the CCP, see the [Condo Cluster Program pages](/user-information/ccp). For detailed information on the Endeavour cluster, see our [Getting Started with Endeavour user guide](/user-information/user-guides/high-performance-computing/discovery/getting-started-endeavour)
+Endeavour is a high-performance computing cluster like Discovery, but Endeavour is comprised of  resources that Condo Cluster Program (CCP) users lease or subscribe to, with each research group's resources dedicated for their use only. For more information on the CCP, see the [Condo Cluster Program pages](/user-information/ccp). For detailed information on the Endeavour cluster, see our [Getting Started with Endeavour user guide](/user-information/user-guides/high-performance-computing/getting-started-endeavour)
 
 #### Storage file systems
 

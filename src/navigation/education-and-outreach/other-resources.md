@@ -32,7 +32,7 @@ For more information on edX, see https://www.edx.org/.
 
 ### Slurm documentation
 
-The CARC uses the Slurm job scheduling system for its computing cluster. In addition to the [Running Jobs user guide](/user-information/user-guides/high-performance-computing/discovery/running-jobs), official Slurm documentation can be found [here](https://slurm.schedmd.com/documentation.html).
+The CARC uses the Slurm job scheduling system for its computing cluster. In addition to the [Running Jobs user guide](/user-information/user-guides/high-performance-computing/running-jobs), official Slurm documentation can be found [here](https://slurm.schedmd.com/documentation.html).
 
 ### Programming language documentation
 

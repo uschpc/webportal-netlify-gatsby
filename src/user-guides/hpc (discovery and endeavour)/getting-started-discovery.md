@@ -4,7 +4,7 @@ id: 1
 date: 2020-08-13T12:00:00.387Z
 title: Getting Started with Discovery
 path: getting-started-discovery
-parentPath: user-information/user-guides/high-performance-computing/discovery
+parentPath: user-information/user-guides/high-performance-computing
 cat: discoveryGuides
 parentPage: User Guides
 sideMenuParent: High-Performance Computing
@@ -16,7 +16,7 @@ This guide will help you get started with the Center for Advanced Research Compu
 
 A CARC account is **required** to log in to and use CARC resources. For information on applying for a CARC account, see the [Accounts and Allocations page](/user-information/accounts).
 
-If your project is located on the Endeavour condo cluster and not Discovery, see the [Getting Started with Endeavour user guide](/user-information/user-guides/high-performance-computing/discovery/getting-started-endeavour). However, the contents of this Discovery guide will still be largely relevant to work on Endeavour, with the exception of the login node.
+If your project is located on the Endeavour condo cluster and not Discovery, see the [Getting Started with Endeavour user guide](/user-information/user-guides/high-performance-computing/getting-started-endeavour). However, the contents of this Discovery guide will still be largely relevant to work on Endeavour, with the exception of the login node.
 
 ### Overview
 
@@ -128,7 +128,7 @@ A project directory can be located by typing:
 /project/<PI_name>_xxx
 ```
 
-`<PI_name>` is the username of the project owner, and `xxx` is a 2 or 3 digit project ID number. You can also find the project ID and path on the project page in the [User Portal](/user-information/user-guides/high-performance-computing/research-computing-user-portal).
+`<PI_name>` is the username of the project owner, and `xxx` is a 2 or 3 digit project ID number. You can also find the project ID and path on the project page in the [User Portal](/user-information/user-guides/research-computing-user-portal).
 
 To create your own subdirectory within your project's directory:
 
@@ -230,7 +230,7 @@ module load python
 
 This loads the default version of Python. Then, for example, enter `python` to begin an interactive Python session.
 
-For more information on the software module system, see our [Software Module System user guide](/user-information/user-guides/high-performance-computing/discovery/lmod).
+For more information on the software module system, see our [Software Module System user guide](/user-information/user-guides/high-performance-computing/lmod).
 
 #### Installing your own software
 
@@ -248,7 +248,7 @@ Because the Discovery computing cluster is a shared system, we use a **job sched
 - Allocates user-requested computing resources
 - Processes user-submitted jobs
 
-For more information on creating and submitting Slurm job scripts, see the [Running Jobs user guide](/user-information/user-guides/high-performance-computing/discovery/running-jobs). A listing of common Slurm commands can be found [here](https://slurm.schedmd.com/pdfs/summary.pdf).
+For more information on creating and submitting Slurm job scripts, see the [Running Jobs user guide](/user-information/user-guides/high-performance-computing/running-jobs). A listing of common Slurm commands can be found [here](https://slurm.schedmd.com/pdfs/summary.pdf).
 
 The compute resources on Discovery are shared across many projects and users. When a user submits a job with Slurm, resources are divided using a using a fair share algorithm. This table summarizes the most important resource limits for jobs on the Discovery cluster:
 
@@ -335,7 +335,7 @@ Submitted jobs are processed remotely. The process is recorded and written to an
 less slurm-<jobid>.out`.
 ```
 
-For more information on creating and submitting Slurm job scripts, see the [Running Jobs user guide](/user-information/user-guides/high-performance-computing/discovery/running-jobs).
+For more information on creating and submitting Slurm job scripts, see the [Running Jobs user guide](/user-information/user-guides/high-performance-computing/running-jobs).
 
 ### Monitoring your job
 

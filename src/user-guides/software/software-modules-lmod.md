@@ -3,7 +3,6 @@ author: Andrea Renney
 id: 1
 date: 2020-11-02T00:00:00.000Z
 title: Software Module System
-alternativeTitle: Software Module System
 path: lmod
 parentPath: user-information/user-guides/software-and-programming
 cat: software

@@ -22,7 +22,7 @@ CARC systems are accessed using your USC NetID and password, so there is no addi
 
 Duo Two-Factor Authentication is also required. If you have not already signed up for Duo on your USC NetID account, please visit [this page](https://itservices.usc.edu/duo/enroll) to enroll.
 
-Access to and use of resources is based on participation in projects. Project setup and resource allocation requests must be made by a project's PI using the [Research Computing User Portal](https://hpcaccount.usc.edu/). Detailed instructions for project and resource management are available in the [Research Computing User Portal user guides](/user-information/user-guides/high-performance-computing/research-computing-user-portal).
+Access to and use of resources is based on participation in projects. Project setup and resource allocation requests must be made by a project's PI using the [Research Computing User Portal](https://hpcaccount.usc.edu/). Detailed instructions for project and resource management are available in the [Research Computing User Portal user guides](/user-information/user-guides/research-computing-user-portal).
 
 ### Principal Investigator (PI) eligibility
 
@@ -40,7 +40,7 @@ The class allocation supports academic classes with limited size and timeline. I
 
 #### Graduate student project (GSP) allocations
 
-The graduate student project (GSP) allocation supports up to 100,000 SUs and is designed for students who conduct research work that is separate from a PI's main research project. A PI can create a project for a student and request a new GSP allocation for it in the [Research Computing User Portal](/user-information/user-guides/high-performance-computing/research-computing-user-portal). A student seeking a GSP allocation still requires their PI/advisor to create the project and request the allocation for them, as only a PI can do this. 
+The graduate student project (GSP) allocation supports up to 100,000 SUs and is designed for students who conduct research work that is separate from a PI's main research project. A PI can create a project for a student and request a new GSP allocation for it in the [Research Computing User Portal](/user-information/user-guides/research-computing-user-portal). A student seeking a GSP allocation still requires their PI/advisor to create the project and request the allocation for them, as only a PI can do this. 
 
 > Note: This allocation was designed for graduate students, but a PI may also create this allocation for undergraduate students that they advise.
 
@@ -66,7 +66,7 @@ If more than 10 TB is needed, a PI can request additional storage space through 
 
 >20 TB per year = 10 TB free + (2 x $200/5 TB/year) = $400 annual cost
 
-If you're requesting a **new storage allocation** and require more than 10 TB, you can request your allocation in the [User Portal](http://hpcaccount.usc.edu) and indicate the amount of storage you need (in 5 TB increments). See the [Request New Allocation user guide](/user-information/user-guides/high-performance-computing/research-computing-user-portal/request-new-allocation) for more information.
+If you're requesting a **new storage allocation** and require more than 10 TB, you can request your allocation in the [User Portal](http://hpcaccount.usc.edu) and indicate the amount of storage you need (in 5 TB increments). See the [Request New Allocation user guide](/user-information/user-guides/research-computing-user-portal/request-new-allocation) for more information.
 
 If you have an **existing storage allocation** but would like to increase the amount of storage, please [submit a help ticket](/user-information/ticket-submission) under the "Accounts/Access" category. Please include your project ID, desired allocation size, and reason for this increase. The CARC team will consult with you to determine your needs and the total cost.
 
@@ -74,7 +74,7 @@ If you have an **existing storage allocation** but would like to increase the am
 
 The duration of computing and storage resource allocations is  one year. Each year, PIs must renew their projects and associated allocations in the Research Computing User Portal. Changes to allocation sizes or types can be made during this renewal. Failure to apply for a renewal will result in the deletion of all data and the space will become available for use by other users.
 
-For more information on yearly project renewals, see the [Yearly Project Renewal user guide](/user-information/user-guides/high-performance-computing/research-computing-user-portal/yearly-project-renewal).
+For more information on yearly project renewals, see the [Yearly Project Renewal user guide](/user-information/user-guides/research-computing-user-portal/yearly-project-renewal).
 
 ### Condo Cluster Program (CCP) 
 

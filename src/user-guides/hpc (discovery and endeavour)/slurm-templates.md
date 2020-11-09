@@ -4,7 +4,7 @@ id: 8
 date: 2020-08-31T12:00:00.387Z
 title: Slurm Job Script Templates
 path: slurm-templates
-parentPath: user-information/user-guides/high-performance-computing/discovery
+parentPath: user-information/user-guides/high-performance-computing
 cat: discoveryGuides
 parentPage: User Guides
 sideMenuParent: High-Performance Computing
@@ -14,7 +14,7 @@ excerpt: Templates for common Slurm job scripts.
 
 The following sections offer Slurm job script templates and descriptions for various use cases on CARC HPC clusters.
 
-If you're not familiar with the Slurm job scheduler or submitting jobs, please see the [Getting Started with Discovery](/user-information/user-guides/high-performance-computing/discovery/getting-started-discovery) and [Running Jobs](/user-information/user-guides/high-performance-computing/discovery/running-jobs) user guides.
+If you're not familiar with the Slurm job scheduler or submitting jobs, please see the [Getting Started with Discovery](/user-information/user-guides/high-performance-computing/getting-started-discovery) and [Running Jobs](/user-information/user-guides/high-performance-computing/running-jobs) user guides.
 
 > Note: We use CPU, core, and thread interchangeably here, because they are equivalent on CARC systems:  
 1 CPU = 1 core = 1 thread.
@@ -98,7 +98,7 @@ cd ${SLURM_SUBMIT_DIR}
 
 ### MPI jobs
 
-The Message Passing Interface (MPI) is a message-passing standard used in parallel programming, primarily when using multiple compute nodes. For more information, see the [Message Passing Interface (MPI) user guide](/user-information/user-guides/high-performance-computing/discovery/mpi).
+The Message Passing Interface (MPI) is a message-passing standard used in parallel programming, primarily when using multiple compute nodes. For more information, see the [Message Passing Interface (MPI) user guide](/user-information/user-guides/high-performance-computing/mpi).
 
 An example job script:
 
@@ -197,7 +197,7 @@ In this case, `myprogram` only needs 1 CPU with 2 GB of memory.
 
 ### GPU jobs
 
-Some programs can take advantage of the unique hardware architecture in a graphics processing unit (GPU). GPUs can be used for specialized scientific computing work, including 3D modelling and machine learning. For more information, see the user guide for [Using GPUs](/user-information/user-guides/high-performance-computing/discovery/using-gpus).
+Some programs can take advantage of the unique hardware architecture in a graphics processing unit (GPU). GPUs can be used for specialized scientific computing work, including 3D modelling and machine learning. For more information, see the user guide for [Using GPUs](/user-information/user-guides/high-performance-computing/using-gpus).
 
 To request a GPU, add one of the following lines to your Slurm job script:
 

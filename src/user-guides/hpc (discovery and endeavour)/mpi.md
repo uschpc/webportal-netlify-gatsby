@@ -4,7 +4,7 @@ id: 10
 date: 2020-08-04T12:00:00
 title: Message Passing Interface (MPI)
 path: mpi
-parentPath: user-information/user-guides/high-performance-computing/discovery
+parentPath: user-information/user-guides/high-performance-computing
 cat: discoveryGuides
 parentPage: User Guides
 sideMenuParent: High-Performance Computing

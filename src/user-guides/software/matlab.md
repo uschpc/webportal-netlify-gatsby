@@ -3,7 +3,6 @@ author: Marco Olguin
 id: 5
 date: 2020-08-13T12:00:00.387Z
 title: Using MATLAB
-alternativeTitle: MATLAB
 path: matlab
 parentPath: user-information/user-guides/software-and-programming
 cat: software
@@ -16,7 +15,7 @@ excerpt: A user guide for MATLAB, a proprietary scientific computing language an
 
 ### Using MATLAB
 
-Begin by logging in. You can find instructions for this in the [Getting Started with Discovery](/user-information/user-guides/high-performance-computing/discovery/getting-started-discovery) or [Getting Started with Endeavour](/user-information/user-guides/high-performance-computing/discovery/getting-started-endeavour) user guides.
+Begin by logging in. You can find instructions for this in the [Getting Started with Discovery](/user-information/user-guides/high-performance-computing/getting-started-discovery) or [Getting Started with Endeavour](/user-information/user-guides/high-performance-computing/getting-started-endeavour) user guides.
 
 To use MATLAB, load the corresponding module:
 
@@ -88,7 +87,7 @@ Each line is described below:
 |`--mem-per-cpu=10GB` |  Reserves 10 GB per CPU of memory for your exclusive use|
 |`--time=1:00:00` | Reserves resources described for 1 hour|
 |`--account=<account_id>` | Charge compute time to <account_id>. If not specified, you may use up the wrong PI's compute hours|
-|`module load matlab` | Load the `matlab` [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
+|`module load matlab` | Load the `matlab` [environment module](/user-information/user-guides/high-performance-computing/lmod)|
 |`matlab -r 'simple_plot'` | Use `matlab` to run `simple_plot.m`|
 
 You can use the folloiwng `simple_plot.m` as an example:

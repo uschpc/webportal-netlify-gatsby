@@ -4,11 +4,11 @@ id: 6
 date: 2020-11-02T00:00:00.000Z
 title: Software Module System
 path: lmod
-parentPath: user-information/user-guides/high-performance-computing/discovery
+parentPath: user-information/user-guides/high-performance-computing
 cat: discoveryGuides
 parentPage: User Guides
 backToTopBtnFlag: true
-sideMenuParent: Discovery
+sideMenuParent: High-Performance Computing
 excerpt: An introduction to the software module system on CARC systems.
 ---
 

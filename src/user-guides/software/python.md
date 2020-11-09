@@ -3,7 +3,6 @@ author: Ryan Sim
 id: 2
 date: 2020-10-12T00:00:00.000Z
 title: Using Python
-alternativeTitle: Python
 path: python
 parentPath:  user-information/user-guides/software-and-programming
 cat: software
@@ -16,7 +15,7 @@ excerpt: A user guide for Python, an open-source, general purpose programming la
 
 ### Using Python on CARC systems
 
-Begin by logging in. You can find instructions for this in the [Getting Started with Discovery](/user-information/user-guides/high-performance-computing/discovery/getting-started-discovery) or [Getting Started with Endeavour](/user-information/user-guides/high-performance-computing/discovery/getting-started-endeavour) user guides.
+Begin by logging in. You can find instructions for this in the [Getting Started with Discovery](/user-information/user-guides/high-performance-computing/getting-started-discovery) or [Getting Started with Endeavour](/user-information/user-guides/high-performance-computing/getting-started-endeavour) user guides.
 
 To use Python, load the corresponding module:
 
@@ -163,8 +162,8 @@ Each line is described below:
 |`--mem-per-cpu=10GB` |  Reserves 10 GB per CPU of memory for your exclusive use|
 |`--time=1:00:00` | Reserves resources described for 1 hour|
 |`--account=<account_id>` | Charges compute time to <account_id>. If not specified, you may use up the wrong PI's compute hours|
-|`module load gcc/8.3.0` | Load the `gcc` compiler [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
-|`module load python/3.7.6` | Load the `python` [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
+|`module load gcc/8.3.0` | Load the `gcc` compiler [environment module](/user-information/user-guides/high-performance-computing/lmod)|
+|`module load python/3.7.6` | Load the `python` [environment module](/user-information/user-guides/high-performance-computing/lmod)|
 |`python /path/to/script.py` | Use `python` to run `script.py`|
 
 Save this Slurm script as `python.slurm`, for example, and then submit it to the job scheduler like so:

@@ -17,9 +17,9 @@ High-performance computing (HPC) aggregates the resources from individual comput
 
 #### Discovery
 
-Discovery is the CARC's general-purpose HPC cluster, and it is free to use for all CARC users. Any CARC user, including Condo Cluster Program users, can use Discovery. For more information on Discovery and how to get started, see the [Getting Started with Discovery user guide](/user-information/user-guides/high-performance-computing/discovery/getting-started-discovery).
+Discovery is the CARC's general-purpose HPC cluster, and it is free to use for all CARC users. Any CARC user, including Condo Cluster Program users, can use Discovery. For more information on Discovery and how to get started, see the [Getting Started with Discovery user guide](/user-information/user-guides/high-performance-computing/getting-started-discovery).
 
 #### Endeavour
 
-Endeavour is the CARC's condo HPC cluster. As part of the Condo Cluster Program (CCP), researchers can lease/subscribe to their own dedicated compute and storage nodes. The CCP gives researchers the convenience of having their own dedicated compute nodes, without the responsibility of purchasing and maintaining the nodes themselves. For more information on the CCP, see the [Condo Cluster Program pages](/user-information/ccp) and the [Getting Started with Endeavour user guide](/user-information/user-guides/high-performance-computing/discovery/getting-started-endeavour).
+Endeavour is the CARC's condo HPC cluster. As part of the Condo Cluster Program (CCP), researchers can lease/subscribe to their own dedicated compute and storage nodes. The CCP gives researchers the convenience of having their own dedicated compute nodes, without the responsibility of purchasing and maintaining the nodes themselves. For more information on the CCP, see the [Condo Cluster Program pages](/user-information/ccp) and the [Getting Started with Endeavour user guide](/user-information/user-guides/high-performance-computing/getting-started-endeavour).
 

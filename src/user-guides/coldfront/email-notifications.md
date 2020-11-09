@@ -1,7 +1,7 @@
 ---
 excerpt: Email notifications for CARC's user portal.
 path: email-notifications
-parentPath: user-information/user-guides/high-performance-computing/research-computing-user-portal
+parentPath: user-information/user-guides/research-computing-user-portal
 author: Yaseen A.
 date: 2020-11-04T00:00:00.000Z
 cat: coldFront

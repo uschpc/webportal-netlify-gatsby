@@ -5,9 +5,9 @@ date: 2020-10-21T00:00:00.000Z
 title: Getting Started with Endeavour (Condo Cluster Program)
 excerpt: A getting started guide for Endeavour, the CARC's condo cluster.
 path: getting-started-endeavour
-parentPath: user-information/user-guides/high-performance-computing/discovery
+parentPath: user-information/user-guides/high-performance-computing
 cat: discoveryGuides
-sideMenuParent: Discovery
+sideMenuParent: High-Performance Computing
 backToTopBtnFlag: true
 parentPage: User Guides
 ---
@@ -133,7 +133,7 @@ An overview of the different storage directories available to you, and instructi
 [Software and Programming](/user-information/user-guides/software-and-programming)  
 Information on the software available on Endeavour, as well as instructions for installing your own software.
 
-The [Research Computing User Portal user guides](/user-information/user-guides/high-performance-computing/research-computing-user-portal) provide instructions for using the CARC user portal to create and manage research projects, add or remove project users, and submit your annual project renewal. 
+The [Research Computing User Portal user guides](/user-information/user-guides/research-computing-user-portal) provide instructions for using the CARC user portal to create and manage research projects, add or remove project users, and submit your annual project renewal. 
 
 >Our main user guides page can be accessed [here](/user-information/user-guides).
 

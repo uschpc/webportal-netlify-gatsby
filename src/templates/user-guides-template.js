@@ -74,7 +74,7 @@ export default function Template({ data }) {
                       {items.map ((item, i) => {
                         return (
                           <Link key={i} className="coldfront-menu-items" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`}>
-                              <li>{item.node.frontmatter.alternativeTitle}</li>
+                              <li>{item.node.frontmatter.title}</li>
                           </Link>
                           )
                       })}
@@ -199,7 +199,7 @@ export const coldFrontQuery = graphql`
         edges {
           node {
             frontmatter {
-              alternativeTitle
+              title
               path
               parentPath
               cat

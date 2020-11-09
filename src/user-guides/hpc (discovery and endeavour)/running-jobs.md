@@ -4,7 +4,7 @@ id: 7
 date: 2020-08-13T12:00:00.387Z
 title: Running Jobs on the Cluster
 path: running-jobs
-parentPath: user-information/user-guides/high-performance-computing/discovery
+parentPath: user-information/user-guides/high-performance-computing
 cat: discoveryGuides
 parentPage: User Guides
 sideMenuParent: High-Performance Computing

@@ -3,7 +3,6 @@ author: Derek Strong
 id: 3
 date: 2020-10-12T12:00:00.387Z
 title: Using Anaconda
-alternativeTitle: Anaconda
 path: anaconda
 parentPath: user-information/user-guides/software-and-programming
 cat: software
@@ -16,7 +15,7 @@ excerpt: A user guide for Anaconda, a package and environment manager.
 
 ### Using Anaconda
 
-Begin by logging in. You can find instructions for this in the [Getting Started with Discovery](/user-information/user-guides/high-performance-computing/discovery/getting-started-discovery) or [Getting Started with Endeavour](/user-information/user-guides/high-performance-computing/discovery/getting-started-endeavour) user guides.
+Begin by logging in. You can find instructions for this in the [Getting Started with Discovery](/user-information/user-guides/high-performance-computing/getting-started-discovery) or [Getting Started with Endeavour](/user-information/user-guides/high-performance-computing/getting-started-endeavour) user guides.
 
 To use Anaconda, first load the corresponding module:
 
@@ -220,8 +219,8 @@ Each line is described below:
 |`--mem=16GB` |  Reserves 16 GB of memory for your exclusive use|
 |`--time=1:00:00` | Reserves resources described for 1 hour|
 |`--account=<account_id>` | Charges compute time to <account_id>. If not specified, you may use up the wrong PI's compute hours|
-|`module load gcc/8.3.0` | Load the `gcc` compiler [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
-|`module load anaconda3` | Load the `anaconda3` [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
+|`module load gcc/8.3.0` | Load the `gcc` compiler [environment module](/user-information/user-guides/high-performance-computing/lmod)|
+|`module load anaconda3` | Load the `anaconda3` [environment module](/user-information/user-guides/high-performance-computing/lmod)|
 |`eval "$(conda shell.bash hook)"` | Initialize the shell to use Conda|
 |`conda activate env` | Activate your Conda environment|
 |`python /path/to/script.py` | Use `python` to run `script.py`|
