@@ -52,36 +52,6 @@ A condo purchase request is possible during the CARC's annual condo purchase req
 
 > The CARC is still in the process of preparing for the annual condo purchase request period for 2020. Once the request period opens, PIs will use the [User Portal](/user-information/user-guides/research-computing-user-portal) to select and purchase their desired condo resources.
 
-The following table summarizes the CPU and GPU nodes that will be available for purchase using the traditional purchase model:
-
-#### CPU nodes
-
-| CPU | CPU quantity | Memory (GB) | GPU | GPU quantity |
-|-|-|-|-|-|
-| AMD EPYC 7542 2.90GHz, 32C/64T, 128M Cache | 2 | 256 GB | N/A | N/A |
-| AMD EPYC 7542 2.90GHz, 32C/64T, 128M Cache | 2 | 512 GB | N/A | N/A |
-| --- |  |  |  |  |
-| Intel Xeon Gold 6248R Processor 24-Core 3.0GHz 35.75MB Cache (205W) | 2 | 192 GB | N/A | N/A |
-| Intel Xeon Gold 6248R Processor 24-Core 3.0GHz 35.75MB Cache (205W) | 2 | 384 GB | N/A | N/A |
-
-#### GPU nodes
-
-| CPU | CPU quantity | Memory (GB) | GPU | GPU quantity |
-|-|-|-|-|-|
-| AMD EPYC 7282 Processor 16-core 2.80GHz 64MB Cache (120W) | 1 | 128 GB | RTX 4000 | 2 |
-| AMD EPYC 7282 Processor 16-core 2.80GHz 64MB Cache (120W) | 1 | 128 GB | RTX 5000 | 2 |
-| AMD EPYC 7282 Processor 16-core 2.80GHz 64MB Cache (120W) | 2 | 256 GB | RTX 5000 | 4 |
-| --- |  |  |  |  |
-| AMD EPYC 7532 Processor 32-core 2.40GHz 256MB Cache (200W) | 2 | 256 GB | V100s | 2 |
-| AMD EPYC 7532 Processor 32-core 2.40GHz 256MB Cache (200W) | 2 | 256 GB | V100s | 4 |
-| AMD EPYC 7532 Processor 32-core 2.40GHz 256MB Cache (200W) | 2 | 256 GB | A100 | 2 |
-| --- |  |  |  |  |
-| Intel Xeon Silver 4216 Processor 16-Core 2.1GHz 22MB Cache (100W) | 1 | 192 GB | RTX 4000 | 2 |
-| Intel Xeon Silver 4216 Processor 16-Core 2.1GHz 22MB Cache (100W) | 1 | 192 GB | RTX 5000 | 2 |
-| Intel Xeon Silver 4216 Processor 16-Core 2.1GHz 22MB Cache (100W) | 2 | 192 GB | RTX 5000 | 4 |
-| --- |  |  |  |  |
-| Intel Xeon Gold 6248R Processor 24-Core 3.0GHz 35.75MB Cache (205W) | 2 | 192 GB | V100s | 2 |
-
 ### Storage resources
 
 While the Endeavour condo cluster is a separate system from the general use Discovery cluster, all of the CARC’s [storage file systems](/user-information/user-guides/data-management/storage-file-systems) are mounted on Endeavour and are accessible from its login (endeavour.usc.edu) and compute nodes.

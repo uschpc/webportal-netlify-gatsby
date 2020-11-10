@@ -174,7 +174,7 @@ Remember to always transfer files into your home or scratch directories where yo
 
 There are a number of ways to transfer files between your local machine and Discovery. These include the commands `sftp`, `scp`, or `rsync` as well as GUI apps like Cyberduck or FileZilla.
 
-For more information on transferring files between your local machine and the Discovery cluster, see the [Data Management user guides](/user-information/user-guides/data-management).
+For more information on transferring files between your local machine and the Discovery cluster, see the [Data Management and File Transfers user guides](/user-information/user-guides/data-management).
 
 #### From the web to Discovery
 
@@ -204,7 +204,7 @@ To edit an existing file, enter the editor name as the command and then the path
 nano script.R
 ```
 
-For detailed instructions on transferring files, see the [Data Management user guides](/user-information/user-guides/data-management).
+For detailed instructions on transferring files, see the [Data Management and File Transfers user guides](/user-information/user-guides/data-management).
 
 ### Installing and running software
 

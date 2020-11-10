@@ -35,7 +35,7 @@ module.exports = {
     },
     'Cluster Resources: Endeavour/Condo Cluster Program': {
         i0: 'What is the Condo Cluster Program?',
-        i1: 'What is the difference between leasing resources and subscribing to resources?',
+        i1: 'What is the difference between the subscription model and the traditional purchase model?',
         i2: 'What is the difference between the Endeavour cluster and the Discovery cluster?'
     },
     Software: {

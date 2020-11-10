@@ -2,8 +2,8 @@
 author: Andrea Renney
 id: 2
 date: 2020-06-04T00:00:00.00Z
-title: Data Management
-excerpt: Instructions on transferring files between your personal computer and CARC systems, and information on our file systems.
+title: Data Management and File Transfers
+excerpt: Information on CARC file systems and transferring files between your personal computer and CARC systems.
 thumbnail: /images/Graph.png
 featuredImage: ../../static/images/Graph.png
 path: data-management

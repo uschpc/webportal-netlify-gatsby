@@ -127,7 +127,7 @@ The following are user guides that can be applied to Endeavour:
 [High-Performance Computing](/user-information/user-guides/high-performance-computing)  
 How to log in to Discovery and Endeavour and run jobs.
 
-[Data Management](/user-information/user-guides/data-management)  
+[Data Management and File Transfers](/user-information/user-guides/data-management)  
 An overview of the different storage directories available to you, and instructions on transferring files between your personal computer and CARC systems.
 
 [Software and Programming](/user-information/user-guides/software-and-programming)  

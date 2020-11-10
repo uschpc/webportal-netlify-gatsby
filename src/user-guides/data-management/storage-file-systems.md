@@ -128,4 +128,4 @@ If you exceed the limits, you may receive a "disk quota exceeded" or similar err
 
 The `myquota` command is also useful if you forget where your directories are located.
 
-For more information on data management, see the [Data Management user guides](/user-information/user-guides/data-management).
+For more information on data management, see the [Data Management and Data Transfer user guides](/user-information/user-guides/data-management).
