@@ -24,21 +24,21 @@ Click on the "+Add a Project" button.
 
 ### Add/Create Project page
 Fill out the 4 fields:
-* Title:
+* **Title**:
   * The title of your project should be concise but descriptive of the work being done. Avoid titles such as "My project" or "Project 1".
-* Description:
+* **Description**:
   * The description should include a brief summary of the work that is being done as well as the project's goal.
-* Field of science:
+* **Field of science**:
   * This drop-down list was taken from the National Science Foundation. If your field is not listed, please choose "Other".
-* Cluster Type:
-  * **Discovery (Cluster Partition)**: CARC's main computing resource available to all USC faculty/staff and their students/collaborators. Most CARC researchers should be choosing Discovery as their cluster type.
-  * In the future we will have additional cluster options: **Condo** and **AWS Cloud**.
+* **Cluster Type**:
+  * Discovery/Endeavour: Discovery and Endeavour are the CARC's high-performance computing clusters. Discovery is the general use, free, shared cluster, and Endeavour is the [condo cluster](/user-information/ccp). Most projects will use Discovery, but both clusters are considered as one cluster type in the User Portal.
 
 and click the "Save" button.
 
 ![ColdFront Project page](/images/coldfront_addproject.png)
 
 ### Project Detail page
+
 You will then be able to view all of your project information on the Project Detail page:  
 
 ![ColdFront Project page](/images/coldfront_project_detail.gif)

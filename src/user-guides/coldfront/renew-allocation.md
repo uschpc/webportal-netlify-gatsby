@@ -32,7 +32,7 @@ Once the renewal is approved by CARC staff, the status will change to "Active" a
 
 ### Policies for the Discovery cluster
 
-Allocations for the academic (USC-HPC) cluster expire yearly.  Faculty must renew their allocation each year or access to the resource will be blocked for all group members. The CARC requires faculty to review and update their project(s) annually. If your project has not been reviewed in a year and an allocation for the project is expiring, you will be forced to complete the project review before renewing the allocation.  More details on the project review can be [found here](yearly-project-renewal).
+Allocations for the Discovery cluster expire yearly.  Faculty must renew their allocation each year or access to the resource will be blocked for all group members. The CARC requires faculty to review and update their project(s) annually. If your project has not been reviewed in a year and an allocation for the project is expiring, you will be forced to complete the project review before renewing the allocation.  More details on the project review can be [found here](yearly-project-renewal).
 
 ### Policies for storage
 
