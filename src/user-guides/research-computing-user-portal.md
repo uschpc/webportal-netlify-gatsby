@@ -14,7 +14,9 @@ parentPage: User Guides
 id: 4
 ---
 
-The CARC's **Research Computing User Portal** is how users manage their projects and allocations on CARC systems. Projects and allocations on both the general use Discovery cluster and the Endeavour condo cluster are managed in the Research Computing User Portal.
+The CARC's **Research Computing User Portal** is how users manage their projects and allocations on CARC systems. Projects and allocations on both the general use Discovery cluster and the Endeavour condo cluster are managed in the Research Computing User Portal. 
+
+For information on accessing the CARC's systems (including the User Portal) and the types of allocations available, see the [Accounts and Allocations page](/user-information/accounts).
 
 The Research Computing User Portal uses ColdFront, an open source resource allocation management tool developed by the [University at Buffalo's Center for Computational Research](http://www.buffalo.edu/ccr.html). ColdFront supports the management of resources and user allocations to those resources.  The tool allows users to request and manage the access they and their students or collaborators have to the resources in the CARC's data center.  
 

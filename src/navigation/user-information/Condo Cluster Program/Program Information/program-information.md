@@ -46,7 +46,7 @@ Subscriptions to condo compute nodes can be requested via the CARC's User Portal
 
 The second option for CCP resources is the traditional system purchase model. This is a useful option when research groups need to make a bulk purchase using a research grant or departmental budget, and it is also useful for grant proposal budget planning purposes.
 
-Like the annual subscription model, research groups will have exclusive access to the resources they purchase. Prinicpal Investigators (PIs) only need to purchase compute nodes, cables, and a 5-year manufacturer’s warranty service. Other equipment and services, including racks, network switches, power and cooling, system support, and machine room operation in our data center, is paid for by the university. 
+Like the annual subscription model, research groups will have exclusive access to the resources they purchase. Prinicpal Investigators (PIs) only need to purchase compute nodes (CPUs and/or GPUs), cables, and a 5-year manufacturer’s warranty service. Other equipment and services, including racks, network switches, power and cooling, system support, and machine room operation in our data center, is paid for by the university. 
 
 A condo purchase request is possible during the CARC's annual condo purchase request period, which will occur during the fall semester. The whole process of purchase request, system configuration, vendor selection, purchasing, system installation, and deployment typically takes six months. The purchased resources will be in service for 5 years, and after this service period, the CARC will decommission these condo nodes. 
 
