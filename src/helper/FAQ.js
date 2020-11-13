@@ -10,7 +10,7 @@ module.exports = {
         i7: 'My project collaborator is not at USC. Can they apply for an account?',
     },
     'Cluster Resources: General Questions': {
-        i0: 'How do I log in to the CARC cluster?',
+        i0: 'How do I log in to the Discovery cluster?',
         i1: 'How do I avoid getting logged out of the CARC systems due to a bad Wi-Fi connection?',
         i2: 'What shell am I using? Can I use a different shell?',
     },
@@ -32,6 +32,11 @@ module.exports = {
         i2: 'How do I share my project data with another user?',
         i3: 'How do I check if I have enough disk space?',
         i4: 'I’m running out of space. How do I check the size of my files and directories?',
+    },
+    'Cluster Resources: Endeavour/Condo Cluster Program': {
+        i0: 'What is the Condo Cluster Program?',
+        i1: 'What is the difference between the subscription model and the traditional purchase model?',
+        i2: 'What is the difference between the Endeavour cluster and the Discovery cluster?'
     },
     Software: {
         i0: 'What software is available on CARC systems?',

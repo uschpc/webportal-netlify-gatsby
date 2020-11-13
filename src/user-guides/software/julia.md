@@ -2,8 +2,7 @@
 author: Derek Strong
 id: 6
 date: 2020-08-13T12:00:00.387Z
-title: Using Julia on Discovery
-alternativeTitle: Julia
+title: Using Julia
 path: julia
 parentPath: user-information/user-guides/software-and-programming
 cat: software
@@ -14,13 +13,13 @@ excerpt: A user guide for Julia, an open-source programming language designed fo
 
 [Julia](https://www.julialang.org) is an open-source programming language designed for high-performance scientific and numerical computing.
 
-### Using Julia on Discovery
+### Using Julia
 
-Begin by logging in to Discovery. You can find instructions for this in the [Getting Started guide](/user-information/user-guides/high-performance-computing/discovery/getting-started).
+Begin by logging in. You can find instructions for this in the [Getting Started with Discovery](/user-information/user-guides/high-performance-computing/getting-started-discovery) or [Getting Started with Endeavour](/user-information/user-guides/high-performance-computing/getting-started-endeavour) user guides.
 
 You can use Julia in either interactive or batch modes. Ultimately, you will submit your Julia jobs using batch mode with Julia scripts as part of Slurm job scripts. You can use interactive mode to install packages and explore data, for example.
 
-To use Julia on Discovery, either interactively or in batch mode, first load the corresponding software module:
+To use Julia, either interactively or in batch mode, first load the corresponding software module:
 
 ```sh
 module load julia
@@ -38,7 +37,7 @@ To see all available versions of Julia, enter:
 module spider julia
 ```
 
-The Julia modules depend on the `gcc/8.3.0` module, which is loaded by default when logging in to Discovery. This module needs to be loaded first because Julia was built with the GCC 8.3.0 compiler.
+The Julia modules depend on the `gcc/8.3.0` module, which is loaded by default when logging in. This module needs to be loaded first because Julia was built with the GCC 8.3.0 compiler.
 
 In Slurm job scripts, the `gcc` module should be loaded explicitly before loading Julia:
 
@@ -51,7 +50,7 @@ When loading the Julia module, note that this only loads base Julia, so only the
 
 #### Installing a different version of Julia
 
-If you require a different version of Julia that is not currently installed on Discovery, please [submit a help ticket](/user-information/ticket-submission) and we will install it for you.
+If you require a different version of Julia that is not currently installed on CARC systems, please [submit a help ticket](/user-information/ticket-submission) and we will install it for you.
 
 Alternatively, you can install a different version of Julia inside your home directory from official binaries. The following steps show how to do this using Julia version 1.4.2 as an example.
 
@@ -79,7 +78,7 @@ or by exporting the path to your shell environment:
 export PATH="~/julia-1.4.2/bin:$PATH"
 ```
 
-and then simply entering `julia`. You can add this export line to your `~/.bash_profile` to automatically set it every time you log in to Discovery.
+and then simply entering `julia`. You can add this export line to your `~/.bash_profile` to automatically set it every time you log in to the cluster.
 
 ### Running Julia interactively
 
@@ -227,13 +226,13 @@ Each line is described below:
 |`--mem=16GB` |  Reserves 16 GB of memory for your exclusive use|
 |`--time=1:00:00` | Reserves resources described for 1 hour|
 |`--account=<account_id>` | Charge compute time to <account_id>. If not specified, you may use up the wrong PI's compute hours|
-|`module load gcc/8.3.0` | Load the `gcc` compiler [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
-|`module load julia/1.4.1` | Load the `julia` [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
+|`module load gcc/8.3.0` | Load the `gcc` compiler [environment module](/user-information/user-guides/high-performance-computing/lmod)|
+|`module load julia/1.4.1` | Load the `julia` [environment module](/user-information/user-guides/high-performance-computing/lmod)|
 |`julia /path/to/script.jl` | Use `julia` to run `script.jl`|
 
 You can adjust the resources requested based on your needs, but remember that fewer resources requested leads to less queue time for your job.
 
-You can develop Julia scripts and job scripts on your local machine and then transfer them to Discovery, or you can use one of the available text editors on Discovery to develop them (`nano`, `vim`, or `emacs`).
+You can develop Julia scripts and job scripts on your local machine and then transfer them to the cluster, or you can use one of the available text editors on our systems to develop them (`nano`, `vim`, or `emacs`).
 
 Save this Slurm script as `jl.job`, for example, and then submit it to the job scheduler:
 
@@ -254,7 +253,7 @@ user@discovery:~$ squeue -u user
 
 If there is no job status listed, then this means the job has completed.
 
-For more information on job status and running jobs, see the [Running Jobs guide](/user-information/user-guides/high-performance-computing/discovery/running-jobs).
+For more information on job status and running jobs, see the [Running Jobs guide](/user-information/user-guides/high-performance-computing/running-jobs).
 
 ### Additional resources
 

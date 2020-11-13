@@ -12,7 +12,7 @@ backToTopBtnFlag: true
 excerpt: Instructions for transferring your files to CARC systems using graphical tools.
 ---
 
-For many CARC users, the most convenient way to transfer files between their computer and CARC systems is to use a GUI (graphical user interface)-based SFTP client. The SFTP client is installed and run on your computer. It works by connecting to the SFTP server running on CARC systems, enabling you to transfer files back and forth. You can connect to either the main Discovery login nodes or, for better performance, the hpc-transfer1 or hpc-transfer2 nodes, which are dedicated, high-speed data transfer nodes.
+For many CARC users, the most convenient way to transfer files between their computer and CARC systems is to use a GUI (graphical user interface)-based SFTP client. The SFTP client is installed and run on your computer. It works by connecting to the SFTP server running on CARC systems, enabling you to transfer files back and forth. You can connect to either the main Discovery or Endeavour login nodes (discovery.usc.edu or endeavour.usc.edu) or, for better performance, the hpc-transfer1 or hpc-transfer2 nodes, which are dedicated, high-speed data transfer nodes.
 
 Along with USC login credentials, Duo two-factor authentication (2FA) is required for CARC access. Most third-party SSH clients can be configured to use 2FA, and to maintain an open connection so as to minimize the number of authentication requests during a transfer session. Refer to your preferred client's documentation for how to do this.
 
@@ -26,7 +26,7 @@ You can download Cyberduck from the vendor website at https://cyberduck.io/.
 
 Go to the Bookmark menu and choose New Bookmark. Save these settings:
 
-- Server: discovery.usc.edu  
+- Server: discovery.usc.edu (or endeavour.usc.edu for condo nodes)  
 - Username: Your USC NetID/username  
 - (Optional) SSH Private Key: The path to your private key (usually ~/.ssh/id_rsa)
 
@@ -61,7 +61,7 @@ Make sure to download the FileZilla client, *not* the FileZilla server. Once the
 For convenience, you can click the Rename button to name the site something memorable. Apply these settings:
 
 - Protocol: SFTP – SSH File Transfer Protocol
-- Host: discovery.usc.edu
+- Host: discovery.usc.edu (or endeavour.usc.edu for condo nodes)
 - Logon Type: Interactive
 - User: Your USC NetID/username
 
@@ -84,7 +84,7 @@ You will be prompted for a password again, but what the program really wants is 
 
 ![Filezilla Duo push](/images/hpc-file-transfer-gfx/fz-snip4.png)
 
-Once the authentication goes through, you will be logged in to your home directory on Discovery, with your local laptop or PC folders on the left, and your Linux home directory structure on the right.
+Once the authentication goes through, you will be logged in to your home directory on Discovery (or Endeavour, if applicable), with your local laptop or PC folders on the left, and your Linux home directory structure on the right.
 
 > Note: Upon connecting for the first time, you may receive a pop-up asking you to accept a server key. Accept the server key if you encounter this.
 

@@ -4,7 +4,7 @@ id: 7
 date: 2020-07-08T00:00:00.000Z
 title: Managing Allocations
 path: managing-allocations
-parentPath: user-information/user-guides/high-performance-computing/research-computing-user-portal
+parentPath: user-information/user-guides/research-computing-user-portal
 cat: coldFront
 parentPage: User Guides
 sideMenuParent: Research Computing User Portal
@@ -18,7 +18,8 @@ Each type of resource offered by the CARC has a different expiration policy.
 
 For example:
 * Allocations to the Discovery cluster expire annually
-* Allocations to private condo clusters expire every 5 years (or when the hardware warranty expires)
+* Allocations to subscription-based condo resources expire annually, and must be renewed to continue the subscription term
+* Allocations to traditional purchase condo resources expire every 5 years (or when the hardware warranty expires)
 * Allocations to cloud computing resources expire when the compute time is used up
 
 PIs and any users they authorize as "managers" on their projects are the only people that can renew an allocation.  

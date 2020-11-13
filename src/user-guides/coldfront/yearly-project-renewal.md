@@ -5,7 +5,7 @@ date: 2020-07-08T00:00:00.000Z
 title: Yearly Project Renewal
 path: yearly-project-renewal
 route: User Guides
-parentPath: user-information/user-guides/high-performance-computing/research-computing-user-portal
+parentPath: user-information/user-guides/research-computing-user-portal
 cat: coldFront
 parentPage: User Guides
 sideMenuParent: Research Computing User Portal

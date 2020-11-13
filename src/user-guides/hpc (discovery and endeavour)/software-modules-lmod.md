@@ -1,24 +1,24 @@
 ---
 author: Ryan Sim
-id: 4
+id: 6
 date: 2020-11-02T00:00:00.000Z
 title: Software Module System
 path: lmod
-parentPath: user-information/user-guides/high-performance-computing/discovery
+parentPath: user-information/user-guides/high-performance-computing
 cat: discoveryGuides
 parentPage: User Guides
 backToTopBtnFlag: true
-sideMenuParent: Discovery
-excerpt: An introduction to the software module system on Discovery.
+sideMenuParent: High-Performance Computing
+excerpt: An introduction to the software module system on CARC systems.
 ---
 
-On Discovery, users can find and load software using the [Lmod](https://lmod.readthedocs.io/en/latest/) **module system**. Lmod dynamically changes your shell environment using **module files** to ensure the software applications and libraries you use are compatible. Module files are configuration files, written as Lua scripts, that instruct how to make an application or library available during your session. Typically, a module file contains instructions to initialize or modify environment variables, such as `PATH`.
+On the Discovery cluster and the Endeavour condo cluster, users can find and load software using the [Lmod](https://lmod.readthedocs.io/en/latest/) **module system**. Lmod dynamically changes your shell environment using **module files** to ensure the software applications and libraries you use are compatible. Module files are configuration files, written as Lua scripts, that instruct how to make an application or library available during your session. Typically, a module file contains instructions to initialize or modify environment variables, such as `PATH`.
 
 Using a module system like Lmod is helpful because applications and libraries compiled with one compiler are not necessarily compatible with applications and libraries compiled with a different compiler, and your shell environment must be changed to accommodate these incompatibilities. **With Lmod, resetting your environment is done dynamically when you load new modules**. Loading a module will make available only compatible software for you to use. In this way, modules are organized in a hierarchy based on compilers.
 
 ###  Finding software
 
-When you log in to Discovery, we automatically load a module named `usc` for you, which is actually a collection of modules. You can enter the `module list` command to view them:
+When you log in, we automatically load a module named `usc` for you, which is actually a collection of modules. You can enter the `module list` command to view them:
 
 ```sh
 user@discovery1:~$ module list

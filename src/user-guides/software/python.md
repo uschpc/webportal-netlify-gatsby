@@ -2,8 +2,7 @@
 author: Ryan Sim
 id: 2
 date: 2020-10-12T00:00:00.000Z
-title: Using Python on Discovery
-alternativeTitle: Python
+title: Using Python
 path: python
 parentPath:  user-information/user-guides/software-and-programming
 cat: software
@@ -14,9 +13,9 @@ excerpt: A user guide for Python, an open-source, general purpose programming la
 
 [Python](https://www.python.org/) is an open-source, general purpose programming language whose strength comes in the tools and libraries that are associated with it.
 
-### Using Python on Discovery
+### Using Python on CARC systems
 
-Begin by logging in to Discovery. You can find instructions for this in the [Getting Started guide](/user-information/user-guides/high-performance-computing/discovery/getting-started).
+Begin by logging in. You can find instructions for this in the [Getting Started with Discovery](/user-information/user-guides/high-performance-computing/getting-started-discovery) or [Getting Started with Endeavour](/user-information/user-guides/high-performance-computing/getting-started-endeavour) user guides.
 
 To use Python, load the corresponding module:
 
@@ -38,15 +37,15 @@ module spider python
 
 #### Installing a different version of Python
 
-If you want to use a different version of Python that is not currently installed on Discovery, please [submit a help ticket](/user-information/ticket-submission) and we will install it for you. Alternatively, you can compile and install a different version of Python from source in your home or project directory.
+If you want to use a different version of Python that is not currently installed on CARC systems, please [submit a help ticket](/user-information/ticket-submission) and we will install it for you. Alternatively, you can compile and install a different version of Python from source in your home or project directory.
 
 #### Pre-installed packages
 
-Many popular Python packages have already been installed on Discovery. Use the `pip3 list` command to view them. You can install other Python packages that you need in your home directory (see section below).
+Many popular Python packages have already been installed on CARC systems. Use the `pip3 list` command to view them. You can install other Python packages that you need in your home directory (see section below).
 
 #### Jupyter notebooks
 
-Please note that we do not currently support the use of Jupyter notebooks on Discovery. We will add support for Jupyter later in 2020 as part of a new hybrid cloud computing system.
+Please note that we do not currently support the use of Jupyter notebooks on our systems. We will add support for Jupyter later in 2020 as part of a new hybrid cloud computing system.
 
 ### Installing Python packages
 
@@ -76,7 +75,7 @@ where `<project_id>` is your project's account ID. To load packages from this lo
 export PYTHONPATH=/project/<project_id>/python/pkgs:${PYTHONPATH}
 ```
 
-To automatically set this variable when logging in to Discovery, add this line to your `~/.bash_profile`. Additionally, add this line to your Slurm job scripts that depend on the packages installed in this location.
+To automatically set this variable when logging in to the cluster, add this line to your `~/.bash_profile`. Additionally, add this line to your Slurm job scripts that depend on the packages installed in this location.
 
 #### Creating virtual environments
 
@@ -163,8 +162,8 @@ Each line is described below:
 |`--mem-per-cpu=10GB` |  Reserves 10 GB per CPU of memory for your exclusive use|
 |`--time=1:00:00` | Reserves resources described for 1 hour|
 |`--account=<account_id>` | Charges compute time to <account_id>. If not specified, you may use up the wrong PI's compute hours|
-|`module load gcc/8.3.0` | Load the `gcc` compiler [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
-|`module load python/3.7.6` | Load the `python` [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
+|`module load gcc/8.3.0` | Load the `gcc` compiler [environment module](/user-information/user-guides/high-performance-computing/lmod)|
+|`module load python/3.7.6` | Load the `python` [environment module](/user-information/user-guides/high-performance-computing/lmod)|
 |`python /path/to/script.py` | Use `python` to run `script.py`|
 
 Save this Slurm script as `python.slurm`, for example, and then submit it to the job scheduler like so:

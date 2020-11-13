@@ -2,8 +2,7 @@
 author: Derek Strong
 id: 4
 date: 2020-06-04T12:00:00.387Z
-title: Using R on Discovery
-alternativeTitle: R
+title: Using R
 path: r
 parentPath: user-information/user-guides/software-and-programming
 cat: software
@@ -14,13 +13,13 @@ excerpt: A user guide for R, an open-source programming environment and language
 
 [R](https://www.r-project.org) is an open-source programming environment and language designed for statistical computing and graphics.
 
-### Using R on Discovery
+### Using R
 
-Begin by logging in to Discovery. You can find instructions for this in the [Getting Started guide](/user-information/user-guides/high-performance-computing/discovery/getting-started).
+Begin by logging in. You can find instructions for this in the [Getting Started with Discovery](/user-information/user-guides/high-performance-computing/getting-started-discovery) or [Getting Started with Endeavour](/user-information/user-guides/high-performance-computing/getting-started-endeavour) user guides.
 
 You can use R in either interactive or batch modes. Ultimately, you will submit your R jobs using batch mode with R scripts as part of Slurm job scripts. You can use interactive mode to install packages and explore data, for example.
 
-To use R on Discovery, either interactively or in batch mode, first load the corresponding software module:
+To use R, either interactively or in batch mode, first load the corresponding software module:
 
 ```sh
 module load r
@@ -38,7 +37,7 @@ To see all available versions of R, enter:
 module spider r
 ```
 
-The R modules depend on the `gcc/8.3.0` and `openblas/0.3.8` modules, which are loaded by default when logging in to Discovery. These modules need to be loaded first because R was built with the GCC 8.3.0 compiler and linked to the OpenBLAS 0.3.8 linear algebra library for improved performance. Loading the modules also ensures that any R packages installed from source are built with these versions of GCC and OpenBLAS.
+The R modules depend on the `gcc/8.3.0` and `openblas/0.3.8` modules, which are loaded by default when logging in. These modules need to be loaded first because R was built with the GCC 8.3.0 compiler and linked to the OpenBLAS 0.3.8 linear algebra library for improved performance. Loading the modules also ensures that any R packages installed from source are built with these versions of GCC and OpenBLAS.
 
 In Slurm job scripts, the `gcc` and `openblas` modules should be loaded explicitly before loading R:
 
@@ -50,15 +49,15 @@ module load r/4.0.0
 
 #### Installing a different version of R
 
-If you require a different version of R that is not currently installed on Discovery, please [submit a help ticket](/user-information/ticket-submission) and we will install it for you. Alternatively, you can compile and install a different version of R from source inside your home directory.
+If you require a different version of R that is not currently installed on CARC systems, please [submit a help ticket](/user-information/ticket-submission) and we will install it for you. Alternatively, you can compile and install a different version of R from source inside your home directory.
 
 #### Pre-installed packages
 
-Many popular R packages have already been installed on Discovery. Use the `names(installed.packages()[ , 1])` command to view them. You can install other R packages that you need into your home directory (see section below).
+Many popular R packages have already been installed on CARC systems. Use the `names(installed.packages()[ , 1])` command to view them. You can install other R packages that you need into your home directory (see section below).
 
 #### RStudio
 
-Please note that we do not currently support the use of the RStudio IDE on Discovery. We will add support for RStudio later in 2020 as part of a new hybrid cloud computing system.
+Please note that we do not currently support the use of the RStudio IDE on our systems. We will add support for RStudio later in 2020 as part of a new hybrid cloud computing system.
 
 ### Running R interactively
 
@@ -199,7 +198,7 @@ To search for available modules for dependencies, use the `module spider <keywor
 
 #### Installing packages from Bioconductor
 
-You can install packages from [Bioconductor](https://www.bioconductor.org/) using the `BiocManager` package, which is pre-installed on Discovery, and the `BiocManager::install()` function.
+You can install packages from [Bioconductor](https://www.bioconductor.org/) using the `BiocManager` package, which is pre-installed on CARC clusters, and the `BiocManager::install()` function.
 
 For example, to install the `GenomicFeatures` package, use:
 
@@ -267,15 +266,15 @@ Each line is described below:
 |`--mem=10GB` |  Reserves 16 GB of memory for your exclusive use|
 |`--time=1:00:00` | Reserves resources described for 1 hour|
 |`--account=<account_id>` | Charge compute time to <account_id>. If not specified, you may use up the wrong PI's compute hours|
-|`module load gcc/8.3.0` | Load the `gcc` compiler [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
-|`module load openblas/0.3.8` | Load the `openblas` [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
-|`module load r/4.0.0` | Load the `r` [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod). Note that R requires both `gcc` and `openblas`|
+|`module load gcc/8.3.0` | Load the `gcc` compiler [environment module](/user-information/user-guides/high-performance-computing/lmod)|
+|`module load openblas/0.3.8` | Load the `openblas` [environment module](/user-information/user-guides/high-performance-computing/lmod)|
+|`module load r/4.0.0` | Load the `r` [environment module](/user-information/user-guides/high-performance-computing/lmod). Note that R requires both `gcc` and `openblas`|
 |`cd /home1/user/R/scripts` | Change to the directory where your R script is|
 |`Rscript --vanilla script.R` | Use `Rscript` to run `script.R`. The `--vanilla` option will ensure a clean R session that helps with the reproducibility of jobs|
 
 You can adjust the resources requested based on your needs, but remember that fewer resources requested leads to less queue time for your job. 
 
-You can develop R scripts and job scripts on your local machine and then transfer them to Discovery, or you can use one of the available text editors on Discovery to develop them (`nano`, `vim`, or `emacs`).
+You can develop R scripts and job scripts on your local machine and then transfer them to the cluster, or you can use one of the available text editors on our systems to develop them (`nano`, `vim`, or `emacs`).
 
 Save the job script as `R.job`, for example, and then submit it to the job scheduler:
 
@@ -290,7 +289,7 @@ The results of the job will be logged and, by default, saved to a file of the fo
 
 R supports both implicit and explicit parallel programming. Some packages and their functions utilize implicit parallelism, where the user does not need to explicitly call for parallel computation by modifying their code. These packages will automatically use the cores available. Linear algebra computations, for example, will use the OpenBLAS library that automatically runs in parallel if more than one core is used. In addition, there are a number of R packages that support explicit parallelism, including the base `parallel` package as well as the `foreach`, `future`, and `BiocParallel` packages among others.
 
-The easiest approach to parallel programming with R on Discovery is to use one compute node with multiple cores, which at least takes advantage of implicit parallelism. You can also use multiple nodes through an MPI job, though this requires a more advanced setup and may not be worth the cost.
+The easiest approach to parallel programming with R on CARC systems is to use one compute node with multiple cores, which at least takes advantage of implicit parallelism. You can also use multiple nodes through an MPI job, though this requires a more advanced setup and may not be worth the cost.
 
 A common task in R is applying the same function to multiple data inputs, either different samples or chunks from the same dataset, for example. Typically, this task will be accomplished through the use of the `*apply()` family of functions, which loop through the data inputs, apply the function in sequence, and then return the results (typically as a list object). The `parallel` package contains parallel versions of these functions, which will perform a certain number of these iterations simultaneously based on the number of cores available and thus speed up the time to completion.
 
@@ -299,7 +298,7 @@ The following example uses the base `parallel` package with a single node and mu
 The following is an example R script:
 
 ```r
-# Parallel computing with R on Discovery
+# Parallel computing with R on CARC clusters
 library(parallel)
   
 # Define number of cores based on Slurm job script

@@ -4,7 +4,7 @@ id: 11
 date: 2020-07-08T00:00:00.000Z
 title: Managing Grant Information
 path: managing-grant-information-in-project
-parentPath: user-information/user-guides/high-performance-computing/research-computing-user-portal
+parentPath: user-information/user-guides/research-computing-user-portal
 cat: coldFront
 parentPage: User Guides
 sideMenuParent: Research Computing User Portal

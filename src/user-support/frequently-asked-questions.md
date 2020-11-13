@@ -32,27 +32,27 @@ A quota can refer to any one of the following:
  - **File quota**: The maximum number of files you can store in your home or project directory.
  - **Compute time quota**: The maximum number of core hours available to you for running jobs.
 
-Every project is configured with default quotas. Disk and file quotas for user home directories are permanent. Project Principal Investigators (PIs) may submit a request to increase their project, file, and compute time quotas through the [Research Computing User Portal](/user-information/user-guides/high-performance-computing/research-computing-user-portal).
+Every project is configured with default quotas. Disk and file quotas for user home directories are permanent. Project Principal Investigators (PIs) may submit a request to increase their project, file, and compute time quotas through the [Research Computing User Portal](/user-information/user-guides/research-computing-user-portal).
 
 You can check the quota on your directories by running the `myquota` command while logged in to a head node.
 
 ### How do I request more compute time and/or disk space for my project?
 
-If you run out of compute time or project disk space, a PI can request an increase in the [Research Computing User Portal](/user-information/user-guides/high-performance-computing/research-computing-user-portal).
+If you run out of compute time or project disk space, a PI can request an increase in the [Research Computing User Portal](/user-information/user-guides/research-computing-user-portal).
 
-If you're requesting a **new storage allocation** and require more than 10 TB, you can request your allocation in the [User Portal](http://hpcaccount.usc.edu) and indicate the amount of storage you need (in 5 TB increments). See the [Request New Allocation user guide](/user-information/user-guides/high-performance-computing/research-computing-user-portal/request-new-allocation) for more information.
+If you're requesting a **new storage allocation** and require more than 10 TB, you can request your allocation in the [User Portal](http://hpcaccount.usc.edu) and indicate the amount of storage you need (in 5 TB increments). See the [Request New Allocation user guide](/user-information/user-guides/research-computing-user-portal/request-new-allocation) for more information.
 
 If you have an **existing storage allocation** but would like to increase the amount of storage, please [submit a help ticket](/user-information/ticket-submission) under the "Accounts/Access" category. Please include your project ID, desired allocation size, and reason for this increase. The CARC team will consult with you to determine your needs and the total cost.
 
 ### How do I add someone to my project?
 
-A PI can add users in the [Research Computing User Portal](/user-information/user-guides/high-performance-computing/research-computing-user-portal/adding-users-to-project-or-allocation).
+A PI can add users in the [Research Computing User Portal](/user-information/user-guides/research-computing-user-portal/adding-users-to-project-or-allocation).
 
 ### How long will I be able to use my CARC account? Will my account access need to be renewed?
 
 If you are a member of a CARC project, the PI for that project can remove you at any time.
 
-Before the end of each fiscal year, a PI must renew their project to keep it active. If a project is not renewed, compute hours will expire mid-July and login access will expire around August. All members of non-renewed projects will be removed in approximately mid-October. For more information, see the [Yearly Project Renewal user guide](/user-information/user-guides/high-performance-computing/research-computing-user-portal/yearly-project-renewal).
+Before the end of each fiscal year, a PI must renew their project to keep it active. If a project is not renewed, compute hours will expire mid-July and login access will expire around August. All members of non-renewed projects will be removed in approximately mid-October. For more information, see the [Yearly Project Renewal user guide](/user-information/user-guides/research-computing-user-portal/yearly-project-renewal).
 
 ### Will my account remain active if I leave USC?
 
@@ -66,7 +66,7 @@ A PI may request a USC guest account for a collaborator outside of the universit
 
 ## Cluster Resources: General Questions
 
-### How do I log in to the CARC cluster?
+### How do I log in to the Discovery cluster?
 
 To log in to the Linux-based cluster, you will need to use `ssh` to access one of Discovery's head nodes, where `<username>` is your USC NetID:
 
@@ -74,9 +74,9 @@ To log in to the Linux-based cluster, you will need to use `ssh` to access one o
 ssh <username>@discovery.usc.edu
 ```
 
-The head nodes should only be used for non-intensive work like editing and compiling programs; any computing should be done on the compute nodes. Computing jobs run on the head nodes may be terminated before they complete. To [submit jobs](/user-information/user-guides/high-performance-computing/discovery/running-jobs) to the compute nodes, use the Slurm resource manager.
+The head nodes should only be used for non-intensive work like editing and compiling programs; any computing should be done on the compute nodes. Computing jobs run on the head nodes may be terminated before they complete. To [submit jobs](/user-information/user-guides/high-performance-computing/running-jobs) to the compute nodes, use the Slurm resource manager.
 
-For more information on logging in to the cluster, see the [Getting Started with Discovery user guide](/user-information/user-guides/high-performance-computing/discovery/getting-started).
+For more information on logging in to the cluster, see the [Getting Started with Discovery user guide](/user-information/user-guides/high-performance-computing/getting-started).
 
 ### How do I avoid getting logged out of the CARC systems due to a bad Wi-Fi connection?
 
@@ -115,7 +115,7 @@ Jobs can be run on the cluster in batch mode or in interactive mode. Batch mode 
 
 Once your job is running interactively as expected, you should then submit it for batch processing. This is done by creating a simple text file, called a *Slurm job script*, that specifies the cluster resources you need and the commands necessary to run your program.
 
-For details and examples on how to run jobs, see the [Running Jobs user guide](/user-information/user-guides/high-performance-computing/discovery/running-jobs).
+For details and examples on how to run jobs, see the [Running Jobs user guide](/user-information/user-guides/high-performance-computing/running-jobs).
 
 ### How can I tell when my job will run?
 
@@ -180,7 +180,7 @@ If you see only one process, then your job is using only one core.
 
 ### How do I create a Slurm file?
 
-A Slurm file, or job script, is a text file that contains your cluster resource requests and the commands necessary to run your program. See the [Running Jobs user guide](/user-information/user-guides/high-performance-computing/discovery/running-jobs) for instructions on creating Slurm job scripts.
+A Slurm file, or job script, is a text file that contains your cluster resource requests and the commands necessary to run your program. See the [Running Jobs user guide](/user-information/user-guides/high-performance-computing/running-jobs) for instructions on creating Slurm job scripts.
 
 ### How do I specify which account to submit a job to?
 
@@ -316,7 +316,7 @@ If you require further assistance, please [submit a ticket](/user-information/ti
 
 Before you submit a large job or install new software, you should check that you have sufficient disk space.
 
-To check your quota, use the `myquota` command. Under `size`, compare the results of `used` and `hard`. If the value of `used` is close to the value of `hard`, you will need to delete files or, for project directories, request an increase in disk space from the [Research Computing User Portal](/user-information/user-guides/high-performance-computing/research-computing-user-portal/request-new-allocation).
+To check your quota, use the `myquota` command. Under `size`, compare the results of `used` and `hard`. If the value of `used` is close to the value of `hard`, you will need to delete files or, for project directories, request an increase in disk space from the [Research Computing User Portal](/user-information/user-guides/research-computing-user-portal/request-new-allocation).
 
 > Note: The `chunk files` section indicates the way your files and directories are divided up by the parallel file system, not the absolute number of files.
 
@@ -377,11 +377,32 @@ du . | sort -nr | head -n 10
 
 To see other options, view the manual page by entering `man du`.
 
+## Cluster Resources: Endeavour/Condo Cluster Program
+
+### What is the Condo Cluster Program?
+
+The CARC's Condo Cluster Program (CCP) is a service available to USC researchers that require dedicated computing and/or storage resources for their work. The CCP gives researchers the convenience of having their own dedicated compute nodes, without the responsibility of purchasing and maintaining the nodes themselves. The CCP operates on both an annual subscription-based model, with research groups subscribing to their selected number of compute and storage resources on a yearly basis, as well as an outright purchase basis, with research groups purchasing compute or storage resources from the CARC for a fixed term (e.g., five years). All hardware is maintained by the CARC throughout the course of the subscription or lease term.
+
+> For more information on CCP policies, see our main [Condo Cluster Program pages](/user-information/ccp).
+
+### What is the difference between the subscription model and the traditional purchase model?
+
+Our subscription-based model allows researchers to subscribe to computing and storage resources on a yearly basis. The subscription model is ideal for researchers who anticipate changes to their resource requirements or for researchers who only require CCP resources for a shorter period of time (minimum of one year). The CARC purchases and maintains the resources and all related hardware throughout the course of the subscription term.
+
+Our traditional purchase model is the classic pricing model that we've used for condo purchases in previous years. Researchers choose the resources they need and the CARC purchases and maintains them for the lease term (e.g., five years). The leasing researchers effectively own their resources, and at the end of their lease period, the resources are retired. The CARC maintains the resources and all related hardware throughout the course of the lease term.
+
+For pricing and policies, see the [Program Information page](/user-information/ccp/program-information).
+
+
+### What is the difference between the Endeavour cluster and the Discovery cluster?
+
+The Discovery cluster is a "public" cluster in the sense that it is open to all CARC users to run their jobs and store their data. The Endeavour cluster is comprised of the condo resources that CCP users lease or subscribe to, but each research group's own resources are for their dedicated use only.
+
 ## Software
 
 ### What software is available on CARC systems?
 
-Many traditional utilities can be found in `/usr/bin`. The majority of software, however, is installed and mangaged with [Spack](https://spack.io/), a software package manager, and installed in a `/spack` directory. All software managed by CARC staff is accessed using the Lmod module system. See our [Software Module System user guide](/user-information/user-guides/high-performance-computing/discovery/lmod) for in-depth information.
+Many traditional utilities can be found in `/usr/bin`. The majority of software, however, is installed and mangaged with [Spack](https://spack.io/), a software package manager, and installed in a `/spack` directory. All software managed by CARC staff is accessed using the Lmod module system. See our [Software Module System user guide](/user-information/user-guides/high-performance-computing/lmod) for in-depth information.
 
 In short, we use the Lmod module system to manage your shell environment. To use a certain software, you must "load" its module, which will then dynamically change your environment settings.
 

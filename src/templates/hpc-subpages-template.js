@@ -10,6 +10,7 @@ import SideMenu from '../components/side-menu'
 export default function Template({ data }) {
     const items = data.md.edges;
     const discovery = data.discovery.edges;
+
     return (
       <Layout {...data.navigation}>
           <SEO title={data.content.frontmatter.title}/>
@@ -19,7 +20,7 @@ export default function Template({ data }) {
                 <div className="left-column">
                   <div className="position-fixed">
                     <Link to="/user-information/user-guides"><h2>User Guides</h2></Link>
-                    <SideMenu {...data} parentMenuTitle="High-Performance Computing"/>
+                    <SideMenu {...data}/>
                   </div>
                 </div>
                 <div className="middle-column">
@@ -27,7 +28,7 @@ export default function Template({ data }) {
                   {(data.content.frontmatter.uniqID === "user_portal") && (
                     <div className="login">
                       <a href="https://hpcaccount.usc.edu/" className="btn login-to-user-portal" target="_blank">
-                        <span className="txt">Log in to Portal</span>
+                        <span className="txt">Log in to User Portal</span>
                         <span className="round"><i className="fa fa-chevron-right"></i></span>
                       </a>
                     </div>

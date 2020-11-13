@@ -67,7 +67,7 @@ export const discoveryGuidesQuery = graphql`
         }
       }
     }
-    subMenu: allMarkdownRemark(sort: {fields: frontmatter___id},filter: {frontmatter: {cat: {eq: "sharedTemplate"}}}) {
+    subMenu: allMarkdownRemark(sort: {fields: frontmatter___id},filter: {frontmatter: {cat: {eq: "discoveryGuides"}}}) {
       edges {
         node {
           frontmatter {

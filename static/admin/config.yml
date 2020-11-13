@@ -45,7 +45,7 @@ collections:
         name: "high-performance-computing"
         fields:
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/user-guides/high-performance-computing/research-computing-user-portal.md"
+      - file: "src/user-guides/research-computing-user-portal.md"
         label: "Research Computing User Portal"
         name: "research-computing-user-portal"
         fields:

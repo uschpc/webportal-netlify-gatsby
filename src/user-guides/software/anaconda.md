@@ -2,8 +2,7 @@
 author: Derek Strong
 id: 3
 date: 2020-10-12T12:00:00.387Z
-title: Using Anaconda on Discovery
-alternativeTitle: Anaconda
+title: Using Anaconda
 path: anaconda
 parentPath: user-information/user-guides/software-and-programming
 cat: software
@@ -14,17 +13,17 @@ excerpt: A user guide for Anaconda, a package and environment manager.
 
 [Anaconda](https://www.anaconda.com/) is a package and environment manager primarily used for open-source data science packages for Python and R. Other programming languages like C/C++, FORTRAN, Java, Scala, Ruby, and Lua are also supported.
 
-### Using Anaconda on Discovery
+### Using Anaconda
 
-Begin by logging in to Discovery. You can find instructions for this in the [Getting Started guide](/user-information/user-guides/high-performance-computing/discovery/getting-started).
+Begin by logging in. You can find instructions for this in the [Getting Started with Discovery](/user-information/user-guides/high-performance-computing/getting-started-discovery) or [Getting Started with Endeavour](/user-information/user-guides/high-performance-computing/getting-started-endeavour) user guides.
 
-To use Anaconda on Discovery, first load the corresponding module:
+To use Anaconda, first load the corresponding module:
 
 ```sh
 module load anaconda3
 ```
 
-The Anaconda module depends on the `gcc/8.3.0` module, which is loaded by default when logging in to Discovery. This module needs to be loaded first because Anaconda was installed with the GCC 8.3.0 compiler, though other compilers can be used within Anaconda environments.
+The Anaconda module depends on the `gcc/8.3.0` module, which is loaded by default when logging in. This module needs to be loaded first because Anaconda was installed with the GCC 8.3.0 compiler, though other compilers can be used within Anaconda environments.
 
 In Slurm job scripts, the `gcc` module should be loaded explicitly before loading Anaconda:
 
@@ -53,7 +52,7 @@ This modifies your `~/.bashrc` file. Then enter `source ~/.bashrc` and this will
 (base) user@discovery:~$
 ```
 
-The base environment will now be activated every time you log in to Discovery. To disable this, you can move the Conda initialization lines from your `~/.bashrc` file to a separate file and then source that file when needed to enable activating environments. For example, create a `~/.condainit` file with these lines and then enter `source ~/.condainit`. Alternatively, to change the Conda configuration, enter:
+The base environment will now be activated every time you log in to the cluster. To disable this, you can move the Conda initialization lines from your `~/.bashrc` file to a separate file and then source that file when needed to enable activating environments. For example, create a `~/.condainit` file with these lines and then enter `source ~/.condainit`. Alternatively, to change the Conda configuration, enter:
 
 ```sh
 conda config --set auto_activate_base false
@@ -220,15 +219,15 @@ Each line is described below:
 |`--mem=16GB` |  Reserves 16 GB of memory for your exclusive use|
 |`--time=1:00:00` | Reserves resources described for 1 hour|
 |`--account=<account_id>` | Charges compute time to <account_id>. If not specified, you may use up the wrong PI's compute hours|
-|`module load gcc/8.3.0` | Load the `gcc` compiler [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
-|`module load anaconda3` | Load the `anaconda3` [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
+|`module load gcc/8.3.0` | Load the `gcc` compiler [environment module](/user-information/user-guides/high-performance-computing/lmod)|
+|`module load anaconda3` | Load the `anaconda3` [environment module](/user-information/user-guides/high-performance-computing/lmod)|
 |`eval "$(conda shell.bash hook)"` | Initialize the shell to use Conda|
 |`conda activate env` | Activate your Conda environment|
 |`python /path/to/script.py` | Use `python` to run `script.py`|
 
 You can adjust the resources requested based on your needs, but remember that fewer resources requested leads to less queue time for your job.
 
-You can develop Python scripts and job scripts on your local machine and then transfer them to Discovery, or you can use one of the available text editors on Discovery to develop them (`nano`, `vim`, or `emacs`).
+You can develop Python scripts and job scripts on your local machine and then transfer them to the cluster, or you can use one of the available text editors on our systems to develop them (`nano`, `vim`, or `emacs`).
 
 Save the job script as `py.job`, for example, and then submit it to the job scheduler:
 

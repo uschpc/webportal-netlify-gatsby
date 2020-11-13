@@ -1,25 +1,24 @@
 ---
 excerpt: Instructions for using the CARC's user portal for project and resource management.
 path: research-computing-user-portal
-parentPath: user-information/user-guides/high-performance-computing
+parentPath: user-information/user-guides
 route: High-Performance Computing
 author: Yaseen A.
-routePath: user-information/user-guides/high-performance-computing
+routePath: user-information/user-guides
+featuredImage: ../../static/images/Door.png
 date: 2020-06-04T00:00:00.000Z
-cat: sharedTemplate
-title: Research Computing User Portal
+cat: userGuides
+title: Project and Allocation Management
 uniqID: user_portal
 parentPage: User Guides
-id: 3
+id: 4
 ---
 
-The Center for Advanced Research Computing's User Portal is how users manage their projects and allocations on CARC systems.
+The CARC's **Research Computing User Portal** is how users manage their projects and allocations on CARC systems. Projects and allocations on both the general use Discovery cluster and the Endeavour condo cluster are managed in the Research Computing User Portal. 
 
->Note: If you're a condo node owner, you will still manage your resources and users at https://hpc-web.usc.edu/projects/. Support for condo nodes in the User Portal will be added once the CARC's [new Condo Cluster Program (CCP)](/services/condo-cluster-program) is developed. 
+For information on accessing the CARC's systems (including the User Portal) and the types of allocations available, see the [Accounts and Allocations page](/user-information/accounts).
 
 The Research Computing User Portal uses ColdFront, an open source resource allocation management tool developed by the [University at Buffalo's Center for Computational Research](http://www.buffalo.edu/ccr.html). ColdFront supports the management of resources and user allocations to those resources.  The tool allows users to request and manage the access they and their students or collaborators have to the resources in the CARC's data center.  
-
-ColdFront was designed to be useful in varied high-performance computing environments. The architecture is extensible and supports various back-ends, job schedulers, and ticketing systems, and it is database agnostic.  The CARC's implementation of this open source product interfaces with XDMoD (job metrics), Slurm (job scheduler), OpenLDAP, BeeGFS (storage), and JIRA (ticketing system).
 
 The User Portal handles the management of 3 components: **Projects**, **Allocations** and **Resources**.
 

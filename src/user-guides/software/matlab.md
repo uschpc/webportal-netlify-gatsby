@@ -2,8 +2,7 @@
 author: Marco Olguin
 id: 5
 date: 2020-08-13T12:00:00.387Z
-title: Using MATLAB on Discovery
-alternativeTitle: MATLAB
+title: Using MATLAB
 path: matlab
 parentPath: user-information/user-guides/software-and-programming
 cat: software
@@ -14,11 +13,11 @@ excerpt: A user guide for MATLAB, a proprietary scientific computing language an
 
 [MATLAB](https://www.mathworks.com/products/matlab.html) is a proprietary scientific computing language and environment.
 
-### Using MATLAB on Discovery
+### Using MATLAB
 
-Begin by logging in to Discovery. You can find instructions for this in the [Getting Started guide](/user-information/user-guides/high-performance-computing/discovery/getting-started).
+Begin by logging in. You can find instructions for this in the [Getting Started with Discovery](/user-information/user-guides/high-performance-computing/getting-started-discovery) or [Getting Started with Endeavour](/user-information/user-guides/high-performance-computing/getting-started-endeavour) user guides.
 
-To use MATLAB on Discovery, load the corresponding module:
+To use MATLAB, load the corresponding module:
 
 ```sh
 module load matlab
@@ -44,7 +43,7 @@ It may be necessary to run MATLAB using a version that is not currently availabl
 
 #### MATLAB GUI
 
-Use of the MATLAB GUI is possible but **not recommended**, as it requires X11 forwarding, which has poor performance. Instead, we recommend that users develop MATLAB scripts on their local computer and transfer them and any other input files to Discovery for command line use.
+Use of the MATLAB GUI is possible but **not recommended**, as it requires X11 forwarding, which has poor performance. Instead, we recommend that users develop MATLAB scripts on their local computer and transfer them and any other input files to the cluster for command line use.
 
 ### Running MATLAB interactively
 
@@ -88,7 +87,7 @@ Each line is described below:
 |`--mem-per-cpu=10GB` |  Reserves 10 GB per CPU of memory for your exclusive use|
 |`--time=1:00:00` | Reserves resources described for 1 hour|
 |`--account=<account_id>` | Charge compute time to <account_id>. If not specified, you may use up the wrong PI's compute hours|
-|`module load matlab` | Load the `matlab` [environment module](/user-information/user-guides/high-performance-computing/discovery/lmod)|
+|`module load matlab` | Load the `matlab` [environment module](/user-information/user-guides/high-performance-computing/lmod)|
 |`matlab -r 'simple_plot'` | Use `matlab` to run `simple_plot.m`|
 
 You can use the folloiwng `simple_plot.m` as an example:

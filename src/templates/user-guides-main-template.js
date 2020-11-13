@@ -12,7 +12,6 @@ import FAQ from '../components/frequently-asked-question'
 export default function Template({ data }) {
   let mainPage = data.mainPage;
   let content = data.content;
-
     return (
       <Layout {...data.navigation} backToTopBtnFlag={content.frontmatter.backToTopBtnFlag}>
           <SEO title={mainPage ? mainPage.frontmatter.title : content.frontmatter.title}/>
@@ -31,15 +30,23 @@ export default function Template({ data }) {
                      <Markdown source={mainPage.html} escapeHtml={false} />
                      {data.md.edges.map ((item, i) => {
                          return (
-                             <Link to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path} key={i}>
-                                 <div className="user-support-box">
-                                      <img src={item.node.frontmatter.featuredImage.childImageSharp.fluid.src} alt={item.node.frontmatter.title} />
-                                      {/* <img src={item.node.frontmatter.thumbnail} alt={item.node.frontmatter.title} /> */}
-                                     <p className="title">{item.node.frontmatter.title}</p>
-                                     <p className="description">{item.node.frontmatter.excerpt}</p>
-                                 </div>
-                             </Link>
-                         )
+                          !item.node.frontmatter.redirectToPage ? (
+                            <Link to={item.node.frontmatter.parentPath ? `${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}` : item.node.frontmatter.path} key={i}>
+                                <div className="user-support-box">
+                                     <img src={item.node.frontmatter.featuredImage.childImageSharp.fluid.src} alt={item.node.frontmatter.title} />
+                                    <p className="title">{item.node.frontmatter.title}</p>
+                                    <p className="description">{item.node.frontmatter.excerpt}</p>
+                                </div>
+                            </Link>
+                        ) : (
+                         <Link to={item.node.frontmatter.redirectToPage} key={i}>
+                           <div className="user-support-box">
+                               <img src={item.node.frontmatter.featuredImage.childImageSharp.fluid.src} alt={item.node.frontmatter.title} />
+                               <p className="title">{item.node.frontmatter.title}</p>
+                               <p className="description">{item.node.frontmatter.excerpt}</p>
+                           </div>
+                       </Link>
+                        ))
                      })}
                      </span>
                    ) : (
@@ -55,10 +62,13 @@ export default function Template({ data }) {
                 {content.frontmatter.title !== "Frequently Asked Questions" ? (
                    <div className={`right-column ${mainPage && mainPage.frontmatter.cat === 'userGuidesLandingPage' ? 'show' : 'hide'}`}>
                    <div className="system-status">
-                       <h2>System Info</h2>
+                       <h2>Quick Links to Useful Guides</h2>
                        <ul>
-                         <li><a href="https://hpc-grafana.usc.edu/d/vsUGHjmMk/compute-node-usage?orgId=1&refresh=30s" target="_blank">Current compute node usage</a></li>
-                         <li><a href="https://hpcxdmod.usc.edu/" target="_blank">Current CPU hours/job sizes</a></li>
+                         <li><a href="https://carc.usc.edu/user-information/user-guides/high-performance-computing/getting-started-discovery" target="_blank">Getting Started with the Discovery Cluster</a></li>
+                         <li><a href="https://carc.usc.edu/user-information/user-guides/high-performance-computing/getting-started-endeavour" target="_blank">Getting Started with the Endeavour Condo Cluster</a></li>
+                         <li><a href="https://carc.usc.edu/user-information/user-guides/data-management/storage-file-systems" target="_blank">Storage File Systems</a></li>
+                         <li><a href="https://carc.usc.edu/user-information/user-guides/research-computing-user-portal/account-and-project-setup" target="_blank">User Portal Project Setup</a></li>
+                         <li><a href="https://carc.usc.edu/user-information/user-guides/high-performance-computing/running-jobs" target="_blank">Running Jobs on CARC Systems</a></li>
                        </ul>
                    </div>
                </div>
@@ -89,6 +99,7 @@ export const coldFrontQuery = graphql`
           frontmatter {
             title
             path
+            redirectToPage
             thumbnail
             featuredImage {
               childImageSharp {

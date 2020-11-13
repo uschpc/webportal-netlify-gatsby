@@ -122,10 +122,10 @@ exports.createPages = ({ boundActionCreators, graphql, actions }) => {
           template = condoClusterProgramSubPagesTemplate
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
           break
-        case 'sharedTemplate':
-          template = hpcSubpagesTemplate;
-          path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
-          break;
+        // case 'sharedTemplate': 
+        //   template = hpcSubpagesTemplate;
+        //   path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`
+        //   break;
         case 'software':
           template = softwareTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`

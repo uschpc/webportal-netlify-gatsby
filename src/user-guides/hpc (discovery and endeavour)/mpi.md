@@ -1,13 +1,13 @@
 ---
 author: Marco Olguin
-id: 8
+id: 10
 date: 2020-08-04T12:00:00
 title: Message Passing Interface (MPI)
 path: mpi
-parentPath: user-information/user-guides/high-performance-computing/discovery
+parentPath: user-information/user-guides/high-performance-computing
 cat: discoveryGuides
 parentPage: User Guides
-sideMenuParent: Discovery
+sideMenuParent: High-Performance Computing
 backToTopBtnFlag: true
 excerpt: A user guide on the Message Passing Interface (MPI), which is used in parallel programming.
 ---
@@ -34,7 +34,7 @@ Before performing any work with MPI, users need to source the MPI distribution a
 
 Intel MPI, MVAPICH2 and MPICH can also be freely interchanged due to their common Application Binary Interface (ABI).
 
-MPI-UCX libraries are available only under the GNU GCC programming environment because the Intel compilers cannot build the UCX framework. Both MPICH and OpenMPI were built with UCX support under the gcc compiler modules. We have found the MPICH-UCX and OpenMPI-UCX libraries to exhibit the fastest performance out of the four different MPI libraries available on Discovery.
+MPI-UCX libraries are available only under the GNU GCC programming environment because the Intel compilers cannot build the UCX framework. Both MPICH and OpenMPI were built with UCX support under the gcc compiler modules. We have found the MPICH-UCX and OpenMPI-UCX libraries to exhibit the fastest performance out of the four different MPI libraries available on CARC systems.
 
 To set up an MPI package, use the following module commands:
 
@@ -81,7 +81,7 @@ When you compile a parallel program, make sure that you record the version/modul
 
 The `mpirun` command launches the parallel job. For help with `mpirun`, please consult the manual pages (`man mpirun`) or run `mpirun --help`.
 
-To run on the Discovery cluster:
+To run on the Discovery or Endeavour cluster:
 
 ```
 mpirun -np $SLURM_NTASKS ./mpi_program.x
@@ -117,7 +117,7 @@ mpirun -genv $OMP_NUM_THREADS -genv MV2_ENABLE_AFFINITY 0 -np $SLURM_NTASKS ./mp
 
 ### Task/thread affinity
 
-In the NUMA (Non Uniform Memory Access) architecture, which is present on the Discovery cluster, it is often advantageous to pin MPI tasks and/or OpenMP threads to the CPU sockets and cores. We have seen up to a 60% performance degradation in high memory bandwidth codes when process/thread affinity is not enforced. The pinning prevents the processes and threads from migrating to CPUs that have a more distant path to the data in the memory. Most commonly, we would set the MPI task to be pinned to a CPU socket, with OpenMP threads allowed to migrate over this socket's cores.
+In the NUMA (Non Uniform Memory Access) architecture, which is present on CARC clusters, it is often advantageous to pin MPI tasks and/or OpenMP threads to the CPU sockets and cores. We have seen up to a 60% performance degradation in high memory bandwidth codes when process/thread affinity is not enforced. The pinning prevents the processes and threads from migrating to CPUs that have a more distant path to the data in the memory. Most commonly, we would set the MPI task to be pinned to a CPU socket, with OpenMP threads allowed to migrate over this socket's cores.
 
 All MPI libraries except for MPICH automatically bind MPI tasks to CPUs, but the behavior and adjustment options depend on the MPI distribution. MPI task pinning is described in each of the MPI sections below.
 
@@ -151,7 +151,7 @@ The binding will be correctly assigned to a subset of CPU socket cores when we u
 
 OpenMPI has a number of appealing features.
 
-Running OpenMPI programs is straightforward on Discovery:
+Running OpenMPI programs is straightforward:
 
 ```
 mpirun -np $SLURM_NTASKS ./mpi_program.x
