@@ -52,7 +52,7 @@ The Resource drop-down list contains the following resource options (only resour
       * **large**: 1,000,000 CPU/service unit hours (annual charges may apply)
       * **class**: 10,000 CPU/service unit hours per semester (free, for faculty teaching classes)
       * **graduate research**: 100,000 CPU/service unit hours (free, for students conducting research work that is separate from a PI's main research project)
-* **Endeavour (Cluster Partition) - Condo Subscription**: Paid service, part of the [Condo Cluster Program](/user-information/ccp).  
+* **Endeavour (Cluster Partition) - Condo Subscription**: Paid service, part of the [Condo Cluster Program](/user-information/ccp). PIs will receive an email once resources are available (typically 24-48 hours after the request). 
   * **Nodetype**:
       * Lenovo NX360 with 16 CPU cores and 64 GB memory: $400 per year 
       * Lenovo NX360 with 20 CPU cores and 64 GB memory: $500 per year

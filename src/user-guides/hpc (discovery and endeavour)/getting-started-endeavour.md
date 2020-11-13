@@ -136,25 +136,3 @@ Information on the software available on Endeavour, as well as instructions for 
 The [Research Computing User Portal user guides](/user-information/user-guides/research-computing-user-portal) provide instructions for using the CARC user portal to create and manage research projects, add or remove project users, and submit your annual project renewal. 
 
 >Our main user guides page can be accessed [here](/user-information/user-guides).
-
-### How to get help
-
-#### Weekly office hours
-
-Every week, the Research Facilitation & Applications team hosts office hours for CARC users to ask questions about anything related to research computing. No appointments are necessary, and all levels of users and questions are welcomed. Currently, all office hours are taking place via Zoom **every Tuesday from 2:30-5:00 pm**. Office hours are drop-in and do not require registration, but you will need a USC NetID to join the Zoom meeting.
-
->For more information, see our [Office Hours and Consultations page](/education-and-outreach/office-hours).
-
-#### Frequently asked questions
-
-See our extensive [Frequently Asked Questions page](/user-information/frequently-asked-questions) for answers to common questions about CARC accounts, different cluster resources, and using software on CARC systems.
-
-#### Discourse user forum
-
-The CARC uses [Discourse](https://www.discourse.org/), a question-and-answer community forum, to facilitate discussion and knowledge sharing among users. The User Forum is a great resource for discussing CARC-related topics, asking non-urgent technical questions, and sharing ideas. The CARC team monitors the forum for questions, but users are also encouraged to interact with each other.
-
->You can access the CARC's User Forum [here](https://hpc-discourse.usc.edu/).
-
-#### Ticket submission
-
-If you're experiencing an issue with system resources or your CARC account and you're unable to find a solution to your problem using the above resources, please [submit a help ticket](/user-information/ticket-submission) to the CARC team.

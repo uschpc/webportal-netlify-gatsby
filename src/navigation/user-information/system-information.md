@@ -18,7 +18,7 @@ The CARC's Discovery computing cluster consists of 2 shared head nodes and a tot
 
 For detailed information on Discovery's computing resources, see the [Discovery Resource Overview](/user-information/user-guides/high-performance-computing/discovery-resources).
 
-For detailed information on the Endeavour [condo cluster](/user-information/ccp)'s computing resources, see the [Endeavour Resource Overview](/user-information/user-guides/high-performance-computing/endeavour-resources).
+<!-- For detailed information on the Endeavour [condo cluster](/user-information/ccp)'s computing resources, see the [Endeavour Resource Overview](/user-information/user-guides/high-performance-computing/endeavour-resources).-->
 
 ### File systems
 

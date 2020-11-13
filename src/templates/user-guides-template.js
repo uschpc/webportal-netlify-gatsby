@@ -56,7 +56,7 @@ export default function Template({ data }) {
                           })}
                         </span>
                       )}
-                   {(data.content.frontmatter.title === "Data Management and File Transfers") && (
+                   {(data.content.frontmatter.title === "Data Management") && (
                     <span>
                       <h3>User Guides</h3>
                       {items.map ((item, i) => {
