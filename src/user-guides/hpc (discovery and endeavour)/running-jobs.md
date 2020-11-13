@@ -1,13 +1,13 @@
 ---
 author: Cesar Sul
 id: 7
-date: 2020-08-13T12:00:00.387Z
+date: 2020-11-13T12:00:00.387Z
 title: Running Jobs on the Cluster
 path: running-jobs
-parentPath: user-information/user-guides/high-performance-computing
+parentPath: user-information/user-guides/high-performance-computing/discovery
 cat: discoveryGuides
 parentPage: User Guides
-sideMenuParent: High-Performance Computing
+sideMenuParent: Discovery
 backToTopBtnFlag: true
 excerpt: How to run your jobs on Discovery using the Slurm job scheduler.
 ---
@@ -89,7 +89,7 @@ The next few lines:
 #SBATCH --account=<account_id>
 ```
 
-use options to specify the requested resources for your program. Be sure to use the correct account for your jobs (`<account_id>`). Without the `--account` option, your default account will be used. This is fine if you only have one project account.
+use options to specify the requested resources for your program. Be sure to use the correct account ID for your jobs (`<account_id>`). Without the `--account` option, your default account will be used. This is fine if you only have one project account. Your account ID can be found in the [User Portal](/user-information/user-guides/research-computing-user-portal), on the Allocation Detail page for the computing resource (e.g., Discovery) you'd like to use. It is of the form username_XXX, where username is your USC NetID and XXX is your three-digit project ID.
 
 The next set of lines:
 
@@ -125,6 +125,36 @@ less slurm-<jobid>.out
 ### Interactive jobs
 
 Interactive jobs are similar to batch jobs but all actions are typed manually on the command line, rather than in a script. The main advantage of an interactive job is that you get immediate feedback and the job will not end (and put your compute resources back into the pool) if your program errors out. This makes interactive jobs ideal test environments for people who aren't sure what to put in their job scripts.
+
+### Endeavour condo cluster jobs
+
+Researchers submitting jobs from the [Endeavour cluster](/user-information/user-guides/high-performance-computing/getting-started-endeavour) (endeavour.usc.edu) will need to specify the name of their partition along with the appropriate account ID. This can be done using the `--account` and `--partition` options in your job script like so:
+
+```
+#!/bin/bash
+  
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=8
+#SBATCH --time=1:00:00
+#SBATCH --mem-per-cpu=2GB
+#SBATCH --account=<account_id>
+#SBATCH --partition=<partition_name>
+  
+module load gcc/8.3.0
+module load python
+  
+python3 script.py
+```
+
+Be sure to use the correct account ID for your jobs (`<account_id>`). Your account ID can be found in the [User Portal](/user-information/user-guides/research-computing-user-portal), on the Allocation Detail page for your Endeavour condo allocation. It is of the form username_XXX, where username is your USC NetID and XXX is your three-digit project ID.
+
+If you encounter an error similar to:
+
+```
+Job submit/allocate failed: Invalid account or account/partition combination specified
+```
+
+Please contact us at <carc-condo@usc.edu> to obtain the correct account ID/partition combination.
 
 ### Common Slurm commands
 
@@ -209,6 +239,7 @@ Use the chart below to determine which gpu_type to specify:
 ### Queue times
 
 CARC resources are shared, so you should expect to wait some amount of time after requesting resources. Generally, if you request a lot of resources or very specific resources, you can expect to wait longer for Slurm to assign resources to you.
+
 
 ### Job monitoring
 

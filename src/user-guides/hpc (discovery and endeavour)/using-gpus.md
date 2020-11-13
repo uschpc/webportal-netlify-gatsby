@@ -1,13 +1,13 @@
 ---
 author: Cesar Sul
 id: 9
-date: 2020-09-08T12:00:00.387Z
+date: 2020-11-13T12:00:00.387Z
 title: Using GPUs
 path: using-gpus
 parentPath: user-information/user-guides/high-performance-computing
 cat: discoveryGuides
 parentPage: User Guides
-sideMenuParent: High-Performance Computing
+sideMenuParent: Discovery
 backToTopBtnFlag: true
 excerpt: How to utilize the graphics processing units (GPUs) on Discovery or Endeavour.
 ---
@@ -42,6 +42,12 @@ Use the chart below to determine which `gpu_type` to specify:
 |k80 	|4| NVIDIA Tesla K80 (condo nodes) |
 |p100 	|2| NVIDIA Tesla P100 |
 |v100 	|2| NVIDIA Tesla V100 |
+
+To see an updated list of available GPUs, you can run the `sinfo` command like so:
+
+```
+sinfo -o "%20P %5D %3c %m  %G" | grep -v null
+```
 
 The maximum number of GPUs that a user can use at one time, in one job or across multiple jobs, is 36.
 
@@ -91,10 +97,10 @@ The following is an example Slurm job script for GPU jobs:
 #SBATCH --mem=16GB              # 16 GB of memory
 #SBATCH --time=1:00:00          # 1 hour run time
 #SBATCH --account=<account_id>  # Account to charge resources to
-  
+
 module load gcc/8.3.0
 module load cuda/10.1.243
-  
+
 nvcc program.cu -o program
 ./program
 ```
