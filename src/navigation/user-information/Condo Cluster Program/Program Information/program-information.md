@@ -38,7 +38,7 @@ Currently, the CARC offers two different compute node configurations to choose f
 | Lenovo NX360 | 16 | 2.6 | 64 GB | $400 |
 | Lenovo NX360 | 20 | 2.6 | 64 GB | $500 |
 
-> We recognize that these are not the latest and greatest compute nodes currently on the market, and we are in the process of purchasing a new batch of compute nodes for the Condo Cluster Program. The COVID-19 situation has delayed this process, but the new compute nodes will be available for subscription on the Endeavour cluster in early 2021.
+> We recognize that these are not the latest and greatest compute nodes currently on the market, and the low subscription price reflects this. We are currently in the process of purchasing a new batch of compute nodes for the Condo Cluster Program. The COVID-19 situation has delayed this process, but the new compute nodes will be available for subscription on the Endeavour cluster in early 2021. 
 
 Subscriptions to condo compute nodes can be requested via the CARC's User Portal. See the [Request New Allocation](/user-information/user-guides/research-computing-user-portal/request-new-allocation) user guide for details on how to request a condo subscription for your research project.
 
@@ -50,7 +50,37 @@ Like the annual subscription model, research groups will have exclusive access t
 
 A condo purchase request is possible during the CARC's annual condo purchase request period, which will occur during the fall semester. The whole process of purchase request, system configuration, vendor selection, purchasing, system installation, and deployment typically takes six months. The purchased resources will be in service for 5 years, and after this service period, the CARC will decommission these condo nodes. 
 
-> The CARC is still in the process of preparing for the annual condo purchase request period for 2020. Once the request period opens, PIs will use the [User Portal](/user-information/user-guides/research-computing-user-portal) to select and purchase their desired condo resources.
+The following table summarizes the CPU and GPU nodes that will be available for purchase using the traditional purchase model:
+
+#### CPU nodes
+
+| CPU | CPU quantity | Memory (GB) | GPU | GPU quantity |
+|-|-|-|-|-|
+| AMD EPYC 7542 2.90GHz, 32C/64T, 128M Cache | 2 | 256 GB | N/A | N/A |
+| AMD EPYC 7542 2.90GHz, 32C/64T, 128M Cache | 2 | 512 GB | N/A | N/A |
+| --- |  |  |  |  |
+| Intel Xeon Gold 6248R Processor 24-Core 3.0GHz 35.75MB Cache (205W) | 2 | 192 GB | N/A | N/A |
+| Intel Xeon Gold 6248R Processor 24-Core 3.0GHz 35.75MB Cache (205W) | 2 | 384 GB | N/A | N/A |
+
+#### GPU nodes
+
+| CPU | CPU quantity | Memory (GB) | GPU | GPU quantity |
+|-|-|-|-|-|
+| AMD EPYC 7282 Processor 16-core 2.80GHz 64MB Cache (120W) | 1 | 128 GB | RTX 4000 | 2 |
+| AMD EPYC 7282 Processor 16-core 2.80GHz 64MB Cache (120W) | 1 | 128 GB | RTX 5000 | 2 |
+| AMD EPYC 7282 Processor 16-core 2.80GHz 64MB Cache (120W) | 2 | 256 GB | RTX 5000 | 4 |
+| --- |  |  |  |  |
+| AMD EPYC 7532 Processor 32-core 2.40GHz 256MB Cache (200W) | 2 | 256 GB | V100s | 2 |
+| AMD EPYC 7532 Processor 32-core 2.40GHz 256MB Cache (200W) | 2 | 256 GB | V100s | 4 |
+| AMD EPYC 7532 Processor 32-core 2.40GHz 256MB Cache (200W) | 2 | 256 GB | A100 | 2 |
+| --- |  |  |  |  |
+| Intel Xeon Silver 4216 Processor 16-Core 2.1GHz 22MB Cache (100W) | 1 | 192 GB | RTX 4000 | 2 |
+| Intel Xeon Silver 4216 Processor 16-Core 2.1GHz 22MB Cache (100W) | 1 | 192 GB | RTX 5000 | 2 |
+| Intel Xeon Silver 4216 Processor 16-Core 2.1GHz 22MB Cache (100W) | 2 | 192 GB | RTX 5000 | 4 |
+| --- |  |  |  |  |
+| Intel Xeon Gold 6248R Processor 24-Core 3.0GHz 35.75MB Cache (205W) | 2 | 192 GB | V100s | 2 |
+
+> The CARC is still in the process of preparing for the annual condo purchase request period for 2020. Once the request period opens, PIs will use the [User Portal](/user-information/user-guides/research-computing-user-portal) to select and purchase their desired condo resources. See the [Request New Condo Purchase](/user-information/user-guides/research-computing-user-portal/request-new-condo-purchase) user guide for detailed instructions.
 
 ### Storage resources
 
