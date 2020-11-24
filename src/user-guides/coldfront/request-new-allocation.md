@@ -1,6 +1,6 @@
 ---
 author: James Hong
-id: 4
+id: 3
 date: 2020-10-13T00:00:00.000Z
 title: Request New Allocation
 path: request-new-allocation
@@ -27,6 +27,8 @@ The CARC's main computing resource available to all USC faculty/staff and their 
 
 The CARC's condo cluster, part of the Condo Cluster Program (CCP). The CCP allows research groups to subscribe to their selected number of compute and storage resources on a yearly basis. The resources that a research group subscribes to will be dedicated for use by their condo job queue. See the CARC's [Condo Cluster Program Information page](/user-information/ccp/program-information) for details.  
 
+The CARC also offers a traditional, five-year purchase model for condo resources. See the [Request New Condo Purchase user guide](/user-information/user-guides/research-computing-user-portal/request-new-purchase) for more information.
+
 #### Storage space
 
 Additional storage in the /project file system a PI can purchase if more storage than the initial 10 TB that the CARC provides to each PI for free is required.
@@ -47,11 +49,11 @@ The Resource drop-down list contains the following resource options (only resour
 
 * **Discovery (Cluster Partition)**: The CARC's main computing resource. Shared and typically free to use.  
   * **Compute size**:
-      * **small**: 200,000 CPU/service unit hours (default and free)
-      * **medium**: 500,000 CPU/service unit hours (annual charges may apply)
-      * **large**: 1,000,000 CPU/service unit hours (annual charges may apply)
-      * **class**: 10,000 CPU/service unit hours per semester (free, for faculty teaching classes)
-      * **graduate research**: 100,000 CPU/service unit hours (free, for students conducting research work that is separate from a PI's main research project)
+      * **Small**: 200,000 CPU/service unit hours (default and free)
+      * **Medium**: 500,000 CPU/service unit hours (annual charges may apply)
+      * **Large**: 1,000,000 CPU/service unit hours (annual charges may apply)
+      * **Class**: 10,000 CPU/service unit hours per semester (free, for faculty teaching classes)
+      * **Graduate research**: 100,000 CPU/service unit hours (free, for students conducting research work that is separate from a PI's main research project)
 * **Endeavour (Cluster Partition) - Condo Subscription**: Paid service, part of the [Condo Cluster Program](/user-information/ccp). PIs will receive an email once resources are available (typically 24-48 hours after the request). 
   * **Nodetype**:
       * Lenovo NX360 with 16 CPU cores and 64 GB memory: $400 per year 

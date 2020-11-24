@@ -1,6 +1,6 @@
 ---
 author: James Hong
-id: 2
+id: 1
 date: 2020-07-08T00:00:00.00Z
 title: Account and Project Setup
 path: account-and-project-setup
