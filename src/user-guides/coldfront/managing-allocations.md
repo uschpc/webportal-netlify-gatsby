@@ -45,11 +45,11 @@ For more details on how to renew your allocations, please see the [Renewing Allo
 
 #### Policies for the Discovery cluster
 
-Allocations for the academic (USC-HPC) cluster expire yearly.  Faculty must renew their allocation each year or access to the resource will be blocked for all group members. The CARC requires faculty to review and update their project(s) annually. If your project has not been reviewed in a year and an allocation for the project is expiring, you will be forced to complete the project review before renewing the allocation.  More details on the project review can be [found here](yearly-project-renewal).
+Allocations for the Discovery cluster expire yearly.  Faculty must renew their allocation each year or access to the resource will be blocked for all group members. The CARC requires faculty to review and update their project(s) annually. If your project has not been reviewed in a year and an allocation for the project is expiring, you will be forced to complete the project review before renewing the allocation.  More details on the project review can be [found here](yearly-project-renewal).
 
 #### Policies for storage
 
-The CARC provides each research group with up to 10 TB of storage for free, and 5 TB is the default allocation per project. This is included in the USC-HPC cluster allocation and not listed separately in the user portal.
+The CARC provides each research group with up to 10 TB of storage per PI for free, and 5 TB is the default allocation per project. If more than 10 TB of storage is needed, it can be purchased in 5 TB increments for $40/TB/year. See the [Accounts and Allocations page](/user-information/accounts) for more information.
 
 If you purchase additional storage, your allocation expires when the warranty on the storage expires. Before this date, the CARC will purchase a new storage solution and you will have an opportunity to purchase storage on that system. If you decide not to do that, you will need to remove your data off the CARC's network before the old system is retired.  We will provide plenty of notice before this occurs.
 

@@ -8,8 +8,8 @@ routePath: user-information/ccp
 path: program-information
 parentPath: user-information/ccp
 cat: condoClusterProgram
-#Uncomment this to have this page as a landing page with subpages (like user guide landing pages)
-uniqID: enrollment
+#Uncomment this to list the purchase and subscription pages at the bottom of this page
+#uniqID: enrollment
 parentPage: User Information
 parentEle: User Information
 excerpt: Information on the Condo Cluster Program, its purchase models, and pricing.

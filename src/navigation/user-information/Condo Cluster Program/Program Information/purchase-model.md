@@ -41,15 +41,15 @@ The following table summarizes the CPU and GPU nodes that are available for purc
 | Dual AMD EPYC 7532 Processor 32-core 2.90GHz | 2 | 256 GB | A100 | 2 | $40K |
 | --- |  |  |  |  |  |
 | Dual Intel Xeon Gold 4216 Processor 16-core 2.1GHz | 2 | 192 GB | RTX 5000 | 2 | $11K |
-| Dual Intel Xeon Gold 4216 Processor 16-core 2.1GHz | 2 | 192 GB | RTX 5000 | 4 | $13K |
+| Quad Intel Xeon Gold 4216 Processor 16-core 2.1GHz | 2 | 192 GB | RTX 5000 | 4 | $13K |
 | --- |  |  |  |  |  |
 | Dual Intel Xeon Gold 6248R Processor 24-core 3.0GHz | 2 | 192 GB | V100s | 2 | $31K |
 
-> A detailed spreadsheet of system specifications for each model of node can be downloaded **here**.
+> Example system specifications (Dell and HPE/Exxact) for each model of node can be downloaded from GitHub [here](https://github.com/uschpc/documentation-public/blob/master/20-21%20Example%20Condo%20Node%20Configs.xlsx). Final configurations of system specs will depend on system availability from the vendor.
 
 ### Pricing
 
-The above pricing for the nodes is an estimate only. The final price may vary based on market condition and the CARC’s equipment purchase price. Pricing includes cables, chassis (if necessary), and sales tax. Pricing does not include interconnect hardware, second enclosure (racks), or utility costs for power and cooling, but the CARC and USC's IT Services will cover the costs of this necessary service and equipment. PIs will not be charged any setup or recurring fees, including CARC administrative support costs.
+Pricing may vary based on market condition and the CARC’s equipment purchase price. In addition to the cost of the selected CPU and/or GPU nodes, PIs will be charged for cables, chassis (if necessary), and sales tax. Pricing does not include interconnect hardware, second enclosure (racks), or utility costs for power and cooling, but ITS/CARC will cover the costs of this necessary service and equipment. The PI will not be charged any setup or recurring fees as part of this arrangement for the duration of this agreement, including CARC administrative support costs.
 
 ### How to request a condo purchase
 

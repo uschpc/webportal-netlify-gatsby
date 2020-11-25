@@ -36,7 +36,7 @@ If you need to recover a deleted file, please contact the CARC team by [submitti
 
 The project file system has a total capacity of 8.4 PB of usable space and consists of directories for different research project groups, running ZFS/BeeGFS and hosted on dedicated storage machines. The default quota for each project directory is 5 TB of disk space and 30 million files.
 
-Each PI gets 10 TB of free space across projects. If more than 10 TB is needed, a PI can request additional storage space in 5 TB increments at a cost of $200/5 TB/year. For more information on storage quotas and pricing, see the [Accounts and Allocations page](/user-information/accounts).
+Each PI gets 10 TB of free space across projects. If more than 10 TB is needed, a PI can request additional storage space in 5 TB increments at a cost of $40/TB/year. For more information on storage quotas and pricing, see the [Accounts and Allocations page](/user-information/accounts).
 
 Each project member has access to their group's project directory, where they can store data, scripts, and related files. The project directory should be used for most of your CARC work, and it's also where you can collaborate with your research project group. Users affiliated with multiple CARC projects will have access to multiple project directories so they can easily share their files with the appropriate groups.
 

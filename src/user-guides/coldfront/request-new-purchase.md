@@ -33,7 +33,23 @@ On the Condo Purchase Requests page, you will see information on the CCP's condo
 
 To request a new condo purchase, select "New Purchase Request". You will be taken to a request form for purchases:
 
-(to be continuted)
+![ColdFront New Condo Purchase](/images/coldfront_new_condo_purchase4.png)
+
+Select the models of CPU and/or GPU nodes you would like to purchase, as well as their quantities. The estimated price for each type of node will update as you increase the quantity.
+
+> Note: The price for the nodes is an estimate only. The final price may vary based on market condition and the CARC’s equipment purchase price. Pricing includes cables, chassis (if necessary), and sales tax. Pricing does not include interconnect hardware, second enclosure (racks), or utility costs for power and cooling, but the CARC and USC's IT Services will cover the costs of this necessary service and equipment. PIs will not be charged any setup or recurring fees, including CARC administrative support costs.
+
+The fields in the Billing section are automatically filled from the billing information associated with your account. If this information hasn't been added to your account, you will need to complete the fields yourself. Billing information must be inputted to complete your purchase request.
+
+After submitting your request, you will see it on the Condo Purchase Request Page with a status of "Pending":
+
+![ColdFront New Condo Purchase](/images/coldfront_new_condo_purchase3.png)
+
+To make any changes to your request (e.g., the requested quantity of nodes, the billing department), click the folder icon in the "Update" column. 
+
+### Purchase processing and approval
+
+After a request has been submitted, the system configuration, vendor selection, purchasing, system installation, and deployment process typically takes six months. A JIRA ticket is created when a purchase request is submitted, and this ticket will be used to communicate with PIs and track the purchase progress. The CARC will notify the PI of the finalized cost of their resources once they have purchased them from the vendor.
 
 ### Additional information
 

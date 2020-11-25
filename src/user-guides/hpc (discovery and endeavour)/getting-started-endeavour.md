@@ -56,7 +56,7 @@ Each file system serves a different purpose:
 
 - **/home1** is a network file system for storing configuration files and personal scripts. Each CARC user has a 100 GB home directory quota.
 
-- **/project**: Assignment to a project gives you access to a subdirectory of the /project parallel file system. Managed by a Principal Investigator, this is where you have access to 5 TB (default minimum; 10 TB maximum) of storage space (shared among the project's members), and where you can collaborate and share files with your research group. Use this high-performance file system for most of your research computing work at CARC.
+- **/project**: Assignment to a project gives you access to a subdirectory of the /project parallel file system. Managed by a Principal Investigator, this is where you have access to a maximum of 10 TB of storage space (shared among the project's members), and where you can collaborate and share files with your research group. Use this high-performance file system for most of your research computing work at CARC. If more than 10 TB of storage is needed, it can be purchased in 5 TB increments for $40/TB/year. See the [Accounts and Allocations page](/user-information/accounts) for more information.
 
 - **/scratch** and **/scratch2** are two parallel file systems that are shared among all CARC users. These file systems can be used for storing data temporarily and running I/O intensive jobs. Each CARC user receives a 10 TB quota for each of /scratch and /scratch2.
 
@@ -75,6 +75,8 @@ Duo Two-Factor Authentication is also required. If you have not already signed u
 ### Logging in to the Endeavour login node
 
 To log in to the Endeavour login node (also known as the *head node*), you will need to use a secure shell client. This is a small application that enables you to connect to a remote computer via SSH (**S**ecure **SH**ell), a cryptographic network protocol for securely operating network services. You will need your USC NetID to SSH in to the login node.
+
+You can find instructions for setting up SSH keys for faster login [here](https://hpc-discourse.usc.edu/t/how-to-set-up-ssh-keys-for-faster-login-login-w-o-password/128) on our User Forum.
 
 > Note: The CARC does not manage your USC NetID password. If you are having difficulty using your USC NetID and/or password, please contact [USC IT Services](https://itservices.usc.edu/self-help/).
 
