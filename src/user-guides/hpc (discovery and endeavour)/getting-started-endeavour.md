@@ -18,7 +18,7 @@ For a general overview of the Center for Advanced Research Computing, see our ma
 
 ### What is the Condo Cluster Program?
 
-The CARC's Condo Cluster Program (CCP) is a service available to USC researchers that require dedicated computing and/or storage resources for their work. The CCP gives researchers the convenience of having their own dedicated compute nodes, without the responsibility of purchasing and maintaining the nodes themselves. The CCP operates on both an annual subscription-based model, with research groups subscribing to their selected number of compute and storage resources on a yearly basis, as well as a traditional purchase model, with research groups purchasing compute or storage resources from the CARC for a fixed term (e.g., five years). All hardware is maintained by the CARC throughout the course of the subscription or lease term.
+The CARC's Condo Cluster Program (CCP) is a service available to USC researchers that require dedicated computing resources for their work. The CCP gives researchers the convenience of having their own dedicated compute nodes, without the responsibility of purchasing and maintaining the nodes themselves. The CCP operates on both an annual subscription-based model, with research groups subscribing to their selected number of compute and storage resources on a yearly basis, as well as a traditional purchase model, with research groups purchasing compute or storage resources from the CARC for a fixed term (e.g., five years). All hardware is maintained by the CARC throughout the course of the subscription or lease term.
 
 > For more information on CCP policies, see our main [Condo Cluster Program pages](/user-information/ccp).
 

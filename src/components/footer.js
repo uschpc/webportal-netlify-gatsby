@@ -18,6 +18,7 @@ const Footer = () => {
                     <Link to="/about/location-and-contact">Contact</Link>
                     <a href="https://usccareers.usc.edu/">Jobs</a>
                     <Link to="/about/license">Distribution License</Link>
+                    <Link to="/user-information/ticket-submission">Support Ticket Submission</Link>
                 </div>
                 <div className="subscribe">
                     <span className="national-caps2">

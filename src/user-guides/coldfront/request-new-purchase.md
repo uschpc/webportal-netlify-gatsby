@@ -13,7 +13,7 @@ excerpt: How to request a new condo resource purchase in the Research Computing 
 backToTopBtnFlag: true
 ---
 
-The [Condo Cluster Program (CCP)](/user-information/ccp/program-information) is a service available to USC researchers that require dedicated resources for their work. The CCP gives researchers the convenience of having their own dedicated compute nodes on an HPC cluster system (the CARC's Endeavour cluster), without the responsibility of purchasing and maintaining the nodes themselves.
+The [Condo Cluster Program (CCP)](/user-information/ccp/program-information) is a service available to USC researchers who require dedicated resources for their work. The CCP gives researchers the convenience of having their own dedicated compute nodes on an HPC cluster system (the CARC's Endeavour cluster), without the responsibility of purchasing and maintaining the nodes themselves.
 
 The CCP has two pricing models: an annual subscription-based model and a traditional, five-year term condo purchase model. Subscriptions to resources can be requested in the same way that an allocation on Discovery is requested; see the [Request New Allocation user guide](/user-information/user-guides/research-computing-user-portal/request-new-allocation) for instructions on this. Condo purchases are a bit more in-depth, but can still be requested in the User Portal.
 
@@ -31,21 +31,23 @@ On the Condo Purchase Requests page, you will see information on the CCP's condo
 
 ![ColdFront New Condo Purchase](/images/coldfront_new_condo_purchase2.png)
 
-To request a new condo purchase, select "New Purchase Request". You will be taken to a request form for purchases:
+To request a new condo purchase, click the "New Purchase Request" button. You will be taken to a request form for purchases:
 
-![ColdFront New Condo Purchase](/images/coldfront_new_condo_purchase4.png)
+![ColdFront New Condo Purchase](/images/coldfront_new_condo_purchase5.png)
 
-Select the models of CPU and/or GPU nodes you would like to purchase, as well as their quantities. The estimated price for each type of node will update as you increase the quantity.
+Select the models of CPU and/or GPU nodes you would like to purchase, as well as their quantities, and click "Add to cart". The estimated price for each type of node will update as you increase the quantity. You can see the updated total price for different models and quantities by clicking "Add to cart" again.
 
-> Note: The price for the nodes is an estimate only. The final price may vary based on market condition and the CARC’s equipment purchase price. Pricing includes cables, chassis (if necessary), and sales tax. Pricing does not include interconnect hardware, second enclosure (racks), or utility costs for power and cooling, but the CARC and USC's IT Services will cover the costs of this necessary service and equipment. PIs will not be charged any setup or recurring fees, including CARC administrative support costs.
+> Note: The price for the nodes is an estimate only. The final price may vary based on market condition and the CARC’s equipment purchase price. Pricing does not include interconnect hardware, second enclosure (racks), or utility costs for power and cooling, but the CARC and USC's IT Services will cover the costs of this necessary service and equipment. PIs will not be charged any setup or recurring fees, including CARC administrative support costs.
 
-The fields in the Billing section are automatically filled from the billing information associated with your account. If this information hasn't been added to your account, you will need to complete the fields yourself. Billing information must be inputted to complete your purchase request.
+The fields in the Billing section are automatically filled from the billing information associated with your account as a PI. If this information hasn't been added to your account previously, you will need to complete the fields yourself. See the [Adding Billing Information user guide](/user-information/user-guides/research-computing-user-portal/adding-billing-information) for instructions. Billing information must be inputted to complete your purchase request.
+
+![ColdFront New Condo Purchase](/images/coldfront_new_condo_purchase6.png)
 
 After submitting your request, you will see it on the Condo Purchase Request Page with a status of "Pending":
 
 ![ColdFront New Condo Purchase](/images/coldfront_new_condo_purchase3.png)
 
-To make any changes to your request (e.g., the requested quantity of nodes, the billing department), click the folder icon in the "Update" column. 
+If you've made an error in your purchase request or if you need to cancel it, please [submit a help ticket](/user-information/ticket-submission) and select "Condo cluster" as the ticket category.
 
 ### Purchase processing and approval
 
@@ -53,6 +55,6 @@ After a request has been submitted, the system configuration, vendor selection, 
 
 ### Additional information
 
-[Condo Cluster Program pages](/user-information/ccp)  
-[Request New Allocation user guide (for condo subscriptions)](/user-information/user-guides/research-computing-user-portal/request-new-allocation)  
-[Getting Started with Endeavour user guide](/user-information/user-guides/high-performance-computing/getting-started-endeavour)  
+* [Condo Cluster Program pages](/user-information/ccp)  
+* [Request New Allocation user guide (for condo subscriptions)](/user-information/user-guides/research-computing-user-portal/request-new-allocation)  
+* [Getting Started with Endeavour user guide](/user-information/user-guides/high-performance-computing/getting-started-endeavour)  

@@ -24,5 +24,7 @@ You cannot renew an expired allocation.  You must request a new allocation for t
 
 ![ColdFront Allocation Renewal](/images/coldfront_allocation_expires.png)
 
-[More information on the yearly project renewal](yearly-project-renewal)  
-[More information on how to request a new allocation](request-new-allocation)
+### Additional information
+
+* [Yearly Project Renewal](yearly-project-renewal)  
+* [Request New Allocation](request-new-allocation)

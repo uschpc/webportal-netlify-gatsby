@@ -65,4 +65,6 @@ The CARC's current policy is to retire anything that is more than 7 years old.
 
 If a PI does not renew cluster allocations by the due date, all users in the group will be blocked from running jobs on the cluster that allocation is linked to. If you have an extenuating circumstance making it impossible to renew on time, please contact the CARC to request an extension.
 
-[More information on allocation expirations](allocation-expiration)
+### Additional information
+
+* [Allocation Expiration](allocation-expiration)

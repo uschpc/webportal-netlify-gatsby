@@ -7,8 +7,8 @@ date: 2020-09-10
 parentPath: news-and-events/news-and-announcements
 cat: news
 excerpt: A new default quota and pricing model for storage in the project file system
-thumbnail: /images/shahadat-rahman-bfrqnkbulyq-unsplash-1-.jpg
-featuredImage: ../../static/images/shahadat-rahman-bfrqnkbulyq-unsplash-1-.jpg
+thumbnail: /images/slider-image-4-small.jpg
+featuredImage: ../../static/images/slider-image-4-small.jpg
 ---
 With our new project file system comes a change to our storage allocation quota and policy.
 

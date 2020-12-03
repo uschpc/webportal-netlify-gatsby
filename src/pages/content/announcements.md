@@ -2,9 +2,9 @@
 path: null
 cat: announcements
 title: ANNOUNCEMENTS
-date: November 13, 2020
+date: December 4, 2020
 author: Andrea Renney
 featuredImage: ../../../static/images/Comment.png
 ---
 
-The CARC is pleased to announce [Endeavour](/user-information/user-guides/high-performance-computing/getting-started-endeavour), a new high-performance computing cluster for researchers who own dedicated condo nodes for their CARC research work.  
+Announcing the all-new Condo Cluster Program, offering researchers access to dedicated compute nodes with subscription and purchase pricing models. More information [here](/news-and-events/news-and-announcements/new-condo-cluster-program-launches).  

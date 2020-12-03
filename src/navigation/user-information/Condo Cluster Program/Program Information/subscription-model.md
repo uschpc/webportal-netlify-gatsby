@@ -23,8 +23,8 @@ Currently, the CARC offers two different compute node configurations to choose f
 
 | Model | # of cores per node | GHz | Memory (GB) | Price per year |
 |-|-|-|-|-|
-| Lenovo NX360 | 16 | 2.6 | 64 GB | $600 |
-| Lenovo NX360 | 20 | 2.6 | 64 GB | $800 |
+| Lenovo NX360 | 16 | 2.6 | 64 GB | $800 |
+| Lenovo NX360 | 20 | 2.6 | 64 GB | $1,000 |
 
 > We recognize that these are not the latest and greatest compute nodes currently on the market, and the low subscription price reflects this. We are currently in the process of purchasing a new batch of compute nodes for the Condo Cluster Program. The COVID-19 situation has delayed this process, but the new compute nodes will be available for subscription on the Endeavour cluster in early 2021. 
 
