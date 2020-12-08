@@ -23,29 +23,23 @@ The following table summarizes the CPU and GPU nodes that are available for purc
 
 #### CPU nodes
 
-| CPU | CPU quantity | Memory (GB) | Estimated price |
+| CPU model | CPU quantity | Memory (GB) | Estimated price |
 |-|-|-|-|-|
 | Dual AMD EPYC 7542 32-core 2.90GHz | 2 | 256 GB | $12K |
 | Dual AMD EPYC 7542 32-core 2.90GHz | 2 | 512 GB | $16K |
-| --- |  |  |  |  |
-| Dual Intel Xeon Gold 6248R Processor 24-core 3.0GHz | 2 | 192 GB | $11K |
-| Dual Intel Xeon Gold 6248R Processor 24-core 3.0GHz | 2 | 384 GB | $14K |
+| Dual Intel Xeon Gold 6248R 24-core 3.0GHz | 2 | 192 GB | $11K |
+| Dual Intel Xeon Gold 6248R 24-core 3.0GHz | 2 | 384 GB | $14K |
 
 #### GPU nodes
 
-| CPU | CPU quantity | Memory (GB) | GPU | GPU quantity | Estimated price |
+| GPU model | GPU quantity | CPU model | CPU quantity | Estimated price |
 |-|-|-|-|-|-|
-| Dual AMD EPYC 7282 Processor 16-core 2.80GHz | 2 | 256 GB | RTX 5000 | 2 | $12.5K |
-| --- |  |  |  |  |  |
-| Dual AMD EPYC 7532 Processor 32-core 2.90GHz | 2 | 256 GB | V100s | 2 | $33K |
-| Dual AMD EPYC 7532 Processor 32-core 2.90GHz | 2 | 256 GB | A100 | 2 | $40K |
-| --- |  |  |  |  |  |
-| Dual Intel Xeon Gold 4216 Processor 16-core 2.1GHz | 2 | 192 GB | RTX 5000 | 2 | $11K |
-| Quad Intel Xeon Gold 4216 Processor 16-core 2.1GHz | 2 | 192 GB | RTX 5000 | 4 | $13K |
-| --- |  |  |  |  |  |
-| Dual Intel Xeon Gold 6248R Processor 24-core 3.0GHz | 2 | 192 GB | V100s | 2 | $31K |
-
-> Example system specifications (Dell and HPE/Exxact) for each model of node can be downloaded from GitHub [here](https://github.com/uschpc/documentation-public/blob/master/20-21%20Example%20Condo%20Node%20Configs.xlsx). Final configurations of system specs will depend on system availability from the vendor.
+| Dual RTX 5000 (16GB GDDR6 memory, 3K CUDA cores) | 2 | AMD EPYC 7282 16-core 2.80GHz | 2 | $13K |
+| Dual V100s (32GB HMB2 memory, 5K CUDA cores) | 2 | AMD EPYC 7532 32-core 2.90GHz | 2 | $33K |
+| Dual A100 (40GB HBM2 memory, 10K CUDA cores) | 2 | AMD EPYC 7532 32-core 2.90GHz | 2 | $40K |
+| Dual RTX 5000 (16GB GDDR6 memory, 3K CUDA cores) | 2 | Intel Xeon Gold 4216 16-core 2.1GHz | 2 | $13K |
+| Quad RTX 5000 (16GB GDDR6 memory, 3K CUDA cores) | 4 | Intel Xeon Gold 4216 16-core 2.1GHz | 2 | $17K |
+| Dual V100s (32GB HMB2 memory, 5K CUDA cores) | 2 | Intel Xeon Gold 6248R 24-core 3.0GHz | 2 | $31K |
 
 ### Pricing
 

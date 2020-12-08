@@ -53,7 +53,7 @@ The CCP offers both an annual subscription-based pricing model and a traditional
 | Dual AMD EPYC 7532 Processor 32-core 2.90GHz | 2 | 256 GB | A100 | 2 | $40K |
 | --- |  |  |  |  |  |
 | Dual Intel Xeon Gold 4216 Processor 16-core 2.1GHz | 2 | 192 GB | RTX 5000 | 2 | $11K |
-| Quad Intel Xeon Gold 4216 Processor 16-core 2.1GHz | 2 | 192 GB | RTX 5000 | 4 | $13K |
+| Quad Intel Xeon Gold 4216 Processor 16-core 2.1GHz | 2 | 192 GB | RTX 5000 | 4 | $17K |
 | --- |  |  |  |  |  |
 | Dual Intel Xeon Gold 6248R Processor 24-core 3.0GHz | 2 | 192 GB | V100s | 2 | $31K |
 
@@ -65,9 +65,8 @@ The CCP offers both an annual subscription-based pricing model and a traditional
 
 Job limits on Endeavour are more flexible than on Discovery and can be configured on a partition basis, but we still must enforce time limits for maintainence.
 
-**Default run time**: 30 minutes  
-**Maximum run time**: 30 minutes  
-**Maximum concurrent cores**: 24  
-**Maximum number of jobs or job steps (running or pending)**: 5  
+**Default run time if no run time is specified**: 1 hour  
+**Maximum run time**: 14 days  
+**Maximum number of jobs or job steps (running or pending)**: 3,000  
 
 More information on Endeavour jobs can be found in the [Running Jobs user guide](/user-information/user-guides/high-performance-computing/running-jobs).

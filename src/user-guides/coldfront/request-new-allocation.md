@@ -56,14 +56,16 @@ The Resource drop-down list contains the following resource options (only resour
       * **Graduate research**: 100,000 CPU/service unit hours (free, for students conducting research work that is separate from a PI's main research project)
 * **Endeavour (Cluster Partition) - Condo Subscription**: Paid service, part of the [Condo Cluster Program](/user-information/ccp). PIs will receive an email once resources are available (typically 24-48 hours after the request). 
   * **Nodetype**:
-      * Lenovo NX360 with 16 CPU cores and 64 GB memory: $400 per year 
-      * Lenovo NX360 with 20 CPU cores and 64 GB memory: $500 per year
+      * Lenovo NX360 with 16 CPU cores and 64 GB memory: $800 per year 
+      * Lenovo NX360 with 20 CPU cores and 64 GB memory: $1,000 per year
 * **Project Storage (Storage)**: Additional storage you can purchase if you require more than the initial 10 TB that the CARC provides to each PI for free.
   * **Entered in increments of 5 TB**.
 
 Select the resource you'd like access to and provide a justification for access to that resource. Your justification should include information on how you'll be using the resource and how many CPU/service unit hours you anticipate needing to use.
 
 If required, select the users on your project to which you'd like to grant access to this allocation.
+
+If you're requesting a condo subscription resource, you'll have to read the Terms and Conditions before completing your request. If you have any questions about these Terms and Conditions, please contact us at <carc-condo@usc.edu> before submitting your request.
 
 Click the Submit button when done.
 

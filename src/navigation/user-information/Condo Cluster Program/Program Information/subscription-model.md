@@ -32,4 +32,4 @@ Currently, the CARC offers two different compute node configurations to choose f
 
 Subscriptions to condo compute nodes can be requested via the CARC's User Portal, just as you would request a resource allocation for the Discovery cluster.
 
-See the [Request New Allocation user guide](/user-information/user-guides/research-computing-user-portal/request-new-allocation) for details on how to request a condo subscription for your research project.
+See the [Request New Allocation user guide](/user-information/user-guides/research-computing-user-portal/request-new-allocation) for details on how to request a condo subscription for your research project. Before submitting your request, you will be shown the Terms and Conditions for the CCP subscription model.

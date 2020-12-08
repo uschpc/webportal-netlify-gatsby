@@ -5,9 +5,9 @@ import { Link } from 'gatsby';
 
 const content = [
   {
-    title: "December Maintenance and Holiday Recess Schedule",
+    title: "December Maintenance and Winter Recess Schedule",
     description:
-      "Holiday recess runs December 25-January 4, with maintenance occuring December 28-January 1",
+      "Winter recess runs December 25-January 4, with maintenance occuring December 28-January 1",
     button: "Read More",
     url: "/news-and-events/news-and-announcements/holiday-recess-maintenance-downtime",
     image: "/images/holiday_graphic2.jpg"
