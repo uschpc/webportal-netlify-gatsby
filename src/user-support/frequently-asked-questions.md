@@ -244,7 +244,7 @@ The CARC has several different file systems, as summarized in the table below.
 | Name      | Path                                            | Amount of space                         | File recovery                | Purpose                                                                                |
 |-----------|-------------------------------------------------|-----------------------------------------|---------------------------|----------------------------------------------------------------------------------------|
 | Home      | `~`, `/home1/<username>`                          | 100 GB per account                                     | Yes                       | Personal configuration files, software, and scripts                                                 |
-| Project   | `/project/<PI_username>_<id>`                      | Default of 5 TB per project (can be increased in 5 TB increments), shared among group members | Yes                       | Shared software and files, medium-term data storage, and high-performance I/O                                       |
+| Project   | `/project/<PI_username>_<id>`                      | Default of 5 TB per project (can be increased in 5 TB increments), shared among group members; each PI receives a maximum quota of 10 TB to be used across all their projects | Yes                       | Shared software and files, medium-term data storage, and high-performance I/O                                       |
 | Scratch (1 & 2)   | `/scratch/<username>`, `/scratch2/<username>`                           | 10 TB per file system per account                        | No                        | Temporary files and high-perfomance I/O                                              |
 
 ### How do I share my project data with another user?
@@ -381,7 +381,7 @@ To see other options, view the manual page by entering `man du`.
 
 ### What is the Condo Cluster Program?
 
-The CARC's Condo Cluster Program (CCP) is a service available to USC researchers that require dedicated computing and/or storage resources for their work. The CCP gives researchers the convenience of having their own dedicated compute nodes, without the responsibility of purchasing and maintaining the nodes themselves. The CCP operates on both an annual subscription-based model, with research groups subscribing to their selected number of compute and storage resources on a yearly basis, as well as an outright purchase basis, with research groups purchasing compute or storage resources from the CARC for a fixed term (e.g., five years). All hardware is maintained by the CARC throughout the course of the subscription or lease term.
+The CARC's Condo Cluster Program (CCP) is a service available to USC researchers that require dedicated computing resources for their work. The CCP gives researchers the convenience of having their own dedicated compute nodes, without the responsibility of purchasing and maintaining the nodes themselves. The CCP operates on both an annual subscription-based model, with research groups subscribing to their selected number of compute and storage resources on a yearly basis, as well as an outright purchase basis, with research groups purchasing compute or storage resources from the CARC for a fixed term (e.g., five years). All hardware is maintained by the CARC throughout the course of the subscription or lease term.
 
 > For more information on CCP policies, see our main [Condo Cluster Program pages](/user-information/ccp).
 

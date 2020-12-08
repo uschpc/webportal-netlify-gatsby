@@ -1,6 +1,6 @@
 ---
 author: James Hong
-id: 3
+id: 2
 date: 2020-07-08T00:00:00.000Z
 title: Create New Project
 path: create-a-new-project
@@ -50,7 +50,8 @@ Entering your publication and grant information is not required to get started, 
 [Request New Allocation](request-new-allocation)  
 [Adding Users](adding-users-to-project-or-allocation)  
 
-Additional information about the parts of your project record can be found here:
+### Additional information
+
 * [Adding Grant Information](managing-grant-information-in-project)
 * [Adding Publication Information](managing-publication-information)
 * [Granting Manager Access](granting-manager-access-to-project)

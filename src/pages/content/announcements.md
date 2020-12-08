@@ -2,9 +2,9 @@
 path: null
 cat: announcements
 title: ANNOUNCEMENTS
-date: November 13, 2020
+date: December 8, 2020
 author: Andrea Renney
 featuredImage: ../../../static/images/Comment.png
 ---
 
-The CARC is pleased to announce [Endeavour](/user-information/user-guides/high-performance-computing/getting-started-endeavour), a new high-performance computing cluster for researchers who own dedicated condo nodes for their CARC research work.  
+All CARC systems will be down beginning Dec. 27 for a major data center upgrade. Systems will remain inaccessible throughout winter recess, which runs from Dec. 25 until Jan. 3. More information [here](/news-and-events/news-and-announcements/holiday-recess-maintenance-downtime).  

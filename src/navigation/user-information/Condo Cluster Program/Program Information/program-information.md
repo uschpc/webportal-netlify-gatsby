@@ -8,8 +8,7 @@ routePath: user-information/ccp
 path: program-information
 parentPath: user-information/ccp
 cat: condoClusterProgram
-#Uncomment this to have this page as a landing page with subpages (like user guide landing pages)
-#Current subpages set up are pricing.md and program-overview.md
+#Uncomment this to list the purchase and subscription pages at the bottom of this page
 #uniqID: enrollment
 parentPage: User Information
 parentEle: User Information
@@ -29,40 +28,13 @@ The CCP operates on two different models - an annual subscription model and a tr
 
 The annual subscription-based model allows research groups to subscribe to their selected number of compute and storage resources on a yearly basis. The resources that a research group subscribes to will be dedicated for use by their condo job queue. All of the hardware is purchased and maintained by the CARC throughout the course of the subscription term.
 
-At the end of the annual subscription period (typically at the end of the fiscal year, June 30), researchers can choose to renew or discontinue use of their resources. In the case of renewal, researchers will have the option to increase or decrease the size of their compute pool or storage space. 
-
-Currently, the CARC offers two different compute node configurations to choose from. The table below summarizes the technical specifications and pricing of available nodes.
-
-| Model | # of cores per node | GHz | Memory (GB) | Price per year |
-|-|-|-|-|-|
-| Lenovo NX360 | 16 | 2.6 | 64 GB | $800 |
-| Lenovo NX360 | 20 | 2.6 | 64 GB | $1,000 |
-
-> We recognize that these are not the latest and greatest compute nodes currently on the market, and we are in the process of purchasing a new batch of compute nodes for the Condo Cluster Program. The COVID-19 situation has delayed this process, but the new compute nodes will be available for subscription on the Endeavour cluster in early 2021.
-
-Subscriptions to condo compute nodes can be requested via the CARC's User Portal. See the [Request New Allocation](/user-information/user-guides/research-computing-user-portal/request-new-allocation) user guide for details on how to request a condo subscription for your research project.
+[Detailed information on the CCP's subscription pricing model](/user-information/ccp/program-information/ccp-subscription).
 
 ### Traditional purchase model
 
 The second option for CCP resources is the traditional system purchase model. This is a useful option when research groups need to make a bulk purchase using a research grant or departmental budget, and it is also useful for grant proposal budget planning purposes.
 
-Like the annual subscription model, research groups will have exclusive access to the resources they purchase. Prinicpal Investigators (PIs) only need to purchase compute nodes (CPUs and/or GPUs), cables, and a 5-year manufacturer’s warranty service. Other equipment and services, including racks, network switches, power and cooling, system support, and machine room operation in our data center, is paid for by the university. 
-
-A condo purchase request is possible during the CARC's annual condo purchase request period, which will occur during the fall semester. The whole process of purchase request, system configuration, vendor selection, purchasing, system installation, and deployment typically takes six months. The purchased resources will be in service for 5 years, and after this service period, the CARC will decommission these condo nodes. 
-
-> The CARC is still in the process of preparing for the annual condo purchase request period for 2020. Once the request period opens, PIs will use the [User Portal](/user-information/user-guides/research-computing-user-portal) to select and purchase their desired condo resources.
-
-### Storage resources
-
-While the Endeavour condo cluster is a separate system from the general use Discovery cluster, all of the CARC’s [storage file systems](/user-information/user-guides/data-management/storage-file-systems) are mounted on Endeavour and are accessible from its login (endeavour.usc.edu) and compute nodes.
-
-Each file system serves a different purpose:
-
-- **/home1** is a network file system for storing configuration files and personal scripts. Each CARC user has a 100 GB home directory quota.
-
-- **/project**: Each member of a research project has access to 5 TB (default minimum; 10 TB maximum) of storage space (shared among the project's members) for most of their research computing work at the CARC. This 10 TB maximum can be increased in 5 TB increments at a cost of $40/TB/year.
-
-- **/scratch** and **/scratch2** are two parallel file systems that are shared among all CARC users. These file systems can be used for storing data temporarily and running I/O intensive jobs. Each CARC user receives a 10 TB quota for each of /scratch and /scratch2.
+[Detailed information on the CCP's traditional purchase pricing model](/user-information/ccp/program-information/ccp-purchase).
 
 ### Endeavour condo cluster
 

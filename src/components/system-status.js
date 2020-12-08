@@ -20,6 +20,11 @@ const SystemStatus = (props) => {
                     return cat.name
                 }
             }
+            if (cat.id) {
+                if (cat.id == categoryId) {
+                    return cat.name
+                }
+            }
          });
          return result[0] ? result[0].name : null
     }

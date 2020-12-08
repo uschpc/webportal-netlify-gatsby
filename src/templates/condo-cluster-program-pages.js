@@ -36,7 +36,7 @@ export default function Template({ data }) {
                 <h1>{post.frontmatter.title}</h1>
                   <Content />
                   <Markdown source={data.content.html} escapeHtml={false} />
-                  {(content.frontmatter.uniqID === 'enrollment') && <h4 className="navigation-heading"></h4>}
+                  {(content.frontmatter.uniqID === 'enrollment') && <h4 className="navigation-heading">Condo Cluster Program Pages</h4>}
                   {(content.frontmatter.uniqID === 'enrollment') && data.allContent.edges.map((item, i) => {
                     return (
                       <ul className="list-item-subpages" key={i}>

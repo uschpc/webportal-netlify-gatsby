@@ -9,7 +9,7 @@ title: Email Notifications
 parentPage: User Guides
 sideMenuParent: Research Computing User Portal
 backToTopBtnFlag: true
-id: 13
+id: 14
 ---
 
 CARC users are automatically subscribed to receive notifications from the user portal regarding the project(s) and allocation(s) they belong to.  These email notifications include things like:

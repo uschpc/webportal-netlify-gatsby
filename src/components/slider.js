@@ -5,28 +5,28 @@ import { Link } from 'gatsby';
 
 const content = [
   {
+    title: "December Maintenance and Winter Recess Schedule",
+    description:
+      "Winter recess runs December 25-January 4, with maintenance occuring December 28-January 1",
+    button: "Read More",
+    url: "/news-and-events/news-and-announcements/holiday-recess-maintenance-downtime",
+    image: "/images/holiday_graphic2.jpg"
+  },
+  {
+    title: "New Condo Cluster Program Officially Launches",
+    description:
+      "New program offers greater flexibility, with two ownership models for dedicated compute nodes",
+    button: "Read More",
+    url: "/news-and-events/news-and-announcements/new-condo-cluster-program-launches",
+    image: "/images/slider-image-2-small.jpg"
+  },
+  {
     title: "CARC and Researchers Benefit from Reciprocal Partnerships",
     description:
       "Resources, research grants, and system testing are perks of collaborating with the CARC",
     button: "Read More",
     url: "/news-and-events/news-and-announcements/carc-research-partnerships-benefits",
     image: "/images/slider-image-1-small.jpg"
-  },
-  {
-    title: "USC's Center for Advanced Research Computing (CARC) Officially Launches",
-    description:
-      "Name change from HPC highlights the research-focused nature of the department",
-    button: "Read More",
-    url: "/news-and-events/news-and-announcements/carc-name-change",
-    image: "/images/slider-image-2-small.jpg"
-  },
-  {
-    title: "Exploring New Features on the CARC Website",
-    description:
-      "New website has an updated design and many new features for users",
-    button: "Read More",
-    url: "/news-and-events/news-and-announcements/website-new-features",
-    image: "/images/slider-image-4-small.jpg"
   }
   ];
 

@@ -50,6 +50,8 @@ The workflow for using Discovery typically consists of the following steps:
 
 To log in to the Discovery login node (also known as the *head node*), you will need to use a secure shell client. This is a small application that enables you to connect to a remote computer via SSH (**S**ecure **SH**ell), a cryptographic network protocol for securely operating network services. You will need your USC NetID to SSH in to the login node.
 
+You can find instructions for setting up SSH keys for faster login [here](https://hpc-discourse.usc.edu/t/how-to-set-up-ssh-keys-for-faster-login-login-w-o-password/128) on our User Forum.
+
 > Note: The CARC does not manage your USC NetID password. If you are having difficulty using your USC NetID and/or password, please contact [USC IT Services](https://itservices.usc.edu/self-help/).
 
 #### SSH login
@@ -118,7 +120,7 @@ We keep two weeks of snapshots for /home1. You can think of these snapshots as s
 
 ##### Project file system
 
-The project file system has a capacity of 8.4 PB of usable space and consists of directories for different research project groups. The default quota for each project directory is 5 TB, which can be increased to 10 TB at no cost. If more than 10 TB is needed, a project's Principal Investigator can request additional storage space in 5 TB increments at a cost of $200/5 TB/year. For more information on storage quotas and pricing, see the [Accounts and Allocations page](/user-information/accounts).
+The project file system has a capacity of 8.4 PB of usable space and consists of directories for different research project groups. The default quota for each project directory is 5 TB, which can be increased to 10 TB at no cost. If more than 10 TB is needed, a project's Principal Investigator can request additional storage space in 5 TB increments at a cost of $40/TB/year. For more information on storage quotas and pricing, see the [Accounts and Allocations page](/user-information/accounts).
 
 Each project member has access to their group's project directory, where they can store data, scripts, and related files. The project file system should be used for most of your CARC work, and it's also where you can collaborate with your research project group. Users affiliated with multiple CARC projects will have access to multiple project directories so they can easily share their files with the appropriate groups.
 
