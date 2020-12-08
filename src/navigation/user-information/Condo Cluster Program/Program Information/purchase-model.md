@@ -35,8 +35,8 @@ The following table summarizes the CPU and GPU nodes that are available for purc
 | GPU model | GPU quantity | CPU model | CPU quantity | Estimated price |
 |-|-|-|-|-|-|
 | RTX 5000 (16GB GDDR6, 3K CUDA cores) | 2 | AMD EPYC 7282 16-core 2.80GHz | 2 | $13K |
-| V100s (32GB HBM2, 5K CUDA cores) | 2 | AMD EPYC 7532 32-core 2.90GHz | 2 | $33K |
-| A100 (40GB HBM2, 10K CUDA cores) | 2 | AMD EPYC 7532 32-core 2.90GHz | 2 | $40K |
+| V100s (32GB HBM2, 5K CUDA cores) | 2 | AMD EPYC 7532 32-core 2.40GHz | 2 | $33K |
+| A100 (40GB HBM2, 10K CUDA cores) | 2 | AMD EPYC 7532 32-core 2.40GHz | 2 | $40K |
 | RTX 5000 (16GB GDDR6, 3K CUDA cores) | 2 | Intel Xeon Gold 4216 16-core 2.1GHz | 2 | $13K |
 | RTX 5000 (16GB GDDR6, 3K CUDA cores) | 4 | Intel Xeon Gold 4216 16-core 2.1GHz | 2 | $17K |
 | V100s (32GB HBM2, 5K CUDA cores) | 2 | Intel Xeon Gold 6248R 24-core 3.0GHz | 2 | $31K |
