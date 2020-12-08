@@ -34,12 +34,12 @@ The following table summarizes the CPU and GPU nodes that are available for purc
 
 | GPU model | GPU quantity | CPU model | CPU quantity | Estimated price |
 |-|-|-|-|-|-|
-| RTX 5000 (16GB GDDR6 memory, 3K CUDA cores) | 2 | AMD EPYC 7282 16-core 2.80GHz | 2 | $13K |
-| V100s (32GB HMB2 memory, 5K CUDA cores) | 2 | AMD EPYC 7532 32-core 2.90GHz | 2 | $33K |
-| A100 (40GB HBM2 memory, 10K CUDA cores) | 2 | AMD EPYC 7532 32-core 2.90GHz | 2 | $40K |
-| RTX 5000 (16GB GDDR6 memory, 3K CUDA cores) | 2 | Intel Xeon Gold 4216 16-core 2.1GHz | 2 | $13K |
-| RTX 5000 (16GB GDDR6 memory, 3K CUDA cores) | 4 | Intel Xeon Gold 4216 16-core 2.1GHz | 2 | $17K |
-| V100s (32GB HMB2 memory, 5K CUDA cores) | 2 | Intel Xeon Gold 6248R 24-core 3.0GHz | 2 | $31K |
+| RTX 5000 (16GB GDDR6, 3K CUDA cores) | 2 | AMD EPYC 7282 16-core 2.80GHz | 2 | $13K |
+| V100s (32GB HBM2, 5K CUDA cores) | 2 | AMD EPYC 7532 32-core 2.90GHz | 2 | $33K |
+| A100 (40GB HBM2, 10K CUDA cores) | 2 | AMD EPYC 7532 32-core 2.90GHz | 2 | $40K |
+| RTX 5000 (16GB GDDR6, 3K CUDA cores) | 2 | Intel Xeon Gold 4216 16-core 2.1GHz | 2 | $13K |
+| RTX 5000 (16GB GDDR6, 3K CUDA cores) | 4 | Intel Xeon Gold 4216 16-core 2.1GHz | 2 | $17K |
+| V100s (32GB HBM2, 5K CUDA cores) | 2 | Intel Xeon Gold 6248R 24-core 3.0GHz | 2 | $31K |
 
 ### Pricing
 
@@ -50,3 +50,5 @@ Pricing may vary based on market condition and the CARC’s equipment purchase p
 A condo purchase request is possible during the CARC's annual condo purchase request period, which occurs during the fall semester. The whole process of purchase request, system configuration, vendor selection, purchasing, system installation, and deployment typically takes six months. The purchased resources will be in service for 5 years, and after this service period, the CARC will decommission these condo nodes. 
 
 PIs use the [User Portal](/user-information/user-guides/research-computing-user-portal) to select and purchase their desired condo resources. See the [Request New Condo Purchase user guide](/user-information/user-guides/research-computing-user-portal/request-new-purchase) for detailed instructions.
+
+**The condo purchase request period is currently open. The deadline to submit a purchase request is January 15, 2021**.

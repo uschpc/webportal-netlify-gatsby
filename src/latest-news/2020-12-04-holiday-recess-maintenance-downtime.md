@@ -6,7 +6,7 @@ parentEle: News and Events
 date: 2020-12-03T00:00:00.000Z
 parentPath: news-and-events/news-and-announcements
 cat: news
-excerpt: Winter recess runs December 25-January 4, with maintenance occuring December 28-January 1
+excerpt: Winter recess runs December 25-January 4, with maintenance occuring December 27-January 1
 featuredImage: ../../static/images/holiday_graphic.jpg
 thumbnail: /images/holiday_graphic.jpg
 ---
