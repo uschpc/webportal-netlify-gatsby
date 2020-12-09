@@ -74,7 +74,9 @@ Duo Two-Factor Authentication is also required. If you have not already signed u
 
 ### Logging in to the Endeavour login node
 
-Endeavour uses a different login node than the Discovery cluster. You must use **endeavour.usc.edu** to access your condo nodes on the Endeavour cluster. To log in to the Endeavour login node, you will need to use a secure shell client. This is a small application that enables you to connect to a remote computer via SSH (**S**ecure **SH**ell), a cryptographic network protocol for securely operating network services. You will need your USC NetID to SSH in to the login node.
+Endeavour uses a different login node than the Discovery cluster. You must use **endeavour.usc.edu** to access your condo nodes on the Endeavour cluster. Otherwise, Endeavour is very similar to the Discovery cluster. You will have access to the same file systems (home1, project, and scratch 1&2) and the same software stack. 
+
+To log in to the Endeavour login node, you will need to use a secure shell client. This is a small application that enables you to connect to a remote computer via SSH (**S**ecure **SH**ell), a cryptographic network protocol for securely operating network services. You will need your USC NetID to SSH in to the login node.
 
 You can find instructions for setting up SSH keys for faster login [here](https://hpc-discourse.usc.edu/t/how-to-set-up-ssh-keys-for-faster-login-login-w-o-password/128) on our User Forum.
 
