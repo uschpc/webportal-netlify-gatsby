@@ -66,13 +66,11 @@ The CCP operates on both an annual subscription-based model, with research group
 
 ### Storage resource allocations
 
-Storage allocations are measured using disk space in terabytes (equivalent to 1,000 gigabytes).  
+All active projects are eligible for a storage allocation on the CARC project file system. Storage allocations are measured using disk space in terabytes (1 terabyte is equivalent to 1,000 gigabytes). When requesting a new storage allocation, the default minimum allocation size is 5 TB per project, and each PI can receive a maximum allocation of 10 TB across their project(s) at no cost. All users for a project will have access to that project's allocation.
 
-All active projects automatically receive a storage allocation on the CARC project file system. The default minimum allocation size is 5 TB per project, and each PI can receive a maximum allocation of 10 TB for their project(s) at no cost. All users for a project will have access to that project's allocation.
+If more than 10 TB is needed, a PI can request additional storage space through the [Research Computing User Portal](/user-information/user-guides/research-computing-user-portal). The additional storage space in excess of the first 10 TB is a paid service. Additional storage space can be added in increments of 5 TB, and the current price is $40/TB/year. For example, when a PI requires 20 TB total of space, the annual cost for the data storage space will be:
 
-If more than 10 TB is needed, a PI can request additional storage space through the Research Computing User Portal. The additional storage space in excess of the first 10 TB is a paid service. Additional storage space can be added in increments of 5 TB, and the current price is $200/5 TB/year. For example, when a PI requires 20 TB total of space, the annual cost for the data storage space will be:
-
->20 TB per year = 10 TB free + (2 x $200/5 TB/year) = $400 annual cost
+>20 TB per year = 10 TB free + (10 x $40/TB/year) = $400 annual cost
 
 If you're requesting a **new storage allocation** and require more than 10 TB, you can request your allocation in the [User Portal](http://hpcaccount.usc.edu) and indicate the amount of storage you need (in 5 TB increments). See the [Request New Allocation user guide](/user-information/user-guides/research-computing-user-portal/request-new-allocation) for more information.
 

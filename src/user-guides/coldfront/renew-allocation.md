@@ -36,11 +36,9 @@ Allocations for the Discovery cluster expire yearly.  Faculty must renew their a
 
 #### Policies for storage
 
-The CARC provides each research group with up to 10 TB of storage per PI for free, and 5 TB is the default allocation per project. If more than 10 TB of storage is needed, it can be purchased in 5 TB increments for $40/TB/year. See the [Accounts and Allocations page](/user-information/accounts) for more information.
+The CARC provides each PI with up to 10 TB of storage across projects for free. 5 TB is the default minimum allocation per project. If more than 10 TB of storage is needed, it can be purchased in 5 TB increments for $40/TB/year. See the [Accounts and Allocations page](/user-information/accounts) for more information.
 
 If you purchase additional storage, your allocation expires when the warranty on the storage expires. Before this date, the CARC will purchase a new storage solution and you will have an opportunity to purchase storage on that system. If you decide not to do that, you will need to remove your data off the CARC's network before the old system is retired.  We will provide plenty of notice before this occurs.
-
-At this time, all CARC storage allocations expire in December 2020.
 
 #### Policies for a departmental server or cluster
 

@@ -31,7 +31,7 @@ The CARC also offers a traditional, five-year purchase model for condo resources
 
 #### Storage space
 
-Additional storage in the /project file system a PI can purchase if more storage than the initial 10 TB that the CARC provides to each PI for free is required.
+Storage space in the /project file system. CARC provides PIs up to 10 TB of space across projects for free, but more can be purchased if needed.
 
 ### Requesting an allocation
 
@@ -58,7 +58,7 @@ The Resource drop-down list contains the following resource options (only resour
   * **Nodetype**:
       * Lenovo NX360 with 16 CPU cores and 64 GB memory: $800 per year 
       * Lenovo NX360 with 20 CPU cores and 64 GB memory: $1,000 per year
-* **Project Storage (Storage)**: Additional storage you can purchase if you require more than the initial 10 TB that the CARC provides to each PI for free.
+* **Project Storage (Storage)**: Storage space in the /project file system. CARC provides PIs up to 10 TB of space across projects for free, but more can be purchased if needed.
   * **Entered in increments of 5 TB**.
 
 Select the resource you'd like access to and provide a justification for access to that resource. Your justification should include information on how you'll be using the resource and how many CPU/service unit hours you anticipate needing to use.
