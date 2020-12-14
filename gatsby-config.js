@@ -3,7 +3,6 @@ module.exports = {
     title: `USC Advanced Research Computing`,
     description: `USC's Center for Advanced Research Computing supports computational research and data-driven solutions.`,
     author: `@gatsbyjs`,
-    image: `/images/thumbnail.png`
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
