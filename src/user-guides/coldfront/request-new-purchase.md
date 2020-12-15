@@ -1,7 +1,7 @@
 ---
 author: Andrea Renney
 id: 4
-date: 2020-11-24T00:00:00.000Z
+date: 2020-12-15T00:00:00.000Z
 title: Request New Condo Purchase
 path: request-new-purchase
 route: User Guides
@@ -33,7 +33,11 @@ On the Condo Purchase Requests page, you will see information on the CCP's condo
 
 ![ColdFront New Condo Purchase](/images/coldfront_new_condo_purchase2.png)
 
-To request a new condo purchase, click the "New Purchase Request" button. You will be taken to a request form for purchases:
+To request a new condo purchase, click the "New Purchase Request" button.
+
+### Condo purchase request form
+
+You will be taken to a request form for purchases:
 
 ![ColdFront New Condo Purchase](/images/coldfront_new_condo_purchase5.png)
 
@@ -41,17 +45,25 @@ Select the models of CPU and/or GPU nodes you would like to purchase, as well as
 
 > Note: The price for the nodes is an estimate only. The final price may vary based on market condition and the CARC’s equipment purchase price. Pricing does not include interconnect hardware, second enclosure (racks), or utility costs for power and cooling, but the CARC and USC's IT Services will cover the costs of this necessary service and equipment. PIs will not be charged any setup or recurring fees, including CARC administrative support costs.
 
+### Billing information
+
 The fields in the Billing section are automatically filled from the billing information associated with your account as a PI. If this information hasn't been added to your account previously, you will need to complete the fields yourself. See the [Adding Billing Information user guide](/user-information/user-guides/research-computing-user-portal/adding-billing-information) for instructions. Billing information must be inputted to complete your purchase request.
 
-![ColdFront New Condo Purchase](/images/coldfront_new_condo_purchase6.png)
+### Submitting your request
 
-After submitting your request, you will see it on the Condo Purchase Request Page with a status of "Pending":
+Before submitting your request, you will see the Terms and Conditions for CCP purchases. By submitting your request, you agree to these terms and conditions:
 
-![ColdFront New Condo Purchase](/images/coldfront_new_condo_purchase3.png)
+![ColdFront New Condo Purchase](/images/coldfront_new_condo_purchase7.png)
+
+Click the check box and the blue "Submit" button to submit your request.
 
 If you've made an error in your purchase request or if you need to cancel it, please [submit a help ticket](/user-information/ticket-submission) and select "Condo cluster" as the ticket category.
 
 ### Purchase processing and approval
+
+After submitting your request, you will see it on the Condo Purchase Request Page with a status of "Pending":
+
+![ColdFront New Condo Purchase](/images/coldfront_new_condo_purchase3.png)
 
 After a request has been submitted, the system configuration, vendor selection, purchasing, system installation, and deployment process typically takes six months. A JIRA ticket is created when a purchase request is submitted, and this ticket will be used to communicate with PIs and track the purchase progress. The CARC will notify the PI of the finalized cost of their resources once they have purchased them from the vendor.
 
