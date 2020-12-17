@@ -2,7 +2,7 @@
 title: Frequently Asked Questions
 id: 4
 author: Andrea Renney
-date: 2020-10-13T18:19:38.387Z
+date: 2020-12-15T18:19:38.387Z
 path: frequently-asked-questions
 thumbnail: /images/Question.png
 featuredImage: ../../static/images/Question.png
@@ -76,7 +76,7 @@ ssh <username>@discovery.usc.edu
 
 The head nodes should only be used for non-intensive work like editing and compiling programs; any computing should be done on the compute nodes. Computing jobs run on the head nodes may be terminated before they complete. To [submit jobs](/user-information/user-guides/high-performance-computing/running-jobs) to the compute nodes, use the Slurm resource manager.
 
-For more information on logging in to the cluster, see the [Getting Started with Discovery user guide](/user-information/user-guides/high-performance-computing/getting-started).
+For more information on logging in to the cluster, see the [Getting Started with Discovery user guide](/user-information/user-guides/high-performance-computing/getting-started-discovery).
 
 ### How do I avoid getting logged out of the CARC systems due to a bad Wi-Fi connection?
 
@@ -140,7 +140,7 @@ You can check the resources your program is consuming using the `top` process ma
 2. Run your job.
 
   ```sh
-   salloc --ntasks=8
+   [ttrojan@discovery1 ~]$ salloc --ntasks=8
    salloc: Pending job allocation 24210
    salloc: job 24210 queued and waiting for resources
    salloc: job 24210 has been allocated resources
@@ -154,7 +154,7 @@ You can check the resources your program is consuming using the `top` process ma
 3. Open a second terminal window, `ssh` to your compute node, and run the `top` command. This will display the processes running on that node.
 
   ```sh
-  [ttrojan@discovery ~]$ ssh d11-30
+  [ttrojan@discovery1 ~]$ ssh d11-30
   [ttrojan@d11-30]$ top
     
   top - 15:37:36 up 21:50,  1 user,  load average: 0.00, 0.01, 0.05
@@ -221,13 +221,13 @@ To edit an existing file, enter the editor name as the command and then the path
 
 ### Can I use the local storage on a compute node?
 
-The /tmp directory on compute nodes is limited, so we recommend that you use the /scratch or /scratch2 file systems for temporary files. To change the temporary directory location, modify the `$TMPDIR` environment variable. For example:
+The /tmp directory on compute nodes is limited to 1 GB and can be shared with other jobs, so we recommend that you use your /project, /scratch, or /scratch2 directories for temporary files, all of which are located on high-performance, parallel file systems. To automatically redirect temporary files to another location, set the `TMPDIR` environment variable. For example:
 
 ```sh
 export TMPDIR=/scratch/<username>
 ```
 
-You can also include this line in your ~/.bash_profile to automatically set this variable every time you log in.
+Add this line to your ~/.bash_profile to automatically set the `TMPDIR` every time you log in and for batch jobs. To change this on a job-by-job basis, add a similar line to your job scripts.
 
 ## Cluster Resources: Data Files and Disk Space
 
@@ -245,7 +245,7 @@ The CARC has several different file systems, as summarized in the table below.
 |-----------|-------------------------------------------------|-----------------------------------------|---------------------------|----------------------------------------------------------------------------------------|
 | Home      | `~`, `/home1/<username>`                          | 100 GB per account                                     | Yes                       | Personal configuration files, software, and scripts                                                 |
 | Project   | `/project/<PI_username>_<id>`                      | Default of 5 TB per project (can be increased in 5 TB increments), shared among group members; each PI receives a maximum quota of 10 TB to be used across all their projects | Yes                       | Shared software and files, medium-term data storage, and high-performance I/O                                       |
-| Scratch (1 & 2)   | `/scratch/<username>`, `/scratch2/<username>`                           | 10 TB per file system per account                        | No                        | Temporary files and high-perfomance I/O                                              |
+| Scratch (1 & 2)   | `/scratch/<username>`, `/scratch2/<username>`                           | 10 TB for scratch, 30 TB for scratch2 per account                        | No                        | Temporary files and high-perfomance I/O                                              |
 
 ### How do I share my project data with another user?
 
@@ -321,7 +321,7 @@ To check your quota, use the `myquota` command. Under `size`, compare the result
 > Note: The `chunk files` section indicates the way your files and directories are divided up by the parallel file system, not the absolute number of files.
 
 ```sh
-ttrojan@discovery:~$ myquota
+ttrojan@discovery2:~$ myquota
 --------------------------
 /home1/ttrojan
       user/group     ||           size          ||    chunk files
@@ -353,9 +353,9 @@ ttrojan@discovery:~$ myquota
 
 ### I’m running out of space. How do I check the size of my files and directories?
 
-To check your disk usage, use the `du` command.
+To check the disk usage of files and directories, use the `du` command.
 
-To list the largest directories in the current directory, enter:
+To list the ten largest files or subdirectories in the current directory, enter:
 
 ```sh
 du -s * | sort -nr | head -n 10
@@ -365,17 +365,7 @@ du -s * | sort -nr | head -n 10
 - `sort -nr`: Sorts numerically, in reverse order
 - `head -n 10`: Shows the first ten lines from head
 
-To list the top ten largest files from the current directory, enter:
-
-```sh
-du . | sort -nr | head -n 10
-```
-
-- `du .`: Shows disk usage of current directory
-- `sort -nr`: Sorts numerically, in reverse order
-- `head -n 10`: Shows the first ten lines from head
-
-To see other options, view the manual page by entering `man du`.
+Enter `man du` or `du --help` for more information and to view all available options.
 
 ## Cluster Resources: Endeavour/Condo Cluster Program
 
@@ -409,7 +399,7 @@ In short, we use the Lmod module system to manage your shell environment. To use
 To check if a certain software or library is available, use the `module spider` command. The following example checks for `samtools`:
 
 ```sh
-user@discovery:~$ module spider samtools
+ttrojan@discovery2:~$ module spider samtools
 ----------------------------------------------------------------------------------------------
   samtools:
 ----------------------------------------------------------------------------------------------

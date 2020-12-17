@@ -40,7 +40,7 @@ The project file system should be used for most of your CARC work, and it's also
 
 The scratch directories - /scratch and /scratch2 - are high-performance parallel file systems, so you can temporarily store files in and run IO-intensive jobs from them.
 
-/scratch has a capacity of 806 TB, and /scratch2 has a capacity of 709 TB. Each user receives a 10 TB storage allocation for each of /scratch and /scratch2.
+/scratch has a capacity of 806 TB, and /scratch2 has a capacity of 709 TB. Each user receives a 10 TB storage allocation for /scratch and a 30 TB allocation for /scratch2.
 
 ### Operating system
 

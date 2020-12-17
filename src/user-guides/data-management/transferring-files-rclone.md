@@ -1,9 +1,9 @@
 ---
 author: Caroline Jin
-id: 8
+id: 7
 date: 2020-10-13T00:00:00.000Z
 title: Transferring Files using rclone
-path: rclone
+path: transferring-files-rclone
 parentPath: user-information/user-guides/data-management
 cat: dataManagement
 parentPage: User Guides

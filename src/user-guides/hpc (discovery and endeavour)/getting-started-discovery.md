@@ -50,13 +50,9 @@ The workflow for using Discovery typically consists of the following steps:
 
 To log in to the Discovery login node (also known as the *head node*), you will need to use a secure shell client. This is a small application that enables you to connect to a remote computer via SSH (**S**ecure **SH**ell), a cryptographic network protocol for securely operating network services. You will need your USC NetID to SSH in to the login node.
 
-You can find instructions for setting up SSH keys for faster login [here](https://hpc-discourse.usc.edu/t/how-to-set-up-ssh-keys-for-faster-login-login-w-o-password/128) on our User Forum.
-
-> Note: The CARC does not manage your USC NetID password. If you are having difficulty using your USC NetID and/or password, please contact [USC IT Services](https://itservices.usc.edu/self-help/).
-
-#### SSH login
-
-##### On macOS and Linux
+<details>
+  <summary>SSH login: macOS and Linux</summary>
+&nbsp;
 
 macOS users can connect to Discovery using the Terminal application that is natively installed. Linux users can similarly use the natively installed terminal application that comes with their distribution of Linux (e.g., Terminal on Ubuntu).
 
@@ -72,7 +68,11 @@ Be sure to substitute your USC NetID as the username. This is the same username 
 
 After entering your password, you will then see a Duo two-factor authentication prompt.
 
-##### On Windows
+</details>
+
+<details>
+  <summary>SSH login: Windows</summary>
+&nbsp;
 
 Windows users may need to download and install a third-party SSH client to connect to Discovery. The most popular client is PuTTY, which is available through the [developer’s website](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). On Windows 10, there is also a natively available Windows Terminal that has a built-in SSH client.
 
@@ -92,6 +92,13 @@ Your USC NetID is the same username for your USC email account (e.g., ttrojan@us
 
 After entering your password, you will then see a Duo two-factor authentication prompt.
 
+</details>
+&nbsp;
+
+You can find instructions for setting up SSH keys for faster login [here](https://hpc-discourse.usc.edu/t/how-to-set-up-ssh-keys-for-faster-login-login-w-o-password/128) on our User Forum.
+
+> Note: The CARC does not manage your USC NetID password. If you are having difficulty using your USC NetID and/or password, please contact [USC IT Services](https://itservices.usc.edu/self-help/).
+
 #### Duo two-factor authentication (2FA)
 
 Duo 2FA is required to access Discovery. If you have not already signed up for Duo on your USC NetID account, please visit [this page](https://itservices.usc.edu/duo/enroll) to enroll.
@@ -104,7 +111,10 @@ Duo 2FA is required to access Discovery. If you have not already signed up for D
 
 All CARC account holders are assigned three directories where they can store files and run programs: **home**, **project**, and **scratch**.
 
-##### Home directory
+
+<details>
+  <summary>Home directory</summary>
+&nbsp;
 
 Your home directory has a quota of 100 GB of disk space and 2 million files, and it is intended for personal configurations and settings as well as software installations. It is not intended for IO-intensive jobs to be run directly from /home.
 
@@ -118,7 +128,12 @@ To easily switch to your home directory, enter the command `cd` from the directo
 
 We keep two weeks of snapshots for /home1. You can think of these snapshots as semi-backups, meaning that if you accidentally deleted some data we would be able to recover it within three weeks. If the file was created and deleted within a one-day period, then the snapshot cannot recover it. You should always keep extra backups of your important data and other files because of this.
 
-##### Project file system
+</details>
+
+
+<details>
+  <summary>Project file system</summary>
+&nbsp;
 
 The project file system has a capacity of 8.4 PB of usable space and consists of directories for different research project groups. The default quota for each project directory is 5 TB, which can be increased to 10 TB at no cost. If more than 10 TB is needed, a project's Principal Investigator can request additional storage space in 5 TB increments at a cost of $40/TB/year. For more information on storage quotas and pricing, see the [Accounts and Allocations page](/user-information/accounts).
 
@@ -140,11 +155,16 @@ mkdir /project/<PI_name>_xxx/<username>
 
 where `<username>` is your USC NetID (your email address without "@usc.edu").
 
-##### Scratch file systems
+</details>
+
+
+<details>
+  <summary>Scratch file systems</summary>
+&nbsp;
 
 The /scratch and /scratch2 file systems are high-performing, parallel file systems running ZFS/BeeGFS that are hosted on dedicated storage machines. They are shared resources for use by all CARC researchers. Data stored in /scratch and /scratch2 are retained and not deleted between jobs, but they are *not* backed up. Data should be periodically copied to a permanent project file system to decrease the risk of data loss.
 
-Directories are automatically created for each CARC user under /scratch and /scratch2 so that data can be stored there temporarily. These directories are accessible only to you, and each user account is limited to a 10 TB quota for each of /scratch and /scratch2.
+Directories are automatically created for each CARC user under /scratch and /scratch2 so that data can be stored there temporarily. These directories are accessible only to you, and each CARC user receives a 10 TB quota for /scratch and a 30 TB quota for /scratch2.
 
 Your scratch directory is located at:
 
@@ -162,6 +182,9 @@ Your scratch2 directory is located at:
 
 /scratch2 has a capacity of 709 TB. Use the `cds2` command to quickly change to your scratch2 directory.
 
+</details>
+&nbsp;
+
 ### Transferring files
 
 The CARC has two dedicated data transfer nodes at `hpc-transfer1.usc.edu` and `hpc-transfer2.usc.edu` that are configured for fast file transfers. These nodes are also [Globus endpoints](/user-information/user-guides/Data-Management/transferring-files-globus). To access these nodes, use `@hpc-transfer1.usc.edu` or `@hpc-transfer2.usc.edu` instead of the normal login node (`@discovery.usc.edu`) when logging in:
@@ -172,11 +195,11 @@ ssh <username>@hpc-transfer1.usc.edu
 
 Remember to always transfer files into your home or scratch directories where you have sufficient disk space.
 
+For more information on transferring files between your local machine and the Discovery cluster, see the [Data Management and File Transfers user guides](/user-information/user-guides/data-management).
+
 #### Between your local machine and Discovery
 
 There are a number of ways to transfer files between your local machine and Discovery. These include the commands `sftp`, `scp`, or `rsync` as well as GUI apps like Cyberduck or FileZilla.
-
-For more information on transferring files between your local machine and the Discovery cluster, see the [Data Management and File Transfers user guides](/user-information/user-guides/data-management).
 
 #### From the web to Discovery
 
@@ -214,7 +237,10 @@ Once you are logged in, you can use software, work with files, run brief tests, 
 
 > Note: The login node is a shared resource that is used by many users simultaneously. Be careful not to do tasks on the login node that will negatively impact other users, or we may terminate your process without warning. You may run small tests on the login node, but beyond that you should use the compute nodes.
 
-#### Using CARC-installed software
+
+<details>
+  <summary>Using CARC-installed software</summary>
+&nbsp;
 
 On Discovery, the CARC maintains software, compilers, and libraries using the `module` system. These may satisfy your computing requirements without any further installations.
 
@@ -234,15 +260,26 @@ This loads the default version of Python. Then, for example, enter `python` to b
 
 For more information on the software module system, see our [Software Module System user guide](/user-information/user-guides/high-performance-computing/lmod).
 
-#### Installing your own software
+</details>
+
+<details>
+  <summary>Installing your own software</summary>
+&nbsp;
 
 Researchers are encouraged to install any software, libraries, and packages necessary for their work. Consult the software's documentation on how to install from source or with pre-built binaries. Additionally, for a more controlled and portable computing environment, consider using a [Singularity container](https://singularity.lbl.gov/) for your software builds.
 
 For more information on installing software, see the [Software and Programming user guides](/user-information/user-guides/software-and-programming).
 
-### Running jobs
+</details>
+&nbsp;
+
+### Jobs
 
 A job consists of all the data, commands, scripts, and programs that will be used to obtain results.
+
+<details>
+  <summary>Running your job</summary>
+&nbsp;
 
 Because the Discovery computing cluster is a shared system, we use a **job scheduler** to manage all requests for resources. The Slurm (Simple Linux Utility for Resource Management) job scheduler is an open-source job scheduler that allocates compute resources on clusters for queued, user-defined jobs. It performs the following functions:
 
@@ -282,7 +319,12 @@ Usage reported in Percentage of Total
 discovery   ttrojan         ttrojan           acct1   10.03%    0.00%
 ```
 
-### Testing your job
+</details>
+
+
+<details>
+  <summary>Testing your job</summary>
+&nbsp;
 
 We recommend that you first test your job interactively on a compute node before submitting it remotely to the Slurm job scheduler, ensuring that you will have quality results after the job completes. You can do this by requesting an interactive session with a compute node using the `salloc` command.
 
@@ -298,7 +340,12 @@ After running the command, the job scheduler will add your job to the wait queue
 
 Once your job starts, you can then test out your scripts and programs to make sure they work properly. Once you are confident that you know how your program will behave, you are ready to submit a job through Slurm.
 
-### Submitting your job
+</details>
+
+<details>
+  <summary>Submitting your job</summary>
+&nbsp;
+
 
 After you have tested your job interactively and achieved the results you want, you can now submit your job to Slurm.
 
@@ -339,7 +386,12 @@ less slurm-<jobid>.out`.
 
 For more information on creating and submitting Slurm job scripts, see the [Running Jobs user guide](/user-information/user-guides/high-performance-computing/running-jobs).
 
-### Monitoring your job
+</details>
+
+<details>
+  <summary>Monitoring your job</summary>
+&nbsp;
+
 
 There are several commands you can use to monitor a job after it has been submitted.
 
@@ -374,6 +426,9 @@ scancel <jobid>
 ```
 
 Your job may remain in the queue for a short time, but its status will change to "CG" (completing) or "CA" (canceled).
+
+</details>
+&nbsp;
 
 ### Getting help
 
