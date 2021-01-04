@@ -45,3 +45,9 @@ Below are links to the official documentation pages for the CARC's most commonly
 [MATLAB](https://www.mathworks.com/help/matlab/getting-started-with-matlab.html)
 
 [Julia](https://docs.julialang.org/en/v1/)
+
+### MathWorks events
+
+MathWorks offers many free MATLAB and Simulink events both in-person and virtually. Courses are offered in self-paced and live formats.
+
+To view upcoming workshops, webinars, and conferences, see https://www.mathworks.com/company/events.html?s_tid=gn_ev 

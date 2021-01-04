@@ -27,7 +27,7 @@ USC faculty, staff, and students already have access to one or more public cloud
 * [Google Drive](https://itservices.usc.edu/googledrive/)
 * [Microsoft OneDrive](https://itservices.usc.edu/office365/onedrive/)
 
-We recommend using Rclone for syncing your files to these cloud storage providers.  Read the [Rclone documentation](https://rclone.org/docs/) for detailed instructions and a few common scenarios.
+We recommend using Rclone for syncing your files to these cloud storage providers.  Read the [Rclone documentation](https://rclone.org/docs/) and our [Transferring Files using Rclone user guide](/user-information/user-guides/data-management/transferring-files-rclone) for detailed instructions and a few common scenarios.
 
 #### Cloud Accounts
 
