@@ -1,7 +1,7 @@
 ---
 author: Derek Strong
 id: 1
-date: 2020-08-13T12:00:00.387Z
+date: 2020-12-20T12:00:00.387Z
 title: Getting Started with Discovery
 path: getting-started-discovery
 parentPath: user-information/user-guides/high-performance-computing

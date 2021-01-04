@@ -5,14 +5,6 @@ import { Link } from 'gatsby';
 
 const content = [
   {
-    title: "December Maintenance and Winter Recess Schedule",
-    description:
-      "Winter recess runs December 21-January 4, with maintenance occuring from December 27",
-    button: "Read More",
-    url: "/news-and-events/news-and-announcements/holiday-recess-maintenance-downtime",
-    image: "/images/holiday_graphic2.jpg"
-  },
-  {
     title: "New Condo Cluster Program Officially Launches",
     description:
       "New program offers greater flexibility, with two ownership models for dedicated compute nodes",

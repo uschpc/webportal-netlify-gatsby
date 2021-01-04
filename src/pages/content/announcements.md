@@ -2,9 +2,9 @@
 path: null
 cat: announcements
 title: ANNOUNCEMENTS
-date: December 8, 2020
+date: January 4, 2021
 author: Andrea Renney
 featuredImage: ../../../static/images/Comment.png
 ---
 
-All CARC systems will be down beginning Dec. 27 for a major data center upgrade. Systems will remain inaccessible throughout winter recess, which runs from Dec. 21 until Jan. 3. More information [here](/news-and-events/news-and-announcements/holiday-recess-maintenance-downtime).  
+The Condo Cluster Program offers subscription-based access to dedicated compute nodes, as well as a traditional system purchase model. Deadline for system purchase is Jan. 15. More information [here](/user-information/ccp/program-information).  
