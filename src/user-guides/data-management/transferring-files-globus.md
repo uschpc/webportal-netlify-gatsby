@@ -1,7 +1,7 @@
 ---
 author: Ryan Sim / Chris Taylor
 id: 6
-date: 2020-06-06T00:00:00.000Z
+date: 2021-01-07T00:00:00.000Z
 title: Transferring Files using Globus
 path: transferring-files-globus
 parentPath: user-information/user-guides/data-management
@@ -30,19 +30,23 @@ After authenticating you'll land on the File Manager page.
 
 ![Globus Software Set Up](/images/globus-gfx/globus-filemgr1.PNG)
 
-### Setting up Collections for file transfers and installing Globus Personal Connect
+You can toggle the number and configuration of the two panes using the Panels menu in the top right of the File Manager page.
 
-In Globus terminology, a user sets up a **Collection**, which is simply a place to transfer files. This can be a folder on your laptop, your home directory on a remote data transfer node (like hpc-transfer.usc.edu), or even a remote location you have access to through a scientific computing affiliation.
+### Setting up Collections for file transfers
+
+In Globus terminology, a user sets up a **Collection**, which is simply a place to transfer files. This can be a folder on your laptop, your home directory on a remote data transfer node (like the CARC's hpc-transfer1.usc.edu or hpc-transfer2.usc.edu), or even a remote location you have access to through a scientific computing affiliation.
 
 In the Globus user interface, Collections are managed in terms of <b>Endpoints</b>. From the main Globus File Manager page, click on the <b>ENDPOINTS</b> link on the left panel.
 
 ![Globus Software Set Up](/images/globus-gfx/globus-coll1.PNG)
 
-On the upper right of the File Manager page page, click on <b>Create a personal endpoint</b>. You'll be presented with a link to download and install the software.
+On the upper right of the File Manager page page, click on <b>Create a personal endpoint</b>. 
 
 ![Globus Software Set Up](/images/globus-gfx/globus-coll2.PNG)
 
-Now it's time to install the desktop service, Globus Connect Personal, that makes Globus work behind the scenes for you.
+#### Installing Globus Connect Personal
+
+You'll be presented with a link to download and install the desktop service, Globus Connect Personal, that makes Globus work behind the scenes for you.
 
 ![Globus Software Set Up](/images/globus-gfx/globus-dl1.PNG)
 
@@ -60,11 +64,11 @@ Once logged in, allow the setup to continue.
 
 #### Globus Installation Guides
 
-[How to Install: Mac OS](https://docs.globus.org/how-to/globus-connect-personal-mac/)
+* [How to Install: Mac OS](https://docs.globus.org/how-to/globus-connect-personal-mac/)
 
-[How to Install: Windows](https://docs.globus.org/how-to/globus-connect-personal-windows/)
+* [How to Install: Windows](https://docs.globus.org/how-to/globus-connect-personal-windows/)
 
-[How to Install: Linux](https://docs.globus.org/how-to/globus-connect-personal-linux/)
+* [How to Install: Linux](https://docs.globus.org/how-to/globus-connect-personal-linux/)
 
 #### Establishing an endpoint
 
@@ -78,39 +82,19 @@ Depending on whether Globus knows your account ID from a previous login or exist
 
 In the setup window, clicking <b>Save</b> will open yet another Globus front end interface. Click on <b>ENDPOINTS</b> and then on <b>Administered by You</b> on the right side of the middle menu. You should see the Endpoint you entered previously.
 
+![Globus Software Set Up](/images/globus-gfx/globus-endpoints-administered.PNG)
+
+Click on the Endpoint and in the next screen, choose the <b>Open in File Manager</b> button on the right hand side of the page.
+
 ![Globus Software Set Up](/images/globus-gfx/globus-inst-login4.PNG)
 
-Click on the Endpoint and in the next screen, choose the <b>Open in File Manager</b> button, which is the middle button on the right hand side. Ensure that this takes you to a listing of the files in your home directory, including subfolders into which you can navigate.
+Ensure that this takes you to a listing of the files in the selected directory on your computer, including subfolders into which you can navigate.
 
-![Globus Software Set Up](/images/globus-gfx/globus-local-ep1.PNG)
+![Globus Software Set Up](/images/globus-gfx/globus-manager-endpoint.png)
 
-### Setting up access to hpc-transfer.usc.edu
+#### Allowing access to your local files
 
-To set up access to the hpc-transfer node, go to <b>ENDPOINTS</b> and click on <b>Shared with You</b> in the middle menu bar. Right above that, enter <b>hpc-transfer.usc.edu</b> in the search box and click the magnifying glass. The USC data transfer node endpoint should appear in the main window.
-
-![Globus Software Set Up](/images/globus-gfx/globus-remote1.PNG)
-
-Click on the endpoint link and then click the <b>Activate</b> button on the right hand side.
-
-![Globus Software Set Up](/images/globus-gfx/globus-remote2.PNG)
-
-You will be asked to log in.
-
->Note: Globus wants your username, which is your USC NetID <b>without</b> the <b>.usc.edu</b> part. This is as if you are logging in to hpc-transfer.usc.edu with something like SCP or SSH. Enter your username and the password you use to log in to USC networks and servers.
-
-If you succesfully authenticate you will be granted an access certificate. You are connected to the USC data transfer node Endpoint.
-
-![Globus Software Set Up](/images/globus-gfx/globus-remote3.PNG)
-
-Click on <b>Open in File Manager</b> and ensure you can see the files and directories in your home directory on the CARC cluster.
-
-### Getting ready to transfer files
-
-At this point you can navigate to the File Manager, where you will be presented with the Globus transfer tool, which has a two-pane bi-directional paradigm.
-
-![Globus Software Set Up](/images/globus-gfx/globus-fm1.PNG)
-
-For security, Globus requires you to specifically allow files and folders on your PC to be shared or transferred.
+For security, Globus requires you to specifically allow files and folders on your computer to be shared or transferred.
 
 On Windows, to allow a folder's contents to be transferred,  right click on the small <b>g</b> (the Globus icon) in your running task icons in the task bar.
 
@@ -118,7 +102,7 @@ Select the <b>Options...</b> menu item.
 
 ![Globus Software Set Up](/images/globus-gfx/globus-svcopt1.PNG)
 
-You will be presented with a box to add a folder containing the files you want to transfer. If you click on the <b>+</b> sign on the lower right (highligted in blue) you will have a standard file explorer that gives you the ability to add a folder on your local hard drive. For now, only keep the <b>Writable</b> option checked and the **Shareable** option unchecked.
+You will be presented with a box to add a folder containing the files you want to transfer. If you click on the <b>+</b> sign on the lower right (highlighted in blue) you will have a standard file explorer that gives you the ability to add a folder on your local hard drive. For now, only keep the <b>Writable</b> option checked and the **Shareable** option unchecked.
 
 ![Globus Software Set Up](/images/globus-gfx/globus-svcopt2.PNG)
 
@@ -128,28 +112,120 @@ On a Mac, the process is similar. You access the small Globus <b>g</b> icon in t
 
 ![Globus Software Set Up](/images/globus-gfx/globus-macadd.PNG)
 
-Return to the main Globus window. In the File Manager page, you should see the USC hpc-transfer Endpoint on the left column, and your local Endpoint in the right column. In the search field at the top of that column (designated by a blue magnifying glass), you can click once and be presented with the local Collection you specified earlier. Clicking on it fills the right column, and clicking on the blue right-angle arrow on the right allows you to navigate to the folder you designated. You'll see any files you placed in there.
+### Setting up access to your CARC directories
 
-![Globus Software Set Up](/images/globus-gfx/globus-fm2.PNG)
+To set up access to your CARC /home1, /project, and /scratch directories on Discovery/Endeavour, go to <b>ENDPOINTS</b> and click on <b>Shared with You</b> in the middle menu bar. Right above that, enter <b>USC CARC User Directories</b> in the search box and click the magnifying glass. The USC data transfer node endpoint should appear in the main window.
 
-Now in the right column highlight one, two, or all of the files in your local folder. Starting the transfer is as simple as clicking on the blue <b>Start</b> button. A popup window will appear in the upper right giving you the option to <b>View details</b>. That will take you to a screen where you can watch the progress, as well as view other information about your transfer job.
+![Globus Software Set Up](/images/globus-gfx/globus-endpoint-search.png)
 
-![Globus Software Set Up](/images/globus-gfx/globus-xfer1.PNG)
+After selecting the USC CARC User Directories endpoint, you will be taken to the Endpoint's main page.
 
-If your files are large, Globus takes a few seconds or minutes to index them and get ready to transfer.
+![Globus Software Set Up](/images/globus-gfx/globus-remote1.PNG)
 
-When your transfer completes, go back to the File Manager window. In the left pane, under the USC hpc-transfer Endpoint, click the refresh button in the middle menu (right under the <b>Path</b> field). The refresh button is the right-curling arrow, which will pull an updated listing of the files in your home directory on the USC data transfer node. If needed, scroll through the list and you will see your files there.
+Navigate to the Credentials tab and you will see that authentication and consent are required for Globus to manage collections on the Endpoint. Click "continue".
 
-![Globus Software Set Up](/images/globus-gfx/globus-xfer2.PNG)
+![Globus Software Set Up](/images/globus-gfx/globus-remote2.PNG)
 
-Notice that in the <b>Path</b> window Globus designates your home directory as a ```/~/``` symbol. Experiment with clicking on the file system navigation buttons to the right of folders as well as the up arrow in the Collection middle menu. You'll get an idea of where on the data transfer node and where on your PC you can upload and download files to/from.
+You will be asked to select your identity to continue. If you've already authenticated via Shibboleth, you should see your USC NetID listed. Otherwise, you will be prompted to log in with your NetID.
 
-You don't have to transfer files one-by-one. By highlighting a folder and clicking the <b>Start</b> button, you can move the folder and all its contents to the USC data transfer node. The two-column bi-directional layout of the file manager should suggest to you that to download files from the data transfer node, you merely need to highlight them on the left and then click the <b>Start</b> button in the file transfer column.
+![Globus Software Set Up](/images/globus-gfx/globus-endpoint-identity.png)
+
+You will then need to grant Globus a list of permissions by clicking "Allow".
+
+![Globus Software Set Up](/images/globus-gfx/globus-endpoint-permissions.png)
+
+After allowing Globus these permissions, you will be taken back to the Endpoint's main page. Under the Credentials tab, you will now see your NetID listed with an "active" status.
+
+![Globus Software Set Up](/images/globus-gfx/globus-endpoint-credentials.png)
+
+There is one final step for authenticating the Endpoint for file transfers. On the Endpoint's main page under the Overview tab, click "Open in File Manager".
+
+![Globus Software Set Up](/images/globus-gfx/globus-endpoint-file-manager.png)
+
+You will be taken to the File Manager page, but Globus requires one more authentication/consent. Click "Continue" to complete the final step.
+
+![Globus Software Set Up](/images/globus-gfx/globus-endpoint-file-manager-authenticate.png)
+
+Click "Allow" to grant Globus the permissions.
+
+![Globus Software Set Up](/images/globus-gfx/globus-endpoint-file-manager-permissions.png)
+
+You will be taken back to the File Manager page, where you should see your /home1 directory, which looks something like the following:
+
+![Globus Software Set Up](/images/globus-gfx/globus-endpoint-file-manager-success.png)
+
+### Transferring files
+
+The File Manager page is the page you'll use for your file transfers, and it has a two-pane bi-directional layout.
+
+![Globus Software Set Up](/images/globus-gfx/globus-fm1.PNG)
+
+> Tip: You can toggle the number and configuration of the two panes using the Panels menu in the top right of the File Manager page.
+
+In the **Collection** field at the top of either column, you can search for USC CARC User Directories to access your CARC directories. By default, you will be in your /home1 directory. You can navigate to other directories (/project, /scratch, /scratch2) by typing their paths in the **Path** field, or you can enter `/` to view all directories.
+
+>Tip: Your project directory path is of the form `/project/<PI_username>_<id>`.
+
+In the other column, you can click the Collection field and navigate to the "Your Collections" tab, where you'll find your personal computer's Collection you set up.
+
+![Globus Software Set Up](/images/globus-gfx/globus-columns.PNG)
+
+After selecting the two Collections and navigating to the desired directories, your File Manager page will look something like this:
+
+![Globus Software Set Up](/images/globus-gfx/globus-file-manager-transfer.PNG)
+
+> This user wants to transfer files from the "test" folder on their computer to their CARC /scratch directory, which is currently empty.
+
+To begin the transfer, highlight one or more of the files in your local folder. Starting the transfer is as simple as clicking the blue <b>Start</b> button.
+
+![Globus Software Set Up](/images/globus-gfx/globus-start-transfer.PNG)
+
+A popup window will appear in the upper right notifying you that the transfer was submitted and giving you the option to <b>View details</b>. That will take you to a screen where you can watch the progress, as well as view other information about your transfer job. If your files are large, Globus takes a few seconds or minutes to index them and get ready to transfer.
+
+![Globus Software Set Up](/images/globus-gfx/globus-transfer-details.PNG)
+
+You'll also receive an email notifying you of the file transfer success (or failure). Make a note of the Task ID in case your transfer fails and you need to restart it.
+
+When your transfer completes, go back to the File Manager window. In the CARC directory column, click the refresh button in the middle menu (right under the <b>Path</b> field). The refresh button is the right-curling arrow, which will pull an updated listing of the files in your CARC directory (in this case, the /scratch directory). If needed, scroll through the list and you will see your files there.
+
+![Globus Software Set Up](/images/globus-gfx/globus-transfer-refresh.PNG)
+
+>Tip: You don't have to transfer files one-by-one. By highlighting a folder and clicking the <b>Start</b> button, you can move the folder and all its contents to CARC directories.
+
+The two-column bi-directional layout of the file manager should suggest to you that to download files from the data transfer node, you merely need to highlight them in the CARC column (rather than the column for your personal computer)and then click the <b>Start</b> button.
+
+#### Syncing directories
+
+Globus offers settings that can be applied to your transfer to synchronize your two directories. Syncing directories prevents the same files from being transferred repeatedly, saving you transfer time. 
+
+To synchronize your local directory and your CARC directory, access the Transfer & Sync Options menu located in between the two transfer columns. Select the "sync - only transfer new or changed files where the checksum is different" and "verify file integrity after transfer" checkboxes, and click the blue "Start" button to start your transfer.
+
+![Globus Software Set Up](/images/globus-gfx/globus-transfer-sync-options.PNG)
+
+There is also an option to delete files in the destination directory if they aren't in the source directory, as well as options to preserve source file modification times and encrypt the file transfer.
+
+### Restarting file transfers
+
+If your transfer fails, you should first look at the last few events in the event log to identify any problems needing human intervention (quota exceeded, out-of-disk space, etc.). You can view event logs for transfers by navigating to the Activity tab on the lefthand menu, selecting the transfer in question, and navigating to the transfer's Event Log tab.
+
+![Globus Software Set Up](/images/globus-gfx/globus-activity-log.PNG)
+
+> Note: This transfer was successful, but a failed transfer is accessed in the same way.
+
+After fixing the issue that caused the transfer to fail, you can resubmit the transfer in the same way as you did originally, making sure to synchronize the two directories to avoid re-transferring other files (see the "Syncing directories" section above).
+
+### Using bookmarks
+
+The Globus File Manager offers a bookmark feature to access your most-used directories easily. You can add a bookmark to a directory by clicking the bookmark ribbon next to the Path field in either column.
+
+![Globus Software Set Up](/images/globus-gfx/globus-bookmark1.png)
+
+You can view and manage your Bookmarks when searching for a Collection, under the Bookmarks tab.
+
+![Globus Software Set Up](/images/globus-gfx/globus-bookmark2.png)
 
 ### Helpful tips
 
 - The CARC data transfer node is Linux-based. That means file and folder names are case-sensitive and spaces and strange characters are awkward. Don't use things like slashes and dollar signs in your file names if you're planning to upload them, and replacing spaces in file and folder names with an underscore or dash could make your life easier.
 
 - Globus is capable of transferring a lot of small files, but in many cases you'll get faster transfers and better results by creating a TAR, GZIP, or ZIP file before trying to transfer data to/from the data transfer node.
-
-- Globus can restart a failed or paused transfer. Make a note of the task ID when you initiate a transfer or watch your email for a status update. Logging back in to Globus will let you find your transfer job and restart it.
