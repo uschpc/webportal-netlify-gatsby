@@ -1,13 +1,13 @@
 ---
 author: Marco Olguin
 id: 10
-date: 2020-08-04T12:00:00
+date: 2021-01-05T12:00:00
 title: Message Passing Interface (MPI)
 path: mpi
 parentPath: user-information/user-guides/high-performance-computing
 cat: discoveryGuides
 parentPage: User Guides
-sideMenuParent: High-Performance Computing
+sideMenuParent: Discovery
 backToTopBtnFlag: true
 excerpt: A user guide on the Message Passing Interface (MPI), which is used in parallel programming.
 ---
@@ -38,7 +38,7 @@ MPI-UCX libraries are available only under the GNU GCC programming environment b
 
 To set up an MPI package, use the following module commands:
 
-```
+```sh
 module purge
 module load <compiler> <MPI distribution>
 ```
@@ -50,14 +50,14 @@ where:
 
 *Example 1*: If you're running a program that was compiled with the Intel compilers and uses Intel MPI:
 
-```
+```sh
 module purge
 module load intel/19.0.4 intel-mpi
 ```
 
 *Example 2*: If you're running a program that was compiled with the GCC compilers and uses MPICH-UCX:
 
-```
+```sh
 module purge
 module load gcc/9.2.0 mpich-ucx
 ```
@@ -74,8 +74,7 @@ Compiling with MPI is quite straightforward. Below is a list of MPI-specific com
 
 When you compile a parallel program, make sure that you record the version/module of MPI used and add the corresponding `module load <mpi-library>` to your Slurm job script.
 
->Note: Intel MPI supplies separate compiler commands (wrappers) for the Intel compilers, in the form of `mpiicc`, `mpiicpc` and `mpiifort`. Using `mpicc`, `mpicxx` and `mpif90` will call the GNU compilers.
-
+> Note: Intel MPI supplies separate compiler commands (wrappers) for the Intel compilers, in the form of `mpiicc`, `mpiicpc` and `mpiifort`. Using `mpicc`, `mpicxx` and `mpif90` will call the GNU compilers.
 
 ### Running MPI
 
@@ -83,7 +82,7 @@ The `mpirun` command launches the parallel job. For help with `mpirun`, please c
 
 To run on the Discovery or Endeavour cluster:
 
-```
+```sh
 mpirun -np $SLURM_NTASKS ./mpi_program.x
 ```
 
@@ -99,19 +98,17 @@ When running multi-threaded jobs, make sure to also link multi-threaded librarie
 
 The `OMP_NUM_THREADS` count can be calculated automatically by utilizing Slurm-provided variables, assuming that all nodes have the same CPU core count. This can prevent accidental over or under-subscription when node or task count in the Slurm script changes:
 
-```
+```sh
 # Find number of threads for OpenMP
 # Find number of MPI tasks per node
 set TPN=`echo $SLURM_TASKS_PER_NODE | cut -f 1 -d \(`
-```
-```
+
 # Find number of CPU cores per node
 set PPN=`echo $SLURM_JOB_CPUS_PER_NODE | cut -f 1 -d \(`
 @ THREADS = ( $PPN / $TPN )
-setenv OMP_NUM_THREADS $THREADS (if using sh or csh)
-export OMP_NUM_THREADS=$THREADS (if using bash)
-```
-```
+setenv OMP_NUM_THREADS $THREADS # (if using sh or csh)
+export OMP_NUM_THREADS=$THREADS # (if using bash)
+
 mpirun -genv $OMP_NUM_THREADS -genv MV2_ENABLE_AFFINITY 0 -np $SLURM_NTASKS ./mpi_plus_openmp_program.x
 ```
 
@@ -123,11 +120,11 @@ All MPI libraries except for MPICH automatically bind MPI tasks to CPUs, but the
 
 ### Running MPICH Programs
 
-MPICH (formerly referred to as MPICH2) is an open source implementation developed at Argonne National Laboratories. The newer versions support both InfiniBand and UCX.
+[MPICH](https://www.mpich.org/) (formerly referred to as MPICH2) is an open source implementation developed at Argonne National Laboratories. The newer versions support both InfiniBand and UCX.
 
 You can run MPICH with the following command:
 
-```
+```sh
 mpirun -np $SLURM_NTASKS ./mpi_program.x
 ```
 
@@ -136,12 +133,14 @@ Since by default MPICH does not bind tasks to CPUs, use the `-bind-to core` opti
 The multi-threaded process/thread affinity works quite well with MPICH, for example, on a 24-core compute node with core-memory mapping:
 
 *Example 1*:
-```
+
+```sh
 mpirun -bind-to numa -map-by numa -genv OMP_NUM_THREADS 2 -np 12 ./mpi_plus_openmp_program.x
 ```
 
 *Example 2*:
-```
+
+```sh
 mpirun -bind-to core -map-by numa -genv OMP_NUM_THREADS 4 -np 6 ./mpi_plus_openmp_program.x
 ```
 
@@ -149,11 +148,11 @@ The binding will be correctly assigned to a subset of CPU socket cores when we u
 
 ### Running OpenMPI Programs
 
-OpenMPI has a number of appealing features.
+[OpenMPI](https://www.open-mpi.org/) has a number of appealing features.
 
 Running OpenMPI programs is straightforward:
 
-```
+```sh
 mpirun -np $SLURM_NTASKS ./mpi_program.x
 ```
 
@@ -164,7 +163,7 @@ The `mpirun` flags for multi-threaded process distribution and binding to the CP
 
 To run a multi-threaded OpenMPI program:
 
-```
+```sh
 mpirun -np $SLURM_NTASKS -map-by socket -bind-to socket ./mpi_plus_openmp_program.x
 ```
 
@@ -174,7 +173,7 @@ OpenMPI will automatically select the optimal network interface.
 
 MVAPICH2 by default binds MPI tasks to cores, so the optimal binding configuration of a single threaded MPI program is one MPI task to one CPU core. This is achieved by running:
 
-```
+```sh
 mpirun -np $SLURM_NTASKS ./mpi_program.x
 ```
 
@@ -182,22 +181,19 @@ For multi-threaded parallel programs, we need to disable the task-to-core affini
 
 To run multi-threaded MVAPICH2 code compiled with Intel compilers:
 
-```
+```sh
 module load intel mvapich2
-```
-```
+
 # Find number of threads for OpenMP
 # Find number of MPI tasks per node
 set TPN=`echo $SLURM_TASKS_PER_NODE | cut -f 1 -d \(`
-```
-```
+
 # Find number of CPU cores per node
 set PPN=`echo $SLURM_JOB_CPUS_PER_NODE | cut -f 1 -d \(`
 @ THREADS = ( $PPN / $TPN )
-setenv OMP_NUM_THREADS $THREADS (if using sh or csh)
-export OMP_NUM_THREADS=$THREADS (if using bash)
-```
-```
+setenv OMP_NUM_THREADS $THREADS # (if using sh or csh)
+export OMP_NUM_THREADS=$THREADS # (if using bash)
+
 mpirun -genv OMP_NUM_THREADS $OMP_NUM_THREADS -genv MV2_ENABLE_AFFINITY 0 -genv KMP_AFFINITY verbose,granularity=core,compact,1,0 -np $SLURM_NTASKS ./mpi_program.x
 ```
 
@@ -205,26 +201,27 @@ For multi-threaded MVAPICH2 code compiled with other compilers, these suggestion
 
 For example, on a 12-core, 2-socket HPC compute node running 12 tasks with each MPI-rank spawning 2 threads each, you can run the following:
 
-```
+```sh
 mpirun -genv MV2_ENABLE_AFFINITY 0 -bind-to numa -map-by numa -genv OMP_NUM_THREADS 2 -np 12 ./mpi_plus_openmp_program.x
 ```
 
 ### Running Intel MPI Programs
 
-Intel MPI is a high performance MPI library which runs on many different network interfaces. Apart from its runtime flexibility, it also integrates with other Intel tools (e.g., compilers, performance tools such as VTune).
+[Intel MPI](https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/mpi-library.html) is a high performance MPI library which runs on many different network interfaces. Apart from its runtime flexibility, it also integrates with other Intel tools (e.g., compilers, performance tools such as VTune).
 
->For a quick introduction to Intel MPI, see Intel's [Getting Started guide](https://software.intel.com/en-us/get-started-with-mpi-for-linux).
+> For a quick introduction to Intel MPI, see Intel's [Getting Started guide](https://software.intel.com/en-us/get-started-with-mpi-for-linux).
 
 Intel MPI by default works with whatever interface it finds on the machine at runtime. To use it, run:
 
-```
+```sh
 module load intel-mpi
 ```
 
 For best performance, we recommend using Intel compilers along with the Intel MPI. Therefore, use the Intel compiler wrapper calls `mpiicc`, `mpiicpc`, and `mpiifort` to build.
 
 For example:
-```
+
+```sh
 mpiifort code.f90 -o code.x
 ```
 
@@ -236,7 +233,7 @@ Intel MPI provides two different MPI fabrics for InfiniBand: one based on Open F
 
 Intel MPI pins processes and threads to sockets by default, so no additional runtime options should be needed unless the process/thread mapping needs to be different. If that is the case, consult the OpenMP interoperability guide. For the common default pinning:
 
-```
+```sh
 mpirun -genv OMP_NUM_THREADS 2 -np 12 ./mpi_plus_openmp_program.x
 ```
 
@@ -245,3 +242,10 @@ Intel MPI does the best job in pinning MPI tasks and OpenMP threads, but, in cas
 ### Common MPI ABI
 
 From Intel MPI 5.0 and MPICH 3.1 (and MVAPICH2 1.9 and higher, which is based on MPICH 3.1), the libraries are interchangeable at the binary level, using common Application Binary Interface (ABI). This means that one can build the application with MPICH, but run it using the Intel MPI libraries, thus taking advantage of the Intel MPI functionality. See details about this at https://software.intel.com/en-us/articles/using-intelr-mpi-library-50-with-mpich3-based-applications.
+
+### Additional resources
+
+If you have questions about or need help with MPI, please [submit a help ticket](https://carc.usc.edu/user-information/ticket-submission) and we will assist you.
+
+[LLNL parallel computing tutorial](https://computing.llnl.gov/tutorials/parallel_comp/)  
+[LLNL MPI tutorial](https://computing.llnl.gov/tutorials/mpi/)

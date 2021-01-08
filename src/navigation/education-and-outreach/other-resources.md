@@ -50,4 +50,4 @@ Below are links to the official documentation pages for the CARC's most commonly
 
 MathWorks offers many free MATLAB and Simulink events both in-person and virtually. Courses are offered in self-paced and live formats.
 
-To view upcoming workshops, webinars, and conferences, see https://www.mathworks.com/company/events.html?s_tid=gn_ev 
+To view upcoming workshops, webinars, and conferences, see https://www.mathworks.com/company/events.html?s_tid=gn_ev.
