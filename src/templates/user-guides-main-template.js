@@ -64,11 +64,11 @@ export default function Template({ data }) {
                    <div className="system-status">
                        <h2>Quick Links to Useful Guides</h2>
                        <ul>
-                         <li><a href="https://carc.usc.edu/user-information/user-guides/high-performance-computing/getting-started-discovery" target="_blank">Getting Started with the Discovery Cluster</a></li>
-                         <li><a href="https://carc.usc.edu/user-information/user-guides/high-performance-computing/getting-started-endeavour" target="_blank">Getting Started with the Endeavour Condo Cluster</a></li>
-                         <li><a href="https://carc.usc.edu/user-information/user-guides/data-management/storage-file-systems" target="_blank">Storage File Systems</a></li>
-                         <li><a href="https://carc.usc.edu/user-information/user-guides/research-computing-user-portal/account-and-project-setup" target="_blank">User Portal Project Setup</a></li>
-                         <li><a href="https://carc.usc.edu/user-information/user-guides/high-performance-computing/running-jobs" target="_blank">Running Jobs on CARC Systems</a></li>
+                         <li><a href="/user-information/user-guides/high-performance-computing/getting-started-discovery" target="_blank">Getting Started with the Discovery Cluster</a></li>
+                         <li><a href="/user-information/user-guides/high-performance-computing/getting-started-endeavour" target="_blank">Getting Started with the Endeavour Condo Cluster</a></li>
+                         <li><a href="/user-information/user-guides/data-management/storage-file-systems" target="_blank">Storage File Systems</a></li>
+                         <li><a href="/user-information/user-guides/research-computing-user-portal/account-and-project-setup" target="_blank">User Portal Project Setup</a></li>
+                         <li><a href="/user-information/user-guides/high-performance-computing/running-jobs" target="_blank">Running Jobs on CARC Systems</a></li>
                        </ul>
                    </div>
                </div>
