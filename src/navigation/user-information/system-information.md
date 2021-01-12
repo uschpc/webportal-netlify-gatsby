@@ -10,7 +10,11 @@ backToTopBtnFlag: true
 excerpt: Information on system specifications. 
 ---
 
-In 2020, the Center for Advanced Research Computing performed a major upgrade to its systems. Its new high-performance computing cluster, Discovery, includes additional compute nodes and a rebuilt software stack, as well as new system configurations to better serve CARC users. A new, high-performing project file system was also deployed, offering more storage space and better performance. 
+In 2020, the Center for Advanced Research Computing performed a major upgrade to its systems. Its new high-performance computing cluster, Discovery, includes additional compute nodes and a rebuilt software stack, as well as new system configurations to better serve CARC users. A new, high-performing project file system was also deployed, offering more storage space and better performance. A new condo cluster, Endeavour, was launched in December 2020 as part of the new [Condo Cluster Program](/user-information/ccp).
+
+The following graphic depicts the CARC cyberinfrastructure and how different systems interact with one another:
+
+![Cyberinfrastructure overview](/images/CARC-cyberinfrastructure.png)
 
 ### Computing resources
 

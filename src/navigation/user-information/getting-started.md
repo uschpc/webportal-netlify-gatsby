@@ -32,9 +32,9 @@ As the amount of data used in research continues to grow with the popularity of 
 
 Discovery is a high-performance computing cluster, which is a collection of computers and disk arrays that are connected via fast networks. Discovery allows USC researchers to perform computing tasks, like data analyses and simulations, on a larger scale than is possible with a laptop or lab computer. The Discovery cluster is the CARC's public cluster; any CARC user can use Discovery.
 
-The following schematic depicts the CARC cyberinfrastructure and how the parts of the cluster connect with one another:
+The following graphic depicts the CARC cyberinfrastructure and how different systems interact with one another:
 
-![Cyberinfrastructure overview](/images/discovery_infra.png)
+![Cyberinfrastructure overview](/images/CARC-cyberinfrastructure.png)
 
 > For detailed information on the Discovery cluster, see our [Getting Started with Discovery user guide](/user-information/user-guides/high-performance-computing/getting-started-discovery) and our [System Information page](/user-information/system-information).
 
