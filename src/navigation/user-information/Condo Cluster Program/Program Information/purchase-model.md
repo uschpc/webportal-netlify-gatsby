@@ -51,4 +51,4 @@ A condo purchase request is possible during the CARC's annual condo purchase req
 
 PIs use the [User Portal](/user-information/user-guides/research-computing-user-portal) to select and purchase their desired condo resources. See the [Request New Condo Purchase user guide](/user-information/user-guides/research-computing-user-portal/request-new-purchase) for detailed instructions.
 
-**The condo purchase request period is currently open. The deadline to submit a purchase request is January 15, 2021**.
+**The condo purchase request period is currently open. The deadline to submit a purchase request is February 19, 2021**.

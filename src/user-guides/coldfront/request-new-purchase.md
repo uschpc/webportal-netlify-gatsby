@@ -21,7 +21,7 @@ The CCP has two pricing models: an annual subscription-based model and a traditi
 
 A condo purchase request is possible during the CARC's annual condo purchase request period, which occurs during the fall semester. The whole process of purchase request, system configuration, vendor selection, purchasing, system installation, and deployment typically takes six months. The purchased resources will be in service for 5 years, and after this service period, the CARC will decommission these condo nodes. 
 
-**The condo purchase request period is currently open. The deadline to submit a purchase request is January 15, 2021**. Information on the CPU and GPU models available for this year's request period can be found on the [CCP Purchase Pricing Model page](/user-information/ccp/program-information/ccp-purchase).  
+**The condo purchase request period is currently open. The deadline to submit a purchase request is February 19, 2021**. Information on the CPU and GPU models available for this year's request period can be found on the [CCP Purchase Pricing Model page](/user-information/ccp/program-information/ccp-purchase).  
 
 ### Requesting a condo purchase
 
