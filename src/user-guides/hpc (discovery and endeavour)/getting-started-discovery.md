@@ -24,9 +24,9 @@ If your project is located on the Endeavour condo cluster and not Discovery, see
 
 Discovery is the CARC's general use high-performance computing cluster, which is a collection of computers and disk arrays that are connected via fast networks. Discovery allows USC researchers to perform computing tasks, like data analyses and simulations, on a larger scale than is possible with a laptop or lab computer.
 
-The following schematic depicts the CARC cyberinfrastructure and how the parts of the cluster connect with one another:
+The following graphic depicts the CARC cyberinfrastructure and how different systems interact with one another:
 
-![Cyberinfrastructure overview](/images/discovery_infra.png)
+![Cyberinfrastructure overview](/images/CARC-cyberinfrastructure.png)
 
 When using Discovery, you will notice several differences from your desktop or laptop environment:
 
