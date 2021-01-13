@@ -13,7 +13,7 @@ cat: userGuides
 parentPage: User Guides
 ---
 
-Working with sensitive data that is governed by compliance regulations comes with additional requirements and restrictions that must be taken into consideration. The Center for Advanced Research Computing plans to deploy a Secure Research Computing Environment (SRCE) in the fall of 2020. The SRCE is designed for researchers who need to meet various compliance standards required to use highly sensitive data. The SRCE provides custom-sized servers (Windows, Linux, and/or containerized applications as a service) as well as secure data transfer methods for researchers.
+Working with sensitive data that is governed by compliance regulations comes with additional requirements and restrictions that must be taken into consideration. The Center for Advanced Research Computing plans to deploy a Secure Research Computing Environment (SRCE) in 2021. The SRCE is designed for researchers who need to meet various compliance standards required to use highly sensitive data. The SRCE provides custom-sized servers (Windows, Linux, and/or containerized applications as a service) as well as secure data transfer methods for researchers.
 
 The SRCE is configured with the appropriate security controls and minimizes the risk of exposing high-risk data. The SRCE makes it easier for researchers to implement necessary safeguards for research that is subject to regulatory or compliance requirements, including but not limited to, HIPAA, FERPA, CUI, and other grant-specific regulations.
 
