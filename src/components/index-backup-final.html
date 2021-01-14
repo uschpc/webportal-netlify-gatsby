@@ -1,0 +1,131 @@
+{% extends "common/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+{% block title %}
+Purchase Create
+{% endblock %}
+
+{% block content %}
+
+
+<p>Example form built from model/view:
+<form method="post">
+  {% csrf_token %}
+
+
+  <div id="div_id_system" class="form-group">
+    <label for="id_system" class="col-form-label  requiredField">
+      System<span class="asteriskField">*</span>
+    </label>
+        
+  <div class="">
+    <select name="system" class="select form-control" id="id_system">
+    </select>
+  </div>
+
+
+  <input type="hidden" name="nodetype" id="id_nodetype"/>
+
+  {{ form.cost|as_crispy_field }}
+  {{ form.quantity|as_crispy_field }}
+  {{ form.billing_name|as_crispy_field }}
+  {{ form.billing_email|as_crispy_field }}
+  {{ form.billing_phonenumber|as_crispy_field }}
+  {{ form.billing_department|as_crispy_field }}
+  <input class="btn btn-primary" type="submit" value="Submit" />
+</form>
+</p>
+
+
+<script>
+  var serverlist = {{ nodetype_list|safe }};
+
+  $(document).ready(function () {
+    $("#id_cost").attr('readonly',true);
+    $("#id_nodetype").val(serverlist[0].id);
+    var previous = 0;
+    for (index = 0; index < serverlist.length; index++) { 
+      // add labels first
+      if (previous == 0) {
+        $("#id_system").append("<option disabled>-- AMD processor --</option>");
+      } else if (serverlist[index].order > 100 && previous <= 100) {
+        $("#id_system").append("<option disabled>-- intel processor --</option>");
+      } else if (serverlist[index].order > 200 && previous <= 200) {
+        $("#id_system").append("<option disabled>-- GPU --</option>");
+      } else {
+      }
+      //$("#id_system").append(new Option(serverlist[index].name,serverlist[index].id));
+      $("#id_system").append(new Option(serverlist[index].name,serverlist[index].name));
+      previous = serverlist[index].order;
+    } 
+    updatecost2();
+
+  });
+
+  $("#id_quantity").change(function () {
+    console.log("quantity change: "+$("#id_quantity").val());
+    updatecost2();
+  });
+  $("#id_system").change(function () {
+    console.log("system select menu change: "+$("#id_system").val());
+    //alert("id_system change: "+$("#id_system").val());
+    for (index = 0; index < serverlist.length; index++) { 
+      // add labels first
+      if ($("#id_system").val() == serverlist[index].name) {
+        //console.log($("#id_system").val());
+        //$("#id_nodetype").val($("#id_system").id());
+        $("#id_nodetype").val(serverlist[index].id);
+      }
+    }
+    updatecost2();
+  });
+
+  function updatecost2() {
+    for (index = 0; index < serverlist.length; index++) { 
+      if (serverlist[index].name == $("#id_system").val()) {
+        var newcost = parseInt($("#id_quantity").val()) * serverlist[index].cost;
+        $("#id_cost").val(newcost);
+      }
+    } 
+  };
+
+  function updatecost() {
+    if ($("#id_system").val() == 'AMD EPYC 7542 2.90GHz, 32C/64T, 128M Cache, 256GB RAM - $15,000') {
+      var newcost = parseInt($("#id_quantity").val()) * 15000;
+      $("#id_cost").val(newcost);
+    } else if ($("#id_system").val() == 'AMD EPYC 7542 2.90GHz, 32C/64T, 128M Cache, 512GB RAM - $20,000') {
+      var newcost = parseInt($("#id_quantity").val()) * 20000;
+      $("#id_cost").val(newcost);
+    } else if ($("#id_system").val() == 'Intel Xeon Gold 6248R Processor 24-Core 3.0GHz 35.75MB Cache (205W), 192GB RAM - $13,000') {
+      var newcost = parseInt($("#id_quantity").val()) * 13000;
+      $("#id_cost").val(newcost);
+    } else if ($("#id_system").val() == 'Intel Xeon Gold 6248R Processor 24-Core 3.0GHz 35.75MB Cache (205W), 384GB RAM - $17,000') {
+      var newcost = parseInt($("#id_quantity").val()) * 17000;
+      $("#id_cost").val(newcost);
+    } else if ($("#id_system").val() == 'AMD EPYC 7282 Processor 16-core 2.80GHz 64MB Cache (120W), 128GB RAM, GPU: RTX4000 x 2 - $7,600') {
+      var newcost = parseInt($("#id_quantity").val()) * 7600;
+      $("#id_cost").val(newcost);
+    } else if ($("#id_system").val() == 'AMD EPYC 7282 Processor 16-core 2.80GHz 64MB Cache (120W), 256GB RAM, GPU: RTX5000 x 4 - $15,600') {
+      var newcost = parseInt($("#id_quantity").val()) * 15600;
+      $("#id_cost").val(newcost);
+    } else if ($("#id_system").val() == 'Intel Xeon Gold 6248R Processor 24-Core 3.0GHz 35.75MB Cache (205W), 192GB RAM, GPU: V100 x 2 - $35,700') {
+      var newcost = parseInt($("#id_quantity").val()) * 35700;
+      $("#id_cost").val(newcost);
+    } else if ($("#id_system").val() == 'Intel Xeon Gold 6248R Processor 24-Core 3.0GHz 35.75MB Cache (205W), 384GB RAM, GPU: V100 x 4 - $75,700') {
+      var newcost = parseInt($("#id_quantity").val()) * 75700;
+      $("#id_cost").val(newcost);
+    } else {
+      alert ("ERROR: unknown server type");
+    }
+
+  };
+
+
+
+
+</script>
+
+                 
+{% endblock %}

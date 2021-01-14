@@ -1,0 +1,325 @@
+<html class="chrome">
+    <head>
+        <link rel="stylesheet" id="hpc-custom-style-css" href="hpc.css" type="text/css" media="all" />
+    </head>
+    <body class="page-template page-template-template-create-customer page-template-template-create-customer-php page page-id-3323">
+        <div id="wrapper">
+            <div class="create-customer-page">
+                <div class="create-customer-container">
+                    <div class="form-container">
+                        <div class="form-side">
+                            <div class="section-title one">Select your system</div>
+                            <form id="purchaseForm" class="create-customer-form show one" novalidate="novalidate" method="POST">
+                                <div class="form-section shipping">
+                                    <div class="split-inputs">
+                                        <div class="form-row system">
+                                                <select class="form-input" id="systemSelection" name="system" onchange="getSystemOptionSelected()">
+                                                    <optgroup label="CPU">
+                                                       <option></option>
+                                                       <option>256GB Memory - AMD EPYC 7542 2.90GHz, 32C/64T, 128M Cache</option>
+                                                       <option>512GB Memory - AMD EPYC 7542 2.90GHz, 32C/64T, 128M Cache</option>
+                                                       <option>192GB Memory - Intel Xeon Gold 6248R Processor 24-Core 3.0GHz 35.75MB Cache (205W)</option>
+                                                       <option>384GB Memory - Intel Xeon Gold 6248R Processor 24-Core 3.0GHz 35.75MB Cache (205W)</option>
+                                                    </optgroup>
+                                                    <optgroup label="GPU">
+                                                       <option>RTX 4000 - 128GB Memory - AMD EPYC 7282 Processor 16-core 2.80GHz 64MB Cache (120W)</option>
+                                                       <option>RTX 5000 - 128GB Memory - AMD EPYC 7282 Processor 16-core 2.80GHz 64MB Cache (120W)</option>
+                                                       <option>RTX 5000 - 256GB Memory - AMD EPYC 7282 Processor 16-core 2.80GHz 64MB Cache (120W)</option>
+                                                       <option>V100s - 256GB Memory - AMD EPYC 7532 Processor 32-core 2.40GHz 256MB Cache (200W)</option>
+                                                       <option>V100s - 256GB Memory - AMD EPYC 7532 Processor 32-core 2.40GHz 256MB Cache (200W)</option>
+                                                       <option>A100 - 256GB Memory - AMD EPYC 7532 Processor 32-core 2.40GHz 256MB Cache (200W)</option>
+                                                       <option>A100 - 512GB Memory - AMD EPYC 7532 Processor 32-core 2.40GHz 256MB Cache (200W)</option>
+                                                       
+                                                       <option>RTX 4000 - 192GB Memory - Intel Xeon Silver 4216 Processor 16-Core 2.1GHz 22MB Cache (100W)</option>
+                                                       <option>RTX 5000 - 192GB Memory - Intel Xeon Silver 4216 Processor 16-Core 2.1GHz 22MB Cache (100W)</option>
+                                                       <option>RTX 5000 - 192GB Memory - Intel Xeon Silver 4216 Processor 16-Core 2.1GHz 22MB Cache (100W)
+                                                       </option>
+                                                  
+                                                        <option>V100s - 192GB Memory - Intel Xeon Gold 6248R Processor 24-Core 3.0GHz 35.75MB Cache (205W)
+                                                        </option>
+                                                        <option>V100s - 384GB Memory - Intel Xeon Gold 6248R Processor 24-Core 3.0GHz 35.75MB Cache (205W)
+                                                        </option>
+                                                    </optgroup>
+                                                  </select>
+                                            <!-- </select> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="section-title">Select your configuration</div>
+                                <div class="create-customer-form two" novalidate="novalidate"></div> -->
+                                <div class="section-title">How many nodes?</div>
+                                <!-- <div class="create-customer-form three" novalidate="novalidate"></div> -->
+                                <div class="form-row node">
+                                    <input type="text" id="node" name="node" class="form-input" onchange="updateInput()" />
+                                </div>
+                                <div class="section-title">Billing Info</div>
+                                <div class="create-customer-form four" novalidate="novalidate">
+                                    <div class="form-section shipping">
+                                        <div class="form-row">
+                                            <label class="form-label" for="name">Name</label>
+                                            <input type="text" id="name" name="billing_name" class="form-input" />
+                                        </div>
+
+                                        <div class="form-row">
+                                            <label class="form-label" for="department">Department</label>
+                                            <input type="text" id="department" name="billing dept" class="form-input" />
+                                        </div>
+
+                                        <div class="form-row" id="new-customer">
+                                            <label class="form-label" for="emailaddress">Email Address</label>
+                                            <input type="text" id="emailaddress" name="billing_email" class="form-input">
+                                        </div>
+
+                                        <div class="form-row">
+                                            <label class="form-label" for="phone">Phone Number</label>
+                                            <input type="text" id="phone" name="billing_phonenumber" class="form-input" placeholder="(000) 000-0000" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="actions-row">
+                                    <div class="add-another-system">
+                                        <input type="checkbox" id="checkbox" name="ann_another_system" class="form-input" onchange="addSystem()">Add Another System</input>
+                                    </div>
+                                    <div class="btns submit">
+                                        <input class="primary-btn large block-btn" id="create-customer-submit" type="submit" onclick="formSubmit()"></input>
+                                    </div>
+                                    <div class="btns add">
+                                        <input class="primary-btn large block-btn" id="create-customer-add" type="submit" value="Add New System" onclick="addNewSystem()"></input>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="summary-side">
+                            <div class="items-in-cart">
+                                <div class="section-header">
+                                    <div class="section-title"><span class="amount">Cart</div>
+
+                                    <div class="link">
+                                        <a href="/cart" class="edit-link">Edit</a>
+                                    </div>
+                                </div>
+
+                                <div class="item-breakdown">
+                                    <div class="item">
+                                        <div class="details">
+                                            <div class="system"><div class="cart"><span>System</span><span class="price">$0</span></div> </div>
+                                            <div class="configuration"><div class="cart"><span>Type</span><span class="price">$0</span></div></div>
+                                            <div class="ram"><div class="cart"><span>Ram</span><span class="price">$0</span></div></div>
+                                            <div class="nodes"><div class="cart"><span>No. of Nodes</span><span class="price">$0</span></div></div>
+                                            <div class="device-type"><span></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="item-template">
+                                    <div class="item">
+                                        <div class="image">
+                                            <img src="../../static/images/Computer.png" data-target="OBD-II" />
+                                            <img src="../../static/images/Computer.png" data-target="12-Volt" />
+                                        </div>
+
+                                        <div class="details">
+                                            <div class="name">CPU type 2</div>
+                                            <div class="device-type"><span></span></div>
+                                            <div class="quantity"><span class="count"></span> x $<span class="price"></span> / Month</div>
+                                        </div>
+
+                                        <div class="total-price">$<span></span></div>
+                                    </div>
+                                </div>
+
+                                <div class="total-container">
+                                    <div class="line-item subtotal">
+                                        <div class="name">Subtotal</div>
+                                        <div class="value">$0</div>
+                                    </div>
+
+                                    <div class="line-item">
+                                        <div class="name">Hardware Cost</div>
+                                        <div class="value">$0</div>
+                                    </div>
+
+                                    <div class="line-item">
+                                        <div class="name">Shipping</div>
+                                        <div class="value">FREE</div>
+                                    </div>
+
+                                    <div class="line-item total">
+                                        <div class="name">Total</div>
+                                        <div class="value">$0</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </body>
+    <script>
+        let elementIndex = '.one'
+        function getSystemOptionSelected() {
+            let id = 'systemSelection'
+            let e = document.getElementById(id);
+            console.log(e.options[e.selectedIndex])
+            let optionSelected = e.options[e.selectedIndex].value;
+            let isAMD = optionSelected.indexOf('AMD') > -1
+            let AMD = isAMD ? 'AMD' : 'Intel'
+            let type = optionSelected.split('- ').length > 2 ? 'GPU' : 'CPU'
+            let ram = optionSelected.split('- ').length > 2 ? optionSelected.split('-')[1] : optionSelected.split('-')[0]
+            let numOfNodes = optionSelected.split('- ').length < 3 ? 2 : 3
+
+
+            let system = document.querySelector(`.item-breakdown .details .system`)
+            system.innerHTML = `<div class="cart"><span>System</span><span >${AMD}</span><span class="price">$50</span></div>`
+            
+            let configType = document.querySelector(`.item-breakdown .details .configuration`)
+            configType.innerHTML = `<div class="cart"><span>Type</span><span>${type}</span><span class="price">$80</span></div>`
+            
+            let ramEle = document.querySelector(`.item-breakdown .details .ram`)
+            ramEle.innerHTML = `<div class="cart"><span>Ram:</span><span>${ram}</span><span class="price">$700</span></div>`
+            getTotalPrice(50)
+        }
+
+        function updateInput() {
+            let id = 'node'
+            let e = document.getElementById(id);
+            let node = document.querySelector(`.item-breakdown .details .nodes`)
+            node.innerHTML = `<div class="cart"><span>No. of Nodes</span><span>${e.value}</span><span class="price">$40</span></div>` 
+
+            let closestEle = document.querySelector(`.form-side .create-customer-form.four`)
+            closestEle.classList.add("show");
+            document.querySelector(`.form-side .actions-row`).classList.add("show")
+        }
+
+        function addSystem() {
+            let id = 'checkbox'
+            let e = document.getElementById(id)
+            document.querySelector(`.form-side .actions-row .add`).classList.remove("show")
+            document.querySelector(`.form-side .actions-row .submit`).classList.remove("hide")
+            document.querySelector(`.form-side .actions-row .add`).classList.remove("hide")
+            document.querySelector(`.form-side .actions-row .submit`).classList.remove("show")
+            if (e.checked) {
+                document.querySelector(`.form-side .actions-row .add`).classList.add("show")
+                document.querySelector(`.form-side .actions-row .submit`).classList.add("hide")
+            } else {
+                document.querySelector(`.form-side .actions-row .add`).classList.add("hide")
+                document.querySelector(`.form-side .actions-row .submit`).classList.add("show")
+            }
+        }
+
+        function getConfigurationOptionSelected(event) {
+            let id = 'numberNodes'
+            let e = document.getElementById(id);
+            let optionSelected = event.value;
+            let configType = document.querySelector(`.item-breakdown .details .configuration`)
+            configType.innerHTML = `<div class="cart"><span>Type</span><span>${optionSelected}</span><span class="price">$80</span></div>`
+            let closestEle = null
+            if (optionSelected !== '') {
+                closestEle = document.querySelector(`.form-side .create-customer-form.three`)
+                closestEle.innerHTML = ""
+                getSectionThree(closestEle, optionSelected)
+                closestEle.classList.add("show");
+                getTotalPrice(80)
+            }
+            
+        }
+
+        function nodeSelection(event) {
+            let id = 'numberNodes'
+            let e = document.getElementById(id);
+            closestEle = document.querySelector(`.form-side .create-customer-form.four`)
+            let optionSelected = event.value;
+            closestEle.classList.add("show");
+            document.querySelector(`.form-side .actions-row`).classList.add("show")
+            let node = document.querySelector(`.item-breakdown .details .nodes`)
+            node.innerHTML = `<div class="cart"><span>No. of Nodes</span><span>${optionSelected}</span><span class="price">$40</span></div>`
+            getTotalPrice(40)
+        }
+
+        function getRamSelection(event) {
+            let optionSelected = event.value;
+            let ram = document.querySelector(`.item-breakdown .details .ram`)
+            ram.innerHTML = `<div class="cart"><span>Ram:</span><span>${optionSelected}</span><span class="price">$700</span></div>`
+            getTotalPrice(700)
+        }
+        let totalPrice = 0
+        function getTotalPrice(price) {
+            totalPrice = totalPrice + price
+            let priceSummary = document.querySelector(`.total-container .subtotal .value`)
+            let totalSummary = document.querySelector(`.total-container .total .value`)
+            priceSummary.innerHTML = `$${totalPrice}`
+            totalSummary.innerHTML = `$${totalPrice}`
+            
+            return totalPrice
+
+        }
+
+        function getSectionTwo(closestEle, optionSelected) {
+            closestEle.insertAdjacentHTML('beforeend', `
+            <div class="form-section config">
+                <div class="split-inputs">
+                    <div class="form-row">
+                        <label class="form-label" for="config">${optionSelected} Type</label>
+                        <select class="form-input" class="config" name="${optionSelected}type" onchange="getConfigurationOptionSelected(this)">
+                            <option value=""></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label class="form-label" for="config">RAM Type</label>
+                        <select class="form-input" class="config" name="ramType" onchange="getRamSelection(this)">
+                            <option value="0"></option>
+                            <option value="256MB">256MB</option>
+                            <option value="512MB">512MB</option>
+                            <option value="1028MB">1028MB</option>
+                        </select>
+                    </div>
+                </div>
+                ${optionSelected === 'GPU' ? (`
+                    <div class="split-inputs">
+                        <div class="form-row">
+                        <label class="form-label" for="cpuType">CPU Type</label>
+                        <select class="form-input" id="cpuType" name="cpuType">
+                            <option value=""></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                </div>
+                `) : ''}
+                </div>
+            </div>
+            `)
+            return closestEle
+        }
+        function getSectionThree(closestEle, optionSelected) {
+            closestEle.insertAdjacentHTML('beforeend', `
+            <div class="form-section shipping">
+                <div class="split-inputs">
+                    <div class="form-row nodes">
+                        <label class="form-label" for="numberNodes">Number of nodes</label>
+                        <select class="form-input" id="numberNodes" name="quantity" onchange="nodeSelection(this)">
+                            <option value="">Select One</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            `)
+            return closestEle
+        }
+
+        function formSubmit() {
+          document.getElementById("purchaseForm").submit();
+        }
+       
+    </script>
+</html>

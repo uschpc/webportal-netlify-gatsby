@@ -1,7 +1,7 @@
 ---
 author: Yaseen A.
 id: 6
-date: 2020-06-04T00:00:00.00Z
+date: 2021-01-13T00:00:00.00Z
 title: Secure Computing
 excerpt: How to use CARC systems if your jobs require the use of sensitive data.
 thumbnail: /images/Lock.png
