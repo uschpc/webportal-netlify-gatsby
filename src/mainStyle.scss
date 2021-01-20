@@ -53,6 +53,22 @@ body {
 
   #___gatsby {
     #gatsby-focus-wrapper{
+      .markdown-custom-link {
+        padding: 10px;
+        background-color: #990000;
+        font-weight: 700;
+        border-radius: 15px;
+        text-align: center;
+        margin: 15px 0 5px;
+        color: white;
+        display: block;
+        width: fit-content;
+        font-size: 21px;
+        &:hover {
+          color: #fff;
+          text-decoration: underline;
+        }
+      }
       h4.navigation-heading {
         color: #990000;
         font-size: 24px;
