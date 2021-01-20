@@ -42,6 +42,12 @@ This workshop introduces CARC users to Discovery's software module system using 
 
 This workshop is designed for researchers who need to install software packages on CARC systems. Using examples, we will cover concepts such as Python package installation, downloading software, linking to libraries, using Makefiles, compiling and optimizing code, and handling dependencies. It is recommended that you take the Introduction to Linux workshop first if you have not previously worked in a Linux environment.
 
+#### Software Containers with Singularity
+
+An overview of software containers and how to use Singularity to create and run containers for research and high-performance computing tasks. Singularity containers enable portable and reproducible computing environments and workflows. Build a container with a desired software environment and you can run it on personal or workstation computers, on the CARC's high-performance computing clusters, and in the cloud.
+
+Materials: https://github.com/uschpc/workshop-singularity
+
 ### Programming
 
 #### Introduction to Python
@@ -50,13 +56,15 @@ An introduction to the Python programming language. This workshop covers basic P
 
 #### Introduction to R
 
-An introduction to the R programming environment and language for statistical computing and graphics. This workshop covers base R concepts and functions for importing, exporting, processing, summarizing, visualizing, and modeling data. It also covers how to install packages and develop R scripts, and it discusses best practices for R programming.
+An introduction to the R programming environment and language for statistical computing and graphics. This workshop covers basic R concepts and functions for importing, exporting, processing, summarizing, visualizing, and modeling data. It also covers how to install packages and develop scripts and discusses best practices for R programming.
 
 Materials: https://github.com/uschpc/workshop-r-intro
 
 #### HPC with R
 
-This workshop covers intermediate topics in R programming using the CARC's high-performance computing cluster, Discovery, including data I/O, big data, memory usage, parallel computing, debugging, and profiling.
+Intermediate-to-advanced topics in R programming using the CARC's high-performance computing clusters, including data I/O, memory usage, parallel programming, debugging, and profiling.
+
+Materials: https://github.com/uschpc/workshop-r-hpc
 
 #### Running Parallel MATLAB on the CARC Cluster
 
@@ -67,3 +75,19 @@ This workshop is designed to teach researchers how to use MATLAB’s Parallel Co
 #### CP2K: Running Ab Initio Molecular Dynamics Simulations
 
 An introduction to computational tools implemented within the CP2K program package. The most standard methods as well as some of the more advanced features will be introduced by overviews of background theory and through examples of application, while encouraging modular, flexible, and problem-oriented thinking. Recurring topics in the workshop are the scaling of algorithms, the combination of different levels of theory and of sampling, and tools and strategies for the analysis of results.
+
+#### Vienna Ab initio Simulation Package Workshop Series
+
+This workshop series will benefit researchers who are interested in or are starting to learn about the application of theoretical methods and techniques for the study of the physics and chemistry of the solid state. These hands-on oriented workshops are targeted towards undergraduate, graduate, and post-doctoral students who wish to use Density Functional Theory (DFT) methods in their research. The aim is to teach the basics of ab initio atomistic materials simulation using the Vienna Ab initio Simulation Package (VASP) plane-wave pseudopotential code. The workshops will consist of lectures, demonstrations, and practical hands-on sessions using the Discovery HPC cluster.
+
+Students will be trained in the efficient use of HPC resources (i.e., simulation efficiency: setup of production-level simulations, parallel scaling, multi-level parallelism, hybrid architectures). After completing the series of workshops, the researchers will be able to independently develop and carry through density functional theory calculations as well as to analyze and judge their results.
+
+Topics covered include:
+
+- Planewaves, k-points, Brillouin zones, and supercells
+- Cell (structure) relaxation
+- Single-point energies (using a high-density k-point mesh)
+- Density of states, band structure, crystal orbital Hamilton population analysis (LOBSTER)
+- Reaction pathways using Nudged Elastic Band methods
+- Structure and reactivity at solid surfaces
+- Ab Initio Molecular Dynamics (NVE, NVT, and NPT ensembles)

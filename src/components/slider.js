@@ -13,6 +13,14 @@ const content = [
     image: "/images/slider-image-2-small.jpg"
   },
   {
+    title: "Monthly Workshops and CARC Events",
+    description:
+      "Check out the CARC's free workshops, office hours, and other research computing events",
+    button: "Register for events",
+    url: "/news-and-events/events",
+    image: "/images/slider-image-3-small.jpg"
+  },
+  {
     title: "CARC and Researchers Benefit from Reciprocal Partnerships",
     description:
       "Resources, research grants, and system testing are perks of collaborating with the CARC",
