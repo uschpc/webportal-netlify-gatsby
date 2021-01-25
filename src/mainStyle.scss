@@ -53,6 +53,24 @@ body {
 
   #___gatsby {
     #gatsby-focus-wrapper{
+      .table-of-tools {
+        margin: 41px 10%;
+        .input-group {
+          display: flex;
+          .form-control.genome {
+            width: 100%;
+          }
+          .clippy {
+            width: 30px;
+            display: flex;
+            margin: 0;
+          }
+        }
+        .table-of-tools {
+          margin: 0;
+        }
+
+      }
       .markdown-custom-link {
         padding: 10px;
         background-color: #990000;

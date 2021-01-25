@@ -184,7 +184,7 @@ class SearchProject extends Component {
                           border: "1px solid #d3d3d3",
                         }}
                       >
-                        {item.links}
+                        <a href={item.links}>{item.links}</a>
                       </td>
                     </tr>
                   )
