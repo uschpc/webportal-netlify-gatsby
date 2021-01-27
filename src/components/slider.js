@@ -5,12 +5,12 @@ import { Link } from 'gatsby';
 
 const content = [
   {
-    title: "Monthly Workshops and CARC Events",
+    title: "Spring 2021 CARC Workshops Cover New Topics",
     description:
-      "Check out the CARC's free workshops, office hours, and other research computing events",
-    button: "Register for events",
-    url: "/news-and-events/events",
-    image: "/images/slider-image-3-small.jpg"
+      "This semester, register for courses covering job automation, software containers, job management, and more",
+    button: "Read More",
+    url: "/news-and-events/news-and-announcements/spring-2021-workshop-schedule",
+    image: "/images/slider-image-books-small.jpg"
   },
   {
     title: "New Condo Cluster Program Officially Launches",
