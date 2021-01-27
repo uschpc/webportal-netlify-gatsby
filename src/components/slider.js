@@ -5,20 +5,20 @@ import { Link } from 'gatsby';
 
 const content = [
   {
-    title: "New Condo Cluster Program Officially Launches",
-    description:
-      "New program offers greater flexibility, with two ownership models for dedicated compute nodes",
-    button: "Read More",
-    url: "/news-and-events/news-and-announcements/new-condo-cluster-program-launches",
-    image: "/images/slider-image-2-small.jpg"
-  },
-  {
     title: "Monthly Workshops and CARC Events",
     description:
       "Check out the CARC's free workshops, office hours, and other research computing events",
     button: "Register for events",
     url: "/news-and-events/events",
     image: "/images/slider-image-3-small.jpg"
+  },
+  {
+    title: "New Condo Cluster Program Officially Launches",
+    description:
+      "New program offers greater flexibility, with two ownership models for dedicated compute nodes",
+    button: "Read More",
+    url: "/news-and-events/news-and-announcements/new-condo-cluster-program-launches",
+    image: "/images/slider-image-2-small.jpg"
   },
   {
     title: "CARC and Researchers Benefit from Reciprocal Partnerships",
