@@ -2,9 +2,10 @@
 path: null
 cat: announcements
 title: ANNOUNCEMENTS
-date: January 19, 2021
+date: January 20, 2021
 author: Andrea Renney
 featuredImage: ../../../static/images/Comment.png
 ---
 
-Join the CARC for a free discussion about the new [Condo Cluster Program](/user-information/ccp/program-information) and how to get your own dedicated HPC resources. Bonus: receive a free gift for attending! Register [here](https://www.eventbrite.com/e/usc-seminar-hpc-resources-tickets-136887172217).  
+1. The deadline for [Condo Cluster Program](/user-information/ccp/program-information) system purchases has been extended to **February 19, 2021**. More information [here](/user-information/ccp/program-information/ccp-purchase).  
+2. Check the Spring 2021 workshop schedule [here](/news-and-events/events).

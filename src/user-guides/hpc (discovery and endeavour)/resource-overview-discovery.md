@@ -1,7 +1,7 @@
 ---
 author: Cesar Sul
 id: 3
-date: 2020-11-04T12:00:00.387Z
+date: 2021-01-27T12:00:00.387Z
 title: Discovery Resource Overview
 path: discovery-resources
 parentPath: user-information/user-guides/high-performance-computing
@@ -58,8 +58,7 @@ For GPUs, the SU charge varies depending on the GPU model. The table below shows
 
 | GPU Model | System Unit (SU) Charge |
 |-----------|-------------------------|
-| K20, K40  | 2                       |
-| K80       | 4                       |
+| K40  | 2                       |
 | P100      | 6                       |
 | V100      | 8                       |
 

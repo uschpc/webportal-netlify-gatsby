@@ -1,7 +1,7 @@
 ---
 author: Cesar Sul
 id: 7
-date: 2020-11-13T12:00:00.387Z
+date: 2021-01-27T12:00:00.387Z
 title: Running Jobs on the Cluster
 path: running-jobs
 parentPath: user-information/user-guides/high-performance-computing
@@ -225,16 +225,15 @@ or
 where:
 
 - `<number>` is the number of GPUs per node requested, and
-- `<gpu_type>` is one of the following: k20, k40, k80, or p100.
+- `<gpu_type>` is one of the following: k40, p100, or v100.
 
 Use the chart below to determine which gpu_type to specify:
 
-| GPU_type |	Max Number of GPUs Per Node |	GPU Model|
-| ---|---|---|
-|k20 	|2| NVIDIA Tesla K20|
-|k40 	|2|	NVIDIA Tesla K40|
-|k80 	|4| NVIDIA Tesla K80 (condo nodes)|
-|p100   |2| NVIDIA Tesla P100|
+|`gpu_type` | Max number of GPUs per node | GPU model|
+|---|---|---|
+|k40 	|2| NVIDIA Tesla K40 |
+|p100 	|2| NVIDIA Tesla P100 |
+|v100 	|2| NVIDIA Tesla V100 |
 
 ### Queue times
 
