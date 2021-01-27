@@ -1,7 +1,7 @@
 ---
 author: Derek Strong
 id: 8
-date: 2020-08-31T12:00:00.387Z
+date: 2021-01-27T12:00:00.387Z
 title: Slurm Job Script Templates
 path: slurm-templates
 parentPath: user-information/user-guides/high-performance-computing
@@ -214,15 +214,13 @@ or
 where:
 
 `<number>` is the number of GPUs per node requested, and  
-`<gpu_type>` is one of the following: k20, k40, k80, p100, or v100.
+`<gpu_type>` is one of the following: k40, p100, or v100.
 
 Use the chart below to determine which `gpu_type` to specify:
 
 |`gpu_type` | Max number of GPUs per node | GPU model|
 |---|---|---|
-|k20 	|2| NVIDIA Tesla K20 |
 |k40 	|2| NVIDIA Tesla K40 |
-|k80 	|4| NVIDIA Tesla K80 (condo nodes) |
 |p100 	|2| NVIDIA Tesla P100 |
 |v100 	|2| NVIDIA Tesla V100 |
 

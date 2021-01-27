@@ -49,7 +49,7 @@ const Footer = () => {
                             </div>
                     </form> */}
                 </div>
-                <a href="https://itservices.usc.edu/" target="_BLANK" className="logo-footer">
+                <a href="https://itservices.usc.edu/" target="_blank" className="logo-footer">
                     <div className="usc-logo"></div>
                 </a>
             </div>

@@ -1,0 +1,367 @@
+{% extends "common/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+{% block title %}
+Purchase Create
+{% endblock %} 
+
+{% block content %}
+
+<style>
+    .container {
+        display: flex;
+        justify-content: space-around;
+    }
+    .container form {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .container form #div_id_system {
+        width: 70%;
+    }
+    .container .summary-side {
+        width: 28%;
+    }
+    .container .summary-side .items-in-cart {
+        border-radius: 3px;
+        border: 1px solid #e6e6e6;
+    }
+    .container .summary-side .section-header {
+        display: flex;
+        background-color: #f3f3f3;
+        height: 50px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+    .container .summary-side .section-header .section-title {
+        flex: 0 0 auto;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.5;
+        padding: 11px 10px 0 20px;
+    }
+    .container .summary-side .items-in-cart .item-breakdown {
+        border-bottom: 1px solid #e6e6e6;
+    }
+    .container .summary-side .items-in-cart .item-breakdown .item {
+        padding: 10px 0 0px 0px;
+        display: flex;
+        position: relative;
+    }
+    .container .summary-side .items-in-cart .item-breakdown .item .section {
+        padding-left: 20px;
+        line-height: 1.5;
+    }
+    .container .summary-side .items-in-cart .item-breakdown .item .details {
+        width: 100%;
+        padding: 0 0px 0 20px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .container .summary-side .items-in-cart .item-breakdown .item .details .cart {
+        display: flex;
+        justify-content: space-between;
+    }
+    .container .total-container {
+        padding: 20px 0 20px 20px;
+    }
+    .container .total-container .value.hardware, .container .total-container .value.shipping {
+        padding-right: 20px;
+    }
+    .container .total-container .line-item {
+        display: flex;
+        font-size: 16px;
+        line-height: 1.5;
+        padding-bottom: 10px;
+        justify-content: space-between;
+    }
+    .container .total-container .line-item .total{
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1.2;
+        padding-bottom: 0;
+    }
+    #cpu, #gpu, #total, #subtotal {
+        border: none;
+        text-align: end;
+        background-color: white;
+    }
+    .container .actions-row {
+        display: flex;
+        padding: 10px;
+        justify-content: flex-end;
+    }
+    .container .actions-row .primary-btn {
+        background-color: green;
+        border-radius: 5px;
+        color: #ffffff;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        cursor: pointer;
+        display: block;
+        text-decoration: none;
+    }
+    .id_cpu_system, .id_gpu_system {
+        font-size: 23px;
+        font-weight: bold;
+        background-color: #f3f3f3;
+        color: #000;
+        padding: 10px;
+        margin: 0 0 0px 0;
+        width: 100%;
+    }
+    .container .billing {
+        font-size: 23px;
+        font-weight: bold;
+        background-color: #f3f3f3;
+        color: #000;
+        padding: 10px;
+        margin: 0 0 0px 0;
+        width: 100%;
+    }
+    #submit {
+        width: 100%;
+    }
+</style>
+
+<form method="post">
+  {% csrf_token %}
+
+
+  <div id="div_id_system" class="form-group">
+    <label for="id_cpu_system" class="col-form-label  requiredField id_cpu_system">
+        CPU Node<span class="asteriskField"></span>
+    </label>
+        
+    <div class="cpu_system">
+        <select name="cpu_system" class="select form-control" id="id_cpu_system">
+        </select>
+        <!-- {{ form.quantity|as_crispy_field }} -->
+        <div id="div_id_quantity" class="form-group">
+            <label for="id_quantity" class="col-form-label  requiredField">
+                Quantity<span class="asteriskField"></span>
+            </label>
+            <div class="">
+                <input type="number" name="cpu_quantity" class="numberinput form-control" id="id_quantity" />
+            </div>
+        </div>
+        <div class="actions-row">
+            <div class="btns submit">
+                <input class="primary-btn large block-btn" id="add_cpu_system" value="Add to cart" type="submit">
+            </div>
+        </div>
+    </div>
+
+
+    <label for="id_gpu_system" class="col-form-label  requiredField id_cpu_system">
+        GPU Node<span class="asteriskField"></span>
+    </label>
+        
+    <div class="gpu_system">
+        <select name="gpu_system" class="select form-control" id="id_gpu_system">
+        </select>
+        <!-- {{ form.quantity|as_crispy_field }} -->
+        <div id="div_id_quantity" class="form-group">
+            <label for="id_quantity" class="col-form-label  requiredField">
+                Quantity<span class="asteriskField"></span>
+            </label>
+            <div class="">
+                <input type="number" name="gpu_quantity" class="numberinput form-control" id="id_quantity" />
+            </div>
+        </div>
+        <div class="actions-row">
+            <div class="btns submit">
+                <input class="primary-btn large block-btn" id="add_gpu_system" value="Add to cart" type="submit">
+            </div>
+        </div>
+    </div>
+
+
+    <input type="hidden" name="cpu_nodetype" id="id_cpu_nodetype"/>
+    <input type="hidden" name="gpu_nodetype" id="id_gpu_nodetype"/>
+    <div class="billing">Billing</div>
+    {{ form.billing_name|as_crispy_field }}
+    {{ form.billing_email|as_crispy_field }}
+    {{ form.billing_phonenumber|as_crispy_field }}
+    {{ form.billing_department|as_crispy_field }}
+    <input id="submit" class="btn btn-primary" type="submit" value="Submit" disabled />
+  </div>
+  <d    iv class="summary-side">
+    <div class="items-in-cart">
+        <div class="section-header">
+            <div class="section-title"><span class="amount">Cart</span></div>
+        </div>
+
+        <div class="item-breakdown">
+            <div class="item">
+                <span class="section">CPU</span>
+                <div class="details">
+                    <div class="cpu"><div class="cart"><span></span><input id="cpu" name="cpu_price" class="price" type="number" value="0" disabled="true" /></div> </div>
+                </div>
+            </div>
+            <div class="item">
+                <span class="section">GPU</span>
+                <div class="details gpu">
+                    <div class="gpu"><div class="cart"><span class="system"></span><input id="gpu" name="gpu_price" class="price" type="number" value="0" disabled="true" /></div> </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="total-container">
+            <div class="line-item subtotal">
+                <div class="name">Subtotal</div>
+                <div class="value"><input id="subtotal" class="price" type="number" value="0" disabled="true" /></div>
+            </div>
+
+            <div class="line-item">
+                <div class="name">Hardware Cost</div>
+                <div class="value hardware">$0</div>
+            </div>
+
+            <div class="line-item">
+                <div class="name">Shipping</div>
+                <div class="value shipping">FREE</div>
+            </div>
+
+            <div class="line-item total">
+                <div class="name">Total</div>
+                <div class="value"><input id="total" class="price" type="number" value="0" disabled="true" /></div>
+            </div>
+        </div>
+    </div>
+  </div>
+</form>
+
+<script>
+  var serverlist = {{ nodetype_list|safe }};
+
+  $(document).ready(function () {
+    $("#id_cost").attr('readonly',true);
+    $("#id_cpu_nodetype").val(serverlist[0].id);
+    $("#id_gpu_nodetype").val(serverlist[0].id);
+    $(".cpu_system #id_quantity").attr('name', 'cpu_quantity')
+    $(".gpu_system #id_quantity").attr('name', 'gpu_quantity')
+    var previous = 0;
+    let id = ''
+    for (index = 0; index < serverlist.length; index++) { 
+      // add labels first
+      if (previous == 0) {
+        id = "#id_cpu_system"
+      } else if (serverlist[index].order > 100 && previous <= 100) {
+        id = "#id_cpu_system"
+      } else if (serverlist[index].order > 200 && previous <= 200) {
+        id = "#id_gpu_system"
+      } else {
+      }
+      $(id).append(new Option(serverlist[index].name,serverlist[index].name));
+      previous = serverlist[index].order;
+    } 
+  });
+
+    $(".cpu_system #id_quantity,.gpu_system #id_quantity").change(function () {
+        console.log("quantity change: "+$(this).val());
+        $(this).attr('value', $(this).val());
+    });
+
+    $('#add_gpu_system, #add_cpu_system').click(function(event) {
+        event.preventDefault();
+        console.log($(this).parent().parent().parent().attr('class'))
+        let systemType = $(this).parent().parent().parent().attr('class')
+        let quantity = $(this).parent().parent().parent().find('#div_id_quantity input').attr('value')
+        switch(systemType) {
+            case 'gpu_system': {
+                for (index = 0; index < serverlist.length; index++) { 
+                    if ($("#id_gpu_system").val() == serverlist[index].name) {
+                        $("#id_gpu_nodetype").val(serverlist[index].id);
+                    }
+                }
+                updatecostForGPU(quantity);
+            }
+            break;
+            case 'cpu_system': {
+                for (index = 0; index < serverlist.length; index++) { 
+                    if ($("#id_cpu_system").val() == serverlist[index].name) {
+                        $("#id_cpu_nodetype").val(serverlist[index].id);
+                    }
+                }
+                updatecostForCPU(quantity);
+            }
+            break;
+        }
+        if (parseInt($('#total').val()) !== 0 ) $('#submit').removeAttr('disabled')
+    })
+
+  function updatecostForCPU(quantity) {
+    let optionSelected = $("#id_cpu_system").val()
+    let isAMD = optionSelected.indexOf('AMD') > -1
+    let type = isAMD ? 'AMD' : 'Intel'
+    for (index = 0; index < serverlist.length; index++) { 
+      if (serverlist[index].name == optionSelected) {
+        var newcost = parseInt(quantity) * serverlist[index].cost;
+        $("#id_cost").val(newcost);
+        $('#cpu').attr('value', newcost);
+        $('.cpu .cart span').text(type)
+        updatecostTotal();
+      }
+    } 
+  };
+  function updatecostForGPU(quantity) {
+    let optionSelected = $("#id_gpu_system").val()
+    let isAMD = optionSelected.indexOf('AMD') > -1
+    let type = isAMD ? 'AMD' : 'Intel'
+    for (index = 0; index < serverlist.length; index++) { 
+      if (serverlist[index].name == optionSelected) {
+        var newcost = parseInt(quantity) * serverlist[index].cost;
+        $("#id_cost").val(newcost);
+        $('#gpu').attr('value', newcost);
+        $('.gpu .cart span').text(type)
+        updatecostTotal();
+      }
+    } 
+  };
+  function updatecostTotal() {
+        let cpuCost = $("#cpu").val()
+        let gpuCost = $("#gpu").val()
+        let newCost = parseInt(cpuCost) + parseInt(gpuCost)
+        $("#subtotal").val(newCost);
+        $("#total").val(newCost);
+  };
+
+  function updatecost() {
+    if ($("#id_system").val() == 'AMD EPYC 7542 2.90GHz, 32C/64T, 128M Cache, 256GB RAM - $15,000') {
+      var newcost = parseInt($("#id_quantity").val()) * 15000;
+      $("#id_cost").val(newcost);
+    } else if ($("#id_system").val() == 'AMD EPYC 7542 2.90GHz, 32C/64T, 128M Cache, 512GB RAM - $20,000') {
+      var newcost = parseInt($("#id_quantity").val()) * 20000;
+      $("#id_cost").val(newcost);
+    } else if ($("#id_system").val() == 'Intel Xeon Gold 6248R Processor 24-Core 3.0GHz 35.75MB Cache (205W), 192GB RAM - $13,000') {
+      var newcost = parseInt($("#id_quantity").val()) * 13000;
+      $("#id_cost").val(newcost);
+    } else if ($("#id_system").val() == 'Intel Xeon Gold 6248R Processor 24-Core 3.0GHz 35.75MB Cache (205W), 384GB RAM - $17,000') {
+      var newcost = parseInt($("#id_quantity").val()) * 17000;
+      $("#id_cost").val(newcost);
+    } else if ($("#id_system").val() == 'AMD EPYC 7282 Processor 16-core 2.80GHz 64MB Cache (120W), 128GB RAM, GPU: RTX4000 x 2 - $7,600') {
+      var newcost = parseInt($("#id_quantity").val()) * 7600;
+      $("#id_cost").val(newcost);
+    } else if ($("#id_system").val() == 'AMD EPYC 7282 Processor 16-core 2.80GHz 64MB Cache (120W), 256GB RAM, GPU: RTX5000 x 4 - $15,600') {
+      var newcost = parseInt($("#id_quantity").val()) * 15600;
+      $("#id_cost").val(newcost);
+    } else if ($("#id_system").val() == 'Intel Xeon Gold 6248R Processor 24-Core 3.0GHz 35.75MB Cache (205W), 192GB RAM, GPU: V100 x 2 - $35,700') {
+      var newcost = parseInt($("#id_quantity").val()) * 35700;
+      $("#id_cost").val(newcost);
+    } else if ($("#id_system").val() == 'Intel Xeon Gold 6248R Processor 24-Core 3.0GHz 35.75MB Cache (205W), 384GB RAM, GPU: V100 x 4 - $75,700') {
+      var newcost = parseInt($("#id_quantity").val()) * 75700;
+      $("#id_cost").val(newcost);
+    } else {
+      alert ("ERROR: unknown server type");
+    }
+
+  };
+
+</script>
+
+                 
+{% endblock %}
