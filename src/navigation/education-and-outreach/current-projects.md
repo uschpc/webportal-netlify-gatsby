@@ -31,12 +31,16 @@ More information on the grant: https://www.nsf.gov/awardsearch/showAward?AWD_ID=
 
 More information on the Campus Cyberinfrastructure (CC*) Program: https://www.nsf.gov/pubs/2020/nsf20507/nsf20507.htm
 
+<!--
 ### New cryo-EM facility and collaborations with Dornsife and ISI
 ##### Collaborators: Dornsife College of Letters, Arts and Sciences, Center for Advanced Research Computing, USC Information Sciences Institute (ISI)
+-->
 
-The CARC is assisting Dornsife with its new cryo-EM facility by developing a data workflow for the facility and coordinating its cyberinfrastructure, including a data server and a scheduler for secure, automated data transfer.
+<!--The CARC is assisting Dornsife with its new cryo-EM facility by developing a data workflow for the facility and coordinating its cyberinfrastructure, including a data server and a scheduler for secure, automated data transfer.
+-->
 
-The CARC is also working with the Information Sciences Institute (ISI) to develop a data workflow for the cryo-EM facility, using platforms developed by ISI (e.g., [Pegasus](https://pegasus.isi.edu/about/), [DERIVA](http://isrd.isi.edu/deriva/)).
+<!--The CARC is also working with the Information Sciences Institute (ISI) to develop a data workflow for the cryo-EM facility, using platforms developed by ISI (e.g., [Pegasus](https://pegasus.isi.edu/about/), [DERIVA](http://isrd.isi.edu/deriva/)).
+-->
 
 ### Publication acknowledgement in American Chemical Society's ACS Catalysis
 
