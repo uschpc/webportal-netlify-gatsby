@@ -23,6 +23,7 @@ const findSubMenu = (menubar, nav) => {
 export default function Template({ data }) {
   let content = data.content || data.newsContent || data.researcherContent || data.projectContent;
   let subMenu = findSubMenu(content.frontmatter.parentEle, data.sideMenu)
+  console.log('here', content)
 
     return (
       <Layout {...data.navigation} backToTopBtnFlag={content.frontmatter.backToTopBtnFlag}>
@@ -30,7 +31,7 @@ export default function Template({ data }) {
           <div className="nav-pages">
             <div className="container">
                 <div className="left-column">
-                  <h2>{content.frontmatter.parentEle}</h2>
+                  <Link to={content.frontmatter.parentPath} ><h2>{content.frontmatter.parentEle}</h2></Link>
                   {subMenu.map((item, i) => {
                   return (
                     !item.node.frontmatter.externalPath ? (
@@ -178,6 +179,7 @@ export const coldFrontQuery = graphql`
           route
           routePath
           parentEle
+          parentPath,
           uniqID
           sharedID
           backToTopBtnFlag

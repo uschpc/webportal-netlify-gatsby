@@ -82,6 +82,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `univeralPages`,
+        path: `${__dirname}/src/universal-pages`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `user-support`,
         path: `${__dirname}/src/user-support`,
       },

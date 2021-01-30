@@ -53,6 +53,17 @@ body {
 
   #___gatsby {
     #gatsby-focus-wrapper{
+      .middle-column {
+        details {
+          summary {
+            color: #990000;
+            font-weight: bold;
+          }
+          h4, p {
+            margin-left: 15px;
+          }
+        }
+      }
       .table-of-tools {
         margin: 41px 10%;
         .input-group {
@@ -505,6 +516,11 @@ body {
             &:hover {
               text-decoration: underline;
             }
+            &.universal {
+              &:hover {
+                text-decoration: none;
+              }
+            }
           }
 
           .side-menu {
@@ -564,6 +580,19 @@ body {
           width: 66%;
           h3 {
             color: #990000;
+          }
+          &.universal {
+            span {
+              a {
+                margin-left: 0;
+                color: #990000;
+                font-size: 25px;
+                font-weight: bold;
+              }
+              p {
+                margin-top: 10px;
+              }
+            }
           }
           ul {
             list-style-position: inside;
@@ -846,6 +875,11 @@ body {
             font-size: 26px;
             &:hover {
               text-decoration: underline;
+            }
+            &.universal {
+              &:hover {
+                text-decoration: none;
+              }
             }
           }
 
