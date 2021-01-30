@@ -51,7 +51,7 @@ The workflow for using Discovery typically consists of the following steps:
 To log in to the Discovery login node (also known as the *head node*), you will need to use a secure shell client. This is a small application that enables you to connect to a remote computer via SSH (**S**ecure **SH**ell), a cryptographic network protocol for securely operating network services. You will need your USC NetID to SSH in to the login node.
 
 <details>
-  <summary>SSH login: macOS and Linux</summary>
+  <summary><strong>SSH login: macOS and Linux</strong></summary>
 &nbsp;
 
 macOS users can connect to Discovery using the Terminal application that is natively installed. Linux users can similarly use the natively installed terminal application that comes with their distribution of Linux (e.g., Terminal on Ubuntu).
@@ -71,7 +71,7 @@ After entering your password, you will then see a Duo two-factor authentication 
 </details>
 
 <details>
-  <summary>SSH login: Windows</summary>
+  <summary><strong>SSH login: Windows</strong></summary>
 &nbsp;
 
 Windows users may need to download and install a third-party SSH client to connect to Discovery. The most popular client is PuTTY, which is available through the [developer’s website](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). On Windows 10, there is also a natively available Windows Terminal that has a built-in SSH client.
