@@ -15,7 +15,11 @@ backToTopBtnFlag: true
 
 The annual subscription-based model allows research groups to subscribe to their selected number of compute and storage resources on a yearly basis. The resources that a research group subscribes to will be dedicated for use by their condo job queue. All of the hardware is purchased and maintained by the CARC throughout the course of the subscription term.
 
-At the end of the annual subscription period (typically at the end of the fiscal year, June 30), researchers can choose to renew or discontinue use of their resources. In the case of renewal, researchers will have the option to increase or decrease the size of their compute pool or storage space. 
+### Subscription term
+
+Each subscription term is for one year from the date it is requested. Due to limitations with the administration of annual budgets by USC departments, the CARC is unable to offer multi-year subscription terms. However, at the end of a term, researchers can choose to renew or discontinue use of their resources. In the case of renewal, researchers will have the option to increase or decrease the size of their compute pool. 
+
+Subscriptions can be started at any point during the year. At the end of the fiscal year (June 30) in which the subscription is started, the CARC will bill the department associated with the user account of the PI who requested the subscription. For instructions on how to add billing information to your account, see the [Add Billing Information user guide](/user-information/user-guides/research-computing-user-portal/adding-billing-information).
 
 ### Compute resources available for subscription
 
@@ -32,4 +36,4 @@ Currently, the CARC offers two different compute node configurations to choose f
 
 Subscriptions to condo compute nodes can be requested via the CARC's User Portal, just as you would request a resource allocation for the Discovery cluster.
 
-See the [Request New Allocation user guide](/user-information/user-guides/research-computing-user-portal/request-new-allocation) for details on how to request a condo subscription for your research project. Before submitting your request, you will be shown the Terms and Conditions for the CCP subscription model.
+See the [Request New Condo Subscription user guide](/user-information/user-guides/research-computing-user-portal/request-new-subscription) for details on how to request a condo subscription for your research project. Before submitting your request, you will be shown the Terms and Conditions for the CCP subscription model.

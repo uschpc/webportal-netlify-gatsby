@@ -28,13 +28,15 @@ The CCP operates on two different models - an annual subscription model and a tr
 
 The annual subscription-based model allows research groups to subscribe to their selected number of compute and storage resources on a yearly basis. The resources that a research group subscribes to will be dedicated for use by their condo job queue. All of the hardware is purchased and maintained by the CARC throughout the course of the subscription term.
 
-[Detailed information on the CCP's subscription pricing model](/user-information/ccp/program-information/ccp-subscription).
+[Detailed information on the CCP's subscription pricing model](/user-information/ccp/program-information/ccp-subscription)  
+[Request New Condo Subscription user guide](/user-information/user-guides/research-computing-user-portal/request-new-subscription)
 
 ### Traditional purchase model
 
 The second option for CCP resources is the traditional system purchase model. This is a useful option when research groups need to make a bulk purchase using a research grant or departmental budget, and it is also useful for grant proposal budget planning purposes.
 
-[Detailed information on the CCP's traditional purchase pricing model](/user-information/ccp/program-information/ccp-purchase).
+[Detailed information on the CCP's traditional purchase pricing model](/user-information/ccp/program-information/ccp-purchase)  
+[Request New Condo Purchase user guide](/user-information/user-guides/research-computing-user-portal/request-new-purchase)
 
 ### Endeavour condo cluster
 

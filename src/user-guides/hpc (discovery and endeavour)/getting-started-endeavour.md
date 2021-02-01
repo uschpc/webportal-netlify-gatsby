@@ -140,3 +140,12 @@ Information on the software available on Endeavour, as well as instructions for 
 The [Research Computing User Portal user guides](/user-information/user-guides/research-computing-user-portal) provide instructions for using the CARC user portal to create and manage research projects, add or remove project users, and submit your annual project renewal. 
 
 >Our main user guides page can be accessed [here](/user-information/user-guides).
+
+### More information
+
+* [Main CCP landing page](/user-information/ccp)
+* [CCP Program Information page](/user-information/ccp/program-information/ccp)
+* [Subscription model information](/user-information/ccp/program-information/ccp-subscription)
+* [Purchase model information](/user-information/ccp/program-information/ccp-purchase)
+* [Request New Condo Subscription user guide](/user-information/user-guides/research-computing-user-portal/request-new-subscription)
+* [Request New Condo Purchase user guide](/user-information/user-guides/research-computing-user-portal/request-new-purchase)
