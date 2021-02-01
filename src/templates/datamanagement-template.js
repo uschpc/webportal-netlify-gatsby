@@ -24,7 +24,6 @@ export default function Template({ data }) {
                 </div>
                 <div className="middle-column">
                   <h1>{data.content.frontmatter.title}</h1>
-                  <Content />
                   <Markdown source={data.content.html} escapeHtml={false} />
                   {(data.content.frontmatter.title === "Discovery") && (
                     <span>
@@ -40,12 +39,13 @@ export default function Template({ data }) {
                   )}
                 </div>
                 <div className="right-column">
-                  <div className="system-status">
+                <Content />
+                  {/* <div className="system-status">
                       <h4>Related Links</h4>
                       <h5>Some links</h5>
                       <h5>Some links</h5>
                       <h5>Some links</h5>
-                  </div>
+                  </div> */}
                 </div>
               </div>
           </div>

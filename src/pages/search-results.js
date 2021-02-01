@@ -1,10 +1,13 @@
-import React from "react"
+import React, {useEffect} from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Footer from "../components/footer.js";
 import Search from "../components/SearchContainer.js";
 
 const SearchIndex = ({data}) => {
+  useEffect(() => {
+    document.getElementById('___gatsby').classList.add("scroll");
+  }, [])
   return (
       <Layout {...data.navigation}>
           <SEO title="search-result" />

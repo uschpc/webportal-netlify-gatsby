@@ -93,7 +93,7 @@ export default function Template({ data }) {
                         )
                     })}
                 </div>
-                <div className="right-column">
+                <div className="right-column hide">
                   <div className="system-status">
                       <h4>Related Links</h4>
                       <h5>Some links</h5>

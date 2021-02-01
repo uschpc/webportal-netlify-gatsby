@@ -29,7 +29,7 @@ export default function Template({ data }) {
       <Layout {...data.navigation} backToTopBtnFlag={content.frontmatter.backToTopBtnFlag}>
           <SEO title={content.frontmatter.title}/>
           <div className="nav-pages">
-            <div className="container">
+            <div className="container page-body">
                 <div className="left-column">
                   <Link to={content.frontmatter.parentPath} ><h2>{content.frontmatter.parentEle}</h2></Link>
                   {subMenu.map((item, i) => {
@@ -67,7 +67,6 @@ export default function Template({ data }) {
                 <h1>{content.frontmatter.title}</h1>
                   {content.frontmatter.cat !== 'news' ? (
                     <>
-                      {(content.frontmatter.sharedID !== "news_Announcements_and_researcher_profile") && <Content />}
                       {(content.frontmatter.sharedID !== "news_Announcements_and_researcher_profile") && <Markdown source={content.html} escapeHtml={false} />}
                       {(content.frontmatter.uniqID === "news_Announcements") && (
                         <>
@@ -143,12 +142,13 @@ export default function Template({ data }) {
 
                 </div>
                 <div className="right-column">
-                    <div className="system-status">
+                {(content.frontmatter.sharedID !== "news_Announcements_and_researcher_profile") && <Content />}
+                    {/* <div className="system-status">
                         <h4>Related Links</h4>
                         <h5>Some links</h5>
                         <h5>Some links</h5>
                         <h5>Some links</h5>
-                    </div>
+                    </div> */}
                 </div>
               </div>
           </div>

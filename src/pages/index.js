@@ -15,6 +15,7 @@ const IndexPage = (props) => {
   }
   useEffect(() => {
     setFlag(true)
+    document.getElementById('___gatsby').classList.add("scroll");
   }, [])
 
   return (

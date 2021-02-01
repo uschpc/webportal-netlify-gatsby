@@ -53,6 +53,56 @@ body {
 
   #___gatsby {
     #gatsby-focus-wrapper{
+      .nav-pages {
+        .page-body {
+          overflow: scroll;
+          height: calc(100vh - 250px);
+          &::-webkit-scrollbar { 
+            display: none;
+          }
+        }
+      }
+      .page-body {
+        overflow: scroll;
+        height: calc(100vh - 450px);
+        &::-webkit-scrollbar { 
+          display: none;
+        }
+        .left-column {
+          position: sticky;
+          top: 0px;
+          padding: 48px 0px 24px;
+          overflow-y: auto;
+          font-size: 15px;
+          margin-top: 0;
+        }
+        .right-column {
+          position: sticky;
+          top: 0px;
+          padding: 50px 0px 24px;
+          overflow-y: auto;
+          font-size: 15px;
+          margin-top: 0;
+          visibility: visible;
+          li {
+            list-style: none;
+            margin-top: 10px;
+            &:hover {
+              color: #990000;
+              text-decoration: underline;
+              cursor: pointer;
+            }
+          }
+          .content-container {
+            span {
+              border-bottom: none;
+            }
+          }
+          &.hide {
+            visibility: hidden;
+          }
+        }
+      }
       .middle-column {
         details {
           summary {
@@ -1307,7 +1357,13 @@ body {
         }
       }
     }
-
+    &.scroll {
+      overflow: scroll;
+      height: 100vh;
+      &::-webkit-scrollbar { 
+        display: none;
+      }
+    }
 
   }
   -webkit-font-smoothing: antialiased;
