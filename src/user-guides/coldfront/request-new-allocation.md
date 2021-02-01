@@ -25,7 +25,7 @@ The CARC's main computing resource available to all USC faculty/staff and their 
 
 #### Endeavour computing resources (subscription-based)
 
-The CARC's condo cluster, part of the Condo Cluster Program (CCP). The CCP allows research groups to subscribe to their selected number of compute and storage resources on a yearly basis. The resources that a research group subscribes to will be dedicated for use by their condo job queue. See the CARC's [Condo Cluster Program Information page](/user-information/ccp/program-information) for details.  
+The CARC's condo cluster, part of the Condo Cluster Program (CCP). The CCP allows research groups to subscribe to their selected number of compute and storage resources on a yearly basis. The resources that a research group subscribes to will be dedicated for use by their condo job queue. This user guide explains how to request a CCP subscription, but the [Request New Condo Subscription user guide](/user-information/user-guides/research-computing-user-portal/request-new-subscription) has more detailed instructions.  
 
 The CARC also offers a traditional, five-year purchase model for condo resources. See the [Request New Condo Purchase user guide](/user-information/user-guides/research-computing-user-portal/request-new-purchase) for more information.
 
