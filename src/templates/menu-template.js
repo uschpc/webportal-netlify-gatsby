@@ -23,7 +23,6 @@ const findSubMenu = (menubar, nav) => {
 export default function Template({ data }) {
   let content = data.content || data.newsContent || data.researcherContent || data.projectContent;
   let subMenu = findSubMenu(content.frontmatter.parentEle, data.sideMenu)
-  console.log('here', content)
 
     return (
       <Layout {...data.navigation} backToTopBtnFlag={content.frontmatter.backToTopBtnFlag}>

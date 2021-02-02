@@ -52,28 +52,30 @@ body {
   }
 
   #___gatsby {
+    // overflow: scroll;
+    // height: 100vh;
     #gatsby-focus-wrapper{
-      .user-guides-pages {
-        .page-body {
-          overflow: scroll;
-          height: auto;
-          &::-webkit-scrollbar { 
-            display: none;
-          }
-        }
-      }
-      .nav-pages {
-        .page-body {
-          overflow: scroll;
-          height: calc(100vh - 250px);
-          &::-webkit-scrollbar { 
-            display: none;
-          }
-        }
-      }
+      // .user-guides-pages {
+      //   .page-body {
+      //     overflow: scroll;
+      //     height: auto;
+      //     &::-webkit-scrollbar { 
+      //       display: none;
+      //     }
+      //   }
+      // }
+      // .nav-pages {
+      //   .page-body {
+      //     overflow: hidden;
+      //     height: auto;
+      //     &::-webkit-scrollbar { 
+      //       display: none;
+      //     }
+      //   }
+      // }
       .page-body {
         overflow: scroll;
-        height: calc(100vh - 450px);
+        height: calc(100vh - 250px);
         &::-webkit-scrollbar { 
           display: none;
         }
@@ -95,7 +97,7 @@ body {
           visibility: visible;
           li {
             list-style: none;
-            margin-top: 15px;
+            margin-top: 10px;
             &:hover {
               color: #990000;
               text-decoration: underline;
@@ -1369,9 +1371,9 @@ body {
     &.scroll {
       overflow: scroll;
       height: 100vh;
-      &::-webkit-scrollbar { 
-        display: none;
-      }
+      // &::-webkit-scrollbar { 
+      //   display: none;
+      // }
     }
 
   }

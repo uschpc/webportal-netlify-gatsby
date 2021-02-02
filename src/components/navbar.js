@@ -3,7 +3,7 @@ import { AboutSubNavDropdown, ServicesSubNavDropdown, UserInfoSubNavDropdown, Ed
 import DropDownsContainer from "../helper/DropDownsContainer";
 
 import "../mainStyle.scss";
-import { Link } from "gatsby";
+import { Link, navigate } from "gatsby";
 
 const assignedDropdownSubNav = (menubar, nav) => {
   let subNav = nav.filter((ele, i) => {
@@ -17,24 +17,27 @@ const assignedDropdownSubNav = (menubar, nav) => {
 const navigation = [
   {
     title: "About",
+    path: 'about',
     dropdown: AboutSubNavDropdown
   },
   {
     title: "Services",
+    path: 'services',
     dropdown: ServicesSubNavDropdown
   },
   {
     title: "User Information", 
+    path: 'user-information',
     dropdown: UserInfoSubNavDropdown
  },
  {
     title: "Education & Outreach", 
-    path: "education_and_outreach",
+    path: "education-and-outreach",
     dropdown: EducationOutreachSubNavDropdown
  },
  {
    title: "News and Events",
-   path: "news_and_events",
+   path: "news-and-events",
    dropdown: NewsEventsSubNavDropdown
  },
  {
@@ -138,6 +141,10 @@ class Navbar extends React.Component {
     })
   }
 
+  navRoute = (n) => {
+    navigate(`/${n.path}`); 
+  }
+
   openSubMenu = (item) => {
     let nav = this.state.nav;
     let subNav = assignedDropdownSubNav(item, nav);
@@ -185,6 +192,7 @@ class Navbar extends React.Component {
                 <div
                   className=""
                   onMouseEnter={this.onMouseEnter}
+                  onClick={() => this.navRoute(n)}
                   onFocus={this.onMouseEnter}
                   data-index={index}
                   key={index}

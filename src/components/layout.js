@@ -18,6 +18,7 @@ import "../draggable.scss"
 const Layout = (props) => {
 
   useEffect(() => {
+    document.getElementById('___gatsby').classList.add("scroll") 
     let externalLinks = document.querySelectorAll("a[href^='http']");
     for ( let i = 0; i < externalLinks.length; i++ ) {
       externalLinks[i].target = "_blank"
