@@ -23,7 +23,7 @@ const findSubMenu = (menubar, nav) => {
 export default function Template({ data }) {
   let content = data.content || data.newsContent || data.researcherContent || data.projectContent;
   let subMenu = findSubMenu(content.frontmatter.parentEle, data.sideMenu)
-
+  console.log('123111111')
     return (
       <Layout {...data.navigation} backToTopBtnFlag={content.frontmatter.backToTopBtnFlag}>
           <SEO title={content.frontmatter.title}/>
@@ -141,7 +141,7 @@ export default function Template({ data }) {
 
                 </div>
                 <div className="right-column">
-                {(content.frontmatter.sharedID !== "news_Announcements_and_researcher_profile") && <Content />}
+                {(content.frontmatter.sharedID !== "news_Announcements_and_researcher_profile") && (content.frontmatter.cat !== 'news')  && <Content />}
                     {/* <div className="system-status">
                         <h4>Related Links</h4>
                         <h5>Some links</h5>
