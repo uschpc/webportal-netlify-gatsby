@@ -42,11 +42,12 @@ const Layout = (props) => {
   }, [])
 
   useEffect(() => {
+    console.log(props.backToTopBtnFlag)
     if (props.backToTopBtnFlag) {
       const scrollToTopButton = document.getElementById('js-top');
 
       const scrollFunc = () => {
-        let y = window.scrollY;
+        let y = document.querySelector('.page-body').scrollTop || window.scrollY;
         
         if (y > 0) {
           scrollToTopButton.className = "top-link show";
@@ -55,14 +56,15 @@ const Layout = (props) => {
         }
       };
   
-        window.addEventListener("scroll", scrollFunc);
+      document.querySelector('.page-body').addEventListener("scroll", scrollFunc);
   
         const scrollToTop = () => {
-        const c = document.documentElement.scrollTop || document.body.scrollTop;
+        const c = document.querySelector('.page-body').scrollTop || document.body.scrollTop;
     
         if (c > 0) {
           window.requestAnimationFrame(scrollToTop);
-          window.scrollTo(0, c - c / 10);
+          document.querySelector('.page-body').scrollTo(0, c - c / 10);
+          document.getElementById('___gatsby').scrollTo(0, 0)
         }
       };
   
