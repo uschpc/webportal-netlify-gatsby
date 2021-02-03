@@ -16,7 +16,7 @@ export default function Template({ data }) {
       <Layout {...data.navigation} backToTopBtnFlag={content.frontmatter.backToTopBtnFlag}>
           <SEO title={mainPage ? mainPage.frontmatter.title : content.frontmatter.title}/>
           <div className="user-guides-main-pages">
-            <div className="container">
+            <div className="container page-body">
                 <div className="left-column">
                   <div className="position-fixed">
                     
