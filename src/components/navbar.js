@@ -141,8 +141,15 @@ class Navbar extends React.Component {
     })
   }
 
-  navRoute = (n) => {
-    navigate(`/${n.path}`); 
+  navRoute = (n, e) => {
+    switch(e.target.innerHTML) {
+      case 'About':
+      case 'Services':
+      case 'User Information':
+      case 'Education &amp; Outreach':
+      case 'News and Events':
+        navigate(`/${n.path}`)
+    } 
   }
 
   openSubMenu = (item) => {
@@ -180,7 +187,6 @@ class Navbar extends React.Component {
     if (typeof previousIndex === "number") {
       PreviousDropdown = activeNavigation[previousIndex].dropdown;
     }
-
     return (
       <div className={`app-container ${(this.props.scrollY >= 124 && window.scrollY > 10 && !this.props.uniqId && !this.props.backToTopBtnFlag) ? 'fixed' : 'default' } `}>
         <nav className="navbar-el" onMouseLeave={this.onMouseLeave}>
@@ -192,7 +198,7 @@ class Navbar extends React.Component {
                 <div
                   className=""
                   onMouseEnter={this.onMouseEnter}
-                  onClick={() => this.navRoute(n)}
+                  onClick={(e) => this.navRoute(n, e)}
                   onFocus={this.onMouseEnter}
                   data-index={index}
                   key={index}

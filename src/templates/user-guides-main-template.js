@@ -19,7 +19,16 @@ export default function Template({ data }) {
             <div className="container">
                 <div className="left-column">
                   <div className="position-fixed">
-                    <h1> {mainPage  || content.frontmatter.title === "Frequently Asked Questions" ? "User Information" : "User Support"}</h1>
+                    
+                        {mainPage  || content.frontmatter.title === "Frequently Asked Questions" ? (
+                        <Link to='/user-information'>
+                         <h1>User Information </h1>
+                         </Link>
+                        )
+                        : (
+                          <Link to='/user-support'><h1>User Support</h1></Link>
+                        )
+                        }
                     {mainPage || content.frontmatter.title === "Frequently Asked Questions" ? <UserGuideSideMenu content={mainPage || content} sideMenu={data.UserGuidesSideMenu} /> : <SideMenu {...data}/>}
                   </div>
                 </div>
@@ -129,6 +138,7 @@ export const coldFrontQuery = graphql`
         frontmatter {
           title
           route
+          path
           routePath
           externalPath
           uniqId
