@@ -5,4 +5,5 @@ id: 1
 path: about
 cat: universalPages
 ---
-About us page
+
+<img src="/images/slider-image-1-small.jpg">

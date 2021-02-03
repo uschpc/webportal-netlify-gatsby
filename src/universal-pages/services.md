@@ -5,4 +5,5 @@ id: 1
 path: services
 cat: universalPages
 ---
-Service page
+
+<img src="/images/slider-image-3-small.jpg">

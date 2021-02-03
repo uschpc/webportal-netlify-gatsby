@@ -5,6 +5,6 @@ path: education-and-outreach
 thumbnail: /images/Book.png
 featuredImage: ../../static/images/Book.png
 cat: services
-redirectToPage:  education-and-outreach/seminars-and-workshops
+redirectToPage:  education-and-outreach
 ---
 Some text here

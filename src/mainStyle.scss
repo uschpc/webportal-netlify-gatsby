@@ -75,7 +75,7 @@ body {
       // }
       .page-body {
         overflow: scroll;
-        height: calc(100vh - 250px);
+        height: calc(100vh - 100px);
         &::-webkit-scrollbar { 
           display: none;
         }

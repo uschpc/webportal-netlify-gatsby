@@ -5,4 +5,5 @@ id: 1
 path: news-and-events
 cat: universalPages
 ---
-News and Events page
+
+<img src="/images/slider-image-paper-small.jpg">
