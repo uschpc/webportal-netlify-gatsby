@@ -75,7 +75,9 @@ body {
       // }
       .page-body {
         overflow: scroll;
-        height: calc(100vh - 100px);
+        &.scroll {
+          height: calc(100vh - 100px);
+        }
         &::-webkit-scrollbar { 
           display: none;
         }
@@ -1374,6 +1376,9 @@ body {
       // &::-webkit-scrollbar { 
       //   display: none;
       // }
+      &.enable {
+        overflow: hidden;
+      }
     }
 
   }

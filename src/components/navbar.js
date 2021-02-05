@@ -4,6 +4,7 @@ import DropDownsContainer from "../helper/DropDownsContainer";
 
 import "../mainStyle.scss";
 import { Link, navigate } from "gatsby";
+import { useEffect } from "react";
 
 const assignedDropdownSubNav = (menubar, nav) => {
   let subNav = nav.filter((ele, i) => {
@@ -54,6 +55,7 @@ class Navbar extends React.Component {
   state = {
     activeIndices: [],
     closeNavIcon: false,
+    scroll: 0,
     openNavIcon: true,
     nav: this.props.nav,
     subNav: {
@@ -173,12 +175,36 @@ class Navbar extends React.Component {
     }, 0)
   }
 
+  componentDidMount() {
+    document.getElementById('___gatsby').addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+      document.getElementById('___gatsby').removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll = () => {
+      this.setState({
+        scroll: document.getElementById('___gatsby').scrollTop
+      });
+  }
+
   render() {
     let CurrentDropdown;
     let PreviousDropdown;
 
     const previousIndex = this.state.activeIndices[this.state.activeIndices.length - 2];
     const currentIndex = this.state.activeIndices[this.state.activeIndices.length - 1];
+    console.log(this.state.scroll)
+    if (this.state.scroll >= 124)  {
+      document.querySelector('.page-body').classList.add("scroll")
+      document.getElementById('___gatsby').classList.add("enable")
+    }
+    else if (this.state.scroll >= 100)  {
+      document.querySelector('.page-body').classList.remove("scroll")
+      document.getElementById('___gatsby').classList.remove("enable")
+    }
+
 
     if (typeof currentIndex === "number") {
       CurrentDropdown = activeNavigation[currentIndex].dropdown;
@@ -188,7 +214,7 @@ class Navbar extends React.Component {
       PreviousDropdown = activeNavigation[previousIndex].dropdown;
     }
     return (
-      <div className={`app-container ${(this.props.scrollY >= 124 && window.scrollY > 10 && !this.props.uniqId && !this.props.backToTopBtnFlag) ? 'fixed' : 'default' } `}>
+      <div className={`app-container ${(this.state.scroll >= 124) ? 'fixed' : 'default' } `}>
         <nav className="navbar-el" onMouseLeave={this.onMouseLeave}>
           {/* <img data-src="/images/usc_logo_new_design_small.svg" className={`small-logo ${(this.props.width >= 1695 && this.props.scrollY >= 124 && window.scrollY > 10) ? 'show' : 'hide' } `} src="/images/usc_logo_new_design_small.svg" /> */}
           {/* <img className={`small-logo right ${(this.props.width >= 1150 &&  this.props.scrollY >= 124 && window.scrollY > 10) ? 'show' : 'hide' } `} src="/images/shield_black.png" /> */}
