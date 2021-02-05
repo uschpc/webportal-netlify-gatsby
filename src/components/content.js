@@ -18,7 +18,6 @@ const Content = (props) => {
 
     useEffect(() => {
         loadTags(generateTags());
-
     }, [])
     return (
         <span className="content-wrapper">

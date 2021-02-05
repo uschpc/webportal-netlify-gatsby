@@ -17,7 +17,13 @@ import "../draggable.scss"
 
 const Layout = (props) => {
 
+  const generateTags = () => {
+    return [...document.getElementsByTagName('h3')] || [];
+  }
+
   useEffect(() => {
+    let tags = generateTags()
+    tags.forEach(tag => tag.setAttribute('id', tag.innerHTML))
     document.getElementById('___gatsby').classList.add("scroll") 
     let externalLinks = document.querySelectorAll("a[href^='http']");
     for ( let i = 0; i < externalLinks.length; i++ ) {
