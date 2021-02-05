@@ -27,6 +27,11 @@ const Layout = (props) => {
       let tagSystemFreindly = tag.innerHTML.split(" ").join("-").toLowerCase()
       tag.setAttribute('id', tagSystemFreindly)
     })
+    if (document.location.hash.indexOf('#') > -1) {
+      let id = document.location.hash.split('#')[1]
+      document.getElementById(id).scrollIntoView();
+    }
+    
     document.getElementById('___gatsby').classList.add("scroll") 
     let externalLinks = document.querySelectorAll("a[href^='http']");
     for ( let i = 0; i < externalLinks.length; i++ ) {
@@ -51,7 +56,6 @@ const Layout = (props) => {
   }, [])
 
   useEffect(() => {
-    console.log(props.backToTopBtnFlag)
     if (props.backToTopBtnFlag) {
       const scrollToTopButton = document.getElementById('js-top');
 
