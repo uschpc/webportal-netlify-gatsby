@@ -23,7 +23,10 @@ const Layout = (props) => {
 
   useEffect(() => {
     let tags = generateTags()
-    tags.forEach(tag => tag.setAttribute('id', tag.innerHTML))
+    tags.forEach(tag => {
+      let tagSystemFreindly = tag.innerHTML.split(" ").join("-").toLowerCase()
+      tag.setAttribute('id', tagSystemFreindly)
+    })
     document.getElementById('___gatsby').classList.add("scroll") 
     let externalLinks = document.querySelectorAll("a[href^='http']");
     for ( let i = 0; i < externalLinks.length; i++ ) {
