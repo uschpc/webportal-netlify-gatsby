@@ -4,7 +4,6 @@ import DropDownsContainer from "../helper/DropDownsContainer";
 
 import "../mainStyle.scss";
 import { Link, navigate } from "gatsby";
-import { useEffect } from "react";
 
 const assignedDropdownSubNav = (menubar, nav) => {
   let subNav = nav.filter((ele, i) => {
@@ -56,6 +55,9 @@ class Navbar extends React.Component {
     activeIndices: [],
     closeNavIcon: false,
     scroll: 0,
+    wheelDirection: null,
+    middleScroll: 0,
+    swichFlag: false,
     openNavIcon: true,
     nav: this.props.nav,
     subNav: {
@@ -177,16 +179,62 @@ class Navbar extends React.Component {
 
   componentDidMount() {
     document.getElementById('___gatsby').addEventListener('scroll', this.handleScroll);
+    document.querySelector('.page-body') && document.querySelector('.page-body').addEventListener('scroll', this.handleScroll);
+    document.getElementById('___gatsby').addEventListener('wheel', this.findScrollDirectionOtherBrowsers);
+    document.querySelector('.page-body') && document.querySelector('.page-body').addEventListener('wheel', this.findScrollDirectionOtherBrowsers);
   }
 
   componentWillUnmount() {
       document.getElementById('___gatsby').removeEventListener('scroll', this.handleScroll);
+      document.querySelector('.page-body') && document.querySelector('.page-body').removeEventListener('scroll', this.handleScroll);
+      document.getElementById('___gatsby').removeEventListener('wheel', this.findScrollDirectionOtherBrowsers);
+      document.querySelector('.page-body') && document.querySelector('.page-body').removeEventListener('wheel', this.findScrollDirectionOtherBrowsers);
+  }
+
+  findScrollDirectionOtherBrowsers = (event) => {
+    let delta = null
+      if (event.wheelDelta){
+          delta = event.wheelDelta;
+        }else{
+          delta = -1 *event.deltaY;
+        }
+        this.setState({
+          wheelDirection: delta <= 0 ? 'DOWN' : 'UP'
+        }, () => {
+        if (document.querySelector('.page-body')) {
+          if (this.state.middleScroll <= 0) {
+            console.log('herer', this.state.scroll, this.state.wheelDirection === 'DOWN' && this.state.scroll >= 124)
+            if (this.state.wheelDirection === 'DOWN' && this.state.scroll >= 124) {
+              document.querySelector('.page-body').classList.add("scroll")
+              document.getElementById('___gatsby').classList.add("enable")
+              document.querySelector('.page-body').style.marginTop = `${this.state.scroll - 100}px`;
+            } else {
+              document.querySelector('.page-body').classList.remove("scroll")
+              document.getElementById('___gatsby').classList.remove("enable")
+              document.querySelector('.page-body').style.marginTop = '0px'
+            }
+          } else {
+            if (this.state.wheelDirection === 'up') {
+              document.querySelector('.page-body').classList.remove("scroll")
+              document.getElementById('___gatsby').classList.add("enable")
+            } else {
+              document.querySelector('.page-body').classList.add("scroll")
+              document.getElementById('___gatsby').classList.remove("enable")
+              document.querySelector('.page-body').style.marginTop = '0px'
+            }
+          }
+      }
+        })
   }
 
   handleScroll = () => {
+    if(document.querySelector('.page-body')) {
       this.setState({
-        scroll: document.getElementById('___gatsby').scrollTop
+        scroll: document.getElementById('___gatsby').scrollTop,
+        middleScroll: document.querySelector('.page-body').scrollTop,
+        swichFlag: document.querySelector('.page-body').scrollTop == 0
       });
+    }
   }
 
   render() {
@@ -195,16 +243,7 @@ class Navbar extends React.Component {
 
     const previousIndex = this.state.activeIndices[this.state.activeIndices.length - 2];
     const currentIndex = this.state.activeIndices[this.state.activeIndices.length - 1];
-    console.log(this.state.scroll)
-    if (this.state.scroll >= 124)  {
-      document.querySelector('.page-body').classList.add("scroll")
-      document.getElementById('___gatsby').classList.add("enable")
-    }
-    else if (this.state.scroll >= 100)  {
-      document.querySelector('.page-body').classList.remove("scroll")
-      document.getElementById('___gatsby').classList.remove("enable")
-    }
-
+    // console.log(this.state.scroll, this.state.middleScroll)
 
     if (typeof currentIndex === "number") {
       CurrentDropdown = activeNavigation[currentIndex].dropdown;

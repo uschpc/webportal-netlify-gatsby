@@ -10,10 +10,12 @@ const Content = (props) => {
 
     const scrollToView = (e) => {
         e.preventDefault();
+        document.querySelector('.page-body').classList.add("scroll")
+        document.getElementById('___gatsby').classList.add("enable")
         const index = _.findIndex(tags, function(o) {
             return o.innerHTML == e.target.getAttribute('value');
          });
-        tags[index].scrollIntoView({block: "start"})
+        tags[index].scrollIntoView({block: "center"})
     }
 
     useEffect(() => {
