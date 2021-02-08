@@ -54,6 +54,10 @@ class Navbar extends React.Component {
   state = {
     activeIndices: [],
     closeNavIcon: false,
+    scroll: 0,
+    wheelDirection: null,
+    middleScroll: 0,
+    swichFlag: false,
     openNavIcon: true,
     nav: this.props.nav,
     subNav: {
@@ -173,12 +177,73 @@ class Navbar extends React.Component {
     }, 0)
   }
 
+  componentDidMount() {
+    document.getElementById('___gatsby').addEventListener('scroll', this.handleScroll);
+    document.querySelector('.page-body') && document.querySelector('.page-body').addEventListener('scroll', this.handleScroll);
+    document.getElementById('___gatsby').addEventListener('wheel', this.findScrollDirectionOtherBrowsers);
+    document.querySelector('.page-body') && document.querySelector('.page-body').addEventListener('wheel', this.findScrollDirectionOtherBrowsers);
+  }
+
+  componentWillUnmount() {
+      document.getElementById('___gatsby').removeEventListener('scroll', this.handleScroll);
+      document.querySelector('.page-body') && document.querySelector('.page-body').removeEventListener('scroll', this.handleScroll);
+      document.getElementById('___gatsby').removeEventListener('wheel', this.findScrollDirectionOtherBrowsers);
+      document.querySelector('.page-body') && document.querySelector('.page-body').removeEventListener('wheel', this.findScrollDirectionOtherBrowsers);
+  }
+
+  findScrollDirectionOtherBrowsers = (event) => {
+    let delta = null
+      if (event.wheelDelta){
+          delta = event.wheelDelta;
+        }else{
+          delta = -1 *event.deltaY;
+        }
+        this.setState({
+          wheelDirection: delta <= 0 ? 'DOWN' : 'UP'
+        }, () => {
+        if (document.querySelector('.page-body')) {
+          if (this.state.middleScroll <= 0) {
+            console.log('herer', this.state.scroll, this.state.wheelDirection === 'DOWN' && this.state.scroll >= 124)
+            if (this.state.wheelDirection === 'DOWN' && this.state.scroll >= 124) {
+              document.querySelector('.page-body').classList.add("scroll")
+              document.getElementById('___gatsby').classList.add("enable")
+              document.querySelector('.page-body').style.marginTop = `${this.state.scroll - 100}px`;
+            } else {
+              document.querySelector('.page-body').classList.remove("scroll")
+              document.getElementById('___gatsby').classList.remove("enable")
+              document.querySelector('.page-body').style.marginTop = '0px'
+            }
+          } else {
+            if (this.state.wheelDirection === 'up') {
+              document.querySelector('.page-body').classList.remove("scroll")
+              document.getElementById('___gatsby').classList.add("enable")
+            } else {
+              document.querySelector('.page-body').classList.add("scroll")
+              document.getElementById('___gatsby').classList.remove("enable")
+              document.querySelector('.page-body').style.marginTop = '0px'
+            }
+          }
+      }
+        })
+  }
+
+  handleScroll = () => {
+    if(document.querySelector('.page-body')) {
+      this.setState({
+        scroll: document.getElementById('___gatsby').scrollTop,
+        middleScroll: document.querySelector('.page-body').scrollTop,
+        swichFlag: document.querySelector('.page-body').scrollTop == 0
+      });
+    }
+  }
+
   render() {
     let CurrentDropdown;
     let PreviousDropdown;
 
     const previousIndex = this.state.activeIndices[this.state.activeIndices.length - 2];
     const currentIndex = this.state.activeIndices[this.state.activeIndices.length - 1];
+    // console.log(this.state.scroll, this.state.middleScroll)
 
     if (typeof currentIndex === "number") {
       CurrentDropdown = activeNavigation[currentIndex].dropdown;
@@ -188,7 +253,7 @@ class Navbar extends React.Component {
       PreviousDropdown = activeNavigation[previousIndex].dropdown;
     }
     return (
-      <div className={`app-container ${(this.props.scrollY >= 124 && window.scrollY > 10 && !this.props.uniqId && !this.props.backToTopBtnFlag) ? 'fixed' : 'default' } `}>
+      <div className={`app-container ${(this.state.scroll >= 124) ? 'fixed' : 'default' } `}>
         <nav className="navbar-el" onMouseLeave={this.onMouseLeave}>
           {/* <img data-src="/images/usc_logo_new_design_small.svg" className={`small-logo ${(this.props.width >= 1695 && this.props.scrollY >= 124 && window.scrollY > 10) ? 'show' : 'hide' } `} src="/images/usc_logo_new_design_small.svg" /> */}
           {/* <img className={`small-logo right ${(this.props.width >= 1150 &&  this.props.scrollY >= 124 && window.scrollY > 10) ? 'show' : 'hide' } `} src="/images/shield_black.png" /> */}
