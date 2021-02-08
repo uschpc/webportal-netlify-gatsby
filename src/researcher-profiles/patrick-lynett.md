@@ -2,7 +2,7 @@
 title: Patrick Lynett
 author: Center for Advanced Research Computing
 path: patrick-lynett
-parentEle: News and Events
+parentEle: News & Events
 date: 2020-03-24
 parentPath: /news-and-events/researcher-profiles
 cat: Researchers

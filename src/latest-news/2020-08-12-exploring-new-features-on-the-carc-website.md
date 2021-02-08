@@ -2,7 +2,7 @@
 title: Exploring New Features on the CARC Website
 author: Andrea Renney
 path: website-new-features
-parentEle: News and Events
+parentEle: News & Events
 date: 2020-08-12T00:00:00.000Z
 parentPath: news-and-events/news-and-announcements
 cat: news

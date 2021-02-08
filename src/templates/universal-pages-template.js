@@ -154,6 +154,17 @@ export const universalPages = graphql`
         }
       } 
     }
+    userInformation: allMarkdownRemark(filter: {frontmatter: {cat: {eq: "userInformationLinks"}}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            redirectToPage
+          }
+          html
+        }
+      } 
+    }
     sideMenu: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "navigation"}}}) {
       edges {
         node {

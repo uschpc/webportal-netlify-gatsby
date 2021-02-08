@@ -2,7 +2,7 @@
 title: "Scheduled CARC System Maintenance - September 18, 2020 "
 author: Andrea Renney
 path: september-18-maintenance
-parentEle: News and Events
+parentEle: News & Events
 date: 2020-09-03T00:00:00.000Z
 parentPath: news-and-events/news-and-announcements
 cat: news

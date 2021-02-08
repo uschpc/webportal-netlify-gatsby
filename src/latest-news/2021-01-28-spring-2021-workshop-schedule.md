@@ -2,7 +2,7 @@
 title: Spring 2021 CARC Workshops Cover New Topics
 author: Andrea Renney
 path: spring-2021-workshop-schedule
-parentEle: News and Events
+parentEle: News & Events
 date: 2021-01-28T00:00:00.000Z
 parentPath: news-and-events/news-and-announcements
 cat: news

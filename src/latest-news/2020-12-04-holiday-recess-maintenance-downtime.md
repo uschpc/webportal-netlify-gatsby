@@ -2,7 +2,7 @@
 title: December Maintenance and 2020 Winter Recess Schedule
 author: Andrea Renney
 path: holiday-recess-maintenance-downtime
-parentEle: News and Events
+parentEle: News & Events
 date: 2020-12-03T00:00:00.000Z
 parentPath: news-and-events/news-and-announcements
 cat: news

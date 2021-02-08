@@ -289,7 +289,7 @@ const UserSupportSubNavDropdown = ({ current, prev, nav }) => {
 }
 
 const NewsEventsSubNavDropdown = ({ current, prev, nav }) => {
-  let subNav = assignedDropdownSubNav('News and Events', nav);
+  let subNav = assignedDropdownSubNav('News & Events', nav);
 
     return (
       <div className="products-dropdown-el dropdown-el" data-current={current} data-prev={prev}>

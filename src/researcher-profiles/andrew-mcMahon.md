@@ -8,7 +8,7 @@ path: andrew-mcmahon
 parentPath: /news-and-events/researcher-profiles
 cat: Researchers
 sharedID: news_Announcements_and_researcher_profile
-parentEle: News and Events
+parentEle: News & Events
 excerpt: Andrew McMahon studies the mechanisms underlying the assembly, repair, and regeneration of critical organ systems in the developing mammalian embryo.
 ---
 

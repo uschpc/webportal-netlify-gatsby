@@ -8,7 +8,7 @@ path: remo-rohs
 parentPath: /news-and-events/researcher-profiles
 cat: Researchers
 sharedID: news_Announcements_and_researcher_profile
-parentEle: News and Events
+parentEle: News & Events
 excerpt: Remo Rohs and his research team create high-throughput computational methods for the prediction of DNA shape.
 ---
 

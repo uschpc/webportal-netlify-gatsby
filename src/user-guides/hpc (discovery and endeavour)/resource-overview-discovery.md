@@ -1,7 +1,7 @@
 ---
 author: Cesar Sul
 id: 3
-date: 2021-01-27T12:00:00.387Z
+date: 2021-02-05T12:00:00.387Z
 title: Discovery Resource Overview
 path: discovery-resources
 parentPath: user-information/user-guides/high-performance-computing
@@ -18,12 +18,12 @@ For general CARC system specifications, see our [System Information page](/user-
 
 ### Compute nodes
 
-The chart below describes the various Linux computing partitions available on Discovery, their names, and information on the partitions' computing power. These are general use nodes available to all HPC researchers.
+The table below describes the various Linux computing partitions available on Discovery, their names, and information on the partitions' computing power. These are general use nodes available to all researchers. Please note that the maximum available memory per node for jobs is actually a few GB less than listed here because some memory is reserved for system overhead.
 
 |Partition|Nodes|CPUs|Memory (GB)|CPU type|CPU freq|GPUs|Nodelist|
 |---|---|---|---|---|---|---|--|
-|debug|1|24|94|xeon-4116|2.10 GHz|None|d10-02|
-|debug|5|16|64|xeon-2640v2|2.00 GHz|None|e01-60,e05-[42,76,78,80]|
+|debug|1|16|64|xeon-2665|2.40 GHz|k20|a02-26|
+|debug|5|16|64|xeon-2650v2|2.60 GHz|None|e01-60,e05-[42,76,78,80]|
 |epyc-64|32|64|256|epyc-7542|2.90 GHz|None|b22-[01-32]|
 |main|18|16|64|xeon-2640v3|2.60 GHz|k40|e07-[01-16,18],e09-18|
 |main|29|32|191|xeon-6130|2.10 GHz|v100|d11-[02-04],d13-[02-11],d14-[03-18]|
@@ -33,9 +33,8 @@ The chart below describes the various Linux computing partitions available on Di
 |main|82|20|64|xeon-2640v4|2.40 GHz|None|d17-[03-44],d18-[01-38],d22-[51-52]|
 |main|81|24|94|xeon-4116|2.10 GHz|None|d05-[03-15,26-42],d06-[15-29],d11-[09-47]|
 |oneweek|14|16|64|xeon-2650v2|2.60 GHz|None|e01-[46,48,52,62,64],e02-[40-41,43,45,47,49,51,53,55]|
-|oneweek|2|16|256|xeon-2650v2|2.60 GHz|None|e01-[76,78]|
 
-> Note: This information is current as of November 4, 2020. Use the `sinfo2` command for similar information.
+> Note: This information is current as of February 5, 2021. Use the `sinfo2` command for similar information.
 
 ### Job limits
 
@@ -58,7 +57,7 @@ For GPUs, the SU charge varies depending on the GPU model. The table below shows
 
 | GPU Model | System Unit (SU) Charge |
 |-----------|-------------------------|
-| K40  | 2                       |
+| K40       | 2                       |
 | P100      | 6                       |
 | V100      | 8                       |
 
@@ -67,7 +66,7 @@ For GPUs, the SU charge varies depending on the GPU model. The table below shows
 You can use the `myaccount` command to see your available and default account allocations and usage for each:
 
 ```
-ttrojan@discovery:~$ myaccount
+ttrojan@discovery2:~$ myaccount
   
       User              Account             Def Acct                  QOS
 ---------- -------------------- -------------------- --------------------

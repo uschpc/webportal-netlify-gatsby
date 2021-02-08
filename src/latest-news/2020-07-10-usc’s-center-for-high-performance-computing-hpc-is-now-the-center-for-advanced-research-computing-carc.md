@@ -2,7 +2,7 @@
 title: USC's Center for Advanced Research Computing (CARC) Officially Launches
 author: Andrea Renney
 path: carc-name-change
-parentEle: News and Events
+parentEle: News & Events
 date: 2020-07-10T00:00:00.000Z
 parentPath: news-and-events/news-and-announcements
 cat: news

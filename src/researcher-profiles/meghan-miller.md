@@ -2,7 +2,7 @@
 title: Meghan Miller
 author: Center for Advanced Research Computing
 path: meghan-miller
-parentEle: News and Events
+parentEle: News & Events
 date: 2020-06-15T18:19:38.387Z
 parentPath: /news-and-events/researcher-profiles
 cat: Researchers

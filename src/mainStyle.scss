@@ -574,9 +574,6 @@ body {
           h2 {
             color: #990000;
             font-size: 26px;
-            &:hover {
-              text-decoration: underline;
-            }
             &.universal {
               &:hover {
                 text-decoration: none;

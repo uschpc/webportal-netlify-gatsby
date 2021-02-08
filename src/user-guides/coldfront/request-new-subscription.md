@@ -1,7 +1,7 @@
 ---
 author: Andrea Renney
 id: 4
-date: 2021-01-28T00:00:00.000Z
+date: 2021-02-04T00:00:00.000Z
 title: Request New Condo Subscription
 path: request-new-subscription
 route: User Guides
@@ -19,9 +19,9 @@ The CARC also offers a traditional, five-year purchase model for condo resources
 
 ### Subscription term 
 
-Each subscription term is for one year from the date it is requested. Due to limitations with the administration of annual budgets by USC departments, the CARC is unable to offer multi-year subscription terms. However, at the end of a term, researchers can choose to renew or discontinue use of their resources. In the case of renewal, researchers will have the option to increase or decrease the size of their compute pool. 
+Subscription terms last for one year and operate on the university's fiscal year schedule, i.e., subscriptions start on July 1. Due to limitations with the administration of annual budgets by USC departments, the CARC is unable to offer multi-year subscription terms. However, at the end of the subscription term, researchers will be prompted to renew their subscription or discontinue access to their resources. In the case of renewal, researchers will have the option to increase or decrease the size of their compute pool. 
 
-Subscriptions can be started at any point during the year. At the end of the fiscal year (June 30) in which the subscription is started, the CARC will bill the department associated with the user account of the PI who requested the subscription. For instructions on how to add billing information to your account, see the [Add Billing Information user guide](/user-information/user-guides/research-computing-user-portal/adding-billing-information).
+Subscriptions can be started at any point during the year, but they typically begin at the beginning of the fiscal year (July 1) for the most efficient billing process. If a subscription starts at the beginning of the fiscal year, the CARC will bill for the full year's cost on July 1. If a subscription is started at a different point in the year, the CARC will immediately bill an amount prorated from the date the subscription starts until the end of that fiscal year (June 30). The CARC will bill the department associated with the user account of the PI who requested the subscription. For instructions on how to add billing information to your account, see the [Add Billing Information user guide](/user-information/user-guides/research-computing-user-portal/adding-billing-information).
 
 ### Requesting an allocation
 

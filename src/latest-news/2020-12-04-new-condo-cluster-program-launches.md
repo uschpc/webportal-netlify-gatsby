@@ -2,7 +2,7 @@
 title: New Condo Cluster Program Officially Launches
 author: Andrea Renney
 path: new-condo-cluster-program-launches
-parentEle: News and Events
+parentEle: News & Events
 date: 2020-12-04T00:00:00.000Z
 parentPath: news-and-events/news-and-announcements
 cat: news

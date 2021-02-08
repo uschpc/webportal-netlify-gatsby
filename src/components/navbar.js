@@ -36,7 +36,7 @@ const navigation = [
     dropdown: EducationOutreachSubNavDropdown
  },
  {
-   title: "News and Events",
+   title: "News & Events",
    path: "news-and-events",
    dropdown: NewsEventsSubNavDropdown
  },
@@ -61,21 +61,21 @@ class Navbar extends React.Component {
       "Services": [],
       "User Information": [],
       "Education & Outreach": [],
-      "News and Events": [],
+      "News & Events": [],
     },
     signflag: {
       "About": '+',
       "Services": '+',
       "User Information": '+',
       "Education & Outreach": '+',
-      "News and Events": '+',
+      "News & Events": '+',
     },
     subNavFlag: {
       "About": false,
       "Services": false,
       "User Information": false,
       "Education & Outreach": false,
-      "News and Events": false,
+      "News & Events": false,
     },
     openSearchIcon: false
   };
@@ -129,14 +129,14 @@ class Navbar extends React.Component {
         "Services": [],
         "User Information": [],
         "Education & Outreach": [],
-        "News and Events": [],
+        "News & Events": [],
       },
       signflag: {
         "About": '+',
         "Services": '+',
         "User Information": '+',
         "Education & Outreach": '+',
-        "News and Events": '+',
+        "News & Events": '+',
       },
     })
   }
@@ -147,7 +147,7 @@ class Navbar extends React.Component {
       case 'Services':
       case 'User Information':
       case 'Education &amp; Outreach':
-      case 'News and Events':
+      case 'News &amp; Events':
         navigate(`/${n.path}`)
     } 
   }

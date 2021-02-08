@@ -7,7 +7,7 @@ parentPath: news-and-events
 cat: navigation
 secCat: events
 sharedID: news_Announcements_and_researcher_profile
-parentEle: News and Events
+parentEle: News & Events
 backToTopBtnFlag: true
 excerpt: Monthly CARC events and registration instructions.
 ---

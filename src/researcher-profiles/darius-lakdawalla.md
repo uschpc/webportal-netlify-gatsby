@@ -8,7 +8,7 @@ path: darius-lakdawalla
 parentPath: /news-and-events/researcher-profiles
 cat: Researchers
 sharedID: news_Announcements_and_researcher_profile
-parentEle: News and Events
+parentEle: News & Events
 excerpt: Darius Lakdawalla studies medical innovation and the organization of health care markets, focusing on the behaviors of health care providers, patients, and health care firms.
 ---
 

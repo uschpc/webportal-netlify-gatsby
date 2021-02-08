@@ -8,7 +8,7 @@ path: mahta-moghaddam
 parentPath: /news-and-events/researcher-profiles
 cat: Researchers
 sharedID: news_Announcements_and_researcher_profile
-parentEle: News and Events
+parentEle: News & Events
 excerpt: Mahta Moghaddam studies how dynamics and heterogeneities of root zone soil moisture (RZSM) control ecosystem carbon fluxes in North America.
 ---
 
