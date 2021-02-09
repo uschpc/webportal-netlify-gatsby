@@ -5,6 +5,14 @@ import { Link } from 'gatsby';
 
 const content = [
   {
+    title: "HackSC Connects the World in 2021",
+    description:
+      "USC’s largest hackathon goes virtual this month with a theme of connectivity",
+    button: "Read More",
+    url: "/news-and-events/news-and-announcements/hacksc-2021-connects-the-world",
+    image: "/images/slider-image-1-small.jpg"
+  },
+  {
     title: "Spring 2021 CARC Workshops Cover New Topics",
     description:
       "This semester, register for courses covering job automation, software containers, job management, and more",
@@ -19,14 +27,6 @@ const content = [
     button: "Read More",
     url: "/news-and-events/news-and-announcements/new-condo-cluster-program-launches",
     image: "/images/slider-image-2-small.jpg"
-  },
-  {
-    title: "CARC and Researchers Benefit from Reciprocal Partnerships",
-    description:
-      "Resources, research grants, and system testing are perks of collaborating with the CARC",
-    button: "Read More",
-    url: "/news-and-events/news-and-announcements/carc-research-partnerships-benefits",
-    image: "/images/slider-image-1-small.jpg"
   }
   ];
 
