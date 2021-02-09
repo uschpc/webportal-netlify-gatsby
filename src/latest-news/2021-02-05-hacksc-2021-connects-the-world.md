@@ -2,7 +2,7 @@
 title: HackSC Connects the World in 2021
 author: Andrea Renney
 path: hacksc-2021-connects-the-world
-parentEle: News & Events
+parentEle: News and Events
 date: 2021-02-06T00:00:00.000Z
 parentPath: news-and-events/news-and-announcements
 cat: news
