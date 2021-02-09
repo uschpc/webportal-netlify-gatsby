@@ -824,6 +824,21 @@ body {
             }
           }
 
+          &.universal {
+            h3 {
+              a {
+                font-size: 20px;
+                font-weight: 700;
+                color: #900;
+                margin: 0 0 20px 0;
+                width: auto;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+
         }
         .right-column{
           margin-top: 118px;
