@@ -12,7 +12,7 @@ The Center for Advanced Research Computing offers a wide variety of user support
 
 Below are the pages and categories in the User Information section of this website.
 
-### [Getting Started at the CARC](/user-information/getting-started)
+### [Getting started at the CARC](/user-information/getting-started)
 
 An introduction to the CARC, high-performance computing, and clusters, and information on how to get started with our computing systems. Think of this as a crash-course in everything CARC.
 
@@ -24,7 +24,7 @@ Information on CARC accounts and how you can access our systems, as well as deta
 
 Technical specs for the CARC's HPC clusters and file systems.
 
-### [User Guides](/user-information/user-guides)
+### [User guides](/user-information/user-guides)
 
 Our most comprehensive user support resource. Our user guides cover everything you'll need to know to use our systems.
 
