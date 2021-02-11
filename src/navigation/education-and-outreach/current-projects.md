@@ -58,7 +58,7 @@ Full article: https://pubs.acs.org/doi/10.1021/acscatal.0c02053
 
 #### Title: Metascalable Layered Materials Genome
 
-##### Collaborators: University of Southern California (Aiichiro Nakano, Ken-ichi Nomura, and BD Kim), Argonne National Laboratory, Intel, and Kumamoto University (Japan)
+##### Collaborators: University of Southern California (Aiichiro Nakano, Ken-ichi Nomura, and BD Kim), USC CARC (Marco Olguin), Argonne National Laboratory, Intel, and Kumamoto University (Japan)
 
 Project description: A project investigating layered materials (LMs) that hold the promise of producing electricity when exposed to light has been chosen for the Early Science Program on Aurora, the next major exascale supercomputer to launch at Argonne National Laboratory. This project will advance the layered materials genome (LMG). We will perform 105-atom non-adiabatic quantum molecular dynamics (NAQMD) and 1010-atom reactive molecular dynamics (RMD) simulations on Aurora for computational synthesis and characterization of LMs. The large-scale simulations will (1) guide the synthesis of stacked LMs by chemical vapor deposition (CVD), exfoliation and intercalation, and (2) discover function-property-structure relationships in LMs with a special focus on far-from-equilibrium electronic processes.
 
@@ -70,7 +70,7 @@ More information: https://www.alcf.anl.gov/science/projects/metascalable-layered
 
 #### Title: Artificial Intelligence Driven Cybermanufacturing of Quantum Material Architectures
 
-##### Collaborators: University of Southern California (Aiichiro Nakano and Ken-ichi Nomura), Harvard University, and Howard University
+##### Collaborators: University of Southern California (Aiichiro Nakano and Ken-ichi Nomura), USC CARC (Marco Olguin), Harvard University, and Howard University
 
 Project description: Quantum material architectures consist of graphene and other two-dimensional materials, which, when stacked in precise three-dimensional architectures, exhibit unique and tunable mechanical, electrical, optical, and magnetic properties. These three-dimensional architectures have broad potential applications and are highly promising components for microchips, batteries, antennas, chemical and biological sensors, solar-cells and neural interfaces. This grant is to develop a transformative Future Manufacturing platform for quantum material architectures using a cybermanufacturing approach, which combines artificial intelligence, robotics, multiscale modeling, and predictive simulation for the automated and parallel assembly of multiple two-dimensional materials into complex three-dimensional structures. A key outcome is an AI-driven, robotics-controlled cybermanufacturing microfluidic platform that is capable of manufacturing complex structures for emerging quantum and other device applications.
 
@@ -84,7 +84,7 @@ More information on the grant: https://www.nsf.gov/awardsearch/showAward?AWD_ID=
 
 ##### Collaborators: US Department of Energy (DOE) Energy Frontier Research Center (Class: 2018 - 2022)
 
-##### USC Collaborators: Brent Melot, Chemistry Department
+##### USC Collaborators: Brent Melot, Chemistry Department, USC CARC (Marco Olguin)
 
 Project description: The main goal of the project is to better understand the chemical and structural factors that allow for reversible (de)insertion of fluoride ions into intercalation host structures, to develop some rules for how to think about Fluoride Ion Batteries (FIBs) compared to Lithium Ion Battery (LIB) materials. Past work on fluoride transport has studied conversion type electrodes (e.g. converting lead metal into lead fluoride), which have interesting potential, but serious limitations in terms of cycling. Recent advances that might allow for success with reversible FIBs are the demonstration of room-temperature cycling with liquid electrolytes, and then recent work headed by Melot's group that shows F- insertion into ReO3. The problem is that F- is not reversible with ReO3, so learning from this we need to address the side reactions which occur that make it non-reversible, and there is a need to move to layered materials so that the intercalation channels are stable with respect to fluoride de-insertion.
 
@@ -96,7 +96,7 @@ More information: http://www.chem.ucla.edu/SCALAR/
 
 #### Title: Developing Safer, Wide-Temperature Liquefied Gas Electrolytes for Lithium Ion Batteries
 
-##### Collaborators: University of Southern California, US Army Research Laboratory, University of California San Diego, and South 8 Technologies
+##### Collaborators: University of Southern California, USC CARC (Marco Olguin), US Army Research Laboratory, University of California San Diego, and South 8 Technologies
 
 ##### Principal Collaborator: Oleg Borodin, US Army Research Laboratory
 
