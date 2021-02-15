@@ -201,7 +201,7 @@ class Navbar extends React.Component {
         this.setState({
           wheelDirection: delta <= 0 ? 'DOWN' : 'UP'
         }, () => {
-        if (document.querySelector('.page-body') && document.querySelector('.middle-column').offsetHeight > 850 && !document.querySelector('.universal-pages')) {
+        if (document.querySelector('.page-body') && document.querySelector('.middle-column').offsetHeight > 850) {
           if (this.state.middleScroll <= 0) {
             if (this.state.wheelDirection === 'DOWN' && this.state.scroll >= 124) {
               document.querySelector('.page-body').classList.add("scroll")
