@@ -41,7 +41,7 @@ const Layout = (props) => {
       externalLinks[i].onclick = "return false"
       externalLinks[i].addEventListener('click', (e) => {
         e.preventDefault()
-        let scrollPosition = window.scrollY
+        let scrollPosition = e.currentTarget.offsetTop - 140
         sessionStorage.setItem("scrollPosition", scrollPosition);
           window.location.href = e.target.href === undefined ? e.currentTarget.href : e.target.href
        
@@ -49,10 +49,12 @@ const Layout = (props) => {
     }
     if(sessionStorage.getItem("scrollPosition")) {
       setTimeout(() => {
-        window.scrollTo(0, sessionStorage.getItem("scrollPosition"));
+        document.getElementById('___gatsby').scrollTo(0, sessionStorage.getItem("scrollPosition"));
         sessionStorage.removeItem("scrollPosition");
       }, 0)
       
+    } else {
+      document.getElementById('___gatsby').scrollTo(0,0)
     }
     
   }, [])

@@ -203,7 +203,6 @@ class Navbar extends React.Component {
         }, () => {
         if (document.querySelector('.page-body')) {
           if (this.state.middleScroll <= 0) {
-            console.log('herer', this.state.scroll, this.state.wheelDirection === 'DOWN' && this.state.scroll >= 124)
             if (this.state.wheelDirection === 'DOWN' && this.state.scroll >= 124) {
               document.querySelector('.page-body').classList.add("scroll")
               document.getElementById('___gatsby').classList.add("enable")
