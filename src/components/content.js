@@ -15,7 +15,6 @@ const Content = (props) => {
         const index = _.findIndex(tags, function(o) {
             return o.innerHTML == e.target.getAttribute('value');
          });
-         console.log(tags[index].getBoundingClientRect().top, tags[index].offsetTop)
          document.querySelector('.page-body').scrollTo({
             top: tags[index].offsetTop - 200
        });

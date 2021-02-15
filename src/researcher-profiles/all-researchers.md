@@ -8,4 +8,5 @@ parentPath: news-and-events/researcher-profiles
 cat: allResearcher
 parentEle: News & Events
 excerpt: some text here
+backToTopBtnFlag: true
 ---

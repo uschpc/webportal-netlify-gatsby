@@ -10,6 +10,7 @@ cat: Researchers
 sharedID: news_Announcements_and_researcher_profile
 parentEle: News & Events
 excerpt: Remo Rohs and his research team create high-throughput computational methods for the prediction of DNA shape.
+backToTopBtnFlag: true
 ---
 
 Remo Rohs is an assistant professor of biological sciences, chemistry, and physics in the USC Dana and David Dornsife College of Arts, Letters, and Sciences. Rohs and his team strive to integrate two key aspects of DNA research, those of sequence and structure.

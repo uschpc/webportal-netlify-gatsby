@@ -9,6 +9,7 @@ cat: news
 excerpt: Resources, research grants, and system testing are perks of collaborating with the CARC
 featuredImage: ../../static/images/slider-image-1-small.jpg
 thumbnail: /images/slider-image-1-small.jpg
+backToTopBtnFlag: true
 ---
 USC’s Center for Advanced Research Computing provides advanced computational research systems to the USC community. The CARC goes further than just providing resources, though: it also collaborates closely with the university’s wide variety of research groups, supporting their specialized needs and furthering their research.
 

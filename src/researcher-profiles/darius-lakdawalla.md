@@ -10,6 +10,7 @@ cat: Researchers
 sharedID: news_Announcements_and_researcher_profile
 parentEle: News & Events
 excerpt: Darius Lakdawalla studies medical innovation and the organization of health care markets, focusing on the behaviors of health care providers, patients, and health care firms.
+backToTopBtnFlag: true
 ---
 
 Darius Lakdawalla holds the inaugural Quintiles Chair in Pharmaceutical and Regulatory Innovation in the USC School of Pharmacy and the USC Sol Price School of Public Policy. He is a professor of pharmaceutical economics and public policy, as well as the director of research at the Leonard D. Schaeffer Center for Health Policy and Economics at USC. Lakdawalla studies medical innovation and the organization of health care markets, focusing on the behaviors of health care providers, patients, and health care firms, and the consequences of their decisions on the future of health care.

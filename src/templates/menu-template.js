@@ -194,6 +194,7 @@ export const coldFrontQuery = graphql`
         date
         excerpt
         author
+        backToTopBtnFlag
         }
       html
     }
@@ -223,6 +224,7 @@ export const coldFrontQuery = graphql`
         excerpt
         author
         sharedID
+        backToTopBtnFlag
         }
       html
     }

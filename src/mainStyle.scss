@@ -76,7 +76,7 @@ body {
       .page-body {
         overflow: scroll;
         &.scroll {
-          height: calc(100vh - 100px);
+          height: calc(100vh - 90px);
         }
         &::-webkit-scrollbar { 
           display: none;

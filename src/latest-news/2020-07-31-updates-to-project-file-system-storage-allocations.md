@@ -9,6 +9,7 @@ cat: news
 excerpt: A new default quota and pricing model for storage in the project file system
 thumbnail: /images/slider-image-4-small.jpg
 featuredImage: ../../static/images/slider-image-4-small.jpg
+backToTopBtnFlag: true
 ---
 With our new project file system comes a change to our storage allocation quota and policy.
 

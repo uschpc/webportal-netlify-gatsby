@@ -9,6 +9,7 @@ cat: news
 excerpt: USC’s largest hackathon goes virtual this month with a theme of connectivity
 thumbnail: /images/hacksc.jpg
 featuredImage: ../../static/images/hacksc-hand.jpg
+backToTopBtnFlag: true
 ---
 
 *The Center for Advanced Research Computing is a proud sponsor of HackSC ‘21.*

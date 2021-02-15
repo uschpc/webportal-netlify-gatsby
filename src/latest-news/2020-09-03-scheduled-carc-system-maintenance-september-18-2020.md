@@ -10,6 +10,7 @@ excerpt: Systems will be inaccessible while staff perform necessary maintenance,
   upgrades
 thumbnail: /images/slider-image-5-small.jpg
 featuredImage: ../../static/images/slider-image-5-small.jpg
+backToTopBtnFlag: true
 ---
 On September 18, our systems will undergo full-day maintenance, which will include improving Discovery’s interconnection network performance and installing our new project file system. System downtime will begin at 8:00 am and is projected to finish by the evening.
 
