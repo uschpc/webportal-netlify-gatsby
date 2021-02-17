@@ -29,7 +29,8 @@ export default function Template({ data }) {
           <div className="nav-pages">
             <div className="container page-body">
                 <div className="left-column">
-                  <Link to={content.frontmatter.parentPath} ><h2>{content.frontmatter.parentEle}</h2></Link>
+                  {content.frontmatter.parentEle == 'News & Events' && <Link to='/news-and-events' ><h2>{content.frontmatter.parentEle}</h2></Link>}
+                  {content.frontmatter.parentEle != 'News & Events' && <Link to={content.frontmatter.parentPath} ><h2>{content.frontmatter.parentEle}</h2></Link>}
                   {subMenu.map((item, i) => {
                   return (
                     !item.node.frontmatter.externalPath ? (
