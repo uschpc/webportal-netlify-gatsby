@@ -4,7 +4,7 @@ author: Andrea Renney
 path: upcoming-changes-summer-fall-2020
 parentEle: News & Events
 date: 2020-06-18T18:19:38.387Z
-parentPath: news-and-events
+parentPath: news-and-events/news-and-announcements
 cat: news
 excerpt: Technical upgrades, increased user support, and exciting new services
   are planned for the next few months

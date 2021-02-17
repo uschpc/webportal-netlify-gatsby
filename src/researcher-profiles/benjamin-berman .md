@@ -5,7 +5,7 @@ date: 2020-06-12T18:19:38.387Z
 thumbnail: /images/Benjamin.jpg
 featuredImage: ../../static/images/Benjamin.jpg
 path: benjamin-berman
-parentPath: /news-and-events
+parentPath: /news-and-events/researcher-profiles
 cat: Researchers
 sharedID: news_Announcements_and_researcher_profile
 parentEle: News & Events
