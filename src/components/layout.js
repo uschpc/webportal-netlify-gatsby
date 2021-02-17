@@ -35,27 +35,39 @@ const Layout = (props) => {
     }
     
     document.getElementById('___gatsby').classList.add("scroll") 
-    let externalLinks = document.querySelectorAll("a[href^='http']");
-    for ( let i = 0; i < externalLinks.length; i++ ) {
-      externalLinks[i].target = "_blank"
-      externalLinks[i].onclick = "return false"
-      externalLinks[i].addEventListener('click', (e) => {
+    let allLinks = document.querySelectorAll(".middle-column a");
+    document.getElementById('___gatsby').scrollTo(0,0)
+    for ( let i = 0; i < allLinks.length; i++ ) {
+      allLinks[i].target = "_blank"
+      allLinks[i].onclick = "return false"
+      allLinks[i].addEventListener('click', (e) => {
         e.preventDefault()
         let scrollPosition = e.currentTarget.offsetTop - 140
         sessionStorage.setItem("scrollPosition", scrollPosition);
-          window.location.href = e.target.href === undefined ? e.currentTarget.href : e.target.href
-       
+        window.open(allLinks[i].href)
       })
     }
-    if(sessionStorage.getItem("scrollPosition")) {
-      setTimeout(() => {
-        document.getElementById('___gatsby').scrollTo(0, sessionStorage.getItem("scrollPosition"));
-        sessionStorage.removeItem("scrollPosition");
-      }, 0)
+    // let externalLinks = document.querySelectorAll("a[href^='http']");
+    // for ( let i = 0; i < externalLinks.length; i++ ) {
+    //   externalLinks[i].target = "_blank"
+    //   externalLinks[i].onclick = "return false"
+    //   externalLinks[i].addEventListener('click', (e) => {
+    //     e.preventDefault()
+    //     let scrollPosition = e.currentTarget.offsetTop - 140
+    //     sessionStorage.setItem("scrollPosition", scrollPosition);
+    //       window.location.href = e.target.href === undefined ? e.currentTarget.href : e.target.href
+       
+    //   })
+    // }
+    // if(sessionStorage.getItem("scrollPosition")) {
+    //   setTimeout(() => {
+    //     document.getElementById('___gatsby').scrollTo(0, sessionStorage.getItem("scrollPosition"));
+    //     sessionStorage.removeItem("scrollPosition");
+    //   }, 0)
       
-    } else {
-      document.getElementById('___gatsby').scrollTo(0,0)
-    }
+    // } else {
+    //   document.getElementById('___gatsby').scrollTo(0,0)
+    // }
     
   }, [])
 
