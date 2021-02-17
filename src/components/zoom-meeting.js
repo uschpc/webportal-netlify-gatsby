@@ -57,10 +57,21 @@ const ZoomMeeting = ({html}) => {
                 meetingResults.forEach(meeting => {
                     resultArray.push(meeting.data)
                 })
-            }
+              }
             fetchMeetings(resultArray)
         })()
     }, [])
+    useEffect(() => {
+        let allLinks = document.querySelectorAll(".middle-column a");
+            for ( let i = 0; i < allLinks.length; i++ ) {
+            allLinks[i].target = "_blank"
+            allLinks[i].onclick = "return false"
+            allLinks[i].addEventListener('click', (e) => {
+                e.preventDefault()
+                window.open(allLinks[i].href)
+            })
+        }
+    }, meetingResults)
     return (
         meetingResults ? (
             <>

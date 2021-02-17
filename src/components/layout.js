@@ -35,7 +35,7 @@ const Layout = (props) => {
     }
     
     document.getElementById('___gatsby').classList.add("scroll") 
-    let allLinks = document.querySelectorAll(".middle-column a");
+    let allLinks = document.querySelectorAll(".middle-column:not(.universal) a");
     document.getElementById('___gatsby').scrollTo(0,0)
     for ( let i = 0; i < allLinks.length; i++ ) {
       allLinks[i].target = "_blank"

@@ -122,6 +122,10 @@ body {
           summary {
             color: #990000;
             font-weight: bold;
+            &:hover {
+              cursor: pointer;
+              text-decoration: underline;
+            }
           }
           h4, p {
             margin-left: 15px;
