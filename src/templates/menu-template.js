@@ -193,6 +193,7 @@ export const coldFrontQuery = graphql`
         thumbnail
         date
         excerpt
+        parentPath
         author
         backToTopBtnFlag
         }
@@ -218,6 +219,7 @@ export const coldFrontQuery = graphql`
       frontmatter {
         title
         parentEle
+        parentPath
         cat
         thumbnail
         date
