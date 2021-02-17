@@ -10,6 +10,8 @@ backToTopBtnFlag: true
 excerpt: An introduction to the CARC for new users.
 ---
 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/mxEUxS5VOOc/0.jpg)](https://www.youtube.com/watch?v=mxEUxS5VOOc)
+
 The information on this page is designed to provide an introductory overview for new CARC users. Links to more detailed information and complete user guides can be found at the end of each section of this page.
 
 ### What is the Center for Advanced Research Computing?
