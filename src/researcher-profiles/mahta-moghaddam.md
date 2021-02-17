@@ -5,7 +5,7 @@ date: 2020-06-14T18:19:38.387Z
 thumbnail: /images/Mahta.jpg
 featuredImage: ../../static/images/Mahta.jpg
 path: mahta-moghaddam
-parentPath: /news-and-events/researcher-profiles
+parentPath: /news-and-events
 cat: Researchers
 sharedID: news_Announcements_and_researcher_profile
 parentEle: News & Events

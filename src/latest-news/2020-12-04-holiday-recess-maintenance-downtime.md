@@ -4,7 +4,7 @@ author: Andrea Renney
 path: holiday-recess-maintenance-downtime
 parentEle: News & Events
 date: 2020-12-03T00:00:00.000Z
-parentPath: news-and-events/news-and-announcements
+parentPath: news-and-events
 cat: news
 excerpt: Winter recess runs December 21-January 4, with maintenance occuring from December 27
 featuredImage: ../../static/images/holiday_graphic.jpg

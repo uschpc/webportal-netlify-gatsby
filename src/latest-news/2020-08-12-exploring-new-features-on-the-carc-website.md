@@ -4,7 +4,7 @@ author: Andrea Renney
 path: website-new-features
 parentEle: News & Events
 date: 2020-08-12T00:00:00.000Z
-parentPath: news-and-events/news-and-announcements
+parentPath: news-and-events
 cat: news
 excerpt: New website has an updated design and many new features for users
 thumbnail: /images/home-page-small.png

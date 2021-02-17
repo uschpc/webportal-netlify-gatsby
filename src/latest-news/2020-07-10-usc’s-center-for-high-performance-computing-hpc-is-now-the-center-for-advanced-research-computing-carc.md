@@ -4,7 +4,7 @@ author: Andrea Renney
 path: carc-name-change
 parentEle: News & Events
 date: 2020-07-10T00:00:00.000Z
-parentPath: news-and-events/news-and-announcements
+parentPath: news-and-events
 cat: news
 excerpt: Name change from HPC highlights the research-focused nature of the department
 thumbnail: /images/slider-image-2-small.jpg
