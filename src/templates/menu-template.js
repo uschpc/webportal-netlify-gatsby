@@ -23,7 +23,6 @@ const findSubMenu = (menubar, nav) => {
 export default function Template({ data }) {
   let content = data.content || data.newsContent || data.researcherContent || data.projectContent;
   let subMenu = findSubMenu(content.frontmatter.parentEle, data.sideMenu)
-  console.log('123111111')
     return (
       <Layout {...data.navigation} backToTopBtnFlag={content.frontmatter.backToTopBtnFlag}>
           <SEO title={content.frontmatter.title}/>
@@ -194,7 +193,9 @@ export const coldFrontQuery = graphql`
         thumbnail
         date
         excerpt
+        parentPath
         author
+        backToTopBtnFlag
         }
       html
     }
@@ -218,12 +219,14 @@ export const coldFrontQuery = graphql`
       frontmatter {
         title
         parentEle
+        parentPath
         cat
         thumbnail
         date
         excerpt
         author
         sharedID
+        backToTopBtnFlag
         }
       html
     }

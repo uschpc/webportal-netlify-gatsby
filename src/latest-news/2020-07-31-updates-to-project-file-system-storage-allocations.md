@@ -4,11 +4,12 @@ author: Andrea Renney
 path: updated-storage-allocations
 parentEle: News & Events
 date: 2020-09-10
-parentPath: news-and-events/news-and-announcements
+parentPath: news-and-events
 cat: news
 excerpt: A new default quota and pricing model for storage in the project file system
 thumbnail: /images/slider-image-4-small.jpg
 featuredImage: ../../static/images/slider-image-4-small.jpg
+backToTopBtnFlag: true
 ---
 With our new project file system comes a change to our storage allocation quota and policy.
 

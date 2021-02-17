@@ -15,7 +15,10 @@ const Content = (props) => {
         const index = _.findIndex(tags, function(o) {
             return o.innerHTML == e.target.getAttribute('value');
          });
-        tags[index].scrollIntoView({block: "center"})
+         document.querySelector('.page-body').scrollTo({
+            top: tags[index].offsetTop - 200
+       });
+        // tags[index].scrollIntoView({block: "start"})
     }
 
     useEffect(() => {

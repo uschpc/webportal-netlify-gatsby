@@ -5,11 +5,12 @@ date: 2020-06-14T18:19:38.387Z
 thumbnail: /images/Mahta.jpg
 featuredImage: ../../static/images/Mahta.jpg
 path: mahta-moghaddam
-parentPath: /news-and-events/researcher-profiles
+parentPath: /news-and-events
 cat: Researchers
 sharedID: news_Announcements_and_researcher_profile
 parentEle: News & Events
 excerpt: Mahta Moghaddam studies how dynamics and heterogeneities of root zone soil moisture (RZSM) control ecosystem carbon fluxes in North America.
+backToTopBtnFlag: true
 ---
 
 Mahta Moghaddam is a professor in the USC Viterbi School of Engineering’s Ming Hsieh Department of Electrical Engineering, and director of the Microwave Systems, Sensors and Imaging Lab at USC (MiXIL). Her research interests include radar systems, microwave remote sensing for environmental applications, medical imaging, and focused microwave therapy.

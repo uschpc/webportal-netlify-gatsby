@@ -76,7 +76,7 @@ body {
       .page-body {
         overflow: scroll;
         &.scroll {
-          height: calc(100vh - 100px);
+          height: calc(100vh - 90px);
         }
         &::-webkit-scrollbar { 
           display: none;
@@ -117,10 +117,15 @@ body {
         }
       }
       .middle-column {
+        min-height: 851px;
         details {
           summary {
             color: #990000;
             font-weight: bold;
+            &:hover {
+              cursor: pointer;
+              text-decoration: underline;
+            }
           }
           h4, p {
             margin-left: 15px;

@@ -42,7 +42,7 @@ export default function Template({ data }) {
     return (
       <Layout {...data.navigation}>
           <SEO title={content.frontmatter.title}/>
-          <div className="coldFront-parent-container">
+          <div className="coldFront-parent-container universal-pages">
               <div className="page-body">
                 <div className="left-column">
                   <div className="position-fixed">

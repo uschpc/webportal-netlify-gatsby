@@ -4,12 +4,13 @@ author: Andrea Renney
 path: september-18-maintenance
 parentEle: News & Events
 date: 2020-09-03T00:00:00.000Z
-parentPath: news-and-events/news-and-announcements
+parentPath: news-and-events
 cat: news
 excerpt: Systems will be inaccessible while staff perform necessary maintenance,
   upgrades
 thumbnail: /images/slider-image-5-small.jpg
 featuredImage: ../../static/images/slider-image-5-small.jpg
+backToTopBtnFlag: true
 ---
 On September 18, our systems will undergo full-day maintenance, which will include improving Discovery’s interconnection network performance and installing our new project file system. System downtime will begin at 8:00 am and is projected to finish by the evening.
 

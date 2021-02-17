@@ -5,11 +5,12 @@ date: 2020-06-12T18:19:38.387Z
 thumbnail: /images/Benjamin.jpg
 featuredImage: ../../static/images/Benjamin.jpg
 path: benjamin-berman
-parentPath: /news-and-events/researcher-profiles
+parentPath: /news-and-events
 cat: Researchers
 sharedID: news_Announcements_and_researcher_profile
 parentEle: News & Events
 excerpt: Benjamin Berman’s research focuses on the computational analysis of high-throughput genetic and genomic datasets.
+backToTopBtnFlag: true
 ---
 
 Benjamin Berman is an assistant professor in the Department of Preventive Medicine at the Keck School of Medicine at USC. One of the first faculty members hired in the department’s recently formed Division of Bioinformatics, Berman’s research focuses on the computational analysis of high-throughput genetic and genomic datasets. In particular, Berman works to identify key DNA sequences that influence a normal cell’s development into a cancer cell. Identifying these sequences may lead to personalized cancer treatments in the future.

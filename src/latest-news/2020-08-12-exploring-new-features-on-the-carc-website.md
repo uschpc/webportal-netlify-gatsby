@@ -4,11 +4,12 @@ author: Andrea Renney
 path: website-new-features
 parentEle: News & Events
 date: 2020-08-12T00:00:00.000Z
-parentPath: news-and-events/news-and-announcements
+parentPath: news-and-events
 cat: news
 excerpt: New website has an updated design and many new features for users
 thumbnail: /images/home-page-small.png
 featuredImage: ../../static/images/home-page-small.png
+backToTopBtnFlag: true
 ---
 Announced in August 2020, the Center for Advanced Research Computing's new website is a major upgrade to USC's Research Computing program. In addition to its updated design, the website also includes numerous new features not seen on our previous website.
 

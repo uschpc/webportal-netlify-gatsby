@@ -28,7 +28,7 @@ export default function Template({ data }) {
               {/* <MenuRoute {...data} title={data.content.frontmatter.title} /> */}
               <div className="page-body">
                 <div className="left-column">
-                  <Link to="/user-information/ccp"><h2>User Information</h2></Link> 
+                  <Link to="/user-information"><h2>User Information</h2></Link> 
                   <NavigationSideMenu sideMenu={sideMenu} subMenu={data.subMenu} subMenuLevel2={data.subMenuLevel2} title={post.frontmatter.title} sideMenuParent="Enrollment Information" parentMenuTitle="Condo Cluster Program" />
                 </div>
                 <div className="middle-column">

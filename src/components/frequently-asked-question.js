@@ -32,13 +32,18 @@ const FAQ = (props) => {
 
     const scrollToSubElementView = async (e) => {
         e.preventDefault();
+        document.querySelector('.page-body').classList.add("scroll")
+        document.getElementById('___gatsby').classList.add("enable")
         let headerOffset = 45;
         let h3Tags = generateH3Tags();
         
         let index = _.findIndex(h3Tags, function(o) { 
             return o.innerHTML == e.target.getAttribute('value'); 
          });        
-        h3Tags[index].scrollIntoView({block: "start"})
+        // h3Tags[index].scrollIntoView({block: "start"})
+        document.querySelector('.page-body').scrollTo({
+            top: h3Tags[index].offsetTop - 200
+       });
     }
 
     const addEvents = (title) => {
@@ -50,12 +55,18 @@ const FAQ = (props) => {
 
     const scrollToView = async (e) => {
         e.preventDefault();
+        document.querySelector('.page-body').classList.add("scroll")
+        document.getElementById('___gatsby').classList.add("enable")
         var headerOffset = 0;
         
         const index = _.findIndex(h2tags, function(o) { 
             return o.innerHTML == e.target.getAttribute('value'); 
          });
-        h2tags[index].scrollIntoView({block: "start"})
+        // h2tags[index].scrollIntoView({block: "start"})
+        console.log('herere h2', h2tags[index].offsetTop)
+        document.querySelector('.page-body').scrollTo({
+            top: h2tags[index].offsetTop - 200
+       });
     }
 
     const loadSubTitles = () => {

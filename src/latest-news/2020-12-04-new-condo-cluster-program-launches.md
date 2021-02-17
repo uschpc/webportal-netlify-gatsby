@@ -4,11 +4,12 @@ author: Andrea Renney
 path: new-condo-cluster-program-launches
 parentEle: News & Events
 date: 2020-12-04T00:00:00.000Z
-parentPath: news-and-events/news-and-announcements
+parentPath: news-and-events
 cat: news
 excerpt: New program offers greater flexibility, with two ownership models for dedicated compute nodes
 featuredImage: ../../static/images/slider-image-2-small.jpg
 thumbnail: /images/slider-image-2-small.jpg
+backToTopBtnFlag: true
 ---
 
 The CARC is pleased to announce its new [Condo Cluster Program (CCP)](/user-information/ccp/program-information), offering greater flexibility for researchers who prefer to have access to their own dedicated compute nodes.

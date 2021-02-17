@@ -201,9 +201,8 @@ class Navbar extends React.Component {
         this.setState({
           wheelDirection: delta <= 0 ? 'DOWN' : 'UP'
         }, () => {
-        if (document.querySelector('.page-body')) {
+        if (document.querySelector('.page-body') && document.querySelector('.middle-column').offsetHeight > 850) {
           if (this.state.middleScroll <= 0) {
-            console.log('herer', this.state.scroll, this.state.wheelDirection === 'DOWN' && this.state.scroll >= 124)
             if (this.state.wheelDirection === 'DOWN' && this.state.scroll >= 124) {
               document.querySelector('.page-body').classList.add("scroll")
               document.getElementById('___gatsby').classList.add("enable")
@@ -243,7 +242,6 @@ class Navbar extends React.Component {
 
     const previousIndex = this.state.activeIndices[this.state.activeIndices.length - 2];
     const currentIndex = this.state.activeIndices[this.state.activeIndices.length - 1];
-    // console.log(this.state.scroll, this.state.middleScroll)
 
     if (typeof currentIndex === "number") {
       CurrentDropdown = activeNavigation[currentIndex].dropdown;
