@@ -6,7 +6,7 @@ title: Program Information
 routeCat: route
 routePath: user-information/ccp
 path: program-information
-parentPath: user-information
+parentPath: user-information/cpp
 cat: condoClusterProgram
 #Uncomment this to list the purchase and subscription pages at the bottom of this page
 #uniqID: enrollment
