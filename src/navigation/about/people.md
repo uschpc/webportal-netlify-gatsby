@@ -28,8 +28,6 @@ The Systems Engineering & Infrastructure team oversees the installation and main
 
 **Bill Jendrzejek, HPC Engineer**
 
-**Chris Taylor, HPC DevOps Engineer**
-
 ## Research Facilitation & Applications
 
 The Research Facilitation & Applications team collaborates with researchers to develop workflows and strategies. The team also supports user education by facilitating computing workshops and consulting sessions.
@@ -40,11 +38,15 @@ The Research Facilitation & Applications team collaborates with researchers to d
 
 **Derek Strong, Research Facilitator**
 
-## Cloud Computing & Web Development
+**Tomasz Osinski, Research Facilitator in Life Science**
 
-The Cloud Computing & Web Development team leads the development and maintenance of the CARC's website and Research Computing User Portal, as well as the development of the upcoming hybrid cloud computing environment.
+## Cloud Computing & DevOps
+
+The Cloud Computing & DevOps team leads the development and maintenance of the CARC's website and Research Computing User Portal, as well as the development of the upcoming hybrid cloud computing environment.
 
 **James Hong, Cloud Computing Solution Architect**
+
+**Chris Taylor, HPC DevOps Engineer**
 
 **Yaseen Alkhafaji, Web Developer (Contracted)**
 
