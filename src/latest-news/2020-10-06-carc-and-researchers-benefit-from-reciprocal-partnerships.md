@@ -4,7 +4,7 @@ author: Andrea Renney
 path: carc-research-partnerships-benefits
 parentEle: News & Events
 date: 2020-10-06T00:00:00.000Z
-parentPath: news-and-events
+parentPath: news-and-events/news-and-announcements
 cat: news
 excerpt: Resources, research grants, and system testing are perks of collaborating with the CARC
 featuredImage: ../../static/images/slider-image-1-small.jpg

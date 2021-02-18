@@ -4,7 +4,7 @@ author: Andrea Renney
 path: new-condo-cluster-program-launches
 parentEle: News & Events
 date: 2020-12-04T00:00:00.000Z
-parentPath: news-and-events
+parentPath: news-and-events/news-and-announcements
 cat: news
 excerpt: New program offers greater flexibility, with two ownership models for dedicated compute nodes
 featuredImage: ../../static/images/slider-image-2-small.jpg

@@ -4,7 +4,7 @@ author: Andrea Renney
 path: september-18-maintenance
 parentEle: News & Events
 date: 2020-09-03T00:00:00.000Z
-parentPath: news-and-events
+parentPath: news-and-events/news-and-announcements
 cat: news
 excerpt: Systems will be inaccessible while staff perform necessary maintenance,
   upgrades

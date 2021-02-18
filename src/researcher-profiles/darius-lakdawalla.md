@@ -5,7 +5,7 @@ date: 2020-06-13T18:19:38.387Z
 thumbnail: /images/Darius.jpg
 featuredImage: ../../static/images/Darius.jpg
 path: darius-lakdawalla
-parentPath: /news-and-events
+parentPath: /news-and-events/researcher-profiles
 cat: Researchers
 sharedID: news_Announcements_and_researcher_profile
 parentEle: News & Events
