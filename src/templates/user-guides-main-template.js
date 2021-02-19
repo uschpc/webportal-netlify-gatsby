@@ -12,6 +12,7 @@ import FAQ from '../components/frequently-asked-question'
 export default function Template({ data }) {
   let mainPage = data.mainPage;
   let content = data.content;
+  let title = mainPage ? mainPage.frontmatter.title : content.frontmatter.title
     return (
       <Layout {...data.navigation} backToTopBtnFlag={content.frontmatter.backToTopBtnFlag}>
           <SEO title={mainPage ? mainPage.frontmatter.title : content.frontmatter.title}/>
@@ -32,7 +33,7 @@ export default function Template({ data }) {
                     {mainPage || content.frontmatter.title === "Frequently Asked Questions" ? <UserGuideSideMenu content={mainPage || content} sideMenu={data.UserGuidesSideMenu} /> : <SideMenu {...data}/>}
                   </div>
                 </div>
-                <div className="middle-column universal">
+                <div className={`middle-column ${title != 'Frequently Asked Questions'  ? 'universal' : ''}`}>
                   <h1>{mainPage ? mainPage.frontmatter.title : content.frontmatter.title}</h1>
                   {mainPage ? (
                     <span>
