@@ -32,7 +32,7 @@ export default function Template({ data }) {
                     {mainPage || content.frontmatter.title === "Frequently Asked Questions" ? <UserGuideSideMenu content={mainPage || content} sideMenu={data.UserGuidesSideMenu} /> : <SideMenu {...data}/>}
                   </div>
                 </div>
-                <div className="middle-column">
+                <div className="middle-column universal">
                   <h1>{mainPage ? mainPage.frontmatter.title : content.frontmatter.title}</h1>
                   {mainPage ? (
                     <span>

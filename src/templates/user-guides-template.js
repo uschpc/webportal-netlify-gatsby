@@ -34,7 +34,7 @@ export default function Template({ data }) {
                   <SideMenu {...data} parentMenuTitle={post.frontmatter.title} />
                 </div>
               </div>
-              <div className="middle-column">
+              <div className="middle-column universal">
                   <h1>{post.frontmatter.title}</h1>
                   {(post.frontmatter.uniqID === "user_portal") && (
                     <div className="login">

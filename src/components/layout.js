@@ -35,15 +35,14 @@ const Layout = (props) => {
     }
     
     document.getElementById('___gatsby').classList.add("scroll") 
-    let allLinks = document.querySelectorAll(".middle-column:not(.universal) a");
     document.getElementById('___gatsby').scrollTo(0,0)
+    let allLinks = document.querySelectorAll(".middle-column:not(.universal) a");
     for ( let i = 0; i < allLinks.length; i++ ) {
       allLinks[i].target = "_blank"
       allLinks[i].onclick = "return false"
       allLinks[i].addEventListener('click', (e) => {
         e.preventDefault()
-        let scrollPosition = e.currentTarget.offsetTop - 140
-        sessionStorage.setItem("scrollPosition", scrollPosition);
+        document.getElementById('___gatsby').scrollTo(0,0)
         window.open(allLinks[i].href)
       })
     }
@@ -58,6 +57,7 @@ const Layout = (props) => {
     //       window.location.href = e.target.href === undefined ? e.currentTarget.href : e.target.href
        
     //   })
+    // }
     // }
     // if(sessionStorage.getItem("scrollPosition")) {
     //   setTimeout(() => {

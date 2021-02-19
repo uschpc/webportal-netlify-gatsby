@@ -62,7 +62,7 @@ export default function Template({ data }) {
                       ))
                   })}
                 </div>
-                <div className="middle-column">
+                <div className={`middle-column ${content.frontmatter.title == 'News and Announcements' || content.frontmatter.title == 'Researcher Profiles' || content.frontmatter.title == 'Condo Cluster Program'  ? 'universal' : ''}`}>
                 <h1>{content.frontmatter.title}</h1>
                   {content.frontmatter.cat !== 'news' ? (
                     <>
