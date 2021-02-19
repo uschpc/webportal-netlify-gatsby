@@ -47,7 +47,7 @@ nav_items:
         path: /learning-contents
       - label: Knowledgebase
         path: /knowledgebase
-  - label: News and Events
+  - label: News & Events
     path: /news-and-events
   - label: User Support
     path: /user-support

@@ -72,6 +72,7 @@ export const coldFrontQuery = graphql`
           routePath
           parentEle
           uniqID
+          backToTopBtnFlag
         }
       html
     }
@@ -93,6 +94,7 @@ export const coldFrontQuery = graphql`
                 }
               }
             }
+            backToTopBtnFlag
           }
         }
       }
@@ -103,6 +105,7 @@ export const coldFrontQuery = graphql`
         parentEle
         cat
         excerpt
+        backToTopBtnFlag
         }
       html
     }

@@ -52,7 +52,104 @@ body {
   }
 
   #___gatsby {
+    // overflow: scroll;
+    // height: 100vh;
     #gatsby-focus-wrapper{
+      // .user-guides-pages {
+      //   .page-body {
+      //     overflow: scroll;
+      //     height: auto;
+      //     &::-webkit-scrollbar { 
+      //       display: none;
+      //     }
+      //   }
+      // }
+      // .nav-pages {
+      //   .page-body {
+      //     overflow: hidden;
+      //     height: auto;
+      //     &::-webkit-scrollbar { 
+      //       display: none;
+      //     }
+      //   }
+      // }
+      .page-body {
+        overflow: scroll;
+        &.scroll {
+          height: calc(100vh - 90px);
+        }
+        &::-webkit-scrollbar { 
+          display: none;
+        }
+        .left-column {
+          position: sticky;
+          top: 0px;
+          padding: 48px 0px 24px;
+          overflow-y: auto;
+          font-size: 15px;
+          margin-top: 0;
+        }
+        .right-column {
+          position: sticky;
+          top: 0px;
+          padding: 50px 0px 24px;
+          overflow-y: auto;
+          font-size: 15px;
+          margin-top: 0;
+          visibility: visible;
+          li {
+            list-style: none;
+            margin-top: 10px;
+            &:hover {
+              color: #990000;
+              text-decoration: underline;
+              cursor: pointer;
+            }
+          }
+          .content-container {
+            span {
+              border-bottom: none;
+            }
+          }
+          &.hide {
+            visibility: hidden;
+          }
+        }
+      }
+      .middle-column {
+        min-height: 851px;
+        details {
+          summary {
+            color: #990000;
+            font-weight: bold;
+            &:hover {
+              cursor: pointer;
+              text-decoration: underline;
+            }
+          }
+          h4, p {
+            margin-left: 15px;
+          }
+        }
+      }
+      .table-of-tools {
+        margin: 41px 10%;
+        .input-group {
+          display: flex;
+          .form-control.genome {
+            width: 100%;
+          }
+          .clippy {
+            width: 30px;
+            display: flex;
+            margin: 0;
+          }
+        }
+        .table-of-tools {
+          margin: 0;
+        }
+
+      }
       .markdown-custom-link {
         padding: 10px;
         background-color: #990000;
@@ -484,8 +581,10 @@ body {
           h2 {
             color: #990000;
             font-size: 26px;
-            &:hover {
-              text-decoration: underline;
+            &.universal {
+              &:hover {
+                text-decoration: none;
+              }
             }
           }
 
@@ -546,6 +645,19 @@ body {
           width: 66%;
           h3 {
             color: #990000;
+          }
+          &.universal {
+            span {
+              a {
+                margin-left: 0;
+                color: #990000;
+                font-size: 25px;
+                font-weight: bold;
+              }
+              p {
+                margin-top: 10px;
+              }
+            }
           }
           ul {
             list-style-position: inside;
@@ -717,6 +829,21 @@ body {
             }
           }
 
+          &.universal {
+            h3 {
+              a {
+                font-size: 20px;
+                font-weight: 700;
+                color: #900;
+                margin: 0 0 20px 0;
+                width: auto;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+
         }
         .right-column{
           margin-top: 118px;
@@ -828,6 +955,11 @@ body {
             font-size: 26px;
             &:hover {
               text-decoration: underline;
+            }
+            &.universal {
+              &:hover {
+                text-decoration: none;
+              }
             }
           }
 
@@ -1255,7 +1387,19 @@ body {
         }
       }
     }
-
+    &.scroll {
+      overflow: scroll;
+      height: 100vh;
+      &::-webkit-scrollbar { 
+        display: none;
+      }
+      &.enable {
+        overflow: hidden;
+        &::-webkit-scrollbar { 
+        display: none;
+      }
+      }
+    }
 
   }
   -webkit-font-smoothing: antialiased;

@@ -6,6 +6,7 @@ thumbnail: /images/class-2020.webp
 path: all-researchers
 parentPath: news-and-events/researcher-profiles
 cat: allResearcher
-parentEle: News and Events
+parentEle: News & Events
 excerpt: some text here
+backToTopBtnFlag: true
 ---

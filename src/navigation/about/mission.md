@@ -1,7 +1,7 @@
 ---
 author: Yaseen A
 id: 1
-date: 2020-04-22T18:19:38.387Z
+date: 2021-02-19T18:19:38.387Z
 title: Mission
 thumbnail: /images/sr-icon-4.png
 path: mission
@@ -12,7 +12,7 @@ excerpt: The mission and history of the CARC.
 ---
 
 
-Established in 2000, the University of Southern California's Center for Advanced Research Computing (CARC) aims to provide advanced computational research support to USC faculty and students.
+Established in 2000, the University of Southern California's Center for Advanced Research Computing (CARC) provides advanced computational research support to USC students and faculty.
 
 When the needs of researchers exceed the capabilities of a personal computer, the CARC offers its support. Examples of services offered include high-performance computing, data storage and analysis, cloud computing, secure computing for sensitive data, research computing workshops, and customized research partnerships.
 

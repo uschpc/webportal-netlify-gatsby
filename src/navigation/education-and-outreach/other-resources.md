@@ -51,3 +51,9 @@ Below are links to the official documentation pages for the CARC's most commonly
 MathWorks offers many free MATLAB and Simulink events both in-person and virtually. Courses are offered in self-paced and live formats.
 
 To view upcoming workshops, webinars, and conferences, see https://www.mathworks.com/company/events.html?s_tid=gn_ev.
+
+### XSEDE
+
+The Extreme Science and Engineering Discovery Environment (XSEDE) is an NSF-funded virtual organization that integrates and coordinates the sharing of advanced [digital services](https://www.xsede.org/web/site/ecosystem/services) - including supercomputers and high-end visualization and data analysis [resources](https://www.xsede.org/web/site/ecosystem/resources) - with researchers nationally to support science.
+
+XSEDE regularly offers free workshops. Enrollment in XSEDE workshops requires creating a user account, which is free. Check out the full course calendar here: https://www.xsede.org/web/xup/course-calendar.

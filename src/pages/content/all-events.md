@@ -6,5 +6,5 @@ thumbnail: /images/class-2020.png
 path: all-events
 parentPath: news-and-events/events
 cat: allEvents
-parentEle: News and Events
+parentEle: News & Events
 ---

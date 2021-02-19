@@ -2,13 +2,14 @@
 title: December Maintenance and 2020 Winter Recess Schedule
 author: Andrea Renney
 path: holiday-recess-maintenance-downtime
-parentEle: News and Events
+parentEle: News & Events
 date: 2020-12-03T00:00:00.000Z
 parentPath: news-and-events/news-and-announcements
 cat: news
 excerpt: Winter recess runs December 21-January 4, with maintenance occuring from December 27
 featuredImage: ../../static/images/holiday_graphic.jpg
 thumbnail: /images/holiday_graphic.jpg
+backToTopBtnFlag: true
 ---
 
 At the end of each year, USC departments cease operations for a winter recess period. This year, the CARC will be closed for the holidays beginning **Monday, December 21, 2020, reopening on Monday, January 4, 2021**. Non-emergency work will be paused until the new year. In the case of an emergency, tickets can still be submitted via our [ticket submission form](/user-information/ticket-submission).

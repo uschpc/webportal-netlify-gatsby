@@ -44,6 +44,7 @@ exports.createPages = ({ boundActionCreators, graphql, actions }) => {
   const currentProjects = path.resolve('src/templates/current-projects.js')
   const condoClusterProgramPagesTemplate = path.resolve('src/templates/condo-cluster-program-pages.js')
   const condoClusterProgramSubPagesTemplate = path.resolve('src/templates/condo-cluster-program-sub-pages.js')
+  const universalPagesTemplate = path.resolve('src/templates/universal-pages-template.js')
 
   return graphql(`
     {
@@ -74,6 +75,10 @@ exports.createPages = ({ boundActionCreators, graphql, actions }) => {
       let path = '';
 
       switch(node.frontmatter.cat) {
+        case 'universalPages':
+          template = universalPagesTemplate;
+          path = `${node.frontmatter.path}`
+          break;
         case 'allNews':
           template = allNewsTemplate;
           path = `${node.frontmatter.parentPath}/${node.frontmatter.path}`

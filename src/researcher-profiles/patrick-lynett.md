@@ -2,7 +2,7 @@
 title: Patrick Lynett
 author: Center for Advanced Research Computing
 path: patrick-lynett
-parentEle: News and Events
+parentEle: News & Events
 date: 2020-03-24
 parentPath: /news-and-events/researcher-profiles
 cat: Researchers
@@ -10,6 +10,7 @@ sharedID: news_Announcements_and_researcher_profile
 excerpt: Patrick Lynett creates hydraulic models of coastal processes, studying the impact of complex waves and currents on critical coastal infrastructure.
 thumbnail: /images/Patrick.jpg
 featuredImage: ../../static/images/Patrick.jpg
+backToTopBtnFlag: true
 ---
 
 Patrick Lynett holds the John and Dorothy Shea Early Career Chair in Civil Engineering and is an associate professor in the Department of Civil and Environmental Engineering at the USC Viterbi School of Engineering. In his research, Lynett creates hydraulic models of coastal processes, studying shallow water wave phenomena with a particular focus on the impact of complex waves and currents on critical coastal infrastructure, such as nuclear power plants. Over the past decade, Lynett has participated in a wide range of studies on numerous coastal disasters, from hurricanes and tsunamis to oil spills.

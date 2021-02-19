@@ -10,15 +10,19 @@ const Content = (props) => {
 
     const scrollToView = (e) => {
         e.preventDefault();
+        document.querySelector('.page-body').classList.add("scroll")
+        document.getElementById('___gatsby').classList.add("enable")
         const index = _.findIndex(tags, function(o) {
             return o.innerHTML == e.target.getAttribute('value');
          });
-        tags[index].scrollIntoView({block: "start"})
+         document.querySelector('.page-body').scrollTo({
+            top: tags[index].offsetTop - 200
+       });
+        // tags[index].scrollIntoView({block: "start"})
     }
 
     useEffect(() => {
         loadTags(generateTags());
-
     }, [])
     return (
         <span className="content-wrapper">

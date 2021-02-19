@@ -163,7 +163,6 @@
         function getSystemOptionSelected() {
             let id = 'systemSelection'
             let e = document.getElementById(id);
-            console.log(e.options[e.selectedIndex])
             let optionSelected = e.options[e.selectedIndex].value;
             let isAMD = optionSelected.indexOf('AMD') > -1
             let AMD = isAMD ? 'AMD' : 'Intel'

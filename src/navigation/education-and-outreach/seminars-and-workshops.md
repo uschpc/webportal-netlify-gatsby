@@ -24,6 +24,8 @@ The workshops below are approximately two hours in length and are offered severa
 
 An overview of the CARC's high-performance computing clusters. This workshop covers how to log in, manage and transfer data, load and build software, and run and monitor jobs.
 
+Recording: https://www.youtube.com/watch?v=gtX6VM2UkTo
+
 #### Introduction to the Unix Shell
 
 An introduction to using the Unix shell that covers the basic skills needed to be productive in a command-line environment on Unix-like systems, including the CARC's high-performance computing clusters. This workshop covers how to run commands, navigate file systems, create and edit files, use pipes and filters, and develop shell scripts.

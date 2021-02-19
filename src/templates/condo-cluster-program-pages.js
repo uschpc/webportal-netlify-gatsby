@@ -28,13 +28,12 @@ export default function Template({ data }) {
               {/* <MenuRoute {...data} title={data.content.frontmatter.title} /> */}
               <div className="page-body">
                 <div className="left-column">
-                  <Link to="/user-information/ccp"><h2>User information</h2></Link> 
+                  <Link to="/user-information"><h2>User Information</h2></Link> 
                   {/* <SideMenu {...data} parentMenuTitle="Condo Cluster Program"/> */}
                   <NavigationSideMenu sideMenu={sideMenu} subMenu={data.subMenu} title={post.frontmatter.title} parentMenuTitle="Condo Cluster Program" />
                 </div>
                 <div className="middle-column">
                 <h1>{post.frontmatter.title}</h1>
-                  <Content />
                   <Markdown source={data.content.html} escapeHtml={false} />
                   {(content.frontmatter.uniqID === 'enrollment') && <h4 className="navigation-heading">Condo Cluster Program Pages</h4>}
                   {(content.frontmatter.uniqID === 'enrollment') && data.allContent.edges.map((item, i) => {
@@ -59,12 +58,13 @@ export default function Template({ data }) {
                   })}
                 </div>
                 <div className="right-column">
-                  <div className="system-status">
+                <Content />
+                  {/* <div className="system-status">
                       <h4>Related Links</h4>
                       <h5>Some links</h5>
                       <h5>Some links</h5>
                       <h5>Some links</h5>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

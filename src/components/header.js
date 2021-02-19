@@ -25,7 +25,7 @@ const Header = (props) => {
                             <a href="https://itservices.usc.edu/">USC ITS</a></li>
                             <li id="menu-item-85" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-85">
                               <a href="https://cio.usc.edu/">Office of the CIO</a></li>
-                            <li id="menu-item-13138" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-13138"><a href="https://trojansecure.usc.edu/">Office of the CISO</a></li>
+                            <li id="menu-item-13138" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-13138"><a href="https://research.usc.edu//">Office of Research</a></li>
                             </ul></div>							</li>
                       </ul>
                     </div>

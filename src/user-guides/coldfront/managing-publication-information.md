@@ -1,6 +1,6 @@
 ---
 author: James Hong
-id: 12
+id: 13
 date: 2020-07-08T00:00:00.000Z
 title: Managing Publication Information
 path: managing-publication-information

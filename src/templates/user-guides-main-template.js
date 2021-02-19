@@ -12,18 +12,28 @@ import FAQ from '../components/frequently-asked-question'
 export default function Template({ data }) {
   let mainPage = data.mainPage;
   let content = data.content;
+  let title = mainPage ? mainPage.frontmatter.title : content.frontmatter.title
     return (
       <Layout {...data.navigation} backToTopBtnFlag={content.frontmatter.backToTopBtnFlag}>
           <SEO title={mainPage ? mainPage.frontmatter.title : content.frontmatter.title}/>
           <div className="user-guides-main-pages">
-            <div className="container">
+            <div className="container page-body">
                 <div className="left-column">
                   <div className="position-fixed">
-                    <h1> {mainPage  || content.frontmatter.title === "Frequently Asked Questions" ? "User Information" : "User Support"}</h1>
+                    
+                        {mainPage  || content.frontmatter.title === "Frequently Asked Questions" ? (
+                        <Link to='/user-information'>
+                         <h1>User Information </h1>
+                         </Link>
+                        )
+                        : (
+                          <Link to='/user-support'><h1>User Support</h1></Link>
+                        )
+                        }
                     {mainPage || content.frontmatter.title === "Frequently Asked Questions" ? <UserGuideSideMenu content={mainPage || content} sideMenu={data.UserGuidesSideMenu} /> : <SideMenu {...data}/>}
                   </div>
                 </div>
-                <div className="middle-column">
+                <div className={`middle-column ${title != 'Frequently Asked Questions'  ? 'universal' : ''}`}>
                   <h1>{mainPage ? mainPage.frontmatter.title : content.frontmatter.title}</h1>
                   {mainPage ? (
                     <span>
@@ -129,6 +139,7 @@ export const coldFrontQuery = graphql`
         frontmatter {
           title
           route
+          path
           routePath
           externalPath
           uniqId

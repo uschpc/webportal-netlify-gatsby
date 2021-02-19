@@ -23,14 +23,14 @@ const findSubMenu = (menubar, nav) => {
 export default function Template({ data }) {
   let content = data.content || data.newsContent || data.researcherContent || data.projectContent;
   let subMenu = findSubMenu(content.frontmatter.parentEle, data.sideMenu)
-
     return (
       <Layout {...data.navigation} backToTopBtnFlag={content.frontmatter.backToTopBtnFlag}>
           <SEO title={content.frontmatter.title}/>
           <div className="nav-pages">
-            <div className="container">
+            <div className="container page-body">
                 <div className="left-column">
-                  <h2>{content.frontmatter.parentEle}</h2>
+                  {content.frontmatter.parentEle == 'News & Events' && <Link to='/news-and-events' ><h2>{content.frontmatter.parentEle}</h2></Link>}
+                  {content.frontmatter.parentEle != 'News & Events' && <Link to={content.frontmatter.parentPath} ><h2>{content.frontmatter.parentEle}</h2></Link>}
                   {subMenu.map((item, i) => {
                   return (
                     !item.node.frontmatter.externalPath ? (
@@ -62,11 +62,10 @@ export default function Template({ data }) {
                       ))
                   })}
                 </div>
-                <div className="middle-column">
+                <div className={`middle-column ${content.frontmatter.title == 'News and Announcements' || content.frontmatter.title == 'Researcher Profiles' || content.frontmatter.title == 'Condo Cluster Program'  ? 'universal' : ''}`}>
                 <h1>{content.frontmatter.title}</h1>
                   {content.frontmatter.cat !== 'news' ? (
                     <>
-                      {(content.frontmatter.sharedID !== "news_Announcements_and_researcher_profile") && <Content />}
                       {(content.frontmatter.sharedID !== "news_Announcements_and_researcher_profile") && <Markdown source={content.html} escapeHtml={false} />}
                       {(content.frontmatter.uniqID === "news_Announcements") && (
                         <>
@@ -142,12 +141,13 @@ export default function Template({ data }) {
 
                 </div>
                 <div className="right-column">
-                    <div className="system-status">
+                {(content.frontmatter.sharedID !== "news_Announcements_and_researcher_profile") && (content.frontmatter.cat !== 'news')  && <Content />}
+                    {/* <div className="system-status">
                         <h4>Related Links</h4>
                         <h5>Some links</h5>
                         <h5>Some links</h5>
                         <h5>Some links</h5>
-                    </div>
+                    </div> */}
                 </div>
               </div>
           </div>
@@ -178,6 +178,7 @@ export const coldFrontQuery = graphql`
           route
           routePath
           parentEle
+          parentPath,
           uniqID
           sharedID
           backToTopBtnFlag
@@ -193,7 +194,9 @@ export const coldFrontQuery = graphql`
         thumbnail
         date
         excerpt
+        parentPath
         author
+        backToTopBtnFlag
         }
       html
     }
@@ -217,12 +220,14 @@ export const coldFrontQuery = graphql`
       frontmatter {
         title
         parentEle
+        parentPath
         cat
         thumbnail
         date
         excerpt
         author
         sharedID
+        backToTopBtnFlag
         }
       html
     }

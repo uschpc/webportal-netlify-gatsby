@@ -1,6 +1,6 @@
 ---
 author: Andrea Renney
-id: 4
+id: 5
 date: 2020-12-15T00:00:00.000Z
 title: Request New Condo Purchase
 path: request-new-purchase
@@ -46,6 +46,8 @@ Select the models of CPU and/or GPU nodes you would like to purchase, as well as
 > Note: The price for the nodes is an estimate only. The final price may vary based on market condition and the CARC’s equipment purchase price. Pricing does not include interconnect hardware, second enclosure (racks), or utility costs for power and cooling, but the CARC and USC's IT Services will cover the costs of this necessary service and equipment. PIs will not be charged any setup or recurring fees, including CARC administrative support costs.
 
 ### Billing information
+
+![ColdFront Project page](/images/coldfront_addproject_billing.png)
 
 The fields in the Billing section are automatically filled from the billing information associated with your account as a PI. If this information hasn't been added to your account previously, you will need to complete the fields yourself. See the [Adding Billing Information user guide](/user-information/user-guides/research-computing-user-portal/adding-billing-information) for instructions. Billing information must be inputted to complete your purchase request.
 

@@ -17,26 +17,51 @@ import "../draggable.scss"
 
 const Layout = (props) => {
 
+  const generateTags = () => {
+    return [...document.getElementsByTagName('h3')] || [];
+  }
+
   useEffect(() => {
+    let tags = generateTags()
+    tags.forEach(tag => {
+      let tagSystemFreindly = tag.innerHTML.split(" ").join("-").toLowerCase()
+      tag.setAttribute('id', tagSystemFreindly)
+    })
+    if (document.location.hash.indexOf('#') > -1) {
+      let id = document.location.hash.split('#')[1]
+      document.getElementById(id) && document.getElementById(id).scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+    
+    document.getElementById('___gatsby').classList.add("scroll") 
+    document.getElementById('___gatsby').scrollTo(0,0)
+    let allLinks = document.querySelectorAll(".middle-column:not(.universal) a");
+    for ( let i = 0; i < allLinks.length; i++ ) {
+      allLinks[i].target = "_blank"
+      allLinks[i].onclick = "return false"
+      allLinks[i].addEventListener('click', (e) => {
+        e.preventDefault()
+        document.getElementById('___gatsby').scrollTo(0,0)
+        window.open(allLinks[i].href)
+      })
+    }
     let externalLinks = document.querySelectorAll("a[href^='http']");
     for ( let i = 0; i < externalLinks.length; i++ ) {
       externalLinks[i].target = "_blank"
       externalLinks[i].onclick = "return false"
-      // externalLinks[i].addEventListener('click', (e) => {
-      //   e.preventDefault()
-      //   let scrollPosition = window.scrollY
-      //   sessionStorage.setItem("scrollPosition", scrollPosition);
-      //     window.location.href = e.target.href === undefined ? e.currentTarget.href : e.target.href
-       
-      // })
     }
-    if(sessionStorage.getItem("scrollPosition")) {
-      setTimeout(() => {
-        window.scrollTo(0, sessionStorage.getItem("scrollPosition"));
-        sessionStorage.removeItem("scrollPosition");
-      }, 0)
+    // }
+    // }
+    // if(sessionStorage.getItem("scrollPosition")) {
+    //   setTimeout(() => {
+    //     document.getElementById('___gatsby').scrollTo(0, sessionStorage.getItem("scrollPosition"));
+    //     sessionStorage.removeItem("scrollPosition");
+    //   }, 0)
       
-    }
+    // } else {
+    //   document.getElementById('___gatsby').scrollTo(0,0)
+    // }
     
   }, [])
 
@@ -45,7 +70,7 @@ const Layout = (props) => {
       const scrollToTopButton = document.getElementById('js-top');
 
       const scrollFunc = () => {
-        let y = window.scrollY;
+        let y = document.querySelector('.page-body').scrollTop || window.scrollY;
         
         if (y > 0) {
           scrollToTopButton.className = "top-link show";
@@ -54,14 +79,15 @@ const Layout = (props) => {
         }
       };
   
-        window.addEventListener("scroll", scrollFunc);
+      document.querySelector('.page-body').addEventListener("scroll", scrollFunc);
   
         const scrollToTop = () => {
-        const c = document.documentElement.scrollTop || document.body.scrollTop;
+        const c = document.querySelector('.page-body').scrollTop || document.body.scrollTop;
     
         if (c > 0) {
           window.requestAnimationFrame(scrollToTop);
-          window.scrollTo(0, c - c / 10);
+          document.querySelector('.page-body').scrollTo(0, c - c / 10);
+          document.getElementById('___gatsby').scrollTo(0, 0)
         }
       };
   

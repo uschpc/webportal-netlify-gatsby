@@ -22,18 +22,19 @@ export default function Template({ data }) {
       if (scrollY >= 240) setPositionFlag(true)
       else setPositionFlag(false)
     }, [scrollY])
+    
     return (
       <Layout {...data.navigation}>
           <SEO title={post.frontmatter.title}/>
           <div className="user-guides-pages">
-          <div className="container">
+          <div className="container page-body">
               <div className="left-column">
                 <div className={`position-fixed ${(scrollPositionFlag) ? 'start' : 'reset'}`}>
                   <Link to="/user-information/user-guides"><h2>User Guides</h2></Link>
                   <SideMenu {...data} parentMenuTitle={post.frontmatter.title} />
                 </div>
               </div>
-              <div className="middle-column">
+              <div className="middle-column universal">
                   <h1>{post.frontmatter.title}</h1>
                   {(post.frontmatter.uniqID === "user_portal") && (
                     <div className="login">
@@ -129,7 +130,7 @@ export default function Template({ data }) {
                     </span>
                   )}
               </div>
-              <div className="right-column">
+              <div className="right-column hide">
                   <div className="system-status">
                       <h4>Related Links</h4>
                       <h5>Some links</h5>

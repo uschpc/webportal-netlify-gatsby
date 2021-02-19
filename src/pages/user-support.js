@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Footer from "../components/footer.js";
@@ -9,6 +9,9 @@ const UserSupportIndex = ({data}) => {
   const openModel = () => {
     setModelFlag(!model)
   }
+  useEffect(() => {
+    document.getElementById('___gatsby').classList.add("scroll");
+  }, [])
   return (
       <Layout {...data.navigation} openModel={model}>
           <SEO title="User Support" />

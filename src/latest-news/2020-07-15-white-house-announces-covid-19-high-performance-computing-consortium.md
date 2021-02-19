@@ -2,7 +2,7 @@
 title: White House Announces COVID-19 High Performance Computing Consortium
 author: Andrea Renney
 path: covid-19-consortium
-parentEle: News and Events
+parentEle: News & Events
 date: 2020-03-24T00:00:00.000Z
 parentPath: news-and-events/news-and-announcements
 cat: news
@@ -10,6 +10,7 @@ excerpt: New program offers COVID-19 researchers access to high performance
   computing systems
 thumbnail: /images/cdc-w9keokhajkw-unsplash.jpg
 featuredImage: ../../static/images/cdc-w9keokhajkw-unsplash.jpg
+backToTopBtnFlag: true
 ---
 On March 23, 2020, The White House launched the **COVID-19 High Performance Computing Consortium**, a new program that offers COVID-19 researchers access to high performance computing systems. The use of these systems aims to greatly expedite the timelines for calculations and modeling required for the research of the virus.
 
