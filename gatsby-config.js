@@ -89,6 +89,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: ` on-demand-videos`,
+        path: `${__dirname}/src/ on-demand-videos`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `user-support`,
         path: `${__dirname}/src/user-support`,
       },
