@@ -54,7 +54,7 @@ Materials: https://github.com/uschpc/workshop-singularity
 
 #### Methods for Automating Job Submission
 
-CARC users may find themselves doing repetitive tasks like manually launching jobs, checking their job status, and deciding what kind of jobs to submit based on the results. This workshop covers methods for automating these tasks with tools like job arrays and workflow managment software.
+CARC users may find themselves doing repetitive tasks like manually launching jobs, checking their job status, and deciding what kind of jobs to submit based on the results. This workshop covers methods for automating these tasks with tools like job arrays and workflow management software.
 
 ### Programming
 
