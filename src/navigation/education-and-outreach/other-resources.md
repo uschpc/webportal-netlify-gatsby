@@ -1,6 +1,6 @@
 ---
 title: Other Resources
-id: 4
+id: 5
 thumbnail: /images/sr-icon-4.png
 path: other-resources
 parentPath: education-and-outreach
