@@ -38,6 +38,8 @@ Materials: https://swcarpentry.github.io/shell-novice/
 
 This workshop introduces users to the CARC's software stack, which uses Lmod, a Lua-based module system. Users will learn how to manage their environment, find software, load modules, and build their own domain-specific packages.
 
+[Workshop recording (February 5, 2021)](/education-and-outreach/video-learning/software-management)
+
 #### Data Management on CARC Systems
 
 This workshop covers various topics in data management and transfer on CARC systems, including transfer tools, file permissions, file I/O, and backups.
