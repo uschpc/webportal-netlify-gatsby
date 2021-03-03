@@ -96,11 +96,11 @@ export OMP_NUM_THREADS=16
 
 Keep in mind that your project accounts are charged based on CPU-hours used, so only request as many threads as needed. You may need to experiment with the number and monitor your job to find the optimal amount. Also keep in mind that requesting fewer resources should result in shorter job queue times.
 
-### MPI jobs
+### Single-threaded MPI jobs
 
 The Message Passing Interface (MPI) is a message-passing standard used in parallel programming, primarily when using multiple compute nodes with distributed memory. For more information, see the user guide for [Message Passing Interface (MPI)](/user-information/user-guides/high-performance-computing/mpi).
 
-An example job script:
+An example job script for a single-threaded program:
 
 ```
 #!/bin/bash
@@ -110,31 +110,31 @@ An example job script:
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=3GB
 #SBATCH --time=24:00:00
+#SBATCH --constraint="xeon-4116"
 #SBATCH --exclusive
 #SBATCH --account=<account_id>
 
 module purge
 module load gcc/8.3.0
 module load openmpi/4.0.2
+module load pmix/3.1.3
 
 ulimit -s unlimited
 
-export OMP_NUM_THREADS=1
-
-mpirun -bind-to core -map-by numa -np 144 ./mpi_program
+srun --mpi=pmix_v2 -n $SLURM_NTASKS ./mpi_program.x
 ```
 
-The `--nodes` option specifies how many nodes to use, and the `--ntasks` option specifies the number of tasks to run (MPI ranks). Be sure to modify the `--cpus-per-task`, `--mem-per-cpu`, and `--time` options as needed, and add `--ntasks-per-node` or `--partition` options if needed as well. The `--exclusive` option specifies to not share nodes with other jobs, which can improve the performance of MPI jobs.
+The `--nodes` option specifies how many nodes to use, and the `--ntasks` option specifies the number of tasks to run (MPI ranks). Be sure to modify the `--cpus-per-task`, `--mem-per-cpu`, and `--time` options as needed, and add `--ntasks-per-node` or `--partition` options if needed as well. The `--constraint` option specifies a node type to use. The `--exclusive` option specifies to not share nodes with other jobs, which can improve the performance of MPI jobs.
 
-Please note that you will have to compile your programs with an MPI compiler. Depending on the MPI implementation you choose to use, you may also want to use Slurm's `srun` command instead of `mpirun`.
+Please note that you will have to compile your programs with an MPI compiler.
 
 Keep in mind that your project accounts are charged based on CPU-hours used, so only request as many tasks and threads as needed. You may need to experiment with the numbers and monitor your job to find the optimal amounts. Also keep in mind that requesting fewer resources should result in shorter job queue times.
 
 ### Multi-threaded MPI jobs
 
-Multi-threaded MPI jobs use multi-threaded tasks on multiple compute nodes, typically hybrid OpenMP/MPI jobs. For optimal performance, there are additional arguments that should be passed to programs. Specifically, the environment variable `OMP_NUM_THREADS` (number of threads to parallelize over) should be explicitly set. Also be sure to link multi-threaded libraries (e.g., OpenBLAS, Intel MKL, FFTW) to multi-threaded MPI programs (and single-threaded libraries to single-threaded MPI programs).
+Multi-threaded MPI jobs use multi-threaded tasks on multiple compute nodes, typically hybrid OpenMP/MPI jobs. For optimal performance, there are additional arguments that should be passed to the program. If using OpenMP for threading, for example, the environment variable `OMP_NUM_THREADS` should be set, which specifies the number of threads to parallelize over. The `OMP_NUM_THREADS` count should equal the requested `--cpus-per-task` option in the job script. You can use the Slurm-provided environment variable `SLURM_CPUS_PER_TASK` to set `OMP_NUM_THREADS`.
 
-An example job script:
+An example job script for a multi-threaded program:
 
 ```
 #!/bin/bash
@@ -144,24 +144,23 @@ An example job script:
 #SBATCH --cpus-per-task=2
 #SBATCH --mem-per-cpu=2GB
 #SBATCH --time=24:00:00
+#SBATCH --constraint="xeon-4116"
 #SBATCH --exclusive
 #SBATCH --account=<account_id>
 
 module purge
-module load gcc/9.2.0
+module load gcc/8.3.0
 module load openmpi/4.0.2
 module load pmix/3.1.3
-module load openblas/0.3.7
-module load netlib-scalapack/2.1.0-openblas-openmpi
-module load fftw/3.3.8-openmpi
 
 ulimit -s unlimited
 
-export OMP_NUM_THREADS=2
-export OPENBLAS_NUM_THREADS=2
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
-mpirun -bind-to core -map-by numa -np 120 ./cp2k.psmp -i input -o output
+srun --mpi=pmix_v2 --cpu-bind=ldoms -n $SLURM_NTASKS ./mpi_plus_openmp_program.x
 ```
+
+Keep in mind that your project accounts are charged based on CPU-hours used, so only request as many tasks and threads as needed. You may need to experiment with the numbers and monitor your job to find the optimal amounts. Also keep in mind that requesting fewer resources should result in shorter job queue times.
 
 ### Job arrays
 

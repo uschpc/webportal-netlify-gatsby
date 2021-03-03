@@ -1,7 +1,7 @@
 ---
 author: Derek Strong
 id: 4
-date: 2020-06-04T12:00:00.387Z
+date: 2021-03-01T12:00:00.387Z
 title: Using R
 path: r
 parentPath: user-information/user-guides/software-and-programming
@@ -12,6 +12,8 @@ excerpt: A user guide for R, an open-source programming environment and language
 ---
 
 [R](https://www.r-project.org) is an open-source programming environment and language designed for statistical computing and graphics.
+
+<a href="/education-and-outreach/video-learning/intro-to-r" class="markdown-custom-link">Intro to R video</a>
 
 ### Using R
 
@@ -57,7 +59,7 @@ Many popular R packages have already been installed on CARC systems. Use the `na
 
 #### RStudio
 
-Please note that we do not currently support the use of the RStudio IDE on our systems. We will add support for RStudio later in 2020 as part of a new hybrid cloud computing system.
+Please note that we do not currently support the use of the RStudio IDE on our systems. We will add support for RStudio later in 2021 as part of a new hybrid cloud computing system.
 
 ### Running R interactively
 

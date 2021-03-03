@@ -110,6 +110,7 @@ exports.createPages = ({ boundActionCreators, graphql, actions }) => {
         case 'navigation':
         case 'news':
         case 'projects':
+        case 'onDemandVideo':
         case 'Researchers': {
           node.frontmatter.path !== 'user-guides' ? (
             template = menuTemplate

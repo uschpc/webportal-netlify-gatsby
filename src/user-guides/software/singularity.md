@@ -1,7 +1,7 @@
 ---
 author: Derek Strong
 id: 6
-date: 2020-09-09T12:00:00.387Z
+date: 2021-02-26T12:00:00.387Z
 title: Using Singularity
 path: singularity
 parentPath: user-information/user-guides/software-and-programming
@@ -11,15 +11,15 @@ backToTopBtnFlag: true
 excerpt: A user guide for Singularity, an open-source application for creating and running software containers.
 ---
 
-[Singularity](https://sylabs.io/singularity/) is an open-source application for creating and running software containers, designed primarily for scientific computing and Linux-based computing clusters like Discovery and Endeavour. Singularity containers enable self-contained, stable, portable, and reproducible computing environments and software stacks that can be shared and used across different machines and computing clusters, such as for research collaborations spanning multiple institutions.
+[Singularity](https://sylabs.io/singularity/) is an open-source application for creating and running software containers, designed primarily for scientific computing on Linux-based computing clusters like Discovery and Endeavour. Singularity containers enable self-contained, stable, portable, and reproducible computing environments and software stacks that can be shared and used across different machines and computing clusters, such as for research collaborations spanning multiple institutions.
 
 ### Using Singularity
 
 Begin by logging in. You can find instructions for this in the [Getting Started with Discovery](/user-information/user-guides/high-performance-computing/getting-started-discovery) or [Getting Started with Endeavour](/user-information/user-guides/high-performance-computing/getting-started-endeavour) user guides.
 
-Singularity is installed on Discovery and Endeavour outside of the module system, so there is no need to load a software module in order to use it. Instead, you can directly use the `singularity` commands. Please note that the commands that require `sudo` will not be available to you on Discovery or Endeavour. The current version installed is 3.6.1.
+Singularity is installed on Discovery and Endeavour outside of the module system, so there is no need to load a software module in order to use it. Instead, you can directly use the `singularity` commands. Please note that the commands that require `sudo` will not be available to you on Discovery or Endeavour. The current version of Singularity installed is 3.6.1.
 
-To view manual pages, enter `singularity help`.
+To view help pages, enter `singularity help` for more information.
 
 ### Getting Singularity container images
 
@@ -27,13 +27,21 @@ A **container image** is a single executable file that defines the software envi
 
 To get a container for use on Discovery or Endeavour, you can either pull (i.e., download) pre-built container images or externally build a custom container image from a definition file and then transfer it to the cluster.
 
-> Note: When getting containers, by default, Singularity will create a `~/.singularity/cache` directory inside your home directory to store cache files, which can quickly use a lot of storage space. You can change this location to a directory with more storage space (e.g., your /scratch directory) by setting the environment variable SINGULARITY_CACHEDIR. For example:
-> 
-> ```sh
-> export SINGULARITY_CACHEDIR=/scratch/<user>/.singularity
-> ```
-> 
-> This line can also be added to your `~/.bash_profile` found in your home directory, so that this variable is automatically set every time you log in to the cluster.
+When getting containers, by default, Singularity will create a `~/.singularity/cache` directory inside your home directory to store cache files, which can quickly use a lot of storage space. You can change this location to a directory with more storage space (e.g., one of your scratch directories) by setting the environment variable `SINGULARITY_CACHEDIR`. For example:
+
+```sh
+export SINGULARITY_CACHEDIR=/scratch/<username>/.singularity
+```
+
+Use the command `singularity cache clean` to clear the cache.
+
+Temporary space is also used to build, pull, and run containers, so we recommend specifying a temporary directory for this purpose because the default local `/tmp` space is limited and shared with other users. You can change this by setting the environment variable `SINGULARITY_TMPDIR`. For example:
+
+```sh
+export SINGULARITY_TMPDIR=/scratch/<username>/.singularity/tmp
+```
+
+Add both of these lines to your `~/.bash_profile` to automatically set these variables every time you log in and for jobs.
 
 #### Pulling pre-built images
 
@@ -69,9 +77,9 @@ You can also build a custom container image by using a definition file that inst
 
 The easiest way to build containers for use on our systems is to use the cloud-based Singularity [remote builder](https://cloud.sylabs.io/), which is integrated with the Singularity Library. To use this service, you can sign in with your GitHub, GitLab, Google, or Microsoft account. Currently, you are limited to 11 GB of free storage for your container builds. Once signed in, you simply submit a definition file and it builds the image. With a token, you can then pull the container image directly into the cluster.
 
-Alternatively, on your local machine you can install a virtual machine application like [Multipass](https://multipass.run/) and then create a Linux-based virtual machine and install Singularity inside of it in order to then build a container image from a definition file. Once built, you can transfer the container image to the cluster.
+Alternatively, on your local computer you can install a virtual machine application like [Multipass](https://multipass.run/) to create a Linux-based virtual machine, and then install Singularity inside of it in order to then build a container image from a definition file. Once built, you can transfer the container image to the cluster.
 
-#### Example
+#### Example for building an image
 
 In the following example we will use the remote builder to build a container image.
 
@@ -145,55 +153,71 @@ Once the image is downloaded, it is ready to be used.
 
 You can interact with Singularity containers using one of the following commands:
 
-- `singularity shell` --- for an interactive shell within the container
-- `singularity exec` --- for executing commands within the container
-- `singularity run` --- for executing a pre-defined runscript within the containter
+- `singularity shell` &mdash; for an interactive shell within the container
+- `singularity exec` &mdash; for executing commands within the container
+- `singularity run` &mdash; for executing a pre-defined runscript within the containter
+
+We also recommend always including the `--cleanenv` (or `-e`) option when running containers to establish a clean environment within the container. By default, most environment variables in your shell will be passed into the container, which can cause problems with using software within the container.
+
+To start an interactive shell within a container, enter:
+
+```sh
+singularity shell --cleanenv <container>
+Singularity>
+```
+
+Notice that your shell prompt changes to `Singularity>` to indicate that you are inside the container. Enter `exit` to exit the container.
 
 To execute custom commands within a container, enter:
 
 ```sh
-singularity exec <container> <commands to execute>
+singularity exec --cleanenv <container> <commands to execute>
 ```
 
 This will run the given commands using the software stack within the container. For example, to run a Julia script using the version of Julia installed within the container, enter:
 
 ```sh
-singularity exec julia.sif julia script.jl
+singularity exec --cleanenv julia.sif julia script.jl
 ```
 
-If the container image has a pre-defined runscript, enter:
+To run a pre-defined runscript within a container, enter:
 
 ```sh
-singularity run <container>
+singularity run --cleanenv <container>
 ```
 
-This will execute the defined sequence of commands.
+This will execute the defined sequence of commands in the runscript. There may be additional arguments that you can pass to the runscript.
 
 Singularity will automatically mount the `/tmp` and `$PWD` directories from the host system, Discovery/Endeavour, in the container when it is run. To mount other directories, such as your `/scratch` or `/scratch2` directories, use the `--bind` option. For example:
 
 ```sh
-singularity exec --bind /scratch/ttrojan julia.sif julia /scratch/ttrojan/script.jl
+singularity exec --cleanenv --bind /scratch/ttrojan julia.sif julia script.jl
 ```
 
-You can also set the environment variable `SINGULARITY_BIND` to include any directory paths that you want mounted in your containers.
+Alternatively, you can set the environment variable `SINGULARITY_BIND` to include any directory paths that you want mounted in your containers. For example:
+
+```sh
+export SINGULARITY_BIND=/scratch/<username>,/project/<project_id>
+```
+
+Add this line to your `~/.bash_profile` to automatically set the variable every time you log in and for jobs.
 
 To use Singularity in Slurm jobs, simply include the `singularity` commands to be run in your job scripts. For example:
 
-```sh
+```
 #!/bin/bash
-  
-#SBATCH --ntasks=1             # 1 process
-#SBATCH --cpus-per-task=8      # 8 cores
-#SBATCH --mem=16GB             # 16 GB of memory
-#SBATCH --time=1:00:00         # 1 hour run time
-#SBATCH --account=<account_id> # Account to charge resources to
-  
-cd /home1/ttrojan/singularity
-  
-singularity exec julia.sif julia script.jl
+
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=16GB
+#SBATCH --time=1:00:00
+#SBATCH --account=<account_id>
+
+singularity exec --cleanenv julia.sif julia script.jl
 ```
 
-The container will automatically use the requested resources.
+The container will automatically have access to the requested resources.
 
 ### Additional resources
 

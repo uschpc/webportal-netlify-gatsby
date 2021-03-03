@@ -1,7 +1,7 @@
 ---
 author: Andrea Renney
 id: 5
-date: 2020-12-15T00:00:00.000Z
+date: 20201-03-02T00:00:00.000Z
 title: Request New Condo Purchase
 path: request-new-purchase
 route: User Guides
@@ -17,11 +17,11 @@ The [Condo Cluster Program (CCP)](/user-information/ccp/program-information) is 
 
 The CCP has two pricing models: an annual subscription-based model and a traditional, five-year term condo purchase model. Subscriptions to resources can be requested in the same way that an allocation on Discovery is requested; see the [Request New Allocation user guide](/user-information/user-guides/research-computing-user-portal/request-new-allocation) for instructions on this. Condo purchases are a bit more in-depth, but can still be requested in the User Portal.
 
+**The condo purchase request period for 2021 is currently closed. Please contact us at <carc-condo@usc.edu> to inquire about the next condo purchase period.**
+
 ### Condo purchase request period
 
 A condo purchase request is possible during the CARC's annual condo purchase request period, which occurs during the fall semester. The whole process of purchase request, system configuration, vendor selection, purchasing, system installation, and deployment typically takes six months. The purchased resources will be in service for 5 years, and after this service period, the CARC will decommission these condo nodes. 
-
-**The condo purchase request period is currently open. The deadline to submit a purchase request is February 19, 2021**. Information on the CPU and GPU models available for this year's request period can be found on the [CCP Purchase Pricing Model page](/user-information/ccp/program-information/ccp-purchase).  
 
 ### Requesting a condo purchase
 

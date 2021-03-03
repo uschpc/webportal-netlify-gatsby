@@ -29,14 +29,17 @@ const Pagination = (props) => {
         const dataResult = !props.flag ? slice.map((item, i) => {
             return (
               <Link className="news-url" to={`${item.node.frontmatter.parentPath}/${item.node.frontmatter.path}`} key={i}>
-                <div className="latest-news" key={i}>
+                <div className={`latest-news ${item.node.frontmatter.featuredVideo ? 'videos' : ''}`} key={i}>
                   <div className="content">
                     <h3>{item.node.frontmatter.title}</h3>
                     <h4>{item.node.frontmatter.excerpt}</h4>
             { item.node.frontmatter.date && <h4 className="date">{generateFreindlyDate(item.node.frontmatter.date)}</h4> }
                   </div>
                   {/* <img src={item.node.frontmatter.thumbnail} alt={item.node.frontmatter.title} /> */}
-                  <img src={item.node.frontmatter.featuredImage.childImageSharp.fluid.src} alt={item.node.frontmatter.title} />
+                  {item.node.frontmatter.featuredImage && <img src={item.node.frontmatter.featuredImage.childImageSharp.fluid.src} alt={item.node.frontmatter.title} />}
+                  {item.node.frontmatter.featuredVideo && (
+                   <iframe width="255" height="200" src={item.node.frontmatter.featuredVideo}></iframe>
+                  )}
                 </div> 
               </Link>
              )
@@ -58,6 +61,9 @@ const Pagination = (props) => {
 
     useEffect(() => {
         pageData()
+        document.getElementById('___gatsby').scrollTo(0,0)
+        if (document.querySelector('.page-body')) document.querySelector('.page-body').scrollTo(0,0)
+        else if (document.querySelector('.container')) document.querySelector('.container').scrollTo(0,0)
     }, [offset], [])
 
     useEffect(() => {

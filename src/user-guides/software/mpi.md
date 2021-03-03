@@ -1,16 +1,16 @@
 ---
 author: Marco Olguin
-id: 10
-date: 2021-02-23T12:00:00
+id: 8
+date: 2021-02-23T00:00:00.000Z
 title: Message Passing Interface (MPI)
 path: mpi
-parentPath: user-information/user-guides/high-performance-computing
-cat: discoveryGuides
+parentPath:  user-information/user-guides/software-and-programming
+cat: software
 parentPage: User Guides
-sideMenuParent: Discovery
 backToTopBtnFlag: true
-excerpt: A user guide on the Message Passing Interface (MPI) used in parallel programming.
+excerpt: A user guide on the Message Passing Interface (MPI), which is used in parallel programming.
 ---
+
 
 The Message Passing Interface (MPI) is a **message-passing standard** used in parallel programming. The MPI standard exists in numerous implementations, four of which the CARC provides support for:
 

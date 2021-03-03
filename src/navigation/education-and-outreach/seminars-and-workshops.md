@@ -18,13 +18,15 @@ The workshops below are approximately two hours in length and are offered severa
 
 <a href="/news-and-events/events" class="markdown-custom-link">Check current event schedule</a>
 
+<a href="/education-and-outreach/video-learning" class="markdown-custom-link">Workshop recordings</a>
+
 ### Research computing essentials
 
 #### Introduction to CARC Systems
 
 An overview of the CARC's high-performance computing clusters. This workshop covers how to log in, manage and transfer data, load and build software, and run and monitor jobs.
 
-Recording: https://www.youtube.com/watch?v=gtX6VM2UkTo
+[Workshop recording (February 5, 2021)](/education-and-outreach/video-learning/discovery-overview)
 
 #### Introduction to the Unix Shell
 
@@ -35,6 +37,8 @@ Materials: https://swcarpentry.github.io/shell-novice/
 #### Software Management on CARC Systems
 
 This workshop introduces users to the CARC's software stack, which uses Lmod, a Lua-based module system. Users will learn how to manage their environment, find software, load modules, and build their own domain-specific packages.
+
+[Workshop recording (February 26, 2021)](/education-and-outreach/video-learning/software-management)
 
 #### Data Management on CARC Systems
 
@@ -54,7 +58,7 @@ Materials: https://github.com/uschpc/workshop-singularity
 
 #### Methods for Automating Job Submission
 
-CARC users may find themselves doing repetitive tasks like manually launching jobs, checking their job status, and deciding what kind of jobs to submit based on the results. This workshop covers methods for automating these tasks with tools like job arrays and workflow managment software.
+CARC users may find themselves doing repetitive tasks like manually launching jobs, checking their job status, and deciding what kind of jobs to submit based on the results. This workshop covers methods for automating these tasks with tools like job arrays and workflow management software.
 
 ### Programming
 
@@ -71,6 +75,8 @@ Intermediate-to-advanced topics for getting improved Python performance in an HP
 An introduction to the R programming environment and language for statistical computing and graphics. This workshop covers basic R concepts and functions for importing, exporting, processing, summarizing, visualizing, and modeling data. It also covers how to install packages and develop scripts and discusses best practices for R programming.
 
 Materials: https://github.com/uschpc/workshop-r-intro
+
+[Workshop recording (February 12, 2021)](/education-and-outreach/video-learning/intro-to-r)
 
 #### HPC with R
 

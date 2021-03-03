@@ -1,7 +1,7 @@
 ---
 author: Andrea Renney
 id: 2
-date: 2020-11-24T00:00:00.00Z
+date: 2021-03-02T00:00:00.00Z
 title: CCP Purchase Pricing Model
 excerpt: An overview of the traditional purchase model for the Condo Cluster Program (CCP).
 routePath: user-information/ccp/program-information
@@ -17,9 +17,11 @@ The traditional system purchase model is a useful option when research groups ne
 
 Like the annual subscription model, research groups will have exclusive access to the resources they purchase. Principal Investigators (PIs) only need to purchase compute nodes (CPUs and/or GPUs), cables, and a 5-year manufacturer’s warranty service. Other equipment and services, including racks, network switches, power and cooling, system support, and machine room operation in our data center, is paid for by the university. 
 
+**The condo purchase request period for 2021 is currently closed. Please contact us at <carc-condo@usc.edu> to inquire about the next condo purchase period.**
+
 ### Compute resources available for purchase
 
-The following table summarizes the CPU and GPU nodes that are available for purchase using the traditional purchase model:
+The following table summarizes the CPU and GPU nodes that were available in 2021 for purchase using the traditional purchase model:
 
 #### CPU nodes
 
@@ -51,4 +53,4 @@ A condo purchase request is possible during the CARC's annual condo purchase req
 
 PIs use the [User Portal](/user-information/user-guides/research-computing-user-portal) to select and purchase their desired condo resources. See the [Request New Condo Purchase user guide](/user-information/user-guides/research-computing-user-portal/request-new-purchase) for detailed instructions.
 
-**The condo purchase request period is currently open. The deadline to submit a purchase request is February 28, 2021**.
+**The condo purchase request period for 2021 is currently closed. Please contact us at <carc-condo@usc.edu> to inquire about the next condo purchase period.**

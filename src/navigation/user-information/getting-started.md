@@ -38,6 +38,8 @@ The following graphic depicts the CARC cyberinfrastructure and how different sys
 
 > For detailed information on the Discovery cluster, see our [Getting Started with Discovery user guide](/user-information/user-guides/high-performance-computing/getting-started-discovery) and our [System Information page](/user-information/system-information).
 
+<a href="/education-and-outreach/video-learning/discovery-overview" class="markdown-custom-link">Discovery Cluster Overview video</a>
+
 #### Endeavour condo cluster
 
 Endeavour is a high-performance computing cluster like Discovery, but Endeavour is comprised of  resources that Condo Cluster Program (CCP) users lease or subscribe to, with each research group's resources dedicated for their use only. For more information on the CCP, see the [Condo Cluster Program pages](/user-information/ccp). For detailed information on the Endeavour cluster, see our [Getting Started with Endeavour user guide](/user-information/user-guides/high-performance-computing/getting-started-endeavour)

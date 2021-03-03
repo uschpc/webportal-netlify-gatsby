@@ -1,7 +1,7 @@
 ---
 author: Cesar Sul
 id: 3
-date: 2021-02-18T12:00:00.387Z
+date: 2021-03-01T12:00:00.387Z
 title: Discovery Resource Overview
 path: discovery-resources
 parentPath: user-information/user-guides/high-performance-computing
@@ -16,6 +16,8 @@ The Center for Advanced Research Computing's general use high-performance comput
 
 For general CARC system specifications, see our [System Information page](/user-information/system-information).
 
+<a href="/education-and-outreach/video-learning/discovery-overview" class="markdown-custom-link">Discovery Cluster Overview video</a>
+
 ### Partitions and compute nodes
 
 There are a few Slurm partitions available on Discovery, each with a separate job queue. These are general-use partitions available to all researchers. The table below describes the intended purpose for each partition.
@@ -26,6 +28,7 @@ There are a few Slurm partitions available on Discovery, each with a separate jo
 | epyc-64 | Medium-to-large parallel jobs (single node or multiple nodes) |
 | oneweek | Long-running jobs (up to 7 days) |
 | debug   | Short-running jobs for debugging purposes |
+| largemem   | Jobs requiring larger amounts of memory (up to 1 TB) |
 
 Each partition has a different mix of compute nodes. The table below describes the available nodes on each of the partitions. Typically, each node has two sockets with one processor each and an equal number of cores per processor; in the table below, the CPUs column refers to logical CPUs such that 1 logical CPU = 1 core = 1 thread. In addition, please note that the maximum available memory per node for jobs is actually a few GB less than listed in the Memory column because some memory is reserved for system overhead.
 
@@ -43,8 +46,9 @@ Each partition has a different mix of compute nodes. The table below describes t
 |main|81|24|94|xeon-4116|2.10 GHz|None|d05-[03-15,26-42],d06-[15-29],d11-[09-47]|
 |oneweek|38|16|64|xeon-2650v2|2.60 GHz|None|e01-[46,48,52,62,64],e02-[40-72]|
 |oneweek|1|16|256|xeon-2650v2|2.60 GHz|None|e01-76|
+|largemem|3|40|1031|xeon-4850|2.00 Ghz||None|a16-[02-04]|
 
-> Note: This information is current as of February 18, 2021. Use the `sinfo2` command for similar information.
+> Note: This information is current as of February 25, 2021. Use the `sinfo2` command for similar information.
 
 ### Job limits
 
@@ -52,10 +56,11 @@ Discovery is a shared resource, so we put limits on the size and duration of job
 
 | Queue (or partition) | Default run time | Maximum run time | Maximum concurrent cores | Maximum number of jobs or job steps (running or pending) |
 |---|---|---|---|---|
-| main    | 1 hour     |  48 hours   | 1,200 | 5,000 |
-| epyc-64 | 1 hour     |  48 hours   | 1,200 | 5,000 |
-| oneweek | 1 hour     | 168 hours   | 208   | 50    |
-| debug   | 30 minutes | 30  minutes | 48    | 5     |
+| main     | 1 hour     |  48 hours   | 1,200 | 5,000 |
+| epyc-64  | 1 hour     |  48 hours   | 1,200 | 5,000 |
+| oneweek  | 1 hour     | 168 hours   | 208   | 50    |
+| debug    | 30 minutes | 30  minutes | 48    | 5     |
+| largemem | 1 hour     | 168 hours   | 128   | 2     |
 
 Jobs also depend on your project account allocations, and each job will subtract from your project's allocated System Units (SUs) depending on the types of resources you request:
 
@@ -78,12 +83,12 @@ You can use the `myaccount` command to see your available and default account al
 
 ```
 ttrojan@discovery2:~$ myaccount
-  
+
       User              Account             Def Acct                  QOS
 ---------- -------------------- -------------------- --------------------
    ttrojan                acct1                acct1               normal
 ----------
-  
+
 ----
 account usage: acct1
 --------------------------------------------------------------------------------

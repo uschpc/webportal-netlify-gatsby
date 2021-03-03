@@ -12,6 +12,8 @@ import ResearcherProfiles from '../components/researcher-profiles'
 // import Projects from '../components/projects'
 // import ProjectPages from '../components/project-pages'
 import ZoomMeeting from '../components/zoom-meeting'
+import Pagination from '../components/pagination'
+import OnDemandVideo from '../components/on-demand-video'
 
 const findSubMenu = (menubar, nav) => {
   const subNav = nav.edges.filter((ele, i) => {
@@ -21,8 +23,9 @@ const findSubMenu = (menubar, nav) => {
 }
 
 export default function Template({ data }) {
-  let content = data.content || data.newsContent || data.researcherContent || data.projectContent;
+  let content = data.content || data.newsContent || data.researcherContent || data.projectContent || data.onDemandVideo;
   let subMenu = findSubMenu(content.frontmatter.parentEle, data.sideMenu)
+  console.log(content)
     return (
       <Layout {...data.navigation} backToTopBtnFlag={content.frontmatter.backToTopBtnFlag}>
           <SEO title={content.frontmatter.title}/>
@@ -30,7 +33,8 @@ export default function Template({ data }) {
             <div className="container page-body">
                 <div className="left-column">
                   {content.frontmatter.parentEle == 'News & Events' && <Link to='/news-and-events' ><h2>{content.frontmatter.parentEle}</h2></Link>}
-                  {content.frontmatter.parentEle != 'News & Events' && <Link to={content.frontmatter.parentPath} ><h2>{content.frontmatter.parentEle}</h2></Link>}
+                  {content.frontmatter.parentEle == 'Education & Outreach' && <Link to='/education-and-outreach' ><h2>{content.frontmatter.parentEle}</h2></Link>}
+                  {content.frontmatter.parentEle != 'News & Events' && content.frontmatter.parentEle != 'Education & Outreach' && <Link to={content.frontmatter.parentPath} ><h2>{content.frontmatter.parentEle}</h2></Link>}
                   {subMenu.map((item, i) => {
                   return (
                     !item.node.frontmatter.externalPath ? (
@@ -66,7 +70,7 @@ export default function Template({ data }) {
                 <h1>{content.frontmatter.title}</h1>
                   {content.frontmatter.cat !== 'news' ? (
                     <>
-                      {(content.frontmatter.sharedID !== "news_Announcements_and_researcher_profile") && <Markdown source={content.html} escapeHtml={false} />}
+                      {(content.frontmatter.sharedID !== "news_Announcements_and_researcher_profile" && content.frontmatter.cat !== "onDemandVideo") && <Markdown source={content.html} escapeHtml={false} />}
                       {(content.frontmatter.uniqID === "news_Announcements") && (
                         <>
                           <LatestNews {...data.news } flag={true} />
@@ -94,6 +98,12 @@ export default function Template({ data }) {
                         </>
                       )}
                       {(content.frontmatter.cat === "Researchers") && <ResearcherProfiles {...data.researcherContent } /> }
+                      {(content.frontmatter.uniqID === "on-demand") && (
+                        <>
+                          <Pagination {...data.allOnDemandVideo} />
+                        </>
+                      )}
+                      {(content.frontmatter.cat === "onDemandVideo") && <OnDemandVideo {...data.onDemandVideo } /> }
                       {/* {(content.frontmatter.uniqID === "current_projects") && (
                         <>
                           <Projects {...data.projects } />
@@ -141,7 +151,7 @@ export default function Template({ data }) {
 
                 </div>
                 <div className="right-column">
-                {(content.frontmatter.sharedID !== "news_Announcements_and_researcher_profile") && (content.frontmatter.cat !== 'news')  && <Content />}
+                {(content.frontmatter.sharedID !== "news_Announcements_and_researcher_profile") && (content.frontmatter.cat !== 'news') && (content.frontmatter.cat !== "onDemandVideo")  && <Content />}
                     {/* <div className="system-status">
                         <h4>Related Links</h4>
                         <h5>Some links</h5>
@@ -216,6 +226,24 @@ export const coldFrontQuery = graphql`
         }
       }
     }
+    allOnDemandVideo: allMarkdownRemark(sort: {fields: frontmatter___id}, filter: {frontmatter: {cat: {eq: "onDemandVideo"}}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            parentPath
+            parentEle
+            redirectToPage
+            cat
+            excerpt
+            featuredVideo
+            uniqID
+          }
+          html
+        }
+      }
+    }
     researcherContent: markdownRemark(frontmatter: {cat: {eq: "Researchers"}, path: {eq: $slug}}) {
       frontmatter {
         title
@@ -241,6 +269,20 @@ export const coldFrontQuery = graphql`
         excerpt
         author
         sharedID
+        }
+      html
+    }
+    onDemandVideo: markdownRemark(frontmatter: {cat: {eq: "onDemandVideo"}, path: {eq: $slug}}) {
+      frontmatter {
+        title
+        parentEle
+        cat
+        thumbnail
+        date
+        excerpt
+        author
+        uniqID
+        featuredVideo
         }
       html
     }

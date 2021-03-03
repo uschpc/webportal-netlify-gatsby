@@ -1,7 +1,7 @@
 ---
 author: Ryan Sim
 id: 6
-date: 2020-11-02T00:00:00.000Z
+date: 2021-03-01T00:00:00.000Z
 title: Software Module System
 path: lmod
 parentPath: user-information/user-guides/high-performance-computing
@@ -15,6 +15,8 @@ excerpt: An introduction to the software module system on CARC systems.
 On the Discovery cluster and the Endeavour condo cluster, users can find and load software using the [Lmod](https://lmod.readthedocs.io/en/latest/) **module system**. Lmod dynamically changes your shell environment using **module files** to ensure the software applications and libraries you use are compatible. Module files are configuration files, written as Lua scripts, that instruct how to make an application or library available during your session. Typically, a module file contains instructions to initialize or modify environment variables, such as `PATH`.
 
 Using a module system like Lmod is helpful because applications and libraries compiled with one compiler are not necessarily compatible with applications and libraries compiled with a different compiler, and your shell environment must be changed to accommodate these incompatibilities. **With Lmod, resetting your environment is done dynamically when you load new modules**. Loading a module will make available only compatible software for you to use. In this way, modules are organized in a hierarchy based on compilers.
+
+<a href="/education-and-outreach/video-learning/software-management" class="markdown-custom-link">Software Management on CARC Systems video</a>
 
 ###  Finding software
 

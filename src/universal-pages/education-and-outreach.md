@@ -18,6 +18,10 @@ Our office hours and consultations are great for individualized, (virtual) in-pe
 
 The CARC offers a number of rotating workshops designed to introduce users to CARC systems and related technologies.
 
+### [On-demand video learning content](/education-and-outreach/video-learning)
+
+CARC video learning content includes visual step-by-step guides for common tasks like logging in, submitting jobs, data management, and navigating the software stack, as well as recordings of our workshops.
+
 ### [Workshop schedule and registration](/news-and-events/events)
 
 Our Events page, where you'll find the schedule of upcoming workshops and office hours and links to register.

@@ -356,6 +356,11 @@ body {
             color: #686766;
           }
         }
+        &.video-child-pages {
+          iframe {
+            height: 450px !important;
+          }
+        }
       }
       p {
         a {
@@ -403,6 +408,21 @@ body {
           }
           h3 {
             text-decoration: underline;
+          }
+        }
+        &.videos {
+          display: flex;
+          flex-direction: row-reverse;
+          .content {
+            width: 65%;
+            padding-left: 15px;
+          }
+          iframe {
+            width: 200px !important;
+            height: 165px !important;
+          }
+          h4 {
+            font-weight: normal;
           }
         }
       }
