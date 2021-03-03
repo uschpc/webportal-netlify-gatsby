@@ -1,7 +1,7 @@
 ---
 author: Derek Strong
 id: 1
-date: 2020-12-20T12:00:00.387Z
+date: 2021-03-01T12:00:00.387Z
 title: Getting Started with Discovery
 path: getting-started-discovery
 parentPath: user-information/user-guides/high-performance-computing
@@ -13,6 +13,8 @@ excerpt: A user guide for using Discovery, particularly for new users.
 ---
 
 This guide will help you get started with the Center for Advanced Research Computing's Discovery computing cluster by instructing you on how to connect, log in, transfer data, and run jobs.
+
+<a href="/education-and-outreach/video-learning/discovery-overview" class="markdown-custom-link">Discovery Cluster Overview video</a>
 
 A CARC account is **required** to log in to and use CARC resources. For information on applying for a CARC account, see the [Accounts and Allocations page](/user-information/accounts).
 

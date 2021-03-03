@@ -1,7 +1,7 @@
 ---
 author: Ryan Sim
 id: 2
-date: 2020-10-12T00:00:00.000Z
+date: 2021-03-02T00:00:00.000Z
 title: Using Python
 path: python
 parentPath:  user-information/user-guides/software-and-programming
@@ -45,7 +45,7 @@ Many popular Python packages have already been installed on CARC systems. Use th
 
 #### Jupyter notebooks
 
-Please note that we do not currently support the use of Jupyter notebooks on our systems. We will add support for Jupyter later in 2020 as part of a new hybrid cloud computing system.
+Please note that we do not currently support the use of Jupyter notebooks on our systems. We will add support for Jupyter later in 2021 as part of a new hybrid cloud computing system.
 
 ### Installing Python packages
 
