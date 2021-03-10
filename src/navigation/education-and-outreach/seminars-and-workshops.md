@@ -82,7 +82,9 @@ Materials: https://github.com/uschpc/workshop-r-intro
 
 Intermediate-to-advanced topics in R programming using the CARC's high-performance computing clusters, including data I/O, memory usage, parallel programming, debugging, and profiling.
 
-Materials: https://github.com/uschpc/workshop-r-hpc
+Materials: https://github.com/uschpc/workshop-r-hpc  
+
+[Workshop recording (March 5, 2021)](/education-and-outreach/video-learning/hpc-with-r)
 
 ### Research applications
 

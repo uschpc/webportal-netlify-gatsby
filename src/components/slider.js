@@ -5,6 +5,14 @@ import { Link } from 'gatsby';
 
 const content = [
   {
+    title: "New On-Demand Video Learning Content Launches",
+    description:
+      "Videos include workshop recordings and step-by-step walkthroughs of user guide topics",
+    button: "Read More",
+    url: "/news-and-events/news-and-announcements/new-on-demand-video-content",
+    image: "/images/slider-image-2-small.jpg"
+  },
+  {
     title: "HackSC Connects the World in 2021",
     description:
       "USC’s largest hackathon goes virtual this month with a theme of connectivity",
@@ -19,14 +27,6 @@ const content = [
     button: "Read More",
     url: "/news-and-events/news-and-announcements/spring-2021-workshop-schedule",
     image: "/images/slider-image-books-small.jpg"
-  },
-  {
-    title: "New Condo Cluster Program Officially Launches",
-    description:
-      "New program offers greater flexibility, with two ownership models for dedicated compute nodes",
-    button: "Read More",
-    url: "/news-and-events/news-and-announcements/new-condo-cluster-program-launches",
-    image: "/images/slider-image-2-small.jpg"
   }
   ];
 

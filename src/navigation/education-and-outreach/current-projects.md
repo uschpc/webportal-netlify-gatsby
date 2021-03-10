@@ -31,16 +31,12 @@ More information on the grant: https://www.nsf.gov/awardsearch/showAward?AWD_ID=
 
 More information on the Campus Cyberinfrastructure (CC*) Program: https://www.nsf.gov/pubs/2020/nsf20507/nsf20507.htm
 
-<!--
 ### New cryo-EM facility and collaborations with Dornsife and ISI
-##### Collaborators: Dornsife College of Letters, Arts and Sciences, Center for Advanced Research Computing, USC Information Sciences Institute (ISI)
--->
+##### Collaborators: Dornsife College of Letters, Arts and Sciences, Amgen, Center for Advanced Research Computing, USC Information Sciences Institute (ISI)
 
-<!--The CARC is assisting Dornsife with its new cryo-EM facility by developing a data workflow for the facility and coordinating its cyberinfrastructure, including a data server and a scheduler for secure, automated data transfer.
--->
+USC Dornsife and Amgen have agreed to house two cryo-EM microscopes at USC, to be operated by the Center of Excellence in Nano Imaging. The CARC is leading the collaborative effort with other ITS teams to create a full research ecosystem for our USC research community, including user interface, data and computational workflow management platform, and special GPU cluster deployment.
 
-<!--The CARC is also working with the Information Sciences Institute (ISI) to develop a data workflow for the cryo-EM facility, using platforms developed by ISI (e.g., [Pegasus](https://pegasus.isi.edu/about/), [DERIVA](http://isrd.isi.edu/deriva/)).
--->
+The microscopes will transmit up to 16 TB of refined data (images near atomic resolution) per day to USC servers and to Amgen's AWS cloud storage. USC researchers at Dornsife, Viterbi, Keck School of Medicine, and other USC research institutes will make use of the new microscropes for their research.
 
 ### Publication acknowledgement in American Chemical Society's ACS Catalysis
 

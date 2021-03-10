@@ -1,7 +1,7 @@
 ---
 author: Derek Strong
 id: 4
-date: 2021-03-01T12:00:00.387Z
+date: 2021-03-08T12:00:00.387Z
 title: Using R
 path: r
 parentPath: user-information/user-guides/software-and-programming
@@ -288,6 +288,8 @@ Submitted batch job 275
 The results of the job will be logged and, by default, saved to a file of the form `slurm-<jobid>.out` in the same directory where the job script is located.
 
 ### Parallel programming with R
+
+<a href="/education-and-outreach/video-learning/hpc-with-r" class="markdown-custom-link">HPC with R video</a>
 
 R supports both implicit and explicit parallel programming. Some packages and their functions utilize implicit parallelism, where the user does not need to explicitly call for parallel computation by modifying their code. These packages will automatically use the cores available. Linear algebra computations, for example, will use the OpenBLAS library that automatically runs in parallel if more than one core is used. In addition, there are a number of R packages that support explicit parallelism, including the base `parallel` package as well as the `foreach`, `future`, and `BiocParallel` packages among others.
 
