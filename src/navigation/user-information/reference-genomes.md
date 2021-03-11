@@ -11,5 +11,5 @@ secCat: referenceGenomes
 excerpt: Reference Genomes
 ---
 
-Click the radio button for the genome of your choice, then click the clipboard icon to copy it. On Rivanna please use the right click method to paste.
+Click the radio button for the genome of your choice, then click the clipboard icon to copy it. On Discovery please use the right click method to paste.
 
