@@ -58,10 +58,10 @@ const SoftwarePath = ({ dataset }) => {
                 dataset.map(item => {
                     return (<tbody>
                             <tr>
-                                <td rowspan="4" class="tg-dc35 organism">{item.organism}</td>
+                                <td rowspan="4" className="tg-dc35 organism">{item.organism}</td>
                                 <td>
                                     {item.sources.map(source => {
-                                        return <p class="source">{source.name}</p>
+                                        return <p className="source">{source.name}</p>
                                     })}
                                 </td>
                                 <td>
