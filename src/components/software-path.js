@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 import { Link } from 'gatsby';
 import SearchProject from './SearchContainerTools';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
+import ReactHtmlParser from 'react-html-parser';
 
 
-const SoftwarePath = () => {
+const SoftwarePath = ({ dataset }) => {
     const [path, updatePath] = useState('/project')
     const [copied, updatecopied] = useState(false)
+    const [html, setHtml] = useState('')
     const handleSelection = (e) => {
         const value = e.target.value
         updatePath(value)
@@ -29,62 +31,59 @@ const SoftwarePath = () => {
                         </CopyToClipboard>
                     </div>
                 </div>
-                {/* {copied ? <span style={{color: 'red'}}>Copied.</span> : null} */}
             </div>
         </div>
-        <table id="myTable2" class="tg scroll">
+        <table id="software-path" class="tg scroll">
             <thead>
             <tr>
                 <th class="tg-0qmj" rowspan="2">Organism</th>
                 <th class="tg-0qmj" rowspan="2">Source</th>
                 <th class="tg-0qmj" rowspan="2">Build</th>
-                <th class="tg-0qmj">Whole Genome</th>
-                <th class="tg-0qmj" colspan="3" >Index Files</th>
+                <th class="tg-0qmj">
+                <tr>
+                    <th>AbundantSequences</th>
+                    <th>BWAIndex</th>
+                    <th>Bowtie2Index</th>
+                    <th>BowtieIndex</th>
+                    <th>Chromosomes</th>
+                    <th>WholeGenomeFasta</th>
+                    <th>Methylation</th>
+                    <th>WholeGenomeFasta</th>
+                </tr>
+                </th>
             </tr>
-            <tr>
-                <th class="tg-0qmj">FASTA</th>
-                <th class="tg-0qmj">BWA</th>
-                <th class="tg-0qmj">Bowtie2</th>
-                <th class="tg-0qmj">STAR2</th>
-            </tr>
+            
             </thead>
-            <tbody>
-                <tr>
-                    <td rowspan="4" class="tg-dc35">Arabidopsis thaliana</td>
-                    <td rowspan="2" class="tg-dc35" >Ensembl</td>
-                    <td class="tg-dc35">TAIR9</td>
-                    <td class="tg-dc35">
-                    <input type="radio" class="genome" name="genome" value="/project/genomes/Arabidopsis_thaliana/Ensembl/TAIR9/Sequence/WholeGenomeFasta/genome.fa" onChange={(e) => handleSelection(e)}/>
-                    </td>
-                    <td class="tg-dc35">
-                    <input type="radio" class="genome" name="genome" value="/project/genomes/Arabidopsis_thaliana/Ensembl/TAIR9/Sequence/BWAIndex/" onChange={(e) => handleSelection(e)} />
-                    </td>
-                    <td class="tg-dc35">
-                    <input type="radio" class="genome" name="genome" value="/project/genomes/Arabidopsis_thaliana/Ensembl/TAIR9/Sequence/Bowtie2Index/" onChange={(e) => handleSelection(e)} />
-                    </td>
-                    <td class="tg-dc35">
-                     <input type="radio" class="genome" name="genome" value="/project/genomes/Arabidopsis_thaliana/Ensembl/TAIR9/Sequence/Bowtie2Index/testhere" onChange={(e) => handleSelection(e)} />
-                    </td>
-                </tr>
-            </tbody>
-            <tbody>
-                <tr>
-                    <td rowspan="4" class="tg-dc35">Arabidopsis thaliana</td>
-                    <td rowspan="2" class="tg-dc35" >Ensembl</td>
-                    <td class="tg-dc35">TAIR9</td>
-                    <td class="tg-dc35">
-                    <input type="radio" class="genome" name="genome" value="/project/genomes/Arabidopsis_thaliana/Ensembl/TAIR9/Sequence/WholeGenomeFasta/genome.fa" onChange={(e) => handleSelection(e)} />
-                    </td>
-                    <td class="tg-dc35">
-                    <input type="radio" class="genome" name="genome" value="/project/genomes/Arabidopsis_thaliana/Ensembl/TAIR9/Sequence/BWAIndex/" onChange={(e) => handleSelection(e)} />
-                    </td>
-                    <td class="tg-dc35">
-                    <input type="radio" class="genome" name="genome" value="/project/genomes/Arabidopsis_thaliana/Ensembl/TAIR9/Sequence/Bowtie2Index/" onChange={(e) => handleSelection(e)} />
-                    </td>
-                    <td class="tg-dc35">
-                    </td>
-                </tr>
-            </tbody>
+            { 
+                dataset.map(item => {
+                    return (<tbody>
+                            <tr>
+                                <td rowspan="4" class="tg-dc35 organism">{item.organism}</td>
+                                <td>
+                                    {item.sources.map(source => {
+                                        return <p class="source">{source.name}</p>
+                                    })}
+                                </td>
+                                <td>
+                                    {item.sources.map(source => {
+                                        return source.build.map(build => {
+                                            return <p>{build.name}</p>
+                                        })
+                                    })}
+                                </td>
+                                {item.sources.map(source => {
+                                    return source.build.map((build, index) => {
+                                        return <tbody> { Object.keys(build.Sequence).map(seq => {
+                                            return <td className="checkbox" style={{ borderBottom: 'none'}}><input type="radio" class="genome" name="genome" value={build.Sequence[seq]} onChange={(e) => handleSelection(e)} /></td>
+                                        }) } </tbody>
+                                    })
+                                })}
+                                {/* <td rowspan="4" class="tg-dc35">{item.organism}</td> */}
+                            </tr>
+                        </tbody>)
+
+                })
+            } 
     </table>
 </div>
     

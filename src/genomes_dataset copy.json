@@ -1,0 +1,1461 @@
+[
+    {
+        "organism": "Arabidopsis_thaliana",
+        "sources": [
+            {
+                "name": "Ensembl",
+                "build": [
+                    {
+                        "name": "TAIR10",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Arabidopsis_thaliana/Ensembl/TAIR10/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Arabidopsis_thaliana/Ensembl/TAIR10/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Arabidopsis_thaliana/Ensembl/TAIR10/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Arabidopsis_thaliana/Ensembl/TAIR10/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Arabidopsis_thaliana/Ensembl/TAIR10/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Arabidopsis_thaliana/Ensembl/TAIR10/Sequence/WholeGenomeFasta"
+                        }
+                    },
+                    {
+                        "name": "TAIR9",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Arabidopsis_thaliana/Ensembl/TAIR9/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Arabidopsis_thaliana/Ensembl/TAIR9/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Arabidopsis_thaliana/Ensembl/TAIR9/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Arabidopsis_thaliana/Ensembl/TAIR9/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Arabidopsis_thaliana/Ensembl/TAIR9/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Arabidopsis_thaliana/Ensembl/TAIR9/Sequence/WholeGenomeFasta"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "NCBI",
+                "build": [
+                    {
+                        "name": "TAIR10",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Arabidopsis_thaliana/NCBI/TAIR10/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Arabidopsis_thaliana/NCBI/TAIR10/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Arabidopsis_thaliana/NCBI/TAIR10/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Arabidopsis_thaliana/NCBI/TAIR10/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Arabidopsis_thaliana/NCBI/TAIR10/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Arabidopsis_thaliana/NCBI/TAIR10/Sequence/WholeGenomeFasta"
+                        }
+                    },
+                    {
+                        "name": "build9.1",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Arabidopsis_thaliana/NCBI/build9.1/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Arabidopsis_thaliana/NCBI/build9.1/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Arabidopsis_thaliana/NCBI/build9.1/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Arabidopsis_thaliana/NCBI/build9.1/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Arabidopsis_thaliana/NCBI/build9.1/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Arabidopsis_thaliana/NCBI/build9.1/Sequence/WholeGenomeFasta"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "organism": "Bacillus_cereus_ATCC_10987",
+        "sources": [
+            {
+                "name": "NCBI",
+                "build": [
+                    {
+                        "name": "2004-02-13",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Bacillus_cereus_ATCC_10987/NCBI/2004-02-13/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Bacillus_cereus_ATCC_10987/NCBI/2004-02-13/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Bacillus_cereus_ATCC_10987/NCBI/2004-02-13/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Bacillus_cereus_ATCC_10987/NCBI/2004-02-13/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Bacillus_cereus_ATCC_10987/NCBI/2004-02-13/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Bacillus_cereus_ATCC_10987/NCBI/2004-02-13/Sequence/WholeGenomeFasta"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "organism": "Bacillus_subtilis_168",
+        "sources": [
+            {
+                "name": "Ensembl",
+                "build": [
+                    {
+                        "name": "EB2",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Bacillus_subtilis_168/Ensembl/EB2/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Bacillus_subtilis_168/Ensembl/EB2/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Bacillus_subtilis_168/Ensembl/EB2/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Bacillus_subtilis_168/Ensembl/EB2/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Bacillus_subtilis_168/Ensembl/EB2/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Bacillus_subtilis_168/Ensembl/EB2/Sequence/WholeGenomeFasta"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "organism": "Bos_taurus",
+        "sources": [
+            {
+                "name": "Ensembl",
+                "build": [
+                    {
+                        "name": "Btau_4.0",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Bos_taurus/Ensembl/Btau_4.0/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Bos_taurus/Ensembl/Btau_4.0/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Bos_taurus/Ensembl/Btau_4.0/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Bos_taurus/Ensembl/Btau_4.0/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Bos_taurus/Ensembl/Btau_4.0/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Bos_taurus/Ensembl/Btau_4.0/Sequence/WholeGenomeFasta"
+                        }
+                    },
+                    {
+                        "name": "UMD3.1",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Bos_taurus/Ensembl/UMD3.1/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Bos_taurus/Ensembl/UMD3.1/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Bos_taurus/Ensembl/UMD3.1/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Bos_taurus/Ensembl/UMD3.1/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Bos_taurus/Ensembl/UMD3.1/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Bos_taurus/Ensembl/UMD3.1/Sequence/WholeGenomeFasta"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "NCBI",
+                "build": [
+                    {
+                        "name": "Btau_4.2",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Bos_taurus/NCBI/Btau_4.2/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Bos_taurus/NCBI/Btau_4.2/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Bos_taurus/NCBI/Btau_4.2/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Bos_taurus/NCBI/Btau_4.2/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Bos_taurus/NCBI/Btau_4.2/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Bos_taurus/NCBI/Btau_4.2/Sequence/WholeGenomeFasta"
+                        }
+                    },
+                    {
+                        "name": "Btau_4.6.1",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Bos_taurus/NCBI/Btau_4.6.1/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Bos_taurus/NCBI/Btau_4.6.1/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Bos_taurus/NCBI/Btau_4.6.1/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Bos_taurus/NCBI/Btau_4.6.1/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Bos_taurus/NCBI/Btau_4.6.1/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Bos_taurus/NCBI/Btau_4.6.1/Sequence/WholeGenomeFasta"
+                        }
+                    },
+                    {
+                        "name": "UMD_3.1",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Bos_taurus/NCBI/UMD_3.1/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Bos_taurus/NCBI/UMD_3.1/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Bos_taurus/NCBI/UMD_3.1/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Bos_taurus/NCBI/UMD_3.1/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Bos_taurus/NCBI/UMD_3.1/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Bos_taurus/NCBI/UMD_3.1/Sequence/WholeGenomeFasta"
+                        }
+                    },
+                    {
+                        "name": "UMD_3.1.1",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Bos_taurus/NCBI/UMD_3.1.1/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Bos_taurus/NCBI/UMD_3.1.1/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Bos_taurus/NCBI/UMD_3.1.1/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Bos_taurus/NCBI/UMD_3.1.1/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Bos_taurus/NCBI/UMD_3.1.1/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Bos_taurus/NCBI/UMD_3.1.1/Sequence/WholeGenomeFasta"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "organism": "Caenorhabditis_elegans",
+        "sources": [
+            {
+                "name": "NCBI",
+                "build": [
+                    {
+                        "name": "WS190",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Caenorhabditis_elegans/NCBI/WS190/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Caenorhabditis_elegans/NCBI/WS190/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Caenorhabditis_elegans/NCBI/WS190/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Caenorhabditis_elegans/NCBI/WS190/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Caenorhabditis_elegans/NCBI/WS190/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Caenorhabditis_elegans/NCBI/WS190/Sequence/WholeGenomeFasta"
+                        }
+                    },
+                    {
+                        "name": "WS195",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Caenorhabditis_elegans/NCBI/WS195/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Caenorhabditis_elegans/NCBI/WS195/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Caenorhabditis_elegans/NCBI/WS195/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Caenorhabditis_elegans/NCBI/WS195/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Caenorhabditis_elegans/NCBI/WS195/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Caenorhabditis_elegans/NCBI/WS195/Sequence/WholeGenomeFasta"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "Ensembl",
+                "build": [
+                    {
+                        "name": "WBcel215",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Caenorhabditis_elegans/Ensembl/WBcel215/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Caenorhabditis_elegans/Ensembl/WBcel215/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Caenorhabditis_elegans/Ensembl/WBcel215/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Caenorhabditis_elegans/Ensembl/WBcel215/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Caenorhabditis_elegans/Ensembl/WBcel215/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Caenorhabditis_elegans/Ensembl/WBcel215/Sequence/WholeGenomeFasta"
+                        }
+                    },
+                    {
+                        "name": "WBcel235",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Caenorhabditis_elegans/Ensembl/WBcel235/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Caenorhabditis_elegans/Ensembl/WBcel235/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Caenorhabditis_elegans/Ensembl/WBcel235/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Caenorhabditis_elegans/Ensembl/WBcel235/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Caenorhabditis_elegans/Ensembl/WBcel235/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Caenorhabditis_elegans/Ensembl/WBcel235/Sequence/WholeGenomeFasta"
+                        }
+                    },
+                    {
+                        "name": "WS210",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Caenorhabditis_elegans/Ensembl/WS210/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Caenorhabditis_elegans/Ensembl/WS210/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Caenorhabditis_elegans/Ensembl/WS210/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Caenorhabditis_elegans/Ensembl/WS210/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Caenorhabditis_elegans/Ensembl/WS210/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Caenorhabditis_elegans/Ensembl/WS210/Sequence/WholeGenomeFasta"
+                        }
+                    },
+                    {
+                        "name": "WS220",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Caenorhabditis_elegans/Ensembl/WS220/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Caenorhabditis_elegans/Ensembl/WS220/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Caenorhabditis_elegans/Ensembl/WS220/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Caenorhabditis_elegans/Ensembl/WS220/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Caenorhabditis_elegans/Ensembl/WS220/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Caenorhabditis_elegans/Ensembl/WS220/Sequence/WholeGenomeFasta"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "organism": "Canis_familiaris",
+        "sources": [
+            {
+                "name": "Ensembl",
+                "build": [
+                    {
+                        "name": "BROADD2",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Canis_familiaris/Ensembl/BROADD2/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Canis_familiaris/Ensembl/BROADD2/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Canis_familiaris/Ensembl/BROADD2/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Canis_familiaris/Ensembl/BROADD2/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Canis_familiaris/Ensembl/BROADD2/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Canis_familiaris/Ensembl/BROADD2/Sequence/WholeGenomeFasta"
+                        }
+                    },
+                    {
+                        "name": "CanFam3.1",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Canis_familiaris/Ensembl/CanFam3.1/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Canis_familiaris/Ensembl/CanFam3.1/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Canis_familiaris/Ensembl/CanFam3.1/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Canis_familiaris/Ensembl/CanFam3.1/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Canis_familiaris/Ensembl/CanFam3.1/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Canis_familiaris/Ensembl/CanFam3.1/Sequence/WholeGenomeFasta"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "NCBI",
+                "build": [
+                    {
+                        "name": "build2.1",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Canis_familiaris/NCBI/build2.1/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Canis_familiaris/NCBI/build2.1/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Canis_familiaris/NCBI/build2.1/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Canis_familiaris/NCBI/build2.1/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Canis_familiaris/NCBI/build2.1/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Canis_familiaris/NCBI/build2.1/Sequence/WholeGenomeFasta"
+                        }
+                    },
+                    {
+                        "name": "build3.1",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Canis_familiaris/Ensembl/CanFam3.1/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Canis_familiaris/Ensembl/CanFam3.1/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Canis_familiaris/Ensembl/CanFam3.1/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Canis_familiaris/Ensembl/CanFam3.1/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Canis_familiaris/Ensembl/CanFam3.1/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Canis_familiaris/Ensembl/CanFam3.1/Sequence/WholeGenomeFasta"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "organism": "Danio_rerio",
+        "sources": [
+            {
+                "name": "Ensembl",
+                "build": [
+                    {
+                        "name": "GRCz10",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Danio_rerio/Ensembl/GRCz10/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Danio_rerio/Ensembl/GRCz10/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Danio_rerio/Ensembl/GRCz10/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Danio_rerio/Ensembl/GRCz10/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Danio_rerio/Ensembl/GRCz10/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Danio_rerio/Ensembl/GRCz10/Sequence/WholeGenomeFasta"
+                        }
+                    },
+                    {
+                        "name": "Zv9",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Danio_rerio/Ensembl/Zv9/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Danio_rerio/Ensembl/Zv9/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Danio_rerio/Ensembl/Zv9/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Danio_rerio/Ensembl/Zv9/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Danio_rerio/Ensembl/Zv9/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Danio_rerio/Ensembl/Zv9/Sequence/WholeGenomeFasta"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "NCBI",
+                "build": [
+                    {
+                        "name": "GRCz10",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Canis_familiaris/NCBI/build2.1/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Canis_familiaris/NCBI/build2.1/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Canis_familiaris/NCBI/build2.1/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Canis_familiaris/NCBI/build2.1/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Canis_familiaris/NCBI/build2.1/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Canis_familiaris/NCBI/build2.1/Sequence/WholeGenomeFasta"
+                        }
+                    },
+                    {
+                        "name": "Zv9",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Danio_rerio/NCBI/Zv9/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Danio_rerio/NCBI/Zv9/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Danio_rerio/NCBI/Zv9/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Danio_rerio/NCBI/Zv9/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Danio_rerio/NCBI/Zv9/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Danio_rerio/NCBI/Zv9/Sequence/WholeGenomeFasta"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "organism": "Danio_rerio",
+        "sources": [
+            {
+                "name": "Ensembl",
+                "build": [
+                    {
+                        "name": "GRCz10",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Danio_rerio/Ensembl/GRCz10/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Danio_rerio/Ensembl/GRCz10/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Danio_rerio/Ensembl/GRCz10/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Danio_rerio/Ensembl/GRCz10/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Danio_rerio/Ensembl/GRCz10/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Danio_rerio/Ensembl/GRCz10/Sequence/WholeGenomeFasta"
+                        }
+                    },
+                    {
+                        "name": "Zv9",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Danio_rerio/Ensembl/Zv9/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Danio_rerio/Ensembl/Zv9/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Danio_rerio/Ensembl/Zv9/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Danio_rerio/Ensembl/Zv9/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Danio_rerio/Ensembl/Zv9/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Danio_rerio/Ensembl/Zv9/Sequence/WholeGenomeFasta"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "NCBI",
+                "build": [
+                    {
+                        "name": "GRCz10",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Canis_familiaris/NCBI/build2.1/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Canis_familiaris/NCBI/build2.1/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Canis_familiaris/NCBI/build2.1/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Canis_familiaris/NCBI/build2.1/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Canis_familiaris/NCBI/build2.1/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Canis_familiaris/NCBI/build2.1/Sequence/WholeGenomeFasta"
+                        }
+                    },
+                    {
+                        "name": "Zv9",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Danio_rerio/NCBI/Zv9/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Danio_rerio/NCBI/Zv9/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Danio_rerio/NCBI/Zv9/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Danio_rerio/NCBI/Zv9/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Danio_rerio/NCBI/Zv9/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Danio_rerio/NCBI/Zv9/Sequence/WholeGenomeFasta"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "organism": "Drosophila_melanogaster",
+        "sources": [
+            {
+                "name": "Ensembl",
+                "build": [
+                    {
+                        "name": "BDGP5",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Drosophila_melanogaster/Ensembl/BDGP5/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Drosophila_melanogaster/Ensembl/BDGP5/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Drosophila_melanogaster/Ensembl/BDGP5/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Drosophila_melanogaster/Ensembl/BDGP5/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Drosophila_melanogaster/Ensembl/BDGP5/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Drosophila_melanogaster/Ensembl/BDGP5/Sequence/WholeGenomeFasta"
+                        }
+                    },
+                    {
+                        "name": "BDGP5.25",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Drosophila_melanogaster/Ensembl/BDGP5.25/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Drosophila_melanogaster/Ensembl/BDGP5.25/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Drosophila_melanogaster/Ensembl/BDGP5.25/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Drosophila_melanogaster/Ensembl/BDGP5.25/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Drosophila_melanogaster/Ensembl/BDGP5.25/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Drosophila_melanogaster/Ensembl/BDGP5.25/Sequence/WholeGenomeFasta"
+                        }
+                    },
+                    {
+                        "name": "BDGP6",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Drosophila_melanogaster/Ensembl/BDGP6/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Drosophila_melanogaster/Ensembl/BDGP6/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Drosophila_melanogaster/Ensembl/BDGP6/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Drosophila_melanogaster/Ensembl/BDGP6/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Drosophila_melanogaster/Ensembl/BDGP6/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Drosophila_melanogaster/Ensembl/BDGP6/Sequence/WholeGenomeFasta"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "NCBI",
+                "build": [
+                    {
+                        "name": "build4.1",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Drosophila_melanogaster/NCBI/build4.1/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Drosophila_melanogaster/NCBI/build4.1/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Drosophila_melanogaster/NCBI/build4.1/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Drosophila_melanogaster/NCBI/build4.1/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Drosophila_melanogaster/NCBI/build4.1/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Drosophila_melanogaster/NCBI/build4.1/Sequence/WholeGenomeFasta"
+                        }
+                    },
+                    {
+                        "name": "build5",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Drosophila_melanogaster/NCBI/build5/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Drosophila_melanogaster/NCBI/build5/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Drosophila_melanogaster/NCBI/build5/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Drosophila_melanogaster/NCBI/build5/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Drosophila_melanogaster/NCBI/build5/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Drosophila_melanogaster/NCBI/build5/Sequence/WholeGenomeFasta"
+                        }
+                    },
+                    {
+                        "name": "build5.3",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Drosophila_melanogaster/NCBI/build5.3/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Drosophila_melanogaster/NCBI/build5.3/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Drosophila_melanogaster/NCBI/build5.3/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Drosophila_melanogaster/NCBI/build5.3/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Drosophila_melanogaster/NCBI/build5.3/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Drosophila_melanogaster/NCBI/build5.3/Sequence/WholeGenomeFasta"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "UCSC",
+                "build": [
+                    {
+                        "name": "dm3",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Drosophila_melanogaster/UCSC/dm3/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Drosophila_melanogaster/UCSC/dm3/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Drosophila_melanogaster/UCSC/dm3/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Drosophila_melanogaster/UCSC/dm3/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Drosophila_melanogaster/UCSC/dm3/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Drosophila_melanogaster/UCSC/dm3/Sequence/WholeGenomeFasta"
+                        }
+                    },
+                    {
+                        "name": "dm6",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Drosophila_melanogaster/UCSC/dm6/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Drosophila_melanogaster/UCSC/dm6/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Drosophila_melanogaster/UCSC/dm6/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Drosophila_melanogaster/UCSC/dm6/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Drosophila_melanogaster/UCSC/dm6/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Drosophila_melanogaster/UCSC/dm6/Sequence/WholeGenomeFasta"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "organism": "Enterobacteriophage_lambda",
+        "sources": [
+            {
+                "name": "NCBI",
+                "build": [
+                    {
+                        "name": "1993-04-28",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Enterobacteriophage_lambda/NCBI/1993-04-28/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Enterobacteriophage_lambda/NCBI/1993-04-28/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Enterobacteriophage_lambda/NCBI/1993-04-28/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Enterobacteriophage_lambda/NCBI/1993-04-28/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Enterobacteriophage_lambda/NCBI/1993-04-28/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Enterobacteriophage_lambda/NCBI/1993-04-28/Sequence/WholeGenomeFasta"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "organism": "Equus_caballus",
+        "sources": [
+            {
+                "name": "Ensembl",
+                "build": [
+                    {
+                        "name": "EquCab2",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Equus_caballus/Ensembl/EquCab2/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Equus_caballus/Ensembl/EquCab2/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Equus_caballus/Ensembl/EquCab2/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Equus_caballus/Ensembl/EquCab2/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Equus_caballus/Ensembl/EquCab2/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Equus_caballus/Ensembl/EquCab2/Sequence/WholeGenomeFasta"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "NCBI",
+                "build": [
+                    {
+                        "name": "EquCab2.0",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Equus_caballus/NCBI/EquCab2.0/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Equus_caballus/NCBI/EquCab2.0/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Equus_caballus/NCBI/EquCab2.0/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Equus_caballus/NCBI/EquCab2.0/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Equus_caballus/NCBI/EquCab2.0/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Equus_caballus/NCBI/EquCab2.0/Sequence/WholeGenomeFasta"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "UCSC",
+                "build": [
+                    {
+                        "name": "equCab2",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Equus_caballus/UCSC/equCab2/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Equus_caballus/UCSC/equCab2/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Equus_caballus/UCSC/equCab2/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Equus_caballus/UCSC/equCab2/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Equus_caballus/UCSC/equCab2/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Equus_caballus/UCSC/equCab2/Sequence/WholeGenomeFasta"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "organism": "Escherichia_coli_K_12_DH10B",
+        "sources": [
+            {
+                "name": "Ensembl",
+                "build": [
+                    {
+                        "name": "EB1",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Escherichia_coli_K_12_DH10B/Ensembl/EB1/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Escherichia_coli_K_12_DH10B/Ensembl/EB1/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Escherichia_coli_K_12_DH10B/Ensembl/EB1/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Escherichia_coli_K_12_DH10B/Ensembl/EB1/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Escherichia_coli_K_12_DH10B/Ensembl/EB1/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Escherichia_coli_K_12_DH10B/Ensembl/EB1/Sequence/WholeGenomeFasta"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "NCBI",
+                "build": [
+                    {
+                        "name": "2008-03-17",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Escherichia_coli_K_12_DH10B/NCBI/2008-03-17/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Escherichia_coli_K_12_DH10B/NCBI/2008-03-17/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Escherichia_coli_K_12_DH10B/NCBI/2008-03-17/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Escherichia_coli_K_12_DH10B/NCBI/2008-03-17/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Escherichia_coli_K_12_DH10B/NCBI/2008-03-17/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Escherichia_coli_K_12_DH10B/NCBI/2008-03-17/Sequence/WholeGenomeFasta"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "organism": "Escherichia_coli_K_12_MG1655",
+        "sources": [
+            {
+                "name": "NCBI",
+                "build": [
+                    {
+                        "name": "2001-10-15",
+                        "Sequence": {
+                            "AbundantSequences": "/project/biodb/genomes/Escherichia_coli_K_12_MG1655/NCBI/2001-10-15/Sequence/AbundantSequences",
+                            "BWAIndex": "/project/biodb/genomes/Escherichia_coli_K_12_MG1655/NCBI/2001-10-15/Sequence/BWAIndex",
+                            "Bowtie2Index": "/project/biodb/genomes/Escherichia_coli_K_12_MG1655/NCBI/2001-10-15/Sequence/Bowtie2Index",
+                            "BowtieIndex": "/project/biodb/genomes/Escherichia_coli_K_12_MG1655/NCBI/2001-10-15/Sequence/BowtieIndex",
+                            "Chromosomes": "/project/biodb/genomes/Escherichia_coli_K_12_MG1655/NCBI/2001-10-15/Sequence/Chromosomes",
+                            "WholeGenomeFasta": "/project/biodb/genomes/Escherichia_coli_K_12_MG1655/NCBI/2001-10-15/Sequence/WholeGenomeFasta"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]
+
+{
+    "Gallus_gallus": {
+        "Ensembl": {
+            "Galgal4": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Gallus_gallus/Ensembl/Galgal4/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Gallus_gallus/Ensembl/Galgal4/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Gallus_gallus/Ensembl/Galgal4/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Gallus_gallus/Ensembl/Galgal4/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Gallus_gallus/Ensembl/Galgal4/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Gallus_gallus/Ensembl/Galgal4/Sequence/WholeGenomeFasta"
+                }
+            },
+            "WASHUC2": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Gallus_gallus/Ensembl/WASHUC2/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Gallus_gallus/Ensembl/WASHUC2/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Gallus_gallus/Ensembl/WASHUC2/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Gallus_gallus/Ensembl/WASHUC2/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Gallus_gallus/Ensembl/WASHUC2/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Gallus_gallus/Ensembl/WASHUC2/Sequence/WholeGenomeFasta"
+                }
+            }
+        },
+        "NCBI": {
+            "build2.1": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Gallus_gallus/NCBI/build2.1/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Gallus_gallus/NCBI/build2.1/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Gallus_gallus/NCBI/build2.1/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Gallus_gallus/NCBI/build2.1/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Gallus_gallus/NCBI/build2.1/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Gallus_gallus/NCBI/build2.1/Sequence/WholeGenomeFasta"
+                }
+            },
+            "build3.1": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Gallus_gallus/NCBI/build3.1/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Gallus_gallus/NCBI/build3.1/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Gallus_gallus/NCBI/build3.1/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Gallus_gallus/NCBI/build3.1/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Gallus_gallus/NCBI/build3.1/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Gallus_gallus/NCBI/build3.1/Sequence/WholeGenomeFasta"
+                }
+            }
+        },
+        "UCSC": {
+            "galGal4": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Gallus_gallus/UCSC/galGal4/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Gallus_gallus/UCSC/galGal4/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Gallus_gallus/UCSC/galGal4/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Gallus_gallus/UCSC/galGal4/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Gallus_gallus/UCSC/galGal4/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Gallus_gallus/UCSC/galGal4/Sequence/WholeGenomeFasta"
+                }
+            },
+            "galGal5": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Gallus_gallus/UCSC/galGal5/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Gallus_gallus/UCSC/galGal5/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Gallus_gallus/UCSC/galGal5/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Gallus_gallus/UCSC/galGal5/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Gallus_gallus/UCSC/galGal5/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Gallus_gallus/UCSC/galGal5/Sequence/WholeGenomeFasta"
+                }
+            }
+        }
+    },
+    "Glycine_max": {
+        "Ensembl": {
+            "Gm01": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Glycine_max/Ensembl/Gm01/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Glycine_max/Ensembl/Gm01/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Glycine_max/Ensembl/Gm01/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Glycine_max/Ensembl/Gm01/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Glycine_max/Ensembl/Gm01/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Glycine_max/Ensembl/Gm01/Sequence/WholeGenomeFasta"
+                }
+            }
+        }
+    },
+    "Homo_sapiens": {
+        "Ensembl": {
+            "GRCh37": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Homo_sapiens/Ensembl/GRCh37/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Homo_sapiens/Ensembl/GRCh37/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Homo_sapiens/Ensembl/GRCh37/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Homo_sapiens/Ensembl/GRCh37/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Homo_sapiens/Ensembl/GRCh37/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Homo_sapiens/Ensembl/GRCh37/Sequence/WholeGenomeFasta"
+                }
+            }
+        },
+        "NCBI": {
+            "GRCh38": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Homo_sapiens/NCBI/GRCh38/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Homo_sapiens/NCBI/GRCh38/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Homo_sapiens/NCBI/GRCh38/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Homo_sapiens/NCBI/GRCh38/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Homo_sapiens/NCBI/GRCh38/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Homo_sapiens/NCBI/GRCh38/Sequence/WholeGenomeFasta"
+                }
+            },
+            "build36.3": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Homo_sapiens/NCBI/build36.3/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Homo_sapiens/NCBI/build36.3/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Homo_sapiens/NCBI/build36.3/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Homo_sapiens/NCBI/build36.3/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Homo_sapiens/NCBI/build36.3/Sequence/Chromosomes",
+                    "Methylation": "/project/biodb/genomes/Homo_sapiens/NCBI/build36.3/Sequence/Methylation",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Homo_sapiens/NCBI/build36.3/Sequence/WholeGenomeFasta"
+                }
+            },
+            "build37.1": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Homo_sapiens/NCBI/build37.1/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Homo_sapiens/NCBI/build37.1/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Homo_sapiens/NCBI/build37.1/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Homo_sapiens/NCBI/build37.1/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Homo_sapiens/NCBI/build37.1/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Homo_sapiens/NCBI/build37.1/Sequence/WholeGenomeFasta"
+                }
+            },
+            "build37.2": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Homo_sapiens/NCBI/build37.2/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Homo_sapiens/NCBI/build37.2/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Homo_sapiens/NCBI/build37.2/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Homo_sapiens/NCBI/build37.2/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Homo_sapiens/NCBI/build37.2/Sequence/Chromosomes",
+                    "Methylation": "/project/biodb/genomes/Homo_sapiens/NCBI/build37.2/Sequence/Methylation",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Homo_sapiens/NCBI/build37.2/Sequence/WholeGenomeFasta"
+                }
+            }
+        },
+        "UCSC": {
+            "hg19": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Homo_sapiens/UCSC/hg19/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Homo_sapiens/UCSC/hg19/Sequence/BWAIndex",
+                    "BlastDB": "/project/biodb/genomes/Homo_sapiens/UCSC/hg19/Sequence/BlastDB",
+                    "Bowtie2Index": "/project/biodb/genomes/Homo_sapiens/UCSC/hg19/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Homo_sapiens/UCSC/hg19/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Homo_sapiens/UCSC/hg19/Sequence/Chromosomes",
+                    "MDSBowtieIndex": "/project/biodb/genomes/Homo_sapiens/UCSC/hg19/Sequence/MDSBowtieIndex",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Homo_sapiens/UCSC/hg19/Sequence/WholeGenomeFasta"
+                }
+            },
+            "hg38": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Homo_sapiens/UCSC/hg38/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Homo_sapiens/UCSC/hg38/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Homo_sapiens/UCSC/hg38/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Homo_sapiens/UCSC/hg38/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Homo_sapiens/UCSC/hg38/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Homo_sapiens/UCSC/hg38/Sequence/WholeGenomeFasta"
+                }
+            }
+        }
+    },
+    "Macaca_mulatta": {
+        "Ensembl": {
+            "Mmul_1": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Macaca_mulatta/Ensembl/Mmul_1/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Macaca_mulatta/Ensembl/Mmul_1/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Macaca_mulatta/Ensembl/Mmul_1/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Macaca_mulatta/Ensembl/Mmul_1/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Macaca_mulatta/Ensembl/Mmul_1/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Macaca_mulatta/Ensembl/Mmul_1/Sequence/WholeGenomeFasta"
+                }
+            }
+        }
+    },
+    "Mus_musculus": {
+        "Ensembl": {
+            "GRCm38": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Mus_musculus/Ensembl/GRCm38/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Mus_musculus/Ensembl/GRCm38/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Mus_musculus/Ensembl/GRCm38/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Mus_musculus/Ensembl/GRCm38/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Mus_musculus/Ensembl/GRCm38/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Mus_musculus/Ensembl/GRCm38/Sequence/WholeGenomeFasta"
+                }
+            },
+            "NCBIM37": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Mus_musculus/Ensembl/NCBIM37/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Mus_musculus/Ensembl/NCBIM37/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Mus_musculus/Ensembl/NCBIM37/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Mus_musculus/Ensembl/NCBIM37/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Mus_musculus/Ensembl/NCBIM37/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Mus_musculus/Ensembl/NCBIM37/Sequence/WholeGenomeFasta"
+                }
+            }
+        },
+        "NCBI": {
+            "GRCm38": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Mus_musculus/NCBI/GRCm38/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Mus_musculus/NCBI/GRCm38/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Mus_musculus/NCBI/GRCm38/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Mus_musculus/NCBI/GRCm38/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Mus_musculus/NCBI/GRCm38/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Mus_musculus/NCBI/GRCm38/Sequence/WholeGenomeFasta"
+                }
+            },
+            "build37.1": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Mus_musculus/NCBI/build37.1/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Mus_musculus/NCBI/build37.1/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Mus_musculus/NCBI/build37.1/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Mus_musculus/NCBI/build37.1/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Mus_musculus/NCBI/build37.1/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Mus_musculus/NCBI/build37.1/Sequence/WholeGenomeFasta"
+                }
+            }
+        },
+        "UCSC": {
+            "mm10": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Mus_musculus/UCSC/mm10/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Mus_musculus/UCSC/mm10/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Mus_musculus/UCSC/mm10/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Mus_musculus/UCSC/mm10/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Mus_musculus/UCSC/mm10/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Mus_musculus/UCSC/mm10/Sequence/WholeGenomeFasta"
+                }
+            },
+            "mm9": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Mus_musculus/UCSC/mm9/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Mus_musculus/UCSC/mm9/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Mus_musculus/UCSC/mm9/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Mus_musculus/UCSC/mm9/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Mus_musculus/UCSC/mm9/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Mus_musculus/UCSC/mm9/Sequence/WholeGenomeFasta"
+                }
+            }
+        }
+    },
+    "Mycobacterium_tuberculosis_H37RV": {
+        "Ensembl": {
+            "H37Rv.EB1": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Mycobacterium_tuberculosis_H37RV/Ensembl/H37Rv.EB1/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Mycobacterium_tuberculosis_H37RV/Ensembl/H37Rv.EB1/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Mycobacterium_tuberculosis_H37RV/Ensembl/H37Rv.EB1/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Mycobacterium_tuberculosis_H37RV/Ensembl/H37Rv.EB1/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Mycobacterium_tuberculosis_H37RV/Ensembl/H37Rv.EB1/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Mycobacterium_tuberculosis_H37RV/Ensembl/H37Rv.EB1/Sequence/WholeGenomeFasta"
+                }
+            }
+        },
+        "NCBI": {
+            "2001-09-07": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Mycobacterium_tuberculosis_H37RV/NCBI/2001-09-07/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Mycobacterium_tuberculosis_H37RV/NCBI/2001-09-07/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Mycobacterium_tuberculosis_H37RV/NCBI/2001-09-07/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Mycobacterium_tuberculosis_H37RV/NCBI/2001-09-07/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Mycobacterium_tuberculosis_H37RV/NCBI/2001-09-07/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Mycobacterium_tuberculosis_H37RV/NCBI/2001-09-07/Sequence/WholeGenomeFasta"
+                }
+            }
+        }
+    },
+    "Oryza_sativa_japonica": {
+        "Ensembl": {
+            "IRGSP-1.0": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Oryza_sativa_japonica/Ensembl/IRGSP-1.0/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Oryza_sativa_japonica/Ensembl/IRGSP-1.0/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Oryza_sativa_japonica/Ensembl/IRGSP-1.0/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Oryza_sativa_japonica/Ensembl/IRGSP-1.0/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Oryza_sativa_japonica/Ensembl/IRGSP-1.0/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Oryza_sativa_japonica/Ensembl/IRGSP-1.0/Sequence/WholeGenomeFasta"
+                }
+            },
+            "MSU6": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Oryza_sativa_japonica/Ensembl/MSU6/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Oryza_sativa_japonica/Ensembl/MSU6/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Oryza_sativa_japonica/Ensembl/MSU6/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Oryza_sativa_japonica/Ensembl/MSU6/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Oryza_sativa_japonica/Ensembl/MSU6/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Oryza_sativa_japonica/Ensembl/MSU6/Sequence/WholeGenomeFasta"
+                }
+            }
+        }
+    },
+    "Pan_troglodytes": {
+        "Ensembl": {
+            "CHIMP2.1": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Pan_troglodytes/Ensembl/CHIMP2.1/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Pan_troglodytes/Ensembl/CHIMP2.1/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Pan_troglodytes/Ensembl/CHIMP2.1/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Pan_troglodytes/Ensembl/CHIMP2.1/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Pan_troglodytes/Ensembl/CHIMP2.1/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Pan_troglodytes/Ensembl/CHIMP2.1/Sequence/WholeGenomeFasta"
+                }
+            },
+            "CHIMP2.1.4": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Pan_troglodytes/Ensembl/CHIMP2.1.4/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Pan_troglodytes/Ensembl/CHIMP2.1.4/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Pan_troglodytes/Ensembl/CHIMP2.1.4/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Pan_troglodytes/Ensembl/CHIMP2.1.4/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Pan_troglodytes/Ensembl/CHIMP2.1.4/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Pan_troglodytes/Ensembl/CHIMP2.1.4/Sequence/WholeGenomeFasta"
+                }
+            }
+        },
+        "NCBI": {
+            "build2.1": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Pan_troglodytes/NCBI/build2.1/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Pan_troglodytes/NCBI/build2.1/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Pan_troglodytes/NCBI/build2.1/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Pan_troglodytes/NCBI/build2.1/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Pan_troglodytes/NCBI/build2.1/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Pan_troglodytes/NCBI/build2.1/Sequence/WholeGenomeFasta"
+                }
+            },
+            "build3.1": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Pan_troglodytes/NCBI/build3.1/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Pan_troglodytes/NCBI/build3.1/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Pan_troglodytes/NCBI/build3.1/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Pan_troglodytes/NCBI/build3.1/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Pan_troglodytes/NCBI/build3.1/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Pan_troglodytes/NCBI/build3.1/Sequence/WholeGenomeFasta"
+                }
+            }
+        },
+        "UCSC": {
+            "panTro2": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Pan_troglodytes/UCSC/panTro2/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Pan_troglodytes/UCSC/panTro2/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Pan_troglodytes/UCSC/panTro2/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Pan_troglodytes/UCSC/panTro2/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Pan_troglodytes/UCSC/panTro2/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Pan_troglodytes/UCSC/panTro2/Sequence/WholeGenomeFasta"
+                }
+            },
+            "panTro3": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Pan_troglodytes/UCSC/panTro3/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Pan_troglodytes/UCSC/panTro3/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Pan_troglodytes/UCSC/panTro3/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Pan_troglodytes/UCSC/panTro3/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Pan_troglodytes/UCSC/panTro3/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Pan_troglodytes/UCSC/panTro3/Sequence/WholeGenomeFasta"
+                }
+            },
+            "panTro4": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Pan_troglodytes/UCSC/panTro4/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Pan_troglodytes/UCSC/panTro4/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Pan_troglodytes/UCSC/panTro4/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Pan_troglodytes/UCSC/panTro4/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Pan_troglodytes/UCSC/panTro4/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Pan_troglodytes/UCSC/panTro4/Sequence/WholeGenomeFasta"
+                }
+            }
+        }
+    },
+    "PhiX": {
+        "Illumina": {
+            "RTA": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/PhiX/Illumina/RTA/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/PhiX/Illumina/RTA/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/PhiX/Illumina/RTA/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/PhiX/Illumina/RTA/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/PhiX/Illumina/RTA/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/PhiX/Illumina/RTA/Sequence/WholeGenomeFasta"
+                }
+            }
+        },
+        "NCBI": {
+            "1993-04-28": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/PhiX/NCBI/1993-04-28/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/PhiX/NCBI/1993-04-28/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/PhiX/NCBI/1993-04-28/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/PhiX/NCBI/1993-04-28/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/PhiX/NCBI/1993-04-28/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/PhiX/NCBI/1993-04-28/Sequence/WholeGenomeFasta"
+                }
+            }
+        }
+    },
+    "Pseudomonas_aeruginosa_PAO1": {
+        "NCBI": {
+            "2000-09-13": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Pseudomonas_aeruginosa_PAO1/NCBI/2000-09-13/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Pseudomonas_aeruginosa_PAO1/NCBI/2000-09-13/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Pseudomonas_aeruginosa_PAO1/NCBI/2000-09-13/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Pseudomonas_aeruginosa_PAO1/NCBI/2000-09-13/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Pseudomonas_aeruginosa_PAO1/NCBI/2000-09-13/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Pseudomonas_aeruginosa_PAO1/NCBI/2000-09-13/Sequence/WholeGenomeFasta"
+                }
+            }
+        }
+    },
+    "Rattus_norvegicus": {
+        "Ensembl": {
+            "RGSC3.4": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Rattus_norvegicus/Ensembl/RGSC3.4/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Rattus_norvegicus/Ensembl/RGSC3.4/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Rattus_norvegicus/Ensembl/RGSC3.4/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Rattus_norvegicus/Ensembl/RGSC3.4/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Rattus_norvegicus/Ensembl/RGSC3.4/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Rattus_norvegicus/Ensembl/RGSC3.4/Sequence/WholeGenomeFasta"
+                }
+            },
+            "Rnor_5.0": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Rattus_norvegicus/Ensembl/Rnor_5.0/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Rattus_norvegicus/Ensembl/Rnor_5.0/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Rattus_norvegicus/Ensembl/Rnor_5.0/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Rattus_norvegicus/Ensembl/Rnor_5.0/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Rattus_norvegicus/Ensembl/Rnor_5.0/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Rattus_norvegicus/Ensembl/Rnor_5.0/Sequence/WholeGenomeFasta"
+                }
+            },
+            "Rnor_6.0": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Rattus_norvegicus/Ensembl/Rnor_6.0/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Rattus_norvegicus/Ensembl/Rnor_6.0/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Rattus_norvegicus/Ensembl/Rnor_6.0/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Rattus_norvegicus/Ensembl/Rnor_6.0/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Rattus_norvegicus/Ensembl/Rnor_6.0/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Rattus_norvegicus/Ensembl/Rnor_6.0/Sequence/WholeGenomeFasta"
+                }
+            }
+        },
+        "NCBI": {
+            "RGSC_v3.4": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Rattus_norvegicus/NCBI/RGSC_v3.4/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Rattus_norvegicus/NCBI/RGSC_v3.4/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Rattus_norvegicus/NCBI/RGSC_v3.4/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Rattus_norvegicus/NCBI/RGSC_v3.4/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Rattus_norvegicus/NCBI/RGSC_v3.4/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Rattus_norvegicus/NCBI/RGSC_v3.4/Sequence/WholeGenomeFasta"
+                }
+            },
+            "Rnor_5.0": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Rattus_norvegicus/NCBI/Rnor_5.0/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Rattus_norvegicus/NCBI/Rnor_5.0/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Rattus_norvegicus/NCBI/Rnor_5.0/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Rattus_norvegicus/NCBI/Rnor_5.0/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Rattus_norvegicus/NCBI/Rnor_5.0/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Rattus_norvegicus/NCBI/Rnor_5.0/Sequence/WholeGenomeFasta"
+                }
+            },
+            "Rnor_6.0": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Rattus_norvegicus/NCBI/Rnor_6.0/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Rattus_norvegicus/NCBI/Rnor_6.0/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Rattus_norvegicus/NCBI/Rnor_6.0/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Rattus_norvegicus/NCBI/Rnor_6.0/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Rattus_norvegicus/NCBI/Rnor_6.0/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Rattus_norvegicus/NCBI/Rnor_6.0/Sequence/WholeGenomeFasta"
+                }
+            }
+        },
+        "UCSC": {
+            "rn4": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Rattus_norvegicus/UCSC/rn4/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Rattus_norvegicus/UCSC/rn4/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Rattus_norvegicus/UCSC/rn4/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Rattus_norvegicus/UCSC/rn4/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Rattus_norvegicus/UCSC/rn4/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Rattus_norvegicus/UCSC/rn4/Sequence/WholeGenomeFasta"
+                }
+            },
+            "rn5": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Rattus_norvegicus/UCSC/rn5/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Rattus_norvegicus/UCSC/rn5/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Rattus_norvegicus/UCSC/rn5/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Rattus_norvegicus/UCSC/rn5/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Rattus_norvegicus/UCSC/rn5/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Rattus_norvegicus/UCSC/rn5/Sequence/WholeGenomeFasta"
+                }
+            },
+            "rn6": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Rattus_norvegicus/UCSC/rn6/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Rattus_norvegicus/UCSC/rn6/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Rattus_norvegicus/UCSC/rn6/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Rattus_norvegicus/UCSC/rn6/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Rattus_norvegicus/UCSC/rn6/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Rattus_norvegicus/UCSC/rn6/Sequence/WholeGenomeFasta"
+                }
+            }
+        }
+    },
+    "Rhodobacter_sphaeroides_2.4.1": {
+        "NCBI": {
+            "2005-10-07": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Rhodobacter_sphaeroides_2.4.1/NCBI/2005-10-07/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Rhodobacter_sphaeroides_2.4.1/NCBI/2005-10-07/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Rhodobacter_sphaeroides_2.4.1/NCBI/2005-10-07/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Rhodobacter_sphaeroides_2.4.1/NCBI/2005-10-07/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Rhodobacter_sphaeroides_2.4.1/NCBI/2005-10-07/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Rhodobacter_sphaeroides_2.4.1/NCBI/2005-10-07/Sequence/WholeGenomeFasta"
+                }
+            }
+        }
+    },
+    "Saccharomyces_cerevisiae": {
+        "Ensembl": {
+            "EF2": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Saccharomyces_cerevisiae/Ensembl/EF2/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Saccharomyces_cerevisiae/Ensembl/EF2/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Saccharomyces_cerevisiae/Ensembl/EF2/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Saccharomyces_cerevisiae/Ensembl/EF2/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Saccharomyces_cerevisiae/Ensembl/EF2/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Saccharomyces_cerevisiae/Ensembl/EF2/Sequence/WholeGenomeFasta"
+                }
+            },
+            "EF3": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Saccharomyces_cerevisiae/Ensembl/EF3/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Saccharomyces_cerevisiae/Ensembl/EF3/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Saccharomyces_cerevisiae/Ensembl/EF3/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Saccharomyces_cerevisiae/Ensembl/EF3/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Saccharomyces_cerevisiae/Ensembl/EF3/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Saccharomyces_cerevisiae/Ensembl/EF3/Sequence/WholeGenomeFasta"
+                }
+            },
+            "EF4": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Saccharomyces_cerevisiae/Ensembl/EF4/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Saccharomyces_cerevisiae/Ensembl/EF4/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Saccharomyces_cerevisiae/Ensembl/EF4/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Saccharomyces_cerevisiae/Ensembl/EF4/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Saccharomyces_cerevisiae/Ensembl/EF4/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Saccharomyces_cerevisiae/Ensembl/EF4/Sequence/WholeGenomeFasta"
+                }
+            },
+            "R64-1-1": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Saccharomyces_cerevisiae/Ensembl/R64-1-1/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Saccharomyces_cerevisiae/Ensembl/R64-1-1/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Saccharomyces_cerevisiae/Ensembl/R64-1-1/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Saccharomyces_cerevisiae/Ensembl/R64-1-1/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Saccharomyces_cerevisiae/Ensembl/R64-1-1/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Saccharomyces_cerevisiae/Ensembl/R64-1-1/Sequence/WholeGenomeFasta"
+                }
+            }
+        },
+        "NCBI": {
+            "build2.1": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Saccharomyces_cerevisiae/NCBI/build2.1/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Saccharomyces_cerevisiae/NCBI/build2.1/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Saccharomyces_cerevisiae/NCBI/build2.1/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Saccharomyces_cerevisiae/NCBI/build2.1/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Saccharomyces_cerevisiae/NCBI/build2.1/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Saccharomyces_cerevisiae/NCBI/build2.1/Sequence/WholeGenomeFasta"
+                }
+            },
+            "build3.1": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Saccharomyces_cerevisiae/NCBI/build3.1/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Saccharomyces_cerevisiae/NCBI/build3.1/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Saccharomyces_cerevisiae/NCBI/build3.1/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Saccharomyces_cerevisiae/NCBI/build3.1/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Saccharomyces_cerevisiae/NCBI/build3.1/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Saccharomyces_cerevisiae/NCBI/build3.1/Sequence/WholeGenomeFasta"
+                }
+            }
+        },
+        "UCSC": {
+            "sacCer2": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Saccharomyces_cerevisiae/UCSC/sacCer2/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Saccharomyces_cerevisiae/UCSC/sacCer2/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Saccharomyces_cerevisiae/UCSC/sacCer2/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Saccharomyces_cerevisiae/UCSC/sacCer2/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Saccharomyces_cerevisiae/UCSC/sacCer2/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Saccharomyces_cerevisiae/UCSC/sacCer2/Sequence/WholeGenomeFasta"
+                }
+            }
+        }
+    },
+    "Schizosaccharomyces_pombe": {
+        "Ensembl": {
+            "EF1": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Schizosaccharomyces_pombe/Ensembl/EF1/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Schizosaccharomyces_pombe/Ensembl/EF1/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Schizosaccharomyces_pombe/Ensembl/EF1/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Schizosaccharomyces_pombe/Ensembl/EF1/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Schizosaccharomyces_pombe/Ensembl/EF1/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Schizosaccharomyces_pombe/Ensembl/EF1/Sequence/WholeGenomeFasta"
+                }
+            },
+            "EF2": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Schizosaccharomyces_pombe/Ensembl/EF2/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Schizosaccharomyces_pombe/Ensembl/EF2/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Schizosaccharomyces_pombe/Ensembl/EF2/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Schizosaccharomyces_pombe/Ensembl/EF2/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Schizosaccharomyces_pombe/Ensembl/EF2/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Schizosaccharomyces_pombe/Ensembl/EF2/Sequence/WholeGenomeFasta"
+                }
+            }
+        }
+    },
+    "Sorangium_cellulosum_So_ce_56": {
+        "NCBI": {
+            "2007-11-27": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Sorangium_cellulosum_So_ce_56/NCBI/2007-11-27/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Sorangium_cellulosum_So_ce_56/NCBI/2007-11-27/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Sorangium_cellulosum_So_ce_56/NCBI/2007-11-27/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Sorangium_cellulosum_So_ce_56/NCBI/2007-11-27/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Sorangium_cellulosum_So_ce_56/NCBI/2007-11-27/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Sorangium_cellulosum_So_ce_56/NCBI/2007-11-27/Sequence/WholeGenomeFasta"
+                }
+            }
+        }
+    },
+    "Sorghum_bicolor": {
+        "Ensembl": {
+            "Sbi1": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Sorghum_bicolor/Ensembl/Sbi1/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Sorghum_bicolor/Ensembl/Sbi1/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Sorghum_bicolor/Ensembl/Sbi1/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Sorghum_bicolor/Ensembl/Sbi1/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Sorghum_bicolor/Ensembl/Sbi1/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Sorghum_bicolor/Ensembl/Sbi1/Sequence/WholeGenomeFasta"
+                }
+            }
+        }
+    },
+    "Staphylococcus_aureus_NCTC_8325": {
+        "NCBI": {
+            "2006-02-13": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Staphylococcus_aureus_NCTC_8325/NCBI/2006-02-13/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Staphylococcus_aureus_NCTC_8325/NCBI/2006-02-13/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Staphylococcus_aureus_NCTC_8325/NCBI/2006-02-13/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Staphylococcus_aureus_NCTC_8325/NCBI/2006-02-13/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Staphylococcus_aureus_NCTC_8325/NCBI/2006-02-13/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Staphylococcus_aureus_NCTC_8325/NCBI/2006-02-13/Sequence/WholeGenomeFasta"
+                }
+            }
+        }
+    },
+    "Sus_scrofa": {
+        "Ensembl": {
+            "Sscrofa11.1": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Sus_scrofa/Ensembl/Sscrofa11.1/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Sus_scrofa/Ensembl/Sscrofa11.1/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Sus_scrofa/Ensembl/Sscrofa11.1/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Sus_scrofa/Ensembl/Sscrofa11.1/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Sus_scrofa/Ensembl/Sscrofa11.1/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Sus_scrofa/Ensembl/Sscrofa11.1/Sequence/WholeGenomeFasta"
+                }
+            }
+        },
+        "NCBI": {
+            "Sscrofa10": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Sus_scrofa/NCBI/Sscrofa10/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Sus_scrofa/NCBI/Sscrofa10/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Sus_scrofa/NCBI/Sscrofa10/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Sus_scrofa/NCBI/Sscrofa10/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Sus_scrofa/NCBI/Sscrofa10/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Sus_scrofa/NCBI/Sscrofa10/Sequence/WholeGenomeFasta"
+                }
+            },
+            "Sscrofa10.2": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Sus_scrofa/NCBI/Sscrofa10.2/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Sus_scrofa/NCBI/Sscrofa10.2/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Sus_scrofa/NCBI/Sscrofa10.2/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Sus_scrofa/NCBI/Sscrofa10.2/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Sus_scrofa/NCBI/Sscrofa10.2/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Sus_scrofa/NCBI/Sscrofa10.2/Sequence/WholeGenomeFasta"
+                }
+            },
+            "Sscrofa9.2": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Sus_scrofa/NCBI/Sscrofa9.2/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Sus_scrofa/NCBI/Sscrofa9.2/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Sus_scrofa/NCBI/Sscrofa9.2/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Sus_scrofa/NCBI/Sscrofa9.2/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Sus_scrofa/NCBI/Sscrofa9.2/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Sus_scrofa/NCBI/Sscrofa9.2/Sequence/WholeGenomeFasta"
+                }
+            }
+        },
+        "UCSC": {
+            "susScr2": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Sus_scrofa/UCSC/susScr2/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Sus_scrofa/UCSC/susScr2/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Sus_scrofa/UCSC/susScr2/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Sus_scrofa/UCSC/susScr2/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Sus_scrofa/UCSC/susScr2/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Sus_scrofa/UCSC/susScr2/Sequence/WholeGenomeFasta"
+                }
+            },
+            "susScr3": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Sus_scrofa/UCSC/susScr3/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Sus_scrofa/UCSC/susScr3/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Sus_scrofa/UCSC/susScr3/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Sus_scrofa/UCSC/susScr3/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Sus_scrofa/UCSC/susScr3/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Sus_scrofa/UCSC/susScr3/Sequence/WholeGenomeFasta"
+                }
+            }
+        }
+    },
+    "Zea_mays": {
+        "Ensembl": {
+            "AGPv2": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Zea_mays/Ensembl/AGPv2/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Zea_mays/Ensembl/AGPv2/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Zea_mays/Ensembl/AGPv2/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Zea_mays/Ensembl/AGPv2/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Zea_mays/Ensembl/AGPv2/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Zea_mays/Ensembl/AGPv2/Sequence/WholeGenomeFasta"
+                }
+            },
+            "AGPv3": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Zea_mays/Ensembl/AGPv3/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Zea_mays/Ensembl/AGPv3/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Zea_mays/Ensembl/AGPv3/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Zea_mays/Ensembl/AGPv3/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Zea_mays/Ensembl/AGPv3/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Zea_mays/Ensembl/AGPv3/Sequence/WholeGenomeFasta"
+                }
+            },
+            "AGPv4": {
+                "Sequence": {
+                    "AbundantSequences": "/project/biodb/genomes/Zea_mays/Ensembl/AGPv4/Sequence/AbundantSequences",
+                    "BWAIndex": "/project/biodb/genomes/Zea_mays/Ensembl/AGPv4/Sequence/BWAIndex",
+                    "Bowtie2Index": "/project/biodb/genomes/Zea_mays/Ensembl/AGPv4/Sequence/Bowtie2Index",
+                    "BowtieIndex": "/project/biodb/genomes/Zea_mays/Ensembl/AGPv4/Sequence/BowtieIndex",
+                    "Chromosomes": "/project/biodb/genomes/Zea_mays/Ensembl/AGPv4/Sequence/Chromosomes",
+                    "WholeGenomeFasta": "/project/biodb/genomes/Zea_mays/Ensembl/AGPv4/Sequence/WholeGenomeFasta"
+                }
+            }
+        }
+    }
+}
+
+
+
+

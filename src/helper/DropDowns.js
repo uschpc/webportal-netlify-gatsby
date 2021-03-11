@@ -156,7 +156,7 @@ const UserInfoSubNavDropdown = ({ current, prev, nav }) => {
         </ul>
         </div>
         <div className="column">
-          {subNav.length > 4 && (
+          { (subNav.length > 4) && (
             <div className="links">
             {subNav.map((item, i) => {
               if (i > 3) {
