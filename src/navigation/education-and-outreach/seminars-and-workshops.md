@@ -48,6 +48,8 @@ This workshop covers various topics in data management and transfer on CARC syst
 
 This workshop covers how to run and monitor jobs using the Slurm workload manager and job scheduler, including topics like requesting resources, evaluating resource use, running MPI jobs and job arrays, and setting up job dependencies.
 
+[Workshop recording (February 26, 2021)](/education-and-outreach/video-learning/slurm-job-management)
+
 ### Advanced topics in research computing
 
 #### Software Containers with Singularity

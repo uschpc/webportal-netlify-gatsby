@@ -55,6 +55,53 @@ body {
     // overflow: scroll;
     // height: 100vh;
     #gatsby-focus-wrapper{
+      #software-path {
+        margin-top: 10px;
+        word-break: break-all;
+        .organism {
+          width: 18%;
+          word-break: break-word;
+          text-align: left;
+        }
+        td {
+          p {
+            margin: 0px auto 21px auto;
+            font-size: 13px;
+            &.source {
+              // &:last-child {
+              //   margin-top: 70px;
+              // }
+              &:first-child {
+                margin: 0px auto 21px auto;
+              }
+            }
+          }
+        }
+        > tbody {
+          &:nth-child(even) {background: #f6f6f6}
+          .checkbox {
+            width: 74px;
+            text-align: right
+          }
+        }
+        tr {
+          td {
+            border-bottom: none;
+            vertical-align: middle;
+            padding-left: 0;
+          }
+        }
+        th {
+          // padding-right: 3.96667rem;
+          font-size: 12px;
+          padding: 0 1px 0 3px;
+          tr {
+            th {
+              border-bottom: none;
+            }
+          }
+        }
+      }
       // .user-guides-pages {
       //   .page-body {
       //     overflow: scroll;
@@ -114,6 +161,9 @@ body {
           &.hide {
             visibility: hidden;
           }
+          &.genomes {
+            z-index: -1
+          }
         }
       }
       .middle-column {
@@ -130,6 +180,9 @@ body {
           h4, p {
             margin-left: 15px;
           }
+        }
+        .table-of-tools {
+          margin: 0
         }
       }
       .table-of-tools {

@@ -14,6 +14,8 @@ import ResearcherProfiles from '../components/researcher-profiles'
 import ZoomMeeting from '../components/zoom-meeting'
 import Pagination from '../components/pagination'
 import OnDemandVideo from '../components/on-demand-video'
+import SoftwarePath from '../components/software-path'
+import dataset from '../genomes_dataset.json'
 
 const findSubMenu = (menubar, nav) => {
   const subNav = nav.edges.filter((ele, i) => {
@@ -25,7 +27,7 @@ const findSubMenu = (menubar, nav) => {
 export default function Template({ data }) {
   let content = data.content || data.newsContent || data.researcherContent || data.projectContent || data.onDemandVideo;
   let subMenu = findSubMenu(content.frontmatter.parentEle, data.sideMenu)
-  console.log(content)
+  let isReferenceGenomes = content.frontmatter.secCat == "referenceGenomes"
     return (
       <Layout {...data.navigation} backToTopBtnFlag={content.frontmatter.backToTopBtnFlag}>
           <SEO title={content.frontmatter.title}/>
@@ -82,6 +84,11 @@ export default function Template({ data }) {
                               </p>
                             </Link>
                           </div>
+                        </>
+                      )}
+                       {(isReferenceGenomes) && (
+                        <>
+                         <SoftwarePath dataset={dataset} />
                         </>
                       )}
                       {(content.frontmatter.uniqID === "researcher_profile") && (
@@ -150,7 +157,7 @@ export default function Template({ data }) {
 
 
                 </div>
-                <div className="right-column">
+                <div className={`right-column ${isReferenceGenomes ? 'genomes' : ''}`}>
                 {(content.frontmatter.sharedID !== "news_Announcements_and_researcher_profile") && (content.frontmatter.cat !== 'news') && (content.frontmatter.cat !== "onDemandVideo")  && <Content />}
                     {/* <div className="system-status">
                         <h4>Related Links</h4>

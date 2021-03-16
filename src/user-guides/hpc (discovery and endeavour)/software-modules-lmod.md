@@ -1,7 +1,7 @@
 ---
 author: Ryan Sim
 id: 6
-date: 2021-03-01T00:00:00.000Z
+date: 2021-03-11T00:00:00.000Z
 title: Software Module System
 path: lmod
 parentPath: user-information/user-guides/high-performance-computing
@@ -339,8 +339,27 @@ user@discovery1:~$ echo $JULIA_ROOT
 
 Every module sets a `<SOFTWARE_NAME>_ROOT` variable, which is a useful shortcut pointing to the root directory of the installation.
 
+### NVIDIA HPC Software Development Kit
+
+The NVIDIA HPC Software Development Kit (SDK) is a comprehensive suite of compilers, libraries, and tools enabling HPC developers to maximize developer productivity and the performance and portability of HPC applications. It is a comprehensive, integrated SDK for programming accelerated computing systems.
+
+The NVIDIA HPC SDK C++ and Fortran compilers are the first and only compilers to support automatic GPU acceleration of standard language constructs including C++17 parallel algorithms and Fortran intrinsics.<sup>1</sup>
+
+To use the NVIDIA HPC SDK on CARC systems, enter:
+
+```sh
+$ module purge
+$ module load pgi-nvhpc
+```
+
+For details on the capabilities and performance optimizations in the NVIDIA HPC SDK, see the [NVIDIA website](https://developer.nvidia.com/hpc-sdk).
+
 ### Additional resources
 
 [Lmod](https://lmod.readthedocs.io/en/latest/)  
 [User Guide for Lmod](https://lmod.readthedocs.io/en/latest/010_user.html)  
 [Advanced User Guide for Personal Modulefiles](https://lmod.readthedocs.io/en/latest/020_advanced.html)
+
+### References
+
+[1] Announcing the NVIDIA HPC SDK (May 14, 2020): https://news.developer.nvidia.com/hpc-sdk/

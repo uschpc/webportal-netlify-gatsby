@@ -1,7 +1,7 @@
 ---
 author: Cesar Sul
 id: 7
-date: 2021-01-27T12:00:00.387Z
+date: 2021-03-16T12:00:00.387Z
 title: Running Jobs on the Cluster
 path: running-jobs
 parentPath: user-information/user-guides/high-performance-computing
@@ -13,6 +13,9 @@ excerpt: How to run your jobs on Discovery using the Slurm job scheduler.
 ---
 
 This guide describes how to reserve compute time on CARC high-performance computing clusters (both Discovery and the Endeavour condo cluster) for your jobs using the Slurm job scheduler.
+
+<a href="/education-and-outreach/video-learning/slurm-job-management" class="markdown-custom-link">Slurm Job Management video</a>
+
 
 ### What is a job?
 
